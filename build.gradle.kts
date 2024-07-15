@@ -1,12 +1,12 @@
 plugins {
     id("java")
-    id("com.diffplug.spotless") version "6.25.0"
-    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
+    id("com.diffplug.spotless")
+    id("org.jlleitschuh.gradle.ktlint")
     kotlin("jvm")
 }
 
-group = "com.giwankim"
-version = "1.0-SNAPSHOT"
+group = "${property("projectGroup")}"
+version = "${property("projectVersion")}"
 
 repositories {
     mavenCentral()
@@ -15,8 +15,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     testImplementation(kotlin("test"))
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation(platform("org.assertj:assertj-bom:3.26.3"))
+    testImplementation(platform("org.junit:junit-bom:${property("junitJupiterVersion")}"))
+    testImplementation(platform("org.assertj:assertj-bom:${property("assertJVersion")}"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.assertj:assertj-core")
 }

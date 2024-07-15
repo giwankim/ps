@@ -1,11 +1,17 @@
+rootProject.name = "ps"
+
 pluginManagement {
-    plugins {
-        kotlin("jvm") version "1.9.24"
+    val kotlinVersion: String by settings
+    val spotlessVersion: String by settings
+    val ktlintVersion: String by settings
+
+    resolutionStrategy {
+        eachPlugin {
+            when (requested.id.id) {
+                "org.jetbrains.kotlin.jvm" -> useVersion(kotlinVersion)
+                "com.diffplug.spotless" -> useVersion(spotlessVersion)
+                "org.jlleitschuh.gradle.ktlint" -> useVersion(ktlintVersion)
+            }
+        }
     }
 }
-
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
-}
-
-rootProject.name = "ps"
