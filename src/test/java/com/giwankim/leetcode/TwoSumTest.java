@@ -11,12 +11,11 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 @DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class TwoSumTest {
-  @ParameterizedTest(name = "{2} sums to {1} in {0}")
+  @ParameterizedTest(name = "indices {2} sums to {1} in {0}")
   @MethodSource("baseTestCases")
   void should_return_indices(int[] nums, int target, int[] expected) {
-    TwoSum subject = new TwoSum();
-    int[] result = subject.twoSum(nums, target);
-    assertThat(result).containsExactlyInAnyOrder(expected);
+    TwoSum twoSum = new TwoSum();
+    assertThat(twoSum.twoSum(nums, target)).containsExactlyInAnyOrder(expected);
   }
 
   private static Stream<Arguments> baseTestCases() {

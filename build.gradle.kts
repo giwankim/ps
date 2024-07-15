@@ -1,6 +1,8 @@
 plugins {
     id("java")
     id("com.diffplug.spotless") version "6.25.0"
+    id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
+    kotlin("jvm")
 }
 
 group = "com.giwankim"
@@ -11,6 +13,8 @@ repositories {
 }
 
 dependencies {
+    implementation(kotlin("stdlib-jdk8"))
+    testImplementation(kotlin("test"))
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation(platform("org.assertj:assertj-bom:3.26.3"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -27,4 +31,8 @@ spotless {
         googleJavaFormat().reflowLongStrings().reorderImports(true)
         formatAnnotations()
     }
+}
+
+kotlin {
+    jvmToolchain(21)
 }
