@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     id("java")
     id("com.diffplug.spotless")
@@ -7,6 +9,12 @@ plugins {
 
 group = "${property("projectGroup")}"
 version = "${property("projectVersion")}"
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of("${property("javaVersion")}")
+    }
+}
 
 repositories {
     mavenCentral()
@@ -21,6 +29,13 @@ dependencies {
     testImplementation("org.assertj:assertj-core")
 }
 
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        freeCompilerArgs = listOf("-Xjsr305=strict")
+        jvmTarget = "${project.property("javaVersion")}"
+    }
+}
+
 tasks.test {
     useJUnitPlatform()
 }
@@ -31,8 +46,4 @@ spotless {
         googleJavaFormat().reflowLongStrings().reorderImports(true)
         formatAnnotations()
     }
-}
-
-kotlin {
-    jvmToolchain(21)
 }
