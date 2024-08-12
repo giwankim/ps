@@ -9,10 +9,9 @@ public class ValidPalindrome {
         start += 1;
       } else if (!Character.isLetterOrDigit(s.charAt(end))) {
         end -= 1;
+      } else if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
+        return false;
       } else {
-        if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
-          return false;
-        }
         start += 1;
         end -= 1;
       }
