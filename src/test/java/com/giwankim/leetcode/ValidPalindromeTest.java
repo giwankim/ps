@@ -15,12 +15,12 @@ class ValidPalindromeTest {
     assertThat(validPalindrome.isPalindrome(s)).isEqualTo(expected);
   }
 
-    @ParameterizedTest
-    @MethodSource("isPalindrome")
-    void isPalindrome2(String s, boolean expected) {
-      ValidPalindrome validPalindrome = new ValidPalindrome();
-      assertThat(validPalindrome.isPalindrome2(s)).isEqualTo(expected);
-    }
+  @ParameterizedTest
+  @MethodSource("isPalindrome")
+  void isPalindrome2(String s, boolean expected) {
+    ValidPalindrome validPalindrome = new ValidPalindrome();
+    assertThat(validPalindrome.isPalindrome2(s)).isEqualTo(expected);
+  }
 
   public static Stream<Arguments> isPalindrome() {
     return Stream.of(
