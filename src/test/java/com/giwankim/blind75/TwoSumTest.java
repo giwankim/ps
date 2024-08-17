@@ -12,7 +12,8 @@ class TwoSumTest {
   @ParameterizedTest
   @MethodSource
   void twoSum(int[] nums, int target, int[] expected) {
-    assertThat(new TwoSum().twoSum(nums, target)).isEqualTo(expected);
+    int[] actual = new TwoSum().twoSum(nums, target);
+    assertThat(actual).containsExactlyInAnyOrder(expected);
   }
 
   static Stream<Arguments> twoSum() {
