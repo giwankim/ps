@@ -5,12 +5,12 @@ class TwoSumKt {
         nums: IntArray,
         target: Int,
     ): IntArray {
-        val numsMap: MutableMap<Int, Int> = mutableMapOf()
+        val numToIndex: MutableMap<Int, Int> = mutableMapOf()
         for ((i, num) in nums.withIndex()) {
-            if (numsMap.containsKey(target - num)) {
-                return intArrayOf(numsMap.getValue(target - num), i)
+            if (numToIndex.containsKey(target - num)) {
+                return intArrayOf(numToIndex.getValue(target - num), i)
             }
-            numsMap[num] = i
+            numToIndex.put(num, i)
         }
         return intArrayOf(0, 0)
     }
