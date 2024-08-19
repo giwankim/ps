@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+@SuppressWarnings("NonAsciiCharacters")
 class 교점에_별_만들기Test {
   @ParameterizedTest
   @MethodSource

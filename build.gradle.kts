@@ -42,7 +42,7 @@ tasks.test {
 
 spotless {
     java {
-        removeUnusedImports("google-java-format")
+        removeUnusedImports()
         googleJavaFormat().reflowLongStrings().reorderImports(true)
         formatAnnotations()
     }
