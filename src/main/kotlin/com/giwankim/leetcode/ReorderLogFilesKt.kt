@@ -24,6 +24,8 @@ class ReorderLogFilesKt {
             }
         }
 
+//        letterLogs.sortWith(compareBy<String> { it.split(" ", limit = 2)[1] }.thenBy { it.split(" ", limit = 2)[0] })
+
         return (letterLogs + digitLogs).toTypedArray()
     }
 }
