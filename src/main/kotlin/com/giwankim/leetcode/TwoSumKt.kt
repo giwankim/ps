@@ -8,7 +8,7 @@ class TwoSumKt {
         val numToIndex: MutableMap<Int, Int> = mutableMapOf()
         for ((i, num) in nums.withIndex()) {
             if (numToIndex.containsKey(target - num)) {
-                return intArrayOf(numToIndex.getValue(target - num), i)
+                return intArrayOf(numToIndex[target - num] ?: 0, i)
             }
             numToIndex.put(num, i)
         }

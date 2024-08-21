@@ -14,8 +14,8 @@ class TwoSumTest {
   @ParameterizedTest(name = "indices {2} sums to {1} in {0}")
   @MethodSource("baseTestCases")
   void should_return_indices(int[] nums, int target, int[] expected) {
-    TwoSumKt twoSum = new TwoSumKt();
-    assertThat(twoSum.twoSum(nums, target)).containsExactlyInAnyOrder(expected);
+    int[] actual = new TwoSum().twoSum(nums, target);
+    assertThat(actual).containsExactlyInAnyOrder(expected);
   }
 
   private static Stream<Arguments> baseTestCases() {

@@ -17,8 +17,6 @@ class LongestPalindromeTest {
 
   private static Stream<Arguments> longestPalindrome() {
     return Stream.of(
-        Arguments.of("a", "a"),
-        Arguments.of("babad", "bab"),
-        Arguments.of("cbbd", "bb"));
+        Arguments.of("a", "a"), Arguments.of("babad", "bab"), Arguments.of("cbbd", "bb"));
   }
 }
