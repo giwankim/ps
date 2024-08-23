@@ -32,10 +32,14 @@ public class Main {
 
   private static double festival(int N, int L, List<Integer> costs) {
     double minCost = Double.MAX_VALUE;
+    List<Integer> sums = new ArrayList<>();
+    sums.add(0);
+    for (int i = 0; i < N; i++) {
+      sums.add(costs.get(i) + sums.get(i));
+    }
     for (int i = 0; i <= N - L; i++) {
-      int sum = 0;
       for (int j = i; j < N; j++) {
-        sum += costs.get(j);
+        int sum = sums.get(j + 1) - sums.get(i);
         int len = j - i + 1;
         if (len < L) {
           continue;

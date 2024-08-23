@@ -1,15 +1,15 @@
 package com.giwankim.algospot.festival;
 
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 class FestivalTest {
   @Test
   void festival() {
-    String input = """
+    String input =
+        """
         2
         6 3
         1 2 3 1 2 3
