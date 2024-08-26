@@ -1,10 +1,9 @@
 package com.giwankim.codeforces.round839.div3;
 
-import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 class ATest {
   @Test
