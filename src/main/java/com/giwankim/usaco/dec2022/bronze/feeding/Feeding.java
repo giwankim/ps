@@ -23,43 +23,35 @@ public class Feeding {
       int k = Integer.parseInt(st.nextToken());
       char[] cows = r.readLine().toCharArray();
 
-      char[] grass = new char[cows.length];
-      Arrays.fill(grass, '.');
-
-      int numPatches = 0;
+      int cnt = 0;
+      char[] ans = new char[cows.length];
+      Arrays.fill(ans, '.');
 
       int gLast = -1;
       int hLast = -1;
+
       for (int i = 0; i < n; i++) {
-        if (cows[i] == 'G') {
-          if (i <= gLast) {
-            continue;
-          }
-          numPatches += 1;
+        if (cows[i] == 'G' && i > gLast) {
+          cnt += 1;
           int j = Math.min(i + k, n - 1);
-          if (grass[j] != '.') {
-            j = Math.max(0, n - 2);
+          if (ans[j] != '.') {
+            j -= 1;
           }
-          grass[j] = 'G';
-          //          gLast = i + 2 * k;
+          ans[j] = 'G';
           gLast = j + k;
-        } else {
-          if (i <= hLast) {
-            continue;
-          }
-          numPatches += 1;
+        } else if (cows[i] == 'H' && i > hLast) {
+          cnt += 1;
           int j = Math.min(i + k, n - 1);
-          if (grass[j] != '.') {
-            j = Math.max(0, n - 2);
+          if (ans[j] != '.') {
+            j -= 1;
           }
-          grass[j] = 'H';
-          //          hLast = i + 2 * k;
+          ans[j] = 'H';
           hLast = j + k;
         }
       }
 
-      pw.println(numPatches);
-      pw.println(grass);
+      pw.println(cnt);
+      pw.println(ans);
     }
   }
 }
