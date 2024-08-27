@@ -13,7 +13,7 @@ class GroupAnagramsKtTest {
         expected: List<List<String>>,
     ) {
         val actual = GroupAnagramsKt().groupAnagrams(strs)
-        assertThat(actual).isEqualTo(expected)
+        assertThat(actual.map { it.sorted() }).containsExactlyInAnyOrderElementsOf(expected.map { it.sorted() })
     }
 
     companion object {
