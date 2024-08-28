@@ -2,24 +2,18 @@ package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class MergeIntervals {
   public int[][] merge(int[][] intervals) {
-    Arrays.sort(
-        intervals,
-        (a, b) -> {
-          if (a[0] != b[0]) {
-            return Integer.compare(a[0], b[0]);
-          }
-          return Integer.compare(a[1], b[1]);
-        });
+    Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 
     List<int[]> mergedIntervals = new ArrayList<>();
     mergedIntervals.add(intervals[0]);
 
     for (int i = 1; i < intervals.length; i++) {
-      int[] interval = mergedIntervals.get(mergedIntervals.size() - 1);
+      int[] interval = mergedIntervals.getLast();
       if (interval[1] < intervals[i][0]) {
         mergedIntervals.add(intervals[i]);
       } else {
