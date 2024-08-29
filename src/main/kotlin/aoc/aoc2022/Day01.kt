@@ -1,6 +1,7 @@
 package aoc.aoc2022
 
 import java.io.File
+import java.util.PriorityQueue
 
 fun part1(input: String): Int {
     val data = parseInput(input)
@@ -16,11 +17,11 @@ private fun topNElves(
     data: List<List<Int>>,
     n: Int,
 ): Int {
-    val best = sortedSetOf<Int>()
+    val best = PriorityQueue<Int>()
     for (calories in data.map { it.sum() }) {
         best.add(calories)
         if (best.size > n) {
-            best.remove(best.first())
+            best.poll()
         }
     }
     return best.sum()
