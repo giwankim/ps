@@ -15,12 +15,16 @@ fun part2(input: String): Int {
 private fun topNElves(
     data: List<List<Int>>,
     n: Int,
-): Int =
-    data
-        .map { it.sum() }
-        .sortedDescending()
-        .take(n)
-        .sum()
+): Int {
+    val best = sortedSetOf<Int>()
+    for (calories in data.map { it.sum() }) {
+        best.add(calories)
+        if (best.size > n) {
+            best.remove(best.first())
+        }
+    }
+    return best.sum()
+}
 
 private fun parseInput(input: String) = input.split("\n\n").map { elf -> elf.lines().map { it.toInt() } }
 
