@@ -9,20 +9,21 @@ public class MergeIntervals {
   public int[][] merge(int[][] intervals) {
     Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
 
-    List<int[]> mergedIntervals = new ArrayList<>();
-    mergedIntervals.add(intervals[0]);
+    List<int[]> result = new ArrayList<>();
+    int start = intervals[0][0];
+    int end = intervals[0][1];
 
-    for (int i = 1; i < intervals.length; i++) {
-      int[] interval = mergedIntervals.getLast();
-      if (interval[1] < intervals[i][0]) {
-        mergedIntervals.add(intervals[i]);
+    for (int[] interval : intervals) {
+      if (end < interval[0]) {
+        result.add(new int[] {start, end});
+        start = interval[0];
+        end = interval[1];
       } else {
-        mergedIntervals.set(
-            mergedIntervals.size() - 1,
-            new int[] {interval[0], Math.max(interval[1], intervals[i][1])});
+        end = Math.max(end, interval[1]);
       }
     }
+    result.add(new int[] {start, end});
 
-    return mergedIntervals.toArray(new int[0][]);
+    return result.toArray(new int[0][]);
   }
 }
