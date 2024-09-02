@@ -24,10 +24,12 @@ public class Paint {
     int d = Integer.parseInt(st.nextToken());
 
     int ans = 0;
-    if (b <= c || d <= a) {
-      ans = b - a + d - c;
-    } else {
-      ans = Math.max(b, d) - Math.min(a, c);
+    for (int i = 0; i < 100; i++) {
+      if (a <= i && i + 1 <= b) {
+        ans += 1;
+      } else if (c <= i && i + 1 <= d) {
+        ans += 1;
+      }
     }
     pw.println(ans);
   }
