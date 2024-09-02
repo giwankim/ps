@@ -6,6 +6,7 @@ class ThreeSumKt {
     fun threeSum(nums: IntArray): List<List<Int>> {
         val result: MutableList<List<Int>> = mutableListOf()
         Arrays.sort(nums)
+
         for (i in 0 until nums.size) {
             if (i > 0 && nums[i - 1] == nums[i]) {
                 continue
