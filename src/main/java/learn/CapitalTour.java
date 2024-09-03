@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class CapitalTour {
   public static void main(String[] args) throws IOException {
     try (BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(System.out); ) {
+        PrintWriter pw = new PrintWriter(System.out)) {
       capitalTour(r, pw);
     }
   }
@@ -31,11 +31,17 @@ public class CapitalTour {
       line2[i] = Integer.parseInt(st.nextToken());
     }
 
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n; j++) {
-        if (line1[i] + line2[j] == k) {
-          pw.println(line1[i] + " " + line2[j]);
-        }
+    int i = 0;
+    int j = n - 1;
+    while (i < n && j >= 0) {
+      int sum = line1[i] + line2[j];
+      if (sum == k) {
+        pw.println(line1[i] + " " + line2[j]);
+        return;
+      } else if (sum < k) {
+        i += 1;
+      } else {
+        j -= 1;
       }
     }
   }
