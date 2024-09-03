@@ -3,7 +3,6 @@ package learn;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.*;
-
 import org.junit.jupiter.api.Test;
 
 class CapitalTourTest {

@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class CapitalTour {
   public static void main(String[] args) throws IOException {
     try (BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-         PrintWriter pw = new PrintWriter(System.out);) {
+        PrintWriter pw = new PrintWriter(System.out); ) {
       capitalTour(r, pw);
     }
   }
