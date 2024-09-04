@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
+import java.util.stream.IntStream;
 
 public class Leaders {
   public static void main(String[] args) throws IOException {
@@ -21,33 +22,58 @@ public class Leaders {
     StringTokenizer st = new StringTokenizer(r.readLine());
     for (int i = 0; i < N; i++) {
       E[i] = Integer.parseInt(st.nextToken());
+      E[i] -= 1;
     }
 
+    int firstG = IntStream.range(0, N).filter(i -> cows[i] == 'G').findFirst().orElse(-1);
+    int lastG =
+        IntStream.range(0, N)
+            .map(i -> N - 1 - i)
+            .filter(i -> cows[i] == 'G')
+            .findFirst()
+            .orElse(-1);
+    int firstH = IntStream.range(0, N).filter(i -> cows[i] == 'H').findFirst().orElse(-1);
+    int lastH =
+        IntStream.range(0, N)
+            .map(i -> N - 1 - i)
+            .filter(i -> cows[i] == 'H')
+            .findFirst()
+            .orElse(-1);
+
     long ans = 0;
-    for (int i = 0; i + 1 < N; i++) {
-      for (int j = i + 1; j < N; j++) {
-        if (canBeLeaders(i, j, cows, E)) {
+
+    // first Guernsey is leader
+    if (lastG <= E[firstG]) {
+      for (int i = 0; i < firstG; i++) {
+        if (i == firstH) {
+          continue;
+        }
+        // ith cow is Holstein and its list contains earliest Guernsey
+        if (cows[i] == 'H' && firstG <= E[i]) {
           ans += 1;
         }
       }
     }
 
-    pw.println(ans);
-  }
-
-  private static boolean canBeLeaders(int i, int j, char[] cows, int[] E) {
-    return canBeLeader(i, j, cows, E) && canBeLeader(j, i, cows, E);
-  }
-
-  private static boolean canBeLeader(int i, int j, char[] cows, int[] E) {
-    if (i <= j && j < E[i]) {
-      return true;
-    }
-    for (int k = 0; k < cows.length; k++) {
-      if (cows[k] == cows[i] && !(i <= k && k < E[i])) {
-        return false;
+    // first Holstein is leader
+    if (lastH <= E[firstH]) {
+      for (int i = 0; i < firstH; i++) {
+        if (i == firstG) {
+          continue;
+        }
+        // ith cow is Guernsey and its list contains earliest Holstein
+        if (cows[i] == 'G' && firstH <= E[i]) {
+          ans += 1;
+        }
       }
     }
-    return true;
+
+    // check whether firstG and firstH can be leaders together
+    if ((lastG <= E[firstG] || (firstG <= firstH && firstH <= E[firstG]))
+        && (lastH <= E[firstH] || (firstH <= firstG && firstG <= E[firstH]))) {
+      ans += 1;
+    }
+
+    pw.println(ans);
   }
 }
