@@ -1,4 +1,4 @@
-// package usaco.jan2023.bronze.leaders;
+package usaco.jan2023.bronze.leaders;
 
 import java.io.BufferedReader;
 import java.io.IOException;
