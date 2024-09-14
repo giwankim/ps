@@ -14,8 +14,7 @@ class GroupAnagramsTest {
   void groupAnagrams(String[] strs, List<List<String>> expected) {
     List<List<String>> actual = new GroupAnagrams().groupAnagrams(strs);
     actual.forEach(l -> l.sort(null));
-    assertThat(actual).hasSize(expected.size());
-    assertThat(actual).containsExactlyInAnyOrderElementsOf(expected);
+    assertThat(actual).hasSize(expected.size()).containsExactlyInAnyOrderElementsOf(expected);
   }
 
   private static Stream<Arguments> groupAnagrams() {
