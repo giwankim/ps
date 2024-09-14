@@ -1,9 +1,9 @@
 package leetcode;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 class SnapshotArrayTest {
   private SnapshotArray sut;
@@ -32,6 +32,13 @@ class SnapshotArrayTest {
     sut.snap();
     sut.snap();
     assertThat(sut.get(0, 1)).isEqualTo(5);
+  }
+
+  @Test
+  void getBaseCaseZero() {
+    sut.snap();
+    sut.snap();
+    assertThat(sut.get(0, 1)).isEqualTo(0);
   }
 
   @Test

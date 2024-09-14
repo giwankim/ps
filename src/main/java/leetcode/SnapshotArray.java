@@ -1,32 +1,32 @@
 package leetcode;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.TreeMap;
 
 public class SnapshotArray {
-  private List<List<Integer>> snapshots;
-  private List<Integer> array;
+  private int snapId;
+  private final List<TreeMap<Integer, Integer>> snapshots;
 
   public SnapshotArray(int length) {
-    snapshots = new ArrayList<>();
-    array = new ArrayList<>(Collections.nCopies(length, 0));
+    snapId = 0;
+    snapshots = new ArrayList<>(length);
+    for (int i = 0; i < length; i++) {
+      snapshots.add(new TreeMap<>());
+      snapshots.get(i).put(0, 0);
+    }
   }
 
   public void set(int index, int val) {
-    array.set(index, val);
+    snapshots.get(index).put(snapId, val);
   }
 
   public int snap() {
-    snapshots.add(array);
-    array = new ArrayList<>(array);
-    return snapshots.size() - 1;
+    snapId += 1;
+    return snapId - 1;
   }
 
   public int get(int index, int snap_id) {
-    if (snapshots.size() > snap_id) {
-      return snapshots.get(snap_id).get(index);
-    }
-    return -1;
+    return snapshots.get(index).floorEntry(snap_id).getValue();
   }
 }
