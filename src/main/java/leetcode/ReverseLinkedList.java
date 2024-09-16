@@ -4,12 +4,15 @@ import datatype.ListNode;
 
 public class ReverseLinkedList {
   public ListNode reverseList(ListNode head) {
-    if (head == null || head.next == null) {
-      return head;
+    return reverseList(head, null);
+  }
+
+  public ListNode reverseList(ListNode head, ListNode prev) {
+    if (head == null) {
+      return prev;
     }
-    ListNode reversed = reverseList(head.next);
-    head.next.next = head;
-    head.next = null;
-    return reversed;
+    ListNode next = head.next;
+    head.next = prev;
+    return reverseList(next, head);
   }
 }
