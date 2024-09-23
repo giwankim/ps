@@ -21,6 +21,7 @@ class LengthOfLongestSubstringTest {
         Arguments.of("bbbbb", 1),
         Arguments.of("pwwkew", 3),
         Arguments.of("", 0),
-        Arguments.of(" ", 1));
+        Arguments.of(" ", 1),
+        Arguments.of("tmmzuxt", 5));
   }
 }
