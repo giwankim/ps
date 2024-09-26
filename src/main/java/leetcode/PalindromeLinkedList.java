@@ -2,23 +2,38 @@ package leetcode;
 
 import datatype.ListNode;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Objects;
-
 public class PalindromeLinkedList {
   public boolean isPalindrome(ListNode head) {
-    Deque<Integer> deque = new ArrayDeque<>();
-    ListNode node = head;
-    while (node != null) {
-      deque.push(node.val);
-      node = node.next;
+    ListNode slow = head;
+    ListNode fast = head;
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
     }
-    while (deque.size() > 1) {
-      if (!Objects.equals(deque.pollFirst(), deque.pollLast())) {
+    if (fast != null) {
+      slow = slow.next;
+    }
+
+    ListNode rev = reverse(slow);
+
+    while (rev != null) {
+      if (rev.val != head.val) {
         return false;
       }
+      rev = rev.next;
+      head = head.next;
     }
     return true;
+  }
+
+  private ListNode reverse(ListNode head) {
+    ListNode prev = null;
+    while (head != null) {
+      ListNode next = head.next;
+      head.next = prev;
+      prev = head;
+      head = next;
+    }
+    return prev;
   }
 }

@@ -19,6 +19,7 @@ class PalindromeLinkedListTest {
   private static Stream<Arguments> isPalindrome() {
     return Stream.of(
         Arguments.of(ListNode.createList(1, 2, 2, 1), true),
-        Arguments.of(ListNode.createList(1, 2), false));
+        Arguments.of(ListNode.createList(1, 2), false),
+        Arguments.of(ListNode.createList(1, 2, 3, 2, 1), true));
   }
 }
