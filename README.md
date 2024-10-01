@@ -33,19 +33,75 @@
 * [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/description/)
 * [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/description/)
 
+
 ## [Programmers](https://programmers.co.kr/)
+
 * [숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
 * [거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
 * [교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
 * [삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
 * [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 
+
 ## [Baekjoon](https://www.acmicpc.net/)
+
 * [2557. Hello World](https://www.acmicpc.net/problem/2557)
 * [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
 * [15552. 빠른 A + B](https://www.acmicpc.net/problem/15552)
 
+
 ## [USACO](https://usaco.org/index.php)
+
+* [2024 January](https://usaco.org/index.php?page=jan24results)
+  * Bronze
+    * [Problem 1. Majority Opinion](https://usaco.org/index.php?page=viewproblem2&cpid=1371)
+
+* [2023 January](https://usaco.org/index.php?page=jan23results)
+  * Bronze
+    * [Problem 1. Leaders](https://usaco.org/index.php?page=viewproblem2&cpid=1275)
+
+* [2022 December](https://usaco.org/index.php?page=dec22results)
+  * Bronze
+    * [Problem 2. Feeding the Cows](https://usaco.org/index.php?page=viewproblem2&cpid=1252)
+
+* [2021 December](https://usaco.org/index.php?page=dec12problems)
+  * Bronze
+    * [Problem 1. Meet and Greet](https://usaco.org/index.php?page=viewproblem2&cpid=205)
+
+* [2020 US Open](https://usaco.org/index.php?page=open20results)
+  * Bronze
+    * [Problem 3. Cowntact Tracing
+      ](https://usaco.org/index.php?page=viewproblem2&cpid=1037)
+
+* [2019 February](https://usaco.org/index.php?page=feb19results)
+  * Bronze
+    * [Problem 1. Sleepy Cow Herding
+      ](https://usaco.org/index.php?page=viewproblem2&cpid=915)
+
+* [2017 US Open](https://usaco.org/index.php?page=open17results)
+  * Bronze
+    * [Problem 1. The Lost Cow](https://usaco.org/index.php?page=viewproblem2&cpid=735)
+
+* [2017 December](https://usaco.org/index.php?page=dec17results)
+  * Bronze
+    * [Problem 2. The Bovine Shuffle](https://usaco.org/index.php?page=viewproblem2&cpid=760)
+
+* [2017 February](https://usaco.org/index.php?page=feb17results)
+  * Bronze
+    * [Problem 3. Why Did the Cow Cross the Road III](https://usaco.org/index.php?page=viewproblem2&cpid=713)
+
+* [2016 January](https://usaco.org/index.php?page=jan16results)
+  * Bronze
+    * [Problem 1. Promotion Counting](https://usaco.org/index.php?page=viewproblem2&cpid=591) 
+    * [Problem 3. Mowing the Field](https://usaco.org/index.php?page=viewproblem2&cpid=593)
+
+* [2015 December](https://usaco.org/index.php?page=dec15results)
+  * Bronze
+    * [Problem 1. Fence Painting](https://usaco.org/index.php?page=viewproblem2&cpid=567)
+* [2013 March](https://usaco.org/index.php?page=mar13problems)
+  * Bronze
+    * [Problem 1. Cow Race](https://usaco.org/index.php?page=viewproblem2&cpid=259)
+
 
 ## [Codeforces](https://codeforces.com/)
 
@@ -53,10 +109,12 @@
 
 ## [Algospot](https://algospot.com/)
 
+* []
+
 ## Company
 
 * Google
   * [Plant Flowers](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/google/PlantFlowers.java)
+
 * Meta
   * [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/meta/OnesInTheRange.java)
-
