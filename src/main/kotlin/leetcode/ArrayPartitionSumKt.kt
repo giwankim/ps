@@ -1,6 +1,6 @@
 package leetcode
 
-class ArrayPairSumKt {
+class ArrayPartitionSumKt {
     fun arrayPairSum(nums: IntArray): Int {
         nums.sort()
         var ans = 0

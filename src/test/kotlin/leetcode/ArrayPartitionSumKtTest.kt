@@ -5,14 +5,14 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 
-class ArrayPairSumKtTest {
+class ArrayPartitionSumKtTest {
     @ParameterizedTest
     @MethodSource
     fun arrayPairSum(
         nums: IntArray,
         expected: Int,
     ) {
-        val actual = ArrayPairSumKt().arrayPairSum(nums)
+        val actual = ArrayPartitionSumKt().arrayPairSum(nums)
         assertThat(actual).isEqualTo(expected)
     }
 

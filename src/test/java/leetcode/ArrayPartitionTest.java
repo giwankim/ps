@@ -7,11 +7,11 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class ArrayPairSumTest {
+class ArrayPartitionTest {
   @ParameterizedTest
   @MethodSource
   void arrayPairSum(int[] nums, int expected) {
-    int actual = new ArrayPairSum().arrayPairSum(nums);
+    int actual = new ArrayPartition().arrayPairSum(nums);
     assertThat(actual).isEqualTo(expected);
   }
 
