@@ -43,3 +43,6 @@ bin/
 
 ### Advent of Code ###
 src/**/*.txt
+
+### Threads ###
+/src/main/java/learn/thread/
