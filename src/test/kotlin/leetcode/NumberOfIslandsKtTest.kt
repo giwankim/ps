@@ -5,14 +5,14 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
 import org.junit.jupiter.params.provider.MethodSource
 
-class NumberIslandsTest {
+class NumberOfIslandsKtTest {
     @ParameterizedTest
     @MethodSource
     fun numIslands(
         grid: Array<CharArray>,
         expected: Int,
     ) {
-        val actual = NumberIslands().numIslands(grid)
+        val actual = NumberOfIslandsKt().numIslands(grid)
         assertThat(actual).isEqualTo(expected)
     }
 

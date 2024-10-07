@@ -1,6 +1,6 @@
 package leetcode
 
-class NumberIslands {
+class NumberOfIslandsKt {
     fun numIslands(grid: Array<CharArray>): Int {
         fun dfs(
             i: Int,
