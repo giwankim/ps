@@ -46,6 +46,8 @@
 * [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
 * [207. Course Schedule](https://leetcode.com/problems/course-schedule/description/)
 * [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/description/)
+* [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+* [329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/)
 
 ## [Programmers](https://programmers.co.kr/)
 
