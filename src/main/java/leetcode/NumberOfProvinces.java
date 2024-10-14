@@ -3,6 +3,7 @@ package leetcode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+@SuppressWarnings("unused")
 public class NumberOfProvinces {
   public int findCircleNum(int[][] isConnected) {
     int n = isConnected.length;
@@ -10,7 +11,7 @@ public class NumberOfProvinces {
     int result = 0;
     for (int i = 0; i < n; i++) {
       if (!visited[i]) {
-        bfs(i, n, visited, isConnected);
+        dfs(i, n, visited, isConnected);
         result += 1;
       }
     }
@@ -28,6 +29,15 @@ public class NumberOfProvinces {
           queue.offer(k);
           visited[k] = true;
         }
+      }
+    }
+  }
+
+  private void dfs(int i, int n, boolean[] visited, int[][] isConnected) {
+    visited[i] = true;
+    for (int j = 0; j < n; j++) {
+      if (i != j && !visited[j] && isConnected[i][j] == 1) {
+        dfs(j, n, visited, isConnected);
       }
     }
   }
