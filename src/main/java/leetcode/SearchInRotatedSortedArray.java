@@ -1,16 +1,23 @@
 package leetcode;
 
-import java.util.Arrays;
-
+@SuppressWarnings("unused")
 public class SearchInRotatedSortedArray {
   public int search(int[] nums, int target) {
     int pivot = getPivot(nums);
-    int result = Arrays.binarySearch(nums, 0, pivot, target);
-    if (result >= 0) {
-      return result;
+    int l = 0;
+    int r = nums.length - 1;
+    while (l <= r) {
+      int mid = l + (r - l) / 2;
+      int midPivot = (mid + pivot) % nums.length;
+      if (nums[midPivot] < target) {
+        l = mid + 1;
+      } else if (nums[midPivot] > target) {
+        r = mid - 1;
+      } else {
+        return midPivot;
+      }
     }
-    result = Arrays.binarySearch(nums, pivot, nums.length, target);
-    return result >= 0 ? result : -1;
+    return -1;
   }
 
   public int getPivot(int[] nums) {
