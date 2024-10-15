@@ -24,4 +24,20 @@ class SearchInRotatedSortedArrayTest {
         Arguments.of(new int[] {5, 1, 3}, 5, 0),
         Arguments.of(new int[] {4, 5, 6, 7, 8, 1, 2, 3}, 8, 4));
   }
+
+  @ParameterizedTest
+  @MethodSource
+  void getPivot(int[] nums, int expected) {
+    int pivot = new SearchInRotatedSortedArray().getPivot(nums);
+    assertThat(pivot).isEqualTo(expected);
+  }
+
+  private static Stream<Arguments> getPivot() {
+    return Stream.of(
+        Arguments.of(new int[] {1, 2, 3, 4, 5}, 0),
+        Arguments.of(new int[] {5, 1, 2, 3, 4, 5}, 1),
+        Arguments.of(new int[] {4, 5, 1, 2, 3, 4}, 2),
+        Arguments.of(new int[] {3, 4, 5, 1, 2}, 3),
+        Arguments.of(new int[] {2, 3, 4, 5, 1}, 4));
+  }
 }
