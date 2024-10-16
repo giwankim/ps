@@ -52,7 +52,8 @@
 * [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 * [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/)
 * [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
-* [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/descript)
+* [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description)
+* [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/description/)
 
 ## [Programmers](https://programmers.co.kr/)
 
