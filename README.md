@@ -54,6 +54,7 @@
 * [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 * [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description)
 * [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/description/)
+* [268. Missing Number](https://leetcode.com/problems/missing-number/description/)
 
 ## [Programmers](https://programmers.co.kr/)
 
