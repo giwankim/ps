@@ -56,6 +56,7 @@
 * [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms/description/)
 * [268. Missing Number](https://leetcode.com/problems/missing-number/description/)
 * [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)
+* [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/description/)
 
 ## [Programmers](https://programmers.co.kr/)
 
@@ -129,15 +130,15 @@
 
 ## [Algospot](https://algospot.com/)
 
-* [록 페스티벌
-  ](https://algospot.com/judge/problem/read/FESTIVAL)
-* [Hello World!](https://algospot.com/judge/problem/read/HELLOWORLD)
-* [보글 게임](https://algospot.com/judge/problem/read/BOGGLE)
+- [록 페스티벌](https://algospot.com/judge/problem/read/FESTIVAL)
+- [Hello World!](https://algospot.com/judge/problem/read/HELLOWORLD)
+- [보글 게임](https://algospot.com/judge/problem/read/BOGGLE)
 
 ## Company
 
-* Google
-  * [Plant Flowers](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/google/PlantFlowers.java)
-
-* Meta
-  * [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/meta/OnesInTheRange.java)
+- Google
+  - [Plant Flowers](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/google/PlantFlowers.java)
+- Meta
+  - [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/meta/OnesInTheRange.java)
+- Apple
+  - [Longest Unique Substring Set](https://docs.google.com/document/d/1kI0aOmsuok64NuGV4IF8yFV0HdBdJBtQm07G01Hllr4/edit?tab=t.0)
