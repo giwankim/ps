@@ -4,43 +4,49 @@ import java.util.*;
 
 public class LongestUniqueSubstringSet {
   public List<String> longestUniqueSubstringSet(String s) {
+    Map<Character, Integer> map = new HashMap<>();
+    for (int i = 0; i < s.length(); i++) {
+      map.put(s.charAt(i), i);
+    }
+
+    List<Substring> intervals = new ArrayList<>();
     Set<Character> set = new HashSet<>();
-    List<String> result = new ArrayList<>();
-    longestUniqueSubstringSet(s, 0, set, new ArrayList<>(), result);
-    return result;
-  }
-
-  private void longestUniqueSubstringSet(String s, int i, Set<Character> set, List<String> current, List<String> result) {
-    if (i == s.length()) {
-      if (current.size() > result.size()) {
-        result.clear();
-        result.addAll(current);
-        return;
-      }
-    }
-    for (int j = i; j < s.length(); j++) {
-      String t = s.substring(i, j + 1);
-      if (containsAny(set, t)) {
-        break;
-      }
-      current.add(t);
-      for (char c : t.toCharArray()) {
-        set.add(c);
-      }
-      longestUniqueSubstringSet(s, j + 1, set, current, result);
-      current.removeLast();
-      for (char c : t.toCharArray()) {
-        set.remove(c);
-      }
-    }
-  }
-
-  private boolean containsAny(Set<Character> set, String t) {
-    for (char c : t.toCharArray()) {
+    for (int i = 0; i < s.length(); i++) {
+      char c = s.charAt(i);
       if (set.contains(c)) {
-        return true;
+        continue;
+      }
+      set.add(c);
+      intervals.add(new Substring(i, map.get(c)));
+    }
+
+    List<Substring> substrings = new ArrayList<>();
+    Substring interval = intervals.get(0);
+    for (int i = 1; i < intervals.size(); i++) {
+      if (interval.end >= intervals.get(i).start) { // overlap
+        interval.end = Math.max(interval.end, intervals.get(i).end);
+      } else {
+        substrings.add(interval);
+        interval = intervals.get(i);
       }
     }
-    return false;
+    substrings.add(interval);
+
+    return substrings.stream().map(it -> s.substring(it.start, it.end + 1)).toList();
+  }
+
+  public static class Substring {
+    public int start;
+    public int end;
+
+    public Substring(int start, int end) {
+      this.start = start;
+      this.end = end;
+    }
+
+    @Override
+    public String toString() {
+      return String.format("[%d, %d]", start, end);
+    }
   }
 }
