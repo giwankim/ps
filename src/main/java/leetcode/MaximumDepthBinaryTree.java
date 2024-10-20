@@ -1,9 +1,8 @@
 package leetcode;
 
-import leetcode.support.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
+import leetcode.support.TreeNode;
 
 public class MaximumDepthBinaryTree {
   public int maxDepth(TreeNode root) {
