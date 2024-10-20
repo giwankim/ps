@@ -17,15 +17,18 @@ public class TreeNode {
     this.right = right;
   }
 
-  public static TreeNode from(int... vals) {
+  public static TreeNode from(Integer... vals) {
     if (vals.length == 0) {
       return null;
     }
     return new TreeNode(vals[0], constructFromArray(vals, 1), constructFromArray(vals, 2));
   }
 
-  private static TreeNode constructFromArray(int[] vals, int k) {
+  private static TreeNode constructFromArray(Integer[] vals, int k) {
     if (k < 0 || k >= vals.length) {
+      return null;
+    }
+    if (vals[k] == null) {
       return null;
     }
     TreeNode root = new TreeNode(vals[k]);
