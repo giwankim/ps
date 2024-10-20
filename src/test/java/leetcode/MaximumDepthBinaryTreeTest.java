@@ -20,6 +20,7 @@ class MaximumDepthBinaryTreeTest {
   private static Stream<Arguments> maxDepth() {
     return Stream.of(
         Arguments.of(TreeNode.from(3, 9, 20, null, null, 15, 7), 3),
-        Arguments.of(TreeNode.from(1, null, 2), 2));
+        Arguments.of(TreeNode.from(1, null, 2), 2),
+        Arguments.of(TreeNode.from(), 0));
   }
 }
