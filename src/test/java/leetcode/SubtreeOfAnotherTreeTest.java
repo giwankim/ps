@@ -21,9 +21,7 @@ class SubtreeOfAnotherTreeTest {
     return Stream.of(
         Arguments.of(TreeNode.from(3, 4, 5, 1, 2), TreeNode.from(4, 1, 2), true),
         Arguments.of(
-            TreeNode.from(3, 4, 5, 1, 2, null, null, null, null, 0),
-            TreeNode.from(4, 1, 2),
-            false),
-        Arguments.of(TreeNode.from(3,4,5,1,null,2), TreeNode.from(3,1,2), false));
+            TreeNode.from(3, 4, 5, 1, 2, null, null, null, null, 0), TreeNode.from(4, 1, 2), false),
+        Arguments.of(TreeNode.from(3, 4, 5, 1, null, 2), TreeNode.from(3, 1, 2), false));
   }
 }
