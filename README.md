@@ -57,6 +57,7 @@
 * [268. Missing Number](https://leetcode.com/problems/missing-number/description/)
 * [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)
 * [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/description/)
+* [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
 
 ## [Programmers](https://programmers.co.kr/)
 
