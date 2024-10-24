@@ -65,6 +65,7 @@
 * [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists)
 * [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
+* [136. Single Number](https://leetcode.com/problems/single-number)
 
 ## [Programmers](https://programmers.co.kr/)
 
