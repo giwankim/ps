@@ -67,6 +67,7 @@
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [136. Single Number](https://leetcode.com/problems/single-number)
 * [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
+* [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
 
 ## [Programmers](https://programmers.co.kr/)
 
