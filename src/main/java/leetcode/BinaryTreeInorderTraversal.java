@@ -1,22 +1,31 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
 import leetcode.support.TreeNode;
+
+import java.util.*;
 
 public class BinaryTreeInorderTraversal {
   public List<Integer> inorderTraversal(TreeNode root) {
-    List<Integer> result = new ArrayList<>();
-    inorderTraversal(root, result);
-    return result;
-  }
-
-  private void inorderTraversal(TreeNode root, List<Integer> result) {
     if (root == null) {
-      return;
+      return Collections.emptyList();
     }
-    inorderTraversal(root.left, result);
-    result.add(root.val);
-    inorderTraversal(root.right, result);
+
+    List<Integer> result = new ArrayList<>();
+
+    Deque<TreeNode> stack = new ArrayDeque<>();
+    TreeNode iter = root;
+
+    while (iter != null || !stack.isEmpty()) {
+      // push left-most nodes onto stack
+      while (iter != null) {
+        stack.push(iter);
+        iter = iter.left;
+      }
+
+      iter = stack.pop();
+      result.add(iter.val); // visit current node
+      iter = iter.right; // visit right subtree
+    }
+    return result;
   }
 }
