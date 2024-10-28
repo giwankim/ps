@@ -2,23 +2,26 @@ package leetcode;
 
 import leetcode.support.TreeNode;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
+
 public class ValidateBinarySearchTree {
   public boolean isValidBST(TreeNode root) {
-    if (root == null) {
-      return true;
+    TreeNode prev = null;
+    TreeNode iter = root;
+    Deque<TreeNode> stack = new ArrayDeque<>();
+    while (iter != null || !stack.isEmpty()) {
+      while (iter != null) {
+        stack.push(iter);
+        iter = iter.left;
+      }
+      iter = stack.pop();
+      if (prev != null && prev.val >= iter.val) {
+        return false;
+      }
+      prev = iter;
+      iter = iter.right;
     }
-    return isValidBST(root.left, Long.MIN_VALUE, root.val)
-        && isValidBST(root.right, root.val, Long.MAX_VALUE);
-  }
-
-  private boolean isValidBST(TreeNode root, long minValue, long maxValue) {
-    if (root == null) {
-      return true;
-    }
-    int val = root.val;
-    if (val <= minValue || val >= maxValue) {
-      return false;
-    }
-    return isValidBST(root.left, minValue, val) && isValidBST(root.right, val, maxValue);
+    return true;
   }
 }
