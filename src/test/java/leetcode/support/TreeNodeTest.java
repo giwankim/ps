@@ -28,5 +28,14 @@ class TreeNodeTest {
       assertThat(root.left).isEqualTo(new TreeNode(1));
       assertThat(root.right).isEqualTo(new TreeNode(3));
     }
+
+    @Test
+    void withNull() {
+      TreeNode root = TreeNode.from(1, null, 2, null, null, 3);
+      assertThat(root.left).isNull();
+      assertThat(root.right.val).isEqualTo(2);
+      assertThat(root.right.right).isNull();
+      assertThat(root.right.left.val).isEqualTo(3);
+    }
   }
 }
