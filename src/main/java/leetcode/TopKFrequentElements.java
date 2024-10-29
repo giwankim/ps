@@ -1,6 +1,9 @@
 package leetcode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TopKFrequentElements {
   public int[] topKFrequent(int[] nums, int k) {
@@ -9,13 +12,27 @@ public class TopKFrequentElements {
       map.put(x, map.getOrDefault(x, 0) + 1);
     }
 
-    PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
-    pq.addAll(map.keySet());
+    List<Integer>[] buckets = new List[nums.length + 1];
 
-    int[] result = new int[k];
-    for (int i = 0; i < k; i++) {
-      result[i] = pq.poll();
+    for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+      int num = entry.getKey();
+      int count = entry.getValue();
+      if (buckets[count] == null) {
+        buckets[count] = new ArrayList<>();
+      }
+      buckets[count].add(num);
     }
-    return result;
+
+    List<Integer> result = new ArrayList<>();
+    for (int i = buckets.length - 1; i >= 0; i--) {
+      if (buckets[i] != null) {
+        result.addAll(buckets[i]);
+      }
+      if (result.size() >= k) {
+        break;
+      }
+    }
+
+    return result.stream().mapToInt(Integer::intValue).toArray();
   }
 }
