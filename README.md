@@ -78,6 +78,7 @@
 * [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)
 * [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths)
 * [338. Counting Bits](https://leetcode.com/problems/counting-bits)
+* [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)
 
 ## [Programmers](https://programmers.co.kr/)
 
