@@ -1,9 +1,8 @@
 package leetcode;
 
-import leetcode.support.TreeNode;
-
 import java.util.ArrayList;
 import java.util.List;
+import leetcode.support.TreeNode;
 
 public class BinaryTreePaths {
   public List<String> binaryTreePaths(TreeNode root) {
