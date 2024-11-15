@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class RottingOranges {
-  private static int[] dx = {-1, 1, 0, 0};
-  private static int[] dy = {0, 0, -1, 1};
+  private static final int[] dx = {-1, 1, 0, 0};
+  private static final int[] dy = {0, 0, -1, 1};
 
   public int orangesRotting(int[][] grid) {
     int count = 0;
@@ -16,7 +16,7 @@ public class RottingOranges {
     for (int i = 0; i < grid.length; i++) {
       for (int j = 0; j < grid[0].length; j++) {
         if (grid[i][j] == 2) {
-          queue.offer(new int[]{i, j});
+          queue.offer(new int[] {i, j});
         } else if (grid[i][j] == 1) {
           fresh += 1;
         }
@@ -43,7 +43,7 @@ public class RottingOranges {
           if (grid[nx][ny] == 1) {
             fresh -= 1;
             grid[nx][ny] = 2;
-            queue.offer(new int[]{nx, ny});
+            queue.offer(new int[] {nx, ny});
           }
         }
       }
