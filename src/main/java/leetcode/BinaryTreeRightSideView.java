@@ -1,8 +1,7 @@
 package leetcode;
 
-import leetcode.support.TreeNode;
-
 import java.util.*;
+import leetcode.support.TreeNode;
 
 public class BinaryTreeRightSideView {
   public List<Integer> rightSideView(TreeNode root) {
