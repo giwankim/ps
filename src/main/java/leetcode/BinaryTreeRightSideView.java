@@ -1,35 +1,24 @@
 package leetcode;
 
 import java.util.*;
+
 import leetcode.support.TreeNode;
 
 public class BinaryTreeRightSideView {
   public List<Integer> rightSideView(TreeNode root) {
-    if (root == null) {
-      return Collections.emptyList();
-    }
-
     List<Integer> result = new ArrayList<>();
-
-    Queue<TreeNode> queue = new LinkedList<>();
-    queue.offer(root);
-
-    while (!queue.isEmpty()) {
-      int size = queue.size();
-      for (int i = 0; i < size; i++) {
-        TreeNode node = queue.poll();
-        if (i == 0) {
-          result.add(node.val);
-        }
-        if (node.right != null) {
-          queue.offer(node.right);
-        }
-        if (node.left != null) {
-          queue.offer(node.left);
-        }
-      }
-    }
-
+    rightSideView(root, 0, result);
     return result;
+  }
+
+  private void rightSideView(TreeNode root, int depth, List<Integer> result) {
+    if (root == null) {
+      return;
+    }
+    if (result.size() == depth) {
+      result.add(root.val);
+    }
+    rightSideView(root.right, depth + 1, result);
+    rightSideView(root.left, depth + 1, result);
   }
 }
