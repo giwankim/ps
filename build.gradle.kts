@@ -17,16 +17,6 @@ java {
     }
 }
 
-configurations {
-    compileOnly {
-        extendsFrom(configurations.annotationProcessor.get())
-    }
-}
-
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     testImplementation(platform("org.junit:junit-bom:${property("junitJupiterVersion")}"))
     testImplementation(platform("org.assertj:assertj-bom:${property("assertJVersion")}"))
