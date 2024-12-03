@@ -19,7 +19,10 @@ fun part2(lines: List<String>): Long {
 private fun parse(lines: List<String>): Pair<List<Long>, List<Long>> =
     lines
         .map { line ->
-            line.split("""\s+""".toRegex()).let { it[0].toLong() to it[1].toLong() }
+            line.split("""\s+""".toRegex()).let {
+                check(it.size == 2) { "Line is malformed" }
+                it[0].toLong() to it[1].toLong()
+            }
         }.unzip()
 
 fun main() {
