@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -27,18 +28,18 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    testImplementation(kotlin("test"))
     testImplementation(platform("org.junit:junit-bom:${property("junitJupiterVersion")}"))
     testImplementation(platform("org.assertj:assertj-bom:${property("assertJVersion")}"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testImplementation("org.assertj:assertj-core")
+    testImplementation("io.kotest:kotest-runner-junit5:${property("kotestVersion")}")
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "${project.property("javaVersion")}"
+tasks.withType<KotlinCompile>().configureEach {
+    compilerOptions {
+        // hardcoded JVM target version
+        jvmTarget.set(JvmTarget.JVM_21)
+        freeCompilerArgs.add("-Xjsr305=strict")
     }
 }
 
@@ -51,5 +52,11 @@ spotless {
         removeUnusedImports()
         googleJavaFormat().reflowLongStrings().reorderImports(true)
         formatAnnotations()
+    }
+}
+
+tasks {
+    ktlint {
+        verbose.set(true)
     }
 }
