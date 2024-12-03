@@ -1,4 +1,4 @@
-package aoc.aoc2022
+package aoc.dec2022
 
 import java.math.BigInteger
 import java.security.MessageDigest
