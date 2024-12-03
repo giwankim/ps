@@ -1,4 +1,3 @@
-
 # Problem Solving
 
 ## [LeetCode](https://leetcode.com/)
@@ -141,7 +140,7 @@
 
 * [2016 January](https://usaco.org/index.php?page=jan16results)
   * Bronze
-    * [Problem 1. Promotion Counting](https://usaco.org/index.php?page=viewproblem2&cpid=591) 
+    * [Problem 1. Promotion Counting](https://usaco.org/index.php?page=viewproblem2&cpid=591)
     * [Problem 3. Mowing the Field](https://usaco.org/index.php?page=viewproblem2&cpid=593)
 
 * [2015 December](https://usaco.org/index.php?page=dec15results)
@@ -160,6 +159,11 @@
 - [록 페스티벌](https://algospot.com/judge/problem/read/FESTIVAL)
 - [Hello World!](https://algospot.com/judge/problem/read/HELLOWORLD)
 - [보글 게임](https://algospot.com/judge/problem/read/BOGGLE)
+
+## [Advent of Code](https://adventofcode.com/)
+
+- [2024](https://adventofcode.com/2024)
+  - [Day 1: Historian Hysteria](https://adventofcode.com/2024/day/1)
 
 ## Company
 

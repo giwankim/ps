@@ -3,7 +3,7 @@ package aoc.dec2024
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 
-class Day01Test {
+class Day01KtTest {
     @Test
     fun part1() {
         val lines =

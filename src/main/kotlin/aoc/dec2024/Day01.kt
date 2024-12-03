@@ -2,26 +2,28 @@ package aoc.dec2024
 
 import kotlin.math.abs
 
-fun part1(lines: List<String>): Int {
-    val (left, right) =
-        lines
-            .map { line ->
-                val first = line.substringBefore(" ").toInt()
-                val second = line.substringAfterLast(" ").toInt()
-                first to second
-            }.unzip()
+fun part1(lines: List<String>): Long {
+    val (left, right) = parse(lines)
     return left
         .sorted()
         .zip(right.sorted())
         .sumOf { (first, second) -> abs(first - second) }
 }
 
-fun part2(lines: List<String>): Int {
-    //
-    return -1
+fun part2(lines: List<String>): Long {
+    val (left, right) = parse(lines)
+    val frequencies = right.groupingBy { it }.eachCount()
+    return left.sumOf { it * (frequencies[it] ?: 0) }
 }
+
+private fun parse(lines: List<String>): Pair<List<Long>, List<Long>> =
+    lines
+        .map { line ->
+            line.split("""\s+""".toRegex()).let { it[0].toLong() to it[1].toLong() }
+        }.unzip()
 
 fun main() {
     val lines = readInput("Day01")
     println(part1(lines))
+    println(part2(lines))
 }
