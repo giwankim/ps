@@ -3,38 +3,59 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("java")
-    id("com.diffplug.spotless")
-    id("org.jlleitschuh.gradle.ktlint")
-    kotlin("jvm")
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.spotless)
+    alias(libs.plugins.ktlint)
+    alias(libs.plugins.benchmark)
+    alias(libs.plugins.allopen)
 }
 
-group = "${property("projectGroup")}"
-version = "${property("projectVersion")}"
+group = "com.giwankim"
+version = "0.0.1-SNAPSHOT"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of("${property("javaVersion")}")
+        languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
     }
 }
 
+allOpen {
+    annotation("org.openjdk.jmh.annotations.State")
+}
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:${property("junitJupiterVersion")}"))
-    testImplementation(platform("org.assertj:assertj-bom:${property("assertJVersion")}"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testImplementation("org.assertj:assertj-core")
-    testImplementation("io.kotest:kotest-runner-junit5:${property("kotestVersion")}")
+    implementation(libs.benchmark)
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testImplementation(platform(libs.assertj.bom))
+    testImplementation(libs.assertj.core)
+    testImplementation(libs.kotest)
 }
 
 tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
-        // hardcoded JVM target version
         jvmTarget.set(JvmTarget.JVM_21)
         freeCompilerArgs.add("-Xjsr305=strict")
     }
 }
 
-tasks.test {
-    useJUnitPlatform()
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+    ktlint {
+        verbose.set(true)
+    }
+}
+
+benchmark {
+    targets {
+        register("main")
+    }
 }
 
 spotless {
@@ -42,11 +63,5 @@ spotless {
         removeUnusedImports()
         googleJavaFormat().reflowLongStrings().reorderImports(true)
         formatAnnotations()
-    }
-}
-
-tasks {
-    ktlint {
-        verbose.set(true)
     }
 }
