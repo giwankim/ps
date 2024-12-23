@@ -25,6 +25,23 @@ class Day02KtTest {
             1 3 6 7 9
             """.trimIndent()
                 .lines()
-        part1(lines) shouldBe 2
+        val reports = lines.map { it.split("\\s+".toRegex()).map { it.toInt() } }
+        part1(reports) shouldBe 2
+    }
+
+    @Test
+    fun `part1 functional`() {
+        val lines =
+            """
+            7 6 4 2 1
+            1 2 7 8 9
+            9 7 6 2 1
+            1 3 2 4 5
+            8 6 4 4 1
+            1 3 6 7 9
+            """.trimIndent()
+                .lines()
+        val reports = lines.map { it.split("\\s+".toRegex()).map { it.toInt() } }
+        part1Functional(reports) shouldBe 2
     }
 }

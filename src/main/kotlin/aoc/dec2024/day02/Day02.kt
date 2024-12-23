@@ -4,10 +4,9 @@ import aoc.dec2024.println
 import aoc.dec2024.readInput
 import kotlin.math.absoluteValue
 
-fun part1(lines: List<String>): Int {
+fun part1(reports: List<List<Int>>): Int {
     var result = 0
-    for (line in lines) {
-        val report = line.split("\\s+".toRegex()).map { it.toInt() }
+    for (report in reports) {
         if (isReportSafe(report)) {
             result += 1
         }
@@ -36,7 +35,16 @@ private fun isReportSafe(report: List<Int>): Boolean {
     return isDiff && (isAscending || isDescending)
 }
 
+fun part1Functional(reports: List<List<Int>>): Int = reports.count(::isReportSafeFunctional)
+
+private fun isReportSafeFunctional(report: List<Int>): Boolean {
+    val differences = report.zipWithNext { a, b -> a - b }
+    return differences.all { it in -3..3 } && (differences.all { it > 0 } || differences.all { it < 0 })
+}
+
 fun main() {
     val lines = readInput("Day02")
-    part1(lines).println()
+    val reports: List<List<Int>> = lines.map { line -> line.split("\\s+".toRegex()).map { it.toInt() } }
+    part1(reports).println()
+    part1Functional(reports).println()
 }
