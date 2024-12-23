@@ -1,5 +1,6 @@
-package aoc.dec2024
+package aoc.dec2024.day01
 
+import aoc.dec2024.readInput
 import kotlinx.benchmark.Benchmark
 import kotlinx.benchmark.State
 import org.openjdk.jmh.annotations.Scope
