@@ -42,9 +42,37 @@ private fun isReportSafeFunctional(report: List<Int>): Boolean {
     return differences.all { it in -3..3 } && (differences.all { it > 0 } || differences.all { it < 0 })
 }
 
+fun part2(reports: List<List<Int>>): Int {
+    var result = 0
+    for (report in reports) {
+        var safe = false
+        for (i in report.indices) {
+            safe = isReportSafe(report.toMutableList().apply { removeAt(i) })
+            if (safe) {
+                break
+            }
+        }
+        if (safe) {
+            result += 1
+        }
+    }
+    return result
+}
+
+fun part2Functional(reports: List<List<Int>>): Int =
+    reports.count { report ->
+        report.indices.any {
+            val dampened = report.toMutableList().apply { removeAt(it) }.toList()
+            isReportSafeFunctional(dampened)
+        }
+    }
+
 fun main() {
     val lines = readInput("Day02")
     val reports: List<List<Int>> = lines.map { line -> line.split("\\s+".toRegex()).map { it.toInt() } }
-    part1(reports).println()
+
+//    part1(reports).println()
     part1Functional(reports).println()
+//    part2(reports).println()
+    part2Functional(reports).println()
 }
