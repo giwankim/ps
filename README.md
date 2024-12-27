@@ -83,6 +83,7 @@
 * [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 * [48. Rotate Image](https://leetcode.com/problems/rotate-image)
 * [221. Maximal Square](https://leetcode.com/problems/maximal-square)
+* [696. Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)
 
 ## [Programmers](https://programmers.co.kr/)
 
