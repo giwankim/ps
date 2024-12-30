@@ -18,7 +18,8 @@ public class MaxOccurrencesOfASubstring {
     }
 
     for (Map.Entry<String, Integer> entry : frequencies.entrySet()) {
-      Set<Character> characters = entry.getKey().chars().mapToObj(c -> (char) c).collect(Collectors.toSet());
+      Set<Character> characters =
+          entry.getKey().chars().mapToObj(c -> (char) c).collect(Collectors.toSet());
       if (characters.size() <= maxLetters) {
         result = Math.max(result, entry.getValue());
       }
