@@ -8,7 +8,7 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class MaximumUnitsOnATruckTest {
-  private MaximumUnitsOnATruck sut = new MaximumUnitsOnATruck();
+  private final MaximumUnitsOnATruck sut = new MaximumUnitsOnATruck();
 
   @ParameterizedTest
   @MethodSource
