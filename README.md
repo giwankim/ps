@@ -88,6 +88,7 @@
 * [1297. Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring)
 * [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 * [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
+* [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
 
 ## [Programmers](https://programmers.co.kr/)
 
