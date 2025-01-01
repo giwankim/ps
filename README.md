@@ -1,4 +1,3 @@
-
 # Problem Solving
 
 ## [LeetCode](https://leetcode.com/)
@@ -89,6 +88,7 @@
 * [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 * [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 * [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
+* [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)
 
 ## [Programmers](https://programmers.co.kr/)
 
