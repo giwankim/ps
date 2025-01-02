@@ -1,33 +1,32 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class DiagonalTraverseII {
   public int[] findDiagonalOrder(List<List<Integer>> nums) {
-    List<Integer> result = new ArrayList<>();
+    List<Integer> diagonals = new ArrayList<>();
 
-    PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
-      int sumA = a[0] + a[1];
-      int sumB = b[0] + b[1];
-      if (sumA != sumB) {
-        return Integer.compare(sumA, sumB);
+    Queue<int[]> queue = new LinkedList<>();
+    queue.offer(new int[]{0, 0});
+
+    while (!queue.isEmpty()) {
+      int[] coordinates = queue.poll();
+      int i = coordinates[0];
+      int j = coordinates[1];
+      diagonals.add(nums.get(i).get(j));
+      if (j == 0 && i + 1 < nums.size()) {
+        queue.offer(new int[]{i + 1, j});
       }
-      return Integer.compare(a[1], b[1]);
-    });
-
-    for (int i = 0; i < nums.size(); i++) {
-      for (int j = 0; j < nums.get(i).size(); j++) {
-        pq.offer(new int[]{i, j});
+      if (j + 1 < nums.get(i).size()) {
+        queue.offer(new int[]{i, j + 1});
       }
     }
 
-    while (!pq.isEmpty()) {
-      int[] coordinates = pq.poll();
-      result.add(nums.get(coordinates[0]).get(coordinates[1]));
+    int[] result = new int[diagonals.size()];
+    for (int i = 0; i < diagonals.size(); i++) {
+      result[i] = diagonals.get(i);
     }
 
-    return result.stream().mapToInt(Integer::intValue).toArray();
+    return result;
   }
 }
