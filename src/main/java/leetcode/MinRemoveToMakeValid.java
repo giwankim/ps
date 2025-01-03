@@ -5,35 +5,26 @@ import java.util.Deque;
 
 public class MinRemoveToMakeValid {
   public String minRemoveToMakeValid(String s) {
-    Deque<Character> stack = new ArrayDeque<>();
-    StringBuilder sb = new StringBuilder();
-    for (char c : s.toCharArray()) {
-      if (Character.isLetter(c)) {
-        sb.append(c);
-      } else if (c == '(') {
-        stack.push(c);
-        sb.append(c);
-      } else if (c == ')' && !stack.isEmpty()) {
-        stack.pop();
-        sb.append(c);
-      }
-    }
+    StringBuilder sb = new StringBuilder(s);
+    Deque<Integer> stack = new ArrayDeque<>();
 
-    stack.clear();
-    s = sb.reverse().toString();
-    sb = new StringBuilder();
-    for (char c : s.toCharArray()) {
-      if (Character.isLetter(c)) {
-        sb.append(c);
+    for (int i = 0; i < s.length(); i++) {
+      char c = sb.charAt(i);
+      if (c == '(') {
+        stack.push(i);
       } else if (c == ')') {
-        stack.push(c);
-        sb.append(c);
-      } else if (c == '(' && !stack.isEmpty()) {
-        stack.pop();
-        sb.append(c);
+        if (!stack.isEmpty()) {
+          stack.pop();
+        } else {
+          sb.setCharAt(i, '*');
+        }
       }
     }
 
-    return sb.reverse().toString();
+    while (!stack.isEmpty()) {
+      sb.setCharAt(stack.pop(), '*');
+    }
+
+    return sb.toString().replace("*", "");
   }
 }
