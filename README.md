@@ -90,6 +90,7 @@
 * [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
 * [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)
 * [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
+* [79. Word Search](https://leetcode.com/problems/word-search)
 
 ## [Programmers](https://programmers.co.kr/)
 
