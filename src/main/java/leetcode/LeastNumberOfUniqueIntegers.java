@@ -1,6 +1,5 @@
 package leetcode;
 
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
@@ -12,21 +11,18 @@ public class LeastNumberOfUniqueIntegers {
       freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
     }
 
-    PriorityQueue<Map.Entry<Integer, Integer>> minHeap = new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
-    minHeap.addAll(freqMap.entrySet());
+    PriorityQueue<Integer> pq = new PriorityQueue<>(freqMap.values());
 
-    while (k > 0 && !minHeap.isEmpty()) {
-      Map.Entry<Integer, Integer> entry = minHeap.poll();
-      int frequency = entry.getValue();
-      if (frequency <= k) {
-        k -= frequency;
+    while (k > 0 && !pq.isEmpty()) {
+      int freq = pq.poll();
+      if (freq <= k) {
+        k -= freq;
       } else {
-        entry.setValue(frequency - k);
-        minHeap.add(entry);
+        pq.add(freq - k);
         k = 0;
       }
     }
 
-    return minHeap.size();
+    return pq.size();
   }
 }

@@ -7,7 +7,7 @@ public class DiagonalTraverseII {
     List<Integer> diagonals = new ArrayList<>();
 
     Queue<int[]> queue = new LinkedList<>();
-    queue.offer(new int[]{0, 0});
+    queue.offer(new int[] {0, 0});
 
     while (!queue.isEmpty()) {
       int[] coordinates = queue.poll();
@@ -15,10 +15,10 @@ public class DiagonalTraverseII {
       int j = coordinates[1];
       diagonals.add(nums.get(i).get(j));
       if (j == 0 && i + 1 < nums.size()) {
-        queue.offer(new int[]{i + 1, j});
+        queue.offer(new int[] {i + 1, j});
       }
       if (j + 1 < nums.get(i).size()) {
-        queue.offer(new int[]{i, j + 1});
+        queue.offer(new int[] {i, j + 1});
       }
     }
 

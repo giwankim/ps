@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-class MinRemoveToMakeValidTest {
+class MinRemoveToMakeValidParenthesesTest {
   @ParameterizedTest
   @CsvSource(
       delimiter = '|',
@@ -16,7 +16,7 @@ class MinRemoveToMakeValidTest {
           ))(( | ''
           """)
   void minRemoveToMakeValid(String s, String expected) {
-    var sut = new MinRemoveToMakeValid();
+    var sut = new MinRemoveToMakeValidParentheses();
     String actual = sut.minRemoveToMakeValid(s);
     assertThat(actual).isEqualTo(expected);
   }
