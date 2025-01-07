@@ -34,6 +34,7 @@ dependencies {
     testImplementation(platform(libs.assertj.bom))
     testImplementation(libs.assertj.core)
     testImplementation(libs.kotest)
+    testImplementation(libs.kotest.datatest)
 }
 
 tasks.withType<KotlinCompile>().configureEach {

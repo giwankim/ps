@@ -91,6 +91,7 @@
 * [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)
 * [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
 * [79. Word Search](https://leetcode.com/problems/word-search)
+* [55. Jump Game](https://leetcode.com/problems/jump-game)
 
 ## [Programmers](https://programmers.co.kr/)
 
