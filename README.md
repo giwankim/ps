@@ -92,6 +92,7 @@
 * [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
 * [79. Word Search](https://leetcode.com/problems/word-search)
 * [55. Jump Game](https://leetcode.com/problems/jump-game)
+* [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 
 ## [Programmers](https://programmers.co.kr/)
 
