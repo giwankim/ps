@@ -5,7 +5,7 @@ import java.util.*;
 @SuppressWarnings("unchecked")
 public class PossibleBipartition {
   public boolean possibleBipartition(int n, int[][] dislikes) {
-//    Map<Integer, List<Integer>> adjList = new HashMap<>();
+    //    Map<Integer, List<Integer>> adjList = new HashMap<>();
     List<Integer>[] adjList = new List[n + 1];
     for (int i = 0; i < adjList.length; i++) {
       adjList[i] = new ArrayList<>();
@@ -14,8 +14,8 @@ public class PossibleBipartition {
     for (int[] edge : dislikes) {
       int from = edge[0];
       int to = edge[1];
-//      adjList.computeIfAbsent(to, key -> new ArrayList<>()).add(from);
-//      adjList.computeIfAbsent(from, key -> new ArrayList<>()).add(to);
+      //      adjList.computeIfAbsent(to, key -> new ArrayList<>()).add(from);
+      //      adjList.computeIfAbsent(from, key -> new ArrayList<>()).add(to);
       adjList[from].add(to);
       adjList[to].add(from);
     }
