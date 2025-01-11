@@ -94,6 +94,7 @@
 * [55. Jump Game](https://leetcode.com/problems/jump-game)
 * [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 * [45. Jump Game II](https://leetcode.com/problems/jump-game-ii)
+* [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive)
 
 ## [Programmers](https://programmers.co.kr/)
 
