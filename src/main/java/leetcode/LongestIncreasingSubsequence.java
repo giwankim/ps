@@ -1,22 +1,25 @@
 package leetcode;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class LongestIncreasingSubsequence {
   public int lengthOfLIS(int[] nums) {
-    int result = 0;
+    List<Integer> piles = new ArrayList<>();
+    for (int num : nums) {
+      int index = Collections.binarySearch(piles, num);
 
-    int[] a = new int[nums.length];
-    Arrays.fill(a, 1);
-
-    for (int i = 0; i < nums.length; i++) {
-      for (int j = 0; j < i; j++) {
-        if (nums[j] < nums[i]) {
-          a[i] = Math.max(a[i], 1 + a[j]);
-        }
+      if (index < 0) {
+        index = -index - 1;
       }
-      result = Math.max(result, a[i]);
+
+      if (index == piles.size()) {
+        piles.add(num);
+      } else {
+        piles.set(index, num);
+      }
     }
-    return result;
+    return piles.size();
   }
 }
