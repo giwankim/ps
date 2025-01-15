@@ -95,7 +95,8 @@
 * [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 * [45. Jump Game II](https://leetcode.com/problems/jump-game-ii)
 * [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive)
-* [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)
+* [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
+* [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)
 
 ## [Programmers](https://programmers.co.kr/)
 
