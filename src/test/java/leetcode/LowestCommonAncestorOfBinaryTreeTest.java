@@ -9,7 +9,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class LowestCommonAncestorOfBinaryTreeTest {
-
   @ParameterizedTest
   @MethodSource
   void lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q, TreeNode expected) {

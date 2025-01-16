@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 class TreeNodeTest {
-
   @Nested
   class FromTest {
     @Test
