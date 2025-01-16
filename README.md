@@ -97,6 +97,7 @@
 * [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive)
 * [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
 * [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)
+* [358. Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart)
 
 ## [Programmers](https://programmers.co.kr/)
 
