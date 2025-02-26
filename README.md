@@ -100,6 +100,7 @@
 * [358. Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart)
 * [62. Unique Paths](https://leetcode.com/problems/unique-paths)
 * [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer)
+* [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku)
 
 ## [Programmers](https://programmers.co.kr/)
 
