@@ -1,11 +1,11 @@
 package leetcode
 
-class ListNode(
+data class ListNode(
     var `val`: Int,
+    var next: ListNode? = null,
 ) {
-    var next: ListNode? = null
-
     companion object {
+        @JvmStatic
         fun of(vararg values: Int): ListNode? {
             val head = ListNode(-1)
             var tail: ListNode? = head
