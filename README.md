@@ -103,6 +103,7 @@
 * [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku)
 * [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list)
 * [39. Combination Sum](https://leetcode.com/problems/combination-sum)
+* [71. Simplify Path](https://leetcode.com/problems/simplify-path)
 
 ## [Programmers](https://programmers.co.kr/)
 
