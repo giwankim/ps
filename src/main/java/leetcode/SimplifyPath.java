@@ -24,8 +24,7 @@ public class SimplifyPath {
 
     StringBuilder sb = new StringBuilder();
     for (String component : list) {
-      sb.append("/")
-          .append(component);
+      sb.append("/").append(component);
     }
 
     if (sb.isEmpty()) {
