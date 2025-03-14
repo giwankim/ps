@@ -6,13 +6,14 @@ class CorporateFlightBookingsKt {
         n: Int,
     ): IntArray {
         val result = IntArray(n)
-        for (booking in bookings) {
-            val first = booking[0] - 1
-            val last = booking[1] - 1
-            val seats = booking[2]
-            for (i in first..last) {
-                result[i] += seats
+        for ((first, last, seats) in bookings) {
+            result[first - 1] += seats
+            if (last < n) {
+                result[last] -= seats
             }
+        }
+        for (i in 1 until result.size) {
+            result[i] += result[i - 1]
         }
         return result
     }
