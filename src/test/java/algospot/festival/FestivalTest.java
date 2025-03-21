@@ -16,7 +16,8 @@ class FestivalTest {
         6 2
         1 2 3 1 2 3
         """;
-    String expected = """
+    String expected =
+        """
         1.75000000000
         1.50000000000
         """;

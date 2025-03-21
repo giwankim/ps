@@ -11,12 +11,12 @@ class MinWindowSubstringTest {
   @CsvSource(
       textBlock =
           """
-      ADOBECODEBANC, ABC, BANC
-      a, a, a
-      a, aa, ''
-      bdab, ab, ab
-      aaaaaaaaaaaabbbbbcdd, abcdd, abbbbbcdd
-      """)
+          ADOBECODEBANC, ABC, BANC
+          a, a, a
+          a, aa, ''
+          bdab, ab, ab
+          aaaaaaaaaaaabbbbbcdd, abcdd, abbbbbcdd
+          """)
   void minWindow(String s, String t, String expected) {
     String actual = new MinWindowSubstring().minWindow(s, t);
     assertThat(actual).isEqualTo(expected);

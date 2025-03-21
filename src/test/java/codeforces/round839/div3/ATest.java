@@ -8,14 +8,16 @@ import org.junit.jupiter.api.Test;
 class ATest {
   @Test
   void aPlusB() throws IOException {
-    String input = """
+    String input =
+        """
         4
         4+2
         0+0
         3+7
         8+9
         """;
-    String expected = """
+    String expected =
+        """
         6
         0
         10

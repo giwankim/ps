@@ -10,20 +10,20 @@ class BoggleTest {
   void boggle() {
     String input =
         """
-            1
-            URLPM
-            XPRET
-            GIAET
-            XTNZY
-            XOQRS
-            6
-            PRETTY
-            GIRL
-            REPEAT
-            KARA
-            PANDORA
-            GIAZAPX
-            """;
+        1
+        URLPM
+        XPRET
+        GIAET
+        XTNZY
+        XOQRS
+        6
+        PRETTY
+        GIRL
+        REPEAT
+        KARA
+        PANDORA
+        GIAZAPX
+        """;
     String expected =
         """
         PRETTY YES

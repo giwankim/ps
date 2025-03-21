@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 class WalkAroundLakeTest {
   @Test
   void walkAroundLake() throws IOException {
-    String input = """
+    String input =
+        """
         30 5
         8 14 19 16 6
         6 5 6 5 6

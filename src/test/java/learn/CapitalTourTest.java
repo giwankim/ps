@@ -8,12 +8,14 @@ import org.junit.jupiter.api.Test;
 class CapitalTourTest {
   @Test
   void capitalTour() throws IOException {
-    String input = """
+    String input =
+        """
         4 20
         4 7 12 15
         6 8 14 17
         """;
-    String expected = """
+    String expected =
+        """
         12 8
         """;
     BufferedReader r = new BufferedReader(new StringReader(input));

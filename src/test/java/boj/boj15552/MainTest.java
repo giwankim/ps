@@ -17,7 +17,8 @@ class MainTest {
         40 60
         1000 1000
         """;
-    String expected = """
+    String expected =
+        """
         2
         46
         505

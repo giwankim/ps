@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 class MissingNumberTest {
   @Test
   void missingNumber() throws IOException {
-    String input = """
+    String input =
+        """
         8
         2 1 8 6 7 4 3
         """;

@@ -8,7 +8,8 @@ import org.junit.jupiter.api.Test;
 class WhereIsTheKingTest {
   @Test
   void whereIsTheKing() throws IOException {
-    String input = """
+    String input =
+        """
         8 3 7
         3 7 2 1 4 8 5 6
         """;
