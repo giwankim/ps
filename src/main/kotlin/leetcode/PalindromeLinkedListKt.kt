@@ -1,6 +1,5 @@
 package leetcode
 
-import datatype.ListNode
 import java.util.Deque
 import java.util.LinkedList
 

@@ -1,7 +1,5 @@
 package leetcode
 
-import datatype.ListNode
-
 class ReverseLinkedListKt {
     fun reverseList(head: ListNode?): ListNode? {
         var node: ListNode? = head

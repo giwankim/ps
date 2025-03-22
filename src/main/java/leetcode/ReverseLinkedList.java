@@ -1,6 +1,6 @@
 package leetcode;
 
-import datatype.ListNode;
+import leetcode.support.ListNode;
 
 public class ReverseLinkedList {
   public ListNode reverseList(ListNode head) {

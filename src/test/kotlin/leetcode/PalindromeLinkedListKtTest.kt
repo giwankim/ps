@@ -1,6 +1,5 @@
 package leetcode
 
-import datatype.ListNode
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.Arguments
@@ -21,8 +20,8 @@ class PalindromeLinkedListKtTest {
         @JvmStatic
         fun isPalindrome(): List<Arguments> =
             listOf(
-                Arguments.of(ListNode.createList(1, 2, 2, 1), true),
-                Arguments.of(ListNode.createList(1, 2), false),
+                Arguments.of(ListNode.of(1, 2, 2, 1), true),
+                Arguments.of(ListNode.of(1, 2), false),
             )
     }
 }
