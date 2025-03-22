@@ -199,3 +199,7 @@
   - [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/meta/OnesInTheRange.java)
 - Apple
   - [Longest Unique Substring Set](https://docs.google.com/document/d/1kI0aOmsuok64NuGV4IF8yFV0HdBdJBtQm07G01Hllr4/edit?tab=t.0)
+
+## Misc
+
+- [Commit Offset](https://docs.google.com/document/d/1Tu0p9oZRFnRwwI3cUtIFmLLFgPFx-XcW-j_VnZasb8w/edit?tab=t.0)
