@@ -25,11 +25,44 @@ class TextJustificationTest {
     assertThat(currentLine).isEqualTo(expected);
   }
 
-  static Stream<Arguments> getCurrentLine() {
+  private static Stream<Arguments> getCurrentLine() {
     return Stream.of(
         Arguments.of(0, List.of("What", "must", "be")),
         Arguments.of(3, List.of("acknowledgment")),
         Arguments.of(4, List.of("shall", "be")));
+  }
+
+  @ParameterizedTest
+  @MethodSource
+  void justifyLine(List<String> line, int maxWidth, String expected) {
+    String justifiedLine = sut.justifyLine(false, line, maxWidth);
+    assertThat(justifiedLine).isEqualTo(expected);
+  }
+
+  private static Stream<Arguments> justifyLine() {
+    return Stream.of(
+        Arguments.of(List.of("This", "is", "an"), 16, "This    is    an"),
+        Arguments.of(List.of("example", "of", "text"), 16, "example  of text"),
+        Arguments.of(List.of("What", "must", "be"), 16, "What   must   be"),
+        Arguments.of(List.of("acknowledgment"), 16, "acknowledgment  "),
+        Arguments.of(List.of("Science", "is", "what", "we"), 20, "Science  is  what we"),
+        Arguments.of(List.of("understand", "well"), 20, "understand      well"),
+        Arguments.of(List.of("enough", "to", "explain", "to"), 20, "enough to explain to"),
+        Arguments.of(List.of("a", "computer.", "Art", "is"), 20, "a  computer.  Art is"),
+        Arguments.of(List.of("everything", "else", "we"), 20, "everything  else  we"));
+  }
+
+  @ParameterizedTest
+  @MethodSource
+  void justifyLastLine(List<String> line, int maxWidth, String expected) {
+    String justifiedLine = sut.justifyLine(true, line, maxWidth);
+    assertThat(justifiedLine).isEqualTo(expected);
+  }
+
+  private static Stream<Arguments> justifyLastLine() {
+    return Stream.of(
+        Arguments.of(List.of("shall", "be"), 16, "shall be        "),
+        Arguments.of(List.of("do"), 20, "do                  "));
   }
 
   @ParameterizedTest
@@ -39,7 +72,7 @@ class TextJustificationTest {
     assertThat(actual).isEqualTo(expected);
   }
 
-  static Stream<Arguments> fullJustify() {
+  private static Stream<Arguments> fullJustify() {
     return Stream.of(
         Arguments.of(
             new String[] {"This", "is", "an", "example", "of", "text", "justification."},
