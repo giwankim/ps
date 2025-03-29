@@ -109,6 +109,7 @@
 * [1109. Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings)
 * [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
+* [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
 
 ## [Programmers](https://programmers.co.kr/)
 
