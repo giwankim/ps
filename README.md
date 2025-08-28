@@ -196,9 +196,9 @@
 ## Company
 
 - Google
-  - [Plant Flowers](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/google/PlantFlowers.java)
+  - [Plant Flowers](https://github.com/giwankim/ps/blob/main/src/main/java/google/PlantFlowers.java)
 - Meta
-  - [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/in/the/wild/meta/OnesInTheRange.java)
+  - [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/meta/OnesInTheRange.java)
 - Apple
   - [Longest Unique Substring Set](https://docs.google.com/document/d/1kI0aOmsuok64NuGV4IF8yFV0HdBdJBtQm07G01Hllr4/edit?tab=t.0)
 

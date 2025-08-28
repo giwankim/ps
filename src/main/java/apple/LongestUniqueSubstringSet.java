@@ -1,4 +1,4 @@
-package in.the.wild.apple;
+package apple;
 
 import java.util.*;
 

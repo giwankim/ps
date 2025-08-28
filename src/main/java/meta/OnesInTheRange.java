@@ -1,4 +1,4 @@
-package in.the.wild.meta;
+package meta;
 
 public class OnesInTheRange {
   private final int[] counts;

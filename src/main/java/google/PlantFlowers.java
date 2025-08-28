@@ -1,4 +1,4 @@
-package in.the.wild.google;
+package google;
 
 import java.util.ArrayList;
 import java.util.Arrays;
