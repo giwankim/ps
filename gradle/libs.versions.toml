@@ -8,15 +8,15 @@ allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "allopen" 
 
 [versions]
 
-java = "21"
-kotlin = "2.1.20"
-ktlint-gradle = "12.2.0"
-junit = "5.12.1"
-assertj = "3.27.3"
-kotest = "5.9.1"
-spotless = "7.0.2"
-benchmark = "0.4.13"
-allopen = "2.1.20"
+java = "24"
+kotlin = "2.2.10"
+ktlint-gradle = "13.1.0"
+junit = "5.13.4"
+assertj = "3.27.4"
+kotest = "6.0.1"
+spotless = "7.2.1"
+benchmark = "0.4.14"
+allopen = "2.2.10"
 
 [libraries]
 
@@ -25,5 +25,4 @@ junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.r
 assertj-bom = { group = "org.assertj", name = "assertj-bom", version.ref = "assertj" }
 assertj-core = { group = "org.assertj", name = "assertj-core", version.ref = "assertj" }
 kotest = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
-kotest-datatest = {group = "io.kotest", name = "kotest-framework-datatest", version.ref = "kotest"}
 benchmark = { group = "org.jetbrains.kotlinx", name = "kotlinx-benchmark-runtime", version.ref = "benchmark" }
