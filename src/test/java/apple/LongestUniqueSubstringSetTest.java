@@ -2,7 +2,6 @@ package apple;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import apple.LongestUniqueSubstringSet;
 import java.util.List;
 import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
