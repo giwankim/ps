@@ -18,8 +18,8 @@ class CountCompletePairPairs2Test {
 
   static Stream<Arguments> cases() {
     return Stream.of(
-        Arguments.of(new int[] {}, 0L),
-        Arguments.of(new int[] {12, 12, 30, 24, 24}, 2L),
-        Arguments.of(new int[] {72, 48, 24, 3}, 3L));
+        Arguments.of(new int[]{24}, 0L),
+        Arguments.of(new int[]{12, 12, 30, 24, 24}, 2L),
+        Arguments.of(new int[]{72, 48, 24, 3}, 3L));
   }
 }

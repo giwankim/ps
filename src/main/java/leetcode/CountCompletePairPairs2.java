@@ -7,13 +7,14 @@ public class CountCompletePairPairs2 {
       return 0L;
     }
 
-    long result = 0;
-    for (int i = 0; i + 1 < hours.length; i++) {
-      for (int j = i + 1; j < hours.length; j++) {
-        if ((hours[i] + hours[j]) % 24 == 0) {
-          result += 1;
-        }
-      }
+    long[] freqs = new long[24];
+    long result = 0L;
+
+    for (int hour : hours) {
+      int rem = hour % 24;
+      int complement = (24 - rem) % 24;
+      result += freqs[complement];
+      freqs[rem] += 1;
     }
     return result;
   }
