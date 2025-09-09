@@ -107,6 +107,7 @@
 * [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 * [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
 * [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
+* [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 * [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 
 ## [Programmers](https://programmers.co.kr/)
