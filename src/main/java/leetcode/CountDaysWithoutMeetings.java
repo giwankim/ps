@@ -5,23 +5,20 @@ import java.util.Arrays;
 public class CountDaysWithoutMeetings {
 
   public int countDays(int days, int[][] meetings) {
-    // sort the meetings by start time then end time
-    Arrays.sort(meetings, (a, b) -> Integer.compare(a[0], b[0]));
+    int result = 0;
 
-    // add the days until the first meeting
-    int result = meetings[0][0] - 1;
+    // sort the meetings by start time
+    Arrays.sort(meetings, (a, b) -> a[0] - b[0]);
 
-    for (int i = 0; i + 1 < meetings.length; i++) {
-      if (meetings[i][1] >= meetings[i + 1][0]) { // meetings overlap
-        // merge meetings
-        meetings[i + 1][1] = Math.max(meetings[i][1], meetings[i + 1][1]);
-      } else {
-        result += meetings[i + 1][0] - meetings[i][1] - 1;
+    int end = 0;
+    for (int[] meeting : meetings) {
+      if (end + 1 < meeting[0]) { // days exist between last meeting and current meeting
+        result += meeting[0] - end - 1;
       }
+      // update the end of last meeting
+      end = Math.max(end, meeting[1]);
     }
-
-    // add days from the end of last meeting
-    result += days - meetings[meetings.length - 1][1];
+    result += days - end;
 
     return result;
   }
