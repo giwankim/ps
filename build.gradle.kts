@@ -29,9 +29,7 @@ repositories {
 
 dependencies {
     implementation(libs.benchmark)
-    testImplementation(platform(libs.junit.bom))
     testImplementation(libs.junit.jupiter)
-    testImplementation(platform(libs.assertj.bom))
     testImplementation(libs.assertj.core)
     testImplementation(libs.kotest)
 }
