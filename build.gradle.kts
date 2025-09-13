@@ -30,6 +30,7 @@ repositories {
 dependencies {
     implementation(libs.benchmark)
     testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.pioneer)
     testImplementation(libs.assertj.core)
     testImplementation(libs.kotest)
 }
