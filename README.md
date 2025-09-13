@@ -186,6 +186,7 @@
 - [Hello World!](https://algospot.com/judge/problem/read/HELLOWORLD)
 - [보글 게임](https://algospot.com/judge/problem/read/BOGGLE)
 - [외발 뛰기](https://algospot.com/judge/problem/read/JUMPGAME)
+- [여행 짐 싸기](https://algospot.com/judge/problem/read/PACKING)
 
 ## [Advent of Code](https://adventofcode.com/)
 
