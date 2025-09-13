@@ -185,6 +185,7 @@
 - [록 페스티벌](https://algospot.com/judge/problem/read/FESTIVAL)
 - [Hello World!](https://algospot.com/judge/problem/read/HELLOWORLD)
 - [보글 게임](https://algospot.com/judge/problem/read/BOGGLE)
+- [외발 뛰기](https://algospot.com/judge/problem/read/JUMPGAME)
 
 ## [Advent of Code](https://adventofcode.com/)
 
