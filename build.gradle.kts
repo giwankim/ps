@@ -23,10 +23,6 @@ allOpen {
     annotation("org.openjdk.jmh.annotations.State")
 }
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
     implementation(libs.benchmark)
     testImplementation(libs.junit.jupiter)
