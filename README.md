@@ -43,6 +43,7 @@
 * [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)
 * [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
 * [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence)
+* [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers)
 * [133. Clone Graph](https://leetcode.com/problems/clone-graph)
 * [136. Single Number](https://leetcode.com/problems/single-number)
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)

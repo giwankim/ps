@@ -1,0 +1,27 @@
+package com.giwankim.leetcode;
+
+import com.giwankim.leetcode.support.TreeNode;
+
+public class SumRootToLeafNumbers {
+
+  public int sumNumbers(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+    return sumNumbers(root, 0);
+  }
+
+  private int sumNumbers(TreeNode root, int currentSum) {
+    currentSum = currentSum * 10 + root.val;
+    if (root.left != null && root.right != null) {
+      return sumNumbers(root.left, currentSum) + sumNumbers(root.right, currentSum);
+    }
+    if (root.left == null && root.right == null) {
+      return currentSum;
+    }
+    if (root.left == null) {
+      return sumNumbers(root.right, currentSum);
+    }
+    return sumNumbers(root.left, currentSum);
+  }
+}
