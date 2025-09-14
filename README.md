@@ -26,6 +26,7 @@
 * [55. Jump Game](https://leetcode.com/problems/jump-game)
 * [56. Merge Intervals](https://leetcode.com/problems/merge-intervals)
 * [62. Unique Paths](https://leetcode.com/problems/unique-paths)
+* [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)
 * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
 * [71. Simplify Path](https://leetcode.com/problems/simplify-path)
