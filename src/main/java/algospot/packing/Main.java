@@ -61,16 +61,14 @@ public class Main {
 
     int result = pack(capacity, item + 1, n);
     if (capacity >= volumes[item]) {
-      result =
-          Math.max(result, pack(capacity - volumes[item], item + 1, n) + priorities[item]);
+      result = Math.max(result, pack(capacity - volumes[item], item + 1, n) + priorities[item]);
     }
     cache[capacity][item] = result;
 
     return result;
   }
 
-  public static void reconstruct(
-      int capacity, int item, int n, List<String> picked) {
+  public static void reconstruct(int capacity, int item, int n, List<String> picked) {
     if (item == n) {
       return;
     }

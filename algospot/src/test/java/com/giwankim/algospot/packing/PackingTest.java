@@ -1,6 +1,6 @@
-package algospot.packing;
+package com.giwankim.algospot.packing;
 
-import static algospot.packing.Main.main;
+import static com.giwankim.algospot.packing.Main.main;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
@@ -13,22 +13,22 @@ class PackingTest {
   @Test
   @StdIo({
     """
-      2
-      6 10
-      laptop 4 7
-      camera 2 10
-      xbox 6 6
-      grinder 4 7
-      dumbell 2 5
-      encyclopedia 10 4
-      6 17
-      laptop 4 7
-      camera 2 10
-      xbox 6 6
-      grinder 4 7
-      dumbell 2 5
-      encyclopedia 10 4
-      """
+          2
+          6 10
+          laptop 4 7
+          camera 2 10
+          xbox 6 6
+          grinder 4 7
+          dumbell 2 5
+          encyclopedia 10 4
+          6 17
+          laptop 4 7
+          camera 2 10
+          xbox 6 6
+          grinder 4 7
+          dumbell 2 5
+          encyclopedia 10 4
+          """
   })
   void packing(StdOut out) throws IOException {
     main(new String[0]);

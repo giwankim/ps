@@ -55,8 +55,8 @@ public class MinimumPathSum {
     // cache miss so calculate the minimum path sum
     cache[row][column] =
         Math.min(
-            findMinPathSum(row + 1, column, grid, cache),
-            findMinPathSum(row, column + 1, grid, cache))
+                findMinPathSum(row + 1, column, grid, cache),
+                findMinPathSum(row, column + 1, grid, cache))
             + grid[row][column];
 
     return cache[row][column];
