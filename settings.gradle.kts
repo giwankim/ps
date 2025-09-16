@@ -21,3 +21,4 @@ plugins {
 
 include("leetcode")
 include("algospot")
+include("programmers")
