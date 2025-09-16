@@ -204,6 +204,8 @@
     - [Ones in the Range](https://github.com/giwankim/ps/blob/main/src/main/java/meta/OnesInTheRange.java)
 - Apple
     - [Longest Unique Substring Set](https://docs.google.com/document/d/1kI0aOmsuok64NuGV4IF8yFV0HdBdJBtQm07G01Hllr4/edit?tab=t.0)
+- Hyundai Autoever
+    - [최고의 팀워크](https://docs.google.com/document/d/10qh8FHYHoNlo8zPzR5gC8vj9A5D8vBoz6KsHbJGJZA0/edit?usp=sharing)
 
 ## Misc
 
