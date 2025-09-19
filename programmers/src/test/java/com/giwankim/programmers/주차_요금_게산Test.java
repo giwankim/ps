@@ -7,16 +7,16 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class ParkingFeeTest {
+class 주차_요금_게산Test {
 
   @ParameterizedTest
   @MethodSource
-  void parkingFee(int[] fees, String[] records, int[] expected) {
-    int[] actual = new ParkingFee().solution(fees, records);
+  void 주차_요금_계산(int[] fees, String[] records, int[] expected) {
+    int[] actual = new 주차_요금_게산().solution(fees, records);
     assertThat(actual).isEqualTo(expected);
   }
 
-  static Stream<Arguments> parkingFee() {
+  static Stream<Arguments> 주차_요금_계산() {
     return Stream.of(
         Arguments.of(
             new int[] {180, 5000, 10, 600},

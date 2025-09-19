@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class ParkingFee {
+public class 주차_요금_게산 {
 
   public int[] solution(int[] fees, String[] records) {
     Map<String, Integer> parkingByCar = new HashMap<>();
@@ -37,10 +37,7 @@ public class ParkingFee {
 
     // order values by car
     TreeMap<String, Integer> feeByCar = new TreeMap<>();
-    minutesByCar.forEach(
-        (car, minutes) -> {
-          feeByCar.put(car, getFee(minutes, fees));
-        });
+    minutesByCar.forEach((car, minutes) -> feeByCar.put(car, getFee(minutes, fees)));
 
     return feeByCar.values().stream().mapToInt(Integer::intValue).toArray();
   }
