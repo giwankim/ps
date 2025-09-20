@@ -120,6 +120,7 @@
 - [삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
 - [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
+- [순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
 
 ## [Baekjoon](https://www.acmicpc.net/)
 
