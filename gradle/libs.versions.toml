@@ -8,16 +8,16 @@ allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "allopen" 
 
 [versions]
 
-java = "24"
-kotlin = "2.2.10"
+java = "25"
+kotlin = "2.2.20"
 ktlint-gradle = "13.1.0"
 junit = "5.13.4"
 junit-pioneer = "2.3.0"
-assertj = "3.27.4"
+assertj = "3.27.5"
 kotest = "6.0.3"
 spotless = "7.2.1"
 benchmark = "0.4.14"
-allopen = "2.2.10"
+allopen = "2.2.20"
 
 [libraries]
 
