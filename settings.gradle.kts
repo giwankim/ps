@@ -22,3 +22,4 @@ plugins {
 include("leetcode")
 include("algospot")
 include("programmers")
+include("grind75")
