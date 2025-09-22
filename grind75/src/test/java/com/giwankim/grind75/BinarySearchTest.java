@@ -18,7 +18,6 @@ class BinarySearchTest {
   static Stream<Arguments> search() {
     return Stream.of(
         Arguments.of(new int[] {-1, 0, 3, 5, 9, 12}, 9, 4),
-        Arguments.of(new int[] {-1, 0, 3, 5, 9, 12}, 2, -1)
-    );
+        Arguments.of(new int[] {-1, 0, 3, 5, 9, 12}, 2, -1));
   }
 }

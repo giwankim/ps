@@ -56,7 +56,7 @@ public class 순위_검색 {
    * @param target the target value to find or compare against
    * @param scores a sorted list of integers to search; must be sorted in ascending order
    * @return the index of the lower bound for the target in the sorted list; if the target is
-   * greater than all elements in the list, returns the size of the list
+   *     greater than all elements in the list, returns the size of the list
    */
   public int lowerBound(int target, List<Integer> scores) {
     int result = scores.size();
