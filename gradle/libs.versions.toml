@@ -18,6 +18,7 @@ kotest = "6.0.3"
 spotless = "7.2.1"
 benchmark = "0.4.14"
 allopen = "2.2.20"
+lombok = "1.18.42"
 
 [libraries]
 
@@ -26,3 +27,4 @@ junit-pioneer = { group = "org.junit-pioneer", name = "junit-pioneer", version.r
 assertj-core = { group = "org.assertj", name = "assertj-core", version.ref = "assertj" }
 kotest = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 benchmark = { group = "org.jetbrains.kotlinx", name = "kotlinx-benchmark-runtime", version.ref = "benchmark" }
+lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
