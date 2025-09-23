@@ -31,7 +31,7 @@ class MergeTwoSortedListsTest {
 
   @Test
   void listsAreEmpty() {
-    assertThat(new MergeTwoSortedLists().mergeTwoLists(null, null)).isEqualTo(null);
+    assertThat(new MergeTwoSortedLists().mergeTwoLists(null, null)).isNull();
   }
 
   @Test
