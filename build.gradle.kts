@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -19,10 +18,6 @@ java {
     }
 }
 
-allOpen {
-    annotation("org.openjdk.jmh.annotations.State")
-}
-
 dependencies {
     implementation(libs.benchmark)
     testImplementation(libs.junit.jupiter)
@@ -33,18 +28,16 @@ dependencies {
 
 tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
-        jvmTarget.set(JvmTarget.valueOf("JVM_" + libs.versions.java.get()))
         freeCompilerArgs.add("-Xjsr305=strict")
     }
 }
 
-tasks {
-    test {
-        useJUnitPlatform()
-    }
-    ktlint {
-        verbose.set(true)
-    }
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
+
+allOpen {
+    annotation("org.openjdk.jmh.annotations.State")
 }
 
 benchmark {

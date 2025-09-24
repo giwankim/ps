@@ -20,7 +20,7 @@ public class FloodFill {
 
     Queue<int[]> queue = new LinkedList<>();
     boolean[][] visited = new boolean[n][m];
-    queue.offer(new int[]{sr, sc});
+    queue.offer(new int[] {sr, sc});
     visited[sr][sc] = true;
 
     // BFS
@@ -33,17 +33,13 @@ public class FloodFill {
       for (int d = 0; d < dx.length; d++) {
         int nx = x + dx[d];
         int ny = y + dy[d];
-        // out of bounds
-        if (nx < 0 || nx >= n || ny < 0 || ny >= m) {
-          continue;
-        }
-        // already visited
-        if (visited[nx][ny]) {
+        // out of bounds or already visited
+        if (nx < 0 || nx >= n || ny < 0 || ny >= m || visited[nx][ny]) {
           continue;
         }
         // same color
         if (result[nx][ny] == oldColor) {
-          queue.offer(new int[]{nx, ny});
+          queue.offer(new int[] {nx, ny});
           visited[nx][ny] = true;
         }
       }
