@@ -81,6 +81,7 @@
 * [358. Rearrange String k Distance Apart](https://leetcode.com/problems/rearrange-string-k-distance-apart)
 * [362. Design Hit Counter](https://leetcode.com/problems/design-hit-counter)
 * [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1)
+* [383. Ransom Note](https://leetcode.com/problems/ransom-note)
 * [391. Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle)
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height)
 * [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
