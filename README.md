@@ -71,6 +71,7 @@
 * [252. Meeting Rooms](https://leetcode.com/problems/meeting-rooms)
 * [257. Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths)
 * [268. Missing Number](https://leetcode.com/problems/missing-number)
+* [278. First Bad Version](https://leetcode.com/problems/first-bad-version)
 * [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree)
 * [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence)
 * [322. Coin Change](https://leetcode.com/problems/coin-change)

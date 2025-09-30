@@ -5,12 +5,12 @@ public class RansomNote {
     int[] counts = new int[26];
 
     // count letters in magazine
-    for (char c: magazine.toCharArray()) {
+    for (char c : magazine.toCharArray()) {
       counts[c - 'a'] += 1;
     }
 
     // check if ransomNote can be constructed from magazine
-    for (char c: ransomNote.toCharArray()) {
+    for (char c : ransomNote.toCharArray()) {
       counts[c - 'a'] -= 1;
       if (counts[c - 'a'] < 0) {
         return false;
