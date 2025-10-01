@@ -1,19 +1,21 @@
 package com.giwankim.grind75;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MajorityElement {
 
   public int majorityElement(int[] nums) {
-    int n = nums.length;
-    Map<Integer, Integer> counts = new HashMap<>();
+    int result = -1;
+    int count = 0;
+
     for (int num : nums) {
-      counts.put(num, counts.getOrDefault(num, 0) + 1);
-      if (counts.get(num) > n / 2) {
-        return num;
+      if (count == 0) {
+        result = num;
+        count = 1;
+      } else if (result == num) {
+        count += 1;
+      } else if (result != num) {
+        count -= 1;
       }
     }
-    return -1;
+    return result;
   }
 }

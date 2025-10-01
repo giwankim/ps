@@ -18,6 +18,7 @@ class MajorityElementTest {
 
   static Stream<Arguments> cases() {
     return Stream.of(
-        Arguments.of(new int[] {3, 2, 3}, 3), Arguments.of(new int[] {2, 2, 1, 1, 1, 2, 2}, 2));
+        Arguments.of(new int[] {3, 2, 3}, 3),
+        Arguments.of(new int[] {2, 2, 1, 1, 1, 2, 2}, 2));
   }
 }
