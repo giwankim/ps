@@ -51,6 +51,7 @@
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+* [169. Majority Element](https://leetcode.com/problems/majority-element)
 * [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
 * [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
 * [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
