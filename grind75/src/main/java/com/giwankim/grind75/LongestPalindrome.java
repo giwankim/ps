@@ -16,7 +16,7 @@ public class LongestPalindrome {
 
     int result = 0;
     for (int count : counts.values()) {
-      if (count % 2  == 0) {
+      if (count % 2 == 0) {
         // add even count chracters
         result += count;
       } else {

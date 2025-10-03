@@ -17,9 +17,6 @@ class LongestPalindromeTest {
   }
 
   static Stream<Arguments> longestPalindrome() {
-    return Stream.of(
-        Arguments.of("abccccdd", 7),
-        Arguments.of("a", 1)
-    );
+    return Stream.of(Arguments.of("abccccdd", 7), Arguments.of("a", 1));
   }
 }

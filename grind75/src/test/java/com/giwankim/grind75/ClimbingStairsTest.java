@@ -17,9 +17,6 @@ class ClimbingStairsTest {
   }
 
   static Stream<Arguments> climbStairs() {
-    return Stream.of(
-        Arguments.of(2, 2),
-        Arguments.of(3, 3)
-    );
+    return Stream.of(Arguments.of(2, 2), Arguments.of(3, 3));
   }
 }
