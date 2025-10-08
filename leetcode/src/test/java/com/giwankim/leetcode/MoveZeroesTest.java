@@ -18,7 +18,7 @@ class MoveZeroesTest {
 
   static Stream<Arguments> moveZeroes() {
     return Stream.of(
-        Arguments.of(new int[]{0}, new int[]{0}),
-        Arguments.of(new int[]{0, 1, 0, 3, 12}, new int[]{1, 3, 12, 0, 0}));
+        Arguments.of(new int[] {0}, new int[] {0}),
+        Arguments.of(new int[] {0, 1, 0, 3, 12}, new int[] {1, 3, 12, 0, 0}));
   }
 }
