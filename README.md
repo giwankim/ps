@@ -89,6 +89,7 @@
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height)
 * [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 * [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)
+* [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
 * [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces)
 * [561. Array Partition](https://leetcode.com/problems/array-partition)
 * [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree)
