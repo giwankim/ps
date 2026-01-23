@@ -14,12 +14,12 @@ dependencies {
     testImplementation(libs.assertj.core)
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
 spotless {
     java {
         googleJavaFormat().reorderImports(true)
     }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }

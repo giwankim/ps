@@ -1,11 +1,8 @@
-rootProject.name = "ps"
-
-pluginManagement {
-    repositories {
-        mavenCentral()
-        gradlePluginPortal()
-    }
+plugins {
+    id("de.fayard.refreshVersions") version "0.60.6"
 }
+
+rootProject.name = "ps"
 
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
@@ -15,11 +12,7 @@ dependencyResolutionManagement {
     }
 }
 
-plugins {
-    id("de.fayard.refreshVersions") version "0.60.6"
-}
-
-include("leetcode")
 include("algospot")
-include("programmers")
 include("grind75")
+include("leetcode")
+include("programmers")

@@ -26,16 +26,6 @@ dependencies {
     testImplementation(libs.kotest)
 }
 
-tasks.withType<KotlinCompile>().configureEach {
-    compilerOptions {
-        freeCompilerArgs.add("-Xjsr305=strict")
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
-
 allOpen {
     annotation("org.openjdk.jmh.annotations.State")
 }
@@ -51,4 +41,14 @@ spotless {
         removeUnusedImports()
         googleJavaFormat().reorderImports(true)
     }
+}
+
+tasks.withType<KotlinCompile>().configureEach {
+    compilerOptions {
+        freeCompilerArgs.add("-Xjsr305=strict")
+    }
+}
+
+tasks.withType<Test> {
+    useJUnitPlatform()
 }
