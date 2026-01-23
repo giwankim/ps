@@ -18,10 +18,9 @@ class ReverseLinkedListKtTest {
 
     companion object {
         @JvmStatic
-        fun reverseList(): List<Arguments> =
-            listOf(
-                Arguments.of(ListNode.of(1, 2, 3, 4, 5), ListNode.of(5, 4, 3, 2, 1)),
-                Arguments.of(ListNode.of(1, 2), ListNode.of(2, 1)),
-            )
+        fun reverseList(): List<Arguments> = listOf(
+            Arguments.of(ListNode.of(1, 2, 3, 4, 5), ListNode.of(5, 4, 3, 2, 1)),
+            Arguments.of(ListNode.of(1, 2), ListNode.of(2, 1)),
+        )
     }
 }

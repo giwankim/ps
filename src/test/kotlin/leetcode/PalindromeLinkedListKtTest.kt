@@ -18,10 +18,9 @@ class PalindromeLinkedListKtTest {
 
     companion object {
         @JvmStatic
-        fun isPalindrome(): List<Arguments> =
-            listOf(
-                Arguments.of(ListNode.of(1, 2, 2, 1), true),
-                Arguments.of(ListNode.of(1, 2), false),
-            )
+        fun isPalindrome(): List<Arguments> = listOf(
+            Arguments.of(ListNode.of(1, 2, 2, 1), true),
+            Arguments.of(ListNode.of(1, 2), false),
+        )
     }
 }

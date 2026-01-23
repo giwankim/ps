@@ -18,13 +18,12 @@ class ThreeSumKtTest {
 
     companion object {
         @JvmStatic
-        fun threeSum(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(-1, 0, 1), listOf(listOf(-1, 0, 1))),
-                Arguments.of(intArrayOf(-1, -1, 0, 1, 2), listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))),
-                Arguments.of(intArrayOf(-1, 0, 1, 2, -1, 4), listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))),
-                Arguments.of(intArrayOf(0, 1, 1), listOf<List<Int>>()),
-                Arguments.of(intArrayOf(0, 0, 0), listOf(listOf(0, 0, 0))),
-            )
+        fun threeSum(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(-1, 0, 1), listOf(listOf(-1, 0, 1))),
+            Arguments.of(intArrayOf(-1, -1, 0, 1, 2), listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))),
+            Arguments.of(intArrayOf(-1, 0, 1, 2, -1, 4), listOf(listOf(-1, -1, 2), listOf(-1, 0, 1))),
+            Arguments.of(intArrayOf(0, 1, 1), listOf<List<Int>>()),
+            Arguments.of(intArrayOf(0, 0, 0), listOf(listOf(0, 0, 0))),
+        )
     }
 }

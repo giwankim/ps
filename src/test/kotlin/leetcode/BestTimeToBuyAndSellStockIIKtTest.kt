@@ -18,11 +18,10 @@ class BestTimeToBuyAndSellStockIIKtTest {
 
     companion object {
         @JvmStatic
-        fun maxProfit(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(7, 1, 5, 3, 6, 4), 7),
-                Arguments.of(intArrayOf(1, 2, 3, 4, 5), 4),
-                Arguments.of(intArrayOf(7, 6, 4, 3, 1), 0),
-            )
+        fun maxProfit(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(7, 1, 5, 3, 6, 4), 7),
+            Arguments.of(intArrayOf(1, 2, 3, 4, 5), 4),
+            Arguments.of(intArrayOf(7, 6, 4, 3, 1), 0),
+        )
     }
 }

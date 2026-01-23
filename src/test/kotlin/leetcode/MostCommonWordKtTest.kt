@@ -19,10 +19,9 @@ class MostCommonWordKtTest {
 
     companion object {
         @JvmStatic
-        fun mostCommonWord(): List<Arguments> =
-            listOf(
-                Arguments.of("a.", emptyArray<String>(), "a"),
-                Arguments.of("Bob hit a ball, the hit BALL flew far after it was hit.", arrayOf("hit"), "ball"),
-            )
+        fun mostCommonWord(): List<Arguments> = listOf(
+            Arguments.of("a.", emptyArray<String>(), "a"),
+            Arguments.of("Bob hit a ball, the hit BALL flew far after it was hit.", arrayOf("hit"), "ball"),
+        )
     }
 }

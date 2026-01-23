@@ -19,11 +19,10 @@ class BinarySearchKtTest {
 
     companion object {
         @JvmStatic
-        fun search(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(-1, 0, 3, 5, 9, 12), 9, 4),
-                Arguments.of(intArrayOf(-1, 0, 3, 5, 9, 12), 2, -1),
-                Arguments.of(intArrayOf(5), 5, 0),
-            )
+        fun search(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(-1, 0, 3, 5, 9, 12), 9, 4),
+            Arguments.of(intArrayOf(-1, 0, 3, 5, 9, 12), 2, -1),
+            Arguments.of(intArrayOf(5), 5, 0),
+        )
     }
 }

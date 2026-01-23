@@ -18,26 +18,25 @@ class NumberOfIslandsKtTest {
 
     companion object {
         @JvmStatic
-        fun numIslands(): List<Arguments> =
-            listOf(
-                Arguments.of(
-                    arrayOf(
-                        charArrayOf('1', '1', '1', '1', '0'),
-                        charArrayOf('1', '1', '0', '1', '0'),
-                        charArrayOf('1', '1', '0', '0', '0'),
-                        charArrayOf('0', '0', '0', '0', '0'),
-                    ),
-                    1,
+        fun numIslands(): List<Arguments> = listOf(
+            Arguments.of(
+                arrayOf(
+                    charArrayOf('1', '1', '1', '1', '0'),
+                    charArrayOf('1', '1', '0', '1', '0'),
+                    charArrayOf('1', '1', '0', '0', '0'),
+                    charArrayOf('0', '0', '0', '0', '0'),
                 ),
-                Arguments.of(
-                    arrayOf(
-                        charArrayOf('1', '1', '0', '0', '0'),
-                        charArrayOf('1', '1', '0', '0', '0'),
-                        charArrayOf('0', '0', '1', '0', '0'),
-                        charArrayOf('0', '0', '0', '1', '1'),
-                    ),
-                    3,
+                1,
+            ),
+            Arguments.of(
+                arrayOf(
+                    charArrayOf('1', '1', '0', '0', '0'),
+                    charArrayOf('1', '1', '0', '0', '0'),
+                    charArrayOf('0', '0', '1', '0', '0'),
+                    charArrayOf('0', '0', '0', '1', '1'),
                 ),
-            )
+                3,
+            ),
+        )
     }
 }

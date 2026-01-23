@@ -18,14 +18,13 @@ class LetterCombinationOfAPhoneNumberKtTest {
 
     companion object {
         @JvmStatic
-        fun letterCombinations(): List<Arguments> =
-            listOf(
-                Arguments.of(
-                    "23",
-                    listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"),
-                ),
-                Arguments.of("", emptyList<String>()),
-                Arguments.of("2", listOf("a", "b", "c")),
-            )
+        fun letterCombinations(): List<Arguments> = listOf(
+            Arguments.of(
+                "23",
+                listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"),
+            ),
+            Arguments.of("", emptyList<String>()),
+            Arguments.of("2", listOf("a", "b", "c")),
+        )
     }
 }

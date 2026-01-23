@@ -18,10 +18,9 @@ class ArrayPartitionSumKtTest {
 
     companion object {
         @JvmStatic
-        fun arrayPairSum(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(1, 4, 3, 2), 4),
-                Arguments.of(intArrayOf(6, 2, 6, 5, 1, 2), 9),
-            )
+        fun arrayPairSum(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(1, 4, 3, 2), 4),
+            Arguments.of(intArrayOf(6, 2, 6, 5, 1, 2), 9),
+        )
     }
 }

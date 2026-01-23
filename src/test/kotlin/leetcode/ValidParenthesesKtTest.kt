@@ -18,13 +18,12 @@ class ValidParenthesesKtTest {
 
     companion object {
         @JvmStatic
-        fun isValid(): List<Arguments> =
-            listOf(
-                Arguments.of("()", true),
-                Arguments.of("()[]{}", true),
-                Arguments.of("(]", false),
-                Arguments.of("([])", true),
-                Arguments.of("]", false),
-            )
+        fun isValid(): List<Arguments> = listOf(
+            Arguments.of("()", true),
+            Arguments.of("()[]{}", true),
+            Arguments.of("(]", false),
+            Arguments.of("([])", true),
+            Arguments.of("]", false),
+        )
     }
 }

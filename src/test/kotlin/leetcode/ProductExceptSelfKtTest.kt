@@ -18,10 +18,9 @@ class ProductExceptSelfKtTest {
 
     companion object {
         @JvmStatic
-        fun productExceptSelf(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(1, 2, 3, 4), intArrayOf(24, 12, 8, 6)),
-                Arguments.of(intArrayOf(-1, 1, 0, -3, 3), intArrayOf(0, 0, 9, 0, 0)),
-            )
+        fun productExceptSelf(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(1, 2, 3, 4), intArrayOf(24, 12, 8, 6)),
+            Arguments.of(intArrayOf(-1, 1, 0, -3, 3), intArrayOf(0, 0, 9, 0, 0)),
+        )
     }
 }

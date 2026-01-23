@@ -19,8 +19,7 @@ class ReverseLinkedListTest {
     ListNode head = new ListNode(1, new ListNode(2));
     ListNode expected = new ListNode(2, new ListNode(1));
 
-    assertThat(reverseLinkedList.reverseList(head))
-        .isEqualTo(expected);
+    assertThat(reverseLinkedList.reverseList(head)).isEqualTo(expected);
   }
 
   @Test

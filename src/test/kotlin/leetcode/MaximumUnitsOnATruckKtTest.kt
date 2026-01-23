@@ -19,10 +19,9 @@ class MaximumUnitsOnATruckKtTest {
 
     companion object {
         @JvmStatic
-        fun maximumUnits() =
-            listOf(
-                Arguments.of(arrayOf(intArrayOf(1, 3), intArrayOf(2, 2), intArrayOf(3, 1)), 4, 8),
-                Arguments.of(arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)), 10, 91),
-            )
+        fun maximumUnits() = listOf(
+            Arguments.of(arrayOf(intArrayOf(1, 3), intArrayOf(2, 2), intArrayOf(3, 1)), 4, 8),
+            Arguments.of(arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)), 10, 91),
+        )
     }
 }

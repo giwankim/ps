@@ -18,13 +18,12 @@ class LongestPalindromeKtTest {
 
     companion object {
         @JvmStatic
-        fun longestPalindrome(): List<Arguments> =
-            listOf(
-                Arguments.of("a", "a"),
-                Arguments.of("ab", "a"),
-                Arguments.of("babad", "bab"),
-                Arguments.of("cbbd", "bb"),
-                Arguments.of("dcbabcdd", "dcbabcd"),
-            )
+        fun longestPalindrome(): List<Arguments> = listOf(
+            Arguments.of("a", "a"),
+            Arguments.of("ab", "a"),
+            Arguments.of("babad", "bab"),
+            Arguments.of("cbbd", "bb"),
+            Arguments.of("dcbabcdd", "dcbabcd"),
+        )
     }
 }

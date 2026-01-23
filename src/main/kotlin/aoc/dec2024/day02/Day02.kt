@@ -59,13 +59,12 @@ fun part2(reports: List<List<Int>>): Int {
     return result
 }
 
-fun part2Functional(reports: List<List<Int>>): Int =
-    reports.count { report ->
-        report.indices.any {
-            val dampened = report.toMutableList().apply { removeAt(it) }.toList()
-            isReportSafeFunctional(dampened)
-        }
+fun part2Functional(reports: List<List<Int>>): Int = reports.count { report ->
+    report.indices.any {
+        val dampened = report.toMutableList().apply { removeAt(it) }.toList()
+        isReportSafeFunctional(dampened)
     }
+}
 
 fun main() {
     val lines = readInput("Day02")

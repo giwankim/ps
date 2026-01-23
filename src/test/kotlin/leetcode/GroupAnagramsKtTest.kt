@@ -18,14 +18,13 @@ class GroupAnagramsKtTest {
 
     companion object {
         @JvmStatic
-        fun groupAnagrams(): List<Arguments> =
-            listOf(
-                Arguments.of(
-                    arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
-                    listOf(listOf("bat"), listOf("nat", "tan"), listOf("ate", "eat", "tea")),
-                ),
-                Arguments.of(arrayOf(""), listOf(listOf(""))),
-                Arguments.of(arrayOf("a"), listOf(listOf("a"))),
-            )
+        fun groupAnagrams(): List<Arguments> = listOf(
+            Arguments.of(
+                arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
+                listOf(listOf("bat"), listOf("nat", "tan"), listOf("ate", "eat", "tea")),
+            ),
+            Arguments.of(arrayOf(""), listOf(listOf(""))),
+            Arguments.of(arrayOf("a"), listOf(listOf("a"))),
+        )
     }
 }

@@ -19,10 +19,9 @@ class SlidingWindowMaximumKtTest {
 
     companion object {
         @JvmStatic
-        fun maxSlidingWindow(): List<Arguments> =
-            listOf(
-                Arguments.of(intArrayOf(1, 3, -1, -3, 5, 3, 6, 7), 3, intArrayOf(3, 3, 5, 5, 6, 7)),
-                Arguments.of(intArrayOf(1), 1, intArrayOf(1)),
-            )
+        fun maxSlidingWindow(): List<Arguments> = listOf(
+            Arguments.of(intArrayOf(1, 3, -1, -3, 5, 3, 6, 7), 3, intArrayOf(3, 3, 5, 5, 6, 7)),
+            Arguments.of(intArrayOf(1), 1, intArrayOf(1)),
+        )
     }
 }

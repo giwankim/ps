@@ -19,10 +19,9 @@ class ReverseStringKtTest {
 
     companion object {
         @JvmStatic
-        fun `should reverse a string`(): List<Arguments> =
-            listOf(
-                Arguments.of(charArrayOf('h', 'e', 'l', 'l', 'o'), charArrayOf('o', 'l', 'l', 'e', 'h')),
-                Arguments.of(charArrayOf('H', 'a', 'n', 'n', 'a', 'h'), charArrayOf('h', 'a', 'n', 'n', 'a', 'H')),
-            )
+        fun `should reverse a string`(): List<Arguments> = listOf(
+            Arguments.of(charArrayOf('h', 'e', 'l', 'l', 'o'), charArrayOf('o', 'l', 'l', 'e', 'h')),
+            Arguments.of(charArrayOf('H', 'a', 'n', 'n', 'a', 'h'), charArrayOf('h', 'a', 'n', 'n', 'a', 'H')),
+        )
     }
 }
