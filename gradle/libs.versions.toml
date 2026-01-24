@@ -25,3 +25,6 @@ assertj-core = { group = "org.assertj", name = "assertj-core", version.ref = "as
 kotest = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
 benchmark = { group = "org.jetbrains.kotlinx", name = "kotlinx-benchmark-runtime", version.ref = "benchmark" }
 lombok = { group = "org.projectlombok", name = "lombok", version.ref = "lombok" }
+spotless-plugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+ktlint-plugin = { group = "org.jlleitschuh.gradle", name = "ktlint-gradle", version.ref = "ktlint-gradle" }
+kotlin-plugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
