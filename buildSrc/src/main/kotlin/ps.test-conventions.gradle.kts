@@ -1,4 +1,6 @@
-val libs = the<org.gradle.accessors.dm.LibrariesForLibs>()
+import org.gradle.accessors.dm.LibrariesForLibs
+
+val libs = the<LibrariesForLibs>()
 
 dependencies {
     "testImplementation"(libs.junit.jupiter)
