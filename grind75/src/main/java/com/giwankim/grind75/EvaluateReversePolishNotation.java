@@ -2,29 +2,29 @@ package com.giwankim.grind75;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Set;
+import java.util.Map;
+import java.util.function.IntBinaryOperator;
 
 public class EvaluateReversePolishNotation {
-  private static final Set<String> OPERATORS = Set.of("+", "-", "*", "/");
+
+  private static final Map<String, IntBinaryOperator> OPERATIONS =
+      Map.of(
+          "+", Integer::sum,
+          "-", (a, b) -> a - b,
+          "*", (a, b) -> a * b,
+          "/", (a, b) -> a / b);
 
   public int evalRPN(String[] tokens) {
     Deque<Integer> operands = new ArrayDeque<>();
 
     for (String token : tokens) {
-      if (OPERATORS.contains(token)) {
+      IntBinaryOperator op = OPERATIONS.get(token);
+      if (op == null) {
+        operands.push(Integer.parseInt(token));
+      } else {
         int b = operands.pop();
         int a = operands.pop();
-        int result =
-            switch (token) {
-              case "+" -> a + b;
-              case "-" -> a - b;
-              case "*" -> a * b;
-              case "/" -> a / b;
-              default -> throw new IllegalArgumentException("Unknown operator: " + token);
-            };
-        operands.push(result);
-      } else {
-        operands.push(Integer.parseInt(token));
+        operands.push(op.applyAsInt(a, b));
       }
     }
 
