@@ -53,6 +53,7 @@
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+* [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 * [169. Majority Element](https://leetcode.com/problems/majority-element)
 * [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
 * [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
