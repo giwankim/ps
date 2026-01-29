@@ -1,4 +1,4 @@
-package programmers;
+package com.giwankim.programmers;
 
 @SuppressWarnings("NonAsciiCharacters")
 public class 행렬의_곱셈 {

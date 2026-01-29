@@ -1,4 +1,4 @@
-package programmers;
+package com.giwankim.programmers;
 
 @SuppressWarnings("NonAsciiCharacters")
 public class 거리두기_확인하기 {

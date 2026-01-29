@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+@SuppressWarnings("NonAsciiCharacters")
 class 두_큐_합_같게_만들기Test {
 
   @ParameterizedTest

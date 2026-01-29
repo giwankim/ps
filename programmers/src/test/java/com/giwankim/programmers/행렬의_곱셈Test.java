@@ -1,4 +1,4 @@
-package programmers;
+package com.giwankim.programmers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -7,6 +7,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+@SuppressWarnings("NonAsciiCharacters")
 class 행렬의_곱셈Test {
   @ParameterizedTest
   @MethodSource

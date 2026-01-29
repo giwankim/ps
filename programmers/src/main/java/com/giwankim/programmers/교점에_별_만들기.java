@@ -1,4 +1,4 @@
-package programmers;
+package com.giwankim.programmers;
 
 import java.util.ArrayList;
 import java.util.Arrays;

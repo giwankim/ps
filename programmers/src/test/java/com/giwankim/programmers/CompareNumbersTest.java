@@ -1,4 +1,4 @@
-package programmers;
+package com.giwankim.programmers;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
