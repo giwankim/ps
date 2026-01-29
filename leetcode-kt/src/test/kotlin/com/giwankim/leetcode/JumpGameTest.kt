@@ -1,0 +1,26 @@
+package com.giwankim.leetcode
+
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withData
+import io.kotest.matchers.shouldBe
+
+class JumpGameTest :
+    FunSpec(
+        {
+            context("canJump") {
+                val sut = JumpGame()
+                withData(
+                    nameFn = { "${it.nums}, ${it.expected}" },
+                    JumpGameTestCase(listOf(2, 3, 1, 1, 4), true),
+                    JumpGameTestCase(listOf(3, 2, 1, 0, 4), false),
+                ) { (nums, expected) ->
+                    sut.canJump(nums.toIntArray()) shouldBe expected
+                }
+            }
+        },
+    )
+
+data class JumpGameTestCase(
+    val nums: List<Int>,
+    val expected: Boolean,
+)

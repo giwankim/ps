@@ -7,7 +7,6 @@ plugins {
 
 dependencies {
     implementation(libs.benchmark)
-    testImplementation(libs.kotest)
 }
 
 allOpen {

@@ -1,0 +1,15 @@
+package com.giwankim.leetcode
+
+class ReverseLinkedList {
+    fun reverseList(head: ListNode?): ListNode? {
+        var node: ListNode? = head
+        var prev: ListNode? = null
+        while (node != null) {
+            val next = node.next
+            node.next = prev
+            prev = node
+            node = next
+        }
+        return prev
+    }
+}
