@@ -1,9 +1,9 @@
 package com.giwankim.leetcode;
 
+import com.giwankim.leetcode.support.TreeNode;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import com.giwankim.leetcode.support.TreeNode;
 
 public class SerializeDeserializeBinaryTree {
   private static final String SEPARATOR = ",";

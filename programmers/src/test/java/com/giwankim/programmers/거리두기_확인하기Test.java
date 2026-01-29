@@ -20,13 +20,13 @@ class 거리두기_확인하기Test {
   private static Stream<Arguments> solution() {
     return Stream.of(
         Arguments.of(
-            new String[][]{
-                {"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
-                {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
-                {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
-                {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
-                {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}
+            new String[][] {
+              {"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
+              {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
+              {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
+              {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
+              {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}
             },
-            new int[]{1, 0, 1, 1, 1}));
+            new int[] {1, 0, 1, 1, 1}));
   }
 }

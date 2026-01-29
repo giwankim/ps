@@ -1,7 +1,7 @@
 package com.giwankim.leetcode;
 
-import java.util.PriorityQueue;
 import com.giwankim.leetcode.support.ListNode;
+import java.util.PriorityQueue;
 
 public class MergeKSortedList {
   public ListNode mergeKLists(ListNode[] lists) {

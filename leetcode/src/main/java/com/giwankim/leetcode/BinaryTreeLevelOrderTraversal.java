@@ -1,7 +1,7 @@
 package com.giwankim.leetcode;
 
-import java.util.*;
 import com.giwankim.leetcode.support.TreeNode;
+import java.util.*;
 
 public class BinaryTreeLevelOrderTraversal {
   public List<List<Integer>> levelOrder(TreeNode root) {

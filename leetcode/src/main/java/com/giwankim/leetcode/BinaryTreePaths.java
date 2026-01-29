@@ -1,8 +1,8 @@
 package com.giwankim.leetcode;
 
+import com.giwankim.leetcode.support.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
-import com.giwankim.leetcode.support.TreeNode;
 
 public class BinaryTreePaths {
   public List<String> binaryTreePaths(TreeNode root) {

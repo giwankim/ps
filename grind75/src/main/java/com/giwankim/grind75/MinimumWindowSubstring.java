@@ -1,4 +1,3 @@
 package com.giwankim.grind75;
 
-public class MinimumWindowSubstring {
-}
+public class MinimumWindowSubstring {}

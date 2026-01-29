@@ -1,8 +1,8 @@
 package com.giwankim.leetcode;
 
+import com.giwankim.leetcode.support.Node;
 import java.util.HashMap;
 import java.util.Map;
-import com.giwankim.leetcode.support.Node;
 
 public class CloneGraph {
   public Node cloneGraph(Node node) {
