@@ -8,18 +8,18 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class ValidPalindromeTest {
+  ValidPalindrome sut = new ValidPalindrome();
+
   @ParameterizedTest
   @MethodSource
   void isPalindrome(String s, boolean expected) {
-    ValidPalindrome validPalindrome = new ValidPalindrome();
-    assertThat(validPalindrome.isPalindrome(s)).isEqualTo(expected);
+    assertThat(sut.isPalindrome(s)).isEqualTo(expected);
   }
 
   @ParameterizedTest
   @MethodSource("isPalindrome")
   void isPalindrome2(String s, boolean expected) {
-    ValidPalindrome validPalindrome = new ValidPalindrome();
-    assertThat(validPalindrome.isPalindrome2(s)).isEqualTo(expected);
+    assertThat(sut.isPalindrome2(s)).isEqualTo(expected);
   }
 
   public static Stream<Arguments> isPalindrome() {

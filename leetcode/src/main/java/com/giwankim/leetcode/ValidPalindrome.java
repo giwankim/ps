@@ -1,19 +1,22 @@
 package com.giwankim.leetcode;
 
 public class ValidPalindrome {
+
   public boolean isPalindrome(String s) {
-    int start = 0;
-    int end = s.length() - 1;
-    while (start < end) {
-      if (!Character.isLetterOrDigit(s.charAt(start))) {
-        start += 1;
-      } else if (!Character.isLetterOrDigit(s.charAt(end))) {
-        end -= 1;
-      } else if (Character.toLowerCase(s.charAt(start)) != Character.toLowerCase(s.charAt(end))) {
+    int lo = 0;
+    int hi = s.length() - 1;
+    while (lo < hi) {
+      char c = s.charAt(lo);
+      char d = s.charAt(hi);
+      if (!Character.isLetterOrDigit(c)) {
+        lo += 1;
+      } else if (!Character.isLetterOrDigit(d)) {
+        hi -= 1;
+      } else if (Character.toLowerCase(c) != Character.toLowerCase(d)) {
         return false;
       } else {
-        start += 1;
-        end -= 1;
+        lo += 1;
+        hi -= 1;
       }
     }
     return true;
