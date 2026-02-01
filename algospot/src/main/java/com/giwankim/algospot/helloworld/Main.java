@@ -1,4 +1,4 @@
-package algospot.helloworld;
+package com.giwankim.algospot.helloworld;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package algospot.festival;
+package com.giwankim.algospot.festival;
 
 import java.io.BufferedReader;
 import java.io.IOException;

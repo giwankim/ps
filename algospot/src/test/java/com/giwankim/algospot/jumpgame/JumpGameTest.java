@@ -1,6 +1,6 @@
-package algospot.jumpgame;
+package com.giwankim.algospot.jumpgame;
 
-import static algospot.jumpgame.Main.jump;
+import static com.giwankim.algospot.jumpgame.Main.jump;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Arrays;

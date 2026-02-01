@@ -1,41 +1,50 @@
-package algospot.helloworld;
+package com.giwankim.algospot.boggle;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.*;
 import org.junit.jupiter.api.Test;
 
-class HelloWorldTest {
+class BoggleTest {
   @Test
-  void helloWorld() {
+  void boggle() {
     String input =
         """
-        5
-        World
-        Algospot
-        Illu
-        Jullu
-        Kodori
+        1
+        URLPM
+        XPRET
+        GIAET
+        XTNZY
+        XOQRS
+        6
+        PRETTY
+        GIRL
+        REPEAT
+        KARA
+        PANDORA
+        GIAZAPX
         """;
     String expected =
         """
-        Hello, World!
-        Hello, Algospot!
-        Hello, Illu!
-        Hello, Jullu!
-        Hello, Kodori!
+        PRETTY YES
+        GIRL YES
+        REPEAT YES
+        KARA NO
+        PANDORA NO
+        GIAZAPX YES
         """;
 
     InputStream is = System.in;
     PrintStream ps = System.out;
 
-    System.setIn(new ByteArrayInputStream(input.getBytes()));
-
+    ByteArrayInputStream in = new ByteArrayInputStream(input.getBytes());
     ByteArrayOutputStream out = new ByteArrayOutputStream();
+
+    System.setIn(in);
     System.setOut(new PrintStream(out));
 
     try {
-      Main.main(new String[0]);
+      Main.main(new String[] {});
       assertThat(out).hasToString(expected);
     } catch (IOException e) {
       throw new RuntimeException(e);

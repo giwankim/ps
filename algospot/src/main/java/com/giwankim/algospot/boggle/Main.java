@@ -1,4 +1,4 @@
-package algospot.boggle;
+package com.giwankim.algospot.boggle;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,6 @@
-package algospot.packing;
+package com.giwankim.algospot.packing;
 
-import static algospot.packing.Main.main;
+import static com.giwankim.algospot.packing.MainRecursive.main;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.IOException;
@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-class PackingTest {
+class PackingRecursiveTest {
 
   @Test
   @StdIo({

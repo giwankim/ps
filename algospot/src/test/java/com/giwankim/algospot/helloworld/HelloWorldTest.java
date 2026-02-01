@@ -1,25 +1,29 @@
-package algospot.festival;
+package com.giwankim.algospot.helloworld;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.io.*;
 import org.junit.jupiter.api.Test;
 
-class FestivalTest {
+class HelloWorldTest {
   @Test
-  void festival() {
+  void helloWorld() {
     String input =
         """
-        2
-        6 3
-        1 2 3 1 2 3
-        6 2
-        1 2 3 1 2 3
+        5
+        World
+        Algospot
+        Illu
+        Jullu
+        Kodori
         """;
     String expected =
         """
-        1.75000000000
-        1.50000000000
+        Hello, World!
+        Hello, Algospot!
+        Hello, Illu!
+        Hello, Jullu!
+        Hello, Kodori!
         """;
 
     InputStream is = System.in;
