@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/grind75" />
             <option value="$PROJECT_DIR$/leetcode" />
+            <option value="$PROJECT_DIR$/leetcode-kt" />
             <option value="$PROJECT_DIR$/programmers" />
           </set>
         </option>
