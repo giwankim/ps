@@ -13,6 +13,7 @@ dependencyResolutionManagement {
 }
 
 include("algospot")
+include("aoc")
 include("grind75")
 include("leetcode")
 include("leetcode-kt")

@@ -1,6 +1,4 @@
-package aoc.dec2022
-
-import java.io.File
+package com.giwankim.aoc.dec2022
 
 fun part1(input: String): Int {
     val data = parseInput(input)
@@ -39,7 +37,7 @@ private fun topNElves(
 private fun parseInput(input: String) = input.split("\n\n").map { elf -> elf.lines().map { it.toInt() } }
 
 fun main() {
-    val input = File("src/main/kotlin/aoc/aoc2022/Day01.txt").readText()
+    val input = readInputText("Day01")
     part1(input).println()
     part2(input).println()
 }

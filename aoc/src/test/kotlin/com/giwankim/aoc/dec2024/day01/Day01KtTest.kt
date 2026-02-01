@@ -1,4 +1,4 @@
-package aoc.dec2024.day01
+package com.giwankim.aoc.dec2024.day01
 
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test

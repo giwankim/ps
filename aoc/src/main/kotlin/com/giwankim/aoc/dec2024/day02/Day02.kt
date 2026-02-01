@@ -1,7 +1,7 @@
-package aoc.dec2024.day02
+package com.giwankim.aoc.dec2024.day02
 
-import aoc.dec2024.println
-import aoc.dec2024.readInput
+import com.giwankim.aoc.dec2024.println
+import com.giwankim.aoc.dec2024.readInput
 import kotlin.math.absoluteValue
 
 fun part1(reports: List<List<Int>>): Int {

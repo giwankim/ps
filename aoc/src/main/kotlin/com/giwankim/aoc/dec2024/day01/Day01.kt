@@ -1,6 +1,6 @@
-package aoc.dec2024.day01
+package com.giwankim.aoc.dec2024.day01
 
-import aoc.dec2024.readInput
+import com.giwankim.aoc.dec2024.readInput
 import kotlin.math.abs
 
 fun part1(lines: List<String>): Long {
