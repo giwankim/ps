@@ -1,7 +1,5 @@
-package com.giwankim.aoc.dec2024.day02
+package com.giwankim.aoc.dec2024
 
-import com.giwankim.aoc.dec2024.println
-import com.giwankim.aoc.dec2024.readInput
 import kotlin.math.absoluteValue
 
 fun part1(reports: List<List<Int>>): Int {
@@ -25,7 +23,9 @@ private fun isReportSafe(report: List<Int>): Boolean {
         isDiff = isDiff && 1 <= diff && diff <= 3
         when {
             a < b -> isDescending = false
+
             a > b -> isAscending = false
+
             else -> {
                 isAscending = false
                 isDescending = false

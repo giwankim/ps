@@ -5,6 +5,6 @@ private fun readResourceLines(path: String): List<String> {
     return resource.readText().trimEnd().lines()
 }
 
-fun readInput(name: String): List<String> = readResourceLines("/aoc/dec2024/input/$name.txt")
+fun readInput(name: String): List<String> = readResourceLines("/aoc/dec2024/$name.txt")
 
 fun Any?.println() = println(this)

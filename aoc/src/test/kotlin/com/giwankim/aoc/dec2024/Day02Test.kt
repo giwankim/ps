@@ -1,9 +1,9 @@
-package com.giwankim.aoc.dec2024.day02
+package com.giwankim.aoc.dec2024
 
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.Test
 
-class Day02KtTest {
+class Day02Test {
     @Test
     fun part1() {
         val lines =

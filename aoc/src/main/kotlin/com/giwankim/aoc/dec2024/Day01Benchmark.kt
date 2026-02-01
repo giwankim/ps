@@ -1,6 +1,5 @@
-package com.giwankim.aoc.dec2024.day01
+package com.giwankim.aoc.dec2024
 
-import com.giwankim.aoc.dec2024.readInput
 import kotlinx.benchmark.Benchmark
 import kotlinx.benchmark.State
 import org.openjdk.jmh.annotations.Scope
