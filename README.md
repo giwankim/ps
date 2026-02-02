@@ -58,6 +58,7 @@
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
 * [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 * [169. Majority Element](https://leetcode.com/problems/majority-element)
+* [189. Rotate Array](https://leetcode.com/problems/rotate-array)
 * [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
 * [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
 * [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
