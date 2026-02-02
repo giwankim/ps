@@ -8,15 +8,16 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class MajorityElementTest {
+  MajorityElement sut = new MajorityElement();
 
   @ParameterizedTest
-  @MethodSource("cases")
+  @MethodSource
   void majorityElement(int[] nums, int expected) {
-    int actual = new MajorityElement().majorityElement(nums);
+    int actual = sut.majorityElement(nums);
     assertThat(actual).isEqualTo(expected);
   }
 
-  static Stream<Arguments> cases() {
+  static Stream<Arguments> majorityElement() {
     return Stream.of(
         Arguments.of(new int[] {3, 2, 3}, 3), Arguments.of(new int[] {2, 2, 1, 1, 1, 2, 2}, 2));
   }
