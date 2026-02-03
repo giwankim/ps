@@ -1,42 +1,43 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class NumberOfIslandsTest {
-    @ParameterizedTest
-    @MethodSource
-    fun numIslands(
-        grid: Array<CharArray>,
-        expected: Int,
-    ) {
-        val actual = NumberOfIslands().numIslands(grid)
-        assertThat(actual).isEqualTo(expected)
-    }
+class NumberOfIslandsTest :
+    FunSpec({
+        val sut = NumberOfIslands()
 
-    companion object {
-        @JvmStatic
-        fun numIslands(): List<Arguments> = listOf(
-            Arguments.of(
-                arrayOf(
-                    charArrayOf('1', '1', '1', '1', '0'),
-                    charArrayOf('1', '1', '0', '1', '0'),
-                    charArrayOf('1', '1', '0', '0', '0'),
-                    charArrayOf('0', '0', '0', '0', '0'),
+        context("number of islands") {
+            withTests(
+                nameFn = { (grid, expected) ->
+                    "grid=${grid.contentDeepToString()}, expected=$expected"
+                },
+                NumberOfIslandsCase(
+                    arrayOf(
+                        charArrayOf('1', '1', '1', '1', '0'),
+                        charArrayOf('1', '1', '0', '1', '0'),
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('0', '0', '0', '0', '0'),
+                    ),
+                    1,
                 ),
-                1,
-            ),
-            Arguments.of(
-                arrayOf(
-                    charArrayOf('1', '1', '0', '0', '0'),
-                    charArrayOf('1', '1', '0', '0', '0'),
-                    charArrayOf('0', '0', '1', '0', '0'),
-                    charArrayOf('0', '0', '0', '1', '1'),
+                NumberOfIslandsCase(
+                    arrayOf(
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('1', '1', '0', '0', '0'),
+                        charArrayOf('0', '0', '1', '0', '0'),
+                        charArrayOf('0', '0', '0', '1', '1'),
+                    ),
+                    3,
                 ),
-                3,
-            ),
-        )
-    }
-}
+            ) { (grid, expected) ->
+                sut.numIslands(grid) shouldBe expected
+            }
+        }
+    })
+
+private data class NumberOfIslandsCase(
+    val grid: Array<CharArray>,
+    val expected: Int,
+)

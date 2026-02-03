@@ -1,30 +1,29 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class ValidPalindromeTest {
-    @ParameterizedTest
-    @MethodSource("testCases")
-    fun `should check whether palindrome`(
-        s: String,
-        expected: Boolean,
-    ) {
+class ValidPalindromeTest :
+    FunSpec({
         val sut = ValidPalindrome()
-        Assertions.assertThat(sut.isPalindrome(s))
-    }
 
-    companion object {
-        @JvmStatic
-        fun testCases() = listOf(
-            Arguments.of("A man, a plan, a canal: Panama", true),
-            Arguments.of("race a car", false),
-            Arguments.of(" ", true),
-            Arguments.of("Do geese see God?", true),
-            Arguments.of("Hannah", true),
-            Arguments.of("Hang up!", false),
-        )
-    }
-}
+        context("valid palindrome") {
+            withTests(
+                nameFn = { (s, expected) -> "s=${s.take(20)}..., expected=$expected" },
+                ValidPalindromeCase("A man, a plan, a canal: Panama", true),
+                ValidPalindromeCase("race a car", false),
+                ValidPalindromeCase(" ", true),
+                ValidPalindromeCase("Do geese see God?", true),
+                ValidPalindromeCase("Hannah", true),
+                ValidPalindromeCase("Hang up!", false),
+            ) { (s, expected) ->
+                sut.isPalindrome(s) shouldBe expected
+            }
+        }
+    })
+
+private data class ValidPalindromeCase(
+    val s: String,
+    val expected: Boolean,
+)

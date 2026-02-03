@@ -1,27 +1,36 @@
 package com.giwankim.leetcode
 
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
 
-class MaximumUnitsOnATruckTest {
-    @ParameterizedTest
-    @MethodSource
-    fun maximumUnits(
-        boxTypes: Array<IntArray>,
-        truckSize: Int,
-        expected: Int,
-    ) {
+class MaximumUnitsOnATruckTest :
+    FunSpec({
         val sut = MaximumUnitsOnATruck()
-        sut.maximumUnits(boxTypes, truckSize) shouldBe expected
-    }
 
-    companion object {
-        @JvmStatic
-        fun maximumUnits() = listOf(
-            Arguments.of(arrayOf(intArrayOf(1, 3), intArrayOf(2, 2), intArrayOf(3, 1)), 4, 8),
-            Arguments.of(arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)), 10, 91),
-        )
-    }
-}
+        context("maximum units on a truck") {
+            withTests(
+                nameFn = { (boxTypes, truckSize, expected) ->
+                    "boxTypes=${boxTypes.contentDeepToString()}, truckSize=$truckSize, expected=$expected"
+                },
+                MaximumUnitsOnATruckCase(
+                    arrayOf(intArrayOf(1, 3), intArrayOf(2, 2), intArrayOf(3, 1)),
+                    4,
+                    8,
+                ),
+                MaximumUnitsOnATruckCase(
+                    arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)),
+                    10,
+                    91,
+                ),
+            ) { (boxTypes, truckSize, expected) ->
+                sut.maximumUnits(boxTypes, truckSize) shouldBe expected
+            }
+        }
+    })
+
+private data class MaximumUnitsOnATruckCase(
+    val boxTypes: Array<IntArray>,
+    val truckSize: Int,
+    val expected: Int,
+)

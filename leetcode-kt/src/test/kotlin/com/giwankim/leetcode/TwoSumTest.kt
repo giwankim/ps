@@ -1,28 +1,29 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class TwoSumTest {
-    @ParameterizedTest
-    @MethodSource
-    fun twoSum(
-        nums: IntArray,
-        target: Int,
-        expected: IntArray,
-    ) {
-        val actual = TwoSum().twoSum(nums, target)
-        assertThat(actual).isEqualTo(expected)
-    }
+class TwoSumTest :
+    FunSpec({
+        val sut = TwoSum()
 
-    companion object {
-        @JvmStatic
-        fun twoSum(): List<Arguments> = listOf(
-            Arguments.of(intArrayOf(2, 7, 11, 15), 9, intArrayOf(0, 1)),
-            Arguments.of(intArrayOf(3, 2, 4), 6, intArrayOf(1, 2)),
-            Arguments.of(intArrayOf(3, 3), 6, intArrayOf(0, 1)),
-        )
-    }
-}
+        context("two sum") {
+            withTests(
+                nameFn = { (nums, target, expected) ->
+                    "nums=${nums.contentToString()}, target=$target, expected=${expected.contentToString()}"
+                },
+                TwoSumCase(intArrayOf(2, 7, 11, 15), 9, intArrayOf(0, 1)),
+                TwoSumCase(intArrayOf(3, 2, 4), 6, intArrayOf(1, 2)),
+                TwoSumCase(intArrayOf(3, 3), 6, intArrayOf(0, 1)),
+            ) { (nums, target, expected) ->
+                sut.twoSum(nums, target) shouldBe expected
+            }
+        }
+    })
+
+private data class TwoSumCase(
+    val nums: IntArray,
+    val target: Int,
+    val expected: IntArray,
+)

@@ -1,29 +1,28 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class ValidParenthesesTest {
-    @ParameterizedTest
-    @MethodSource
-    fun isValid(
-        s: String,
-        expected: Boolean,
-    ) {
-        val actual = ValidParentheses().isValid(s)
-        assertThat(actual).isEqualTo(expected)
-    }
+class ValidParenthesesTest :
+    FunSpec({
+        val sut = ValidParentheses()
 
-    companion object {
-        @JvmStatic
-        fun isValid(): List<Arguments> = listOf(
-            Arguments.of("()", true),
-            Arguments.of("()[]{}", true),
-            Arguments.of("(]", false),
-            Arguments.of("([])", true),
-            Arguments.of("]", false),
-        )
-    }
-}
+        context("valid parentheses") {
+            withTests(
+                nameFn = { (s, expected) -> "s=$s, expected=$expected" },
+                ValidParenthesesCase("()", true),
+                ValidParenthesesCase("()[]{}", true),
+                ValidParenthesesCase("(]", false),
+                ValidParenthesesCase("([])", true),
+                ValidParenthesesCase("]", false),
+            ) { (s, expected) ->
+                sut.isValid(s) shouldBe expected
+            }
+        }
+    })
+
+private data class ValidParenthesesCase(
+    val s: String,
+    val expected: Boolean,
+)

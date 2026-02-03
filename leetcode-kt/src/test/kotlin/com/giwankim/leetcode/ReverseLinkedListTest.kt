@@ -1,26 +1,25 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class ReverseLinkedListTest {
-    @ParameterizedTest
-    @MethodSource
-    fun reverseList(
-        head: ListNode?,
-        expected: ListNode?,
-    ) {
-        val actual = ReverseLinkedList().reverseList(head)
-        assertThat(actual).isEqualTo(expected)
-    }
+class ReverseLinkedListTest :
+    FunSpec({
+        val sut = ReverseLinkedList()
 
-    companion object {
-        @JvmStatic
-        fun reverseList(): List<Arguments> = listOf(
-            Arguments.of(ListNode.of(1, 2, 3, 4, 5), ListNode.of(5, 4, 3, 2, 1)),
-            Arguments.of(ListNode.of(1, 2), ListNode.of(2, 1)),
-        )
-    }
-}
+        context("reverse linked list") {
+            withTests(
+                nameFn = { (head, expected) -> "head=$head, expected=$expected" },
+                ReverseLinkedListCase(ListNode.of(1, 2, 3, 4, 5), ListNode.of(5, 4, 3, 2, 1)),
+                ReverseLinkedListCase(ListNode.of(1, 2), ListNode.of(2, 1)),
+            ) { (head, expected) ->
+                sut.reverseList(head) shouldBe expected
+            }
+        }
+    })
+
+private data class ReverseLinkedListCase(
+    val head: ListNode?,
+    val expected: ListNode?,
+)

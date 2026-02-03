@@ -1,26 +1,25 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class ArrayPartitionSumTest {
-    @ParameterizedTest
-    @MethodSource
-    fun arrayPairSum(
-        nums: IntArray,
-        expected: Int,
-    ) {
-        val actual = ArrayPartitionSum().arrayPairSum(nums)
-        assertThat(actual).isEqualTo(expected)
-    }
+class ArrayPartitionSumTest :
+    FunSpec({
+        val sut = ArrayPartitionSum()
 
-    companion object {
-        @JvmStatic
-        fun arrayPairSum(): List<Arguments> = listOf(
-            Arguments.of(intArrayOf(1, 4, 3, 2), 4),
-            Arguments.of(intArrayOf(6, 2, 6, 5, 1, 2), 9),
-        )
-    }
-}
+        context("array partition sum") {
+            withTests(
+                nameFn = { (nums, expected) -> "nums=${nums.contentToString()}, expected=$expected" },
+                ArrayPartitionSumCase(intArrayOf(1, 4, 3, 2), 4),
+                ArrayPartitionSumCase(intArrayOf(6, 2, 6, 5, 1, 2), 9),
+            ) { (nums, expected) ->
+                sut.arrayPairSum(nums) shouldBe expected
+            }
+        }
+    })
+
+private data class ArrayPartitionSumCase(
+    val nums: IntArray,
+    val expected: Int,
+)

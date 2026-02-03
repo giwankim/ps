@@ -6,9 +6,7 @@ import io.kotest.matchers.shouldBe
 class MergeIntervalsTest :
     FunSpec(
         {
-            lateinit var sut: MergeIntervals
-
-            beforeTest { sut = MergeIntervals() }
+            val sut = MergeIntervals()
 
             context("merge intervals") {
                 test("two intervals do not overlap") {

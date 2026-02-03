@@ -10,14 +10,16 @@ class NumberOfProvincesTest :
 
             beforeTest { sut = NumberOfProvinces() }
 
-            test("islands") {
-                val isConnected = arrayOf(intArrayOf(1, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 1))
-                sut.findCircleNum(isConnected) shouldBe 3
-            }
+            context("number of provinces") {
+                test("islands") {
+                    val isConnected = arrayOf(intArrayOf(1, 0, 0), intArrayOf(0, 1, 0), intArrayOf(0, 0, 1))
+                    sut.findCircleNum(isConnected) shouldBe 3
+                }
 
-            test("two provinces") {
-                val isConnected = arrayOf(intArrayOf(1, 1, 0), intArrayOf(1, 1, 0), intArrayOf(0, 0, 1))
-                sut.findCircleNum(isConnected) shouldBe 2
+                test("two provinces") {
+                    val isConnected = arrayOf(intArrayOf(1, 1, 0), intArrayOf(1, 1, 0), intArrayOf(0, 0, 1))
+                    sut.findCircleNum(isConnected) shouldBe 2
+                }
             }
         },
     )

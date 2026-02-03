@@ -1,46 +1,43 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.matchers.shouldBe
 
-class TrieTest {
-    private lateinit var trie: Trie
+class TrieTest :
+    FunSpec({
+        lateinit var sut: Trie
 
-    @BeforeEach
-    fun setUp() {
-        trie = Trie()
-    }
+        beforeTest {
+            sut = Trie()
+        }
 
-    @Test
-    fun insert() {
-        trie.insert("apple")
-        assertThat(trie.search("apple")).isTrue()
-    }
+        context("trie") {
+            test("insert") {
+                sut.insert("apple")
+                sut.search("apple") shouldBe true
+            }
 
-    @Test
-    fun search() {
-        trie.insert("apple")
-        assertThat(trie.search("apple")).isTrue()
-        assertThat(trie.search("app")).isFalse()
-    }
+            test("search") {
+                sut.insert("apple")
+                sut.search("apple") shouldBe true
+                sut.search("app") shouldBe false
+            }
 
-    @Test
-    fun startsWith() {
-        trie.insert("apple")
-        assertThat(trie.startsWith("app")).isTrue()
-    }
+            test("startsWith") {
+                sut.insert("apple")
+                sut.startsWith("app") shouldBe true
+            }
 
-    @Test
-    fun trie() {
-        trie.insert("apple")
+            test("trie") {
+                sut.insert("apple")
 
-        assertThat(trie.search("apple")).isTrue()
-        assertThat(trie.search("app")).isFalse()
-        assertThat(trie.startsWith("app")).isTrue()
+                sut.search("apple") shouldBe true
+                sut.search("app") shouldBe false
+                sut.startsWith("app") shouldBe true
 
-        trie.insert("app")
+                sut.insert("app")
 
-        assertThat(trie.search("app")).isTrue()
-    }
-}
+                sut.search("app") shouldBe true
+            }
+        }
+    })

@@ -10,20 +10,22 @@ class DecodeWaysTest :
 
             beforeTest { sut = DecodeWays() }
 
-            test("no way") {
-                sut.numDecodings("06") shouldBe 0
-            }
+            context("decode ways") {
+                test("no way") {
+                    sut.numDecodings("06") shouldBe 0
+                }
 
-            test("one way") {
-                sut.numDecodings("1") shouldBe 1
-            }
+                test("one way") {
+                    sut.numDecodings("1") shouldBe 1
+                }
 
-            test("two ways") {
-                sut.numDecodings("12") shouldBe 2
-            }
+                test("two ways") {
+                    sut.numDecodings("12") shouldBe 2
+                }
 
-            test("general case") {
-                sut.numDecodings("226") shouldBe 3
+                test("general case") {
+                    sut.numDecodings("226") shouldBe 3
+                }
             }
         },
     )

@@ -1,24 +1,27 @@
 package com.giwankim.leetcode
 
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.CsvSource
 
-class MinStepsToMakeTwoStringsAnagramTest {
-    @ParameterizedTest
-    @CsvSource(
-        delimiter = '|',
-        textBlock = """
-            bab | aba | 1
-            leetcode | practice | 5
-            anagram | mangaar | 0""",
-    )
-    fun minSteps(
-        s: String,
-        t: String,
-        expected: Int,
-    ) {
+class MinStepsToMakeTwoStringsAnagramTest :
+    FunSpec({
         val sut = MinStepsToMakeTwoStringsAnagram()
-        sut.minSteps(s, t) shouldBe expected
-    }
-}
+
+        context("min steps to make two strings anagram") {
+            withTests(
+                nameFn = { (s, t, expected) -> "s=$s, t=$t, expected=$expected" },
+                MinStepsToMakeTwoStringsAnagramCase("bab", "aba", 1),
+                MinStepsToMakeTwoStringsAnagramCase("leetcode", "practice", 5),
+                MinStepsToMakeTwoStringsAnagramCase("anagram", "mangaar", 0),
+            ) { (s, t, expected) ->
+                sut.minSteps(s, t) shouldBe expected
+            }
+        }
+    })
+
+private data class MinStepsToMakeTwoStringsAnagramCase(
+    val s: String,
+    val t: String,
+    val expected: Int,
+)

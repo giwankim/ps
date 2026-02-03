@@ -6,9 +6,7 @@ import io.kotest.matchers.shouldBe
 class SimplifyPathTest :
     FunSpec(
         {
-            lateinit var sut: SimplifyPath
-
-            beforeTest { sut = SimplifyPath() }
+            val sut = SimplifyPath()
 
             test("root") {
                 sut.simplifyPath("/") shouldBe "/"

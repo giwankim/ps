@@ -1,26 +1,25 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class PalindromeLinkedListTest {
-    @ParameterizedTest
-    @MethodSource
-    fun isPalindrome(
-        head: ListNode?,
-        expected: Boolean,
-    ) {
-        val actual = PalindromeLinkedList().isPalindrome(head)
-        assertThat(actual).isEqualTo(expected)
-    }
+class PalindromeLinkedListTest :
+    FunSpec({
+        val sut = PalindromeLinkedList()
 
-    companion object {
-        @JvmStatic
-        fun isPalindrome(): List<Arguments> = listOf(
-            Arguments.of(ListNode.of(1, 2, 2, 1), true),
-            Arguments.of(ListNode.of(1, 2), false),
-        )
-    }
-}
+        context("palindrome linked list") {
+            withTests(
+                nameFn = { (head, expected) -> "head=$head, expected=$expected" },
+                PalindromeLinkedListCase(ListNode.of(1, 2, 2, 1), true),
+                PalindromeLinkedListCase(ListNode.of(1, 2), false),
+            ) { (head, expected) ->
+                sut.isPalindrome(head) shouldBe expected
+            }
+        }
+    })
+
+private data class PalindromeLinkedListCase(
+    val head: ListNode?,
+    val expected: Boolean,
+)

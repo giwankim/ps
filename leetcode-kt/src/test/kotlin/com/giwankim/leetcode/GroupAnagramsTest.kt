@@ -1,30 +1,30 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.collections.shouldContainExactlyInAnyOrder
 
-class GroupAnagramsTest {
-    @ParameterizedTest
-    @MethodSource
-    fun groupAnagrams(
-        strs: Array<String>,
-        expected: List<List<String>>,
-    ) {
-        val actual = GroupAnagrams().groupAnagrams(strs)
-        assertThat(actual.map { it.sorted() }).containsExactlyInAnyOrderElementsOf(expected.map { it.sorted() })
-    }
+class GroupAnagramsTest :
+    FunSpec({
+        val sut = GroupAnagrams()
 
-    companion object {
-        @JvmStatic
-        fun groupAnagrams(): List<Arguments> = listOf(
-            Arguments.of(
-                arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
-                listOf(listOf("bat"), listOf("nat", "tan"), listOf("ate", "eat", "tea")),
-            ),
-            Arguments.of(arrayOf(""), listOf(listOf(""))),
-            Arguments.of(arrayOf("a"), listOf(listOf("a"))),
-        )
-    }
-}
+        context("group anagrams") {
+            withTests(
+                nameFn = { (strs, expected) -> "strs=${strs.contentToString()}, expected=$expected" },
+                GroupAnagramsCase(
+                    arrayOf("eat", "tea", "tan", "ate", "nat", "bat"),
+                    listOf(listOf("bat"), listOf("nat", "tan"), listOf("ate", "eat", "tea")),
+                ),
+                GroupAnagramsCase(arrayOf(""), listOf(listOf(""))),
+                GroupAnagramsCase(arrayOf("a"), listOf(listOf("a"))),
+            ) { (strs, expected) ->
+                val actual = sut.groupAnagrams(strs).map { it.sorted() }
+                actual shouldContainExactlyInAnyOrder expected.map { it.sorted() }
+            }
+        }
+    })
+
+private data class GroupAnagramsCase(
+    val strs: Array<String>,
+    val expected: List<List<String>>,
+)

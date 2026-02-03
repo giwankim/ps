@@ -6,9 +6,9 @@ import io.kotest.matchers.shouldBe
 class TopKFrequentElementsTest :
     FunSpec(
         {
-            context("topKFrequent") {
-                val sut = TopKFrequentElements()
+            val sut = TopKFrequentElements()
 
+            context("topKFrequent") {
                 test("singleton") {
                     val nums = intArrayOf(1)
                     val k = 1

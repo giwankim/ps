@@ -1,27 +1,26 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class BestTimeToBuyAndSellStockIITest {
-    @ParameterizedTest
-    @MethodSource
-    fun maxProfit(
-        prices: IntArray,
-        expected: Int,
-    ) {
-        val actual = BestTimeToBuyAndSellStockII().maxProfit(prices)
-        assertThat(actual).isEqualTo(expected)
-    }
+class BestTimeToBuyAndSellStockIITest :
+    FunSpec({
+        val sut = BestTimeToBuyAndSellStockII()
 
-    companion object {
-        @JvmStatic
-        fun maxProfit(): List<Arguments> = listOf(
-            Arguments.of(intArrayOf(7, 1, 5, 3, 6, 4), 7),
-            Arguments.of(intArrayOf(1, 2, 3, 4, 5), 4),
-            Arguments.of(intArrayOf(7, 6, 4, 3, 1), 0),
-        )
-    }
-}
+        context("best time to buy and sell stock ii") {
+            withTests(
+                nameFn = { (prices, expected) -> "prices=${prices.contentToString()}, expected=$expected" },
+                BestTimeToBuyAndSellStockIICase(intArrayOf(7, 1, 5, 3, 6, 4), 7),
+                BestTimeToBuyAndSellStockIICase(intArrayOf(1, 2, 3, 4, 5), 4),
+                BestTimeToBuyAndSellStockIICase(intArrayOf(7, 6, 4, 3, 1), 0),
+            ) { (prices, expected) ->
+                sut.maxProfit(prices) shouldBe expected
+            }
+        }
+    })
+
+private data class BestTimeToBuyAndSellStockIICase(
+    val prices: IntArray,
+    val expected: Int,
+)

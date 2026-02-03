@@ -1,27 +1,28 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class ReverseStringTest {
-    @ParameterizedTest
-    @MethodSource
-    fun `should reverse a string`(
-        s: CharArray,
-        expected: CharArray,
-    ) {
-        val reverseString = ReverseString()
-        reverseString.reverseString(s)
-        assertThat(s).isEqualTo(expected)
-    }
+class ReverseStringTest :
+    FunSpec({
+        val sut = ReverseString()
 
-    companion object {
-        @JvmStatic
-        fun `should reverse a string`(): List<Arguments> = listOf(
-            Arguments.of(charArrayOf('h', 'e', 'l', 'l', 'o'), charArrayOf('o', 'l', 'l', 'e', 'h')),
-            Arguments.of(charArrayOf('H', 'a', 'n', 'n', 'a', 'h'), charArrayOf('h', 'a', 'n', 'n', 'a', 'H')),
-        )
-    }
-}
+        context("reverse string") {
+            withTests(
+                nameFn = { (s, expected) ->
+                    "s=${s.concatToString()}, expected=${expected.concatToString()}"
+                },
+                ReverseStringCase(charArrayOf('h', 'e', 'l', 'l', 'o'), charArrayOf('o', 'l', 'l', 'e', 'h')),
+                ReverseStringCase(charArrayOf('H', 'a', 'n', 'n', 'a', 'h'), charArrayOf('h', 'a', 'n', 'n', 'a', 'H')),
+            ) { (s, expected) ->
+                sut.reverseString(s)
+                s.toList() shouldBe expected.toList()
+            }
+        }
+    })
+
+private data class ReverseStringCase(
+    val s: CharArray,
+    val expected: CharArray,
+)

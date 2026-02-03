@@ -7,11 +7,14 @@ import io.kotest.matchers.shouldBe
 class WordSearchTest :
     FunSpec(
         {
-            test("exist") {
-                arguments.forAll { (board, word, expected) ->
-                    val sut = WordSearch()
-                    val actual = sut.exist(board, word)
-                    actual shouldBe expected
+            val sut = WordSearch()
+
+            context("word search") {
+                test("exist") {
+                    arguments.forAll { (board, word, expected) ->
+                        val actual = sut.exist(board, word)
+                        actual shouldBe expected
+                    }
                 }
             }
         },

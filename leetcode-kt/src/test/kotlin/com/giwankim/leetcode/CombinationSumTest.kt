@@ -1,8 +1,7 @@
 package com.giwankim.leetcode
 
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.datatest.WithDataTestName
-import io.kotest.datatest.withData
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
 
 class CombinationSumTest :
@@ -29,7 +28,10 @@ class CombinationSumTest :
             }
 
             context("general case") {
-                withData(
+                withTests(
+                    nameFn = { (candidates, target, expected) ->
+                        "candidates=${candidates.contentToString()}, target=$target, expected=$expected"
+                    },
                     CombinationSumTestCase(intArrayOf(2, 3, 6, 7), 7, listOf(listOf(2, 2, 3), listOf(7))),
                     CombinationSumTestCase(intArrayOf(2, 3, 5), 8, listOf(listOf(2, 2, 2, 2), listOf(2, 3, 3), listOf(3, 5))),
                 ) { (candidates, target, expected) ->
@@ -43,6 +45,4 @@ data class CombinationSumTestCase(
     val candidates: IntArray,
     val target: Int,
     val expected: List<List<Int>>,
-) : WithDataTestName {
-    override fun dataTestName(): String = "candidates = ${candidates.contentToString()}, target=$target, expect=$expected"
-}
+)

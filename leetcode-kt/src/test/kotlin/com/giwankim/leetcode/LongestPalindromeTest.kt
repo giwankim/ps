@@ -1,29 +1,28 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class LongestPalindromeTest {
-    @ParameterizedTest
-    @MethodSource
-    fun longestPalindrome(
-        s: String,
-        expected: String,
-    ) {
-        val actual = LongestPalindrome().longestPalindrome(s)
-        assertThat(actual).isEqualTo(expected)
-    }
+class LongestPalindromeTest :
+    FunSpec({
+        val sut = LongestPalindrome()
 
-    companion object {
-        @JvmStatic
-        fun longestPalindrome(): List<Arguments> = listOf(
-            Arguments.of("a", "a"),
-            Arguments.of("ab", "a"),
-            Arguments.of("babad", "bab"),
-            Arguments.of("cbbd", "bb"),
-            Arguments.of("dcbabcdd", "dcbabcd"),
-        )
-    }
-}
+        context("longest palindrome") {
+            withTests(
+                nameFn = { (s, expected) -> "s=$s, expected=$expected" },
+                LongestPalindromeCase("a", "a"),
+                LongestPalindromeCase("ab", "a"),
+                LongestPalindromeCase("babad", "bab"),
+                LongestPalindromeCase("cbbd", "bb"),
+                LongestPalindromeCase("dcbabcdd", "dcbabcd"),
+            ) { (s, expected) ->
+                sut.longestPalindrome(s) shouldBe expected
+            }
+        }
+    })
+
+private data class LongestPalindromeCase(
+    val s: String,
+    val expected: String,
+)

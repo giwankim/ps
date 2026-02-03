@@ -2,15 +2,17 @@ package com.giwankim.leetcode
 
 import com.giwankim.leetcode.support.TreeNode
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.datatest.WithDataTestName
-import io.kotest.datatest.withData
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
 
 class BinaryTreeLevelOrderTraversalTest :
     FunSpec(
         {
+            val sut = BinaryTreeLevelOrderTraversal()
+
             context("binary tree level order traversal") {
-                withData(
+                withTests(
+                    nameFn = { (root, expected) -> "root=${root?.prettyPrint()}, expected=$expected" },
                     BinaryTreeLevelOrderTraversalTestCase(
                         TreeNode.from(3, 9, 20, null, null, 15, 7),
                         listOf(listOf(3), listOf(9, 20), listOf(15, 7)),
@@ -24,7 +26,6 @@ class BinaryTreeLevelOrderTraversalTest :
                         emptyList(),
                     ),
                 ) { (root, expected) ->
-                    val sut = BinaryTreeLevelOrderTraversal()
                     sut.levelOrder(root) shouldBe expected
                 }
             }
@@ -34,6 +35,4 @@ class BinaryTreeLevelOrderTraversalTest :
 data class BinaryTreeLevelOrderTraversalTestCase(
     val root: TreeNode?,
     val expected: List<List<Int>>,
-) : WithDataTestName {
-    override fun dataTestName(): String = "root=${root?.prettyPrint()}, expected=$expected"
-}
+)

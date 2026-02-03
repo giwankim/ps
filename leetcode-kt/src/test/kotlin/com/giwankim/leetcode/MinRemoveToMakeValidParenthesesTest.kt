@@ -7,10 +7,13 @@ import io.kotest.matchers.shouldBe
 class MinRemoveToMakeValidParenthesesTest :
     FunSpec(
         {
-            test("minRemoveToMakeValid") {
-                val sut = MinRemoveToMakeValidParentheses()
-                arguments.forAll { (s, expected) ->
-                    sut.minRemoveToMakeValid(s) shouldBe expected
+            val sut = MinRemoveToMakeValidParentheses()
+
+            context("min remove to make valid parentheses") {
+                test("minRemoveToMakeValid") {
+                    arguments.forAll { (s, expected) ->
+                        sut.minRemoveToMakeValid(s) shouldBe expected
+                    }
                 }
             }
         },

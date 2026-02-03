@@ -1,15 +1,17 @@
 package com.giwankim.leetcode
 
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.datatest.WithDataTestName
-import io.kotest.datatest.withData
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
 
 class DiagonalTraverseIITest :
     FunSpec(
         {
-            context("diagonal traverse II") {
-                withData(
+            val sut = DiagonalTraverseII()
+
+            context("diagonal traverse ii") {
+                withTests(
+                    nameFn = { (nums, expected) -> "nums=$nums, expected=${expected.contentToString()}" },
                     DiagonalTraverseIITestCase(
                         listOf(listOf(1, 2, 3), listOf(4, 5, 6), listOf(7, 8, 9)),
                         intArrayOf(1, 4, 2, 7, 5, 3, 8, 6, 9),
@@ -19,7 +21,6 @@ class DiagonalTraverseIITest :
                         intArrayOf(1, 6, 2, 8, 7, 3, 9, 4, 12, 10, 5, 13, 11, 14, 15, 16),
                     ),
                 ) { (nums, expected) ->
-                    val sut = DiagonalTraverseII()
                     sut.findDiagonalOrder(nums) shouldBe expected
                 }
             }
@@ -29,6 +30,4 @@ class DiagonalTraverseIITest :
 data class DiagonalTraverseIITestCase(
     val nums: List<List<Int>>,
     val expected: IntArray,
-) : WithDataTestName {
-    override fun dataTestName(): String = "nums=$nums, expected=${expected.contentToString()}"
-}
+)

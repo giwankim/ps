@@ -1,27 +1,28 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class MostCommonWordTest {
-    @ParameterizedTest
-    @MethodSource
-    fun mostCommonWord(
-        paragraph: String,
-        banned: Array<String>,
-        expected: String,
-    ) {
-        val actual = MostCommonWord().mostCommonWord(paragraph, banned)
-        assertThat(actual).isEqualTo(expected)
-    }
+class MostCommonWordTest :
+    FunSpec({
+        val sut = MostCommonWord()
 
-    companion object {
-        @JvmStatic
-        fun mostCommonWord(): List<Arguments> = listOf(
-            Arguments.of("a.", emptyArray<String>(), "a"),
-            Arguments.of("Bob hit a ball, the hit BALL flew far after it was hit.", arrayOf("hit"), "ball"),
-        )
-    }
-}
+        context("most common word") {
+            withTests(
+                nameFn = { (paragraph, banned, expected) ->
+                    "paragraph=${paragraph.take(20)}..., banned=${banned.contentToString()}, expected=$expected"
+                },
+                MostCommonWordCase("a.", emptyArray(), "a"),
+                MostCommonWordCase("Bob hit a ball, the hit BALL flew far after it was hit.", arrayOf("hit"), "ball"),
+            ) { (paragraph, banned, expected) ->
+                sut.mostCommonWord(paragraph, banned) shouldBe expected
+            }
+        }
+    })
+
+private data class MostCommonWordCase(
+    val paragraph: String,
+    val banned: Array<String>,
+    val expected: String,
+)

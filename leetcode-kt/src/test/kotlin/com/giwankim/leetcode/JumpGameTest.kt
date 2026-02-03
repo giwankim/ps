@@ -1,15 +1,15 @@
 package com.giwankim.leetcode
 
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.datatest.withData
+import io.kotest.datatest.withTests
 import io.kotest.matchers.shouldBe
 
 class JumpGameTest :
     FunSpec(
         {
-            context("canJump") {
-                val sut = JumpGame()
-                withData(
+            val sut = JumpGame()
+            context("jump game") {
+                withTests(
                     nameFn = { "${it.nums}, ${it.expected}" },
                     JumpGameTestCase(listOf(2, 3, 1, 1, 4), true),
                     JumpGameTestCase(listOf(3, 2, 1, 0, 4), false),

@@ -1,30 +1,29 @@
 package com.giwankim.leetcode
 
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments
-import org.junit.jupiter.params.provider.MethodSource
+import io.kotest.core.spec.style.FunSpec
+import io.kotest.datatest.withTests
+import io.kotest.matchers.shouldBe
 
-class LetterCombinationOfAPhoneNumberTest {
-    @ParameterizedTest
-    @MethodSource
-    fun letterCombinations(
-        digits: String,
-        expected: List<String>,
-    ) {
-        val actual = LetterCombinationOfAPhoneNumber().letterCombinations(digits)
-        assertThat(actual).isEqualTo(expected)
-    }
+class LetterCombinationOfAPhoneNumberTest :
+    FunSpec({
+        val sut = LetterCombinationOfAPhoneNumber()
 
-    companion object {
-        @JvmStatic
-        fun letterCombinations(): List<Arguments> = listOf(
-            Arguments.of(
-                "23",
-                listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"),
-            ),
-            Arguments.of("", emptyList<String>()),
-            Arguments.of("2", listOf("a", "b", "c")),
-        )
-    }
-}
+        context("letter combination of a phone number") {
+            withTests(
+                nameFn = { (digits, expected) -> "digits=$digits, expected=$expected" },
+                LetterCombinationOfAPhoneNumberCase(
+                    "23",
+                    listOf("ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"),
+                ),
+                LetterCombinationOfAPhoneNumberCase("", emptyList()),
+                LetterCombinationOfAPhoneNumberCase("2", listOf("a", "b", "c")),
+            ) { (digits, expected) ->
+                sut.letterCombinations(digits) shouldBe expected
+            }
+        }
+    })
+
+private data class LetterCombinationOfAPhoneNumberCase(
+    val digits: String,
+    val expected: List<String>,
+)
