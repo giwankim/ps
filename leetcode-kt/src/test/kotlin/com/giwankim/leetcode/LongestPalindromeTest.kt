@@ -6,9 +6,13 @@ import io.kotest.matchers.shouldBe
 
 class LongestPalindromeTest :
     FunSpec({
-        val sut = LongestPalindrome()
+        lateinit var sut: LongestPalindrome
 
         context("longest palindrome") {
+            beforeEach {
+                sut = LongestPalindrome()
+            }
+
             withTests(
                 nameFn = { (s, expected) -> "s=$s, expected=$expected" },
                 LongestPalindromeCase("a", "a"),
