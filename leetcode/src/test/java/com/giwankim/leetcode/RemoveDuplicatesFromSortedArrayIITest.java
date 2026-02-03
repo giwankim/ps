@@ -8,8 +8,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
-class RemoveDuplicatesFromSortedArrayTest {
-  RemoveDuplicatesFromSortedArray sut = new RemoveDuplicatesFromSortedArray();
+class RemoveDuplicatesFromSortedArrayIITest {
+  RemoveDuplicatesFromSortedArrayII sut = new RemoveDuplicatesFromSortedArrayII();
 
   @ParameterizedTest
   @MethodSource
@@ -21,7 +21,8 @@ class RemoveDuplicatesFromSortedArrayTest {
 
   static Stream<Arguments> removeDuplicates() {
     return Stream.of(
-        Arguments.of(new int[] {1, 1, 2}, new int[] {1, 2}),
-        Arguments.of(new int[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4}, new int[] {0, 1, 2, 3, 4}));
+        Arguments.of(new int[] {1, 2, 2, 3}, new int[] {1, 2, 2, 3}),
+        Arguments.of(new int[] {1, 1, 1, 2, 2, 3}, new int[] {1, 1, 2, 2, 3}),
+        Arguments.of(new int[] {0, 0, 1, 1, 1, 1, 2, 3, 3}, new int[] {0, 0, 1, 1, 2, 3, 3}));
   }
 }
