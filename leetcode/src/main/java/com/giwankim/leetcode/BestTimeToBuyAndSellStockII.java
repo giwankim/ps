@@ -1,7 +1,8 @@
 package com.giwankim.leetcode;
 
-public class BestTimeToBuySellStockII {
+public class BestTimeToBuyAndSellStockII {
   public int maxProfit(int[] prices) {
+    // Time complexity: O(n), Space complexity: O(1)
     int result = 0;
     for (int i = 1; i < prices.length; i++) {
       if (prices[i] - prices[i - 1] > 0) {
