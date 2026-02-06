@@ -1,5 +1,0 @@
-#!/bin/sh
-
-GIT_DIR=$(git rev-parse --show-toplevel)
-$GIT_DIR/gradlew spotlessCheck
-$GIT_DIR/gradlew ktlintCheck

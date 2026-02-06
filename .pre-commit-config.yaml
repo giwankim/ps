@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: spotless
+        name: spotless check
+        language: system
+        entry: ./gradlew spotlessCheck
+        pass_filenames: false
+        files: '\.java$'
+      - id: ktlint
+        name: ktlint check
+        language: system
+        entry: ./gradlew ktlintCheck
+        pass_filenames: false
+        files: '\.kts?$'
