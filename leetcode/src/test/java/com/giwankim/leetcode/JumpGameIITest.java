@@ -8,13 +8,13 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class JumpGameIITest {
+  JumpGameII sut = new JumpGameII();
 
   @ParameterizedTest
   @MethodSource
   void jump(int[] nums, int expected) {
-    var sut = new JumpGameII();
-    int actual = sut.jump(nums);
-    assertThat(actual).isEqualTo(expected);
+    int jumps = sut.jump(nums);
+    assertThat(jumps).isEqualTo(expected);
   }
 
   private static Stream<Arguments> jump() {
