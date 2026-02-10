@@ -4,44 +4,46 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class InsertDeleteGetRandomO1 {
-  private final Map<Integer, Integer> numberToIndex;
-  private final List<Integer> numbers;
-  private final Random random;
+  public static class RandomizedSet {
+    // Time complexity: O(1), Space complexity: O(n)
+    private final Map<Integer, Integer> valToIdx;
+    private final List<Integer> vals;
 
-  public InsertDeleteGetRandomO1() {
-    numberToIndex = new HashMap<>();
-    numbers = new ArrayList<>();
-    random = new Random();
-  }
-
-  public boolean insert(int val) {
-    if (numberToIndex.containsKey(val)) {
-      return false;
+    public RandomizedSet() {
+      valToIdx = new HashMap<>();
+      vals = new ArrayList<>();
     }
-    numberToIndex.put(val, numbers.size());
-    numbers.add(val);
-    return true;
-  }
 
-  public boolean remove(int val) {
-    if (!numberToIndex.containsKey(val)) {
-      return false;
+    public boolean insert(int val) {
+      if (valToIdx.containsKey(val)) {
+        return false;
+      }
+      valToIdx.put(val, vals.size());
+      vals.add(val);
+      return true;
     }
-    // swap the number to delete with the last number
-    int index = numberToIndex.get(val);
-    numbers.set(index, numbers.getLast());
-    numberToIndex.put(numbers.getLast(), index);
-    // delete the last number
-    numbers.removeLast();
-    numberToIndex.remove(val);
-    return true;
-  }
 
-  public int getRandom() {
-    int index = random.nextInt(numbers.size());
-    return numbers.get(index);
+    public boolean remove(int val) {
+      if (!valToIdx.containsKey(val)) {
+        return false;
+      }
+      // swap last element into its place
+      int idx = valToIdx.get(val);
+      int lastVal = vals.getLast();
+      vals.set(idx, lastVal);
+      valToIdx.put(lastVal, idx);
+      // remove
+      vals.removeLast();
+      valToIdx.remove(val);
+      return true;
+    }
+
+    public int getRandom() {
+      int randomIndex = ThreadLocalRandom.current().nextInt(vals.size());
+      return vals.get(randomIndex);
+    }
   }
 }

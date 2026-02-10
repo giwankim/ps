@@ -1,7 +1,6 @@
 package com.giwankim.leetcode;
 
 public class RemoveDuplicatesFromSortedArray {
-
   public int removeDuplicates(int[] nums) {
     // Time complexity: O(n), Space complexity: O(1)
     int i = 1;

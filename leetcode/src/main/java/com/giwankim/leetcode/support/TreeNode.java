@@ -1,6 +1,7 @@
 package com.giwankim.leetcode.support;
 
 import java.util.Objects;
+import lombok.Builder;
 
 public class TreeNode {
   public int val;
@@ -13,6 +14,7 @@ public class TreeNode {
     this(val, null, null);
   }
 
+  @Builder
   public TreeNode(int val, TreeNode left, TreeNode right) {
     this.val = val;
     this.left = left;
