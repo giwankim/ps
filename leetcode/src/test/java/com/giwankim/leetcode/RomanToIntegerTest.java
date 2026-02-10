@@ -2,22 +2,23 @@ package com.giwankim.leetcode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.stream.Stream;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class RomanToIntegerTest {
+  RomanToInteger sut = new RomanToInteger();
+
   @ParameterizedTest
-  @MethodSource
-  void romanToInt(String s, int expected) {
-    var sut = new RomanToInteger();
+  @CsvSource({"III, 3", "LVIII, 58"})
+  void leftToRight(String s, int expected) {
     int actual = sut.romanToInt(s);
     assertThat(actual).isEqualTo(expected);
   }
 
-  static Stream<Arguments> romanToInt() {
-    return Stream.of(
-        Arguments.of("III", 3), Arguments.of("LVIII", 58), Arguments.of("MCMXCIV", 1994));
+  @ParameterizedTest
+  @CsvSource({"IV, 4", "IX, 9", "XL, 40", "XC, 90", "CD, 400", "CM, 900", "MCMXCIV, 1994"})
+  void useSubtraction(String s, int expected) {
+    int actual = sut.romanToInt(s);
+    assertThat(actual).isEqualTo(expected);
   }
 }
