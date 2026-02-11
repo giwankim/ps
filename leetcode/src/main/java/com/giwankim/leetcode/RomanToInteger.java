@@ -14,7 +14,7 @@ public class RomanToInteger {
           'M', 1000);
 
   public int romanToInt(String s) {
-    // Time complexity: O(1) since finite set of Roman numerals, Space complexity: O(1)
+    // Time complexity: O(1) since there is a finite set of Roman numerals, Space complexity: O(1)
     int result = 0;
     for (int i = 0; i < s.length(); i++) {
       if (i + 1 < s.length() && map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {
