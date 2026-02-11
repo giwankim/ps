@@ -2,18 +2,15 @@ package com.giwankim.leetcode;
 
 public class LongestCommonPrefix {
   public String longestCommonPrefix(String[] strs) {
-    String result = strs[0];
+    // Time complexity: O(n*m), Space complexity: O(1)
+    String prefix = strs[0];
     for (int i = 1; i < strs.length; i++) {
-      result = commonPrefix(result, strs[i]);
+      int j = 0;
+      while (j < prefix.length() && j < strs[i].length() && prefix.charAt(j) == strs[i].charAt(j)) {
+        j++;
+      }
+      prefix = prefix.substring(0, j);
     }
-    return result;
-  }
-
-  private String commonPrefix(String s, String t) {
-    int i = 0;
-    while (i < s.length() && i < t.length() && s.charAt(i) == t.charAt(i)) {
-      i += 1;
-    }
-    return s.substring(0, i);
+    return prefix;
   }
 }

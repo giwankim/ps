@@ -18,6 +18,7 @@ class LongestCommonPrefixTest {
   private static Stream<Arguments> longestCommonPrefix() {
     return Stream.of(
         Arguments.of(new String[] {"a", "ab", "abc", "abcd"}, "a"),
+        Arguments.of(new String[] {"abcd", "abc", "ab", "a"}, "a"),
         Arguments.of(new String[] {"flower", "flow", "flight"}, "fl"),
         Arguments.of(new String[] {"dog", "racecar", "car"}, ""));
   }
