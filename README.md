@@ -103,6 +103,7 @@
 * [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1)
 * [383. Ransom Note](https://leetcode.com/problems/ransom-note)
 * [391. Perfect Rectangle](https://leetcode.com/problems/perfect-rectangle)
+* [392. Is Subsequence](https://leetcode.com/problems/is-subsequence)
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height)
 * [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 * [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)
