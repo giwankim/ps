@@ -2,24 +2,23 @@ package com.giwankim.leetcode;
 
 public class TrappingRainWater {
   public int trap(int[] height) {
-    int volume = 0;
+    // Time complexity: O(n), Space complexity: O(1)
+    int result = 0;
     int left = 0;
     int right = height.length - 1;
-    int leftMax = height[left];
-    int rightMax = height[right];
-
+    int maxLeft = 0;
+    int maxRight = 0;
     while (left < right) {
-      leftMax = Math.max(height[left], leftMax);
-      rightMax = Math.max(height[right], rightMax);
-
-      if (leftMax <= rightMax) {
-        volume += leftMax - height[left];
-        left += 1;
+      if (height[left] < height[right]) {
+        maxLeft = Math.max(maxLeft, height[left]);
+        result += maxLeft - height[left];
+        left++;
       } else {
-        volume += rightMax - height[right];
-        right -= 1;
+        maxRight = Math.max(maxRight, height[right]);
+        result += maxRight - height[right];
+        right--;
       }
     }
-    return volume;
+    return result;
   }
 }

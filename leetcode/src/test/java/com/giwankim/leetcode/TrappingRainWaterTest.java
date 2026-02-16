@@ -8,10 +8,12 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class TrappingRainWaterTest {
+  TrappingRainWater sut = new TrappingRainWater();
+
   @ParameterizedTest
   @MethodSource
   void trap(int[] height, int expected) {
-    int actual = new TrappingRainWater().trap(height);
+    int actual = sut.trap(height);
     assertThat(actual).isEqualTo(expected);
   }
 
