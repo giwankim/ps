@@ -65,6 +65,7 @@
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
 * [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 * [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
+* [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 * [169. Majority Element](https://leetcode.com/problems/majority-element)
 * [189. Rotate Array](https://leetcode.com/problems/rotate-array)
 * [190. Reverse Bits](https://leetcode.com/problems/reverse-bits)
