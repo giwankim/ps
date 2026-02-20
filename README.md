@@ -36,6 +36,7 @@
 * [62. Unique Paths](https://leetcode.com/problems/unique-paths)
 * [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)
 * [67. Add Binary](https://leetcode.com/problems/add-binary)
+* [68. Text Justification](https://leetcode.com/problems/text-justification)
 * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
 * [71. Simplify Path](https://leetcode.com/problems/simplify-path)

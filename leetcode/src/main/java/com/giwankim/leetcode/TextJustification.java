@@ -1,73 +1,55 @@
 package com.giwankim.leetcode;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class TextJustification {
   public List<String> fullJustify(String[] words, int maxWidth) {
+    // Time complexity: O(m * W) where m = number of output lines, W = maxWidth
+    // Space complexity: O(W) auxiliary
     List<String> result = new ArrayList<>();
-    int lineStart = 0;
-    while (lineStart < words.length) {
-      List<String> currentLine = getCurrentLine(lineStart, words, maxWidth);
-      lineStart += currentLine.size();
-      boolean isLastLine = lineStart == words.length;
-      result.add(justifyLine(isLastLine, currentLine, maxWidth));
+    int start = 0;
+    while (start < words.length) {
+      int end = getEnd(words, start, maxWidth);
+      result.add(justify(words, start, end, maxWidth, end == words.length));
+      start = end;
     }
     return result;
   }
 
-  public List<String> getCurrentLine(int lineStart, String[] words, int maxWidth) {
-    List<String> result = new ArrayList<>();
-    int i = lineStart;
-    int length = 0;
-    while (i < words.length && length + words[i].length() <= maxWidth) {
-      result.add(words[i]);
-      length += words[i].length() + 1;
-      i += 1;
-    }
-    return result;
-  }
-
-  /**
-   * Justify the line.
-   *
-   * <p>Extra spaces between words should be distributed as evenly as possible. If the number of
-   * spaces on a line does not divide evenly between words, the empty slots on the left will be
-   * assigned more spaces than the slots on the right.
-   *
-   * <p>For the last line of text, it should be left-justified and no extra space is inserted
-   * between words.
-   *
-   * @param isLastLine Boolean indicating if this is the last line of text.
-   * @param line List of words in the line
-   * @param maxWidth Maximum width of the line
-   * @return Justified line as a string
-   */
-  public String justifyLine(boolean isLastLine, List<String> line, int maxWidth) {
-    StringBuilder result = new StringBuilder();
-    if (isLastLine) {
-      result.append(String.join(" ", line));
-      result.append(" ".repeat(maxWidth - result.length()));
-      return result.toString();
-    }
-    if (line.size() == 1) {
-      String word = line.getFirst();
-      result.append(word).append(" ".repeat(maxWidth - word.length()));
-      return result.toString();
-    }
-    int numberOfGaps = line.size() - 1;
-    int totalSpaces = maxWidth - line.stream().mapToInt(String::length).sum();
-    int numberOfSpaces = totalSpaces / numberOfGaps;
-    int extraSpaces = totalSpaces % numberOfGaps;
-
-    for (String word : line) {
-      result.append(word).append(" ".repeat(numberOfSpaces));
-      if (extraSpaces > 0) {
-        result.append(" ");
-        extraSpaces -= 1;
+  private int getEnd(String[] words, int start, int maxWidth) {
+    int i = start;
+    int width = 0;
+    for (; i < words.length; i++) {
+      int needed = (i > start ? 1 : 0) + words[i].length();
+      if (width + needed > maxWidth) {
+        break;
       }
+      width += needed;
     }
+    return i;
+  }
 
-    return result.toString().trim();
+  private String justify(String[] words, int start, int end, int maxWidth, boolean isLastLine) {
+    if (isLastLine || end - start == 1) {
+      String prefix = String.join(" ", Arrays.copyOfRange(words, start, end));
+      return prefix + " ".repeat(maxWidth - prefix.length());
+    }
+    int numChars = 0;
+    for (int i = start; i < end; i++) {
+      numChars += words[i].length();
+    }
+    int gaps = end - start - 1;
+    int numSpaces = maxWidth - numChars;
+    int spacePerWord = numSpaces / gaps;
+    int remainder = numSpaces % gaps;
+    StringBuilder sb = new StringBuilder(maxWidth);
+    for (int i = start; i + 1 < end; i++) {
+      sb.append(words[i]);
+      sb.append(" ".repeat(spacePerWord + (i - start < remainder ? 1 : 0)));
+    }
+    sb.append(words[end - 1]);
+    return sb.toString();
   }
 }
