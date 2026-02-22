@@ -73,6 +73,7 @@
 * [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits)
 * [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 * [200. Number of Islands](https://leetcode.com/problems/number-of-islands)
+* [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings)
 * [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list)
 * [207. Course Schedule](https://leetcode.com/problems/course-schedule)
 * [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree)
