@@ -1,30 +1,35 @@
 package com.giwankim.leetcode;
 
 public class RotateImage {
-
   public void rotate(int[][] matrix) {
-    // transpose
+    // Time complexity: O(n^2), Space complexity: O(1)
+    transpose(matrix);
+    reverse(matrix);
+  }
+
+  private void transpose(int[][] matrix) {
     for (int i = 0; i < matrix.length; i++) {
       for (int j = 0; j < i; j++) {
         swap(matrix, i, j, j, i);
       }
     }
+  }
 
-    // reverse each row
+  private void reverse(int[][] matrix) {
     for (int i = 0; i < matrix.length; i++) {
-      int left = 0;
-      int right = matrix[i].length - 1;
-      while (left < right) {
-        swap(matrix, i, left, i, right);
-        left += 1;
-        right -= 1;
+      int lo = 0;
+      int hi = matrix[i].length - 1;
+      while (lo < hi) {
+        swap(matrix, i, lo, i, hi);
+        lo++;
+        hi--;
       }
     }
   }
 
-  private void swap(int[][] matrix, int i1, int j1, int i2, int j2) {
-    int temp = matrix[i1][j1];
-    matrix[i1][j1] = matrix[i2][j2];
-    matrix[i2][j2] = temp;
+  private void swap(int[][] matrix, int i, int j, int k, int l) {
+    int tmp = matrix[i][j];
+    matrix[i][j] = matrix[k][l];
+    matrix[k][l] = tmp;
   }
 }
