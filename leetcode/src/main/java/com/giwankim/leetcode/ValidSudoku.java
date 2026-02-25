@@ -2,41 +2,25 @@ package com.giwankim.leetcode;
 
 public class ValidSudoku {
   public boolean isValidSudoku(char[][] board) {
-    int n = 9;
-    boolean[][] rows = new boolean[n][n];
-    boolean[][] columns = new boolean[n][n];
-    boolean[][] boxes = new boolean[n][n];
-
-    for (int i = 0; i < n; i++) {
-      for (int j = 0; j < n; j++) {
-        char c = board[i][j];
-        if (c == '.') {
+    // Time complexity: O(1), Space complexity: O(1)
+    boolean[][] rows = new boolean[9][9];
+    boolean[][] cols = new boolean[9][9];
+    boolean[][] boxes = new boolean[9][9];
+    for (int i = 0; i < 9; i++) {
+      for (int j = 0; j < 9; j++) {
+        if (board[i][j] == '.') {
           continue;
         }
-
-        int position = c - '1';
-
-        // row
-        if (rows[i][position]) {
+        int index = board[i][j] - '1';
+        int box = (i / 3) * 3 + j / 3;
+        if (rows[i][index] || cols[j][index] || boxes[box][index]) {
           return false;
         }
-        rows[i][position] = true;
-
-        // columns
-        if (columns[j][position]) {
-          return false;
-        }
-        columns[j][position] = true;
-
-        // sub-box
-        int idx = (i / 3) * 3 + (j / 3);
-        if (boxes[idx][position]) {
-          return false;
-        }
-        boxes[idx][position] = true;
+        rows[i][index] = true;
+        cols[j][index] = true;
+        boxes[box][index] = true;
       }
     }
-
     return true;
   }
 }
