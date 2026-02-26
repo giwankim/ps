@@ -29,6 +29,7 @@
 * [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 * [51. N-Queens](https://leetcode.com/problems/n-queens)
 * [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
+* [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix)
 * [55. Jump Game](https://leetcode.com/problems/jump-game)
 * [56. Merge Intervals](https://leetcode.com/problems/merge-intervals)
 * [57. Insert Interval](https://leetcode.com/problems/insert-interval)
