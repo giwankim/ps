@@ -1,20 +1,18 @@
 package com.giwankim.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TwoSum {
   public int[] twoSum(int[] nums, int target) {
-    //    Arrays.sort(nums);
-    int left = 0;
-    int right = nums.length;
-    while (left < right) {
-      int sum = nums[left] + nums[right];
-      if (sum < target) {
-        left += 1;
-      } else if (sum > target) {
-        right -= 1;
-      } else if (sum == target) {
-        return new int[] {left, right};
+    // Time complexity: O(n), Space complexity: O(n)
+    Map<Integer, Integer> valueToIndex = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+      if (valueToIndex.containsKey(target - nums[i])) {
+        return new int[] {valueToIndex.get(target - nums[i]), i};
       }
+      valueToIndex.put(nums[i], i);
     }
-    return null;
+    return new int[0];
   }
 }
