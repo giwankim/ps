@@ -1,32 +1,25 @@
 package com.giwankim.leetcode;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
+import java.util.Objects;
 
 public class WordPattern {
   public boolean wordPattern(String pattern, String s) {
-    // Time complexity: O(|pattern| + |s|), Space complexity: O(|pattern| + |s|)
+    // Time complexity: O(|pattern| + |s|), Space complexity: O(|s|)
     String[] words = s.split(" ");
     if (pattern.length() != words.length) {
       return false;
     }
-    Map<Character, String> charToWord = new HashMap<>();
-    Set<String> range = new HashSet<>();
+
+    Map<String, Integer> map = new HashMap<>();
     for (int i = 0; i < words.length; i++) {
-      char c = pattern.charAt(i);
+      String c = String.valueOf(pattern.charAt(i));
       String word = words[i];
-      if (charToWord.containsKey(c)) {
-        if (!charToWord.get(c).equals(word)) {
-          return false;
-        }
-      } else {
-        if (range.contains(word)) {
-          return false;
-        }
-        charToWord.put(c, word);
-        range.add(word);
+      map.putIfAbsent(c, i);
+      map.putIfAbsent(word, i);
+      if (!Objects.equals(map.get(c), map.get(word))) {
+        return false;
       }
     }
     return true;
