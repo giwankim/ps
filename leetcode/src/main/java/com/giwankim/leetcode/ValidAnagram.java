@@ -2,18 +2,19 @@ package com.giwankim.leetcode;
 
 public class ValidAnagram {
   public boolean isAnagram(String s, String t) {
-    int[] count = new int[128];
-
+    // Time complexity: O(n), Space complexity: O(1)
+    if (s.length() != t.length()) {
+      return false;
+    }
+    int[] counts = new int[126];
     for (char c : s.toCharArray()) {
-      count[c] += 1;
+      counts[c]++;
     }
-
     for (char c : t.toCharArray()) {
-      count[c] -= 1;
+      counts[c]--;
     }
-
-    for (int x : count) {
-      if (x != 0) {
+    for (int count : counts) {
+      if (count != 0) {
         return false;
       }
     }
