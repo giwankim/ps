@@ -2,28 +2,20 @@ package com.giwankim.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class MergeIntervals {
   public int[][] merge(int[][] intervals) {
-    Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
-
+    // Time complexity: O(n log n), Space complexity: O(n)
     List<int[]> result = new ArrayList<>();
-    int start = intervals[0][0];
-    int end = intervals[0][1];
-
-    for (int[] interval : intervals) {
-      if (end < interval[0]) {
-        result.add(new int[] {start, end});
-        start = interval[0];
-        end = interval[1];
-      } else {
-        end = Math.max(end, interval[1]);
+    Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+    for (int i = 0; i < intervals.length; i++) {
+      if (result.isEmpty() || result.getLast()[1] < intervals[i][0]) {
+        result.add(intervals[i]);
+        continue;
       }
+      result.getLast()[1] = Math.max(result.getLast()[1], intervals[i][1]);
     }
-    result.add(new int[] {start, end});
-
     return result.toArray(new int[0][]);
   }
 }
