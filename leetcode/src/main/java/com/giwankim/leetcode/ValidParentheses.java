@@ -5,14 +5,22 @@ import java.util.Deque;
 import java.util.Map;
 
 public class ValidParentheses {
+  private static Map<Character, Character> MAP = Map.of(')', '(', ']', '[', '}', '{');
+
   public boolean isValid(String s) {
-    Map<Character, Character> map = Map.of(')', '(', '}', '{', ']', '[');
+    // Time complexity: O(n), Space complexity: O(n)
     Deque<Character> stack = new ArrayDeque<>();
     for (char c : s.toCharArray()) {
-      if (!map.containsKey(c)) {
+      if (c == '(' || c == '[' || c == '{') {
         stack.push(c);
-      } else if (stack.isEmpty() || stack.pop() != map.get(c)) {
-        return false;
+      } else {
+        if (stack.isEmpty()) {
+          return false;
+        }
+        char d = stack.pop();
+        if (MAP.get(c) != d) {
+          return false;
+        }
       }
     }
     return stack.isEmpty();
