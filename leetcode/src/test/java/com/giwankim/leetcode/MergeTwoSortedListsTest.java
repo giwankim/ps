@@ -9,11 +9,12 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 class MergeTwoSortedListsTest {
+  MergeTwoSortedLists sut = new MergeTwoSortedLists();
 
   @ParameterizedTest
   @MethodSource
   void mergeTwoLists(ListNode list1, ListNode list2, ListNode expected) {
-    ListNode actual = new MergeTwoSortedLists().mergeTwoLists(list1, list2);
+    ListNode actual = sut.mergeTwoLists(list1, list2);
     assertThat(actual).isEqualTo(expected);
   }
 
