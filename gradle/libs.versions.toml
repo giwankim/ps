@@ -7,15 +7,15 @@ allopen = { id = "org.jetbrains.kotlin.plugin.allopen", version.ref = "allopen" 
 
 [versions]
 java = "25"
-kotlin = "2.3.0"
+kotlin = "2.3.10"
 ktlint-gradle = "14.0.1"
-junit = "6.0.2"
+junit = "6.0.3"
 junit-pioneer = "2.3.0"
 assertj = "3.27.7"
-kotest = "6.1.2"
+kotest = "6.1.6"
 spotless = "8.2.0"
-benchmark = "0.4.15"
-allopen = "2.3.0"
+benchmark = "0.4.16"
+allopen = "2.3.10"
 lombok = "1.18.42"
 
 [libraries]
