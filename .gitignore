@@ -46,6 +46,7 @@ bin/
 
 ### Codex ###
 .codex/config.toml
+.worktrees/
 
 ### Advent of Code ###
 src/**/*.txt
