@@ -16,7 +16,7 @@ kotest = "6.1.6"
 spotless = "8.2.0"
 benchmark = "0.4.16"
 allopen = "2.3.10"
-lombok = "1.18.42"
+lombok = "1.18.44"
 
 [libraries]
 junit-jupiter = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junit" }
