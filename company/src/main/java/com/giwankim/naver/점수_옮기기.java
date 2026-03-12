@@ -1,4 +1,4 @@
-package naver;
+package com.giwankim.naver;
 
 import java.util.Deque;
 import java.util.HashSet;

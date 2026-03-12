@@ -1,4 +1,4 @@
-package google;
+package com.giwankim.google;
 
 import java.util.ArrayList;
 import java.util.Arrays;

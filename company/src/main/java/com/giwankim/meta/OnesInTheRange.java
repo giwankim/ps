@@ -1,4 +1,4 @@
-package meta;
+package com.giwankim.meta;
 
 public class OnesInTheRange {
   private final int[] counts;

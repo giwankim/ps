@@ -1,4 +1,4 @@
-package apple;
+package com.giwankim.apple;
 
 import java.util.*;
 
