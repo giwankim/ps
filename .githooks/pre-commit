@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+STAGED=$(git diff --cached --name-only --diff-filter=d)
+
+if [ -z "$STAGED" ]; then
+  echo "No staged files."
+  exit 0
+fi
+
+HAS_JAVA_OR_KOTLIN=false
+echo "$STAGED" | grep -qE '\.(java|kts?)$' && HAS_JAVA_OR_KOTLIN=true
+
+if [ "$HAS_JAVA_OR_KOTLIN" = false ]; then
+  echo "No staged Java/Kotlin files. Skipping checks."
+  exit 0
+fi
+
+# Stash unstaged changes (including untracked) to check only what's staged
+STASH_NAME="pre-commit-$(date +%s)"
+git stash push -q --keep-index -m "$STASH_NAME"
+STASHED=true
+
+restore_stash() {
+  if [ "$STASHED" = true ]; then
+    git stash pop -q 2>/dev/null || true
+    STASHED=false
+  fi
+}
+trap restore_stash EXIT
+
+echo "Running spotless check..."
+./gradlew spotlessCheck
+
+echo "Running ktlint check..."
+./gradlew ktlintCheck

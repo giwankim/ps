@@ -1,5 +1,12 @@
 # Problem Solving
 
+## Setup
+
+```bash
+git config core.hooksPath .githooks
+chmod +x .githooks/pre-commit
+```
+
 ## [LeetCode](https://leetcode.com/)
 
 * [1. Two Sum](https://leetcode.com/problems/two-sum)
