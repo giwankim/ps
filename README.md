@@ -128,6 +128,7 @@ chmod +x .githooks/pre-commit
 * [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
 * [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)
 * [443. String Compression](https://leetcode.com/problems/string-compression)
+* [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)
 * [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree)
 * [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces)
 * [561. Array Partition](https://leetcode.com/problems/array-partition)
