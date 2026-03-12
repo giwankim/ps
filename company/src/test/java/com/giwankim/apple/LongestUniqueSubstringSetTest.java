@@ -1,4 +1,4 @@
-package apple;
+package com.giwankim.apple;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

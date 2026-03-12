@@ -1,4 +1,4 @@
-package google;
+package com.giwankim.google;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

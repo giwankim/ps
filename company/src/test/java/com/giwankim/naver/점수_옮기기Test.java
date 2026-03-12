@@ -1,4 +1,4 @@
-package naver;
+package com.giwankim.naver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

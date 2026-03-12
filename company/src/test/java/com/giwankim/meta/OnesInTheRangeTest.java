@@ -1,4 +1,4 @@
-package meta;
+package com.giwankim.meta;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
