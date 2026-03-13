@@ -2,30 +2,25 @@ package com.giwankim.leetcode;
 
 import java.util.IdentityHashMap;
 import java.util.Map;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 public class CopyListWithRandomPointer {
   public Node copyRandomList(Node head) {
     // Time complexity: O(n), Space complexity: O(n)
-    Map<Node, Node> toCopy = new IdentityHashMap<>();
-    Node dummy = new Node(-1);
-    Node curr = dummy;
+    Map<Node, Node> map = new IdentityHashMap<>();
     for (Node it = head; it != null; it = it.next) {
-      curr.next = new Node(it.val);
-      toCopy.put(it, curr.next);
-      curr = curr.next;
+      map.put(it, new Node(it.val));
     }
-
-    curr = dummy.next;
     for (Node it = head; it != null; it = it.next) {
-      curr.random = toCopy.get(it.random);
-      curr = curr.next;
+      Node copy = map.get(it);
+      copy.next = map.get(it.next);
+      copy.random = map.get(it.random);
     }
-
-    return dummy.next;
+    return map.get(head);
   }
 
-  @AllArgsConstructor
+  @AllArgsConstructor(access = AccessLevel.PRIVATE)
   public static class Node {
     int val;
     Node next;
