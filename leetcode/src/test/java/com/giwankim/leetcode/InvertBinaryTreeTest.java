@@ -17,11 +17,21 @@ class InvertBinaryTreeTest {
     assertThat(sut.invertTree(null)).isNull();
   }
 
+  @Test
+  void nullTree2() {
+    assertThat(sut.invertTree2(null)).isNull();
+  }
+
   @ParameterizedTest
   @MethodSource
   void invertTree(TreeNode root, TreeNode expected) {
-    TreeNode actual = sut.invertTree(root);
-    assertThat(actual).isEqualTo(expected);
+    assertThat(sut.invertTree(root)).isEqualTo(expected);
+  }
+
+  @ParameterizedTest
+  @MethodSource("invertTree")
+  void invertTree2(TreeNode root, TreeNode expected) {
+    assertThat(sut.invertTree2(root)).isEqualTo(expected);
   }
 
   private static Stream<Arguments> invertTree() {
