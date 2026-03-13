@@ -28,14 +28,14 @@ class SerializeDeserializeBinaryTreeTest {
 
   @Test
   void serialize() {
-    TreeNode root = TreeNode.from(1, 2, 3, null, null, 4, 5);
+    TreeNode root = TreeNode.of(1, 2, 3, null, null, 4, 5);
     assertThat(ser.serialize(root)).isEqualTo("1,2,X,X,3,4,X,X,5,X,X,");
   }
 
   @Test
   void deserialize() {
     String data = "1,2,X,X,3,4,X,X,5,X,X,";
-    TreeNode expected = TreeNode.from(1, 2, 3, null, null, 4, 5);
+    TreeNode expected = TreeNode.of(1, 2, 3, null, null, 4, 5);
 
     TreeNode actual = deser.deserialize(data);
 
@@ -51,6 +51,6 @@ class SerializeDeserializeBinaryTreeTest {
 
   private static Stream<Arguments> serializeDeserialize() {
     return Stream.of(
-        Arguments.of(TreeNode.from(1, 2, 3, null, null, 4, 5)), Arguments.of(TreeNode.from()));
+        Arguments.of(TreeNode.of(1, 2, 3, null, null, 4, 5)), Arguments.of(TreeNode.of()));
   }
 }

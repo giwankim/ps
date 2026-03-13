@@ -18,8 +18,8 @@ class ValidateBinarySearchTreeTest {
 
   private static Stream<Arguments> isValidBST() {
     return Stream.of(
-        Arguments.of(TreeNode.from(2, 1, 3), true),
-        Arguments.of(TreeNode.from(5, 1, 4, null, null, 3, 6), false),
-        Arguments.of(TreeNode.from(-2147483648, null, 2147483647), true));
+        Arguments.of(TreeNode.of(2, 1, 3), true),
+        Arguments.of(TreeNode.of(5, 1, 4, null, null, 3, 6), false),
+        Arguments.of(TreeNode.of(-2147483648, null, 2147483647), true));
   }
 }

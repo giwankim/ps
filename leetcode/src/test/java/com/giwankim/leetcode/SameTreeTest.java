@@ -18,8 +18,8 @@ class SameTreeTest {
 
   private static Stream<Arguments> isSameTree() {
     return Stream.of(
-        Arguments.of(TreeNode.from(1, 2, 3), TreeNode.from(1, 2, 3), true),
-        Arguments.of(TreeNode.from(1, 2), TreeNode.from(1, null, 2), false),
-        Arguments.of(TreeNode.from(1, 2, 1), TreeNode.from(1, 1, 2), false));
+        Arguments.of(TreeNode.of(1, 2, 3), TreeNode.of(1, 2, 3), true),
+        Arguments.of(TreeNode.of(1, 2), TreeNode.of(1, null, 2), false),
+        Arguments.of(TreeNode.of(1, 2, 1), TreeNode.of(1, 1, 2), false));
   }
 }

@@ -21,11 +21,11 @@ class BinaryTreeInorderTraversalTest {
 
   private static Stream<Arguments> inorderTraversal() {
     return Stream.of(
-        Arguments.of(TreeNode.from(1, null, 2, null, null, 3), List.of(1, 3, 2)),
+        Arguments.of(TreeNode.of(1, null, 2, null, null, 3), List.of(1, 3, 2)),
         Arguments.of(
-            TreeNode.from(1, 2, 3, 4, 5, null, 8, null, null, 6, 7, null, null, 9),
+            TreeNode.of(1, 2, 3, 4, 5, null, 8, null, null, 6, 7, null, null, 9),
             List.of(4, 2, 6, 5, 7, 1, 3, 9, 8)),
-        Arguments.of(TreeNode.from(), Collections.emptyList()),
-        Arguments.of(TreeNode.from(1), Collections.singletonList(1)));
+        Arguments.of(TreeNode.of(), Collections.emptyList()),
+        Arguments.of(TreeNode.of(1), Collections.singletonList(1)));
   }
 }

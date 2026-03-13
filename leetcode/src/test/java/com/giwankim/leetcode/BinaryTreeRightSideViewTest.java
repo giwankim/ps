@@ -21,8 +21,8 @@ class BinaryTreeRightSideViewTest {
 
   private static Stream<Arguments> rightSideView() {
     return Stream.of(
-        Arguments.of(TreeNode.from(1, 2, 3, null, 5, null, 4), List.of(1, 3, 4)),
-        Arguments.of(TreeNode.from(1, null, 3), List.of(1, 3)),
-        Arguments.of(TreeNode.from(), Collections.emptyList()));
+        Arguments.of(TreeNode.of(1, 2, 3, null, 5, null, 4), List.of(1, 3, 4)),
+        Arguments.of(TreeNode.of(1, null, 3), List.of(1, 3)),
+        Arguments.of(TreeNode.of(), Collections.emptyList()));
   }
 }

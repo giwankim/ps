@@ -17,9 +17,9 @@ class LowestCommonAncestorOfBinaryTreeTest {
   }
 
   private static Stream<Arguments> lowestCommonAncestor() {
-    TreeNode root1 = TreeNode.from(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
-    TreeNode root2 = TreeNode.from(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
-    TreeNode root3 = TreeNode.from(1, 2);
+    TreeNode root1 = TreeNode.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
+    TreeNode root2 = TreeNode.of(3, 5, 1, 6, 2, 0, 8, null, null, 7, 4);
+    TreeNode root3 = TreeNode.of(1, 2);
     return Stream.of(
         Arguments.of(root1, root1.left, root1.right, root1),
         Arguments.of(root2, root2.left, root2.left.right.right, root2.left),

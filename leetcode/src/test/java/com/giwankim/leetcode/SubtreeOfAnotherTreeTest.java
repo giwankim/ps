@@ -19,9 +19,9 @@ class SubtreeOfAnotherTreeTest {
 
   private static Stream<Arguments> isSubtree() {
     return Stream.of(
-        Arguments.of(TreeNode.from(3, 4, 5, 1, 2), TreeNode.from(4, 1, 2), true),
+        Arguments.of(TreeNode.of(3, 4, 5, 1, 2), TreeNode.of(4, 1, 2), true),
         Arguments.of(
-            TreeNode.from(3, 4, 5, 1, 2, null, null, null, null, 0), TreeNode.from(4, 1, 2), false),
-        Arguments.of(TreeNode.from(3, 4, 5, 1, null, 2), TreeNode.from(3, 1, 2), false));
+            TreeNode.of(3, 4, 5, 1, 2, null, null, null, null, 0), TreeNode.of(4, 1, 2), false),
+        Arguments.of(TreeNode.of(3, 4, 5, 1, null, 2), TreeNode.of(3, 1, 2), false));
   }
 }
