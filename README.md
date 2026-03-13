@@ -70,6 +70,7 @@ chmod +x .githooks/pre-commit
 * [134. Gas Station](https://leetcode.com/problems/gas-station)
 * [135. Candy](https://leetcode.com/problems/candy)
 * [136. Single Number](https://leetcode.com/problems/single-number)
+* [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer)
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
