@@ -94,6 +94,7 @@ chmod +x .githooks/pre-commit
 * [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
 * [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 * [221. Maximal Square](https://leetcode.com/problems/maximal-square)
+* [224. Basic Calculator](https://leetcode.com/problems/basic-calculator)
 * [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
 * [228. Summary Ranges](https://leetcode.com/problems/summary-ranges)
 * [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
