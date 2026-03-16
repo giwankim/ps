@@ -1,22 +1,18 @@
 package com.giwankim.leetcode.support;
 
-import java.util.Objects;
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
+@EqualsAndHashCode
+@NoArgsConstructor
 public class ListNode {
   public int val;
   public ListNode next;
 
-  public ListNode() {
-    this(Integer.MIN_VALUE, null);
-  }
-
   public ListNode(int val) {
     this(val, null);
-  }
-
-  public ListNode(int val, ListNode next) {
-    this.val = val;
-    this.next = next;
   }
 
   public static ListNode of(int... values) {
@@ -32,21 +28,5 @@ public class ListNode {
   @Override
   public String toString() {
     return val + "->" + next;
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (!(o instanceof ListNode listNode)) {
-      return false;
-    }
-    return val == listNode.val && Objects.equals(next, listNode.next);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(val, next);
   }
 }
