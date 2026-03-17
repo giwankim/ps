@@ -30,7 +30,9 @@ class RemoveDuplicatesFromSortedListIITest {
 
   static Stream<Arguments> duplicates() {
     return Stream.of(
-        Arguments.of(ListNode.of(1, 2, 3, 3, 4, 4, 5), ListNode.of(1, 2, 5)),
-        Arguments.of(ListNode.of(1, 1, 1, 2, 3), ListNode.of(2, 3)));
+        Arguments.argumentSet(
+            "duplicates in middle", ListNode.of(1, 2, 3, 3, 4, 4, 5), ListNode.of(1, 2, 5)),
+        Arguments.argumentSet("duplicates at head", ListNode.of(1, 1, 1, 2, 3), ListNode.of(2, 3)),
+        Arguments.argumentSet("duplicates at tail", ListNode.of(1, 2, 3, 3, 3), ListNode.of(1, 2)));
   }
 }

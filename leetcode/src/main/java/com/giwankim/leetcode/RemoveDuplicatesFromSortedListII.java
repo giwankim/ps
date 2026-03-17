@@ -4,22 +4,24 @@ import com.giwankim.leetcode.support.ListNode;
 
 public class RemoveDuplicatesFromSortedListII {
   public ListNode deleteDuplicates(ListNode head) {
-    int[] counts = new int[201];
-    for (ListNode it = head; it != null; it = it.next) {
-      counts[it.val + 100]++;
-    }
-
+    // Time Complexity: O(n), Space Complexity: O(1)
     ListNode dummy = new ListNode();
     ListNode tail = dummy;
-    for (ListNode it = head; it != null; it = it.next) {
-      if (counts[it.val + 100] > 1) {
+    ListNode it = head;
+    while (it != null) {
+      if (it.next != null && it.val == it.next.val) {
+        // skip duplicates
+        int val = it.val;
+        while (it != null && it.val == val) {
+          it = it.next;
+        }
         continue;
       }
       tail.next = it;
       tail = tail.next;
+      it = it.next;
     }
     tail.next = null;
-
     return dummy.next;
   }
 }
