@@ -15,27 +15,24 @@ class LRUCacheTest {
   }
 
   @Test
-  void get() {
+  void putThenGet() {
     cache.put(1, 1);
     assertThat(cache.get(1)).isEqualTo(1);
   }
 
   @Test
-  void getDoesNotExist() {
+  void getWhenKeyDoesNotExist() {
     cache.put(1, 1);
     assertThat(cache.get(2)).isEqualTo(-1);
   }
 
   @Test
-  void getEvicted() {
+  void evictionWhenCapacityReached() {
     cache.put(1, 1);
     cache.put(2, 2);
     cache.put(3, 3);
     assertThat(cache.get(1)).isEqualTo(-1);
   }
-
-  @Test
-  void put() {}
 
   @Test
   void lruCache() {

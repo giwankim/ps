@@ -1,14 +1,20 @@
 package com.giwankim.leetcode;
 
 import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Map.Entry;
 
 public class LRUCache {
-  private final int capacity;
-  private final LinkedHashMap<Integer, Integer> cache;
+  private final Map<Integer, Integer> cache;
 
   public LRUCache(int capacity) {
-    this.capacity = capacity;
-    cache = new LinkedHashMap<>(capacity, 0.75f, true);
+    cache =
+        new LinkedHashMap<>(capacity, 0.75f, true) {
+          @Override
+          protected boolean removeEldestEntry(Entry<Integer, Integer> eldest) {
+            return size() > capacity;
+          }
+        };
   }
 
   public int get(int key) {
@@ -17,9 +23,5 @@ public class LRUCache {
 
   public void put(int key, int value) {
     cache.put(key, value);
-    if (cache.size() > capacity) {
-      Integer remove = cache.firstEntry().getKey();
-      cache.remove(remove);
-    }
   }
 }
