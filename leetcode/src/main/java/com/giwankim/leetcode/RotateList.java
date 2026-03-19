@@ -5,40 +5,27 @@ import com.giwankim.leetcode.support.ListNode;
 public class RotateList {
   public ListNode rotateRight(ListNode head, int k) {
     // Time complexity: O(n), Space complexity: O(1)
-    if (head == null || head.next == null || k == 0) {
-      return head;
+    if (head == null) {
+      return null;
     }
 
-    int n = length(head);
-    k = k % n;
-
-    if (k == 0) {
-      return head;
-    }
-
-    ListNode it = head;
-    for (int i = 0; i < n - k - 1; i++) {
-      it = it.next;
-    }
-
-    ListNode newHead = it.next;
-    it.next = null;
-
-    ListNode tail = newHead;
+    // circular list
+    int n = 1;
+    ListNode tail = head;
     while (tail.next != null) {
       tail = tail.next;
+      n += 1;
     }
     tail.next = head;
 
-    return newHead;
-  }
+    k %= n;
 
-  private int length(ListNode head) {
-    int result = 0;
-    while (head != null) {
-      result += 1;
-      head = head.next;
+    for (int i = 0; i < n - k; i++) {
+      tail = tail.next;
     }
-    return result;
+
+    ListNode newHead = tail.next;
+    tail.next = null;
+    return newHead;
   }
 }
