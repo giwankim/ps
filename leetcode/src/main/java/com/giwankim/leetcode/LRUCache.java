@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class LRUCache {
+  // Time complexity: O(1), Space complexity: O(capacity)
   private final Map<Integer, Integer> cache;
 
   public LRUCache(int capacity) {
