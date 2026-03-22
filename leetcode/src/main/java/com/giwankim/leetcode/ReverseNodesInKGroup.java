@@ -4,21 +4,21 @@ import com.giwankim.leetcode.support.ListNode;
 
 public class ReverseNodesInKGroup {
   public ListNode reverseKGroup(ListNode head, int k) {
-    // Time complexity: O(n), Space complexity: O(n)
+    // Time complexity: O(n), Space complexity: O(1)
     int n = length(head);
-    ListNode[] nodes = new ListNode[n];
-    int i = 0;
-    for (ListNode it = head; it != null; it = it.next) {
-      nodes[i++] = it;
+    ListNode dummy = new ListNode(-1, head);
+    ListNode prev = dummy;
+    for (int i = 0; i + k <= n; i += k) {
+      ListNode curr = prev.next;
+      for (int j = 0; j + 1 < k; j++) {
+        ListNode next = curr.next;
+        curr.next = next.next;
+        next.next = prev.next;
+        prev.next = next;
+      }
+      prev = curr;
     }
-    for (int j = 0; j + k - 1 < n; j += k) {
-      reverse(nodes, j, j + k - 1);
-    }
-    for (int j = 0; j + 1 < n; j++) {
-      nodes[j].next = nodes[j + 1];
-    }
-    nodes[n - 1].next = null;
-    return nodes[0];
+    return dummy.next;
   }
 
   private int length(ListNode head) {
@@ -27,15 +27,5 @@ public class ReverseNodesInKGroup {
       result += 1;
     }
     return result;
-  }
-
-  private void reverse(ListNode[] nodes, int left, int right) {
-    while (left < right) {
-      ListNode tmp = nodes[left];
-      nodes[left] = nodes[right];
-      nodes[right] = tmp;
-      left += 1;
-      right -= 1;
-    }
   }
 }
