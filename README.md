@@ -67,6 +67,7 @@ chmod +x .githooks/pre-commit
 * [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
 * [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)
 * [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
+* [112. Path Sum](https://leetcode.com/problems/path-sum)
 * [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 * [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)
 * [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome)
