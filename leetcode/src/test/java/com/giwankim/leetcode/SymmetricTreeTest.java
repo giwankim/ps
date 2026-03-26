@@ -15,17 +15,20 @@ class SymmetricTreeTest {
   @Test
   void nullRoot() {
     assertThat(sut.isSymmetric(null)).isTrue();
+    assertThat(sut.isSymmetric2(null)).isTrue();
   }
 
   @Test
   void singleton() {
     assertThat(sut.isSymmetric(TreeNode.of(1))).isTrue();
+    assertThat(sut.isSymmetric2(TreeNode.of(1))).isTrue();
   }
 
   @ParameterizedTest
   @MethodSource
   void depthTwo(TreeNode root, boolean expected) {
     assertThat(sut.isSymmetric(root)).isEqualTo(expected);
+    assertThat(sut.isSymmetric2(root)).isEqualTo(expected);
   }
 
   static Stream<Arguments> depthTwo() {
@@ -40,6 +43,7 @@ class SymmetricTreeTest {
   @MethodSource
   void symmetric(TreeNode root) {
     assertThat(sut.isSymmetric(root)).isTrue();
+    assertThat(sut.isSymmetric2(root)).isTrue();
   }
 
   static Stream<Arguments> symmetric() {
@@ -54,6 +58,7 @@ class SymmetricTreeTest {
   @MethodSource
   void asymmetric(TreeNode root) {
     assertThat(sut.isSymmetric(root)).isFalse();
+    assertThat(sut.isSymmetric2(root)).isFalse();
   }
 
   static Stream<Arguments> asymmetric() {
