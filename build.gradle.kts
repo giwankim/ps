@@ -1,4 +1,3 @@
 plugins {
-    id("ps.java-conventions")
-    id("ps.kotlin-conventions")
+    id("ps.version-catalog-conventions")
 }

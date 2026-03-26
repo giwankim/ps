@@ -7,6 +7,32 @@ git config core.hooksPath .githooks
 chmod +x .githooks/pre-commit
 ```
 
+## Dependency Updates
+
+Check for available dependency updates:
+
+```bash
+./gradlew dependencyUpdates -Drevision=release
+```
+
+Update `gradle/libs.versions.toml` with latest versions:
+
+```bash
+./gradlew versionCatalogUpdate
+```
+
+After updating, verify the build:
+
+```bash
+./gradlew build
+```
+
+Update the Gradle wrapper:
+
+```bash
+./gradlew wrapper --gradle-version=latest
+```
+
 ## [LeetCode](https://leetcode.com/)
 
 * [1. Two Sum](https://leetcode.com/problems/two-sum)
@@ -101,6 +127,7 @@ chmod +x .githooks/pre-commit
 * [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate)
 * [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 * [221. Maximal Square](https://leetcode.com/problems/maximal-square)
+* [222. Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes)
 * [224. Basic Calculator](https://leetcode.com/problems/basic-calculator)
 * [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
 * [228. Summary Ranges](https://leetcode.com/problems/summary-ranges)
