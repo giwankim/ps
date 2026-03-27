@@ -92,6 +92,7 @@ Update the Gradle wrapper:
 * [101. Symmetric Tree](https://leetcode.com/problems/symmetric-tree)
 * [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal)
 * [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree)
+* [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal)
 * [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
 * [112. Path Sum](https://leetcode.com/problems/path-sum)
 * [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
