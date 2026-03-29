@@ -1,12 +1,13 @@
 package com.giwankim.leetcode.support;
 
-import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode
 @NoArgsConstructor
 public class TreeNode {
   public int val;
@@ -56,23 +57,5 @@ public class TreeNode {
     StringBuilder sb = new StringBuilder();
     printRecursive(this, 0, sb);
     return sb.toString();
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (!(o instanceof TreeNode treeNode)) {
-      return false;
-    }
-    return val == treeNode.val
-        && Objects.equals(left, treeNode.left)
-        && Objects.equals(right, treeNode.right);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(val, left, right);
   }
 }
