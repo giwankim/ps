@@ -60,12 +60,27 @@ class FlattenBinaryTreeToLinkedListTest {
   void exampleTree() {
     TreeNode root = TreeNode.of(1, 2, 5, 3, 4, null, 6);
     sut.flatten(root);
-    TreeNode expected = new TreeNode(1);
-    expected.right = new TreeNode(2);
-    expected.right.right = new TreeNode(3);
-    expected.right.right.right = new TreeNode(4);
-    expected.right.right.right.right = new TreeNode(5);
-    expected.right.right.right.right.right = new TreeNode(6);
+    TreeNode expected =
+        TreeNode.builder()
+            .val(1)
+            .right(
+                TreeNode.builder()
+                    .val(2)
+                    .right(
+                        TreeNode.builder()
+                            .val(3)
+                            .right(
+                                TreeNode.builder()
+                                    .val(4)
+                                    .right(
+                                        TreeNode.builder()
+                                            .val(5)
+                                            .right(TreeNode.builder().val(6).build())
+                                            .build())
+                                    .build())
+                            .build())
+                    .build())
+            .build();
     assertThat(root).isEqualTo(expected);
   }
 }
