@@ -2,36 +2,101 @@ package com.giwankim.leetcode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.stream.Stream;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.Test;
 
 class NumberOfIslandsTest {
-  @ParameterizedTest
-  @MethodSource
-  void numIslands(char[][] grid, int expected) {
-    int actual = new NumberOfIslands().numIslands(grid);
-    assertThat(actual).isEqualTo(expected);
+  NumberOfIslands sut = new NumberOfIslands();
+
+  @Test
+  void allWater() {
+    char[][] grid = {
+      {'0', '0'},
+      {'0', '0'}
+    };
+    assertThat(sut.numIslands(grid)).isZero();
   }
 
-  private static Stream<Arguments> numIslands() {
-    return Stream.of(
-        Arguments.of(
-            new char[][] {
-              {'1', '1', '1', '1', '0'},
-              {'1', '1', '0', '1', '0'},
-              {'1', '1', '0', '0', '0'},
-              {'0', '0', '0', '0', '0'}
-            },
-            1),
-        Arguments.of(
-            new char[][] {
-              {'1', '1', '0', '0', '0'},
-              {'1', '1', '0', '0', '0'},
-              {'0', '0', '1', '0', '0'},
-              {'0', '0', '0', '1', '1'}
-            },
-            3));
+  @Test
+  void singleLandCell() {
+    char[][] grid = {{'1'}};
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void singleWaterCell() {
+    char[][] grid = {{'0'}};
+    assertThat(sut.numIslands(grid)).isZero();
+  }
+
+  @Test
+  void entireGridIsOneIsland() {
+    char[][] grid = {
+      {'1', '1'},
+      {'1', '1'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void horizontallyConnected() {
+    char[][] grid = {{'1', '1', '1'}};
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void verticallyConnected() {
+    char[][] grid = {{'1'}, {'1'}, {'1'}};
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void diagonalCellsAreNotConnected() {
+    char[][] grid = {
+      {'1', '0'},
+      {'0', '1'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(2);
+  }
+
+  @Test
+  void fourIsolatedCorners() {
+    char[][] grid = {
+      {'1', '0', '1'},
+      {'0', '0', '0'},
+      {'1', '0', '1'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(4);
+  }
+
+  @Test
+  void lShapedIsland() {
+    char[][] grid = {
+      {'1', '0'},
+      {'1', '0'},
+      {'1', '1'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void leetCodeExample1() {
+    char[][] grid = {
+      {'1', '1', '1', '1', '0'},
+      {'1', '1', '0', '1', '0'},
+      {'1', '1', '0', '0', '0'},
+      {'0', '0', '0', '0', '0'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(1);
+  }
+
+  @Test
+  void leetCodeExample2() {
+    char[][] grid = {
+      {'1', '1', '0', '0', '0'},
+      {'1', '1', '0', '0', '0'},
+      {'0', '0', '1', '0', '0'},
+      {'0', '0', '0', '1', '1'}
+    };
+    assertThat(sut.numIslands(grid)).isEqualTo(3);
   }
 }
