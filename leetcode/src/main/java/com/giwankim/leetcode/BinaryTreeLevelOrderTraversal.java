@@ -5,20 +5,17 @@ import java.util.*;
 
 public class BinaryTreeLevelOrderTraversal {
   public List<List<Integer>> levelOrder(TreeNode root) {
+    // Time Complexity: O(n), Space Complexity: O(n)
     if (root == null) {
       return Collections.emptyList();
     }
-
     List<List<Integer>> result = new ArrayList<>();
-
-    Queue<TreeNode> queue = new LinkedList<>();
+    Queue<TreeNode> queue = new ArrayDeque<>();
     queue.offer(root);
-
     while (!queue.isEmpty()) {
       int size = queue.size();
       List<Integer> level = new ArrayList<>();
-
-      for (int i = 0; i < size; i++) {
+      while (size-- > 0) {
         TreeNode node = queue.poll();
         level.add(node.val);
         if (node.left != null) {
@@ -28,10 +25,8 @@ public class BinaryTreeLevelOrderTraversal {
           queue.offer(node.right);
         }
       }
-
       result.add(level);
     }
-
     return result;
   }
 }
