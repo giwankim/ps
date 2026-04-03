@@ -1,26 +1,42 @@
 package com.giwankim.leetcode;
 
 import com.giwankim.leetcode.support.TreeNode;
-import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class ValidateBinarySearchTree {
+  private TreeNode prev;
+
   public boolean isValidBST(TreeNode root) {
-    TreeNode prev = null;
-    TreeNode iter = root;
-    Deque<TreeNode> stack = new ArrayDeque<>();
-    while (iter != null || !stack.isEmpty()) {
-      while (iter != null) {
-        stack.push(iter);
-        iter = iter.left;
-      }
-      iter = stack.pop();
-      if (prev != null && prev.val >= iter.val) {
-        return false;
-      }
-      prev = iter;
-      iter = iter.right;
+    // Time Complexity: O(n), Space Complexity: O(n)
+    prev = null;
+    return inorderIsValidBST(root);
+  }
+
+  private boolean inorderIsValidBST(TreeNode root) {
+    if (root == null) {
+      return true;
     }
-    return true;
+    if (!inorderIsValidBST(root.left)) {
+      return false;
+    }
+    if (prev != null && prev.val >= root.val) {
+      return false;
+    }
+    prev = root;
+    return inorderIsValidBST(root.right);
+  }
+
+  public boolean isValidBST2(TreeNode root) {
+    // Time Complexity: O(n), Space Complexity: O(n)
+    return isValidBST2(root, Long.MIN_VALUE, Long.MAX_VALUE);
+  }
+
+  private boolean isValidBST2(TreeNode root, long min, long max) {
+    if (root == null) {
+      return true;
+    }
+    if (min >= root.val || root.val >= max) {
+      return false;
+    }
+    return isValidBST2(root.left, min, root.val) && isValidBST2(root.right, root.val, max);
   }
 }
