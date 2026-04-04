@@ -139,6 +139,7 @@ Update the Gradle wrapper:
 * [224. Basic Calculator](https://leetcode.com/problems/basic-calculator)
 * [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree)
 * [228. Summary Ranges](https://leetcode.com/problems/summary-ranges)
+* [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst)
 * [232. Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks)
 * [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list)
 * [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)
