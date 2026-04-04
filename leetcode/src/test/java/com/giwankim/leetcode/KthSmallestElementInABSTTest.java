@@ -11,6 +11,7 @@ class KthSmallestElementInABSTTest {
   @Test
   void singletonTree() {
     assertThat(sut.kthSmallest(TreeNode.of(1), 1)).isOne();
+    assertThat(sut.kthSmallest2(TreeNode.of(1), 1)).isOne();
   }
 
   @Test
@@ -19,6 +20,7 @@ class KthSmallestElementInABSTTest {
     //  /
     // 1
     assertThat(sut.kthSmallest(TreeNode.of(2, 1), 1)).isOne();
+    assertThat(sut.kthSmallest2(TreeNode.of(2, 1), 1)).isOne();
   }
 
   @Test
@@ -27,6 +29,7 @@ class KthSmallestElementInABSTTest {
     //  /
     // 1
     assertThat(sut.kthSmallest(TreeNode.of(2, 1), 2)).isEqualTo(2);
+    assertThat(sut.kthSmallest2(TreeNode.of(2, 1), 2)).isEqualTo(2);
   }
 
   @Test
@@ -35,6 +38,7 @@ class KthSmallestElementInABSTTest {
     //  \
     //   2
     assertThat(sut.kthSmallest(TreeNode.of(1, null, 2), 2)).isEqualTo(2);
+    assertThat(sut.kthSmallest2(TreeNode.of(1, null, 2), 2)).isEqualTo(2);
   }
 
   @Test
@@ -43,6 +47,7 @@ class KthSmallestElementInABSTTest {
     //  / \
     // 1   3
     assertThat(sut.kthSmallest(TreeNode.of(2, 1, 3), 2)).isEqualTo(2);
+    assertThat(sut.kthSmallest2(TreeNode.of(2, 1, 3), 2)).isEqualTo(2);
   }
 
   @Test
@@ -53,6 +58,7 @@ class KthSmallestElementInABSTTest {
     //  /
     // 1
     assertThat(sut.kthSmallest(TreeNode.of(3, 2, null, 1), 1)).isOne();
+    assertThat(sut.kthSmallest2(TreeNode.of(3, 2, null, 1), 1)).isOne();
   }
 
   @Test
@@ -63,6 +69,7 @@ class KthSmallestElementInABSTTest {
     //    \
     //     3
     assertThat(sut.kthSmallest(TreeNode.of(1, null, 2, null, null, null, 3), 3)).isEqualTo(3);
+    assertThat(sut.kthSmallest2(TreeNode.of(1, null, 2, null, null, null, 3), 3)).isEqualTo(3);
   }
 
   @Test
@@ -71,6 +78,7 @@ class KthSmallestElementInABSTTest {
     //  / \
     // 1   3
     assertThat(sut.kthSmallest(TreeNode.of(2, 1, 3), 3)).isEqualTo(3);
+    assertThat(sut.kthSmallest2(TreeNode.of(2, 1, 3), 3)).isEqualTo(3);
   }
 
   @Test
@@ -81,6 +89,7 @@ class KthSmallestElementInABSTTest {
     //    \
     //     2
     assertThat(sut.kthSmallest(TreeNode.of(3, 1, 4, null, 2), 1)).isOne();
+    assertThat(sut.kthSmallest2(TreeNode.of(3, 1, 4, null, 2), 1)).isOne();
   }
 
   @Test
@@ -93,5 +102,6 @@ class KthSmallestElementInABSTTest {
     //  /
     // 1
     assertThat(sut.kthSmallest(TreeNode.of(5, 3, 6, 2, 4, null, null, 1), 3)).isEqualTo(3);
+    assertThat(sut.kthSmallest2(TreeNode.of(5, 3, 6, 2, 4, null, null, 1), 3)).isEqualTo(3);
   }
 }

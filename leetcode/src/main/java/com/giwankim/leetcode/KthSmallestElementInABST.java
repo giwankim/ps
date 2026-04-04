@@ -1,6 +1,8 @@
 package com.giwankim.leetcode;
 
 import com.giwankim.leetcode.support.TreeNode;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 public class KthSmallestElementInABST {
   private int count;
@@ -24,5 +26,27 @@ public class KthSmallestElementInABST {
       return;
     }
     inorder(root.right, k);
+  }
+
+  public int kthSmallest2(TreeNode root, int k) {
+    // Time Complexity: O(n), Space Complexity: O(n)
+    Deque<TreeNode> stack = new ArrayDeque<>();
+    pushAllLeft(root, stack);
+    while (!stack.isEmpty()) {
+      TreeNode node = stack.pop();
+      k -= 1;
+      if (k == 0) {
+        return node.val;
+      }
+      pushAllLeft(node.right, stack);
+    }
+    return -1;
+  }
+
+  private void pushAllLeft(TreeNode root, Deque<TreeNode> stack) {
+    while (root != null) {
+      stack.push(root);
+      root = root.left;
+    }
   }
 }
