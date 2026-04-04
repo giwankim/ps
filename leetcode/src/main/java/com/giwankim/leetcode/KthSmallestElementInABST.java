@@ -1,23 +1,28 @@
 package com.giwankim.leetcode;
 
 import com.giwankim.leetcode.support.TreeNode;
-import java.util.ArrayList;
-import java.util.List;
 
 public class KthSmallestElementInABST {
+  private int count;
+  private int val;
+
   public int kthSmallest(TreeNode root, int k) {
     // Time Complexity: O(n), Space Complexity: O(n)
-    List<Integer> nodes = new ArrayList<>();
-    inorder(root, nodes);
-    return nodes.get(k - 1);
+    count = 0;
+    inorder(root, k);
+    return val;
   }
 
-  private void inorder(TreeNode root, List<Integer> nodes) {
+  private void inorder(TreeNode root, int k) {
     if (root == null) {
       return;
     }
-    inorder(root.left, nodes);
-    nodes.add(root.val);
-    inorder(root.right, nodes);
+    inorder(root.left, k);
+    count += 1;
+    if (count == k) {
+      val = root.val;
+      return;
+    }
+    inorder(root.right, k);
   }
 }
