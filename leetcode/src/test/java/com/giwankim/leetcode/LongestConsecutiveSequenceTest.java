@@ -2,27 +2,56 @@ package com.giwankim.leetcode;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.util.stream.Stream;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.Test;
 
 class LongestConsecutiveSequenceTest {
   LongestConsecutiveSequence sut = new LongestConsecutiveSequence();
 
-  @ParameterizedTest
-  @MethodSource
-  void longestConsecutive(int[] nums, int expected) {
-    int actual = sut.longestConsecutive(nums);
-    assertThat(actual).isEqualTo(expected);
+  @Test
+  void shouldReturnZeroForEmptyArray() {
+    assertThat(sut.longestConsecutive(new int[] {})).isZero();
+    assertThat(sut.longestConsecutive2(new int[] {})).isZero();
   }
 
-  private static Stream<Arguments> longestConsecutive() {
-    return Stream.of(
-        Arguments.of(new int[] {}, 0),
-        Arguments.of(new int[] {0}, 1),
-        Arguments.of(new int[] {100, 4, 200, 1, 3, 2}, 4),
-        Arguments.of(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1}, 9),
-        Arguments.of(new int[] {1, 2, 0, 1}, 3));
+  @Test
+  void shouldReturnOneForSingleElement() {
+    assertThat(sut.longestConsecutive(new int[] {0})).isEqualTo(1);
+    assertThat(sut.longestConsecutive2(new int[] {0})).isEqualTo(1);
+  }
+
+  @Test
+  void shouldReturnOneForNonConsecutiveElements() {
+    assertThat(sut.longestConsecutive(new int[] {10, 30})).isEqualTo(1);
+    assertThat(sut.longestConsecutive2(new int[] {10, 30})).isEqualTo(1);
+  }
+
+  @Test
+  void shouldReturnTwoForConsecutivePair() {
+    assertThat(sut.longestConsecutive(new int[] {1, 2})).isEqualTo(2);
+    assertThat(sut.longestConsecutive2(new int[] {1, 2})).isEqualTo(2);
+  }
+
+  @Test
+  void shouldFindLongestSequenceAmongMultipleSequences() {
+    assertThat(sut.longestConsecutive(new int[] {100, 4, 200, 1, 3, 2})).isEqualTo(4);
+    assertThat(sut.longestConsecutive2(new int[] {100, 4, 200, 1, 3, 2})).isEqualTo(4);
+  }
+
+  @Test
+  void shouldHandleLongConsecutiveSequence() {
+    assertThat(sut.longestConsecutive(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1})).isEqualTo(9);
+    assertThat(sut.longestConsecutive2(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1})).isEqualTo(9);
+  }
+
+  @Test
+  void shouldIgnoreDuplicates() {
+    assertThat(sut.longestConsecutive(new int[] {1, 2, 0, 1})).isEqualTo(3);
+    assertThat(sut.longestConsecutive2(new int[] {1, 2, 0, 1})).isEqualTo(3);
+  }
+
+  @Test
+  void shouldHandleNegativeNumbers() {
+    assertThat(sut.longestConsecutive(new int[] {-1, 0, 1})).isEqualTo(3);
+    assertThat(sut.longestConsecutive2(new int[] {-1, 0, 1})).isEqualTo(3);
   }
 }
