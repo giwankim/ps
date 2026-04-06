@@ -4,7 +4,7 @@ import com.giwankim.leetcode.support.TreeNode;
 
 public class SumRootToLeafNumbers {
   public int sumNumbers(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(h)
+    // Time Complexity: O(n), Space Complexity: O(n)
     return sumNumbers(root, 0);
   }
 

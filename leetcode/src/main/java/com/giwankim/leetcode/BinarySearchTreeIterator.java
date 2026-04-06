@@ -6,7 +6,7 @@ import java.util.Deque;
 
 public class BinarySearchTreeIterator {
   static class BSTIterator {
-    // Time Complexity: O(n) / amortized O(1), Space Complexity: O(h)
+    // Time Complexity: O(n) (amortized O(1)), Space Complexity: O(h)
     private final Deque<TreeNode> stack = new ArrayDeque<>();
 
     public BSTIterator(TreeNode root) {
