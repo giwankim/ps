@@ -13,6 +13,7 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
   @Test
   void emptyTree() {
     assertThat(sut.zigzagLevelOrder(TreeNode.of())).isEqualTo(List.of());
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of())).isEqualTo(List.of());
   }
 
   // Step 2: Single node — one level, zigzag irrelevant
@@ -20,6 +21,7 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
   void singleNode() {
     //   1
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1))).isEqualTo(List.of(List.of(1)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1))).isEqualTo(List.of(List.of(1)));
   }
 
   // Step 3: Left child only — each level has one node, zigzag has no visible effect
@@ -29,6 +31,7 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //  /
     // 2
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2))).isEqualTo(List.of(List.of(1), List.of(2)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2))).isEqualTo(List.of(List.of(1), List.of(2)));
   }
 
   // Step 4: Right child only — same reasoning as left child
@@ -38,6 +41,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //  \
     //   3
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, null, 3)))
+        .isEqualTo(List.of(List.of(1), List.of(3)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, null, 3)))
         .isEqualTo(List.of(List.of(1), List.of(3)));
   }
 
@@ -50,6 +55,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //  / \
     // 2   3
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2, 3)))
+        .isEqualTo(List.of(List.of(1), List.of(3, 2)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2, 3)))
         .isEqualTo(List.of(List.of(1), List.of(3, 2)));
   }
 
@@ -64,6 +71,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //   4  5 6  7
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2, 3, 4, 5, 6, 7)))
         .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4, 5, 6, 7)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2, 3, 4, 5, 6, 7)))
+        .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4, 5, 6, 7)));
   }
 
   // Step 7: LeetCode example
@@ -76,6 +85,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //      / \
     //     15   7
     assertThat(sut.zigzagLevelOrder(TreeNode.of(3, 9, 20, null, null, 15, 7)))
+        .isEqualTo(List.of(List.of(3), List.of(20, 9), List.of(15, 7)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(3, 9, 20, null, null, 15, 7)))
         .isEqualTo(List.of(List.of(3), List.of(20, 9), List.of(15, 7)));
   }
 
@@ -90,6 +101,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //   4       5
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2, 3, 4, null, null, 5)))
         .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4, 5)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2, 3, 4, null, null, 5)))
+        .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4, 5)));
   }
 
   // Step 9: Left-skewed — one node per level, zigzag has no visible effect
@@ -101,6 +114,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //  /
     // 3
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2, null, 3)))
+        .isEqualTo(List.of(List.of(1), List.of(2), List.of(3)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2, null, 3)))
         .isEqualTo(List.of(List.of(1), List.of(2), List.of(3)));
   }
 
@@ -114,6 +129,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //     3
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, null, 2, null, null, null, 3)))
         .isEqualTo(List.of(List.of(1), List.of(2), List.of(3)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, null, 2, null, null, null, 3)))
+        .isEqualTo(List.of(List.of(1), List.of(2), List.of(3)));
   }
 
   // Step 11: Asymmetric — one branch deeper, zigzag still alternates
@@ -126,6 +143,8 @@ class BinaryTreeZigzagLevelOrderTraversalTest {
     //  /
     // 4
     assertThat(sut.zigzagLevelOrder(TreeNode.of(1, 2, 3, 4)))
+        .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4)));
+    assertThat(sut.zigzagLevelOrder2(TreeNode.of(1, 2, 3, 4)))
         .isEqualTo(List.of(List.of(1), List.of(3, 2), List.of(4)));
   }
 }
