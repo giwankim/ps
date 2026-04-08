@@ -172,6 +172,7 @@ Update the Gradle wrapper:
 * [392. Is Subsequence](https://leetcode.com/problems/is-subsequence)
 * [406. Queue Reconstruction by Height](https://leetcode.com/problems/queue-reconstruction-by-height)
 * [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome)
+* [433. Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation)
 * [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals)
 * [443. String Compression](https://leetcode.com/problems/string-compression)
 * [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)
