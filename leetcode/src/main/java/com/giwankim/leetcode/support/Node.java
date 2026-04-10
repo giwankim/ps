@@ -1,7 +1,10 @@
 package com.giwankim.leetcode.support;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.ToString;
 
+@ToString(of = "val")
 public class Node {
   public int val;
   public List<Node> neighbors;
@@ -19,48 +22,17 @@ public class Node {
     this.neighbors = neighbors;
   }
 
-  public static Node fromLists(List<List<Integer>> adjLists) {
-    Map<Integer, Node> nodeMap = new HashMap<>();
-
-    // create nodes
-    for (int i = 1; i <= adjLists.size(); i++) {
-      nodeMap.put(i, new Node(i));
+  public static Node from(List<List<Integer>> adjLists) {
+    int n = adjLists.size();
+    Node[] nodes = new Node[n + 1];
+    for (int i = 1; i <= n; i++) {
+      nodes[i] = new Node(i);
     }
-
-    // add edges
-    for (int i = 1; i <= adjLists.size(); i++) {
-      Node node = nodeMap.get(i);
-      List<Integer> neighborNodes = adjLists.get(i - 1);
-      for (int neighbor : neighborNodes) {
-        node.neighbors.add(nodeMap.get(neighbor));
+    for (int i = 1; i <= n; i++) {
+      for (int neighbor : adjLists.get(i - 1)) {
+        nodes[i].neighbors.add(nodes[neighbor]);
       }
     }
-
-    return nodeMap.get(1);
-  }
-
-  public List<Integer> values() {
-    return neighbors.stream().mapToInt(n -> n.val).sorted().boxed().toList();
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
-    }
-    if (!(o instanceof Node node)) {
-      return false;
-    }
-    return val == node.val && Objects.equals(values(), node.values());
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(val, values());
-  }
-
-  @Override
-  public String toString() {
-    return "Node{" + "val=" + val + '}';
+    return nodes[1];
   }
 }

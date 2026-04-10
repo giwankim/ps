@@ -6,22 +6,23 @@ import java.util.Map;
 
 public class CloneGraph {
   public Node cloneGraph(Node node) {
-    Map<Integer, Node> map = new HashMap<>();
-    return cloneGraph(node, map);
+    // Time Complexity: O(n + m), Space Complexity: O(n)
+    Map<Integer, Node> valToClone = new HashMap<>();
+    return cloneGraph(node, valToClone);
   }
 
-  public Node cloneGraph(Node node, Map<Integer, Node> map) {
+  private Node cloneGraph(Node node, Map<Integer, Node> valToClone) {
     if (node == null) {
       return null;
     }
-    if (map.containsKey(node.val)) {
-      return map.get(node.val);
+    if (valToClone.containsKey(node.val)) {
+      return valToClone.get(node.val);
     }
-    Node clone = new Node(node.val);
-    map.put(node.val, clone);
+    Node clonedNode = valToClone.computeIfAbsent(node.val, Node::new);
     for (Node neighbor : node.neighbors) {
-      clone.neighbors.add(cloneGraph(neighbor, map));
+      Node clonedNeighbor = cloneGraph(neighbor, valToClone);
+      clonedNode.neighbors.add(clonedNeighbor);
     }
-    return clone;
+    return clonedNode;
   }
 }
