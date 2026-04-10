@@ -4,44 +4,46 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseSchedule {
-  public static final int UNVISITED = 0;
-  public static final int VISITING = 1;
-  public static final int VISITED = 2;
-
   public boolean canFinish(int numCourses, int[][] prerequisites) {
-    // construct graph
-    List<Integer>[] graph = new ArrayList[numCourses];
-    for (int i = 0; i < graph.length; i++) {
-      graph[i] = new ArrayList<>();
+    // graph (adjacency list)
+    List<List<Integer>> adjList = new ArrayList<>(numCourses);
+    for (int i = 0; i < numCourses; i++) {
+      adjList.add(new ArrayList<>());
     }
-    for (int[] p : prerequisites) {
-      graph[p[1]].add(p[0]);
+    for (int[] prerequisite : prerequisites) {
+      adjList.get(prerequisite[1]).add(prerequisite[0]);
     }
 
-    // topological sort
-    int[] dfsNum = new int[numCourses];
-    for (int v = 0; v < graph.length; v++) {
-      if (dfsNum[v] == UNVISITED && !dfs(v, graph, dfsNum)) {
+    // topological sort;
+    State[] states = new State[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+      if (hasCycle(i, adjList, states)) {
         return false;
       }
     }
     return true;
   }
 
-  private boolean dfs(int v, List<Integer>[] graph, int[] dfsNum) {
-    if (dfsNum[v] == VISITED) {
-      return true;
-    }
-    if (dfsNum[v] == VISITING) {
+  private boolean hasCycle(int i, List<List<Integer>> adjList, State[] states) {
+    if (states[i] == State.VISITED) {
       return false;
     }
-    dfsNum[v] = VISITING;
-    for (int w : graph[v]) {
-      if (!dfs(w, graph, dfsNum)) {
-        return false;
+    if (states[i] == State.VISITING) {
+      return true;
+    }
+    states[i] = State.VISITING;
+    for (int neighbor : adjList.get(i)) {
+      if (hasCycle(neighbor, adjList, states)) {
+        return true;
       }
     }
-    dfsNum[v] = VISITED;
-    return true;
+    states[i] = State.VISITED;
+    return false;
+  }
+
+  private enum State {
+    UNVISITED,
+    VISITING,
+    VISITED
   }
 }
