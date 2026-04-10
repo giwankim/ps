@@ -5,6 +5,8 @@ import java.util.List;
 
 public class CourseSchedule {
   public boolean canFinish(int numCourses, int[][] prerequisites) {
+    // Time complexity: O(n + m), Space complexity: O(n + m)
+
     // graph (adjacency list)
     List<List<Integer>> adjList = new ArrayList<>(numCourses);
     for (int i = 0; i < numCourses; i++) {
