@@ -15,10 +15,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("a", "b"));
+    double[] expected = {2.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {2.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 2: reversed query — forces either reciprocal edge storage or inverse
@@ -28,10 +32,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("b", "a"));
+    double[] expected = {0.5};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {0.5}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 3: one query variable absent from the graph — forces the missing-variable
@@ -41,10 +49,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("a", "c"));
+    double[] expected = {-1.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {-1.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 4: both query variables absent from the graph — the missing-variable
@@ -54,10 +66,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("x", "y"));
+    double[] expected = {-1.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {-1.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 5: self-query on a KNOWN variable — identity shortcut returns 1.0
@@ -67,10 +83,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("a", "a"));
+    double[] expected = {1.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {1.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 6: self-query on an UNKNOWN variable — returns -1.0, not 1.0. The
@@ -82,10 +102,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"));
     double[] values = {2.0};
     List<List<String>> queries = List.of(List.of("x", "x"));
+    double[] expected = {-1.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {-1.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 7: 2-hop transitive query — first test that actually forces graph
@@ -96,10 +120,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"), List.of("b", "c"));
     double[] values = {2.0, 3.0};
     List<List<String>> queries = List.of(List.of("a", "c"));
+    double[] expected = {6.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {6.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 8: disconnected components — traversal must terminate without finding
@@ -110,10 +138,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"), List.of("c", "d"));
     double[] values = {2.0, 4.0};
     List<List<String>> queries = List.of(List.of("a", "d"), List.of("c", "d"));
+    double[] expected = {-1.0, 4.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {-1.0, 4.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 9: 3-hop transitive, forward and backward — deeper traversal than
@@ -124,10 +156,14 @@ class EvaluateDivisionTest {
     List<List<String>> equations = List.of(List.of("a", "b"), List.of("b", "c"), List.of("c", "d"));
     double[] values = {2.0, 3.0, 4.0};
     List<List<String>> queries = List.of(List.of("a", "d"), List.of("d", "a"));
+    double[] expected = {24.0, 1.0 / 24.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {24.0, 1.0 / 24.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 10: triangle with redundant equations — every node has branching
@@ -145,11 +181,14 @@ class EvaluateDivisionTest {
     double[] values = {2.0, 3.0, 6.0};
     List<List<String>> queries =
         List.of(List.of("a", "c"), List.of("c", "a"), List.of("b", "a"), List.of("a", "a"));
+    double[] expected = {6.0, 1.0 / 6.0, 0.5, 1.0};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual)
-        .containsExactly(new double[] {6.0, 1.0 / 6.0, 0.5, 1.0}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 
   // Step 11: multi-character variable names — data format robustness. Ensures
@@ -162,9 +201,13 @@ class EvaluateDivisionTest {
     double[] values = {1.5, 2.5, 5.0};
     List<List<String>> queries =
         List.of(List.of("a", "c"), List.of("c", "b"), List.of("bc", "cd"), List.of("cd", "bc"));
+    double[] expected = {3.75, 0.4, 5.0, 0.2};
 
-    double[] actual = sut.calcEquation(equations, values, queries);
-
-    assertThat(actual).containsExactly(new double[] {3.75, 0.4, 5.0, 0.2}, withPrecision(1e-5));
+    assertThat(sut.calcEquation(equations, values, queries))
+        .as("calcEquation")
+        .containsExactly(expected, withPrecision(1e-5));
+    assertThat(sut.calcEquation2(equations, values, queries))
+        .as("calcEquation2")
+        .containsExactly(expected, withPrecision(1e-5));
   }
 }
