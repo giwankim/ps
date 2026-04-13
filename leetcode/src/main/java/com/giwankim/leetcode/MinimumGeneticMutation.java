@@ -20,7 +20,6 @@ public class MinimumGeneticMutation {
     visited.add(startGene);
 
     int result = 0;
-
     while (!queue.isEmpty()) {
       int size = queue.size();
       // explore all mutations at given level

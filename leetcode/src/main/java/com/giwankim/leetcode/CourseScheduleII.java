@@ -16,7 +16,6 @@ public class CourseScheduleII {
     for (int[] prerequisite : prerequisites) {
       adjList.get(prerequisite[1]).add(prerequisite[0]);
     }
-
     // topological sort;
     List<Integer> result = new ArrayList<>();
     State[] states = new State[numCourses];

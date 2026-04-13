@@ -6,7 +6,6 @@ import java.util.List;
 public class CourseSchedule {
   public boolean canFinish(int numCourses, int[][] prerequisites) {
     // Time complexity: O(n + m), Space complexity: O(n + m)
-
     // graph (adjacency list)
     List<List<Integer>> adjList = new ArrayList<>(numCourses);
     for (int i = 0; i < numCourses; i++) {
@@ -15,7 +14,6 @@ public class CourseSchedule {
     for (int[] prerequisite : prerequisites) {
       adjList.get(prerequisite[1]).add(prerequisite[0]);
     }
-
     // topological sort;
     State[] states = new State[numCourses];
     for (int i = 0; i < numCourses; i++) {
