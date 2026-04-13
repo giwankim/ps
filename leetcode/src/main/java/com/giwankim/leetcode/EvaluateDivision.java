@@ -12,7 +12,8 @@ import java.util.Set;
 public class EvaluateDivision {
   public double[] calcEquation(
       List<List<String>> equations, double[] values, List<List<String>> queries) {
-    // build graph as adjacency list
+    // Time complexity: O(n * m), Space complexity: O(n) where n = |equations| and m = |queries|
+    // graph (adjacency list)
     Map<String, Map<String, Double>> adjList = newGraph(equations, values);
     // evaluate
     double[] result = new double[queries.size()];
@@ -20,19 +21,6 @@ public class EvaluateDivision {
       String from = queries.get(i).getFirst();
       String to = queries.get(i).getLast();
       result[i] = calculate(from, to, adjList);
-    }
-    return result;
-  }
-
-  public double[] calcEquation2(
-      List<List<String>> equations, double[] values, List<List<String>> queries) {
-    Map<String, Map<String, Double>> adjList = newGraph(equations, values);
-    double[] result = new double[queries.size()];
-    Arrays.fill(result, -1.0);
-    for (int i = 0; i < result.length; i++) {
-      String from = queries.get(i).getFirst();
-      String to = queries.get(i).getLast();
-      result[i] = calculate2(from, to, adjList, new HashSet<>());
     }
     return result;
   }
@@ -51,14 +39,30 @@ public class EvaluateDivision {
         return step.product;
       }
       for (Map.Entry<String, Double> edge : adjList.getOrDefault(step.node, Map.of()).entrySet()) {
-        if (visited.contains(edge.getKey())) {
+        String variable = edge.getKey();
+        if (visited.contains(variable)) {
           continue;
         }
-        queue.offer(new Step(edge.getKey(), step.product * edge.getValue()));
-        visited.add(edge.getKey());
+        queue.offer(new Step(variable, step.product * edge.getValue()));
+        visited.add(variable);
       }
     }
     return -1.0;
+  }
+
+  public double[] calcEquation2(
+      List<List<String>> equations, double[] values, List<List<String>> queries) {
+    // graph (adjacency list)
+    Map<String, Map<String, Double>> adjList = newGraph(equations, values);
+    // evaluate
+    double[] result = new double[queries.size()];
+    Arrays.fill(result, -1.0);
+    for (int i = 0; i < result.length; i++) {
+      String from = queries.get(i).getFirst();
+      String to = queries.get(i).getLast();
+      result[i] = calculate2(from, to, adjList, new HashSet<>());
+    }
+    return result;
   }
 
   private double calculate2(
@@ -71,10 +75,11 @@ public class EvaluateDivision {
     }
     visited.add(from);
     for (Map.Entry<String, Double> edge : adjList.get(from).entrySet()) {
-      if (visited.contains(edge.getKey())) {
+      String variable = edge.getKey();
+      if (visited.contains(variable)) {
         continue;
       }
-      double value = calculate2(edge.getKey(), to, adjList, visited);
+      double value = calculate2(variable, to, adjList, visited);
       if (value != -1.0) {
         return edge.getValue() * value;
       }
