@@ -12,7 +12,8 @@ class SnakesAndLaddersTest {
   @Test
   void twoByTwoBoardReachedInOneMove() {
     int[][] board = {{-1, -1}, {-1, -1}};
-    assertThat(sut.snakesAndLadders(board)).isEqualTo(1);
+    assertThat(sut.snakesAndLadders(board)).isOne();
+    assertThat(sut.snakesAndLadders2(board)).isOne();
   }
 
   // Step 2: 3×3 empty board — target 9 is out of reach of a single roll
@@ -25,6 +26,7 @@ class SnakesAndLaddersTest {
       {-1, -1, -1},
     };
     assertThat(sut.snakesAndLadders(board)).isEqualTo(2);
+    assertThat(sut.snakesAndLadders2(board)).isEqualTo(2);
   }
 
   // Step 3: a ladder from label 2 to label 9 (the end).
@@ -40,7 +42,8 @@ class SnakesAndLaddersTest {
       {-1, -1, -1},
       {-1, 9, -1},
     };
-    assertThat(sut.snakesAndLadders(board)).isEqualTo(1);
+    assertThat(sut.snakesAndLadders(board)).isOne();
+    assertThat(sut.snakesAndLadders2(board)).isOne();
   }
 
   // Step 4: labels 3–7 all snake back to label 1, so the only forward
@@ -55,6 +58,7 @@ class SnakesAndLaddersTest {
       {-1, -1, 1},
     };
     assertThat(sut.snakesAndLadders(board)).isEqualTo(3);
+    assertThat(sut.snakesAndLadders2(board)).isEqualTo(3);
   }
 
   // Step 5: every square reachable from label 1 (labels 2–7) snakes
@@ -69,6 +73,7 @@ class SnakesAndLaddersTest {
       {-1, 1, 1},
     };
     assertThat(sut.snakesAndLadders(board)).isEqualTo(-1);
+    assertThat(sut.snakesAndLadders2(board)).isEqualTo(-1);
   }
 
   // Step 6: canonical LeetCode example (6×6). Optimal 4-move path uses
@@ -85,5 +90,6 @@ class SnakesAndLaddersTest {
       {-1, 15, -1, -1, -1, -1},
     };
     assertThat(sut.snakesAndLadders(board)).isEqualTo(4);
+    assertThat(sut.snakesAndLadders2(board)).isEqualTo(4);
   }
 }
