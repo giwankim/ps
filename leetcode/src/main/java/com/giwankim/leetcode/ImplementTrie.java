@@ -9,6 +9,7 @@ public class ImplementTrie {
     }
 
     public void insert(String word) {
+      // Time Complexity: O(m), Space Complexity: O(m)
       Node curr = root;
       for (char c : word.toCharArray()) {
         if (curr.children[c - 'a'] == null) {
@@ -20,6 +21,7 @@ public class ImplementTrie {
     }
 
     public boolean search(String word) {
+      // Time Complexity: O(m), Space Complexity: O(1)
       Node curr = root;
       for (char c : word.toCharArray()) {
         if (curr.children[c - 'a'] == null) {
@@ -31,6 +33,7 @@ public class ImplementTrie {
     }
 
     public boolean startsWith(String prefix) {
+      // Time Complexity: O(m), Space Complexity: O(1)
       Node curr = root;
       for (char c : prefix.toCharArray()) {
         if (curr.children[c - 'a'] == null) {
