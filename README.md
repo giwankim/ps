@@ -9,25 +9,30 @@ chmod +x .githooks/pre-commit
 
 ## Dependency Updates
 
-Check for available dependency updates:
+Generate a review file listing all available updates:
 
 ```bash
-./gradlew dependencyUpdates -Drevision=release
+./gradlew versionCatalogUpdate --interactive
 ```
 
-Update `gradle/libs.versions.toml` with latest versions:
+This writes `gradle/libs.versions.updates.toml`. Open it and comment out
+(or delete) any entries you are not ready to update. To pin an entry
+permanently across future runs, add a `# @pin` comment on the line above
+it in `gradle/libs.versions.toml`.
+
+Apply the reviewed updates:
 
 ```bash
-./gradlew versionCatalogUpdate
+./gradlew versionCatalogApplyUpdates
 ```
 
-After updating, verify the build:
+Verify the build:
 
 ```bash
 ./gradlew build
 ```
 
-Update the Gradle wrapper:
+Update the Gradle wrapper (independent of the catalog):
 
 ```bash
 ./gradlew wrapper --gradle-version=latest
