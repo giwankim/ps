@@ -1,7 +1,7 @@
 package com.giwankim.leetcode;
 
 public class DesignAddAndSearchWordsDataStructure {
-  static class WordDictionary {
+  public static class WordDictionary {
     private final Node root;
 
     public WordDictionary() {
@@ -25,9 +25,10 @@ public class DesignAddAndSearchWordsDataStructure {
     }
 
     /**
-     * Time complexity: {@code O(26^m)}. Space complexity: {@code O(m)}.
+     * Time complexity: {@code O(m * 26^k)}. Space complexity: {@code O(m)}.
      *
-     * <p>Where {@code m = word.length()}. Without wildcards, runs in {@code O(m)}.
+     * <p>Where k is number of . characters. {@code m = word.length()}. Without wildcards, runs in
+     * {@code O(m)}.
      */
     public boolean search(String word) {
       return search(root, word, 0);
@@ -53,7 +54,6 @@ public class DesignAddAndSearchWordsDataStructure {
     }
 
     private static class Node {
-
       boolean isWord;
       Node[] children;
 
