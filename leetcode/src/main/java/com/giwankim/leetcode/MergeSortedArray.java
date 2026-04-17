@@ -2,8 +2,10 @@ package com.giwankim.leetcode;
 
 public class MergeSortedArray {
 
+  /**
+   * @implNote Time {@code O(n + m)}, space {@code O(1)}.
+   */
   public void merge(int[] nums1, int m, int[] nums2, int n) {
-    // Time complexity: O(n + m), Space complexity: O(1)
     int i = m - 1;
     int j = n - 1;
     int k = n + m - 1;

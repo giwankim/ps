@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class TwoSumII {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int[] twoSum(int[] numbers, int target) {
-    // Time complexity: O(n), Space complexity: O(1)
     int i = 0;
     int j = numbers.length - 1;
     while (i < j) {

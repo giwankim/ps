@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class TrappingRainWater {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int trap(int[] height) {
-    // Time complexity: O(n), Space complexity: O(1)
     int result = 0;
     int left = 0;
     int right = height.length - 1;

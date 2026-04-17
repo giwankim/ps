@@ -9,8 +9,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class BinaryTreeZigzagLevelOrderTraversal {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     if (root == null) {
       return Collections.emptyList();
     }
@@ -40,8 +42,10 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     return result;
   }
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public List<List<Integer>> zigzagLevelOrder2(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     if (root == null) {
       return Collections.emptyList();
     }

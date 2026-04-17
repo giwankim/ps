@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class LinkedListCycle {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public boolean hasCycle(ListNode head) {
-    // Time Complexity: O(n), Space Complexity: O(1)
     ListNode slow = head;
     ListNode fast = head;
     while (fast != null && fast.next != null) {

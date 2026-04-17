@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
+  /**
+   * @implNote Time {@code O(n^2)}, space {@code O(log n) for quicksort stack space}.
+   */
   public List<List<Integer>> threeSum(int[] nums) {
-    // Time complexity: O(n^2), Space complexity: O(log n) for quicksort stack space
     List<List<Integer>> result = new ArrayList<>();
     Arrays.sort(nums);
     for (int i = 0; i < nums.length - 2; i++) {

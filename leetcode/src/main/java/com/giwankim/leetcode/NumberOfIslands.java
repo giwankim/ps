@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class NumberOfIslands {
+  /**
+   * @implNote Time {@code O(m * n)}, space {@code O(1)}.
+   */
   public int numIslands(char[][] grid) {
-    // Time complexity: O(m * n), Space complexity: O(1)
     int result = 0;
     for (int i = 0; i < grid.length; i++) {
       for (int j = 0; j < grid[i].length; j++) {

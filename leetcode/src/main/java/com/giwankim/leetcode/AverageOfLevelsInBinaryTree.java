@@ -7,8 +7,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class AverageOfLevelsInBinaryTree {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public List<Double> averageOfLevels(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     List<Double> result = new ArrayList<>();
     Queue<TreeNode> queue = new ArrayDeque<>();
     queue.offer(root);

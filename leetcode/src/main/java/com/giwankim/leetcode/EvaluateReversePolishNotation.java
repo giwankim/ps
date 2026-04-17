@@ -13,8 +13,10 @@ public class EvaluateReversePolishNotation {
           "*", (a, b) -> a * b,
           "/", (a, b) -> a / b);
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int evalRPN(String[] tokens) {
-    // Time complexity: O(n), Space complexity: O(n)
     Deque<Integer> operands = new ArrayDeque<>();
     for (String token : tokens) {
       IntBinaryOperator op = OPERATORS.get(token);

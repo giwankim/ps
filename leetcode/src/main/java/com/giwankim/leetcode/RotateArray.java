@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class RotateArray {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public void rotate(int[] nums, int k) {
-    // Time complexity: O(n), Space complexity: O(1)
     k = k % nums.length;
     reverse(nums, 0, nums.length - k - 1);
     reverse(nums, nums.length - k, nums.length - 1);

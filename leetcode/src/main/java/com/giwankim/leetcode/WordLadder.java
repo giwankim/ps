@@ -9,9 +9,8 @@ import java.util.Set;
 
 public class WordLadder {
   /**
-   * Time complexity: {@code O(n * m^2)}. Space complexity: {@code O(n * m)}.
-   *
-   * <p>Where {@code n = wordList.size()} and {@code m = beginWord.length()}.
+   * @implNote Time {@code O(n * m^2)}, space {@code O(n * m)},
+   *     where {@code n = wordList.size()} and {@code m = beginWord.length()}.
    */
   public int ladderLength(String beginWord, String endWord, List<String> wordList) {
     Set<String> wordSet = Set.copyOf(wordList);

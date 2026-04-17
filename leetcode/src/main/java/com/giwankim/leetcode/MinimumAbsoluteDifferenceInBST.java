@@ -8,8 +8,10 @@ public class MinimumAbsoluteDifferenceInBST {
   TreeNode prev;
   int minDifference;
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int getMinimumDifference(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     prev = null;
     minDifference = Integer.MAX_VALUE;
     findMinDifference(root);
@@ -28,8 +30,10 @@ public class MinimumAbsoluteDifferenceInBST {
     findMinDifference(root.right);
   }
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int getMinimumDifference2(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     List<TreeNode> nodes = new ArrayList<>();
     inorder(root, nodes);
     int result = Integer.MAX_VALUE;

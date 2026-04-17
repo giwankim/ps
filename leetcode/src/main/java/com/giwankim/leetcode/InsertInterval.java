@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InsertInterval {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int[][] insert(int[][] intervals, int[] newInterval) {
-    // Time complexity: O(n), Space complexity: O(n)
     List<int[]> result = new ArrayList<>();
     int i = 0;
     while (i < intervals.length && intervals[i][1] < newInterval[0]) {

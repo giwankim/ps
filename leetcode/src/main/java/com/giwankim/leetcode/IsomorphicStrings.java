@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class IsomorphicStrings {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public boolean isIsomorphic(String s, String t) {
-    // Time complexity: O(n), Space complexity: O(1)
     int[] st = new int[256];
     int[] ts = new int[256];
     Arrays.fill(st, -1);

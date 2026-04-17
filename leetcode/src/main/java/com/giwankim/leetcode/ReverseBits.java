@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class ReverseBits {
+  /**
+   * @implNote Time {@code O(1)}, space {@code O(1)}.
+   */
   public int reverseBits(int n) {
-    // Time complexity: O(1), Space complexity: O(1)
     int result = 0;
     for (int i = 0; i < 32; i++) {
       result <<= 1;

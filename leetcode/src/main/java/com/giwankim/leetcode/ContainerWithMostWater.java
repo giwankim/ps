@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class ContainerWithMostWater {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int maxArea(int[] height) {
-    // Time complexity: O(n), Space complexity: O(1)
     int result = 0;
     int lo = 0;
     int hi = height.length - 1;

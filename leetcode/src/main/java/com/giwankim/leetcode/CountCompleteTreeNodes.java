@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.TreeNode;
 
 public class CountCompleteTreeNodes {
+  /**
+   * @implNote Time {@code O(log^2 n)}, space {@code O(log n)}.
+   */
   public int countNodes(TreeNode root) {
-    // Time Complexity: O(log^2 n), Space Complexity: O(log n)
     if (root == null) {
       return 0;
     }

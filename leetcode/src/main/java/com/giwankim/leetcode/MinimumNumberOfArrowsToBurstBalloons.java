@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class MinimumNumberOfArrowsToBurstBalloons {
+  /**
+   * @implNote Time {@code O(n log n)}, space {@code O(1)}.
+   */
   public int findMinArrowShots(int[][] points) {
-    // Time complexity: O(n log n), Space complexity: O(1)
     Arrays.sort(points, (a, b) -> Integer.compare(a[1], b[1]));
     int result = 0;
     int i = 0;

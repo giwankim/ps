@@ -5,8 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestConsecutiveSequence {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int longestConsecutive(int[] nums) {
-    // Time complexity: O(n), Space complexity: O(n)
     Set<Integer> set = new HashSet<>();
     for (int num : nums) {
       set.add(num);
@@ -25,8 +27,10 @@ public class LongestConsecutiveSequence {
     return result;
   }
 
+  /**
+   * @implNote Time {@code O(n log n)}, space {@code O(1)}.
+   */
   public int longestConsecutive2(int[] nums) {
-    // Time complexity: O(n log n), Space complexity: O(1)
     if (nums.length == 0) {
       return 0;
     }

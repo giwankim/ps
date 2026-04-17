@@ -5,8 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MergeIntervals {
+  /**
+   * @implNote Time {@code O(n log n)}, space {@code O(n)}.
+   */
   public int[][] merge(int[][] intervals) {
-    // Time complexity: O(n log n), Space complexity: O(n)
     List<int[]> result = new ArrayList<>();
     Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
     for (int i = 0; i < intervals.length; i++) {

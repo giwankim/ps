@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Combinations {
+  /**
+   * @implNote Time {@code O(n! / (k! * (n - k)!))}, space {@code O(k)}.
+   */
   public List<List<Integer>> combine(int n, int k) {
-    // Time complexity: O(n! / (k! * (n - k)!)), Space complexity: O(k)
     List<List<Integer>> result = new ArrayList<>();
     backtrack(0, n, k, new ArrayList<>(), result);
     return result;

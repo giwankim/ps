@@ -13,8 +13,10 @@ public class RomanToInteger {
           'D', 500,
           'M', 1000);
 
+  /**
+   * @implNote Time {@code O(1) since there is a finite set of Roman numerals}, space {@code O(1)}.
+   */
   public int romanToInt(String s) {
-    // Time complexity: O(1) since there is a finite set of Roman numerals, Space complexity: O(1)
     int result = 0;
     for (int i = 0; i < s.length(); i++) {
       if (i + 1 < s.length() && map.get(s.charAt(i)) < map.get(s.charAt(i + 1))) {

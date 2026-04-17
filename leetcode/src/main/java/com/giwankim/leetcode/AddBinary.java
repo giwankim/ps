@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class AddBinary {
+  /**
+   * @implNote Time {@code O(|a| + |b|)}, space {@code O(1)}.
+   */
   public String addBinary(String a, String b) {
-    // Time complexity: O(|a| + |b|), Space complexity: O(1)
     StringBuilder result = new StringBuilder();
     int i = a.length() - 1;
     int j = b.length() - 1;

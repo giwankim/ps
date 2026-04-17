@@ -7,8 +7,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class SnakesAndLadders {
+  /**
+   * @implNote Time {@code O(n^2)}, space {@code O(n^2)}.
+   */
   public int snakesAndLadders(int[][] board) {
-    // Time complexity: O(n^2), Space complexity: O(n^2)
     int n = board.length;
     List<List<Integer>> cells = getCells(n);
     int result = 0;
@@ -42,8 +44,10 @@ public class SnakesAndLadders {
     return -1;
   }
 
+  /**
+   * @implNote Time {@code O(n^2)}, space {@code O(n^2)}.
+   */
   public int snakesAndLadders2(int[][] board) {
-    // Time complexity: O(n^2), Space complexity: O(n^2)
     int n = board.length;
     int result = 0;
     boolean[] visited = new boolean[n * n + 1];

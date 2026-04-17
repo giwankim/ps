@@ -7,8 +7,10 @@ import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class InsertDeleteGetRandomO1 {
+  /**
+   * @implNote Time {@code O(1)}, space {@code O(n)}.
+   */
   public static class RandomizedSet {
-    // Time complexity: O(1), Space complexity: O(n)
     private final Map<Integer, Integer> valToIdx;
     private final List<Integer> vals;
 

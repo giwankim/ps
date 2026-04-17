@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class MinimumSizeSubarraySum {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int minSubArrayLen(int target, int[] nums) {
-    // Time complexity: O(n), Space complexity: O(1)
     int result = Integer.MAX_VALUE;
     int currSum = 0;
     int j = 0;

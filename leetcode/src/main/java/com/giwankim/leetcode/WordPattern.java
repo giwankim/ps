@@ -5,8 +5,10 @@ import java.util.Map;
 import java.util.Objects;
 
 public class WordPattern {
+  /**
+   * @implNote Time {@code O(|pattern| + |s|)}, space {@code O(|s|)}.
+   */
   public boolean wordPattern(String pattern, String s) {
-    // Time complexity: O(|pattern| + |s|), Space complexity: O(|s|)
     String[] words = s.split(" ");
     if (pattern.length() != words.length) {
       return false;

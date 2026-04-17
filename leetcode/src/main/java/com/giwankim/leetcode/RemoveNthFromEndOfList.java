@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class RemoveNthFromEndOfList {
+  /**
+   * @implNote Time {@code O(|linked list|)}, space {@code O(1)}.
+   */
   public ListNode removeNthFromEnd(ListNode head, int n) {
-    // Time Complexity: O(|linked list|), Space Complexity: O(1)
     ListNode dummy = new ListNode(-1, head);
 
     ListNode fast = dummy;

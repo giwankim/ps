@@ -8,8 +8,10 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 public class PopulatingNextRightPointersInEachNodeII {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public Node connect(Node root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     if (root == null) {
       return null;
     }

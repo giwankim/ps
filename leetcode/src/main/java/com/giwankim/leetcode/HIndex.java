@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class HIndex {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int hIndex(int[] citations) {
-    // Time complexity: O(n), Space complexity: O(1)
     int n = citations.length;
     int[] counts = new int[n + 1];
     for (int citation : citations) {

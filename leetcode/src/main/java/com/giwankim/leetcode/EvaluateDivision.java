@@ -10,9 +10,12 @@ import java.util.Queue;
 import java.util.Set;
 
 public class EvaluateDivision {
+  /**
+   * @implNote Time {@code O(n * m)}, space {@code O(n)},
+   *     where {@code n = |equations|} and {@code m = |queries|}.
+   */
   public double[] calcEquation(
       List<List<String>> equations, double[] values, List<List<String>> queries) {
-    // Time complexity: O(n * m), Space complexity: O(n) where n = |equations| and m = |queries|
     // graph (adjacency list)
     Map<String, Map<String, Double>> adjList = newGraph(equations, values);
     // evaluate

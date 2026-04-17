@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class AddTwoNumbers {
+  /**
+   * @implNote Time {@code O(max(m,n))}, space {@code O(1)}.
+   */
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    // Time Complexity: O(max(m,n)), Space Complexity: O(1)
     ListNode dummy = new ListNode();
     int carry = 0;
     for (ListNode it = dummy; l1 != null || l2 != null || carry != 0; it = it.next) {

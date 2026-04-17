@@ -2,8 +2,10 @@ package com.giwankim.grind75;
 
 public class MajorityElement {
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int majorityElement(int[] nums) {
-    // Time complexity: O(n), Space complexity: O(1)
     int result = Integer.MIN_VALUE;
     int count = 0;
     for (int num : nums) {

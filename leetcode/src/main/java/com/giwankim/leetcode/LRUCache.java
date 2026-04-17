@@ -4,8 +4,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * @implNote Time {@code O(1)}, space {@code O(capacity)}.
+ */
 public class LRUCache {
-  // Time complexity: O(1), Space complexity: O(capacity)
   private final Map<Integer, Integer> cache;
 
   public LRUCache(int capacity) {

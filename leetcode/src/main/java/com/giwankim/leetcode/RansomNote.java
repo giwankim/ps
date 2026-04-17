@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class RansomNote {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public boolean canConstruct(String ransomNote, String magazine) {
-    // Time complexity: O(n), Space complexity: O(1)
     int[] counts = new int[256];
     for (char c : magazine.toCharArray()) {
       counts[c]++;

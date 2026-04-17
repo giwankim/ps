@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class IsSubsequence {
+  /**
+   * @implNote Time {@code O(m)}, space {@code O(1)}.
+   */
   public boolean isSubsequence(String s, String t) {
-    // Time complexity: O(m), Space complexity: O(1)
     int i = 0;
     for (int j = 0; i < s.length() && j < t.length(); j++) {
       if (s.charAt(i) == t.charAt(j)) {

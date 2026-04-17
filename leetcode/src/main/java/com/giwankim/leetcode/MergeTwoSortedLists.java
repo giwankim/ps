@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class MergeTwoSortedLists {
+  /**
+   * @implNote Time {@code O(n + m)}, space {@code O(1)}.
+   */
   public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-    // Time Complexity: O(n + m), Space Complexity: O(1)
     ListNode dummy = new ListNode();
     ListNode it = dummy;
     while (list1 != null && list2 != null) {

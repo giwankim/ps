@@ -5,8 +5,10 @@ import com.giwankim.leetcode.support.TreeNode;
 public class BinaryTreeMaximumPathSum {
   private int maxSum;
 
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int maxPathSum(TreeNode root) {
-    // Time Complexity: O(n), Space Complexity: O(n)
     maxSum = Integer.MIN_VALUE;
     maxDescendingPathSum(root);
     return maxSum;

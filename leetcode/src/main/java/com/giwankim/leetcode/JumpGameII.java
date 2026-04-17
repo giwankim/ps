@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class JumpGameII {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int jump(int[] nums) {
-    // Time complexity: O(n), Space complexity: O(1)
     int jumps = 0;
     int right = 0;
     int farthest = 0;

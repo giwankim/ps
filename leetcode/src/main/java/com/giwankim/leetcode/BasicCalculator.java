@@ -4,8 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class BasicCalculator {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int calculate(String s) {
-    // Time complexity: O(n), Space complexity: O(n)
     int result = 0;
     Deque<Integer> stack = new ArrayDeque<>();
     int val = 0;

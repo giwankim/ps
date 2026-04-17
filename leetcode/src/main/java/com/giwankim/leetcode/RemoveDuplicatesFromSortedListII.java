@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class RemoveDuplicatesFromSortedListII {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public ListNode deleteDuplicates(ListNode head) {
-    // Time Complexity: O(n), Space Complexity: O(1)
     ListNode dummy = new ListNode(-1, head);
     ListNode prev = dummy;
     ListNode it = head;

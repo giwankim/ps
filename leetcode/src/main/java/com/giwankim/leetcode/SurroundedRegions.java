@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 public class SurroundedRegions {
   private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
+  /**
+   * @implNote Time {@code O(cols * rows)}, space {@code O(1)}.
+   */
   public void solve(char[][] board) {
-    // Time complexity: O(cols * rows), Space complexity: O(1)
     int rows = board.length;
     int cols = board[0].length;
 

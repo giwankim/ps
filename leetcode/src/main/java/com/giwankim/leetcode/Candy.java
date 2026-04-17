@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class Candy {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public int candy(int[] ratings) {
-    // Time complexity: O(n), Space complexity: O(n)
     int[] candies = new int[ratings.length];
     Arrays.fill(candies, 1);
     for (int i = 1; i < ratings.length; i++) {

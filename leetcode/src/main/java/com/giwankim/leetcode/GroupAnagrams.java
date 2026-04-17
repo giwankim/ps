@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import java.util.*;
 
 public class GroupAnagrams {
+  /**
+   * @implNote Time {@code O(n log m)}, space {@code O(nm)}.
+   */
   public List<List<String>> groupAnagrams(String[] strs) {
-    // Time complexity: O(n log m), Space complexity: O(nm)
     Map<String, List<String>> map = new HashMap<>();
     for (String str : strs) {
       char[] chars = str.toCharArray();

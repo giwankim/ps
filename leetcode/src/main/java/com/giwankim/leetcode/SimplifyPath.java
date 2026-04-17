@@ -4,8 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class SimplifyPath {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(n)}.
+   */
   public String simplifyPath(String path) {
-    // Time complexity: O(n), Space complexity: O(n)
     String[] tokens = path.split("/");
     Deque<String> deque = new ArrayDeque<>();
     for (String token : tokens) {

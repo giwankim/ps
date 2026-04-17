@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class GasStation {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int canCompleteCircuit(int[] gas, int[] cost) {
-    // Time complexity: O(n), Space complexity: O(1)
     int result = 0;
     int totalGain = 0;
     int currGain = 0;

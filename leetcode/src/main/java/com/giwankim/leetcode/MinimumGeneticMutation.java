@@ -10,8 +10,10 @@ import java.util.Set;
 public class MinimumGeneticMutation {
   private static final char[] ALPHABET = "ACGT".toCharArray();
 
+  /**
+   * @implNote Time {@code O(1)}, space {@code O(1)}.
+   */
   public int minMutation(String startGene, String endGene, String[] bank) {
-    // Time complexity: O(1), Space complexity: O(1)
     Set<String> bankSet = Set.copyOf(Arrays.asList(bank));
 
     Queue<String> queue = new ArrayDeque<>();

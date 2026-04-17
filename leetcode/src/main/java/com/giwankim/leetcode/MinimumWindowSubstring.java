@@ -4,8 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MinimumWindowSubstring {
+  /**
+   * @implNote Time {@code O(n + m)}, space {@code O(n + m)}.
+   */
   public String minWindow(String s, String t) {
-    // Time complexity: O(n + m), Space complexity: O(n + m)
     String result = s;
 
     Map<Character, Integer> need = new HashMap<>();

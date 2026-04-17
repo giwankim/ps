@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class ValidSudoku {
+  /**
+   * @implNote Time {@code O(1)}, space {@code O(1)}.
+   */
   public boolean isValidSudoku(char[][] board) {
-    // Time complexity: O(1), Space complexity: O(1)
     boolean[][] rows = new boolean[9][9];
     boolean[][] cols = new boolean[9][9];
     boolean[][] boxes = new boolean[9][9];

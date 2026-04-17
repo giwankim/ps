@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class SetMatrixZeroes {
+  /**
+   * @implNote Time {@code O(mn)}, space {@code O(1)}.
+   */
   public void setZeroes(int[][] matrix) {
-    // Time complexity: O(mn), Space complexity: O(1)
     boolean isFirstRow = false;
     for (int j = 0; j < matrix[0].length; j++) {
       if (matrix[0][j] == 0) {

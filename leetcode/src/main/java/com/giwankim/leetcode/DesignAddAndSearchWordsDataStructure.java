@@ -9,9 +9,7 @@ public class DesignAddAndSearchWordsDataStructure {
     }
 
     /**
-     * Time complexity: {@code O(m)}. Space complexity: {@code O(m)}.
-     *
-     * <p>Where {@code m = word.length()}.
+     * @implNote Time {@code O(m)}, space {@code O(m)}, where {@code m = word.length()}.
      */
     public void addWord(String word) {
       Node curr = root;
@@ -25,10 +23,8 @@ public class DesignAddAndSearchWordsDataStructure {
     }
 
     /**
-     * Time complexity: {@code O(m * 26^k)}. Space complexity: {@code O(m)}.
-     *
-     * <p>Where k is number of . characters. {@code m = word.length()}. Without wildcards, runs in
-     * {@code O(m)}.
+     * @implNote Time {@code O(m * 26^k)}, space {@code O(m)}, where {@code m = word.length()} and
+     *     {@code k} = number of {@code .} wildcards. Without wildcards, runs in {@code O(m)}.
      */
     public boolean search(String word) {
       return search(root, word, 0);

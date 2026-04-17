@@ -3,8 +3,10 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class ReverseLinkedListII {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public ListNode reverseBetween(ListNode head, int left, int right) {
-    // Time complexity: O(n), Space complexity: O(1)
     ListNode dummy = new ListNode(-1, head);
     ListNode prev = dummy;
     for (int i = 0; i + 1 < left; i++) {

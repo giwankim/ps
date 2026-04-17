@@ -5,9 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 
 public class TextJustification {
+  /**
+   * @implNote Time {@code O(m * W)}, auxiliary space {@code O(W)},
+   *     where {@code m = number of output lines} and {@code W = maxWidth}.
+   */
   public List<String> fullJustify(String[] words, int maxWidth) {
-    // Time complexity: O(m * W) where m = number of output lines, W = maxWidth
-    // Space complexity: O(W) auxiliary
     List<String> result = new ArrayList<>();
     int start = 0;
     while (start < words.length) {

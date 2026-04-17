@@ -1,8 +1,10 @@
 package com.giwankim.leetcode;
 
 public class ProductOfArrayExceptSelf {
+  /**
+   * @implNote Time {@code O(n)}, space {@code O(1)}.
+   */
   public int[] productExceptSelf(int[] nums) {
-    // Time complexity: O(n), Space complexity: O(1)
     int[] products = new int[nums.length];
     int prefix = 1;
     for (int i = 0; i < nums.length; i++) {
