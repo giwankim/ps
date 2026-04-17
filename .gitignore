@@ -48,6 +48,9 @@ bin/
 .codex/config.toml
 .worktrees/
 
+### Firecrawl ###
+.firecrawl/
+
 ### Advent of Code ###
 src/**/*.txt
 
