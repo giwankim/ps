@@ -6,8 +6,8 @@ import java.util.List;
 
 public class TextJustification {
   /**
-   * @implNote Time {@code O(m * W)}, auxiliary space {@code O(W)},
-   *     where {@code m = number of output lines} and {@code W = maxWidth}.
+   * @implNote Time {@code O(m * W)}, auxiliary space {@code O(W)}, where {@code m = number of
+   *     output lines} and {@code W = maxWidth}.
    */
   public List<String> fullJustify(String[] words, int maxWidth) {
     List<String> result = new ArrayList<>();

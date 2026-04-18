@@ -11,8 +11,8 @@ import java.util.Set;
 
 public class EvaluateDivision {
   /**
-   * @implNote Time {@code O(n * m)}, space {@code O(n)},
-   *     where {@code n = |equations|} and {@code m = |queries|}.
+   * @implNote Time {@code O(n * m)}, space {@code O(n)}, where {@code n = |equations|} and {@code m
+   *     = |queries|}.
    */
   public double[] calcEquation(
       List<List<String>> equations, double[] values, List<List<String>> queries) {
