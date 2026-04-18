@@ -10,6 +10,7 @@ version-catalog-update = { id = "nl.littlerobots.version-catalog-update", versio
 allopen = "2.3.20"
 assertj = "3.27.7"
 benchmark = "0.4.16"
+google-java-format = "1.28.0"
 java = "25"
 junit = "6.0.3"
 junit-pioneer = "2.3.0"
@@ -23,6 +24,8 @@ version-catalog-update = "1.1.0"
 [libraries]
 assertj-core = { module = "org.assertj:assertj-core", version.ref = "assertj" }
 benchmark = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "benchmark" }
+# Consumed only by version-catalog-update; Spotless resolves GJF from [versions].
+google-java-format = { module = "com.google.googlejavaformat:google-java-format", version.ref = "google-java-format" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
 junit-pioneer = { module = "org.junit-pioneer:junit-pioneer", version.ref = "junit-pioneer" }
 kotest = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
