@@ -1,13 +1,11 @@
 package com.giwankim.leetcode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Permutations {
   /**
-   * @implNote Time {@code O(n * n!)}, auxiliary space {@code O(n)}, where {@code n =
-   *     nums.length}.
+   * @implNote Time {@code O(n * n!)}, auxiliary space {@code O(n)}, where {@code n = nums.length}.
    */
   public List<List<Integer>> permute(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
@@ -17,7 +15,11 @@ public class Permutations {
 
   private void permute(int[] nums, int index, List<List<Integer>> result) {
     if (index == nums.length) {
-      result.add(Arrays.stream(nums).boxed().toList());
+      List<Integer> permutation = new ArrayList<>(nums.length);
+      for (int num : nums) {
+        permutation.add(num);
+      }
+      result.add(permutation);
       return;
     }
     for (int i = index; i < nums.length; i++) {
