@@ -16,7 +16,6 @@
           </compositeBuild>
         </compositeConfiguration>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleHome" value="" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -24,10 +23,14 @@
             <option value="$PROJECT_DIR$/aoc" />
             <option value="$PROJECT_DIR$/boj" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/codeforces" />
             <option value="$PROJECT_DIR$/company" />
+            <option value="$PROJECT_DIR$/cses" />
             <option value="$PROJECT_DIR$/grind75" />
+            <option value="$PROJECT_DIR$/learn" />
             <option value="$PROJECT_DIR$/leetcode" />
             <option value="$PROJECT_DIR$/leetcode-kt" />
+            <option value="$PROJECT_DIR$/misc" />
             <option value="$PROJECT_DIR$/programmers" />
             <option value="$PROJECT_DIR$/usaco" />
           </set>
