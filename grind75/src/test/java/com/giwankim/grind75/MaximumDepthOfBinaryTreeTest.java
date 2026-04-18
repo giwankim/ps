@@ -13,10 +13,8 @@ class MaximumDepthOfBinaryTreeTest {
   void maxDepth() {
     assertThat(sut.maxDepth(null)).isZero();
     assertThat(sut.maxDepth(new TreeNode(1, null, new TreeNode(2)))).isEqualTo(2);
-    assertThat(
-            sut.maxDepth(
-                new TreeNode(
-                    3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))))
+    assertThat(sut.maxDepth(
+            new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)))))
         .isEqualTo(3);
   }
 }

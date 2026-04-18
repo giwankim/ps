@@ -30,8 +30,10 @@ class MinimumAbsoluteDifferenceInBSTTest {
 
   @Test
   void leetCodeExample2() {
-    assertThat(sut.getMinimumDifference(TreeNode.of(1, 0, 48, null, null, 12, 49))).isOne();
-    assertThat(sut.getMinimumDifference2(TreeNode.of(1, 0, 48, null, null, 12, 49))).isOne();
+    assertThat(sut.getMinimumDifference(TreeNode.of(1, 0, 48, null, null, 12, 49)))
+        .isOne();
+    assertThat(sut.getMinimumDifference2(TreeNode.of(1, 0, 48, null, null, 12, 49)))
+        .isOne();
   }
 
   @Test
@@ -48,8 +50,10 @@ class MinimumAbsoluteDifferenceInBSTTest {
 
   @Test
   void rightSkewed() {
-    assertThat(sut.getMinimumDifference(TreeNode.of(1, null, 2, null, null, null, 3))).isOne();
-    assertThat(sut.getMinimumDifference2(TreeNode.of(1, null, 2, null, null, null, 3))).isOne();
+    assertThat(sut.getMinimumDifference(TreeNode.of(1, null, 2, null, null, null, 3)))
+        .isOne();
+    assertThat(sut.getMinimumDifference2(TreeNode.of(1, null, 2, null, null, null, 3)))
+        .isOne();
   }
 
   @Test

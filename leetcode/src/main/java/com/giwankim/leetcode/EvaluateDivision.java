@@ -41,7 +41,8 @@ public class EvaluateDivision {
       if (step.node.equals(to)) {
         return step.product;
       }
-      for (Map.Entry<String, Double> edge : adjList.getOrDefault(step.node, Map.of()).entrySet()) {
+      for (Map.Entry<String, Double> edge :
+          adjList.getOrDefault(step.node, Map.of()).entrySet()) {
         String variable = edge.getKey();
         if (visited.contains(variable)) {
           continue;

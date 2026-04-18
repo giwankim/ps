@@ -29,11 +29,10 @@ public class 주차_요금_게산 {
 
     // cars parked till 23:59
     int terminalTimestamp = getTimestamp("23:59");
-    parkingByCar.forEach(
-        (car, timestamp) -> {
-          int minutesParked = terminalTimestamp - timestamp;
-          minutesByCar.merge(car, minutesParked, Integer::sum);
-        });
+    parkingByCar.forEach((car, timestamp) -> {
+      int minutesParked = terminalTimestamp - timestamp;
+      minutesByCar.merge(car, minutesParked, Integer::sum);
+    });
 
     // order values by car
     TreeMap<String, Integer> feeByCar = new TreeMap<>();

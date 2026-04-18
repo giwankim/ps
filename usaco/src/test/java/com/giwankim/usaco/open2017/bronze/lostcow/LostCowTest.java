@@ -32,16 +32,13 @@ class LostCowTest {
 
   private static Stream<Arguments> lostCow() {
     String prefix = "usaco/open2017/bronze/lostcow/";
-    return IntStream.rangeClosed(1, 10)
-        .mapToObj(
-            i -> {
-              try {
-                return Arguments.of(
-                    ResourceUtils.getPath(prefix + i + ".in"),
-                    ResourceUtils.getPath(prefix + i + ".out"));
-              } catch (URISyntaxException e) {
-                throw new RuntimeException(e);
-              }
-            });
+    return IntStream.rangeClosed(1, 10).mapToObj(i -> {
+      try {
+        return Arguments.of(
+            ResourceUtils.getPath(prefix + i + ".in"), ResourceUtils.getPath(prefix + i + ".out"));
+      } catch (URISyntaxException e) {
+        throw new RuntimeException(e);
+      }
+    });
   }
 }

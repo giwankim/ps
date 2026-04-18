@@ -11,13 +11,12 @@ public class LRUCache {
   private final Map<Integer, Integer> cache;
 
   public LRUCache(int capacity) {
-    cache =
-        new LinkedHashMap<>(capacity, 0.75f, true) {
-          @Override
-          protected boolean removeEldestEntry(Entry<Integer, Integer> eldest) {
-            return size() > capacity;
-          }
-        };
+    cache = new LinkedHashMap<>(capacity, 0.75f, true) {
+      @Override
+      protected boolean removeEldestEntry(Entry<Integer, Integer> eldest) {
+        return size() > capacity;
+      }
+    };
   }
 
   public int get(int key) {

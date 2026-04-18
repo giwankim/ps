@@ -16,16 +16,15 @@ public class ReorderLogFiles {
       }
     }
 
-    letterLogs.sort(
-        (s1, s2) -> {
-          String[] tokens1 = s1.split(" ", 2);
-          String[] tokens2 = s2.split(" ", 2);
-          int compared = tokens1[1].compareTo(tokens2[1]);
-          if (compared == 0) {
-            return tokens1[0].compareTo(tokens2[0]);
-          }
-          return compared;
-        });
+    letterLogs.sort((s1, s2) -> {
+      String[] tokens1 = s1.split(" ", 2);
+      String[] tokens2 = s2.split(" ", 2);
+      int compared = tokens1[1].compareTo(tokens2[1]);
+      if (compared == 0) {
+        return tokens1[0].compareTo(tokens2[0]);
+      }
+      return compared;
+    });
 
     letterLogs.addAll(digitLogs);
     return letterLogs.toArray(new String[0]);

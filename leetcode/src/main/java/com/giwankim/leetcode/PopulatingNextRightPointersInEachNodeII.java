@@ -57,7 +57,11 @@ public class PopulatingNextRightPointersInEachNodeII {
       if (vals.length == 0) {
         return null;
       }
-      return Node.builder().val(vals[0]).left(buildNode(vals, 1)).right(buildNode(vals, 2)).build();
+      return Node.builder()
+          .val(vals[0])
+          .left(buildNode(vals, 1))
+          .right(buildNode(vals, 2))
+          .build();
     }
 
     private static Node buildNode(Integer[] vals, int i) {

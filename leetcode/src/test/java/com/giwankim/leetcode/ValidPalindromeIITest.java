@@ -7,9 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class ValidPalindromeIITest {
   @ParameterizedTest
-  @CsvSource(
-      textBlock =
-          """
+  @CsvSource(textBlock = """
           aba, true
           abca, true
           abc, false

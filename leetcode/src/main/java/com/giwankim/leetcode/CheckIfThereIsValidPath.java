@@ -5,16 +5,15 @@ import java.util.Queue;
 
 public class CheckIfThereIsValidPath {
 
-  static final int[][][] DIRECTIONS =
-      new int[][][] {
-        {{}, {}}, // x
-        {{0, 1}, {0, -1}}, // 1
-        {{-1, 0}, {1, 0}}, // 2
-        {{0, -1}, {1, 0}}, // 3
-        {{0, 1}, {1, 0}}, // 4
-        {{0, -1}, {-1, 0}}, // 5
-        {{0, 1}, {-1, 0}} // 6
-      };
+  static final int[][][] DIRECTIONS = new int[][][] {
+    {{}, {}}, // x
+    {{0, 1}, {0, -1}}, // 1
+    {{-1, 0}, {1, 0}}, // 2
+    {{0, -1}, {1, 0}}, // 3
+    {{0, 1}, {1, 0}}, // 4
+    {{0, -1}, {-1, 0}}, // 5
+    {{0, 1}, {-1, 0}} // 6
+  };
 
   public boolean hasValidPath(int[][] grid) {
     int m = grid.length;

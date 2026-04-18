@@ -6,12 +6,11 @@ import java.util.Map;
 import java.util.function.IntBinaryOperator;
 
 public class EvaluateReversePolishNotation {
-  private static final Map<String, IntBinaryOperator> OPERATORS =
-      Map.of(
-          "+", (a, b) -> a + b,
-          "-", (a, b) -> a - b,
-          "*", (a, b) -> a * b,
-          "/", (a, b) -> a / b);
+  private static final Map<String, IntBinaryOperator> OPERATORS = Map.of(
+      "+", (a, b) -> a + b,
+      "-", (a, b) -> a - b,
+      "*", (a, b) -> a * b,
+      "/", (a, b) -> a / b);
 
   /**
    * @implNote Time {@code O(n)}, space {@code O(n)}.

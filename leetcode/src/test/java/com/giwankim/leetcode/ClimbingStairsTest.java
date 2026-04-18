@@ -8,9 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class ClimbingStairsTest {
 
   @ParameterizedTest
-  @CsvSource(
-      textBlock =
-          """
+  @CsvSource(textBlock = """
           1, 1
           2, 2
           3, 3

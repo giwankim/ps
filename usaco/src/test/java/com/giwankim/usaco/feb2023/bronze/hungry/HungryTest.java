@@ -34,16 +34,13 @@ class HungryTest {
 
   private static Stream<Arguments> hungry() {
     String prefix = "usaco/feb2023/bronze/hungry/";
-    return IntStream.rangeClosed(1, 13)
-        .mapToObj(
-            i -> {
-              try {
-                return Arguments.of(
-                    ResourceUtils.getPath(prefix + i + ".in"),
-                    ResourceUtils.getPath(prefix + i + ".out"));
-              } catch (URISyntaxException e) {
-                throw new RuntimeException(e);
-              }
-            });
+    return IntStream.rangeClosed(1, 13).mapToObj(i -> {
+      try {
+        return Arguments.of(
+            ResourceUtils.getPath(prefix + i + ".in"), ResourceUtils.getPath(prefix + i + ".out"));
+      } catch (URISyntaxException e) {
+        throw new RuntimeException(e);
+      }
+    });
   }
 }

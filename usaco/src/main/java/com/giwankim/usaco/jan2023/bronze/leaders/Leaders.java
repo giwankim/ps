@@ -26,19 +26,17 @@ public class Leaders {
     }
 
     int firstG = IntStream.range(0, N).filter(i -> cows[i] == 'G').findFirst().orElse(-1);
-    int lastG =
-        IntStream.range(0, N)
-            .map(i -> N - 1 - i)
-            .filter(i -> cows[i] == 'G')
-            .findFirst()
-            .orElse(-1);
+    int lastG = IntStream.range(0, N)
+        .map(i -> N - 1 - i)
+        .filter(i -> cows[i] == 'G')
+        .findFirst()
+        .orElse(-1);
     int firstH = IntStream.range(0, N).filter(i -> cows[i] == 'H').findFirst().orElse(-1);
-    int lastH =
-        IntStream.range(0, N)
-            .map(i -> N - 1 - i)
-            .filter(i -> cows[i] == 'H')
-            .findFirst()
-            .orElse(-1);
+    int lastH = IntStream.range(0, N)
+        .map(i -> N - 1 - i)
+        .filter(i -> cows[i] == 'H')
+        .findFirst()
+        .orElse(-1);
 
     long ans = 0;
 

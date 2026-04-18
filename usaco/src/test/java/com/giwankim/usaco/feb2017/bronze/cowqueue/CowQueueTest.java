@@ -32,16 +32,13 @@ class CowQueueTest {
 
   private static Stream<Arguments> cowQueue() {
     String prefix = "usaco/feb2017/bronze/cowqueue/";
-    return IntStream.rangeClosed(1, 10)
-        .mapToObj(
-            i -> {
-              try {
-                return Arguments.of(
-                    ResourceUtils.getPath(prefix + i + ".in"),
-                    ResourceUtils.getPath(prefix + i + ".out"));
-              } catch (URISyntaxException e) {
-                throw new RuntimeException(e);
-              }
-            });
+    return IntStream.rangeClosed(1, 10).mapToObj(i -> {
+      try {
+        return Arguments.of(
+            ResourceUtils.getPath(prefix + i + ".in"), ResourceUtils.getPath(prefix + i + ".out"));
+      } catch (URISyntaxException e) {
+        throw new RuntimeException(e);
+      }
+    });
   }
 }

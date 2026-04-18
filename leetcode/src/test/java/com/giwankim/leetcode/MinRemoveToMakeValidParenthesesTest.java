@@ -7,10 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class MinRemoveToMakeValidParenthesesTest {
   @ParameterizedTest
-  @CsvSource(
-      delimiter = '|',
-      textBlock =
-          """
+  @CsvSource(delimiter = '|', textBlock = """
           lee(t(c)o)de) | lee(t(c)o)de
           a)b(c)d | ab(c)d
           ))(( | ''

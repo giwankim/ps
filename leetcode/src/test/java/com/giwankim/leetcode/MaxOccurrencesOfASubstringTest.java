@@ -7,10 +7,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 class MaxOccurrencesOfASubstringTest {
   @ParameterizedTest
-  @CsvSource(
-      delimiter = '|',
-      textBlock =
-          """
+  @CsvSource(delimiter = '|', textBlock = """
           aababcaab | 2 | 3 | 4 | 2
           aaaa | 1 | 3 | 3 | 2
           """)

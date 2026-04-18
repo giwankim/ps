@@ -8,10 +8,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 class MinStepsToMakeTwoStringsAnagramTest {
 
   @ParameterizedTest
-  @CsvSource(
-      delimiter = '|',
-      textBlock =
-          """
+  @CsvSource(delimiter = '|', textBlock = """
           bab | aba | 1
           leetcode | practice | 5
           anagram | mangaar | 0

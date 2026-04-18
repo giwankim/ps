@@ -11,8 +11,7 @@ import org.junitpioneer.jupiter.StdOut;
 class PackingRecursiveTest {
 
   @Test
-  @StdIo({
-    """
+  @StdIo({"""
       2
       6 10
       laptop 4 7
@@ -28,8 +27,7 @@ class PackingRecursiveTest {
       grinder 4 7
       dumbell 2 5
       encyclopedia 10 4
-      """
-  })
+      """})
   void packing(StdOut out) throws IOException {
     main(new String[0]);
 

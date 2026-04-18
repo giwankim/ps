@@ -20,14 +20,13 @@ public class FindDuplicateSubtrees {
     }
 
     // serialize the tree
-    String s =
-        new StringBuilder()
-            .append(root.val)
-            .append(",")
-            .append(serializeTree(root.left, counts, result))
-            .append(",")
-            .append(serializeTree(root.right, counts, result))
-            .toString();
+    String s = new StringBuilder()
+        .append(root.val)
+        .append(",")
+        .append(serializeTree(root.left, counts, result))
+        .append(",")
+        .append(serializeTree(root.right, counts, result))
+        .toString();
 
     // increment the count for this serialized tree
     counts.put(s, counts.getOrDefault(s, 0) + 1);

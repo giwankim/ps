@@ -26,13 +26,12 @@ class DiagonalTraverseIITest {
 
   @Test
   void unevenShape() {
-    var nums =
-        List.of(
-            List.of(1, 2, 3, 4, 5),
-            List.of(6, 7),
-            List.of(8),
-            List.of(9, 10, 11),
-            List.of(12, 13, 14, 15, 16));
+    var nums = List.of(
+        List.of(1, 2, 3, 4, 5),
+        List.of(6, 7),
+        List.of(8),
+        List.of(9, 10, 11),
+        List.of(12, 13, 14, 15, 16));
 
     int[] actual = sut.findDiagonalOrder(nums);
 

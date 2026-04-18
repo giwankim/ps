@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 class HelloWorldTest {
   @Test
   void helloWorld() {
-    String input =
-        """
+    String input = """
         5
         World
         Algospot
@@ -17,8 +16,7 @@ class HelloWorldTest {
         Jullu
         Kodori
         """;
-    String expected =
-        """
+    String expected = """
         Hello, World!
         Hello, Algospot!
         Hello, Illu!

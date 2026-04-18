@@ -32,16 +32,13 @@ class SumTwoValuesTest {
 
   private static Stream<Arguments> sumTwoValues() {
     String prefix = "cses/sum/two/values/";
-    return IntStream.rangeClosed(1, 27)
-        .mapToObj(
-            i -> {
-              try {
-                return Arguments.of(
-                    ResourceUtils.getPath(prefix + i + ".in"),
-                    ResourceUtils.getPath(prefix + i + ".out"));
-              } catch (URISyntaxException e) {
-                throw new RuntimeException(e);
-              }
-            });
+    return IntStream.rangeClosed(1, 27).mapToObj(i -> {
+      try {
+        return Arguments.of(
+            ResourceUtils.getPath(prefix + i + ".in"), ResourceUtils.getPath(prefix + i + ".out"));
+      } catch (URISyntaxException e) {
+        throw new RuntimeException(e);
+      }
+    });
   }
 }

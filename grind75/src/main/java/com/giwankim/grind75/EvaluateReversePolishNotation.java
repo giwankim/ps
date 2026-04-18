@@ -7,12 +7,11 @@ import java.util.function.IntBinaryOperator;
 
 public class EvaluateReversePolishNotation {
 
-  private static final Map<String, IntBinaryOperator> OPERATIONS =
-      Map.of(
-          "+", Integer::sum,
-          "-", (a, b) -> a - b,
-          "*", (a, b) -> a * b,
-          "/", (a, b) -> a / b);
+  private static final Map<String, IntBinaryOperator> OPERATIONS = Map.of(
+      "+", Integer::sum,
+      "-", (a, b) -> a - b,
+      "*", (a, b) -> a * b,
+      "/", (a, b) -> a / b);
 
   public int evalRPN(String[] tokens) {
     Deque<Integer> operands = new ArrayDeque<>();

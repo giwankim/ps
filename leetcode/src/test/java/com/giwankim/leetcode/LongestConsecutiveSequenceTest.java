@@ -40,7 +40,8 @@ class LongestConsecutiveSequenceTest {
   @Test
   void shouldHandleLongConsecutiveSequence() {
     assertThat(sut.longestConsecutive(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1})).isEqualTo(9);
-    assertThat(sut.longestConsecutive2(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1})).isEqualTo(9);
+    assertThat(sut.longestConsecutive2(new int[] {0, 3, 7, 2, 5, 8, 4, 6, 0, 1}))
+        .isEqualTo(9);
   }
 
   @Test

@@ -24,9 +24,8 @@ class AddTwoNumbersTest {
         Arguments.of(new int[] {1}, new int[] {2}, new int[] {3}),
         Arguments.of(new int[] {1, 2}, new int[] {3, 4, 5}, new int[] {4, 6, 5}),
         Arguments.of(new int[] {2, 4, 3}, new int[] {5, 6, 4}, new int[] {7, 0, 8}),
-        Arguments.of(
-            new int[] {9, 9, 9, 9, 9, 9, 9},
-            new int[] {9, 9, 9, 9},
-            new int[] {8, 9, 9, 9, 0, 0, 0, 1}));
+        Arguments.of(new int[] {9, 9, 9, 9, 9, 9, 9}, new int[] {9, 9, 9, 9}, new int[] {
+          8, 9, 9, 9, 0, 0, 0, 1
+        }));
   }
 }

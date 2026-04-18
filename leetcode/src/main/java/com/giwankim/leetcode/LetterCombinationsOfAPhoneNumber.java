@@ -5,16 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 public class LetterCombinationsOfAPhoneNumber {
-  private static final Map<Character, List<Character>> digitToLetters =
-      Map.of(
-          '2', List.of('a', 'b', 'c'),
-          '3', List.of('d', 'e', 'f'),
-          '4', List.of('g', 'h', 'i'),
-          '5', List.of('j', 'k', 'l'),
-          '6', List.of('m', 'n', 'o'),
-          '7', List.of('p', 'q', 'r', 's'),
-          '8', List.of('t', 'u', 'v'),
-          '9', List.of('w', 'x', 'y', 'z'));
+  private static final Map<Character, List<Character>> digitToLetters = Map.of(
+      '2', List.of('a', 'b', 'c'),
+      '3', List.of('d', 'e', 'f'),
+      '4', List.of('g', 'h', 'i'),
+      '5', List.of('j', 'k', 'l'),
+      '6', List.of('m', 'n', 'o'),
+      '7', List.of('p', 'q', 'r', 's'),
+      '8', List.of('t', 'u', 'v'),
+      '9', List.of('w', 'x', 'y', 'z'));
 
   /**
    * @implNote Time {@code O(4^n * n)}, auxiliary space {@code O(n)}, where {@code n =

@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 class MainTest {
   @Test
   void fastAPlusB() throws IOException {
-    String input =
-        """
+    String input = """
         5
         1 1
         12 34
@@ -17,8 +16,7 @@ class MainTest {
         40 60
         1000 1000
         """;
-    String expected =
-        """
+    String expected = """
         2
         46
         505

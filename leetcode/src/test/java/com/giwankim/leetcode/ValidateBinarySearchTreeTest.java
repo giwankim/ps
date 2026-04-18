@@ -166,7 +166,9 @@ class ValidateBinarySearchTreeTest {
     //            \
     //             2147483647
     // Catches: integer overflow when computing bounds (e.g., root.val + 1 overflows int)
-    assertThat(sut.isValidBST(TreeNode.of(Integer.MIN_VALUE, null, Integer.MAX_VALUE))).isTrue();
-    assertThat(sut.isValidBST2(TreeNode.of(Integer.MIN_VALUE, null, Integer.MAX_VALUE))).isTrue();
+    assertThat(sut.isValidBST(TreeNode.of(Integer.MIN_VALUE, null, Integer.MAX_VALUE)))
+        .isTrue();
+    assertThat(sut.isValidBST2(TreeNode.of(Integer.MIN_VALUE, null, Integer.MAX_VALUE)))
+        .isTrue();
   }
 }

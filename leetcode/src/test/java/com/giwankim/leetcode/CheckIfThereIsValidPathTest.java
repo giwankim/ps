@@ -26,7 +26,7 @@ class CheckIfThereIsValidPathTest {
 
   static Stream<Arguments> noPath() {
     return Stream.of(
-        Arguments.of((Object) new int[][] {{1, 2, 1}, {1, 2, 1}}),
-        Arguments.of((Object) new int[][] {{1, 1, 2}}));
+        Arguments.of((Object) new int[][] {{1, 2, 1}, {1, 2, 1}}), Arguments.of((Object)
+            new int[][] {{1, 1, 2}}));
   }
 }

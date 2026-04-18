@@ -36,7 +36,8 @@ class CountCompleteTreeNodesTest {
 
   @Test
   void fourLevels() {
-    assertThat(sut.countNodes(TreeNode.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))).isEqualTo(12);
+    assertThat(sut.countNodes(TreeNode.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)))
+        .isEqualTo(12);
     assertThat(sut.countNodes(TreeNode.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)))
         .isEqualTo(15);
   }

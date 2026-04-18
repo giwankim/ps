@@ -69,7 +69,8 @@ class KthSmallestElementInABSTTest {
     //    \
     //     3
     assertThat(sut.kthSmallest(TreeNode.of(1, null, 2, null, null, null, 3), 3)).isEqualTo(3);
-    assertThat(sut.kthSmallest2(TreeNode.of(1, null, 2, null, null, null, 3), 3)).isEqualTo(3);
+    assertThat(sut.kthSmallest2(TreeNode.of(1, null, 2, null, null, null, 3), 3))
+        .isEqualTo(3);
   }
 
   @Test

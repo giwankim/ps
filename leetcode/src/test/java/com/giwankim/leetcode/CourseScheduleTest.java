@@ -91,6 +91,7 @@ class CourseScheduleTest {
   // (course 0 is the entry; course 4 requires the whole curriculum)
   @Test
   void largerCurriculumDagCompletable() {
-    assertThat(sut.canFinish(5, new int[][] {{1, 0}, {2, 0}, {3, 1}, {3, 2}, {4, 3}})).isTrue();
+    assertThat(sut.canFinish(5, new int[][] {{1, 0}, {2, 0}, {3, 1}, {3, 2}, {4, 3}}))
+        .isTrue();
   }
 }

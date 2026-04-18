@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 class BoggleTest {
   @Test
   void boggle() {
-    String input =
-        """
+    String input = """
         1
         URLPM
         XPRET
@@ -24,8 +23,7 @@ class BoggleTest {
         PANDORA
         GIAZAPX
         """;
-    String expected =
-        """
+    String expected = """
         PRETTY YES
         GIRL YES
         REPEAT YES

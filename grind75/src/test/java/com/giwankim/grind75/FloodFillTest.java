@@ -17,12 +17,9 @@ class FloodFillTest {
 
   static Stream<Arguments> floodFill() {
     return Stream.of(
-        Arguments.of(
-            new int[][] {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}},
-            1,
-            1,
-            2,
-            new int[][] {{2, 2, 2}, {2, 2, 0}, {2, 0, 1}}),
+        Arguments.of(new int[][] {{1, 1, 1}, {1, 1, 0}, {1, 0, 1}}, 1, 1, 2, new int[][] {
+          {2, 2, 2}, {2, 2, 0}, {2, 0, 1}
+        }),
         Arguments.of(new int[][] {{0, 0, 0}}, 0, 0, 0, new int[][] {{0, 0, 0}}));
   }
 }

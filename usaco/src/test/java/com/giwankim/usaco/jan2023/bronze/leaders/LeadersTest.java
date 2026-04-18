@@ -32,16 +32,13 @@ class LeadersTest {
 
   private static Stream<Arguments> leaders() {
     String prefix = "usaco/jan2023/bronze/leaders/";
-    return IntStream.rangeClosed(1, 17)
-        .mapToObj(
-            i -> {
-              try {
-                return Arguments.of(
-                    ResourceUtils.getPath(prefix + i + ".in"),
-                    ResourceUtils.getPath(prefix + i + ".out"));
-              } catch (URISyntaxException e) {
-                throw new RuntimeException(e);
-              }
-            });
+    return IntStream.rangeClosed(1, 17).mapToObj(i -> {
+      try {
+        return Arguments.of(
+            ResourceUtils.getPath(prefix + i + ".in"), ResourceUtils.getPath(prefix + i + ".out"));
+      } catch (URISyntaxException e) {
+        throw new RuntimeException(e);
+      }
+    });
   }
 }

@@ -36,20 +36,19 @@ class LRUCacheTest {
 
   @Test
   void lruCache() {
-    SoftAssertions.assertSoftly(
-        softly -> {
-          cache.put(1, 1); // {1: 1}
-          cache.put(2, 2); // {1: 1, 2: 2}
-          softly.assertThat(cache.get(1)).isEqualTo(1);
+    SoftAssertions.assertSoftly(softly -> {
+      cache.put(1, 1); // {1: 1}
+      cache.put(2, 2); // {1: 1, 2: 2}
+      softly.assertThat(cache.get(1)).isEqualTo(1);
 
-          cache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
-          softly.assertThat(cache.get(2)).isEqualTo(-1);
+      cache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}
+      softly.assertThat(cache.get(2)).isEqualTo(-1);
 
-          cache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
-          softly.assertThat(cache.get(1)).isEqualTo(-1); // return -1 (not found)
+      cache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
+      softly.assertThat(cache.get(1)).isEqualTo(-1); // return -1 (not found)
 
-          softly.assertThat(cache.get(3)).isEqualTo(3);
-          softly.assertThat(cache.get(4)).isEqualTo(4);
-        });
+      softly.assertThat(cache.get(3)).isEqualTo(3);
+      softly.assertThat(cache.get(4)).isEqualTo(4);
+    });
   }
 }

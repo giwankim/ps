@@ -10,7 +10,7 @@ spotless {
     java {
         toggleOffOn()
         removeUnusedImports()
-        googleJavaFormat(libs.versions.google.java.format.get()).reorderImports(true)
+        palantirJavaFormat(libs.versions.palantir.java.format.get()).style("GOOGLE")
         formatAnnotations()
     }
 }

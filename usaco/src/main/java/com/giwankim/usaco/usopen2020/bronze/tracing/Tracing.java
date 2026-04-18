@@ -75,7 +75,8 @@ public class Tracing {
       }
     }
 
-    int count = IntStream.range(0, canBeCow0.length).map(i -> canBeCow0[i] ? 1 : 0).sum();
+    int count =
+        IntStream.range(0, canBeCow0.length).map(i -> canBeCow0[i] ? 1 : 0).sum();
 
     pw.println(count + " " + kMin + " " + (kMax == 251 ? "Infinity" : kMax));
   }

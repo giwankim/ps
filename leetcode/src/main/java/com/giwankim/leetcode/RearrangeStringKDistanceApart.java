@@ -9,14 +9,12 @@ public class RearrangeStringKDistanceApart {
       freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
     }
 
-    Queue<Map.Entry<Character, Integer>> maxHeap =
-        new PriorityQueue<>(
-            (a, b) -> {
-              if (Objects.equals(a.getValue(), b.getValue())) {
-                return Character.compare(a.getKey(), b.getKey());
-              }
-              return Integer.compare(b.getValue(), a.getValue());
-            });
+    Queue<Map.Entry<Character, Integer>> maxHeap = new PriorityQueue<>((a, b) -> {
+      if (Objects.equals(a.getValue(), b.getValue())) {
+        return Character.compare(a.getKey(), b.getKey());
+      }
+      return Integer.compare(b.getValue(), a.getValue());
+    });
     maxHeap.addAll(freqMap.entrySet());
 
     Queue<Map.Entry<Character, Integer>> waitQueue = new LinkedList<>();

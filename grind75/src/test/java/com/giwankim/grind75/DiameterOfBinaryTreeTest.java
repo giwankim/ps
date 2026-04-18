@@ -57,17 +57,20 @@ class DiameterOfBinaryTreeTest {
     //    3   5
     //   /     \
     //  4       6
-    TreeNode tree =
-        TreeNode.builder()
-            .val(1)
-            .left(
-                TreeNode.builder()
-                    .val(2)
-                    .left(TreeNode.builder().val(3).left(TreeNode.builder().val(4).build()).build())
-                    .right(
-                        TreeNode.builder().val(5).right(TreeNode.builder().val(6).build()).build())
-                    .build())
-            .build();
+    TreeNode tree = TreeNode.builder()
+        .val(1)
+        .left(TreeNode.builder()
+            .val(2)
+            .left(TreeNode.builder()
+                .val(3)
+                .left(TreeNode.builder().val(4).build())
+                .build())
+            .right(TreeNode.builder()
+                .val(5)
+                .right(TreeNode.builder().val(6).build())
+                .build())
+            .build())
+        .build();
     int diameter = sut.diameterOfBinaryTree(tree);
     assertThat(diameter).isEqualTo(4);
   }

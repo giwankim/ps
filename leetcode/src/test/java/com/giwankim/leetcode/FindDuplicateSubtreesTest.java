@@ -11,9 +11,8 @@ class FindDuplicateSubtreesTest {
   @Test
   void findDuplicates() {
     TreeNode duplicate = new TreeNode(2, new TreeNode(4), null);
-    TreeNode root =
-        new TreeNode(
-            1, duplicate, new TreeNode(3, new TreeNode(2, new TreeNode(4), null), new TreeNode(4)));
+    TreeNode root = new TreeNode(
+        1, duplicate, new TreeNode(3, new TreeNode(2, new TreeNode(4), null), new TreeNode(4)));
 
     List<TreeNode> duplicates = new FindDuplicateSubtrees().findDuplicateSubtrees(root);
 
