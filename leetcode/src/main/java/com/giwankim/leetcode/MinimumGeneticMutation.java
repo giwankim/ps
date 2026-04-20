@@ -11,7 +11,10 @@ public class MinimumGeneticMutation {
   private static final char[] ALPHABET = "ACGT".toCharArray();
 
   /**
-   * @implNote Time {@code O(1)}, space {@code O(1)}.
+   * @implNote Time {@code O(B * L^2)}, space {@code O(B * L)}.
+   *     <p>{@code B} = {@code bank.length}, {@code L} = gene length. BFS visits each bank
+   *     gene at most once; per gene we try {@code L * 4} mutations and each
+   *     {@code toString} / hash lookup is {@code O(L)}.
    */
   public int minMutation(String startGene, String endGene, String[] bank) {
     Set<String> bankSet = Set.copyOf(Arrays.asList(bank));

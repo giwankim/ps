@@ -1,6 +1,7 @@
 package com.giwankim.leetcode;
 
 public class ImplementTrie {
+  /** In the {@code @implNote} complexities below, {@code m} is the length of the input string. */
   public static class Trie {
     private final Node root;
 

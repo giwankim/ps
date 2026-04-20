@@ -7,12 +7,18 @@ import java.util.Set;
 public class WordSearchII {
   static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
+  /**
+   * @implNote Time {@code O(W + m * n * 4 * 3^(L - 1))}, space {@code O(W)}.
+   *     <p>{@code m} x {@code n} = board dimensions, {@code L} = length of the
+   *     longest word, {@code W} = sum of lengths of all words.
+   */
   public List<String> findWords(char[][] board, String[] words) {
     Set<String> result = new HashSet<>();
     TrieNode root = TrieNode.of(words);
     for (int i = 0; i < board.length; i++) {
       for (int j = 0; j < board[i].length; j++) {
-        findWords(root.children[board[i][j] - 'a'], i, j, board, new StringBuilder(), result);
+        TrieNode nextNode = root.children[board[i][j] - 'a'];
+        findWords(nextNode, i, j, board, new StringBuilder(), result);
       }
     }
     return List.copyOf(result);
