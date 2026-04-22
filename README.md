@@ -123,6 +123,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)
 * [143. Reorder List](https://leetcode.com/problems/reorder-list)
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+* [148. Sort List](https://leetcode.com/problems/sort-list)
 * [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 * [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
 * [155. Min Stack](https://leetcode.com/problems/min-stack)
