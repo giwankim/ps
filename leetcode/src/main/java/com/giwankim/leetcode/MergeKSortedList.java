@@ -4,24 +4,32 @@ import com.giwankim.leetcode.support.ListNode;
 import java.util.PriorityQueue;
 
 public class MergeKSortedList {
+  /**
+   * @implNote Time {@code O(N log k)}, space {@code O(k)}.
+   *     <p>{@code k} = {@code lists.length}, {@code N} = total number of nodes across all
+   *     lists. Each node is polled from the heap exactly once and at most one successor is
+   *     offered back, so the heap size never exceeds {@code k} and each {@code poll} /
+   *     {@code offer} costs {@code O(log k)}.
+   */
   public ListNode mergeKLists(ListNode[] lists) {
     PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
-    for (ListNode node : lists) {
-      if (node != null) {
-        pq.offer(node);
+    for (ListNode list : lists) {
+      if (list == null) {
+        continue;
       }
+      pq.offer(list);
     }
 
-    ListNode head = new ListNode(0);
-    ListNode tail = head;
+    ListNode dummy = new ListNode();
+    ListNode tail = dummy;
     while (!pq.isEmpty()) {
       ListNode node = pq.poll();
-      tail.next = node;
-      tail = tail.next;
       if (node.next != null) {
         pq.offer(node.next);
       }
+      tail.next = node;
+      tail = tail.next;
     }
-    return head.next;
+    return dummy.next;
   }
 }
