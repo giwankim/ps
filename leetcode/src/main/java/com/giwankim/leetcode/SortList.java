@@ -4,7 +4,14 @@ import com.giwankim.leetcode.support.ListNode;
 
 public class SortList {
   /**
-   * @implNote Time {@code O(n log n)}, space {@code O(log n)}, where {@code n = list length}.
+   * @implNote Time {@code O(n log n)}, space {@code O(log n)}, where {@code n} is the list
+   *     length. Top-down merge sort: each call halves the list with two-pointer traversal
+   *     ({@link #split}, {@code O(n)}), recurses on each half, and merges the two sorted
+   *     halves ({@link #merge}, {@code O(n)}). The recurrence {@code T(n) = 2 T(n/2) + O(n)}
+   *     solves to {@code O(n log n)} by the Master Theorem (balanced case, every level
+   *     does {@code O(n)} work across {@code log n} levels). Auxiliary space is the
+   *     recursion stack of depth {@code O(log n)}; the merge re-links the existing nodes
+   *     in place rather than allocating a buffer.
    */
   public ListNode sortList(ListNode head) {
     if (head == null || head.next == null) {
@@ -16,6 +23,14 @@ public class SortList {
     return merge(leftSorted, rightSorted);
   }
 
+  /**
+   * Splits the list of length {@code k >= 2} rooted at {@code head} into two halves and
+   * returns the head of the second half. The first half is truncated in place by nulling
+   * the {@code next} link of its last node, so {@code head} now references a complete
+   * list on its own. When {@code k} is odd, the first half is one node longer (the slow
+   * pointer starts one position behind {@code head} via the dummy header, so it stops one
+   * short of the true midpoint).
+   */
   private ListNode split(ListNode head) {
     ListNode dummy = new ListNode(-1, head);
     ListNode slow = dummy;
@@ -32,6 +47,12 @@ public class SortList {
     return left;
   }
 
+  /**
+   * Merges two sorted lists {@code a} and {@code b} into a single sorted list by re-linking
+   * their existing nodes in place; runs in {@code O(|a| + |b|)} time and {@code O(1)}
+   * auxiliary space (only the dummy header is allocated). Stable: when {@code a.val == b.val}
+   * the node from {@code a} is linked first.
+   */
   private ListNode merge(ListNode a, ListNode b) {
     ListNode dummy = new ListNode();
     ListNode tail = dummy;

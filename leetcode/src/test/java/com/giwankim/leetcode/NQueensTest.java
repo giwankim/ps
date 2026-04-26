@@ -69,11 +69,10 @@ class NQueensTest {
   // shape: every n=5 solution is a list of n strings, each of length n
   @Test
   void everyN5SolutionHasNRowsOfLengthN() {
-    assertThat(sut.solveNQueens(5))
-        .allSatisfy(board -> {
-          assertThat(board).hasSize(5);
-          assertThat(board).allSatisfy(row -> assertThat(row).hasSize(5));
-        });
+    assertThat(sut.solveNQueens(5)).allSatisfy(board -> {
+      assertThat(board).hasSize(5);
+      assertThat(board).allSatisfy(row -> assertThat(row).hasSize(5));
+    });
   }
 
   // alphabet & arity: every row has exactly one 'Q' and (n-1) '.' characters
@@ -101,8 +100,8 @@ class NQueensTest {
   private static void assertIsValidQueensPlacement(List<String> board) {
     int n = board.size();
     Set<Integer> cols = new HashSet<>();
-    Set<Integer> diag = new HashSet<>();      // row - col
-    Set<Integer> antiDiag = new HashSet<>();  // row + col
+    Set<Integer> diag = new HashSet<>(); // row - col
+    Set<Integer> antiDiag = new HashSet<>(); // row + col
     for (int row = 0; row < n; row++) {
       int col = board.get(row).indexOf('Q');
       assertThat(cols.add(col)).isTrue();

@@ -1,6 +1,7 @@
 package com.giwankim.leetcode;
 
 import com.giwankim.leetcode.support.ListNode;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MergeKSortedList {
@@ -12,7 +13,7 @@ public class MergeKSortedList {
    *     {@code offer} costs {@code O(log k)}.
    */
   public ListNode mergeKLists(ListNode[] lists) {
-    PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
+    PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
     for (ListNode list : lists) {
       if (list == null) {
         continue;
