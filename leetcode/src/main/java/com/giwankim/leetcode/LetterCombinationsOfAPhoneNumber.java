@@ -16,8 +16,14 @@ public class LetterCombinationsOfAPhoneNumber {
       '9', List.of('w', 'x', 'y', 'z'));
 
   /**
-   * @implNote Time {@code O(4^n * n)}, auxiliary space {@code O(n)}, where {@code n =
-   *     digits.length()}.
+   * @implNote Time {@code O(4^n * n)}, auxiliary space {@code O(n)} excluding
+   *     the output, where {@code n = digits.length()}.
+   *     <p>Each digit maps to 3 or 4 letters, so the recursion tree has at
+   *     most {@code 4^n} leaves; at each leaf we copy the shared
+   *     {@link StringBuilder} of length {@code n} into a new {@link String}
+   *     for {@code O(n)} work. Auxiliary space is the recursion depth
+   *     ({@code n}) plus that buffer; the output list itself occupies
+   *     {@code O(n * 4^n)} characters.
    */
   public List<String> letterCombinations(String digits) {
     List<String> result = new ArrayList<>();
