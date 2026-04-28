@@ -10,7 +10,10 @@ spotless {
     java {
         toggleOffOn()
         removeUnusedImports()
+        importOrder("java", "javax", "", "\\#")
         palantirJavaFormat(libs.versions.palantir.java.format.get()).style("GOOGLE")
         formatAnnotations()
+        trimTrailingWhitespace()
+        endWithNewline()
     }
 }
