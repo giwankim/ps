@@ -61,6 +61,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [28. Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string)
 * [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words)
 * [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array)
+* [35. Search Insert Position](https://leetcode.com/problems/search-insert-position)
 * [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku)
 * [39. Combination Sum](https://leetcode.com/problems/combination-sum)
 * [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive)
