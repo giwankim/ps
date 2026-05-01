@@ -5,13 +5,17 @@ import com.giwankim.leetcode.support.ListNode;
 public class SortList {
   /**
    * @implNote Time {@code O(n log n)}, space {@code O(log n)}, where {@code n} is the list
-   *     length. Top-down merge sort: each call halves the list with two-pointer traversal
+   *     length.
+   *     <p><b>Time:</b> top-down merge sort halves the list with two-pointer traversal
    *     ({@link #split}, {@code O(n)}), recurses on each half, and merges the two sorted
-   *     halves ({@link #merge}, {@code O(n)}). The recurrence {@code T(n) = 2 T(n/2) + O(n)}
-   *     solves to {@code O(n log n)} by the Master Theorem (balanced case, every level
-   *     does {@code O(n)} work across {@code log n} levels). Auxiliary space is the
-   *     recursion stack of depth {@code O(log n)}; the merge re-links the existing nodes
-   *     in place rather than allocating a buffer.
+   *     halves ({@link #merge}, {@code O(n)}), giving the recurrence
+   *     {@code T(n) = 2·T(n/2) + O(n)}. Applying the master theorem with {@code a = 2},
+   *     {@code b = 2}, {@code f(n) = O(n)}: {@code n^log_b(a) = n} matches {@code f(n)},
+   *     so case 2 gives {@code T(n) = Θ(n log n)} — equivalently, every level does
+   *     {@code O(n)} work across {@code log n} levels.
+   *     <p><b>Space:</b> auxiliary space is the recursion stack of depth {@code O(log n)};
+   *     {@link #merge} re-links existing nodes in place rather than allocating a buffer,
+   *     so no per-level scratch array is needed.
    */
   public ListNode sortList(ListNode head) {
     if (head == null || head.next == null) {
