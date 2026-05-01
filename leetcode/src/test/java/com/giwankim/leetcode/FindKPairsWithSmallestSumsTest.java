@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 
 class FindKPairsWithSmallestSumsTest {
@@ -127,12 +128,8 @@ class FindKPairsWithSmallestSumsTest {
   @Test
   void kAtUpperBoundReturnsFullCartesianProduct() {
     int n = 100;
-    int[] nums1 = new int[n];
-    int[] nums2 = new int[n];
-    for (int i = 0; i < n; i++) {
-      nums1[i] = i;
-      nums2[i] = i;
-    }
+    int[] nums1 = IntStream.range(0, n).toArray();
+    int[] nums2 = IntStream.range(0, n).toArray();
     int k = n * n; // 10_000 — constraint upper bound for k
 
     List<List<Integer>> expected = new ArrayList<>(k);
@@ -142,8 +139,7 @@ class FindKPairsWithSmallestSumsTest {
       }
     }
 
-    assertThat(sut.kSmallestPairs(nums1, nums2, k))
-        .containsExactlyInAnyOrderElementsOf(expected);
+    assertThat(sut.kSmallestPairs(nums1, nums2, k)).containsExactlyInAnyOrderElementsOf(expected);
   }
 
   // Step 15: nums1.length = 100_000 (the constraint upper bound for length) with a singleton
@@ -153,10 +149,7 @@ class FindKPairsWithSmallestSumsTest {
   @Test
   void lengthAtUpperBoundWithSingletonOtherAxis() {
     int m = 100_000;
-    int[] nums1 = new int[m];
-    for (int i = 0; i < m; i++) {
-      nums1[i] = i;
-    }
+    int[] nums1 = IntStream.range(0, m).toArray();
     int[] nums2 = {0};
     int k = 10_000;
 
@@ -165,7 +158,6 @@ class FindKPairsWithSmallestSumsTest {
       expected.add(List.of(i, 0));
     }
 
-    assertThat(sut.kSmallestPairs(nums1, nums2, k))
-        .containsExactlyInAnyOrderElementsOf(expected);
+    assertThat(sut.kSmallestPairs(nums1, nums2, k)).containsExactlyInAnyOrderElementsOf(expected);
   }
 }
