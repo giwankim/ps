@@ -5,26 +5,32 @@ import java.util.List;
 
 public class Combinations {
   /**
-   * @implNote Time {@code O(n! / (k! * (n - k)!))}, space {@code O(k)}.
+   * @implNote Time {@code O(k * C(n, k))}, auxiliary space {@code O(k)} excluding the output,
+   *     where {@code C(n, k) = n! / (k! * (n - k)!)}.
+   *     <p>The for-loop backtracking visits exactly {@code C(n, k)} leaves — one per
+   *     strictly-increasing length-{@code k} subsequence of {@code [1, n]} — and each leaf
+   *     snapshots the shared {@link ArrayList} into a fresh list for {@code O(k)} work, dominating
+   *     the running time. The {@code start = i + 1} advance ensures each combination is reached
+   *     exactly once. Auxiliary space is the recursion depth (capped at {@code k}, since the stack
+   *     only grows when a value is appended to {@code current}) plus the {@code O(k)}
+   *     {@code current} buffer; the output list itself holds {@code O(k * C(n, k))} integers.
    */
   public List<List<Integer>> combine(int n, int k) {
     List<List<Integer>> result = new ArrayList<>();
-    backtrack(0, n, k, new ArrayList<>(), result);
+    combination(n, k, 1, new ArrayList<>(), result);
     return result;
   }
 
-  private void backtrack(
-      int i, int n, int k, List<Integer> combination, List<List<Integer>> result) {
-    if (combination.size() == k) {
-      result.add(new ArrayList<>(combination));
+  private void combination(
+      int n, int k, int start, List<Integer> current, List<List<Integer>> result) {
+    if (current.size() == k) {
+      result.add(new ArrayList<>(current));
       return;
     }
-    if (i == n) {
-      return;
+    for (int i = start; i <= n; i++) {
+      current.add(i);
+      combination(n, k, i + 1, current, result);
+      current.removeLast();
     }
-    combination.add(i + 1);
-    backtrack(i + 1, n, k, combination, result);
-    combination.removeLast();
-    backtrack(i + 1, n, k, combination, result);
   }
 }
