@@ -15,10 +15,9 @@ public class MergeKSortedList {
   public ListNode mergeKLists(ListNode[] lists) {
     PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
     for (ListNode list : lists) {
-      if (list == null) {
-        continue;
+      if (list != null) {
+        pq.offer(list);
       }
-      pq.offer(list);
     }
 
     ListNode dummy = new ListNode();
