@@ -46,6 +46,8 @@ bin/
 
 ### Codex ###
 .codex/config.toml
+.omc/
+.omx/
 .worktrees/
 
 ### Firecrawl ###
