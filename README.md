@@ -212,6 +212,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
 * [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 * [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders)
+* [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)
 * [937. Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files)
 * [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)
 * [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges)
