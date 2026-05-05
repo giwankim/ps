@@ -9,6 +9,9 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/aws.xml
+.idea/awsToolkit.xml
+.idea/copilot.data.migration.*.xml
 *.iws
 *.iml
 *.ipr
