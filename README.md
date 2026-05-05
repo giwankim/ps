@@ -81,6 +81,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [61. Rotate List](https://leetcode.com/problems/rotate-list)
 * [62. Unique Paths](https://leetcode.com/problems/unique-paths)
 * [64. Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum)
+* [66. Plus One](https://leetcode.com/problems/plus-one)
 * [67. Add Binary](https://leetcode.com/problems/add-binary)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
 * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
