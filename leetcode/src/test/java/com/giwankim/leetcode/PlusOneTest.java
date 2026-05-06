@@ -62,7 +62,8 @@ class PlusOneTest {
     assertThat(sut.plusOne(new int[] {9, 9, 9})).containsExactly(1, 0, 0, 0);
   }
 
-  // Step 10: maximum constrained length confirms arbitrary-precision behavior without numeric overflow.
+  // Step 10: maximum constrained length confirms arbitrary-precision behavior without numeric
+  // overflow.
   @Test
   void maxLengthAllNinesExpandsToOneFollowedByZeros() {
     int[] digits = new int[100];
