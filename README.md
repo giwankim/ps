@@ -87,6 +87,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 * [71. Simplify Path](https://leetcode.com/problems/simplify-path)
 * [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)
+* [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
 * [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring)
 * [77. Combinations](https://leetcode.com/problems/combinations)
 * [79. Word Search](https://leetcode.com/problems/word-search)
