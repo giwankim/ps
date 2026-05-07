@@ -84,6 +84,7 @@ Update the Gradle wrapper (independent of the catalog):
 * [66. Plus One](https://leetcode.com/problems/plus-one)
 * [67. Add Binary](https://leetcode.com/problems/add-binary)
 * [68. Text Justification](https://leetcode.com/problems/text-justification)
+* [69. Sqrt(x)](https://leetcode.com/problems/sqrtx)
 * [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs)
 * [71. Simplify Path](https://leetcode.com/problems/simplify-path)
 * [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes)
