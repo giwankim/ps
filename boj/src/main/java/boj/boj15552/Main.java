@@ -8,13 +8,8 @@ import java.util.StringTokenizer;
 
 public class Main {
   public static void main(String[] args) throws IOException {
-    try (BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(System.out)) {
-      fastAPlusB(r, pw);
-    }
-  }
-
-  public static void fastAPlusB(BufferedReader r, PrintWriter pw) throws IOException {
+    BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+    PrintWriter pw = new PrintWriter(System.out);
     int T = Integer.parseInt(r.readLine());
     while (T-- > 0) {
       StringTokenizer st = new StringTokenizer(r.readLine());
@@ -22,5 +17,6 @@ public class Main {
       int b = Integer.parseInt(st.nextToken());
       pw.println(a + b);
     }
+    pw.close();
   }
 }

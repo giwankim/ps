@@ -10,14 +10,10 @@ public class Main {
   public static void main(String[] args) throws IOException {
     BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
     PrintWriter pw = new PrintWriter(System.out);
-    aPlusB(r, pw);
-    pw.close();
-  }
-
-  public static void aPlusB(BufferedReader r, PrintWriter pw) throws IOException {
     StringTokenizer st = new StringTokenizer(r.readLine());
     int a = Integer.parseInt(st.nextToken());
     int b = Integer.parseInt(st.nextToken());
     pw.println(a + b);
+    pw.close();
   }
 }
