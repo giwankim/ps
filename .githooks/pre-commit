@@ -8,22 +8,19 @@ if [ -z "$STAGED" ]; then
   exit 0
 fi
 
-HAS_JAVA_OR_KOTLIN=false
-echo "$STAGED" | grep -qE '\.(java|kts?)$' && HAS_JAVA_OR_KOTLIN=true
-
-if [ "$HAS_JAVA_OR_KOTLIN" = false ]; then
+if ! grep -qE '\.(java|kts?)$' <<<"$STAGED"; then
   echo "No staged Java/Kotlin files. Skipping checks."
   exit 0
 fi
 
-# Stash unstaged changes (including untracked) to check only what's staged
+# Hide unstaged tracked changes while checks run against the index.
 STASH_NAME="pre-commit-$(date +%s)"
 git stash push -q --keep-index -m "$STASH_NAME"
 STASHED=true
 
 restore_stash() {
   if [ "$STASHED" = true ]; then
-    git stash pop -q 2>/dev/null || true
+    git stash pop -q
     STASHED=false
   fi
 }

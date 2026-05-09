@@ -9,7 +9,7 @@ version-catalog-update = { id = "nl.littlerobots.version-catalog-update", versio
 [versions]
 allopen = "2.3.21"
 assertj = "3.27.7"
-benchmark = "0.4.16"
+benchmark = "0.4.17"
 java = "25"
 junit = "6.0.3"
 junit-pioneer = "2.3.0"
