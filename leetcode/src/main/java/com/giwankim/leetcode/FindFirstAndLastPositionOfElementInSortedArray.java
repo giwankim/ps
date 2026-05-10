@@ -17,8 +17,7 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
       if (nums[mid] == target) {
         result = mid;
         hi = mid - 1;
-      }
-      else if (nums[mid] > target) {
+      } else if (nums[mid] > target) {
         hi = mid - 1;
       } else {
         lo = mid + 1;
