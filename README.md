@@ -107,6 +107,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 * [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation)
 * [151. Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string)
 * [155. Min Stack](https://leetcode.com/problems/min-stack)
+* [162. Find Peak Element](https://leetcode.com/problems/find-peak-element)
 * [167. Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted)
 * [169. Majority Element](https://leetcode.com/problems/majority-element)
 * [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator)
