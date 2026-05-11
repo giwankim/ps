@@ -17,6 +17,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 * [1. Two Sum](https://leetcode.com/problems/two-sum)
 * [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
 * [3. Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
+* [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)
 * [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion)
 * [11. Container with Most Water](https://leetcode.com/problems/container-with-most-water)
 * [12. Integer to Roman](https://leetcode.com/problems/integer-to-roman)
