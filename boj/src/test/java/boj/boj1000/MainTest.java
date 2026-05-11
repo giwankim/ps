@@ -10,21 +10,21 @@ import org.junitpioneer.jupiter.StdOut;
 class MainTest {
   @Test
   @StdIo("1 2")
-  void aPlusB_smallDigits(StdOut out) throws IOException {
+  void smallDigits(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("3");
   }
 
   @Test
   @StdIo("1 1")
-  void aPlusB_minBoundary(StdOut out) throws IOException {
+  void minBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("2");
   }
 
   @Test
   @StdIo("9 9")
-  void aPlusB_maxSingleDigits(StdOut out) throws IOException {
+  void maxSingleDigits(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("18");
   }

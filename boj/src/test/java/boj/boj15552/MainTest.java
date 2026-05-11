@@ -10,28 +10,28 @@ import org.junitpioneer.jupiter.StdOut;
 class MainTest {
   @Test
   @StdIo({"5", "1 1", "12 34", "5 500", "40 60", "1000 1000"})
-  void fastAPlusB_sample(StdOut out) throws IOException {
+  void sample(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("2", "46", "505", "100", "2000");
   }
 
   @Test
   @StdIo({"1", "1 1"})
-  void fastAPlusB_singleCaseAtMinBoundary(StdOut out) throws IOException {
+  void singleCaseAtMinBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("2");
   }
 
   @Test
   @StdIo({"1", "1000 1000"})
-  void fastAPlusB_singleCaseAtMaxBoundary(StdOut out) throws IOException {
+  void singleCaseAtMaxBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("2000");
   }
 
   @Test
   @StdIo({"3", "1 999", "999 1", "123 456"})
-  void fastAPlusB_printsEachSumInInputOrder(StdOut out) throws IOException {
+  void printsEachSumInInputOrder(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedLines()).containsExactly("1000", "1000", "579");
   }

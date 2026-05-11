@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 class MainTest {
   @Test
-  void today_sampleFormat() {
+  void sampleFormat() {
     BufferedReader r = new BufferedReader(new StringReader(""));
     StringWriter out = new StringWriter();
     PrintWriter pw = new PrintWriter(out);
@@ -27,7 +27,7 @@ class MainTest {
   }
 
   @Test
-  void today_formatsSingleDigitMonthAndDayWithLeadingZeroes() {
+  void formatsSingleDigitMonthAndDayWithLeadingZeroes() {
     BufferedReader r = new BufferedReader(new StringReader(""));
     StringWriter out = new StringWriter();
     PrintWriter pw = new PrintWriter(out);
@@ -40,7 +40,7 @@ class MainTest {
   }
 
   @Test
-  void today_usesSeoulDateWhenUtcDateIsDifferent() {
+  void usesSeoulDateWhenUtcDateIsDifferent() {
     BufferedReader r = new BufferedReader(new StringReader(""));
     StringWriter out = new StringWriter();
     PrintWriter pw = new PrintWriter(out);
