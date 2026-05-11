@@ -229,6 +229,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 * [2557. Hello World](https://www.acmicpc.net/problem/2557)
 * [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
 * [15552. 빠른 A + B](https://www.acmicpc.net/problem/15552)
+* [17945. 통학의 신](https://www.acmicpc.net/problem/17945)
 
 ## [USACO](https://usaco.org/index.php)
 
