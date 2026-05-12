@@ -12,20 +12,20 @@ class MainTest {
   @StdIo("1 2")
   void smallDigits(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   @Test
   @StdIo("1 1")
   void minBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("2");
+    assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
   @Test
   @StdIo("9 9")
   void maxSingleDigits(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("18");
+    assertThat(out.capturedString().trim()).isEqualTo("18");
   }
 }

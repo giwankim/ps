@@ -19,14 +19,14 @@ class MainTest {
   @StdIo({"1", "1 1"})
   void singleCaseAtMinBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("2");
+    assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
   @Test
   @StdIo({"1", "1000 1000"})
   void singleCaseAtMaxBoundary(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("2000");
+    assertThat(out.capturedString().trim()).isEqualTo("2000");
   }
 
   @Test

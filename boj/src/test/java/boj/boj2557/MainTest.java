@@ -12,6 +12,6 @@ class MainTest {
   @StdIo
   void helloWorld(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(out.capturedLines()).containsExactly("Hello World!");
+    assertThat(out.capturedString().trim()).isEqualTo("Hello World!");
   }
 }
