@@ -1,9 +1,12 @@
 package com.giwankim.leetcode;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class KthLargestElementInAnArray {
-
+  /**
+   * @implNote Time {@code O(n log k)}, space {@code O(k)}, where {@code n = nums.length}.
+   */
   public int findKthLargest(int[] nums, int k) {
     PriorityQueue<Integer> pq = new PriorityQueue<>();
     for (int num : nums) {
@@ -13,5 +16,10 @@ public class KthLargestElementInAnArray {
       }
     }
     return pq.poll();
+  }
+
+  public int findKthLargest2(int[] nums, int k) {
+    Arrays.sort(nums);
+    return nums[nums.length - k];
   }
 }
