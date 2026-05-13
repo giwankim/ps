@@ -69,7 +69,9 @@ class KthLargestElementInAnArrayTest {
 
   @Test
   void boundaryValueExtremes() {
-    assertThat(sut.findKthLargest(new int[] {10000, -10000, 0, 10000, -10000}, 2)).isEqualTo(10000);
-    assertThat(sut.findKthLargest2(new int[] {10000, -10000, 0, 10000, -10000}, 2)).isEqualTo(10000);
+    assertThat(sut.findKthLargest(new int[] {10000, -10000, 0, 10000, -10000}, 2))
+        .isEqualTo(10000);
+    assertThat(sut.findKthLargest2(new int[] {10000, -10000, 0, 10000, -10000}, 2))
+        .isEqualTo(10000);
   }
 }
