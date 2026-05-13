@@ -1,34 +1,38 @@
 package com.giwankim.leetcode;
 
-import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class FindMedianFromDataStream {
-
   static class MedianFinder {
-
-    private Queue<Integer> topHeap;
-    private Queue<Integer> bottomHeap;
+    private final Queue<Integer> upper;
+    private final Queue<Integer> lower;
 
     public MedianFinder() {
-      topHeap = new PriorityQueue<>();
-      bottomHeap = new PriorityQueue<>(Collections.reverseOrder());
+      upper = new PriorityQueue<>();
+      lower = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
     }
 
+    /**
+     * @implNote Time {@code O(log n)}, space {@code O(1)} amortized, where {@code n} = number of
+     *     elements stored.
+     */
     public void addNum(int num) {
-      topHeap.offer(num);
-      bottomHeap.offer(topHeap.poll());
-      if (bottomHeap.size() > topHeap.size() + 1) {
-        topHeap.offer(bottomHeap.poll());
+      upper.offer(num);
+      lower.offer(upper.poll());
+      if (lower.size() > upper.size() + 1) {
+        upper.offer(lower.poll());
       }
     }
 
+    /**
+     * @implNote Time {@code O(1)}, space {@code O(1)}.
+     */
     public double findMedian() {
-      if (topHeap.size() == bottomHeap.size()) {
-        return (topHeap.peek() + bottomHeap.peek()) / 2.0;
+      if (lower.size() > upper.size()) {
+        return lower.peek();
       }
-      return bottomHeap.peek();
+      return (lower.peek() + upper.peek()) / 2.0;
     }
   }
 }
