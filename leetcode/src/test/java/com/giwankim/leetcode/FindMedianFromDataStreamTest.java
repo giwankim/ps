@@ -235,10 +235,9 @@ class FindMedianFromDataStreamTest {
       sut.addNum(nums[i]);
       int[] prefix = Arrays.copyOf(nums, i + 1);
       Arrays.sort(prefix);
-      double expected =
-          (prefix.length % 2 == 1)
-              ? prefix[prefix.length / 2]
-              : (prefix[prefix.length / 2 - 1] + prefix[prefix.length / 2]) / 2.0;
+      double expected = (prefix.length % 2 == 1)
+          ? prefix[prefix.length / 2]
+          : (prefix[prefix.length / 2 - 1] + prefix[prefix.length / 2]) / 2.0;
       assertThat(sut.findMedian())
           .as("after inserting %d values", i + 1)
           .isCloseTo(expected, within(TOLERANCE));
@@ -250,18 +249,16 @@ class FindMedianFromDataStreamTest {
   // implementation finishes in well under the timeout. Tune the bound if CI is noisy.
   @Test
   void handlesUpperBoundCallVolumeWithinTimeout() {
-    assertTimeoutPreemptively(
-        Duration.ofSeconds(2),
-        () -> {
-          Random rng = new Random(7);
-          for (int i = 0; i < 50_000; i++) {
-            sut.addNum(rng.nextInt(200_001) - 100_000);
-            if ((i & 1023) == 0) {
-              sut.findMedian();
-            }
-          }
+    assertTimeoutPreemptively(Duration.ofSeconds(2), () -> {
+      Random rng = new Random(7);
+      for (int i = 0; i < 50_000; i++) {
+        sut.addNum(rng.nextInt(200_001) - 100_000);
+        if ((i & 1023) == 0) {
           sut.findMedian();
-        });
+        }
+      }
+      sut.findMedian();
+    });
   }
 
   private void addAll(int... nums) {

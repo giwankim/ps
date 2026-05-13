@@ -1,5 +1,6 @@
 package com.giwankim.leetcode;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -10,7 +11,7 @@ public class FindMedianFromDataStream {
 
     public MedianFinder() {
       upper = new PriorityQueue<>();
-      lower = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+      lower = new PriorityQueue<>(Comparator.reverseOrder());
     }
 
     /**
@@ -18,9 +19,11 @@ public class FindMedianFromDataStream {
      *     elements stored.
      */
     public void addNum(int num) {
-      upper.offer(num);
-      lower.offer(upper.poll());
-      if (lower.size() > upper.size() + 1) {
+      if (lower.size() == upper.size()) {
+        upper.offer(num);
+        lower.offer(upper.poll());
+      } else {
+        lower.offer(num);
         upper.offer(lower.poll());
       }
     }
@@ -29,10 +32,10 @@ public class FindMedianFromDataStream {
      * @implNote Time {@code O(1)}, space {@code O(1)}.
      */
     public double findMedian() {
-      if (lower.size() > upper.size()) {
-        return lower.peek();
+      if (lower.size() == upper.size()) {
+        return (lower.peek() + upper.peek()) / 2.0;
       }
-      return (lower.peek() + upper.peek()) / 2.0;
+      return lower.peek();
     }
   }
 }
