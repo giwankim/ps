@@ -41,7 +41,8 @@ public class IPO {
     }
     byCapital.sort((a, b) -> Integer.compare(capital[a], capital[b]));
 
-    PriorityQueue<Integer> byProfit = new PriorityQueue<>((a, b) -> Integer.compare(profits[b], profits[a]));
+    PriorityQueue<Integer> byProfit =
+        new PriorityQueue<>((a, b) -> Integer.compare(profits[b], profits[a]));
     int next = 0;
     while (k-- > 0) {
       while (next < n && capital[byCapital.get(next)] <= w) {

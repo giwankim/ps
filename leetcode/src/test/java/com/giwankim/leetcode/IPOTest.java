@@ -31,7 +31,8 @@ class IPOTest {
   void stopsAtKEvenWhenMoreProjectsAvailable() {
     assertThat(sut.findMaximizedCapital(1, 0, new int[] {5, 4, 3, 2, 1}, new int[] {0, 0, 0, 0, 0}))
         .isEqualTo(5);
-    assertThat(sut.findMaximizedCapital2(1, 0, new int[] {5, 4, 3, 2, 1}, new int[] {0, 0, 0, 0, 0}))
+    assertThat(
+            sut.findMaximizedCapital2(1, 0, new int[] {5, 4, 3, 2, 1}, new int[] {0, 0, 0, 0, 0}))
         .isEqualTo(5);
   }
 
