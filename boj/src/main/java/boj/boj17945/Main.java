@@ -14,7 +14,7 @@ public class Main {
     int a = Integer.parseInt(st.nextToken());
     int b = Integer.parseInt(st.nextToken());
     StringBuilder sb = new StringBuilder();
-    for (int x = -2000; x <= 2000; x++) {
+    for (int x = -1000; x <= 1000; x++) {
       if (x * x + 2 * a * x + b == 0) {
         sb.append(x).append(" ");
       }
