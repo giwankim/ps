@@ -229,6 +229,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 - [1000. A+B](https://www.acmicpc.net/problem/1000)
 - [1090. 체커](https://www.acmicpc.net/problem/1090)
+- [2503. 숫자 야구](https://www.acmicpc.net/problem/2503)
 - [2557. Hello World](https://www.acmicpc.net/problem/2557)
 - [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
 - [14400. 편의점 2](https://www.acmicpc.net/problem/14400)
