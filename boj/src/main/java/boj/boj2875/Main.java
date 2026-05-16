@@ -9,13 +9,11 @@ public class Main {
     int m = sc.nextInt();
     int k = sc.nextInt();
     int result = 0;
-    for (int i = 0; i <= k && i <= n; i++) {
-      for (int j = 0; j <= k - i && j <= m; j++) {
-        if (i + j != k) {
-          continue;
-        }
-        result = Math.max(result, Math.min((n - i) / 2, m - j));
+    for (int t = 1; t <= 50; t++) {
+      if (2 * t > n || t > m || n + m - 3 * t < k) {
+        continue;
       }
+      result = t;
     }
     System.out.println(result);
   }
