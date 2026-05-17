@@ -230,6 +230,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1000. A+B](https://www.acmicpc.net/problem/1000)
 - [1090. 체커](https://www.acmicpc.net/problem/1090)
 - [2309. 일곱 난쟁이](https://www.acmicpc.net/problem/2309)
+- [2435. 기상청 인턴 신현수](https://www.acmicpc.net/problem/2435)
 - [2503. 숫자 야구](https://www.acmicpc.net/problem/2503)
 - [2557. Hello World](https://www.acmicpc.net/problem/2557)
 - [2875. 대회 or 인턴](https://www.acmicpc.net/problem/2875)
