@@ -1,4 +1,4 @@
-import org.gradle.accessors.dm.LibrariesForLibs
+import org.gradle.api.artifacts.VersionCatalogsExtension
 
 plugins {
     id("java")
@@ -6,9 +6,11 @@ plugins {
     id("ps.spotless-conventions")
 }
 
-val libs = the<LibrariesForLibs>()
+val libs = the<VersionCatalogsExtension>().named("libs")
 
 dependencies {
-    compileOnly(libs.lombok)
-    annotationProcessor(libs.lombok)
+    compileOnly(libs.findLibrary("lombok").get())
+    annotationProcessor(libs.findLibrary("lombok").get())
+    testCompileOnly(libs.findLibrary("lombok").get())
+    testAnnotationProcessor(libs.findLibrary("lombok").get())
 }

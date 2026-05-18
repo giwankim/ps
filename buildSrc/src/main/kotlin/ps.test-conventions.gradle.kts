@@ -1,11 +1,11 @@
-import org.gradle.accessors.dm.LibrariesForLibs
+import org.gradle.api.artifacts.VersionCatalogsExtension
 
-val libs = the<LibrariesForLibs>()
+val libs = the<VersionCatalogsExtension>().named("libs")
 
 dependencies {
-    "testImplementation"(libs.junit.jupiter)
-    "testImplementation"(libs.junit.pioneer)
-    "testImplementation"(libs.assertj.core)
+    "testImplementation"(libs.findLibrary("junit-jupiter").get())
+    "testImplementation"(libs.findLibrary("junit-pioneer").get())
+    "testImplementation"(libs.findLibrary("assertj-core").get())
 }
 
 tasks.withType<Test> {

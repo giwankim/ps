@@ -1,4 +1,4 @@
-import org.gradle.accessors.dm.LibrariesForLibs
+import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -7,10 +7,10 @@ plugins {
     id("ps.ktlint-conventions")
 }
 
-val libs = the<LibrariesForLibs>()
+val libs = the<VersionCatalogsExtension>().named("libs")
 
 dependencies {
-    testImplementation(libs.kotest)
+    testImplementation(libs.findLibrary("kotest").get())
 }
 
 tasks.withType<KotlinCompile>().configureEach {
