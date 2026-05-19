@@ -1,42 +1,30 @@
 package boj.boj1417;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int n = sc.nextInt();
-    int[] votes = new int[n];
-    for (int i = 0; i < n; i++) {
+    int dasom = sc.nextInt();
+    int[] votes = new int[n - 1];
+    for (int i = 0; i + 1 < n; i++) {
       votes[i] = sc.nextInt();
     }
 
+    if (n == 1) {
+      System.out.println(0);
+      return;
+    }
+    Arrays.sort(votes);
     int result = 0;
-    while (!isStrictlyAhead(votes)) {
-      int maxIndex = getMaxIndex(votes);
-      votes[maxIndex]--;
-      votes[0]++;
+    while (dasom <= votes[n - 2]) {
+      dasom++;
+      votes[n - 2]--;
       result++;
+      Arrays.sort(votes);
     }
     System.out.println(result);
-  }
-
-  private static boolean isStrictlyAhead(int[] nums) {
-    for (int i = 1; i < nums.length; i++) {
-      if (nums[0] <= nums[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private static int getMaxIndex(int[] nums) {
-    int result = -1;
-    for (int i = 1; i < nums.length; i++) {
-      if (result == -1 || nums[i] > nums[result]) {
-        result = i;
-      }
-    }
-    return result;
   }
 }

@@ -152,7 +152,8 @@ class MainTest {
 
   // --- Degenerate: multiple pillars stacked at the same position. ---
 
-  @Disabled("The problem statement doesn't specify how to handle this case, but the solution should at least be consistent and not crash.")
+  @Disabled(
+      "The problem statement doesn't specify how to handle this case, but the solution should at least be consistent and not crash.")
   @Test
   @StdIo({"3", "2 5", "2 9", "2 1"})
   void duplicatePositionKeepsOnlyTheTallestColumn(StdOut out) throws IOException {
