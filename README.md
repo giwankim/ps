@@ -243,6 +243,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2875. 대회 or 인턴](https://www.acmicpc.net/problem/2875)
 - [6131. 완전 제곱수](https://www.acmicpc.net/problem/6131)
 - [9417. 최대 GCD](https://www.acmicpc.net/problem/9417)
+- [10655. 마라톤 1](https://www.acmicpc.net/problem/10655)
 - [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
 - [14400. 편의점 2](https://www.acmicpc.net/problem/14400)
 - [14568. 2017 연세대학교 프로그래밍 경시대회](https://www.acmicpc.net/problem/14568)
