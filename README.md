@@ -252,6 +252,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [16283. Farm](https://www.acmicpc.net/problem/16283)
 - [16955. 오목, 이길 수 있을까?](https://www.acmicpc.net/problem/16955)
 - [17252. 삼삼한 수](https://www.acmicpc.net/problem/17252)
+- [17286. 유미](https://www.acmicpc.net/problem/17286)
 - [17945. 통학의 신](https://www.acmicpc.net/problem/17945)
 - [18310. 안테나](https://www.acmicpc.net/problem/18310)
 - [19532. 수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532)
