@@ -34,9 +34,7 @@ public class Main {
           double tourDistance = hypot(x, y, xs[i], ys[i])
               + hypot(xs[i], ys[i], xs[j], ys[j])
               + hypot(xs[j], ys[j], xs[k], ys[k]);
-          result = Math.min(
-              result,
-              tourDistance);
+          result = Math.min(result, tourDistance);
         }
       }
     }
