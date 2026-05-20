@@ -26,7 +26,9 @@ public class Main {
 
       int result = total;
       for (int i = 1; i + 1 < n; i++) {
-        int gain = distance(xs[i - 1], ys[i - 1], xs[i], ys[i]) + distance(xs[i], ys[i], xs[i + 1], ys[i + 1]) - distance(xs[i - 1], ys[i - 1], xs[i + 1], ys[i + 1]);
+        int gain = distance(xs[i - 1], ys[i - 1], xs[i], ys[i])
+            + distance(xs[i], ys[i], xs[i + 1], ys[i + 1])
+            - distance(xs[i - 1], ys[i - 1], xs[i + 1], ys[i + 1]);
         result = Math.min(result, total - gain);
       }
       pw.println(result);
