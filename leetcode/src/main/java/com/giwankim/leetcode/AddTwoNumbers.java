@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class AddTwoNumbers {
-  /**
-   * @implNote Time {@code O(max(m,n))}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(max(m,n))}, space {@code O(1)}. */
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
     ListNode dummy = new ListNode();
     int carry = 0;

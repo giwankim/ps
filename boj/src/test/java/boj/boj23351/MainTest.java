@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 23351 물 주기 (Watering Plants).
- */
+/** BOJ 23351 물 주기 (Watering Plants). */
 class MainTest {
 
   // --- Published sample 1: N=6, K=3, A=2, B=2. Three groups of two pots each. The keeper keeps

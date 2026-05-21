@@ -7,9 +7,7 @@ import java.util.Map;
 public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
   private int preIndex = 0;
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public TreeNode buildTree(int[] preorder, int[] inorder) {
     Map<Integer, Integer> inorderIndex = new HashMap<>();
     for (int i = 0; i < inorder.length; i++) {

@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.TreeNode;
 
 public class PathSum {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(h)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(h)}. */
   public boolean hasPathSum(TreeNode root, int targetSum) {
     if (root == null) {
       return false;

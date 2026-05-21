@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class HappyNumber {
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}. */
   public boolean isHappy(int n) {
     int fast = n;
     int slow = n;

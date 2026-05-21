@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class AddBinary {
-  /**
-   * @implNote Time {@code O(|a| + |b|)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(|a| + |b|)}, space {@code O(1)}. */
   public String addBinary(String a, String b) {
     StringBuilder sb = new StringBuilder();
     int i = a.length() - 1;

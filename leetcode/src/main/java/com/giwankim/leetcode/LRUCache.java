@@ -4,9 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/**
- * @implNote Time {@code O(1)}, space {@code O(capacity)}.
- */
+/** @implNote Time {@code O(1)}, space {@code O(capacity)}. */
 public class LRUCache {
   private final Map<Integer, Integer> cache;
 

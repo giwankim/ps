@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class Sqrt {
-  /**
-   * @implNote Time {@code O(log x)}, space {@code O(1)}, where {@code x} is the input value.
-   */
+  /** @implNote Time {@code O(log x)}, space {@code O(1)}, where {@code x} is the input value. */
   public int mySqrt(int x) {
     long lo = 0;
     long hi = x + 1L;
@@ -18,9 +16,7 @@ public class Sqrt {
     return Math.toIntExact(lo - 1);
   }
 
-  /**
-   * @implNote Time {@code O(log x)}, space {@code O(1)}, where {@code x} is the input value.
-   */
+  /** @implNote Time {@code O(log x)}, space {@code O(1)}, where {@code x} is the input value. */
   public int mySqrt2(int x) {
     int result = 0;
     int lo = 0;

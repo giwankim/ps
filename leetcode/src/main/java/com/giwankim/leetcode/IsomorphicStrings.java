@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class IsomorphicStrings {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean isIsomorphic(String s, String t) {
     int[] st = new int[256];
     int[] ts = new int[256];

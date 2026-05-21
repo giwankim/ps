@@ -12,9 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 14718 용감한 용사 진수 (Brave warrior Jinsu).
- */
+/** BOJ 14718 용감한 용사 진수 (Brave warrior Jinsu). */
 class MainTest {
 
   // --- Official samples. ---

@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SpiralMatrix {
-  /**
-   * @implNote Time {@code O(mn)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(mn)}, space {@code O(1)}. */
   public List<Integer> spiralOrder(int[][] matrix) {
     List<Integer> result = new ArrayList<>();
     int left = 0;

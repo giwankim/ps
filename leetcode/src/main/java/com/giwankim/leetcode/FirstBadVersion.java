@@ -8,11 +8,10 @@ class VersionControl {
 
 public class FirstBadVersion extends VersionControl {
   /**
-   * <p>Time complexity: {@code O(log n)} — the search window halves each
-   * iteration.
+   * Time complexity: {@code O(log n)} — the search window halves each iteration.
    *
-   * <p>Space complexity: {@code O(1)} — only the {@code lo}, {@code hi}, and
-   * {@code mid} indices are tracked.
+   * <p>Space complexity: {@code O(1)} — only the {@code lo}, {@code hi}, and {@code mid} indices
+   * are tracked.
    */
   public int firstBadVersion(int n) {
     int lo = 1;

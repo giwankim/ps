@@ -2,8 +2,7 @@ package com.giwankim.leetcode;
 
 public class MaximumSubarray {
   /**
-   * @implNote Time {@code O(n)}, auxiliary space {@code O(1)},
-   *     where {@code n = nums.length}.
+   * @implNote Time {@code O(n)}, auxiliary space {@code O(1)}, where {@code n = nums.length}.
    *     Recurrence: {@code T(n) = T(n - 1) + Θ(1) = Θ(n)} (telescoping).
    */
   public int maxSubArray(int[] nums) {
@@ -18,9 +17,9 @@ public class MaximumSubarray {
 
   /**
    * @implNote Time {@code O(n log n)} via divide-and-conquer with a linear cross-boundary scan;
-   *     recursion depth {@code O(log n)}, where {@code n = nums.length}.
-   *     Recurrence: {@code T(n) = 2·T(n/2) + Θ(n) = Θ(n log n)} by the Master Theorem (case 2,
-   *     since {@code f(n) = Θ(n) = Θ(n^(log_2 2))}).
+   *     recursion depth {@code O(log n)}, where {@code n = nums.length}. Recurrence: {@code T(n) =
+   *     2·T(n/2) + Θ(n) = Θ(n log n)} by the Master Theorem (case 2, since {@code f(n) = Θ(n) =
+   *     Θ(n^(log_2 2))}).
    */
   public int maxSubArray2(int[] nums) {
     return maxSubArray2(nums, 0, nums.length - 1);

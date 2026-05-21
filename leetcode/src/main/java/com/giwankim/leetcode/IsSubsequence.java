@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class IsSubsequence {
-  /**
-   * @implNote Time {@code O(m)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(m)}, space {@code O(1)}. */
   public boolean isSubsequence(String s, String t) {
     int i = 0;
     for (int j = 0; i < s.length() && j < t.length(); j++) {

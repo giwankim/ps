@@ -6,9 +6,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 public class CopyListWithRandomPointer {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public Node copyRandomList(Node head) {
     Map<Node, Node> map = new IdentityHashMap<>();
     for (Node it = head; it != null; it = it.next) {

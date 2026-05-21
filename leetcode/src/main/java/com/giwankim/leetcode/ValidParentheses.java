@@ -7,9 +7,7 @@ import java.util.Map;
 public class ValidParentheses {
   private static Map<Character, Character> MAP = Map.of(')', '(', ']', '[', '}', '{');
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isValid(String s) {
     Deque<Character> stack = new ArrayDeque<>();
     for (char c : s.toCharArray()) {

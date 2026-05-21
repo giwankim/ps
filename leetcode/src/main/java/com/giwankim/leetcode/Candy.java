@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class Candy {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int candy(int[] ratings) {
     int[] candies = new int[ratings.length];
     Arrays.fill(candies, 1);

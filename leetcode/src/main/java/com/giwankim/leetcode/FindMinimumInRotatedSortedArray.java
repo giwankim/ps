@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class FindMinimumInRotatedSortedArray {
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int findMin(int[] nums) {
     int result = -1;
     int lo = 0;

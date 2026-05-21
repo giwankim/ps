@@ -8,9 +8,7 @@ public class KthSmallestElementInABST {
   private int count;
   private int val;
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int kthSmallest(TreeNode root, int k) {
     count = 0;
     inorder(root, k);
@@ -30,9 +28,7 @@ public class KthSmallestElementInABST {
     inorder(root.right, k);
   }
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int kthSmallest2(TreeNode root, int k) {
     Deque<TreeNode> stack = new ArrayDeque<>();
     pushAllLeft(root, stack);

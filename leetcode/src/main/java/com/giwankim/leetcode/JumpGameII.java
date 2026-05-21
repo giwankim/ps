@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class JumpGameII {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int jump(int[] nums) {
     int jumps = 0;
     int right = 0;

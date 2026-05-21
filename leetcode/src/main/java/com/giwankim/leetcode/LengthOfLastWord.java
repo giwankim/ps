@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class LengthOfLastWord {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int lengthOfLastWord(String s) {
     int length = 0;
     int i = s.length() - 1;

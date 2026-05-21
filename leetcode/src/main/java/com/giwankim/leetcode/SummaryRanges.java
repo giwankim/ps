@@ -5,9 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class SummaryRanges {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public List<String> summaryRanges(int[] nums) {
     if (nums.length == 0) {
       return Collections.emptyList();

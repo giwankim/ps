@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class SearchInRotatedSortedArray {
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int search(int[] nums, int target) {
     int minIndex = findMinIndex(nums);
     int leftResult = Arrays.binarySearch(nums, 0, minIndex, target);

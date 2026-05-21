@@ -20,12 +20,11 @@ import org.junitpioneer.jupiter.StdOut;
  * positions coincide, so every leg has strictly positive length and the answer is always at least
  * 3.
  *
- * <p>The "truncate, don't round" rule comes straight from the problem statement
- * ("소수점 이하는 버리고 정수만 출력한다"); two independent Korean writeups also call out that the
- * truncation must be applied to the final summed distance and not to each leg, since per-leg
- * truncation drops enough precision to flip answers. Every expected value below is hand-derived
- * against that model and cross-checked against two independent problem mirrors (acmicpc.net being
- * offline at authoring time).
+ * <p>The "truncate, don't round" rule comes straight from the problem statement ("소수점 이하는 버리고 정수만
+ * 출력한다"); two independent Korean writeups also call out that the truncation must be applied to the
+ * final summed distance and not to each leg, since per-leg truncation drops enough precision to
+ * flip answers. Every expected value below is hand-derived against that model and cross-checked
+ * against two independent problem mirrors (acmicpc.net being offline at authoring time).
  */
 class MainTest {
 

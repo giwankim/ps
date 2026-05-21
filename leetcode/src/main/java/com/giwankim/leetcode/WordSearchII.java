@@ -9,8 +9,8 @@ public class WordSearchII {
 
   /**
    * @implNote Time {@code O(W + m * n * 4 * 3^(L - 1))}, space {@code O(W)}.
-   *     <p>{@code m} x {@code n} = board dimensions, {@code L} = length of the
-   *     longest word, {@code W} = sum of lengths of all words.
+   *     <p>{@code m} x {@code n} = board dimensions, {@code L} = length of the longest word,
+   *     {@code W} = sum of lengths of all words.
    */
   public List<String> findWords(char[][] board, String[] words) {
     Set<String> result = new HashSet<>();

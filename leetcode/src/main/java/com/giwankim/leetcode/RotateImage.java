@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class RotateImage {
-  /**
-   * @implNote Time {@code O(n^2)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n^2)}, space {@code O(1)}. */
   public void rotate(int[][] matrix) {
     transpose(matrix);
     reverse(matrix);

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class JumpGame {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean canJump(int[] nums) {
     int farthest = 0;
     for (int i = 0; i < nums.length; i++) {

@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class SearchInsertPosition {
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int searchInsert(int[] nums, int target) {
     int lo = 0;
     int hi = nums.length;
@@ -20,10 +18,7 @@ public class SearchInsertPosition {
     return lo;
   }
 
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}, where
-   *     {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int searchInsert2(int[] nums, int target) {
     int index = Arrays.binarySearch(nums, target);
     return index >= 0 ? index : -index - 1;

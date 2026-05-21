@@ -2,9 +2,7 @@ package com.giwankim.grind75;
 
 public class MajorityElement {
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int majorityElement(int[] nums) {
     int result = Integer.MIN_VALUE;
     int count = 0;

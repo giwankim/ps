@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 2082 시계 (Clock).
- */
+/** BOJ 2082 시계 (Clock). */
 class MainTest {
 
   // --- The three samples published with the problem. ---

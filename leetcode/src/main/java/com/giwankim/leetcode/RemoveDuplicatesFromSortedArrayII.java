@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class RemoveDuplicatesFromSortedArrayII {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int removeDuplicates(int[] nums) {
     int i = 1;
     int count = 1;

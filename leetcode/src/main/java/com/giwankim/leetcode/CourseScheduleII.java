@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 public class CourseScheduleII {
-  /**
-   * @implNote Time {@code O(n + m)}, space {@code O(n + m)}.
-   */
+  /** @implNote Time {@code O(n + m)}, space {@code O(n + m)}. */
   public int[] findOrder(int numCourses, int[][] prerequisites) {
     // graph (adjacency list)
     List<List<Integer>> adjList = new ArrayList<>(numCourses);

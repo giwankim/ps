@@ -2,7 +2,8 @@ package com.giwankim.leetcode;
 
 public class FindPeakElement {
   /**
-   * <p>Time: {@code O(log n)}.
+   * Time: {@code O(log n)}.
+   *
    * <p>Space: {@code O(1)}.
    */
   public int findPeakElement(int[] nums) {

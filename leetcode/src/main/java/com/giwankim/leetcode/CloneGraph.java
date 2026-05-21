@@ -5,9 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CloneGraph {
-  /**
-   * @implNote Time {@code O(n + m)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n + m)}, space {@code O(n)}. */
   public Node cloneGraph(Node node) {
     Map<Integer, Node> valToClone = new HashMap<>();
     return cloneGraph(node, valToClone);

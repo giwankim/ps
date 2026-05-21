@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 10655 마라톤 1 (Marathon 1, USACO 2014 December Bronze).
- */
+/** BOJ 10655 마라톤 1 (Marathon 1, USACO 2014 December Bronze). */
 class MainTest {
 
   // --- The single sample published with the problem. ---

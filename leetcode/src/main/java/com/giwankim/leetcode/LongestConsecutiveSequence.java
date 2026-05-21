@@ -5,9 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestConsecutiveSequence {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int longestConsecutive(int[] nums) {
     Set<Integer> set = new HashSet<>();
     for (int num : nums) {
@@ -27,9 +25,7 @@ public class LongestConsecutiveSequence {
     return result;
   }
 
-  /**
-   * @implNote Time {@code O(n log n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n log n)}, space {@code O(1)}. */
   public int longestConsecutive2(int[] nums) {
     if (nums.length == 0) {
       return 0;

@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.ListNode;
 
 public class LinkedListCycle {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean hasCycle(ListNode head) {
     ListNode slow = head;
     ListNode fast = head;

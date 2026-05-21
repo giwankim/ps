@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 7696 반복하지 않는 수 (Non-repeating numbers).
- */
+/** BOJ 7696 반복하지 않는 수 (Non-repeating numbers). */
 class MainTest {
 
   // --- The sentinel value 0 terminates input immediately and must not produce any output. ---

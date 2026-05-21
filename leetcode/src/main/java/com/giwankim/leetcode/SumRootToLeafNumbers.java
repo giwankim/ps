@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.TreeNode;
 
 public class SumRootToLeafNumbers {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int sumNumbers(TreeNode root) {
     return sumNumbers(root, 0);
   }

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class SetMatrixZeroes {
-  /**
-   * @implNote Time {@code O(mn)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(mn)}, space {@code O(1)}. */
   public void setZeroes(int[][] matrix) {
     boolean isFirstRow = false;
     for (int j = 0; j < matrix[0].length; j++) {

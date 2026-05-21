@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class RotateArray {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public void rotate(int[] nums, int k) {
     k = k % nums.length;
     reverse(nums, 0, nums.length - k - 1);

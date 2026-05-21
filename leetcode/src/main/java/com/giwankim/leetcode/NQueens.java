@@ -6,18 +6,16 @@ import java.util.List;
 
 public class NQueens {
   /**
-   * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of
-   * row-by-row placements — at most {@code n} choices for row 0,
-   * {@code n-1} for row 1 after column pruning, down to 1 — bounding
-   * the search at {@code n!} leaves. Each recursive call performs an
-   * {@code O(n)} attack check. Diagonal pruning makes practical runs
-   * much smaller than this bound but does not improve it asymptotically.
+   * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of row-by-row placements — at
+   * most {@code n} choices for row 0, {@code n-1} for row 1 after column pruning, down to 1 —
+   * bounding the search at {@code n!} leaves. Each recursive call performs an {@code O(n)} attack
+   * check. Diagonal pruning makes practical runs much smaller than this bound but does not improve
+   * it asymptotically.
    *
-   * <p><b>Space:</b> {@code O(n^2)} auxiliary, dominated by the
-   * {@code char[n][n]} working board; the recursion stack adds {@code O(n)}.
-   * The returned list is excluded — it can hold up to {@code O(S × n^2)}
-   * characters, where {@code S} is the number of valid placements
-   * ({@code S = 92} for {@code n = 8}).
+   * <p><b>Space:</b> {@code O(n^2)} auxiliary, dominated by the {@code char[n][n]} working board;
+   * the recursion stack adds {@code O(n)}. The returned list is excluded — it can hold up to
+   * {@code O(S × n^2)} characters, where {@code S} is the number of valid placements ({@code S =
+   * 92} for {@code n = 8}).
    */
   public List<List<String>> solveNQueens(int n) {
     List<List<String>> result = new ArrayList<>();

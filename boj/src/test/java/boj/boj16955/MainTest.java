@@ -10,11 +10,11 @@ import org.junitpioneer.jupiter.StdOut;
 /**
  * BOJ 16955 오목, 이길 수 있을까? (Omok, can I win?).
  *
- * <p>The input is a fixed 10x10 board where {@code '.'} is empty, {@code 'X'} is the player's stone,
- * and {@code 'O'} is the opponent's stone. The answer is {@code 1} iff there exists an empty cell
- * such that turning it into {@code 'X'} produces a run of <em>five or more</em> consecutive {@code
- * 'X'} stones horizontally, vertically, or along either diagonal; otherwise {@code 0}. Note the
- * rule is "five or more": an overline of six still wins, unlike strict Renju.
+ * <p>The input is a fixed 10x10 board where {@code '.'} is empty, {@code 'X'} is the player's
+ * stone, and {@code 'O'} is the opponent's stone. The answer is {@code 1} iff there exists an empty
+ * cell such that turning it into {@code 'X'} produces a run of <em>five or more</em> consecutive
+ * {@code 'X'} stones horizontally, vertically, or along either diagonal; otherwise {@code 0}. Note
+ * the rule is "five or more": an overline of six still wins, unlike strict Renju.
  *
  * <p>The board is always exactly 10 lines of 10 characters and there is no count line. Every
  * expected value below is hand-derived against that model and cross-checked across two independent

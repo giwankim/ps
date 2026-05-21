@@ -4,9 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class LongestSubstringWithoutRepeatingCharacters {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int lengthOfLongestSubstring(String s) {
     int result = 0;
     int i = 0;

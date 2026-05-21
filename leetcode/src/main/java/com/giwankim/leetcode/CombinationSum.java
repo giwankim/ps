@@ -6,12 +6,11 @@ import java.util.List;
 public class CombinationSum {
   /**
    * @implNote Time {@code O(N^(T/M + 1))}, space {@code O(T/M)} excluding the output, where
-   *     {@code N = candidates.length}, {@code T = target}, and {@code M = min(candidates)}.
-   *     Each recursive call branches by trying every remaining candidate (factor up to
-   *     {@code N}) and subtracts at least {@code M} from the target, capping the depth at
-   *     {@code T/M}; overshooting branches are discarded by the {@code target < 0} guard on
-   *     entry. Auxiliary space is the recursion stack plus the shared {@code current} list
-   *     of the same depth.
+   *     {@code N = candidates.length}, {@code T = target}, and {@code M = min(candidates)}. Each
+   *     recursive call branches by trying every remaining candidate (factor up to {@code N}) and
+   *     subtracts at least {@code M} from the target, capping the depth at {@code T/M};
+   *     overshooting branches are discarded by the {@code target < 0} guard on entry. Auxiliary
+   *     space is the recursion stack plus the shared {@code current} list of the same depth.
    */
   public List<List<Integer>> combinationSum(int[] candidates, int target) {
     List<List<Integer>> result = new ArrayList<>();

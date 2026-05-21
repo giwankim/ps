@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class FindKPairsWithSmallestSums {
-  /**
-   * @implNote Time {@code O(k log k)}, auxiliary space {@code O(k)} excluding the output.
-   */
+  /** @implNote Time {@code O(k log k)}, auxiliary space {@code O(k)} excluding the output. */
   public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
     List<List<Integer>> result = new ArrayList<>(k);
     PriorityQueue<int[]> minHeap =

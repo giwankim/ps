@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CourseSchedule {
-  /**
-   * @implNote Time {@code O(n + m)}, space {@code O(n + m)}.
-   */
+  /** @implNote Time {@code O(n + m)}, space {@code O(n + m)}. */
   public boolean canFinish(int numCourses, int[][] prerequisites) {
     // graph (adjacency list)
     List<List<Integer>> adjList = new ArrayList<>(numCourses);

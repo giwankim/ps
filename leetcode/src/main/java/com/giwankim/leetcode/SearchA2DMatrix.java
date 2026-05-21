@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class SearchA2DMatrix {
   /**
-   * <p>Time: {@code O(log m + log n) = O(log(m * n))}, where {@code m} is the number of rows
-   * and {@code n} is the number of columns.
+   * Time: {@code O(log m + log n) = O(log(m * n))}, where {@code m} is the number of rows and
+   * {@code n} is the number of columns.
    *
    * <p>Space: {@code O(1)}.
    */
@@ -28,8 +28,8 @@ public class SearchA2DMatrix {
   }
 
   /**
-   * <p>Time: {@code O(log(m * n))}, where {@code m} is the number of rows and {@code n} is
-   * the number of columns.
+   * Time: {@code O(log(m * n))}, where {@code m} is the number of rows and {@code n} is the number
+   * of columns.
    *
    * <p>Space: {@code O(1)}.
    */

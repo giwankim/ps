@@ -5,16 +5,14 @@ import java.util.List;
 
 public class Permutations {
   /**
-   * @implNote Time {@code O(n * n!)}, auxiliary space {@code O(n)} excluding
-   *     the output, where {@code n = nums.length}.
-   *     <p>The recursion tree branches by {@code (n - index)} at depth
-   *     {@code index}, yielding {@code n!} leaves; each leaf copies
-   *     {@code nums} into a fresh {@link ArrayList} for {@code O(n)} work,
-   *     dominating the running time. Auxiliary space is the recursion depth
-   *     ({@code n}) — the in-place swap reuses {@code nums} as the working
-   *     permutation, avoiding the "used" set or current-permutation buffer
-   *     the non-mutating form would need. The output list itself holds
-   *     {@code O(n * n!)} integers.
+   * @implNote Time {@code O(n * n!)}, auxiliary space {@code O(n)} excluding the output, where
+   *     {@code n = nums.length}.
+   *     <p>The recursion tree branches by {@code (n - index)} at depth {@code index}, yielding
+   *     {@code n!} leaves; each leaf copies {@code nums} into a fresh {@link ArrayList} for
+   *     {@code O(n)} work, dominating the running time. Auxiliary space is the recursion depth
+   *     ({@code n}) — the in-place swap reuses {@code nums} as the working permutation, avoiding
+   *     the "used" set or current-permutation buffer the non-mutating form would need. The output
+   *     list itself holds {@code O(n * n!)} integers.
    */
   public List<List<Integer>> permute(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
@@ -42,13 +40,12 @@ public class Permutations {
    *     loop at depth {@code d} scans all {@code n} indices and skips the {@code d} already-used
    *     ones, yielding {@code (n - d)} effective children — the same {@code n!} leaves as the
    *     swap-based form. Each leaf copies {@code current} into a fresh {@link ArrayList} for
-   *     {@code O(n)} work; this and the {@code O(n)} per-node loop scan each contribute
-   *     {@code O(n * n!)} total, the same overall bound as {@link #permute(int[])} but for a
-   *     different reason (the swap form's per-node loop is only {@code O(n!)} since it runs
-   *     {@code (n - d)} times rather than {@code n}). Auxiliary space is the {@code O(n)}
-   *     {@code used} array plus the {@code O(n)} {@code current} buffer plus the {@code O(n)}
-   *     recursion stack; the input array is left untouched. The output list itself holds
-   *     {@code O(n * n!)} integers.
+   *     {@code O(n)} work; this and the {@code O(n)} per-node loop scan each contribute {@code O(n
+   *     * n!)} total, the same overall bound as {@link #permute(int[])} but for a different reason
+   *     (the swap form's per-node loop is only {@code O(n!)} since it runs {@code (n - d)} times
+   *     rather than {@code n}). Auxiliary space is the {@code O(n)} {@code used} array plus the
+   *     {@code O(n)} {@code current} buffer plus the {@code O(n)} recursion stack; the input array
+   *     is left untouched. The output list itself holds {@code O(n * n!)} integers.
    */
   public List<List<Integer>> permute2(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();

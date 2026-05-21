@@ -5,9 +5,7 @@ import com.giwankim.leetcode.support.TreeNode;
 public class ValidateBinarySearchTree {
   private TreeNode prev;
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isValidBST(TreeNode root) {
     prev = null;
     return inorderIsValidBST(root);
@@ -27,9 +25,7 @@ public class ValidateBinarySearchTree {
     return inorderIsValidBST(root.right);
   }
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isValidBST2(TreeNode root) {
     return isValidBST2(root, Long.MIN_VALUE, Long.MAX_VALUE);
   }

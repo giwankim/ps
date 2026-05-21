@@ -2,7 +2,8 @@ package com.giwankim.leetcode;
 
 public class BitwiseAndOfNumbersRange {
   /**
-   * @implNote Time {@code O(k)}, space {@code O(1)}, where {@code k} is the number of set bits in {@code right}.
+   * @implNote Time {@code O(k)}, space {@code O(1)}, where {@code k} is the number of set bits in
+   *     {@code right}.
    */
   public int rangeBitwiseAnd(int left, int right) {
     while (left < right) {
@@ -11,9 +12,7 @@ public class BitwiseAndOfNumbersRange {
     return right;
   }
 
-  /**
-   * @implNote Time {@code O(log right)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(log right)}, space {@code O(1)}. */
   public int rangeBitwiseAnd2(int left, int right) {
     int shifts = 0;
     while (left < right) {

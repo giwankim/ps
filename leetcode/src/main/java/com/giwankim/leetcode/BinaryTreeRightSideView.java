@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTreeRightSideView {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public List<Integer> rightSideView(TreeNode root) {
     List<Integer> result = new ArrayList<>();
     rightSideView(root, result, 0);

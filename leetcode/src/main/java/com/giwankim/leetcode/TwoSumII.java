@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class TwoSumII {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int[] twoSum(int[] numbers, int target) {
     int i = 0;
     int j = numbers.length - 1;

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class ValidAnagram {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean isAnagram(String s, String t) {
     if (s.length() != t.length()) {
       return false;

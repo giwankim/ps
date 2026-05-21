@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import com.giwankim.leetcode.support.TreeNode;
 
 public class LowestCommonAncestorOfABinaryTree {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     if (root == null) {
       return null;

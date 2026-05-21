@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class ReverseBits {
-  /**
-   * @implNote Time {@code O(1)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(1)}, space {@code O(1)}. */
   public int reverseBits(int n) {
     int result = 0;
     for (int i = 0; i < 32; i++) {
@@ -14,9 +12,7 @@ public class ReverseBits {
     return result;
   }
 
-  /**
-   * @implNote Time {@code O(1)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(1)}, space {@code O(1)}. */
   public int reverseBits2(int n) {
     return Integer.reverse(n);
   }
@@ -36,9 +32,7 @@ public class ReverseBits {
     }
   }
 
-  /**
-   * @implNote Time {@code O(1)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(1)}, space {@code O(1)}. */
   public int reverseBits3(int n) {
     return REVERSED_BYTE[n & 0xFF] << 24
         | REVERSED_BYTE[(n >> 8) & 0xFF] << 16

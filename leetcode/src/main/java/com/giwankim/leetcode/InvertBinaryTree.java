@@ -5,9 +5,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class InvertBinaryTree {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(h)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(h)}. */
   public TreeNode invertTree(TreeNode root) {
     if (root == null) {
       return null;
@@ -18,9 +16,7 @@ public class InvertBinaryTree {
     return root;
   }
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public TreeNode invertTree2(TreeNode root) {
     if (root == null) {
       return null;

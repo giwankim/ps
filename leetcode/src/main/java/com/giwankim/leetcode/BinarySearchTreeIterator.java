@@ -5,9 +5,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class BinarySearchTreeIterator {
-  /**
-   * @implNote Time {@code O(n) (amortized O(1))}, space {@code O(h)}.
-   */
+  /** @implNote Time {@code O(n) (amortized O(1))}, space {@code O(h)}. */
   static class BSTIterator {
     private final Deque<TreeNode> stack = new ArrayDeque<>();
 

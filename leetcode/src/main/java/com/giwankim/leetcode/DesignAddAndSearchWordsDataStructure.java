@@ -8,9 +8,7 @@ public class DesignAddAndSearchWordsDataStructure {
       root = new Node();
     }
 
-    /**
-     * @implNote Time {@code O(m)}, space {@code O(m)}, where {@code m = word.length()}.
-     */
+    /** @implNote Time {@code O(m)}, space {@code O(m)}, where {@code m = word.length()}. */
     public void addWord(String word) {
       Node curr = root;
       for (char c : word.toCharArray()) {

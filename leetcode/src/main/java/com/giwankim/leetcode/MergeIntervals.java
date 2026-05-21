@@ -5,9 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class MergeIntervals {
-  /**
-   * @implNote Time {@code O(n log n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n log n)}, space {@code O(n)}. */
   public int[][] merge(int[][] intervals) {
     List<int[]> result = new ArrayList<>();
     Arrays.sort(intervals, (a, b) -> a[0] - b[0]);

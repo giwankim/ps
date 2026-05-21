@@ -18,9 +18,9 @@ import org.junitpioneer.jupiter.StdOut;
  *
  * <p>Each pillar at left-face position {@code L} with height {@code H} is a width-1 rectangle
  * covering column {@code [L, L+1)}. The minimal warehouse roof is the unimodal envelope; the area
- * of column {@code x} equals {@code min(maxH over L<=x, maxH over L>=x)}, summed over {@code x} from
- * the leftmost to the rightmost pillar. Every expected value below is hand-derived with that model
- * and cross-checked against an accepted jump-based reference solution.
+ * of column {@code x} equals {@code min(maxH over L<=x, maxH over L>=x)}, summed over {@code x}
+ * from the leftmost to the rightmost pillar. Every expected value below is hand-derived with that
+ * model and cross-checked against an accepted jump-based reference solution.
  */
 class MainTest {
 

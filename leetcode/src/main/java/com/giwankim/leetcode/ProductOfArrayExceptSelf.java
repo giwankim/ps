@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class ProductOfArrayExceptSelf {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int[] productExceptSelf(int[] nums) {
     int[] products = new int[nums.length];
     int prefix = 1;

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class PalindromeNumber {
-  /**
-   * @implNote Time {@code O(log_10(x))}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(log_10(x))}, space {@code O(1)}. */
   public boolean isPalindrome(int x) {
     if (x < 0) {
       return false;

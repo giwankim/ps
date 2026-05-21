@@ -4,9 +4,7 @@ public class GameOfLife {
   static int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
   static int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
-  /**
-   * @implNote Time {@code O(mn)}, space {@code O(mn)}.
-   */
+  /** @implNote Time {@code O(mn)}, space {@code O(mn)}. */
   public void gameOfLife(int[][] board) {
     int[][] result = new int[board.length][board[0].length];
     for (int i = 0; i < board.length; i++) {

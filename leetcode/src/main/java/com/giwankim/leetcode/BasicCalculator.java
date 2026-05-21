@@ -4,9 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class BasicCalculator {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int calculate(String s) {
     int result = 0;
     Deque<Integer> stack = new ArrayDeque<>();

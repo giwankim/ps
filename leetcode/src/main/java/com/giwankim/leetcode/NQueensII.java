@@ -2,15 +2,14 @@ package com.giwankim.leetcode;
 
 public class NQueensII {
   /**
-   * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of
-   * row-by-row placements — at most {@code n} choices for row 0,
-   * {@code n-1} for row 1 after column pruning, down to 1 — bounding
-   * the search at {@code n!} leaves. Each recursive call performs an
-   * {@code O(n)} attack check. Diagonal pruning makes practical runs
-   * much smaller than this bound but does not improve it asymptotically.
+   * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of row-by-row placements — at
+   * most {@code n} choices for row 0, {@code n-1} for row 1 after column pruning, down to 1 —
+   * bounding the search at {@code n!} leaves. Each recursive call performs an {@code O(n)} attack
+   * check. Diagonal pruning makes practical runs much smaller than this bound but does not improve
+   * it asymptotically.
    *
-   * <p><b>Space:</b> {@code O(n^2)}, dominated by the {@code boolean[n][n]}
-   * working board; the recursion stack adds {@code O(n)}.
+   * <p><b>Space:</b> {@code O(n^2)}, dominated by the {@code boolean[n][n]} working board; the
+   * recursion stack adds {@code O(n)}.
    */
   public int totalNQueens(int n) {
     return totalNQueens(new boolean[n][n], 0);
@@ -61,20 +60,16 @@ public class NQueensII {
   }
 
   /**
-   * <b>Time:</b> {@code O(n × n!)}. Same recursion shape as
-   * {@link #totalNQueens}: row-by-row placement bounds the search at
-   * {@code n!} leaves after column and diagonal pruning. The attack
-   * check here is {@code O(1)} — three array reads against
-   * {@code cols}, {@code diags}, and {@code antiDiags} — versus the
-   * {@code O(n)} {@code canPlace} sweep in {@link #totalNQueens}, but
-   * the per-call column loop is still {@code O(n)} so the asymptotic
-   * bound is unchanged. The hidden constant is meaningfully smaller
-   * in practice.
+   * <b>Time:</b> {@code O(n × n!)}. Same recursion shape as {@link #totalNQueens}: row-by-row
+   * placement bounds the search at {@code n!} leaves after column and diagonal pruning. The attack
+   * check here is {@code O(1)} — three array reads against {@code cols}, {@code diags}, and
+   * {@code antiDiags} — versus the {@code O(n)} {@code canPlace} sweep in {@link #totalNQueens},
+   * but the per-call column loop is still {@code O(n)} so the asymptotic bound is unchanged. The
+   * hidden constant is meaningfully smaller in practice.
    *
-   * <p><b>Space:</b> {@code O(n)}, dominated by the three
-   * {@code boolean[]} marker arrays — one of length {@code n} for
-   * columns and two of length {@code 2n − 1} for the diagonals; the
-   * recursion stack adds another {@code O(n)}.
+   * <p><b>Space:</b> {@code O(n)}, dominated by the three {@code boolean[]} marker arrays — one of
+   * length {@code n} for columns and two of length {@code 2n − 1} for the diagonals; the recursion
+   * stack adds another {@code O(n)}.
    */
   public int totalNQueens2(int n) {
     boolean[] cols = new boolean[n];

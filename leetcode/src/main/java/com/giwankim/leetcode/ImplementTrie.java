@@ -9,9 +9,7 @@ public class ImplementTrie {
       root = new Node();
     }
 
-    /**
-     * @implNote Time {@code O(m)}, space {@code O(m)}.
-     */
+    /** @implNote Time {@code O(m)}, space {@code O(m)}. */
     public void insert(String word) {
       Node curr = root;
       for (char c : word.toCharArray()) {
@@ -23,9 +21,7 @@ public class ImplementTrie {
       curr.isWord = true;
     }
 
-    /**
-     * @implNote Time {@code O(m)}, space {@code O(1)}.
-     */
+    /** @implNote Time {@code O(m)}, space {@code O(1)}. */
     public boolean search(String word) {
       Node curr = root;
       for (char c : word.toCharArray()) {
@@ -37,9 +33,7 @@ public class ImplementTrie {
       return curr.isWord;
     }
 
-    /**
-     * @implNote Time {@code O(m)}, space {@code O(1)}.
-     */
+    /** @implNote Time {@code O(m)}, space {@code O(1)}. */
     public boolean startsWith(String prefix) {
       Node curr = root;
       for (char c : prefix.toCharArray()) {

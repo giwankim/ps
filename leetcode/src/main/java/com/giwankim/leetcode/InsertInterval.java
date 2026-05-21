@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InsertInterval {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int[][] insert(int[][] intervals, int[] newInterval) {
     List<int[]> result = new ArrayList<>();
     int i = 0;

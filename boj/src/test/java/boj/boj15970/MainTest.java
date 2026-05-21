@@ -7,9 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 15970 화살표 그리기 (Drawing Arrows).
- */
+/** BOJ 15970 화살표 그리기 (Drawing Arrows). */
 class MainTest {
 
   // --- The published sample: a={0,c1}, b={1,c2}, c={3,c1}, d={4,c2}, e={5,c1}. Arrows from

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class HIndex {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int hIndex(int[] citations) {
     int n = citations.length;
     int[] counts = new int[n + 1];

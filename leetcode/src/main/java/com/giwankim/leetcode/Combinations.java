@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Combinations {
   /**
-   * @implNote Time {@code O(k * C(n, k))}, auxiliary space {@code O(k)} excluding the output,
-   *     where {@code C(n, k) = n! / (k! * (n - k)!)}.
+   * @implNote Time {@code O(k * C(n, k))}, auxiliary space {@code O(k)} excluding the output, where
+   *     {@code C(n, k) = n! / (k! * (n - k)!)}.
    *     <p>The for-loop backtracking visits exactly {@code C(n, k)} leaves — one per
    *     strictly-increasing length-{@code k} subsequence of {@code [1, n]} — and each leaf
    *     snapshots the shared {@link ArrayList} into a fresh list for {@code O(k)} work, dominating

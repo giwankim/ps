@@ -12,9 +12,7 @@ public class EvaluateReversePolishNotation {
       "*", (a, b) -> a * b,
       "/", (a, b) -> a / b);
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int evalRPN(String[] tokens) {
     Deque<Integer> operands = new ArrayDeque<>();
     for (String token : tokens) {

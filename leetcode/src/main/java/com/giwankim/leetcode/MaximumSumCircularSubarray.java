@@ -1,10 +1,7 @@
 package com.giwankim.leetcode;
 
 public class MaximumSumCircularSubarray {
-  /**
-   * @implNote Time {@code O(n)}, auxiliary space {@code O(1)},
-   *     where {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(n)}, auxiliary space {@code O(1)}, where {@code n = nums.length}. */
   public int maxSubarraySumCircular(int[] nums) {
     int maxSum = nums[0];
     int minSum = nums[0];

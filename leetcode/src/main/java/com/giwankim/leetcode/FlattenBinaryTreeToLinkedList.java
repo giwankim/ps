@@ -5,9 +5,7 @@ import com.giwankim.leetcode.support.TreeNode;
 public class FlattenBinaryTreeToLinkedList {
   private TreeNode prev = null;
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(h)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(h)}. */
   public void flatten(TreeNode root) {
     if (root == null) {
       return;

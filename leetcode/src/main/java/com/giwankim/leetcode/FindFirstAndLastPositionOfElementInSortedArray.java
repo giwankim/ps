@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class FindFirstAndLastPositionOfElementInSortedArray {
-  /**
-   * @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}.
-   */
+  /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int[] searchRange(int[] nums, int target) {
     return new int[] {firstIndexOf(nums, target), lastIndexOf(nums, target)};
   }

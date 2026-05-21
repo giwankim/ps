@@ -3,9 +3,7 @@ package com.giwankim.leetcode;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-/**
- * @implNote Time {@code O(1)}, space {@code O(n)}.
- */
+/** @implNote Time {@code O(1)}, space {@code O(n)}. */
 public class MinStack {
   private final Deque<Pair<Integer, Integer>> stack;
 

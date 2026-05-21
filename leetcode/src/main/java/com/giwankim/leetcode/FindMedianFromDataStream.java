@@ -28,9 +28,7 @@ public class FindMedianFromDataStream {
       }
     }
 
-    /**
-     * @implNote Time {@code O(1)}, space {@code O(1)}.
-     */
+    /** @implNote Time {@code O(1)}, space {@code O(1)}. */
     public double findMedian() {
       if (lower.size() == upper.size()) {
         return (lower.peek() + upper.peek()) / 2.0;

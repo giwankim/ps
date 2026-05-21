@@ -5,9 +5,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class IPO {
-  /**
-   * @implNote Time {@code O(n log n)}, space {@code O(n)}, where {@code n = profits.length}.
-   */
+  /** @implNote Time {@code O(n log n)}, space {@code O(n)}, where {@code n = profits.length}. */
   public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
     PriorityQueue<Integer> byProfit =
         new PriorityQueue<>((a, b) -> Integer.compare(profits[b], profits[a]));
@@ -29,9 +27,7 @@ public class IPO {
     return w;
   }
 
-  /**
-   * @implNote Time {@code O(n log n)}, space {@code O(n)}, where {@code n = profits.length}.
-   */
+  /** @implNote Time {@code O(n log n)}, space {@code O(n)}, where {@code n = profits.length}. */
   public int findMaximizedCapital2(int k, int w, int[] profits, int[] capital) {
     int n = profits.length;
 

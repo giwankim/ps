@@ -5,9 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class SymmetricTree {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isSymmetric(TreeNode root) {
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
@@ -32,9 +30,7 @@ public class SymmetricTree {
     return true;
   }
 
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(n)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isSymmetric2(TreeNode root) {
     return isMirror(root, root);
   }

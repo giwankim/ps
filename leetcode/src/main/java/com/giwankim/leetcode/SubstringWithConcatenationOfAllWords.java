@@ -6,9 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public class SubstringWithConcatenationOfAllWords {
-  /**
-   * @implNote Time {@code O(|s|)}, space {@code O(|s|)}.
-   */
+  /** @implNote Time {@code O(|s|)}, space {@code O(|s|)}. */
   public List<Integer> findSubstring(String s, String[] words) {
     Map<String, Integer> wordCount = new HashMap<>();
     for (String word : words) {

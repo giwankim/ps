@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class BestTimeToBuyAndSellStockII {
-  /**
-   * @implNote Time {@code O(n)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int maxProfit(int[] prices) {
     int result = 0;
     for (int i = 1; i < prices.length; i++) {
