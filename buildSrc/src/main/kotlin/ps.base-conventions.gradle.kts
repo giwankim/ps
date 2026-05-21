@@ -1,5 +1,3 @@
-import org.gradle.api.artifacts.VersionCatalogsExtension
-
 plugins {
     id("java-base")
     id("ps.test-conventions")
