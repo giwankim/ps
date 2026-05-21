@@ -8,19 +8,13 @@ public class PalindromeNumber {
     if (x < 0) {
       return false;
     }
-    return isPalindrome(String.valueOf(x));
-  }
-
-  private boolean isPalindrome(String s) {
-    int left = 0;
-    int right = s.length() - 1;
-    while (left < right) {
-      if (s.charAt(left) != s.charAt(right)) {
-        return false;
-      }
-      left++;
-      right--;
+    int reversed = 0;
+    int number = x;
+    while (number > 0) {
+      reversed *= 10;
+      reversed += number % 10;
+      number /= 10;
     }
-    return true;
+    return reversed == x;
   }
 }

@@ -97,9 +97,19 @@ class PalindromeNumberTest {
     assertThat(sut.isPalindrome(Integer.MIN_VALUE)).isFalse();
   }
 
-  // Step 16: large palindrome near Integer.MAX_VALUE guards against full-reversal overflow bugs.
+  // Step 16: the largest palindrome that fits in a signed 32-bit int — the next palindrome up
+  // would exceed Integer.MAX_VALUE. Pins correct handling at the top of the value range, and
+  // would catch overflow in any future int-reversal-based implementation.
   @Test
-  void largePalindromeNearUpperBound() {
+  void largestPalindromeWithinIntRange() {
     assertThat(sut.isPalindrome(2_147_447_412)).isTrue();
+  }
+
+  // Step 17: a negative single digit is still negative — the sign check must reject it even
+  // though its absolute value reads the same backward. Pins that the x < 0 guard fires before
+  // any digit or length logic.
+  @Test
+  void negativeSingleDigitIsNotPalindrome() {
+    assertThat(sut.isPalindrome(-7)).isFalse();
   }
 }
