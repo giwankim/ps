@@ -25,7 +25,7 @@ public class Sqrt {
     int result = 0;
     int lo = 0;
     int hi = x;
-    while (lo <= hi)  {
+    while (lo <= hi) {
       int mid = lo + (hi - lo) / 2;
       if ((long) mid * mid <= x) {
         result = mid;
