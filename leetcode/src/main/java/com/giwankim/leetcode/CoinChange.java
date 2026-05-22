@@ -3,17 +3,25 @@ package com.giwankim.leetcode;
 import java.util.Arrays;
 
 public class CoinChange {
+  /**
+   * @implNote Time {@code O(amount * n)}, auxiliary space {@code O(amount)} for the {@code dp}
+   *     array, where {@code n = coins.length}.
+   */
   public int coinChange(int[] coins, int amount) {
-    int[] a = new int[amount + 1];
-    Arrays.fill(a, Integer.MAX_VALUE);
-    a[0] = 0;
-    for (int i = 1; i <= amount; i++) {
+    int[] dp = new int[amount + 1];
+    Arrays.fill(dp, Integer.MAX_VALUE);
+    dp[0] = 0;
+    for (int i = 1; i < dp.length; i++) {
       for (int coin : coins) {
-        if (i - coin >= 0 && a[i - coin] != Integer.MAX_VALUE) {
-          a[i] = Math.min(a[i], a[i - coin] + 1);
+        if (i - coin < 0 || dp[i - coin] == Integer.MAX_VALUE) {
+          continue;
         }
+        dp[i] = Math.min(dp[i], dp[i - coin] + 1);
       }
     }
-    return a[amount] == Integer.MAX_VALUE ? -1 : a[amount];
+    if (dp[amount] == Integer.MAX_VALUE) {
+      return -1;
+    }
+    return dp[amount];
   }
 }
