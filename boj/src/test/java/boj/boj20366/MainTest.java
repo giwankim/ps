@@ -14,14 +14,13 @@ import org.junit.jupiter.api.Timeout;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 20366 같이 눈사람 만들래? (Want to build a snowman?).
- */
+/** BOJ 20366 같이 눈사람 만들래? (Want to build a snowman?). */
 class MainTest {
 
   // --- Official sample. Anchors the suite against the published example. ---
 
-  // Diameters [3,5,2,5,9]: snowmen {2,5}=7 and {3,5}=8 differ by 1; no four distinct balls tie -> 1.
+  // Diameters [3,5,2,5,9]: snowmen {2,5}=7 and {3,5}=8 differ by 1; no four distinct balls tie ->
+  // 1.
   @Test
   @StdIo({"5", "3 5 2 5 9"})
   void officialSampleMinimumDifferenceIsOne(StdOut out) throws IOException {
@@ -90,7 +89,8 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("0");
   }
 
-  // Unsorted [100,1,2,4] with no tie: sorted [1,2,4,100], best pairing {1,100} vs {2,4} -> |101-6| = 95.
+  // Unsorted [100,1,2,4] with no tie: sorted [1,2,4,100], best pairing {1,100} vs {2,4} -> |101-6|
+  // = 95.
   @Test
   @StdIo({"4", "100 1 2 4"})
   void unsortedInputWithoutTieGivesCorrectGap(StdOut out) throws IOException {
@@ -110,8 +110,10 @@ class MainTest {
 
   // --- Maximum diameters: values pressed against the 1,000,000,000 ceiling. ---
 
-  // [1e9,1e9,1,1]: {1e9,1} and {1e9,1} use both big balls and both small balls -> 1000000001 each, 0.
-  // The rival pairing {1e9,1e9} vs {1,1} reaches a sum of 2,000,000,000, exercising large magnitudes.
+  // [1e9,1e9,1,1]: {1e9,1} and {1e9,1} use both big balls and both small balls -> 1000000001 each,
+  // 0.
+  // The rival pairing {1e9,1e9} vs {1,1} reaches a sum of 2,000,000,000, exercising large
+  // magnitudes.
   @Test
   @StdIo({"4", "1000000000 1000000000 1 1"})
   void maximumDiametersFormAnExactTie(StdOut out) throws IOException {
@@ -119,7 +121,8 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("0");
   }
 
-  // [1,4,999999999,1000000000]: best pairing {1,1e9} vs {4,999999999} -> |1000000001-1000000003| = 2.
+  // [1,4,999999999,1000000000]: best pairing {1,1e9} vs {4,999999999} -> |1000000001-1000000003| =
+  // 2.
   @Test
   @StdIo({"4", "1 4 999999999 1000000000"})
   void nearMaximumDiametersSmallestGap(StdOut out) throws IOException {
@@ -127,11 +130,15 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
-  // --- Upper size bound, N = 600: the intended solution must finish well within the time limit. ---
+  // --- Upper size bound, N = 600: the intended solution must finish well within the time limit.
+  // ---
 
-  // A 600-element Erdős–Turán Sidon set (all pairwise sums distinct), so no two snowmen ever tie and
-  // the answer is the smallest gap between distinct snowman heights built from four distinct balls: 1.
-  // Because the answer is never 0, an O(N⁴) search cannot short-circuit and would exceed the timeout,
+  // A 600-element Erdős–Turán Sidon set (all pairwise sums distinct), so no two snowmen ever tie
+  // and
+  // the answer is the smallest gap between distinct snowman heights built from four distinct balls:
+  // 1.
+  // Because the answer is never 0, an O(N⁴) search cannot short-circuit and would exceed the
+  // timeout,
   // whereas the intended O(N²·log N) (or two-pointer O(N³)) approach returns quickly.
   @Test
   @Timeout(value = 5, unit = TimeUnit.SECONDS)
@@ -141,8 +148,9 @@ class MainTest {
 
   /**
    * Builds the largest fixture: N = 600 diameters from the Erdős–Turán construction {@code 2·P·i +
-   * (i² mod P) + 1} with prime {@code P = 601}. All pairwise sums are distinct, so the minimum height
-   * difference is a fixed, nonzero 1, and the maximum diameter (720,003) stays within the bound.
+   * (i² mod P) + 1} with prime {@code P = 601}. All pairwise sums are distinct, so the minimum
+   * height difference is a fixed, nonzero 1, and the maximum diameter (720,003) stays within the
+   * bound.
    */
   private static String sidonInput() {
     int n = 600;

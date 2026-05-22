@@ -14,9 +14,7 @@ import org.junit.jupiter.api.Timeout;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 1806 부분합 (Subarray Sum)
- */
+/** BOJ 1806 부분합 (Subarray Sum) */
 class MainTest {
 
   // --- Official sample. Anchors the suite against the published example. ---
@@ -67,7 +65,8 @@ class MainTest {
 
   // --- Threshold semantics: ">= S" is inclusive, and "S - 1" must not be accepted. ---
 
-  // S=1 is its minimum, and every element is a natural number >= 1, so the first element alone -> 1.
+  // S=1 is its minimum, and every element is a natural number >= 1, so the first element alone ->
+  // 1.
   @Test
   @StdIo({"10 1", "1 1 1 1 1 1 1 1 1 1"})
   void targetOfOneIsMetByASingleElement(StdOut out) throws IOException {
@@ -143,7 +142,8 @@ class MainTest {
     assertThat(runMain(maxLengthInput(10_000, 100_000_000))).isEqualTo("10000");
   }
 
-  // 99,999 ones with S=100,000,000: the total 99,999 never reaches S, so the right pointer scans the
+  // 99,999 ones with S=100,000,000: the total 99,999 never reaches S, so the right pointer scans
+  // the
   // whole array and the answer is 0. Exercises the impossible branch at maximum scale.
   @Test
   @Timeout(value = 5, unit = TimeUnit.SECONDS)

@@ -179,8 +179,10 @@ class MainTest {
 
   // --- Upper size bound (N = M = 1,000,000): must finish fast and stream output efficiently. ---
 
-  // Odd-valued A=[1,3,..] and even-valued B=[2,4,..] force a comparison at every step; their merge is
-  // the contiguous run 1..2,000,000. A re-sort of the whole 2M-element array or an O(n^2) merge blows
+  // Odd-valued A=[1,3,..] and even-valued B=[2,4,..] force a comparison at every step; their merge
+  // is
+  // the contiguous run 1..2,000,000. A re-sort of the whole 2M-element array or an O(n^2) merge
+  // blows
   // the 1.5 s judge limit; the intended linear two-pointer sweep returns quickly.
   @Test
   @Timeout(value = 10, unit = TimeUnit.SECONDS)
@@ -195,7 +197,8 @@ class MainTest {
     assertThat(isContiguousRangeFromOne(runMain(input), 2 * MAX_N)).isTrue();
   }
 
-  // Disjoint blocks at scale: A=[1..1e6] entirely below B=[1e6+1..2e6] keeps a single drain loop busy
+  // Disjoint blocks at scale: A=[1..1e6] entirely below B=[1e6+1..2e6] keeps a single drain loop
+  // busy
   // for a million elements, again yielding 1..2,000,000. Stresses the tail-copy path that the small
   // disjoint cases above check only in miniature.
   @Test
