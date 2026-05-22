@@ -24,4 +24,26 @@ public class WordBreak {
     }
     return dp[s.length()];
   }
+
+  /**
+   * @implNote Time {@code O(n * m * L)}, auxiliary space {@code O(n)} for the {@code dp} array,
+   *     where {@code n = s.length()}, {@code m = wordDict.size()}, and {@code L} is the longest
+   *     word length in {@code wordDict}.
+   */
+  public boolean wordBreak2(String s, List<String> wordDict) {
+    boolean[] dp = new boolean[s.length() + 1];
+    dp[0] = true;
+    for (int i = 1; i <= s.length(); i++) {
+      for (String word : wordDict) {
+        if ((i - word.length() < 0)
+            || !dp[i - word.length()]
+            || !s.startsWith(word, i - word.length())) {
+          continue;
+        }
+        dp[i] = true;
+        break;
+      }
+    }
+    return dp[s.length()];
+  }
 }
