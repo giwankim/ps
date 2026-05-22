@@ -3,24 +3,86 @@ package com.giwankim.leetcode;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
-import java.util.stream.Stream;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.Test;
 
 class WordBreakTest {
+  WordBreak sut = new WordBreak();
 
-  @ParameterizedTest
-  @MethodSource
-  void wordBreak(String s, List<String> wordDict, boolean expected) {
-    boolean actual = new WordBreak().wordBreak(s, wordDict);
-    assertThat(actual).isEqualTo(expected);
+  @Test
+  void segmentsIntoTwoDictionaryWords() {
+    assertThat(sut.wordBreak("leetcode", List.of("leet", "code"))).isTrue();
   }
 
-  private static Stream<Arguments> wordBreak() {
-    return Stream.of(
-        Arguments.of("leetcode", List.of("leet", "code"), true),
-        Arguments.of("applepenapple", List.of("apple", "pen"), true),
-        Arguments.of("catsandog", List.of("cats", "dog", "sand", "and", "cat"), false));
+  @Test
+  void reusesTheSameDictionaryWord() {
+    assertThat(sut.wordBreak("applepenapple", List.of("apple", "pen"))).isTrue();
+  }
+
+  @Test
+  void returnsFalseWhenTheTailCannotBeSegmented() {
+    assertThat(sut.wordBreak("catsandog", List.of("cats", "dog", "sand", "and", "cat")))
+        .isFalse();
+  }
+
+  @Test
+  void singleCharacterMatchingItsOnlyDictionaryWord() {
+    assertThat(sut.wordBreak("a", List.of("a"))).isTrue();
+  }
+
+  @Test
+  void singleCharacterAbsentFromTheDictionary() {
+    assertThat(sut.wordBreak("a", List.of("b"))).isFalse();
+  }
+
+  @Test
+  void entireStringIsExactlyOneDictionaryWord() {
+    assertThat(sut.wordBreak("apple", List.of("apple"))).isTrue();
+  }
+
+  @Test
+  void repeatsASingleCharacterWordToCoverTheString() {
+    assertThat(sut.wordBreak("aaaa", List.of("a"))).isTrue();
+  }
+
+  @Test
+  void requiresMixingTwoDifferentWordLengths() {
+    assertThat(sut.wordBreak("aaaaaaa", List.of("aaaa", "aaa"))).isTrue();
+  }
+
+  @Test
+  void trailingCharacterCannotBeConsumed() {
+    assertThat(sut.wordBreak("aaaab", List.of("a", "aa"))).isFalse();
+  }
+
+  @Test
+  void dictionaryWordLongerThanTheStringNeverMatches() {
+    assertThat(sut.wordBreak("abc", List.of("abcd"))).isFalse();
+  }
+
+  @Test
+  void noDictionaryWordAppearsInTheString() {
+    assertThat(sut.wordBreak("abc", List.of("x", "y", "z"))).isFalse();
+  }
+
+  @Test
+  void trailingCharacterPreventsSegmentation() {
+    assertThat(sut.wordBreak("leetcodes", List.of("leet", "code"))).isFalse();
+  }
+
+  @Test
+  void leadingCharacterPreventsSegmentation() {
+    assertThat(sut.wordBreak("aleetcode", List.of("leet", "code"))).isFalse();
+  }
+
+  @Test
+  void prefersTheLongerOverlappingWordWhenTheShorterDeadEnds() {
+    assertThat(sut.wordBreak("goalspecial", List.of("go", "goal", "goals", "special")))
+        .isTrue();
+  }
+
+  @Test
+  void emptyStringIsVacuouslySegmentable() {
+    // Beyond LeetCode's stated 1 <= s.length constraint, but documents the empty-prefix base case.
+    assertThat(sut.wordBreak("", List.of("a"))).isTrue();
   }
 }
