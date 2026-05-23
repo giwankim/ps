@@ -15,9 +15,7 @@ import org.junit.jupiter.api.Timeout;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 7453 합이 0인 네 정수 (Four Integers With Sum Zero).
- */
+/** BOJ 7453 합이 0인 네 정수 (Four Integers With Sum Zero). */
 class MainTest {
 
   // --- Official sample. Anchors the suite against the published example. ---
