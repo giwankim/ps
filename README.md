@@ -250,6 +250,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [6131. 완전 제곱수](https://www.acmicpc.net/problem/6131)
 - [7453. 합이 0인 네 정수](https://www.acmicpc.net/problem/7453)
 - [7696. 반복하지 않는 수](https://www.acmicpc.net/problem/7696)
+- [9007. 카누 선수](https://www.acmicpc.net/problem/9007)
 - [9417. 최대 GCD](https://www.acmicpc.net/problem/9417)
 - [10655. 마라톤 1](https://www.acmicpc.net/problem/10655)
 - [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
