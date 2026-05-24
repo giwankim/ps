@@ -15,9 +15,7 @@ import org.junit.jupiter.api.Timeout;
 import org.junitpioneer.jupiter.StdIo;
 import org.junitpioneer.jupiter.StdOut;
 
-/**
- * BOJ 9007 카누 선수 (Canoe Racer).
- */
+/** BOJ 9007 카누 선수 (Canoe Racer). */
 class MainTest {
 
   // --- Official sample. Three test cases in one stream; anchors the suite against the published
@@ -146,7 +144,8 @@ class MainTest {
   }
 
   // --- Multiple test cases must be solved independently. A solution that fails to reset its
-  // running-best between cases would leak case 1's answer into case 2. Case 1 -> 8, case 2 -> 20. ---
+  // running-best between cases would leak case 1's answer into case 2. Case 1 -> 8, case 2 -> 20.
+  // ---
 
   @Test
   @StdIo({"2", "10 1", "2", "2", "2", "2", "100 1", "5", "5", "5", "5"})
@@ -167,7 +166,8 @@ class MainTest {
 
   // --- Performance with a non-trivial binary search at full scale. Classes 1-3 are all 1s and
   // class 4 is 1..1000, so reachable sums are 3 + c4 (range 4..1003). With k=503 the closest is
-  // exactly 503 (c4=500). Forces the search across ~10^6 paired sums to land on a precise answer. ---
+  // exactly 503 (c4=500). Forces the search across ~10^6 paired sums to land on a precise answer.
+  // ---
 
   @Test
   @Timeout(value = 10, unit = TimeUnit.SECONDS)
@@ -177,7 +177,8 @@ class MainTest {
 
   // --- Randomized cross-check against an O(n^4) brute-force oracle over many small inputs. k is
   // sampled to fall below, within, and above the reachable sum range, so ties, exact hits, and both
-  // clamp directions all occur. Catches closest-selection and tie-break bugs the hand cases miss. ---
+  // clamp directions all occur. Catches closest-selection and tie-break bugs the hand cases miss.
+  // ---
 
   @Test
   void randomizedSmallInputsMatchBruteForceOracle() throws IOException {
