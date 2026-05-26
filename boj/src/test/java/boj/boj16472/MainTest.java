@@ -25,14 +25,14 @@ class MainTest {
   @StdIo({"1", "a"})
   void singleCharacterStringReturnsOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   @Test
   @StdIo({"26", "z"})
   void singleCharacterStringWithLargeNReturnsOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   // --- Whole string is one repeated letter: distinct count is 1, so even N = 1 admits the entire
@@ -42,7 +42,7 @@ class MainTest {
   @StdIo({"1", "aaaa"})
   void allIdenticalCharactersReturnWholeLength(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- N exceeds the number of distinct letters: the constraint is slack, so the whole string
@@ -52,7 +52,7 @@ class MainTest {
   @StdIo({"2", "aaaa"})
   void nGreaterThanDistinctCountReturnsWholeLength(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- N equals the total distinct count of the whole string: every window fits, so the answer is
@@ -62,7 +62,7 @@ class MainTest {
   @StdIo({"3", "abcabc"})
   void nEqualsTotalDistinctReturnsWholeLength(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("6");
+    assertThat(out.capturedString().trim()).isEqualTo("6");
   }
 
   // --- N larger than the string length: still bounded by |S|. The distinct count (3) is well under
@@ -73,7 +73,7 @@ class MainTest {
   @StdIo({"10", "abc"})
   void nLargerThanStringLengthReturnsWholeLength(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- N = 1 reduces to "longest run of a single character". In "aabba" the runs are aa, bb, a, so
@@ -83,7 +83,7 @@ class MainTest {
   @StdIo({"1", "aabba"})
   void longestSingleCharacterRunWhenNIsOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("2");
+    assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
   // --- N = 1 with no character ever repeating consecutively: every maximal single-letter run has
@@ -93,14 +93,14 @@ class MainTest {
   @StdIo({"1", "abababab"})
   void alternatingCharactersWithNOneReturnsOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   @Test
   @StdIo({"1", "abcde"})
   void allDistinctCharactersWithNOneReturnsOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   // --- Two interleaved letters with N = 2: the whole string has exactly 2 distinct, so the answer
@@ -111,7 +111,7 @@ class MainTest {
   @StdIo({"2", "abababab"})
   void alternatingTwoCharactersWithNTwoReturnsWhole(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("8");
+    assertThat(out.capturedString().trim()).isEqualTo("8");
   }
 
   // --- Core sliding behavior: "abcba" with N = 2. The full string has 3 distinct; the best window
@@ -121,7 +121,7 @@ class MainTest {
   @StdIo({"2", "abcba"})
   void slidesWindowWhenDistinctExceedsN(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- Optimal window sits in the middle, away from both ends: "aabbbc" with N = 2 yields "aabbb"
@@ -132,7 +132,7 @@ class MainTest {
   @StdIo({"2", "aabbbc"})
   void optimalWindowInMiddle(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("5");
+    assertThat(out.capturedString().trim()).isEqualTo("5");
   }
 
   // --- Optimal window at the very start: "aaabcd" with N = 1 -> the leading run "aaa" (length 3).
@@ -142,7 +142,7 @@ class MainTest {
   @StdIo({"1", "aaabcd"})
   void optimalWindowAtStart(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- Optimal window at the very end: "abcddd" with N = 1 -> the trailing run "ddd" (length 3). A
@@ -152,7 +152,7 @@ class MainTest {
   @StdIo({"1", "abcddd"})
   void optimalWindowAtEnd(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- The central frequency-bookkeeping trap. In "aabbc" with N = 2 the answer is "aabb" (4).
@@ -165,7 +165,7 @@ class MainTest {
   @StdIo({"2", "aabbc"})
   void shrinkingDecrementsDistinctOnlyWhenCountReachesZero(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Three equal-length blocks with N = 2: "aaabbbccc" admits "aaabbb" and "bbbccc" (both 6) but
@@ -175,7 +175,7 @@ class MainTest {
   @StdIo({"2", "aaabbbccc"})
   void mustShrinkWhenThirdBlockEnters(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("6");
+    assertThat(out.capturedString().trim()).isEqualTo("6");
   }
 
   // --- Upper bound on N: all 26 letters once each, N = 26. Every letter is allowed, so the answer
@@ -185,7 +185,7 @@ class MainTest {
   @StdIo({"26", "abcdefghijklmnopqrstuvwxyz"})
   void fullAlphabetWithNTwentySixReturnsWhole(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("26");
+    assertThat(out.capturedString().trim()).isEqualTo("26");
   }
 
   // --- One below the maximum: 26 distinct letters with N = 25. Any 25-length window omits exactly
@@ -196,7 +196,7 @@ class MainTest {
   @StdIo({"25", "abcdefghijklmnopqrstuvwxyz"})
   void fullAlphabetWithNTwentyFiveDropsOneCharacter(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("25");
+    assertThat(out.capturedString().trim()).isEqualTo("25");
   }
 
   // --- Performance, maximum length, single distinct letter. |S| = 100,000 all 'a' with N = 1 must
@@ -298,10 +298,6 @@ class MainTest {
 
   private static String inputFor(int n, String s) {
     return n + "\n" + s + "\n";
-  }
-
-  private static String[] linesOf(StdOut out) {
-    return out.capturedString().replace("\r\n", "\n").trim().split("\n");
   }
 
   private static String runMain(String input) throws IOException {

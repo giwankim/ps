@@ -45,7 +45,7 @@ class MainTest {
   })
   void officialSampleMatchesPublishedOutput(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("301", "8", "31");
+    assertThat(out.capturedString().trim().split("\n")).containsExactly("301", "8", "31");
   }
 
   // --- Minimum size (n = 1): one student per class, so there is exactly one quadruple. Its sum is
@@ -55,7 +55,7 @@ class MainTest {
   @StdIo({"1", "10 1", "3", "4", "5", "6"})
   void singleStudentPerClassReturnsTheOnlyPossibleSum(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("18");
+    assertThat(out.capturedString().trim()).isEqualTo("18");
   }
 
   // --- Exact hit: when a quadruple equals k, distance 0 must beat every near miss. Reachable sums
@@ -65,7 +65,7 @@ class MainTest {
   @StdIo({"1", "8 2", "1 3", "1 3", "1 3", "1 3"})
   void exactMatchIsSelected(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("8");
+    assertThat(out.capturedString().trim()).isEqualTo("8");
   }
 
   // --- Tie-break: two reachable sums equally distant from k resolve to the smaller one. Three
@@ -76,7 +76,7 @@ class MainTest {
   @StdIo({"1", "10 2", "1 1", "1 1", "1 1", "5 9"})
   void equidistantSumsSelectSmaller(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("8");
+    assertThat(out.capturedString().trim()).isEqualTo("8");
   }
 
   // --- The spec's own narrative example: k=200 with reachable sums 198 and 202 (distance 2 each)
@@ -86,7 +86,7 @@ class MainTest {
   @StdIo({"1", "200 2", "50 50", "50 50", "50 50", "48 52"})
   void specExampleTieSelectsOneHundredNinetyEight(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("198");
+    assertThat(out.capturedString().trim()).isEqualTo("198");
   }
 
   // --- "Smaller wins" applies ONLY on ties. A larger sum that is strictly closer must still win.
@@ -97,7 +97,7 @@ class MainTest {
   @StdIo({"1", "10 2", "1 1", "1 1", "1 1", "4 8"})
   void closerLargerSumBeatsFartherSmallerSum(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("11");
+    assertThat(out.capturedString().trim()).isEqualTo("11");
   }
 
   // --- Target above every reachable sum: the answer is the maximum sum (largest of each class).
@@ -107,7 +107,7 @@ class MainTest {
   @StdIo({"1", "1000 2", "1 2", "1 2", "1 2", "1 2"})
   void targetAboveAllSumsReturnsMaximumSum(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("8");
+    assertThat(out.capturedString().trim()).isEqualTo("8");
   }
 
   // --- Target below every reachable sum: the answer is the minimum sum. Every sum >= 20 > 1, so a
@@ -118,7 +118,7 @@ class MainTest {
   @StdIo({"1", "1 2", "5 9", "5 9", "5 9", "5 9"})
   void targetBelowAllSumsReturnsMinimumSum(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("20");
+    assertThat(out.capturedString().trim()).isEqualTo("20");
   }
 
   // --- Upper constraint bound: weights at 10,000,000 and k at 40,000,000. The single reachable sum
@@ -129,7 +129,7 @@ class MainTest {
   @StdIo({"1", "40000000 1", "10000000", "10000000", "10000000", "10000000"})
   void maximumWeightsAndTargetAtConstraintBound(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("40000000");
+    assertThat(out.capturedString().trim()).isEqualTo("40000000");
   }
 
   // --- Large distance with max-scale weights below the target: every sum is 20,000,000 and k=1, a
@@ -140,7 +140,7 @@ class MainTest {
   @StdIo({"1", "1 2", "5000000 5000000", "5000000 5000000", "5000000 5000000", "5000000 5000000"})
   void largeDistanceBelowTargetReturnsOnlySum(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("20000000");
+    assertThat(out.capturedString().trim()).isEqualTo("20000000");
   }
 
   // --- Multiple test cases must be solved independently. A solution that fails to reset its
@@ -151,7 +151,7 @@ class MainTest {
   @StdIo({"2", "10 1", "2", "2", "2", "2", "100 1", "5", "5", "5", "5"})
   void perTestCaseStateIsResetAcrossCases(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("8", "20");
+    assertThat(out.capturedString().trim().split("\n")).containsExactly("8", "20");
   }
 
   // --- Performance: brute force is O(n^4). At n=1000 that is 10^12 quadruples and blows the 3s
@@ -274,10 +274,6 @@ class MainTest {
       sb.append(i == 0 ? "" : " ").append(row[i]);
     }
     sb.append('\n');
-  }
-
-  private static String[] linesOf(StdOut out) {
-    return out.capturedString().replace("\r\n", "\n").trim().split("\n");
   }
 
   private static String runMain(String input) throws IOException {

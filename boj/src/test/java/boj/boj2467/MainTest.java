@@ -31,14 +31,14 @@ class MainTest {
   @StdIo({"2", "5 9"})
   void twoSolutionsPrintTheOnlyPair(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("5 9");
+    assertThat(out.capturedString().trim()).isEqualTo("5 9");
   }
 
   @Test
   @StdIo({"2", "-100 50"})
   void twoSolutionsAcrossZeroPrintTheOnlyPair(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-100 50");
+    assertThat(out.capturedString().trim()).isEqualTo("-100 50");
   }
 
   // --- A pair whose sum is exactly 0, sitting in the interior (not at the extremes). The optimum
@@ -51,7 +51,7 @@ class MainTest {
   @StdIo({"4", "-99 -2 2 7"})
   void interiorPairSummingToZeroIsOptimal(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-2 2");
+    assertThat(out.capturedString().trim()).isEqualTo("-2 2");
   }
 
   // --- All acidic (every value positive). Every sum is positive, so the closest to zero is the two
@@ -62,7 +62,7 @@ class MainTest {
   @StdIo({"4", "2 5 7 9"})
   void allPositiveValuesPickTwoSmallest(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("2 5");
+    assertThat(out.capturedString().trim()).isEqualTo("2 5");
   }
 
   // --- All alkaline (every value negative). Mirror of the all-positive case: every sum is
@@ -73,7 +73,7 @@ class MainTest {
   @StdIo({"4", "-9 -7 -5 -2"})
   void allNegativeValuesPickTwoLargest(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-5 -2");
+    assertThat(out.capturedString().trim()).isEqualTo("-5 -2");
   }
 
   // --- Core two-pointer behavior: the optimum (-3, 2) -> -1 sits in the interior and is only found
@@ -85,7 +85,7 @@ class MainTest {
   @StdIo({"5", "-97 -3 2 8 100"})
   void interiorOptimumFoundByMovingBothPointers(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-3 2");
+    assertThat(out.capturedString().trim()).isEqualTo("-3 2");
   }
 
   // --- The optimum IS the outermost pair: (-10, 11) -> 1 beats every interior pair. The very first
@@ -96,7 +96,7 @@ class MainTest {
   @StdIo({"3", "-10 3 11"})
   void extremePairIsOptimalAndRetained(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-10 11");
+    assertThat(out.capturedString().trim()).isEqualTo("-10 11");
   }
 
   // --- Two pairs tie for closest-to-zero: (-10, 7) and (-1, 4) both give |sum| = 3. The statement
@@ -119,7 +119,7 @@ class MainTest {
   @StdIo({"2", "999999999 1000000000"})
   void largePositiveValuesDoNotOverflow(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("999999999 1000000000");
+    assertThat(out.capturedString().trim()).isEqualTo("999999999 1000000000");
   }
 
   // --- Mirror of the above at the negative bound: the sum -1,999,999,999 is near
@@ -130,7 +130,7 @@ class MainTest {
   @StdIo({"2", "-1000000000 -999999999"})
   void largeNegativeValuesDoNotOverflow(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-1000000000 -999999999");
+    assertThat(out.capturedString().trim()).isEqualTo("-1000000000 -999999999");
   }
 
   // --- The extreme values cancel exactly: (-1,000,000,000, 1,000,000,000) -> 0 is the unique
@@ -140,7 +140,7 @@ class MainTest {
   @StdIo({"3", "-1000000000 1 1000000000"})
   void extremeValuesCancelToZero(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("-1000000000 1000000000");
+    assertThat(out.capturedString().trim()).isEqualTo("-1000000000 1000000000");
   }
 
   // --- Performance, maximum N, all acidic: 1..100,000 must return "1 2". An O(n^2) scan (~10^10
@@ -278,10 +278,6 @@ class MainTest {
       sb.append(values[i]);
     }
     return sb.append('\n').toString();
-  }
-
-  private static String[] linesOf(StdOut out) {
-    return out.capturedString().replace("\r\n", "\n").trim().split("\n");
   }
 
   private static String runMain(String input) throws IOException {

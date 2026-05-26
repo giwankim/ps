@@ -38,7 +38,7 @@ class MainTest {
   @StdIo({"8 30 4 30", "7", "9", "7", "30", "2", "7", "9", "25"})
   void officialSampleOneCouponAddsNewKind(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("5");
+    assertThat(out.capturedString().trim()).isEqualTo("5");
   }
 
   // --- Official sample 2. Same belt reshuffled, k = 4, coupon type 7. Type 7 sits inside every
@@ -49,7 +49,7 @@ class MainTest {
   @StdIo({"8 50 4 7", "2", "7", "9", "25", "7", "9", "7", "30"})
   void officialSampleTwoCouponAlreadyPresent(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Every plate is the same type and the coupon names a different type: each window has 1
@@ -60,7 +60,7 @@ class MainTest {
   @StdIo({"5 3 3 2", "1", "1", "1", "1", "1"})
   void allPlatesIdenticalCouponAddsDifferentKind(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("2");
+    assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
   // --- Every plate is the same type and the coupon names THAT type: the coupon is a duplicate of
@@ -71,7 +71,7 @@ class MainTest {
   @StdIo({"5 3 3 1", "1", "1", "1", "1", "1"})
   void allPlatesIdenticalCouponMatchesThatKind(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   // --- Smallest possible window (k = 2). Alternating 1,2,1,2 with coupon type 3 (never present):
@@ -82,7 +82,7 @@ class MainTest {
   @StdIo({"4 3 2 3", "1", "2", "1", "2"})
   void minimumWindowOfTwoReachesKPlusOne(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- The window with all distinct plates AND no coupon kind hits the absolute ceiling k + 1.
@@ -95,7 +95,7 @@ class MainTest {
   @StdIo({"4 5 3 5", "1", "2", "3", "4"})
   void couponReachesKPlusOneWhenWindowAllDistinctAndCouponAbsent(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- k = N: the customer eats the entire belt, so all N circular windows are the same full set.
@@ -106,7 +106,7 @@ class MainTest {
   @StdIo({"4 4 4 4", "1", "2", "3", "1"})
   void wholeBeltWhenKEqualsNCouponAbsent(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- k = N again, same belt, but coupon type 2 IS in the full set, so it adds nothing -> answer
@@ -117,7 +117,7 @@ class MainTest {
   @StdIo({"4 4 4 2", "1", "2", "3", "1"})
   void wholeBeltWhenKEqualsNCouponPresent(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- The optimal window straddles the belt's end. Belt 3,1,1,1,1,2 with k = 3 and coupon type 1
@@ -129,7 +129,7 @@ class MainTest {
   @StdIo({"6 3 3 1", "3", "1", "1", "1", "1", "2"})
   void bestWindowWrapsAroundBelt(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- The coupon, not the raw distinct count, decides the winner. Belt 4,1,2,1,2,3 with k = 3 and
@@ -141,7 +141,7 @@ class MainTest {
   @StdIo({"6 4 3 4", "4", "1", "2", "1", "2", "3"})
   void couponDecidesBetweenEqualDistinctWindows(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Duplicates inside a window must not inflate the distinct count. Belt 1,1,2,2,3 with k = 4:
@@ -153,7 +153,7 @@ class MainTest {
   @StdIo({"5 3 4 3", "1", "1", "2", "2", "3"})
   void duplicatesWithinWindowDoNotInflateDistinct(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("3");
+    assertThat(out.capturedString().trim()).isEqualTo("3");
   }
 
   // --- Smallest legal belt (N = k = 2) where the coupon helps: both plates are type 1, coupon type
@@ -163,7 +163,7 @@ class MainTest {
   @StdIo({"2 2 2 2", "1", "1"})
   void minimumSizedBeltCouponAddsKind(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("2");
+    assertThat(out.capturedString().trim()).isEqualTo("2");
   }
 
   // --- Smallest legal belt where nothing helps: both plates are type 1 and the coupon is also type
@@ -173,7 +173,7 @@ class MainTest {
   @StdIo({"2 2 2 1", "1", "1"})
   void minimumSizedBeltAllOneKind(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   // --- A larger hand-computed belt so a wrong sliding-window update stands out. Belt
@@ -185,7 +185,7 @@ class MainTest {
   @StdIo({"10 5 5 4", "1", "2", "3", "1", "2", "4", "1", "2", "3", "1"})
   void largerHandComputedBelt(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Performance at the maximum belt size, single kind. N = 3,000,000, k = 3,000, every plate
@@ -295,10 +295,6 @@ class MainTest {
       sb.append((i % period) + 1).append('\n');
     }
     return sb.toString();
-  }
-
-  private static String[] linesOf(StdOut out) {
-    return out.capturedString().replace("\r\n", "\n").trim().split("\n");
   }
 
   private static String runMain(String input) throws IOException {
