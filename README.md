@@ -264,6 +264,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [14718. 용감한 진수](https://www.acmicpc.net/problem/14718)
 - [15552. 빠른 A + B](https://www.acmicpc.net/problem/15552)
 - [15593. Lifeguards (Bronze)](https://www.acmicpc.net/problem/15593)
+- [15961. 회전 초밥](https://www.acmicpc.net/problem/15961)
 - [15970. 화살표 그리기](https://www.acmicpc.net/problem/15970)
 - [16283. Farm](https://www.acmicpc.net/problem/16283)
 - [16472. 고냥이](https://www.acmicpc.net/problem/16472)

@@ -1,9 +1,7 @@
 package com.giwankim.leetcode;
 
 public class Pow {
-  /**
-   * @implNote Time {@code O(log |n|)}, space {@code O(1)}.
-   */
+  /** @implNote Time {@code O(log |n|)}, space {@code O(1)}. */
   public double myPow(double x, int n) {
     if (n < 0) {
       return (1 / x) * 1 / myPow(x, -(n + 1));
@@ -22,9 +20,7 @@ public class Pow {
     return result;
   }
 
-  /**
-   * @implNote Time {@code O(log |n|)}, space {@code O(log |n|)} for the recursion stack.
-   */
+  /** @implNote Time {@code O(log |n|)}, space {@code O(log |n|)} for the recursion stack. */
   public double myPow2(double x, int n) {
     if (n == 0) {
       return 1.0;
