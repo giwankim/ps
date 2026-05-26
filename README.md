@@ -275,6 +275,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [18310. 안테나](https://www.acmicpc.net/problem/18310)
 - [19532. 수학은 비대면강의입니다](https://www.acmicpc.net/problem/19532)
 - [20366. 같이 눈사람 만들래?](https://www.acmicpc.net/problem/20366)
+- [22945. 팁 빌딩](https://www.acmicpc.net/problem/22945)
 - [23351. 물 주기](https://www.acmicpc.net/problem/23351)
 
 ## [USACO](https://usaco.org/index.php)
