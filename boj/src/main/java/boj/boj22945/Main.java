@@ -17,11 +17,11 @@ public class Main {
         a[i] = Integer.parseInt(st.nextToken());
       }
 
-      long ans = 0;
+      int ans = 0;
       int lo = 0;
       int hi = n - 1;
       while (lo < hi) {
-        ans = Math.max(ans, (long) (hi - lo - 1) * Math.min(a[lo], a[hi]));
+        ans = Math.max(ans, (hi - lo - 1) * Math.min(a[lo], a[hi]));
         if (a[lo] < a[hi]) {
           lo++;
         } else {

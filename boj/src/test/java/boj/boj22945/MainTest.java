@@ -8,9 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
@@ -21,9 +19,24 @@ import org.junitpioneer.jupiter.StdOut;
 /**
  * BOJ 22945 팀 빌딩 (Team Building).
  *
- * <p>N developers with all-distinct abilities stand in a line. A team is exactly two developers A
+ * <p>N developers stand in a line, each with a positive ability. A team is exactly two developers A
  * and B; its value is {@code (number of developers standing between A and B) * min(ability of A,
  * ability of B)}. The answer is the maximum team value over every pair.
+ *
+ * <p>Input is N on line one and the N abilities (in line order) on line two; the program prints the
+ * single maximum value. This is the "container with most water" shape: for boundary indices
+ * {@code left < right} the value is {@code (right - left - 1) * min(a[left], a[right])}, and a
+ * two-pointer that always advances the smaller-ability endpoint inward reaches the optimum in O(N).
+ *
+ * <p>Two structural facts drive the edge cases below. First, only the two endpoints' abilities
+ * matter -- the interior developers contribute only their count, never their values -- so a wide
+ * pair with small ends can lose to a narrow pair with large ends. Second, the constraints
+ * (triangulated from accepted submissions because acmicpc.net is unreachable: AC sources annotate
+ * {@code 2 <= N <= 100,000} and {@code 1 <= x_i <= 10,000}, and the problem author's reference
+ * solution uses pure-int arithmetic). The worst-case in-spec answer is {@code (N - 2) * max_x =
+ * 99,998 * 10,000 = 999,980,000}, which fits in a 32-bit signed int. Because N can exceed the
+ * 10,000 distinct positive abilities available, duplicate abilities must be legal at large N -- the
+ * tie branch of the two-pointer is exercised below.
  */
 class MainTest {
 
@@ -37,18 +50,19 @@ class MainTest {
   @StdIo({"4", "1 4 2 5"})
   void workedExampleMaximumIsNotTheIllustratedPair(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Smallest team-forming input, N = 2: the only pair has nobody between them, so the value is
-  // 0 no matter how large the two abilities are. Guards reading N and emitting 0 rather than a
-  // negative number from a (right - left - 1) = -1 width when the pointers meet. ---
+  // 0 no matter how large the two abilities are. The {@code while (lo < hi)} loop precondition
+  // means the single iteration evaluates {@code (1 - 0 - 1) * min = 0} and the negative-width
+  // case the formula would otherwise allow is unreachable. ---
 
   @Test
   @StdIo({"2", "3 7"})
   void twoDevelopersHaveNobodyBetweenThemSoValueIsZero(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("0");
+    assertThat(out.capturedString().trim()).isEqualTo("0");
   }
 
   // --- Smallest input with a non-zero answer, N = 3 ascending (1 2 3). Only the outer pair has a
@@ -58,7 +72,7 @@ class MainTest {
   @StdIo({"3", "1 2 3"})
   void threeDevelopersAscending(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("1");
+    assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
   // --- The interior value is irrelevant. With 5 1 9 the only spanning pair is (5, 9) with the
@@ -69,30 +83,30 @@ class MainTest {
   @StdIo({"3", "5 1 9"})
   void valueUsesEndpointMinimumNotInteriorValues(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("5");
+    assertThat(out.capturedString().trim()).isEqualTo("5");
   }
 
-  // --- Strictly increasing abilities (1 2 3 4 5). Here min(a[i],a[j]) = a[i] for every pair, so
-  // the value is (j-i-1)*a[i], maximized by pairing each left end with the far right end; the best
-  // is (5-2-i)*(i+1) over i, i.e. 2*2 = 4. Exercises the two-pointer always advancing the left
-  // pointer. ---
+  // --- Strictly increasing abilities (1 2 3 4 5). Here min(a[i], a[j]) = a[i] for every pair, so
+  // the value is (j-i-1)*a[i], maximized by pairing each left end with the far right end: for
+  // N = 5 the value (N-2-i)*(i+1) = (3-i)*(i+1) peaks at i = 1 with 2*2 = 4. Exercises the
+  // two-pointer always advancing the left pointer. ---
 
   @Test
   @StdIo({"5", "1 2 3 4 5"})
   void strictlyIncreasingAbilities(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
-  // --- Strictly decreasing abilities (5 4 3 2 1), the mirror image. Now min(a[i],a[j]) = a[j], so
-  // the optimum pairs the far left end with each right end and the best is again 4. Exercises the
-  // two-pointer always advancing the right pointer. ---
+  // --- Strictly decreasing abilities (5 4 3 2 1), the mirror image. Now min(a[i], a[j]) = a[j],
+  // so the optimum pairs the far left end with each right end and the best is again 4. Exercises
+  // the two-pointer always advancing the right pointer. ---
 
   @Test
   @StdIo({"5", "5 4 3 2 1"})
   void strictlyDecreasingAbilities(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("4");
+    assertThat(out.capturedString().trim()).isEqualTo("4");
   }
 
   // --- Both endpoints large and far apart: 10 1 2 3 20. The widest pair (10, 20) has three
@@ -103,7 +117,7 @@ class MainTest {
   @StdIo({"5", "10 1 2 3 20"})
   void widestPairWithLargeEndpointsWins(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("30");
+    assertThat(out.capturedString().trim()).isEqualTo("30");
   }
 
   // --- The opposite pull: 1 100 99 98 2 has tiny ends, so the widest pair (1, 2) scores only
@@ -114,71 +128,99 @@ class MainTest {
   @StdIo({"5", "1 100 99 98 2"})
   void interiorPairBeatsTheExtremes(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("98");
+    assertThat(out.capturedString().trim()).isEqualTo("98");
   }
 
-  // --- Large distinct abilities whose answer still fits in a 32-bit int: 100000 1 99999. The
-  // spanning pair scores 1*min(100000,99999) = 99999. Confirms five/six-figure abilities and the
-  // endpoint-min logic without yet stressing overflow. ---
+  // --- In-spec four-figure abilities at the upper end of the verified cap (10,000): the spanning
+  // pair scores 1*min(10000,9999) = 9999. Confirms the endpoint-min logic at maximum legal
+  // magnitudes. ---
 
   @Test
-  @StdIo({"3", "100000 1 99999"})
-  void largeDistinctAbilitiesWithinIntRange(StdOut out) throws IOException {
+  @StdIo({"3", "10000 1 9999"})
+  void largeAbilitiesAtSpecCap(StdOut out) throws IOException {
     Main.main(new String[0]);
-    assertThat(linesOf(out)).containsExactly("99999");
+    assertThat(out.capturedString().trim()).isEqualTo("9999");
   }
 
-  // --- Randomized cross-check against an independent O(N^2) brute force that simply tries every
-  // pair. Abilities are a shuffled distinct subset (matching the "all different" guarantee) and N
-  // spans 2..8, so zero-answer (N = 2), endpoint-min, interior-optimum, and extreme-optimum
-  // configurations all occur. Catches pairing, min, and width bugs the hand cases might miss. ---
+  // --- Duplicate abilities are legal at any N > 10,000 (the constraint N <= 100,000 with x_i <=
+  // 10,000 forces duplicates), and this hand case pins the tie branch deterministically: with
+  // 5 5 5 5 the outermost pair scores 2*min(5,5) = 10. The standard tie-break (advance hi when
+  // a[lo] == a[hi]) reaches that optimum; a buggy variant that advanced both pointers on equality
+  // would skip it. The randomized oracle below cross-checks duplicates at small N. ---
+
+  @Test
+  @StdIo({"4", "5 5 5 5"})
+  void duplicateAbilitiesAreLegalAndScored(StdOut out) throws IOException {
+    Main.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("10");
+  }
+
+  // --- Randomized cross-check against an independent O(N^2) brute force. Abilities are sampled
+  // WITH REPLACEMENT from a small pool (1..10), so duplicates appear frequently and the
+  // two-pointer's tie branch is exercised; N spans 2..8, covering zero-answer (N = 2),
+  // endpoint-min, interior-optimum, extreme-optimum, and all-equal configurations. The .as()
+  // description carries the trial index so a failing iteration is locatable without re-counting
+  // RNG calls. ---
 
   @Test
   void randomizedSmallInputsMatchBruteForce() throws IOException {
     Random rnd = new Random(22945);
     for (int trial = 0; trial < 500; trial++) {
       int n = 2 + rnd.nextInt(7); // 2..8 developers
-      int[] abilities = distinctAbilities(n, 30, rnd);
+      int[] abilities = randomAbilities(n, 10, rnd);
       String input = inputFor(abilities);
       String expected = Long.toString(bruteForce(abilities));
-      assertThat(runMain(input)).as("input=%n%s", input).isEqualTo(expected);
+      assertThat(runMain(input)).as("trial=%d input=%n%s", trial, input).isEqualTo(expected);
     }
   }
 
-  // --- Maximum input, strictly increasing 1..100000. A permutation of 1..N is always legal
-  // (distinct positive abilities), and here the optimum is 50000*49999 = 2,499,950,000 -- larger
-  // than Integer.MAX_VALUE (2,147,483,647). A solution accumulating the product in int overflows to
-  // a negative/wrong value; only 64-bit arithmetic yields the right answer. The timeout also rules
-  // out an O(N^2) brute force at this scale. ---
+  // --- Maximum N (100,000) with every ability at the in-spec cap (10,000). Because N exceeds the
+  // 10,000 distinct legal abilities, duplicates are forced; here every endpoint pair sees
+  // min = 10,000, so the value is just (j - i - 1) * 10,000 and the outermost pair wins:
+  // 99,998 * 10,000 = 999,980,000, the maximum answer reachable under the spec. The timeout rules
+  // out an O(N^2) brute force at this scale, and the magnitude pins the in-spec arithmetic bound
+  // -- an int accumulator suffices, but anything narrower (short / unsigned-32 wrap) would WA. ---
 
   @Test
   @Timeout(value = 10, unit = TimeUnit.SECONDS)
-  void strictlyIncreasingMaxInputRequiresLongArithmetic() throws IOException {
+  void maxNUniformAtCapHitsInSpecMaximumAnswer() throws IOException {
     int[] abilities = new int[100_000];
+    Arrays.fill(abilities, 10_000);
+    assertThat(runMain(inputFor(abilities))).isEqualTo("999980000");
+  }
+
+  // --- Distinct abilities at maximum distinct count (N = 10,000 with abilities 1..10,000). For an
+  // increasing array min(a[i], a[j]) = a[i], so the value (N-2-i)*(i+1) peaks at i in {4998,4999}
+  // with 5000 * 4999 = 24,995,000. Exercises the two-pointer ALWAYS advancing the LEFT pointer at
+  // a non-trivial scale with strict distinctness. ---
+
+  @Test
+  @Timeout(value = 10, unit = TimeUnit.SECONDS)
+  void distinctIncreasingAtMaxDistinctCount() throws IOException {
+    int[] abilities = new int[10_000];
     for (int i = 0; i < abilities.length; i++) {
       abilities[i] = i + 1;
     }
-    assertThat(runMain(inputFor(abilities))).isEqualTo("2499950000");
+    assertThat(runMain(inputFor(abilities))).isEqualTo("24995000");
   }
 
-  // --- The same maximum input mirrored: strictly decreasing 100000..1. The optimum is identical
-  // (2,499,950,000) but is reached by advancing the right pointer instead of the left, so this
-  // covers the other branch of the two-pointer at full scale while re-checking the long-overflow
-  // requirement. ---
+  // --- The mirror of the test above: N = 10,000 decreasing 10,000..1. By symmetry the optimum is
+  // again 24,995,000, but the two-pointer reaches it by ALWAYS advancing the RIGHT pointer; this
+  // pins the other direction of the algorithm at scale. ---
 
   @Test
   @Timeout(value = 10, unit = TimeUnit.SECONDS)
-  void strictlyDecreasingMaxInputRequiresLongArithmetic() throws IOException {
-    int[] abilities = new int[100_000];
+  void distinctDecreasingAtMaxDistinctCount() throws IOException {
+    int[] abilities = new int[10_000];
     for (int i = 0; i < abilities.length; i++) {
-      abilities[i] = 100_000 - i;
+      abilities[i] = 10_000 - i;
     }
-    assertThat(runMain(inputFor(abilities))).isEqualTo("2499950000");
+    assertThat(runMain(inputFor(abilities))).isEqualTo("24995000");
   }
 
   // Reference brute force: the maximum over every pair of (developers between) * min(endpoints).
   // O(N^2), obviously correct, trustworthy only for the tiny N used by the randomized oracle. The
-  // accumulator is long so the oracle itself never overflows.
+  // accumulator is long so the oracle itself never overflows on any int input.
   private static long bruteForce(int[] a) {
     long best = 0;
     for (int i = 0; i < a.length; i++) {
@@ -189,16 +231,14 @@ class MainTest {
     return best;
   }
 
-  // Builds n distinct abilities by shuffling 1..pool and taking the first n (pool >= n).
-  private static int[] distinctAbilities(int n, int pool, Random rnd) {
-    List<Integer> values = new ArrayList<>(pool);
-    for (int v = 1; v <= pool; v++) {
-      values.add(v);
-    }
-    Collections.shuffle(values, rnd);
+  // Samples n abilities WITH REPLACEMENT from 1..pool. Duplicates occur naturally; the
+  // distinctness once stated in the problem appears to have been edited out (most BaekjoonHub
+  // scrapes drop the qualifier and the constraint N <= 100,000 with x_i <= 10,000 makes
+  // distinctness impossible at large N), so the oracle covers both distinct and duplicate inputs.
+  private static int[] randomAbilities(int n, int pool, Random rnd) {
     int[] abilities = new int[n];
     for (int i = 0; i < n; i++) {
-      abilities[i] = values.get(i);
+      abilities[i] = 1 + rnd.nextInt(pool);
     }
     return abilities;
   }
@@ -213,10 +253,6 @@ class MainTest {
       sb.append(abilities[i]);
     }
     return sb.append('\n').toString();
-  }
-
-  private static String[] linesOf(StdOut out) {
-    return out.capturedString().replace("\r\n", "\n").trim().split("\n");
   }
 
   private static String runMain(String input) throws IOException {
