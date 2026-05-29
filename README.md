@@ -280,6 +280,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [22862. 가장 긴 짝수 연속한 부분 수열 (large)](https://www.acmicpc.net/problem/22862)
 - [22945. 팁 빌딩](https://www.acmicpc.net/problem/22945)
 - [22988. 재활용 캠페인](https://www.acmicpc.net/problem/22988)
+- [23032. 서프라이즈~](https://www.acmicpc.net/problem/23032)
 - [23351. 물 주기](https://www.acmicpc.net/problem/23351)
 
 ## [USACO](https://usaco.org/index.php)
