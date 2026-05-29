@@ -1,33 +1,68 @@
 #!/usr/bin/env bash
+#
+# Pre-commit hook: run spotless + ktlint against the STAGED snapshot (exactly what
+# the commit will contain), then restore your uncommitted work precisely -- even
+# on lint failure, Ctrl-C, or partially-staged files.
+#
+# See pre-commit.test.sh for the regression suite. Key design choices:
+#   * Runs only when Java/Kotlin is actually staged.
+#   * Hides BOTH unstaged tracked edits and untracked files, so an unrelated WIP
+#     file can't fail the build and the linter sees only the staged content.
+#   * Restores by re-applying the stash onto a clean HEAD (reset --hard + apply
+#     --index) instead of `git stash pop`. Applying onto a clean tree cannot raise
+#     merge conflicts when a file is staged and further edited on the same line,
+#     and --index faithfully rebuilds the staged content the commit then captures.
+#
 set -euo pipefail
 
-STAGED=$(git diff --cached --name-only --diff-filter=d)
-
-if [ -z "$STAGED" ]; then
-  echo "No staged files."
+# 1. Gate: skip unless this commit stages a Java/Kotlin file.
+staged=$(git diff --cached --name-only --diff-filter=d)
+if [ -z "$staged" ]; then
+  echo "pre-commit: nothing staged; skipping."
+  exit 0
+fi
+if ! grep -qE '\.(java|kts?)$' <<<"$staged"; then
+  echo "pre-commit: no staged Java/Kotlin files; skipping lint."
   exit 0
 fi
 
-if ! grep -qE '\.(java|kts?)$' <<<"$STAGED"; then
-  echo "No staged Java/Kotlin files. Skipping checks."
-  exit 0
+# 2. Is there anything to hide (unstaged tracked edits or untracked files)?
+need_stash=false
+if ! git diff --quiet; then
+  need_stash=true
+elif [ -n "$(git ls-files --others --exclude-standard)" ]; then
+  need_stash=true
 fi
 
-# Hide unstaged tracked changes while checks run against the index.
-STASH_NAME="pre-commit-$(date +%s)"
-git stash push -q --keep-index -m "$STASH_NAME"
-STASHED=true
-
-restore_stash() {
-  if [ "$STASHED" = true ]; then
-    git stash pop -q
-    STASHED=false
+# 3. Restore hook: rebuild the exact pre-commit tree, conflict-free, exactly once.
+stash_ref=""
+restore() {
+  [ -n "$stash_ref" ] || return 0
+  local ref="$stash_ref"
+  stash_ref=""                                    # guard: run once (INT then EXIT)
+  git reset --hard -q                             # clean HEAD base => apply cannot conflict
+  if [ "$(git rev-parse -q --verify 'stash@{0}' 2>/dev/null)" != "$ref" ]; then
+    echo "pre-commit: unexpected stash state; your work is safe in 'git stash list'." >&2
+    exit 1
+  fi
+  if git stash apply --index -q 'stash@{0}'; then
+    git stash drop -q 'stash@{0}'
+  else
+    echo "pre-commit: could not auto-restore your tree; recover with 'git stash pop'." >&2
+    exit 1
   fi
 }
-trap restore_stash EXIT
+trap restore INT TERM EXIT
 
-echo "Running spotless check..."
-./gradlew spotlessCheck
+# 4. Hide unstaged/untracked changes so the working tree == the staged snapshot.
+if [ "$need_stash" = true ]; then
+  git stash push -q --keep-index --include-untracked -m "pre-commit:$$"
+  stash_ref=$(git rev-parse -q --verify 'stash@{0}')
+fi
 
-echo "Running ktlint check..."
-./gradlew ktlintCheck
+# 5. Lint the staged snapshot now on disk. One Gradle invocation for both tools.
+echo "pre-commit: running spotlessCheck + ktlintCheck on staged changes..."
+./gradlew spotlessCheck ktlintCheck
+
+echo "pre-commit: lint passed."
+# The EXIT trap restores your working tree, then git creates the commit from the index.
