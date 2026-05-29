@@ -238,6 +238,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1438. 가장 작은 직사각형](https://www.acmicpc.net/problem/1438)
 - [1484. 다이어트](https://www.acmicpc.net/problem/1484)
 - [1806. 부분합](https://www.acmicpc.net/problem/1806)
+- [1912. 연속합](https://www.acmicpc.net/problem/1912)
 - [2003. 수들의 합 2](https://www.acmicpc.net/problem/2003)
 - [2082. 시계](https://www.acmicpc.net/problem/2082)
 - [2304. 창고 다각형](https://www.acmicpc.net/problem/2304)
