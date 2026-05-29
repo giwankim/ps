@@ -35,6 +35,7 @@
             <option value="$PROJECT_DIR$/usaco" />
           </set>
         </option>
+        <option name="myGradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
       </GradleProjectSettings>
     </option>
   </component>
