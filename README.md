@@ -235,6 +235,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1000. A+B](https://www.acmicpc.net/problem/1000)
 - [1090. 체커](https://www.acmicpc.net/problem/1090)
 - [1417. 국회의원 선거](https://www.acmicpc.net/problem/1417)
+- [1438. 가장 작은 직사각형](https://www.acmicpc.net/problem/1438)
 - [1484. 다이어트](https://www.acmicpc.net/problem/1484)
 - [1806. 부분합](https://www.acmicpc.net/problem/1806)
 - [2003. 수들의 합 2](https://www.acmicpc.net/problem/2003)
