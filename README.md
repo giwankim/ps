@@ -259,6 +259,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2563. 색종이](https://www.acmicpc.net/problem/2563)
 - [2851. 슈퍼 마리오](https://www.acmicpc.net/problem/2851)
 - [2875. 대회 or 인턴](https://www.acmicpc.net/problem/2875)
+- [3020. 개똥벌레](https://www.acmicpc.net/problem/3020)
 - [3273. 두 수의 합](https://www.acmicpc.net/problem/3273)
 - [3673. 나눌 수 있는 부분 수열](https://www.acmicpc.net/problem/3673)
 - [6131. 완전 제곱수](https://www.acmicpc.net/problem/6131)
