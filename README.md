@@ -262,6 +262,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3020. 개똥벌레](https://www.acmicpc.net/problem/3020)
 - [3273. 두 수의 합](https://www.acmicpc.net/problem/3273)
 - [3673. 나눌 수 있는 부분 수열](https://www.acmicpc.net/problem/3673)
+- [5875. 오타](https://www.acmicpc.net/problem/5875)
 - [6131. 완전 제곱수](https://www.acmicpc.net/problem/6131)
 - [7453. 합이 0인 네 정수](https://www.acmicpc.net/problem/7453)
 - [7696. 반복하지 않는 수](https://www.acmicpc.net/problem/7696)
