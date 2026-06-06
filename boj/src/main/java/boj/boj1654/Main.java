@@ -1,0 +1,44 @@
+package boj.boj1654;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
+
+public class Main {
+  public static void main(String[] args) throws IOException {
+    try (BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+        PrintWriter pw = new PrintWriter(System.out)) {
+      StringTokenizer st = new StringTokenizer(r.readLine());
+      int k = Integer.parseInt(st.nextToken());
+      int n = Integer.parseInt(st.nextToken());
+      int[] a = new int[k];
+      for (int i = 0; i < k; i++) {
+        a[i] = Integer.parseInt(r.readLine());
+      }
+
+      long ans = 0;
+      long lo = 1;
+      long hi = Integer.MAX_VALUE;
+      while (lo <= hi) {
+        long mid = lo + (hi - lo) / 2;
+        if (count(a, mid) >= n) {
+          ans = mid;
+          lo = mid + 1;
+        } else {
+          hi = mid - 1;
+        }
+      }
+      pw.println(ans);
+    }
+  }
+
+  private static long count(int[] a, long x) {
+    long result = 0;
+    for (int num : a) {
+      result += num / x;
+    }
+    return result;
+  }
+}
