@@ -278,6 +278,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [11660. 구간 합 구하기 5](https://www.acmicpc.net/problem/11660)
 - [10699. 오늘 날짜](https://www.acmicpc.net/problem/10699)
 - [11728. 배열 합치기](https://www.acmicpc.net/problem/11728)
+- [13702. 이상한 술집](https://www.acmicpc.net/problem/13702)
 - [14400. 편의점 2](https://www.acmicpc.net/problem/14400)
 - [14453. Hoof, Paper, Scissors (Silver)](https://www.acmicpc.net/problem/14453)
 - [14465. 소가 길을 건너간 이유 5](https://www.acmicpc.net/problem/14465)
