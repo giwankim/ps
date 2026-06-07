@@ -35,23 +35,37 @@ public class Main {
       Arrays.sort(b);
       Arrays.sort(c);
 
+      int[] all = new int[na + nb + nc];
+      System.arraycopy(a, 0, all, 0, na);
+      System.arraycopy(b, 0, all, na, nb);
+      System.arraycopy(c, 0, all, na + nb, nc);
+
       int ans = Integer.MAX_VALUE;
-      int i = 0;
-      int j = 0;
-      int k = 0;
-      while (i < na && j < nb && k < nc) {
-        int max = Math.max(a[i], Math.max(b[j], c[k]));
-        int min = Math.min(a[i], Math.min(b[j], c[k]));
-        ans = Math.min(ans, max - min);
-        if (a[i] == min) {
-          i++;
-        } else if (b[j] == min) {
-          j++;
-        } else {
-          k++;
+      for (int m : all) {
+        int ai = lowerBound(a, m);
+        int bi = lowerBound(b, m);
+        int ci = lowerBound(c, m);
+        if (ai != -1 && bi != -1 && ci != -1) {
+          ans = Math.min(ans, Math.max(a[ai], Math.max(b[bi], c[ci])) - m);
         }
       }
       pw.println(ans);
     }
+  }
+
+  private static int lowerBound(int[] arr, int target) {
+    int result = -1;
+    int lo = 0;
+    int hi = arr.length - 1;
+    while (lo <= hi) {
+      int mid = lo + (hi - lo) / 2;
+      if (arr[mid] >= target) {
+        result = mid;
+        hi = mid - 1;
+      } else {
+        lo = mid + 1;
+      }
+    }
+    return result;
   }
 }
