@@ -29,7 +29,7 @@ import org.junitpioneer.jupiter.StdOut;
  *   <li><b>The cards must be sorted before a binary search.</b> The input order is arbitrary;
  *       {@link #descendingCardsMustBeSortedBeforeSearch} feeds them in descending order so a search
  *       that skips the sort lands on the wrong half and misprints.
- *   <li><b>A miss must report {@code 0}, not the nearest neighbour.</b> Queries that fall in a gap
+ *   <li><b>A miss must report {@code 0}, not the nearest neighbor.</b> Queries that fall in a gap
  *       between two cards, below the smallest, or above the largest must collapse to {@code 0}
  *       ({@link #queryBetweenTwoCardsPrintsZero}, {@link #queriesAtAndBeyondCardRangeBoundaries}).
  *   <li><b>Per-query answers, repeats included.</b> Each of the {@code M} queries is answered
