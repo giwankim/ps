@@ -70,7 +70,7 @@ class MainTest {
 
   // --- Three groups (N=6, A=2) with B=2 < groupCount=3 means each round the lowest group's
   //     moisture drifts down by 1 relative to the global clock. Starting K=5 the catnip lasts 11
-  //     days. The test pins down multi-group priority-queue behaviour, not just the two-bucket
+  //     days. The test pins down multi-group priority-queue behavior, not just the two-bucket
   //     edge case. ---
 
   @Test

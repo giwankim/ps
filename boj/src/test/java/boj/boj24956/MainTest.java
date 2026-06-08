@@ -103,7 +103,7 @@ class MainTest {
 
   // --- Minimal whistle and the doubling discriminator. ---
 
-  // The smallest possible whistle, "WHEE", has exactly one realisation.
+  // The smallest possible whistle, "WHEE", has exactly one realization.
   @Test
   @StdIo({"4", "WHEE"})
   void minimalWhistleHasExactlyOne(StdOut out) throws IOException {
@@ -142,7 +142,7 @@ class MainTest {
   }
 
   // "WHWHEE": qualifying (W,H) pairs are (W0,H1), (W0,H3), (W2,H3) -- three pairs, each able to use
-  // the trailing {E,E}, so 3 whistles. Pins the "share the trailing E's across pairs" behaviour.
+  // the trailing {E,E}, so 3 whistles. Pins the "share the trailing E's across pairs" behavior.
   @Test
   @StdIo({"6", "WHWHEE"})
   void multipleWhPairsShareTrailingEs(StdOut out) throws IOException {
