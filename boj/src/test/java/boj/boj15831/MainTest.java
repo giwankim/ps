@@ -18,7 +18,7 @@ import org.junitpioneer.jupiter.StdOut;
 /**
  * BOJ 15831 준표의 조약돌 (Junpyo's Pebbles).
  *
- * <p>A line of N pebbles, each labelled {@code 'B'} (black) or {@code 'W'} (white), is given
+ * <p>A line of N pebbles, each labeled {@code 'B'} (black) or {@code 'W'} (white), is given
  * alongside two bounds b and w. The answer is the maximum length of a contiguous substring that
  * contains at most b black pebbles and at least w white pebbles, or {@code 0} if no such substring
  * exists.
@@ -28,7 +28,7 @@ class MainTest {
   // --- A representative worked example. With N=5, b=1, w=2 and "WBWWB" the candidate windows
   // are [0..3] WBWW (1 B, 3 W -> ok, length 4), [1..4] BWWB (2 B, 2 W -> too many blacks),
   // [0..4] (2 B -> too many), and various shorter ones. The maximum is 4, attained by the prefix
-  // ending one position before the second black. Anchors the basic two-pointer behaviour where
+  // ending one position before the second black. Anchors the basic two-pointer behavior where
   // the right pointer extends greedily and the left pointer only moves once the black cap is
   // exceeded. ---
 
@@ -210,7 +210,7 @@ class MainTest {
   // --- Large all-whites input. N=200000 of 'W' with b=0 and w=1: the whole string is the answer
   // (zero blacks, all whites). This exercises the algorithm at scale on the path where the right
   // pointer sweeps from 0 to n while the left pointer never advances -- if the solution
-  // accidentally has O(N^2) behaviour (say, by rescanning the window on each step) it will time
+  // accidentally has O(N^2) behavior (say, by rescanning the window on each step) it will time
   // out here. The timeout also rules out an obvious quadratic brute force. ---
 
   @Test
