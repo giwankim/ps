@@ -251,6 +251,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2003. 수들의 합 2](https://www.acmicpc.net/problem/2003)
 - [2015. 수들의 합 4](https://www.acmicpc.net/problem/2015)
 - [2082. 시계](https://www.acmicpc.net/problem/2082)
+- [2121. 넷이 놀기](https://www.acmicpc.net/problem/2121)
 - [2143. 두 배열의 합](https://www.acmicpc.net/problem/2143)
 - [2304. 창고 다각형](https://www.acmicpc.net/problem/2304)
 - [2309. 일곱 난쟁이](https://www.acmicpc.net/problem/2309)
