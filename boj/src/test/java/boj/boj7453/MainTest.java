@@ -91,7 +91,7 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("81");
   }
 
-  // --- Uniqueness: widely spread magnitudes admit exactly one cancelling quadruple. ---
+  // --- Uniqueness: widely spread magnitudes admit exactly one canceling quadruple. ---
 
   // Only the index-0 elements cancel (1 + 10 + 100 - 111 = 0); every other combination uses a large
   // positive index-1 value that cannot be offset -> "1".

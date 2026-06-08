@@ -126,7 +126,7 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("0 0 7 0 0");
   }
 
-  // --- Multiple instructions: disjoint, overlapping, and cancelling. ---
+  // --- Multiple instructions: disjoint, overlapping, and canceling. ---
 
   // N=6, H all 0, "1 2 3" then "4 5 -2": the ranges do not touch, so cell 3 and cell 6 stay 0 while
   // 1..2 rise by 3 and 4..5 fall by 2 -> [3,3,0,-2,-2,0]. Confirms independent ranges do not bleed.
