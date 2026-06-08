@@ -18,7 +18,7 @@ import org.junitpioneer.jupiter.StdOut;
 /**
  * BOJ 3020 개똥벌레 (Firefly) -- COCI '06 Regional #3, prefix/suffix counting over levels.
  *
- * <p>A cave is {@code N} metres long ({@code N} even) and {@code H} metres high, filled with
+ * <p>A cave is {@code N} meters long ({@code N} even) and {@code H} meters high, filled with
  * {@code N} obstacles standing in columns. The first obstacle is a <em>stalagmite</em> (grows up
  * from the floor); thereafter stalactites (hang down from the ceiling) and stalagmites alternate. A
  * firefly picks one of the {@code H} integer levels {@code 1..H} and flies straight through,

@@ -20,11 +20,11 @@ import org.junitpioneer.jupiter.StdOut;
  * BOJ 2805 나무 자르기 (Cutting Trees) -- the textbook parametric binary search ("binary search on the
  * answer").
  *
- * <p>Lumberjack Sang-geun must bring home at least {@code M} metres of wood. His machine is set to
- * a single integer height {@code H}: it lowers a sawblade to {@code H} metres and shears off the
+ * <p>Lumberjack Sang-geun must bring home at least {@code M} meters of wood. His machine is set to
+ * a single integer height {@code H}: it lowers a sawblade to {@code H} meters and shears off the
  * part of every tree taller than {@code H}, leaving shorter trees untouched. A tree of height
- * {@code h} therefore yields {@code max(0, h - H)} metres. Being ecologically minded, Sang-geun
- * wants the blade as <em>high</em> as possible while still collecting at least {@code M} metres in
+ * {@code h} therefore yields {@code max(0, h - H)} meters. Being ecologically minded, Sang-geun
+ * wants the blade as <em>high</em> as possible while still collecting at least {@code M} meters in
  * total -- find that maximum integer {@code H}.
  *
  * <p>Input: line 1 is {@code "N M"} -- the tree count {@code N} ({@code 1 <= N <= 1,000,000}) and
@@ -39,7 +39,7 @@ import org.junitpioneer.jupiter.StdOut;
  * <p>The fixtures pin the things a hasty parametric search gets wrong:
  *
  * <ul>
- *   <li><b>Maximise the blade, don't stop at the first feasible height.</b> Feasible heights form a
+ *   <li><b>Maximize the blade, don't stop at the first feasible height.</b> Feasible heights form a
  *       downward-closed range {@code [0, answer]}; the answer is its top, not the first {@code H}
  *       the search happens to find feasible ({@link #returnsTheMaximumFeasibleHeightNotTheFirst}).
  *   <li><b>Clamp each tree at zero.</b> Trees no taller than the blade yield nothing, not a
@@ -66,7 +66,7 @@ import org.junitpioneer.jupiter.StdOut;
 class MainTest {
 
   // --- The official samples from the statement: the end-to-end smoke tests, and already enough to
-  // pin that the blade is *maximised* -- both have lower feasible heights the search must climb
+  // pin that the blade is *maximized* -- both have lower feasible heights the search must climb
   // past
   // to reach the published answer. ---
 
@@ -226,7 +226,7 @@ class MainTest {
         heights[i] = 1 + rnd.nextInt(20); // heights in [1, 20]
         total += heights[i];
       }
-      long m = 1 + rnd.nextInt((int) total); // M in [1, total], honouring sum-of-heights >= M
+      long m = 1 + rnd.nextInt((int) total); // M in [1, total], honoring sum-of-heights >= M
       String expected = Long.toString(maxBladeHeight(heights, m));
       assertThat(runMain(cutTreesInput(heights, m)))
           .as("heights=%s M=%d", Arrays.toString(heights), m)
@@ -237,7 +237,7 @@ class MainTest {
   /**
    * Independent oracle: the obviously-correct top-down linear scan. Walk candidate blade heights
    * from the tallest tree down to {@code 0} and return the first that cuts at least {@code m}
-   * metres -- which, because feasibility is monotonic in the blade height, is the maximum feasible
+   * meters -- which, because feasibility is monotonic in the blade height, is the maximum feasible
    * height. Uses no binary search, so it shares no logic with a judge solution.
    *
    * @implNote {@code O(maxHeight * N)} time, where {@code N} is {@code heights.length} and

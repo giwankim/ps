@@ -196,7 +196,7 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("1");
   }
 
-  // --- Core two-pointer behaviour. Input is deliberately unsorted (1 9 1 9). Each small bottle
+  // --- Core two-pointer behavior. Input is deliberately unsorted (1 9 1 9). Each small bottle
   // pairs with a large one (1 + 9 = 10 >= 5), giving two full bottles. A solution that pairs
   // adjacent or same-end bottles (1 + 1 = 2, fails) would under-count, and one that forgets to sort
   // would mis-pair. ---
@@ -279,7 +279,7 @@ class MainTest {
 
   // --- One below the maximum-capacity boundary: A + B = 199999999999999999 + 300000000000000000 =
   // 499999999999999999, so 2*(A+B) = 999999999999999998 < 10^18 -> not full -> 0. The companion to
-  // the test above, separated by a single millilitre at 10^18 scale. ---
+  // the test above, separated by a single milliliter at 10^18 scale. ---
 
   @Test
   @StdIo({"2 1000000000000000000", "199999999999999999 300000000000000000"})
