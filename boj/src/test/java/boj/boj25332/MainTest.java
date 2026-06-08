@@ -30,9 +30,7 @@ import org.junitpioneer.jupiter.StdOut;
  *
  * <p>Constraints (from the official statement, recovered from an archived problem PDF while
  * acmicpc.net was down): {@code 1 <= N <= 2 * 10^5}; {@code |A| = |B| = N}; {@code 1 <= A_i, B_i <=
- * 10^4}; time limit 1 s, memory 512 MB. Because the elements are positive but {@code A} and
- * {@code B} are independent, {@code d[k] = A[k] - B[k]} can be negative and prefix sums can dip
- * below zero -- the count map must handle negative keys.
+ * 10^4}; time limit 1 s, memory 512 MB.
  *
  * <p><b>The overflow trap is in the answer, not the prefix.</b> The running prefix diff stays
  * within {@code +/- N * (10^4 - 1) = +/- 1,999,800,000}, which fits a signed 32-bit {@code int}
@@ -156,7 +154,7 @@ class MainTest {
 
   // A=[1,2,3,4,5], B=[5,4,3,2,1]: d=[-4,-2,0,2,4], prefix D=[0,-4,-6,-6,-4,0]. Equal-value buckets
   // are {0,5}, {1,4} (value -4), and {2,3} (value -6), each C(2,2)=1 -> 3. The three matching
-  // windows are the whole array [1,5] (15==15), the centre band [2,4] (9==9), and the midpoint
+  // windows are the whole array [1,5] (15==15), the center band [2,4] (9==9), and the midpoint
   // [3,3] (3==3).
   @Test
   @StdIo({"5", "1 2 3 4 5", "5 4 3 2 1"})
