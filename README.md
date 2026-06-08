@@ -219,6 +219,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings)
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 - [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
+- [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)
 - [2196. Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions)
 - [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
