@@ -126,7 +126,7 @@ class MainTest {
   @StdIo({"5", "-1 -1 8 -1 -1"})
   void lonePositivePeakAmongNegativesIsTheAnswer(StdOut out) throws IOException {
     Main.main(new String[0]);
-    // Every neighbouring element is negative, so the best slice is the single 8.
+    // Every neighboring element is negative, so the best slice is the single 8.
     assertThat(out.capturedString().trim()).isEqualTo("8");
   }
 

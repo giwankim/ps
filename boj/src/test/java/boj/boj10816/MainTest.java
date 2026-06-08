@@ -41,7 +41,7 @@ import org.junitpioneer.jupiter.StdOut;
  *       multiplicity, so {@link #duplicateCardsAreCountedNotCollapsed} and
  *       {@link #allIdenticalCardsReturnTheFullCount} reject any 10815-style {@code 0}/{@code 1}
  *       answer.
- *   <li><b>A miss is {@code 0}, not the nearest neighbour.</b> Queries below the smallest card,
+ *   <li><b>A miss is {@code 0}, not the nearest neighbor.</b> Queries below the smallest card,
  *       inside a gap, or above the largest collapse to {@code 0} while genuine hits keep their
  *       counts ({@link #missesPrintZeroWhileHitsKeepTheirCount}).
  *   <li><b>Order-independent tally.</b> Cards arrive unsorted with duplicates interleaved, so a

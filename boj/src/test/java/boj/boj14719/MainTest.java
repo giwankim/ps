@@ -117,7 +117,7 @@ class MainTest {
   @StdIo({"3 4", "3 3 3 3"})
   void flatProfileOfEqualColumnsTrapsNothing(StdOut out) throws IOException {
     Main.main(new String[0]);
-    // No column dips below its neighbours, so there is nowhere for water to sit.
+    // No column dips below its neighbors, so there is nowhere for water to sit.
     assertThat(out.capturedString().trim()).isEqualTo("0");
   }
 
@@ -185,7 +185,7 @@ class MainTest {
 
   @Test
   @StdIo({"5 5", "4 2 5 1 3"})
-  void peakBetweenTwoBasinsContributesZeroWhileItsNeighboursFill(StdOut out) throws IOException {
+  void peakBetweenTwoBasinsContributesZeroWhileItsNeighborsFill(StdOut out) throws IOException {
     Main.main(new String[0]);
     // col 1: min(4,5)-2=2; col 2 (the peak 5): min(4,3)-5 -> 0; col 3: min(5,3)-1=2. Total 4.
     assertThat(out.capturedString().trim()).isEqualTo("4");
