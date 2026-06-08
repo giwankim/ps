@@ -39,7 +39,7 @@ import org.junitpioneer.jupiter.StdOut;
  *
  * <p><b>Why the elements being positive matters.</b> Because every element is {@code >= 1}, the
  * prefix sums are strictly positive, so {@code prefix % d} always lands in {@code [0, d-1]} and
- * Java's signed-modulo trap (where {@code -3 % 5 == -3}) never fires -- no remainder normalisation
+ * Java's signed-modulo trap (where {@code -3 % 5 == -3}) never fires -- no remainder normalization
  * is needed. The positive elements instead create a different trap, exercised below.
  *
  * <p><b>Overflow note.</b> A prefix sum reaches {@code 50,000 * 1,000,000,000 = 5 * 10^13}, which

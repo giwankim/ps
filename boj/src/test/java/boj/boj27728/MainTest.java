@@ -61,7 +61,7 @@ class MainTest {
   // --- (2) A jump must be used when a higher row is cheaper than staying put. ---
 
   // Same 5x5 grid as the sample. Query (Sx=5, Sy=1, L=1): staying in row 5 costs suf[5][1] =
-  // 3+2+10+6+4 = 25, but travelling two cells in row 5 (3+2), jumping to row 3, then exiting via
+  // 3+2+10+6+4 = 25, but traveling two cells in row 5 (3+2), jumping to row 3, then exiting via
   // 2+1+0 costs only 8. The solver must prefer the jump, and the optimal switch happens partway
   // across (column 3), not at the start or the exit.
   @Test
