@@ -263,8 +263,8 @@ class MainTest {
 
   /**
    * Random column heights in {@code [1, maxHeight]} with no two adjacent equal, so that every
-   * column boundary of the histogram is a genuine corner (equal neighbors would create a
-   * collinear, non-corner point that a polygon vertex list must not contain).
+   * column boundary of the histogram is a genuine corner (equal neighbors would create a collinear,
+   * non-corner point that a polygon vertex list must not contain).
    *
    * @implNote {@code O(columns)} expected time.
    */
