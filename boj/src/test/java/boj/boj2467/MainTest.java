@@ -11,8 +11,10 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -39,6 +41,16 @@ class MainTest {
   void twoSolutionsAcrossZeroPrintTheOnlyPair(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedString().trim()).isEqualTo("-100 50");
+  }
+
+  // --- Minimum input where the only pair is also perfectly neutral: the initial best is already 0
+  // before any pointer moves, and the sum == 0 short-circuit fires on the very first iteration. ---
+
+  @Test
+  @StdIo({"2", "-7 7"})
+  void twoSolutionsSummingToZeroPrintTheOnlyPair(StdOut out) throws IOException {
+    Main.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("-7 7");
   }
 
   // --- A pair whose sum is exactly 0, sitting in the interior (not at the extremes). The optimum
@@ -76,6 +88,27 @@ class MainTest {
     assertThat(out.capturedString().trim()).isEqualTo("-5 -2");
   }
 
+  // --- Both signs present, yet the optimum is two negatives: (-4, -3) -> -7 beats the best
+  // cross-zero pair (-4, 100) -> 96. Catches approaches that only ever consider pairs straddling
+  // zero, such as a per-negative binary search for the closest positive. ---
+
+  @Test
+  @StdIo({"4", "-4 -3 100 200"})
+  void negativePairBeatsCrossZeroPairs(StdOut out) throws IOException {
+    Main.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("-4 -3");
+  }
+
+  // --- Mirror with the optimum on the positive side: (3, 4) -> 7 beats the best cross-zero pair
+  // (-100, 4) -> -96. ---
+
+  @Test
+  @StdIo({"4", "-200 -100 3 4"})
+  void positivePairBeatsCrossZeroPairs(StdOut out) throws IOException {
+    Main.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("3 4");
+  }
+
   // --- Core two-pointer behavior: the optimum (-3, 2) -> -1 sits in the interior and is only found
   // after both pointers move inward several times. A naive "check the extremes" approach would
   // report
@@ -86,6 +119,18 @@ class MainTest {
   void interiorOptimumFoundByMovingBothPointers(StdOut out) throws IOException {
     Main.main(new String[0]);
     assertThat(out.capturedString().trim()).isEqualTo("-3 2");
+  }
+
+  // --- Both pointers walk inward to the innermost pair: each moves twice, and the running best
+  // improves mid-walk (200 from the extremes, then -10 from (-40, 30), then 0 from (-1, 1)) while
+  // a worse intermediate pair (-500, 30) -> -470 must be rejected along the way. Sits between the
+  // one-step interior cases above and the full-array sweeps at maximum N. ---
+
+  @Test
+  @StdIo({"6", "-500 -40 -1 1 30 700"})
+  void innermostPairFoundAfterBothPointersWalkInward(StdOut out) throws IOException {
+    Main.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("-1 1");
   }
 
   // --- The optimum IS the outermost pair: (-10, 11) -> 1 beats every interior pair. The very first
@@ -162,11 +207,10 @@ class MainTest {
     assertThat(runMain(inputFor(ascendingRun(-100_000, 100_000)))).isEqualTo("-2 -1");
   }
 
-  // --- Performance, maximum N, single neutralizing pair: [-3, 1, 2, ..., 99999]. The only sum that
-  // reaches zero is (-3, 3); every other pair sums to at least 3. The right pointer must walk
-  // nearly
-  // the entire array before it lands on the match, so this both stresses scale and pins a unique
-  // interior optimum. ---
+  // --- Performance, maximum N, single neutralizing pair: [-3, 1, 2, ..., 99999]. The only sum
+  // that reaches zero is (-3, 3): other pairs involving -3 miss zero by at least 1, and every pair
+  // without -3 sums to at least 3. The right pointer must walk nearly the entire array before it
+  // lands on the match, so this both stresses scale and pins a unique interior optimum. ---
 
   @Test
   @Timeout(value = 10, unit = TimeUnit.SECONDS)
@@ -191,6 +235,22 @@ class MainTest {
     for (int trial = 0; trial < 500; trial++) {
       int n = 2 + rnd.nextInt(39); // 2..40
       int[] values = randomSortedDistinctNonZero(n, 25, rnd);
+      String input = inputFor(values);
+      assertOptimalPair(values, runMainRaw(input), "input=%n%s".formatted(input));
+    }
+  }
+
+  // --- Randomized cross-check at full magnitude: values span the whole +/-10^9 domain and N runs
+  // to 200. The small-range oracle above never exercises large-magnitude arithmetic in random
+  // shapes, and the fixed overflow tests only do so at N = 2. Near-negations are injected so sums
+  // still land close to zero; ties remain legal, so the validity check is reused. ---
+
+  @Test
+  void randomizedLargeMagnitudeInputsAreOptimal() throws IOException {
+    Random rnd = new Random(24672);
+    for (int trial = 0; trial < 200; trial++) {
+      int n = 2 + rnd.nextInt(199); // 2..200
+      int[] values = randomSortedDistinctNonZeroLargeMagnitude(n, rnd);
       String input = inputFor(values);
       assertOptimalPair(values, runMainRaw(input), "input=%n%s".formatted(input));
     }
@@ -255,6 +315,29 @@ class MainTest {
     int[] values = new int[n];
     for (int i = 0; i < n; i++) {
       values[i] = pool.get(i);
+    }
+    Arrays.sort(values);
+    return values;
+  }
+
+  // Draws n distinct nonzero values across the full +/-1,000,000,000 domain. Uniform draws at this
+  // scale almost never sum near zero, so on average every other value is a near-negation (jitter
+  // within +/-2) of the previous one, keeping near-cancelling cross-zero pairs frequent.
+  private static int[] randomSortedDistinctNonZeroLargeMagnitude(int n, Random rnd) {
+    Set<Integer> seen = new HashSet<>();
+    int[] values = new int[n];
+    int count = 0;
+    while (count < n) {
+      int v;
+      if (count > 0 && rnd.nextBoolean()) {
+        long mirrored = -(long) values[count - 1] + rnd.nextInt(5) - 2;
+        v = (int) Math.max(-1_000_000_000L, Math.min(1_000_000_000L, mirrored));
+      } else {
+        v = rnd.nextInt(2_000_000_001) - 1_000_000_000;
+      }
+      if (v != 0 && seen.add(v)) {
+        values[count++] = v;
+      }
     }
     Arrays.sort(values);
     return values;
