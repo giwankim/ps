@@ -7,14 +7,14 @@ spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
 
 [versions]
-allopen = "2.3.21"
+allopen = "2.4.0"
 assertj = "3.27.7"
 benchmark = "0.4.17"
-java = "25"
+java = "26"
 junit = "6.1.0"
 junit-pioneer = "2.3.0"
 kotest = "6.1.11"
-kotlin = "2.3.21"
+kotlin = "2.4.0"
 ktlint-gradle = "14.2.0"
 lombok = "1.18.46"
 palantir-java-format = "2.91.0"
