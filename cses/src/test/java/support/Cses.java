@@ -2,14 +2,15 @@ package support;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringReader;
-import java.io.StringWriter;
+import java.io.InputStream;
+import java.io.PrintStream;
 import java.io.UncheckedIOException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
@@ -18,31 +19,38 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.DynamicTest;
 
 /**
- * Test harness for CSES solutions: runs a solver on inline input ({@link #run}) or on every
- * official {@code N.in}/{@code N.out} data pair under {@code src/test/resources/<slug>/}
+ * Test harness for CSES solutions: runs a solution's {@code main} on inline stdin ({@link #run}) or
+ * on every official {@code N.in}/{@code N.out} data pair under {@code src/test/resources/<slug>/}
  * ({@link #tests}).
  */
 public final class Cses {
   private Cses() {}
 
-  /** The entry-point shape every CSES solution exposes next to its {@code main} method. */
+  /** The entry-point shape every CSES solution submits: a main method. */
   @FunctionalInterface
   public interface Solver {
-    void solve(BufferedReader r, PrintWriter pw) throws IOException;
+    void main(String[] args) throws IOException;
   }
 
   /**
-   * Runs the solver on the given input and returns its output with trailing whitespace stripped, so
-   * expectations are written without a trailing newline. Leading whitespace is preserved: a solver
-   * that emits it should fail.
+   * Runs the solution's main with the given stdin content and returns its stdout with trailing
+   * whitespace stripped, so expectations are written without a trailing newline. Leading whitespace
+   * is preserved: a solution that emits it should fail. The real streams are restored even when the
+   * solution throws.
    */
   public static String run(Solver solver, String input) throws IOException {
-    StringWriter out = new StringWriter();
-    try (BufferedReader r = new BufferedReader(new StringReader(input));
-        PrintWriter pw = new PrintWriter(out)) {
-      solver.solve(r, pw);
+    InputStream originalIn = System.in;
+    PrintStream originalOut = System.out;
+    ByteArrayOutputStream out = new ByteArrayOutputStream();
+    try {
+      System.setIn(new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8)));
+      System.setOut(new PrintStream(out, true, StandardCharsets.UTF_8));
+      solver.main(new String[0]);
+      return out.toString(StandardCharsets.UTF_8).stripTrailing();
+    } finally {
+      System.setIn(originalIn);
+      System.setOut(originalOut);
     }
-    return out.toString().stripTrailing();
   }
 
   /**
