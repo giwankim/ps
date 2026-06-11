@@ -10,9 +10,9 @@
 
 **Spec:** `docs/superpowers/specs/2026-06-11-cses-main-only-testing-design.md`
 
-**Working-tree caution:** The repo has unrelated uncommitted changes under `boj/` and `leetcode/`. Stage ONLY the explicit paths given in the commit steps — never `git add -A` or `git add .`. The working tree also already contains related in-flight changes that ride along in these commits: `cses/src/test/java/support/CsesTest.java` and the `cses-test-fixture*` resource folders are deleted (commit 1), and `cses/src/main/java/cses/support/FastIO.java` is new with `MissingNumber` already converted to use it (commit 2). Both commits are staged by directory (`cses/src/test`, `cses/src/main`) to capture these.
+**Working-tree caution:** The repo has unrelated uncommitted changes under `boj/` and `leetcode/`. Stage ONLY the explicit paths given in the commit steps — never `git add -A` or `git add .`. The working tree also already contains related in-flight changes that ride along in these commits: `cses/src/test/java/support/CsesTest.java` and the `cses-test-fixture*` resource folders are deleted (commit 1), and `MissingNumber.java` is already in its final main-only form with a nested `FastIO` (commit 2). The untracked `cses/src/main/java/cses/support/FastIO.java` is orphaned — nothing references it — and is deleted in Task 5, never committed. Both commits are staged by directory (`cses/src/test`, `cses/src/main`) to capture these.
 
-**Solution-file layout note:** Only `MissingNumber` uses the shared `cses.support.FastIO`. `WeirdAlgorithm` and `SumTwoValues` each carry their own nested `private static class FastIO` so the file is self-contained for submission. Leave that arrangement exactly as it is — this plan deletes the DI methods and nothing else in those files.
+**Solution-file layout note:** All three solutions carry their own nested `private static class FastIO` so each file is self-contained for single-file CSES submission (decided 2026-06-11, superseding the spec's original shared-`cses.support.FastIO` arrangement for `MissingNumber`). Leave that arrangement exactly as it is — this plan deletes the DI methods and nothing else in those files.
 
 ---
 
@@ -48,9 +48,9 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.DynamicTest;
 
 /**
- * Test harness for CSES solutions: runs a solution's {@code main} on inline stdin ({@link #run})
- * or on every official {@code N.in}/{@code N.out} data pair under {@code
- * src/test/resources/<slug>/} ({@link #tests}).
+ * Test harness for CSES solutions: runs a solution's {@code main} on inline stdin ({@link #run}) or
+ * on every official {@code N.in}/{@code N.out} data pair under {@code src/test/resources/<slug>/}
+ * ({@link #tests}).
  */
 public final class Cses {
   private Cses() {}
@@ -63,9 +63,9 @@ public final class Cses {
 
   /**
    * Runs the solution's main with the given stdin content and returns its stdout with trailing
-   * whitespace stripped, so expectations are written without a trailing newline. Leading
-   * whitespace is preserved: a solution that emits it should fail. The real streams are restored
-   * even when the solution throws.
+   * whitespace stripped, so expectations are written without a trailing newline. Leading whitespace
+   * is preserved: a solution that emits it should fail. The real streams are restored even when the
+   * solution throws.
    */
   public static String run(Solver solver, String input) throws IOException {
     InputStream originalIn = System.in;
@@ -369,19 +369,25 @@ Run `git status` afterward and confirm nothing under `cses/src/test` remains mod
 ### Task 5: Delete the DI solve methods, go green, commit
 
 **Files:**
-- Modify: `cses/src/main/java/cses/introductory/problems/MissingNumber.java`
+- Verify: `cses/src/main/java/cses/introductory/problems/MissingNumber.java` (already final in the working tree)
 - Modify: `cses/src/main/java/cses/introductory/problems/WeirdAlgorithm.java`
 - Modify: `cses/src/main/java/cses/sorting/searching/SumTwoValues.java`
+- Delete: `cses/src/main/java/cses/support/FastIO.java` (untracked, orphaned)
 
-- [ ] **Step 1: Reduce `MissingNumber` to main-only**
+- [ ] **Step 1: Verify `MissingNumber` is main-only with a nested `FastIO`**
 
-Replace the file with exactly (drops `missingNumber` and the four imports only it used):
+The working tree already holds the final form (a prior manual edit). Confirm the file is exactly the following; replace it if it differs:
 
 ```java
 package cses.introductory.problems;
 
-import cses.support.FastIO;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
 
 public class MissingNumber {
   public static void main(String[] args) throws IOException {
@@ -395,7 +401,48 @@ public class MissingNumber {
       io.println(sum - runningSum);
     }
   }
+
+  private static class FastIO extends PrintWriter {
+    private final BufferedReader r;
+    private StringTokenizer st;
+
+    public FastIO() {
+      this(System.in, System.out);
+    }
+
+    public FastIO(InputStream in, OutputStream out) {
+      super(out); // PrintWriter(OutputStream) buffers through an internal BufferedWriter
+      r = new BufferedReader(new InputStreamReader(in));
+    }
+
+    /** Next whitespace-delimited token, pulling fresh lines across boundaries as needed. */
+    public String next() throws IOException {
+      while (st == null || !st.hasMoreTokens()) {
+        st = new StringTokenizer(r.readLine());
+      }
+      return st.nextToken();
+    }
+
+    public int nextInt() throws IOException {
+      return Integer.parseInt(next());
+    }
+
+    public long nextLong() throws IOException {
+      return Long.parseLong(next());
+    }
+
+    public double nextDouble() throws IOException {
+      return Double.parseDouble(next());
+    }
+  }
 }
+```
+
+Then delete the orphaned shared-FastIO file (untracked, so plain `rm` suffices) and its now-empty package folder:
+
+```bash
+rm cses/src/main/java/cses/support/FastIO.java
+rmdir cses/src/main/java/cses/support
 ```
 
 - [ ] **Step 2: Reduce `WeirdAlgorithm` to main-only**
@@ -556,7 +603,7 @@ Expected: BUILD SUCCESSFUL. If `spotlessCheck` fails, run `./gradlew :cses:spotl
 
 - [ ] **Step 5: Commit the main side**
 
-Stage the whole main tree — this intentionally includes the in-flight `cses/support/FastIO.java` extraction that `MissingNumber.main` depends on:
+Stage the whole main tree (the orphaned `cses/support/FastIO.java` was already removed in Step 1 and was never tracked, so it cannot appear):
 
 ```bash
 git add cses/src/main

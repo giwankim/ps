@@ -30,9 +30,11 @@ plumbing and left the submitted `FastIO` path untested.
 ## Solutions (`cses/src/main`)
 
 `MissingNumber`, `WeirdAlgorithm`, and `SumTwoValues` each keep only their
-`main` + `FastIO` body. The DI methods and their now-unused imports
-(`BufferedReader`, `InputStreamReader`, `PrintWriter`, `StringTokenizer`) are
-deleted. `cses.support.FastIO` is untouched.
+`main` + `FastIO` body. The DI methods are deleted. Every solution carries its
+own nested `private static class FastIO` so each file stays a self-contained,
+directly submittable unit (amended 2026-06-11: the in-flight shared
+`cses.support.FastIO` extraction was abandoned because CSES takes single-file
+submissions; the orphaned class is deleted rather than committed).
 
 ## Harness (`support.Cses`)
 
