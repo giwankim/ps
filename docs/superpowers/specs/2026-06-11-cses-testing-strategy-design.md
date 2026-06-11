@@ -98,9 +98,7 @@ class MissingNumberTest {
 cses/src/test/resources/
 ├── missing-number/        1.in 1.out … 14.in 14.out
 ├── sum-of-two-values/     1.in 1.out … 27.in 27.out
-├── weird-algorithm/           1.in 1.out … 14.in 14.out
-├── cses-test-fixture/         valid pairs for the harness self-test
-└── cses-test-fixture-orphan/  an .in without .out, for the guard self-test
+└── weird-algorithm/       1.in 1.out … 14.in 14.out
 ```
 
 Slug folders are named after the CSES problem title in kebab-case. Resources

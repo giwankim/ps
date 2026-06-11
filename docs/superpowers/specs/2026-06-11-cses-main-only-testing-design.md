@@ -117,8 +117,10 @@ their documented intent survive the migration unchanged.
 
 ## Verification
 
-`./gradlew :cses:test` green and spotless clean. The change spans seven files:
-three solutions, three test classes, and `support/Cses.java`.
+`./gradlew :cses:test` green and spotless clean. The change spans seven files
+— three solutions, three test classes, and `support/Cses.java` — plus the
+riding-along deletions of `support/CsesTest.java` and the
+`cses-test-fixture*` resource folders.
 
 ## Scope
 
