@@ -25,18 +25,23 @@ public class SumTwoValues {
 
       int lo = 0;
       int hi = n - 1;
+      boolean found = false;
       while (lo < hi) {
         long sum = (long) nums[lo][0] + nums[hi][0];
         if (sum == x) {
-          io.println(nums[lo][1] + " " + nums[hi][1]);
-          return;
+          found = true;
+          break;
         } else if (sum < x) {
           lo += 1;
         } else {
           hi -= 1;
         }
       }
-      io.println("IMPOSSIBLE");
+      if (found) {
+        io.println(nums[lo][1] + " " + nums[hi][1]);
+      } else {
+        io.println("IMPOSSIBLE");
+      }
     }
   }
 

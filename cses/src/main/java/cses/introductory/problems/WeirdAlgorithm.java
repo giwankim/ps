@@ -12,16 +12,18 @@ public class WeirdAlgorithm {
   public static void main(String[] args) throws IOException {
     try (FastIO io = new FastIO()) {
       long n = io.nextLong();
-      while (n != 1L) {
-        io.print(n + " ");
-        if (n % 2L == 0L) {
-          n /= 2L;
+      StringBuilder result = new StringBuilder();
+      while (n != 1) {
+        result.append(n).append(' ');
+        if (n % 2 == 0) {
+          n /= 2;
         } else {
-          n *= 3L;
-          n += 1L;
+          n *= 3;
+          n += 1;
         }
       }
-      io.println(1L + " ");
+      result.append(1);
+      io.println(result);
     }
   }
 
