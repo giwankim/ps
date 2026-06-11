@@ -3,6 +3,13 @@
 Date: 2026-06-11
 Module: `cses/`
 
+> Partially superseded by
+> [2026-06-11-cses-main-only-testing-design.md](2026-06-11-cses-main-only-testing-design.md):
+> solutions now expose `main` only, `Solver`/`run` redirect
+> `System.in`/`System.out`, fixed-input tests use junit-pioneer `@StdIo`, and
+> the harness self-tests were dropped. The resources layout, bulk-runner
+> discovery rules, and fail-fast guards below still apply.
+
 ## Goal
 
 Give every CSES problem two complementary test layers — hand-written TDD cases
