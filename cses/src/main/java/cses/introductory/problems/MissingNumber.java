@@ -2,27 +2,56 @@ package cses.introductory.problems;
 
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 public class MissingNumber {
   public static void main(String[] args) throws IOException {
-    try (BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-        PrintWriter pw = new PrintWriter(System.out)) {
-      missingNumber(r, pw);
+    try (FastIO io = new FastIO()) {
+      int n = io.nextInt();
+      long sum = (long) n * (n + 1) / 2;
+      long runningSum = 0L;
+      for (int i = 0; i + 1 < n; i++) {
+        runningSum += io.nextInt();
+      }
+      io.println(sum - runningSum);
     }
   }
 
-  public static void missingNumber(BufferedReader r, PrintWriter pw) throws IOException {
-    int N = Integer.parseInt(r.readLine());
-    StringTokenizer st = new StringTokenizer(r.readLine());
+  private static class FastIO extends PrintWriter {
+    private final BufferedReader r;
+    private StringTokenizer st;
 
-    long sum = (long) N * (N + 1) / 2;
-    long runningSum = 0L;
-    for (int i = 0; i + 1 < N; i++) {
-      runningSum += Integer.parseInt(st.nextToken());
+    public FastIO() {
+      this(System.in, System.out);
     }
-    pw.println(sum - runningSum);
+
+    public FastIO(InputStream in, OutputStream out) {
+      super(out); // PrintWriter(OutputStream) buffers through an internal BufferedWriter
+      r = new BufferedReader(new InputStreamReader(in));
+    }
+
+    /** Next whitespace-delimited token, pulling fresh lines across boundaries as needed. */
+    public String next() throws IOException {
+      while (st == null || !st.hasMoreTokens()) {
+        st = new StringTokenizer(r.readLine());
+      }
+      return st.nextToken();
+    }
+
+    public int nextInt() throws IOException {
+      return Integer.parseInt(next());
+    }
+
+    public long nextLong() throws IOException {
+      return Long.parseLong(next());
+    }
+
+    public double nextDouble() throws IOException {
+      return Double.parseDouble(next());
+    }
   }
 }
