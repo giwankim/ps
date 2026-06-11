@@ -202,8 +202,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Stream;
 import org.junit.jupiter.api.DynamicTest;
 
@@ -259,7 +259,9 @@ public final class Cses {
     try (Stream<Path> files = Files.list(Path.of(url.toURI()))) {
       inputs = files
           .filter(p -> p.getFileName().toString().endsWith(".in"))
-          .sorted(Comparator.comparingInt(Cses::number))
+          .map(in -> Map.entry(number(in), in))
+          .sorted(Map.Entry.comparingByKey())
+          .map(Map.Entry::getValue)
           .toList();
     } catch (IOException e) {
       throw new UncheckedIOException(e);
