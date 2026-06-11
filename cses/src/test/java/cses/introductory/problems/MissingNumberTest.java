@@ -1,4 +1,4 @@
-package cses.missing.number;
+package cses.introductory.problems;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

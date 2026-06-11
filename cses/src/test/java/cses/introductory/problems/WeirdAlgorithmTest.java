@@ -1,4 +1,4 @@
-package cses.weird.algorithm;
+package cses.introductory.problems;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

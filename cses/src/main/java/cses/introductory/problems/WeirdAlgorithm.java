@@ -1,4 +1,4 @@
-package cses.weird.algorithm;
+package cses.introductory.problems;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package cses.sum.two.values;
+package cses.sorting.searching;
 
 import java.io.BufferedReader;
 import java.io.IOException;
