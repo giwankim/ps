@@ -13,17 +13,17 @@ public class Main {
     try (FastIO io = new FastIO()) {
       int n = io.nextInt();
       int k = io.nextInt();
-      long[][] points = new long[n][2];
+      int[][] points = new int[n][2];
       for (int i = 0; i < n; i++) {
-        points[i][0] = io.nextLong();
-        points[i][1] = io.nextLong();
+        points[i][0] = io.nextInt();
+        points[i][1] = io.nextInt();
       }
 
-      long side = -1;
-      long lo = 0;
-      long hi = Integer.MAX_VALUE;
+      int side = -1;
+      int lo = 0;
+      int hi = Integer.MAX_VALUE;
       while (lo <= hi) {
-        long mid = lo + (hi - lo) / 2;
+        int mid = lo + (hi - lo) / 2;
         if (isFeasible(points, k, mid)) {
           side = mid;
           hi = mid - 1;
@@ -32,13 +32,13 @@ public class Main {
         }
       }
 
-      long ans = side + 2;
+      long ans = (side + 2);
       ans *= ans;
       io.println(ans);
     }
   }
 
-  private static boolean isFeasible(long[][] points, int k, long side) {
+  private static boolean isFeasible(int[][] points, int k, int side) {
     int n = points.length;
     for (int i = 0; i < n; i++) {
       long minX = points[i][0];
@@ -48,8 +48,8 @@ public class Main {
         long maxY = minY + side;
         int cnt = 0;
         for (int l = 0; l < n; l++) {
-          long x = points[l][0];
-          long y = points[l][1];
+          int x = points[l][0];
+          int y = points[l][1];
           if (x >= minX && x <= maxX && y >= minY && y <= maxY) {
             cnt++;
           }
