@@ -266,6 +266,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2557. Hello World](https://www.acmicpc.net/problem/2557)
 - [2559. 수열](https://www.acmicpc.net/problem/2559)
 - [2563. 색종이](https://www.acmicpc.net/problem/2563)
+- [2613. 숫자구슬](https://www.acmicpc.net/problem/2613)
 - [2792. 보석 상자](https://www.acmicpc.net/problem/2792)
 - [2805. 나무 자르기](https://www.acmicpc.net/problem/2805)
 - [2851. 슈퍼 마리오](https://www.acmicpc.net/problem/2851)
