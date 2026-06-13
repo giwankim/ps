@@ -227,6 +227,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
+- [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 
 ## [Programmers](https://programmers.co.kr/)
 
