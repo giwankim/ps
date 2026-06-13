@@ -19,7 +19,6 @@ public class MaximumTotalSubarrayValueII {
       }
     }
 
-
     PriorityQueue<int[]> maxHeap = new PriorityQueue<>((a, b) -> Long.compare(b[0], a[0]));
     for (int i = 0; i < n; i++) {
       int j = 31 - Integer.numberOfLeadingZeros(n - i);
