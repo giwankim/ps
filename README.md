@@ -298,6 +298,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [14224. 작은 정사각형 2](https://www.acmicpc.net/problem/14224)
 - [14400. 편의점 2](https://www.acmicpc.net/problem/14400)
 - [14453. Hoof, Paper, Scissors (Silver)](https://www.acmicpc.net/problem/14453)
+- [14501. 퇴사](https://www.acmicpc.net/problem/14501)
 - [14465. 소가 길을 건너간 이유 5](https://www.acmicpc.net/problem/14465)
 - [14568. 2017 연세대학교 프로그래밍 경시대회](https://www.acmicpc.net/problem/14568)
 - [14697. 방 배정하기](https://www.acmicpc.net/problem/14697)
