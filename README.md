@@ -274,6 +274,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2805. 나무 자르기](https://www.acmicpc.net/problem/2805)
 - [2851. 슈퍼 마리오](https://www.acmicpc.net/problem/2851)
 - [2875. 대회 or 인턴](https://www.acmicpc.net/problem/2875)
+- [2961. 도영이가 만든 맛있는 음식](https://www.acmicpc.net/problem/2961)
 - [3020. 개똥벌레](https://www.acmicpc.net/problem/3020)
 - [3273. 두 수의 합](https://www.acmicpc.net/problem/3273)
 - [3673. 나눌 수 있는 부분 수열](https://www.acmicpc.net/problem/3673)
