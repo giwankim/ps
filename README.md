@@ -303,6 +303,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [14846. 직사각형과 쿼리](https://www.acmicpc.net/problem/14846)
 - [15552. 빠른 A + B](https://www.acmicpc.net/problem/15552)
 - [15593. Lifeguards (Bronze)](https://www.acmicpc.net/problem/15593)
+- [15649. N과 M (1)](https://www.acmicpc.net/problem/15649)
 - [15831. 준표의 조약돌](https://www.acmicpc.net/problem/15831)
 - [15961. 회전 초밥](https://www.acmicpc.net/problem/15961)
 - [15970. 화살표 그리기](https://www.acmicpc.net/problem/15970)
