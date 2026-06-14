@@ -1,25 +1,40 @@
 package com.giwankim.leetcode;
 
 import com.giwankim.leetcode.support.ListNode;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MaximumTwinSumOfALinkedList {
   public int pairSum(ListNode head) {
-    int result = 0;
-    List<Integer> values = new ArrayList<>();
-    while (head != null) {
-      values.add(head.val);
-      head = head.next;
+    ListNode dummy = new ListNode();
+    dummy.next = head;
+    ListNode slow = dummy;
+    ListNode fast = dummy;
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
     }
 
-    int l = 0;
-    int r = values.size() - 1;
-    while (l < r) {
-      result = Math.max(result, values.get(l) + values.get(r));
-      l += 1;
-      r -= 1;
+    ListNode firstHalf = head;
+    ListNode secondHalf = reverse(slow.next);
+    slow.next = null;
+
+    int result = 0;
+    while (firstHalf != null && secondHalf != null) {
+      result = Math.max(result, firstHalf.val + secondHalf.val);
+      firstHalf = firstHalf.next;
+      secondHalf = secondHalf.next;
     }
     return result;
+  }
+
+  private static ListNode reverse(ListNode head) {
+    ListNode prev = null;
+    ListNode curr = head;
+    while (curr != null) {
+      ListNode next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
+    }
+    return prev;
   }
 }
