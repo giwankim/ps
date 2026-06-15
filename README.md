@@ -319,6 +319,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [15655. N과 M (6)](https://www.acmicpc.net/problem/15655)
 - [15656. N과 M (7)](https://www.acmicpc.net/problem/15656)
 - [15657. N과 M (8)](https://www.acmicpc.net/problem/15657)
+- [15686. 치킨 배달](https://www.acmicpc.net/problem/15686)
 - [15831. 준표의 조약돌](https://www.acmicpc.net/problem/15831)
 - [15961. 회전 초밥](https://www.acmicpc.net/problem/15961)
 - [15970. 화살표 그리기](https://www.acmicpc.net/problem/15970)
