@@ -227,6 +227,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
+- [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
