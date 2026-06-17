@@ -330,6 +330,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [16472. 고냥이](https://www.acmicpc.net/problem/16472)
 - [16498. 작은 벌점](https://www.acmicpc.net/problem/16498)
 - [16955. 오목, 이길 수 있을까?](https://www.acmicpc.net/problem/16955)
+- [17136. 색종이 붙히기](https://www.acmicpc.net/problem/17136)
 - [17252. 삼삼한 수](https://www.acmicpc.net/problem/17252)
 - [17286. 유미](https://www.acmicpc.net/problem/17286)
 - [17611. 직각다각형](https://www.acmicpc.net/problem/17611)
