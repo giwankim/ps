@@ -18,6 +18,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
 - [3. Longest Substring without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters)
 - [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays)
+- [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring)
 - [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion)
 - [9. Palindrome Number](https://leetcode.com/problems/palindrome-number)
 - [11. Container with Most Water](https://leetcode.com/problems/container-with-most-water)
