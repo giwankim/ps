@@ -1,6 +1,11 @@
 package com.giwankim.leetcode;
 
 public class MaximalSquare {
+  /**
+   * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for the {@code dp} grid,
+   *     where {@code n = matrix.length} is the number of rows and {@code m = matrix[0].length} the
+   *     number of columns.
+   */
   public int maximalSquare(char[][] matrix) {
     int result = 0;
     int n = matrix.length;
