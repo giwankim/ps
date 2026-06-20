@@ -306,6 +306,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [10819. 차이를 최대로](https://www.acmicpc.net/problem/10819)
 - [11728. 배열 합치기](https://www.acmicpc.net/problem/11728)
 - [12002. Field Reduction (Silver)](https://www.acmicpc.net/problem/12002)
+- [12865. 평범한 배낭](https://www.acmicpc.net/problem/12865)
 - [12991. 홍준이의 행렬](https://www.acmicpc.net/problem/12991)
 - [13423. Three Dots](https://www.acmicpc.net/problem/13423)
 - [13702. 이상한 술집](https://www.acmicpc.net/problem/13702)
