@@ -223,6 +223,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 - [1732. Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)
 - [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
+- [1833. Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)
 - [2095. Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list)
 - [2130. Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)
 - [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)
