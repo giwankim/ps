@@ -212,6 +212,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1109. Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings)
 - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)
 - [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array)
+- [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)
 - [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 - [1297. Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring)
 - [1344. Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock)
