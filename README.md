@@ -259,6 +259,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1438. 가장 작은 직사각형](https://www.acmicpc.net/problem/1438)
 - [1484. 다이어트](https://www.acmicpc.net/problem/1484)
 - [1497. 기타콘서트](https://www.acmicpc.net/problem/1497)
+- [1520. 내리막 길](https://www.acmicpc.net/problem/1520)
 - [1553. 도미노 찾기](https://www.acmicpc.net/problem/1553)
 - [1637. 날카로운 눈](https://www.acmicpc.net/problem/1637)
 - [1654. 랜선 자르기](https://www.acmicpc.net/problem/1654)
