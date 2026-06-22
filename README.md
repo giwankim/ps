@@ -354,6 +354,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [19951. 태상이의 훈련소 생활](https://www.acmicpc.net/problem/19951)
 - [20033. Square, Not Rectangle](https://www.acmicpc.net/problem/20033)
 - [20366. 같이 눈사람 만들래?](https://www.acmicpc.net/problem/20366)
+- [20544. 공룡게임](https://www.acmicpc.net/problem/20544)
 - [22862. 가장 긴 짝수 연속한 부분 수열 (large)](https://www.acmicpc.net/problem/22862)
 - [22945. 팁 빌딩](https://www.acmicpc.net/problem/22945)
 - [22988. 재활용 캠페인](https://www.acmicpc.net/problem/22988)
