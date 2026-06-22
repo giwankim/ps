@@ -37,6 +37,20 @@ public class FastIO extends PrintWriter {
     r = new BufferedReader(new InputStreamReader(in));
   }
 
+  /**
+   * Whether another token remains, pulling fresh lines as needed; {@code false} at end of input.
+   */
+  public boolean hasNext() throws IOException {
+    while (st == null || !st.hasMoreTokens()) {
+      String line = r.readLine();
+      if (line == null) {
+        return false;
+      }
+      st = new StringTokenizer(line);
+    }
+    return true;
+  }
+
   /** Next whitespace-delimited token, pulling fresh lines across boundaries as needed. */
   public String next() throws IOException {
     while (st == null || !st.hasMoreTokens()) {
