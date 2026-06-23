@@ -364,6 +364,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [22988. 재활용 캠페인](https://www.acmicpc.net/problem/22988)
 - [23032. 서프라이즈~](https://www.acmicpc.net/problem/23032)
 - [23351. 물 주기](https://www.acmicpc.net/problem/23351)
+- [23880. Walking Home](https://www.acmicpc.net/problem/23880)
 - [24525. SKK 문자열](https://www.acmicpc.net/problem/24525)
 - [24956. 나는 정말 휘파람을 못 불어](https://www.acmicpc.net/problem/24956)
 - [25332. 수들의 합 8](https://www.acmicpc.net/problem/25332)
