@@ -33,6 +33,7 @@
             <option value="$PROJECT_DIR$/misc" />
             <option value="$PROJECT_DIR$/programmers" />
             <option value="$PROJECT_DIR$/usaco" />
+            <option value="$PROJECT_DIR$/uva" />
           </set>
         </option>
         <option name="myGradleHome" value="$USER_HOME$/.sdkman/candidates/gradle/current" />
