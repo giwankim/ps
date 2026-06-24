@@ -374,6 +374,10 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [28447. 마라탕 재료 고르기](https://www.acmicpc.net/problem/28447)
 - [28449. 누가 이길까](https://www.acmicpc.net/problem/28449)
 
+## [UVa Online Judge](https://onlinejudge.org)
+
+- [01230. MODEX](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=247&page=show_problem&problem=3671)
+
 ## [USACO](https://usaco.org/index.php)
 
 - [2024 January](https://usaco.org/index.php?page=jan24results)
