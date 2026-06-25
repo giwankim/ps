@@ -61,3 +61,10 @@ src/**/*.txt
 
 ### Threads ###
 /src/main/java/learn/thread/
+
+### Untracked LeetCode WIP ###
+leetcode/src/main/java/com/giwankim/leetcode/LongestIncreasingSubsequence.java
+leetcode/src/main/java/com/giwankim/leetcode/MedianOfTwoSortedArrays.java
+leetcode/src/test/java/com/giwankim/leetcode/LongestIncreasingSubsequenceTest.java
+leetcode/src/test/java/com/giwankim/leetcode/MedianOfTwoSortedArraysTest.java
+leetcode/src/test/java/com/giwankim/leetcode/MinimumPathSumTest.java
