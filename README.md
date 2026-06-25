@@ -279,6 +279,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2110. 공유기 설치](https://www.acmicpc.net/problem/2110)
 - [2121. 넷이 놀기](https://www.acmicpc.net/problem/2121)
 - [2143. 두 배열의 합](https://www.acmicpc.net/problem/2143)
+- [2216. 문자열과 점수](https://www.acmicpc.net/problem/2216)
 - [2304. 창고 다각형](https://www.acmicpc.net/problem/2304)
 - [2309. 일곱 난쟁이](https://www.acmicpc.net/problem/2309)
 - [2435. 기상청 인턴 신현수](https://www.acmicpc.net/problem/2435)
