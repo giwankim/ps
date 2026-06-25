@@ -238,6 +238,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
+- [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 
 ## [Programmers](https://programmers.co.kr/)
