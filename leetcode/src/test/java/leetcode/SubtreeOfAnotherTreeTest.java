@@ -1,0 +1,27 @@
+package leetcode;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.stream.Stream;
+import leetcode.support.TreeNode;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+class SubtreeOfAnotherTreeTest {
+
+  @ParameterizedTest
+  @MethodSource
+  void isSubtree(TreeNode root, TreeNode subRoot, boolean expected) {
+    boolean actual = new SubtreeOfAnotherTree().isSubtree(root, subRoot);
+    assertThat(actual).isEqualTo(expected);
+  }
+
+  private static Stream<Arguments> isSubtree() {
+    return Stream.of(
+        Arguments.of(TreeNode.of(3, 4, 5, 1, 2), TreeNode.of(4, 1, 2), true),
+        Arguments.of(
+            TreeNode.of(3, 4, 5, 1, 2, null, null, null, null, 0), TreeNode.of(4, 1, 2), false),
+        Arguments.of(TreeNode.of(3, 4, 5, 1, null, 2), TreeNode.of(3, 1, 2), false));
+  }
+}

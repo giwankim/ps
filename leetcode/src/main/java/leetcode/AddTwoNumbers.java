@@ -1,0 +1,24 @@
+package leetcode;
+
+import leetcode.support.ListNode;
+
+public class AddTwoNumbers {
+  /** @implNote Time {@code O(max(m,n))}, space {@code O(1)}. */
+  public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+    ListNode dummy = new ListNode();
+    int carry = 0;
+    for (ListNode it = dummy; l1 != null || l2 != null || carry != 0; it = it.next) {
+      if (l1 != null) {
+        carry += l1.val;
+        l1 = l1.next;
+      }
+      if (l2 != null) {
+        carry += l2.val;
+        l2 = l2.next;
+      }
+      it.next = new ListNode(carry % 10);
+      carry /= 10;
+    }
+    return dummy.next;
+  }
+}

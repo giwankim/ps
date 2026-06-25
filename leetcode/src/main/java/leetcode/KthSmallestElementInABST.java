@@ -1,0 +1,52 @@
+package leetcode;
+
+import java.util.ArrayDeque;
+import java.util.Deque;
+import leetcode.support.TreeNode;
+
+public class KthSmallestElementInABST {
+  private int count;
+  private int val;
+
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
+  public int kthSmallest(TreeNode root, int k) {
+    count = 0;
+    inorder(root, k);
+    return val;
+  }
+
+  private void inorder(TreeNode root, int k) {
+    if (root == null) {
+      return;
+    }
+    inorder(root.left, k);
+    count += 1;
+    if (count == k) {
+      val = root.val;
+      return;
+    }
+    inorder(root.right, k);
+  }
+
+  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
+  public int kthSmallest2(TreeNode root, int k) {
+    Deque<TreeNode> stack = new ArrayDeque<>();
+    pushAllLeft(root, stack);
+    while (!stack.isEmpty()) {
+      TreeNode node = stack.pop();
+      k -= 1;
+      if (k == 0) {
+        return node.val;
+      }
+      pushAllLeft(node.right, stack);
+    }
+    return -1;
+  }
+
+  private void pushAllLeft(TreeNode root, Deque<TreeNode> stack) {
+    while (root != null) {
+      stack.push(root);
+      root = root.left;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+package leetcode;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.List;
+import java.util.stream.Stream;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+class TextJustificationTest {
+  TextJustification sut = new TextJustification();
+
+  @Test
+  void oneLine() {
+    String[] words = {"This", "is", "not", "a", "pipe"};
+    int maxWidth = 18;
+    List<String> expected = List.of("This is not a pipe");
+    List<String> actual = sut.fullJustify(words, maxWidth);
+    assertThat(actual).isEqualTo(expected);
+  }
+
+  @Test
+  void lineWithOneWord() {
+    String[] words = {"Supercalifragilisticexpialidocious!", "You'll always sound precocious"};
+    int maxWidth = 35;
+    List<String> expected =
+        List.of("Supercalifragilisticexpialidocious!", "You'll always sound precocious     ");
+    List<String> actual = sut.fullJustify(words, maxWidth);
+    assertThat(actual).isEqualTo(expected);
+  }
+
+  @ParameterizedTest
+  @MethodSource
+  void fullJustify(String[] words, int maxWidth, List<String> expected) {
+    List<String> actual = sut.fullJustify(words, maxWidth);
+    assertThat(actual).isEqualTo(expected);
+  }
+
+  static Stream<Arguments> fullJustify() {
+    return Stream.of(
+        Arguments.of(
+            new String[] {"This", "is", "an", "example", "of", "text", "justification."},
+            16,
+            List.of("This    is    an", "example  of text", "justification.  ")),
+        Arguments.of(
+            new String[] {"What", "must", "be", "acknowledgment", "shall", "be"},
+            16,
+            List.of("What   must   be", "acknowledgment  ", "shall be        ")),
+        Arguments.of(
+            new String[] {
+              "Science",
+              "is",
+              "what",
+              "we",
+              "understand",
+              "well",
+              "enough",
+              "to",
+              "explain",
+              "to",
+              "a",
+              "computer.",
+              "Art",
+              "is",
+              "everything",
+              "else",
+              "we",
+              "do"
+            },
+            20,
+            List.of(
+                "Science  is  what we",
+                "understand      well",
+                "enough to explain to",
+                "a  computer.  Art is",
+                "everything  else  we",
+                "do                  ")));
+  }
+}

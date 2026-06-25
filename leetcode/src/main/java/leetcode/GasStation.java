@@ -1,0 +1,23 @@
+package leetcode;
+
+public class GasStation {
+  /** @implNote Time {@code O(n)}, space {@code O(1)}. */
+  public int canCompleteCircuit(int[] gas, int[] cost) {
+    int result = 0;
+    int totalGain = 0;
+    int currGain = 0;
+    for (int i = 0; i < gas.length; i++) {
+      int diff = gas[i] - cost[i];
+      currGain += diff;
+      totalGain += diff;
+      if (currGain < 0) {
+        result = i + 1;
+        currGain = 0;
+      }
+    }
+    if (totalGain < 0) {
+      result = -1;
+    }
+    return result;
+  }
+}
