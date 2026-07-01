@@ -234,6 +234,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2196. Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions)
 - [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
+- [2812. Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid)
 - [3020. Find the Maximum Number of Elements in Subset](https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset)
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
