@@ -383,6 +383,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [27728. 개구리와 쿼리](https://www.acmicpc.net/problem/27728)
 - [28447. 마라탕 재료 고르기](https://www.acmicpc.net/problem/28447)
 - [28449. 누가 이길까](https://www.acmicpc.net/problem/28449)
+- [30464. 시간낭비](https://www.acmicpc.net/problem/30464)
 
 ## [UVa Online Judge](https://onlinejudge.org)
 
