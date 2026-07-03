@@ -8,6 +8,15 @@ import java.util.Queue;
 public class FindTheSafestPathInAGrid {
   private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
+  /**
+   * @implNote Time {@code O(n² log n)}, space {@code O(n²)}, where {@code n = grid.size()}.
+   *     <p><b>Time:</b> {@link #getDistances} runs one multi-source BFS over all {@code n²} cells
+   *     in {@code O(n²)}. The safeness factor then falls out of a binary search over the candidate
+   *     range {@code [0, 2n]} — {@code O(log n)} probes, each an {@code O(n²)} reachability BFS via
+   *     {@link #pathExists} — giving {@code O(n² log n)}, which dominates the precompute.
+   *     <p><b>Space:</b> {@code O(n²)} for the distance grid plus the {@code visited} array and
+   *     queue of each BFS.
+   */
   public int maximumSafenessFactor(List<List<Integer>> grid) {
     int n = grid.size();
     int[][] dists = getDistances(grid);
@@ -26,6 +35,11 @@ public class FindTheSafestPathInAGrid {
     return result;
   }
 
+  /**
+   * @implNote Time {@code O(n²)}, space {@code O(n²)}, where {@code n = dists.length}. A single BFS
+   *     from the top-left corner, admitting only cells at least {@code safeness} from a thief,
+   *     visits each cell at most once.
+   */
   private static boolean pathExists(int[][] dists, int safeness) {
     int n = dists.length;
     if (dists[0][0] < safeness || dists[n - 1][n - 1] < safeness) {
@@ -55,6 +69,11 @@ public class FindTheSafestPathInAGrid {
     return false;
   }
 
+  /**
+   * @implNote Time {@code O(n²)}, space {@code O(n²)}, where {@code n = grid.size()}. Multi-source
+   *     BFS seeded from every thief settles each of the {@code n²} cells exactly once, giving its
+   *     Manhattan distance to the nearest thief.
+   */
   private static int[][] getDistances(List<List<Integer>> grid) {
     int n = grid.size();
     int[][] result = new int[n][n];
