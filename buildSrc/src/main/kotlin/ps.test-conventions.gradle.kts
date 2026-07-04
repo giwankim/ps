@@ -14,4 +14,7 @@ dependencies {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    // Online judges run solutions with large thread stacks, so recursive solutions that are
+    // accepted there (e.g. DFS at depth 1e5) must not fail locally with StackOverflowError.
+    jvmArgs("-Xss64m")
 }
