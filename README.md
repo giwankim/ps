@@ -265,6 +265,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1090. 체커](https://www.acmicpc.net/problem/1090)
 - [1149. RGB 거리](https://www.acmicpc.net/problem/1149)
 - [1182. 부분수열의 합](https://www.acmicpc.net/problem/1182)
+- [1260. DFS와 BFS](https://www.acmicpc.net/problem/1260)
 - [1300. K번째 수](https://www.acmicpc.net/problem/1300)
 - [1417. 국회의원 선거](https://www.acmicpc.net/problem/1417)
 - [1438. 가장 작은 직사각형](https://www.acmicpc.net/problem/1438)
