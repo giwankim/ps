@@ -282,6 +282,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1697. 숨바꼭질](https://www.acmicpc.net/problem/1697)
 - [1699. 제곱수의 합](https://www.acmicpc.net/problem/1699)
 - [1749. 점수따먹기](https://www.acmicpc.net/problem/1749)
+- [1753. 최단경로](https://www.acmicpc.net/problem/1753)
 - [1759. 암호 만들기](https://www.acmicpc.net/problem/1759)
 - [1806. 부분합](https://www.acmicpc.net/problem/1806)
 - [1912. 연속합](https://www.acmicpc.net/problem/1912)
