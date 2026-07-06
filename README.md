@@ -367,6 +367,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [15831. 준표의 조약돌](https://www.acmicpc.net/problem/15831)
 - [15961. 회전 초밥](https://www.acmicpc.net/problem/15961)
 - [15970. 화살표 그리기](https://www.acmicpc.net/problem/15970)
+- [15971. 두 로봇](https://www.acmicpc.net/problem/15971)
 - [16283. Farm](https://www.acmicpc.net/problem/16283)
 - [16472. 고냥이](https://www.acmicpc.net/problem/16472)
 - [16498. 작은 벌점](https://www.acmicpc.net/problem/16498)
