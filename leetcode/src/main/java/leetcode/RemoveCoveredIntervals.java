@@ -1,22 +1,19 @@
 package leetcode;
 
+import java.util.Arrays;
+
 public class RemoveCoveredIntervals {
+  /** @implNote Time {@code O(n log n)}, space {@code O(1)}, where {@code n = intervals.length}. */
   public int removeCoveredIntervals(int[][] intervals) {
-    int n = intervals.length;
-    boolean[] isCovered = new boolean[n];
-    for (int i = 0; i < n; i++) {
-      for (int j = i + 1; j < n; j++) {
-        if (intervals[i][0] <= intervals[j][0] && intervals[i][1] >= intervals[j][1]) {
-          isCovered[j] = true;
-        } else if (intervals[j][0] <= intervals[i][0] && intervals[j][1] >= intervals[i][1]) {
-          isCovered[i] = true;
-        }
-      }
-    }
-    int result = 0;
-    for (int i = 0; i < n; i++) {
-      if (!isCovered[i]) {
-        result += 1;
+    Arrays.sort(
+        intervals,
+        (a, b) -> a[0] == b[0] ? Integer.compare(b[1], a[1]) : Integer.compare(a[0], b[0]));
+    int result = 1;
+    int end = intervals[0][1];
+    for (int i = 1; i < intervals.length; i++) {
+      if (end < intervals[i][1]) {
+        result++;
+        end = intervals[i][1];
       }
     }
     return result;
