@@ -250,6 +250,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
 - [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
 - [3739. Count Subarrays with Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii)
+- [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 
 ## [Programmers](https://programmers.co.kr/)
