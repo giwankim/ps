@@ -242,6 +242,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 - [3286. Find a Safe Walk Through a Grid](https://leetcode.com/problems/find-a-safe-walk-through-a-grid)
+- [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i)
 - [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii)
 - [3620. Network Recovery Pathways](https://leetcode.com/problems/network-recovery-pathways)
