@@ -237,6 +237,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
 - [2492. Minimum Score of a Path Between Two Cities](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
+- [2685. Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components)
 - [2812. Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid)
 - [3020. Find the Maximum Number of Elements in Subset](https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset)
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
