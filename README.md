@@ -468,6 +468,10 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [CSES](https://cses.fi/)
 
+## [Jungol](https://www.jungol.co.kr/)
+
+- [트리 순회](https://www.jungol.co.kr/problem/9659)
+
 ## [Algospot](https://algospot.com/)
 
 - [록 페스티벌](https://algospot.com/judge/problem/read/FESTIVAL)
