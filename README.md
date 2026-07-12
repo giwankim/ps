@@ -217,6 +217,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals)
 - [1297. Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring)
 - [1301. Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score)
+- [1331. Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array)
 - [1344. Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock)
 - [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
 - [1358. Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)
