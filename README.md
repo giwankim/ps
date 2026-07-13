@@ -215,6 +215,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)
 - [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals)
+- [1291. Sequential Digits](https://leetcode.com/problems/sequential-digits)
 - [1297. Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring)
 - [1301. Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score)
 - [1331. Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array)
