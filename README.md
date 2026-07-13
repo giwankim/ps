@@ -470,7 +470,8 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [Jungol](https://www.jungol.co.kr/)
 
-- [트리 순회](https://www.jungol.co.kr/problem/9659)
+- [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
+- [9659. 트리 순회](https://www.jungol.co.kr/problem/9659)
 
 ## [Algospot](https://algospot.com/)
 
