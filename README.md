@@ -413,6 +413,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 - [1863. 종교](https://www.jungol.co.kr/problem/1863)
 - [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
+- [8406 종교2](https://www.jungol.co.kr/problem/8406)
 - [9659. 트리 순회](https://www.jungol.co.kr/problem/9659)
 
 ## [UVa Online Judge](https://onlinejudge.org)
