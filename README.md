@@ -409,6 +409,12 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [28449. 누가 이길까](https://www.acmicpc.net/problem/28449)
 - [30464. 시간낭비](https://www.acmicpc.net/problem/30464)
 
+## [Jungol](https://www.jungol.co.kr/)
+
+- [1863. 종교](https://www.jungol.co.kr/problem/1863)
+- [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
+- [9659. 트리 순회](https://www.jungol.co.kr/problem/9659)
+
 ## [UVa Online Judge](https://onlinejudge.org)
 
 - [01230. MODEX](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=247&page=show_problem&problem=3671)
@@ -468,11 +474,6 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 ## [Codeforces](https://codeforces.com/)
 
 ## [CSES](https://cses.fi/)
-
-## [Jungol](https://www.jungol.co.kr/)
-
-- [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
-- [9659. 트리 순회](https://www.jungol.co.kr/problem/9659)
 
 ## [Algospot](https://algospot.com/)
 
