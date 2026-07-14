@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="programmers" pattern="file[ps.programmers.main]:*/||file[ps.programmers.test]:*/" />
+</component>
