@@ -259,6 +259,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i)
 - [3756. Concatenate Non-Zero Digits and Multiply by Sum II](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
+- [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs)
 
 ## [Programmers](https://programmers.co.kr/)
 
@@ -416,6 +417,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1863. 종교](https://www.jungol.co.kr/problem/1863)
 - [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
 - [8406 종교2](https://www.jungol.co.kr/problem/8406)
+- [8474. Leaf Leaf](https://www.jungol.co.kr/problem/8474)
 - [9659. 트리 순회](https://www.jungol.co.kr/problem/9659)
 
 ## [UVa Online Judge](https://onlinejudge.org)
