@@ -232,6 +232,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1833. Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)
 - [1846. Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging)
 - [1967. Number of Strings that Appear as Substrings in a Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-a-word)
+- [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array)
 - [2095. Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list)
 - [2130. Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)
 - [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)
