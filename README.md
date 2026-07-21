@@ -249,6 +249,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 - [3286. Find a Safe Walk Through a Grid](https://leetcode.com/problems/find-a-safe-walk-through-a-grid)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
+- [3499. Maximize Active Section with Trade I](https://leetcode.com/problems/maximize-active-section-with-trade-i)
 - [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i)
 - [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii)
