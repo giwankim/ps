@@ -1,14 +1,14 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MaximizeActiveSectionWithTradeI {
-  /** @implNote Time {@code O(n)}, space {@code O(n)}, where {@code n = s.length()}. */
+  /** @implNote Time {@code O(n)}, space {@code O(1)}, where {@code n = s.length()}. */
   public int maxActiveSectionsAfterTrade(String s) {
     int ones = (int) s.chars().filter(c -> c == '1').count();
 
-    List<Integer> zeroes = new ArrayList<>();
+    int curr = 0;
+    int prev = -1;
+    int maxGain = 0;
+
     int n = s.length();
     int i = 0;
     for (int j = 0; j <= n; j++) {
@@ -16,16 +16,14 @@ public class MaximizeActiveSectionWithTradeI {
         continue;
       }
       if (s.charAt(i) == '0') {
-        zeroes.add(j - i);
+        curr = j - i;
+        if (prev != -1) {
+          maxGain = Math.max(maxGain, prev + curr);
+        }
+        prev = curr;
       }
       i = j;
     }
-
-    int maxGain = 0;
-    for (int j = 0; j < zeroes.size() - 1; j++) {
-      maxGain = Math.max(maxGain, zeroes.get(j) + zeroes.get(j + 1));
-    }
-
     return ones + maxGain;
   }
 }
