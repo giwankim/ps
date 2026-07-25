@@ -272,6 +272,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 - [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [12912. 두 정수 사이의 합](https://school.programmers.co.kr/learn/courses/30/lessons/12912)
+- [17681. 비밀지도](https://school.programmers.co.kr/learn/courses/30/lessons/17681)
 - [68645. 삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
 - [72412. 순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
 - [81302. 거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
