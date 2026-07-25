@@ -270,13 +270,14 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [Programmers](https://programmers.co.kr/)
 
-- [숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
-- [거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
-- [교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
-- [삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
-- [행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
-- [주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
-- [순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
+- [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
+- [12912. 두 정수 사이의 합](https://school.programmers.co.kr/learn/courses/30/lessons/12912)
+- [68645. 삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
+- [72412. 순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
+- [81302. 거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
+- [87377. 교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
+- [92341. 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
+- [120807. 숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
 
 ## [Baekjoon](https://www.acmicpc.net/)
 
