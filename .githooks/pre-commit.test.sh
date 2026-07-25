@@ -142,6 +142,16 @@ assert "T8 worktree restored to clean unstaged version" "$(grep -c BADFORMAT A.j
 assert "T8 no leaked stash after block" "$(stash_count)" "0"
 cd "$ORIG"
 
+# T9 -- a non-ASCII staged path must still trip the Java gate. git C-quotes such
+#       paths unless core.quotePath=false, and the trailing quote made the gate's
+#       '\.java$' miss -- so lint was skipped and this dirty commit sailed through.
+d=$(new_sandbox)
+cd "$d"
+printf 'class A {}\n// BADFORMAT\n' >두_정수.java
+git add 두_정수.java
+assert "T9 non-ascii staged path trips java gate" "$(try_commit nine)" "no"
+cd "$ORIG"
+
 echo "----"
 echo "PASS=$PASS FAIL=$FAIL"
 [ "$FAIL" -eq 0 ]

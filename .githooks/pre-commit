@@ -16,7 +16,11 @@
 set -euo pipefail
 
 # 1. Gate: skip unless this commit stages a Java/Kotlin file.
-staged=$(git diff --cached --name-only --diff-filter=d)
+# core.quotePath=false is load-bearing: by default git C-quotes non-ASCII paths as
+# "programmers/.../\353\221\220_....java", and the trailing quote makes the
+# '\.(java|kts?)$' match below fail -- so a commit of only Korean-named sources
+# would silently skip lint. See T9 in pre-commit.test.sh.
+staged=$(git -c core.quotePath=false diff --cached --name-only --diff-filter=d)
 if [ -z "$staged" ]; then
   echo "pre-commit: nothing staged; skipping."
   exit 0
