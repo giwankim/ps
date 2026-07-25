@@ -253,6 +253,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3513. Number of Unique XOR Triplets I](https://leetcode.com/problems/number-of-unique-xor-triplets-i)
 - [3514. Number of Unique XOR Triplets II](https://leetcode.com/problems/number-of-unique-xor-triplets-ii)
 - [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i)
+- [3536. Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits)
 - [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii)
 - [3620. Network Recovery Pathways](https://leetcode.com/problems/network-recovery-pathways)
