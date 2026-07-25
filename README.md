@@ -268,13 +268,14 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 - [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs)
 
-## [Programmers](https://programmers.co.kr/)
+## [Programmers](https://programmers.co.kr)
 
 - [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [12912. 두 정수 사이의 합](https://school.programmers.co.kr/learn/courses/30/lessons/12912)
 - [17681. 비밀지도](https://school.programmers.co.kr/learn/courses/30/lessons/17681)
 - [68645. 삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
 - [72412. 순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
+- [81301. 숫자 문자열과 영단어](https://school.programmers.co.kr/learn/courses/30/lessons/81301)
 - [81302. 거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
 - [87377. 교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
 - [92341. 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
