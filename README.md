@@ -192,6 +192,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [561. Array Partition](https://leetcode.com/problems/array-partition)
 - [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree)
 - [616. Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string)
+- [628. Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers)
 - [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree)
 - [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)
 - [652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees)
