@@ -426,6 +426,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [Jungol](https://www.jungol.co.kr/)
 
+- [1060. 최소비용신장트리](https://www.jungol.co.kr/problem/1060)
 - [1863. 종교](https://www.jungol.co.kr/problem/1863)
 - [7096. 고양이 구하기](https://www.jungol.co.kr/problem/7096)
 - [8406 종교2](https://www.jungol.co.kr/problem/8406)
