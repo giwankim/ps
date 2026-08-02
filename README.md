@@ -205,6 +205,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures)
 - [819. Most Common Word](https://leetcode.com/problems/most-common-word)
 - [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
+- [877. Stone Game](https://leetcode.com/problems/stone-game)
 - [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 - [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders)
 - [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)
