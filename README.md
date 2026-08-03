@@ -228,6 +228,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram)
 - [1358. Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)
 - [1391. Check If There is a Valid Path in a Grid](https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid)
+- [1406. Stone Game III](https://leetcode.com/problems/stone-game-iii)
 - [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
 - [1464. Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array)
 - [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)
