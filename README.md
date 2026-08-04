@@ -270,6 +270,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
+- [3731. Find Missing Elements](https://leetcode.com/problems/find-missing-elements)
 - [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
 - [3739. Count Subarrays with Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii)
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i)
