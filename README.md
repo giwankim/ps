@@ -255,6 +255,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 - [3286. Find a Safe Walk Through a Grid](https://leetcode.com/problems/find-a-safe-walk-through-a-grid)
+- [3310. Remove Methods from Project](https://leetcode.com/problems/remove-methods-from-project)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
 - [3499. Maximize Active Section with Trade I](https://leetcode.com/problems/maximize-active-section-with-trade-i)
 - [3513. Number of Unique XOR Triplets I](https://leetcode.com/problems/number-of-unique-xor-triplets-i)
