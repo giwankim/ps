@@ -257,6 +257,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3286. Find a Safe Walk Through a Grid](https://leetcode.com/problems/find-a-safe-walk-through-a-grid)
 - [3310. Remove Methods from Project](https://leetcode.com/problems/remove-methods-from-project)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
+- [3345. Smallest Divisible Digit Product](https://leetcode.com/problems/smallest-divisible-digit-product)
 - [3499. Maximize Active Section with Trade I](https://leetcode.com/problems/maximize-active-section-with-trade-i)
 - [3513. Number of Unique XOR Triplets I](https://leetcode.com/problems/number-of-unique-xor-triplets-i)
 - [3514. Number of Unique XOR Triplets II](https://leetcode.com/problems/number-of-unique-xor-triplets-ii)
