@@ -292,6 +292,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [87377. 교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
 - [92341. 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
 - [120807. 숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
+- [468370. 중요한 단어를 스포 방지](https://school.programmers.co.kr/learn/courses/30/lessons/468370)
 
 ## [Baekjoon](https://www.acmicpc.net/)
 
