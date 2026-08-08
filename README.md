@@ -255,6 +255,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [3169. Count Days Without Meetings](https://leetcode.com/problems/count-days-without-meetings)
 - [3185. Count Pairs That Form a Complete Day II](https://leetcode.com/problems/count-pairs-that-form-a-complete-day-ii)
 - [3286. Find a Safe Walk Through a Grid](https://leetcode.com/problems/find-a-safe-walk-through-a-grid)
+- [3302. Find the Lexicographically Smallest Valid Sequence](https://leetcode.com/problems/find-the-lexicographically-smallest-valid-sequence)
 - [3310. Remove Methods from Project](https://leetcode.com/problems/remove-methods-from-project)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
 - [3345. Smallest Divisible Digit Product](https://leetcode.com/problems/smallest-divisible-digit-product)
