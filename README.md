@@ -214,6 +214,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges)
 - [1081. Smallest Subsequence of Distinct Characters](https://leetcode.com/problems/smallest-subsequence-of-distinct-characters)
 - [1109. Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings)
+- [1140. Stone Game II](https://leetcode.com/problems/stone-game-ii)
 - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)
 - [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array)
 - [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)
