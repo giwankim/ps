@@ -233,6 +233,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
 - [1464. Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array)
 - [1481. Least Number of Unique Integers after K Removals](https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals)
+- [1510. Stone Game IV](https://leetcode.com/problems/stone-game-iv)
 - [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings)
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 - [1732. Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)
