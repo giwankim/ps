@@ -251,6 +251,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
 - [2685. Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components)
 - [2812. Find the Safest Path in a Grid](https://leetcode.com/problems/find-the-safest-path-in-a-grid)
+- [2958. Length of Longest Subarray With at Most K Frequency](https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency)
 - [2996. Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum)
 - [3014. Minimum Number of Pushes to Type Word I](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i)
 - [3016. Minimum Number of Pushes to Type Word II](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii)
