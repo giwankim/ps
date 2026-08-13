@@ -2,23 +2,16 @@ package learn;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.io.*;
+import java.io.IOException;
 import org.junit.jupiter.api.Test;
+import org.junitpioneer.jupiter.StdIo;
+import org.junitpioneer.jupiter.StdOut;
 
 class MissingNumberTest {
   @Test
-  void missingNumber() throws IOException {
-    String input = """
-        8
-        2 1 8 6 7 4 3
-        """;
-    String expected = "5\n";
-    BufferedReader r = new BufferedReader(new StringReader(input));
-    StringWriter out = new StringWriter();
-    PrintWriter pw = new PrintWriter(out);
-
-    MissingNumber.missingNumber(r, pw);
-
-    assertThat(out).hasToString(expected);
+  @StdIo({"8", "2 1 8 6 7 4 3"})
+  void printsTheNumberMissingFromOneThroughN(StdOut out) throws IOException {
+    MissingNumber.main(new String[0]);
+    assertThat(out.capturedString().trim()).isEqualTo("5");
   }
 }
