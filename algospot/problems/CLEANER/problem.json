@@ -1,0 +1,38 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CLEANER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:14:51.739448Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e861885de4ec61073ca3110baa58c4fcfcb4ff58bf535c7b33dd6916998ea56b"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CLEANER",
+  "statistics": {
+    "acceptance_percent": 55,
+    "accepted": 307,
+    "submissions": 558
+  },
+  "tags": [
+    "경우의수",
+    "조합탐색"
+  ],
+  "title": "어떤 과학의 인공지능 청소기"
+}

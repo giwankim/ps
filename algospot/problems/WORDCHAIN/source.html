@@ -1,0 +1,95 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WORDCHAIN">WORDCHAIN</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WORDCHAIN"><b>4985</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WORDCHAIN/"><b>1269</b> (<b>25</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>끝말잇기는 참가자들이 원을 그리고 앉은 뒤, 시계 방향으로 돌아가면서 단어를 말하는 게임입니다. 이 때 각 사람이 말하는 단어의 첫 글자는 이전 사람이 말한 단어의 마지막 글자와 같아야 합니다. 단어 제한 끝말잇기는 일반적인 끝말잇기와 달리 사용할 수 있는 단어의 종류가 게임 시작 전에 미리 정해져 있으며, 한 단어를 두 번 사용할 수 없습니다. 단어 제한 끝말잇기에서 사용할 수 있는 단어들의 목록이 주어질 때, 단어들을 전부 사용하고 게임이 끝날 수 있는지, 그럴 수 있다면 어떤 순서로 단어를 사용해야 하는지를 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;=  C &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 게임에서 사용할 수 있는 단어의 수 N  (1 &lt;=  N &lt;= 100) 이 주어집니다. 그 후 N  줄에 하나씩 게임에서 사용할 수 있는 단어가 주어집니다. 각 단어는 알파벳 소문자로 구성되어 있으며, 길이는 2 이상 10 이하입니다. 중복으로 출현하는 단어는 없습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄을 출력합니다. 만약 모든 단어를 사용하고 게임이 끝나는 방법이 없다면 "IMPOSSIBLE" 을 출력하고 (따옴표 제외), 방법이 있다면 사용할 단어들을 빈 칸 하나씩을 사이에 두고 순서대로 출력합니다. 방법이 여러 개 있다면 그 중 아무 것이나 출력해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+4
+dog
+god
+dragon
+need
+3
+aa
+ab
+bb
+2
+ab
+cd</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>need dog god dragon
+aa ab bb
+IMPOSSIBLE</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

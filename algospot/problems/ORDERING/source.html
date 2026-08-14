@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ORDERING">ORDERING</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ORDERING"><b>1482</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ORDERING/"><b>439</b> (<b>29</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>N 가지의 할 일이 있습니다. 이들 간에는 서로 의존 관계가 있는데, 이들은 특정 작업을 하기 전에는 다른 작업을 할 수 없다는 것을 나타냅니다. 작업간의 의존 관계가 주어질 때, 이들을 어떤 순서대로 수행해야 모든 작업을 마칠 수 있는지를 계산하는 프로그램을 작성하세요.</p>
+<p>항상 모든 작업을 수행할 수 있다고 가정합니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수  C (&lt;= 50) 이 주어집니다. 각 테스트 케이스의 첫 줄에는 작업의 개수 (1 &lt;= N &lt;= 26) 과 의존 관계의 수  (1  &lt;= M &lt;= 100) 이 주어집니다. 이 때, 각 작업은 알파벳 대문자  A 이후  글자를 써서 각각 표현됩니다. (예를 들어,  N=3 이라면, 세 작업의 이름은 각각 A, B, 그리고 C 가 됩니다.) 그 후  줄에 하나씩 의존 관계가 주어집니다. 각 의존 관계는  ab 의 형태로 주어지며, 이 문자열은 작업 b 이전에 작업 a  를 해야만 한다는 것을 나타냅니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 작업을 수행할 수 있는 순서를 한 줄에 출력합니다. 만약 이 순서가 여러 가지 있다면, 이 중 사전순으로 <strong>가장 앞에 있는 것</strong>을 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4 
+4 0 
+4 2
+AB
+CB
+4 1
+DC
+4 4
+DA
+BD
+CA
+CD </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>ABCD
+ACBD
+ABDC
+BCDA</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

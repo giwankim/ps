@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KAKAONEWHIRE">KAKAONEWHIRE</a></li>
+<li class="timelimit"><b>60000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KAKAONEWHIRE"><b>171</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KAKAONEWHIRE/"><b>51</b> (<b>29</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/1372">Antagonist</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9C%A0%EB%9F%89">네트워크유량</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>전국민의 메신저 카카오톡으로 유명한 카카오는 다른 회사와는 다른 여러 문화가 있다. 그 중 하나로, 상하 관계에서 오는 문제를 줄이기 위해 입사할 때 영문 이름을 정하고 직책과 관련 없이 서로를 영문 이름으로 부르는 문화가 대표적이다. 이러한 영문 이름 덕분에 카카오에선 서로 간의 커뮤니케이션이 경직성 없이 친근하게 이루어지고 업무 상의 의견 또한 자유롭게 주고받을 수 있는 분위기가 정착되었다.</p>
+<p>하지만 회사 규모가 점점 커짐에 따라 신규입사자들이 자신이 원하는 영문 이름을 사용하지 못하는 경우가 많이 발생하게 되었고, 인사 담당자가 일일이 전화를 걸어 "해당 이름이 사용 중이니 다른 이름으로 해주세요."라고 얘기하는 것도 슬슬 한계에 다다르게 되었다.</p>
+<p>이 현상을 지켜보던 개발자 I모씨는 한가지 제안을 했다. 신규입사자들의 영문 이름을 3지망까지 받은 뒤, 각 입사자들의 만족도의 총합을 최대한 높이는 방법으로 이름을 정해주자는 것이었다. 기존 사원과 이름이 중복되거나 다른 신규입사자와 이름이 중복될 경우, 비록 만족도가 적겠지만 영문 이름 뒤에 온점(.)을 찍고 영문 성을 붙인 이름을 사용할 수 있다. 카카오에서는 이런 방법을 통해 최대한 이름이 중복되는 것을 막아서 불필요한 인사팀의 노고와 신규입사자들의 이름 고민에 대한 고통을 줄여보기로 하였다.</p>
+<p>그리하여 신규입사자들에게 자신이 원하는 3개의 영문 이름을 써서 내도록 하고, 각각 이름에는 자신이 느낄 만족도를 0 이상 10 이하의 정수 수치로 표현하여 제출하도록 했다. 만약 영문 이름 뒤에 영문 성이 붙을 경우 그 사람의 만족도는 원래 써 낸 만족도의 절반(1/2)이 된다고 한다.</p>
+<p>기존 사원들의 이름과 신규입사자의 지원 서류가 주어질 때, 신규입사자들의 만족도의 합이 최대가 되는 이름 영문 이름들을 할당해보자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 기존 사원 수 K가 주어진다. (K &lt;= 400)<br/>
+두 번째 줄에는 기존 사원 K명의 영문 이름이 공백으로 구분되어 주어진다. 기존 사원에 대한 정보는 모든 테스트 케이스에 공통으로 적용된다.</p>
+<p>세 번째 줄에는 테스트 케이스의 수 T가 주어진다.<br/>
+각 테스트 케이스의 첫 줄에는 신규입사자의 수 N (N &lt;= 50)이, 그 다음 N 줄에는 각각의 신규 입사자가 제출한 성 L<sub>i</sub>, 첫 번째로 희망하는 영문 이름 N<sub>i, 1</sub>과 그 만족도인 S<sub>i, 1</sub>, 두 번째로 희망하는 영문 이름 N<sub>i, 2</sub>와 그 만족도인 S<sub>i, 2</sub>, 그리고 세 번째로 희망하는 영문 이름 N<sub>i, 3</sub>과 그 만족도인 S<sub>i, 3</sub>이 공백으로 구분되어 주어진다. 희망하는 영문 이름인 N<sub>i, 1</sub>, N<sub>i, 2</sub>, N<sub>i, 3</sub>은 모두 다르며 그 만족도는 10 &gt;= S<sub>i, 1</sub> &gt;= S<sub>i, 2</sub> &gt;= S<sub>i, 3</sub> &gt;= 0 임이 보장된다.</p>
+<p>입력에서 주어지는 모든 영문 이름은 20자 이하의 영문 대소문자로만 구성된 문자열이다. 각 테스트 케이스는 다른 테스트 케이스에 영향을 주지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스 마다 한 줄에 하나씩 신규입사자들의 만족도 총합의 최대값을 출력한다. 모든 신규입사자들에게 고유한 영문 이름을 할당할 수 없는 경우는 없다고 가정해도 좋다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>8
+Inoran Glen Chloe Steven Robby Dante Sheldon Ian
+2
+3
+Kim Ian 9 Roy 1 Alain 1
+Heo Ian 5 Gilbert 3 Adrian 0
+Park Steven 10 Sheldon 9 Andrew 8
+3
+Han Vex 1 Linda 1 Lesile 1
+Kwon Vex 4 Linda 3 Lesile 2
+Lee Vex 5 Linda 4 Lesile 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>15.5
+9
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>첫번째 테스트 케이스의 경우 Ian, Steven, Sheldon은 기존 사원의 이름과 중복이 되므로 .(온점)과 함께 영문 성울 붙여야 하고 만족도는 원래 만족도의 절반(1/2)이 되어 다음과 같게 된다.</p>
+<ul>
+<li>입사자1 : Ian.Kim 4.5 Roy 1 Alain 1</li>
+<li>입사자2 : Ian.Heo 2.5 Gilbert 3 Adrian 0</li>
+<li>입사자3 : Steven.Park 5 Sheldon.Park 4.5 Andrew 8</li>
+</ul>
+<p>따라서 신규입사자들의 만족도 합의 최대값은 4.5 + 3 + 8 = 15.5가 된다.</p>
+</p>
+</section>

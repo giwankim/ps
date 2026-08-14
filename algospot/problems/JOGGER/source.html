@@ -1,0 +1,96 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/JOGGER">JOGGER</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=JOGGER"><b>102</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/JOGGER/"><b>52</b> (<b>50</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%202007">Stanford Local 2007</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Every morning, Joe the Jogger goes for a brisk run around his neighborhood. The houses in the neighborhood (which are numbered from 1 to n) are connected together by a set of roads with the property that between every two houses, there exists exactly one unique path. That is, the graph structure of the road network is a tree of unknown topology, consisting of n leaf nodes (corresponding to each of the houses) and up to n−1 (but possibly fewer) internal nodes denoting intersections where roads split or merge (see Figure 4).</p>
+<p>In this problem, your task is to help Joe plan a jogging route from one house in the neighborhood to another house. Because Joe is a veteran jogger, he wants his route to take as long as possible. Given a matrix of distances (in meters) between each pair of houses along the road graph, the number of seconds r it takes Joe to run one meter, and the number of seconds t it takes for Joe to cross each intersection along the route, determine the pair of houses for which the total travel time is as long as possible.</p>
+<p><img alt="judge-attachments/cf8d18eb355e2fd1194c2bef8d0d2a96/F1.jpg" src="http://algospot.com/media/judge-attachments/cf8d18eb355e2fd1194c2bef8d0d2a96/F1.jpg"/></p>
+<p>Figure 4: Diagram of neighborhood with n = 9. Houses correspond to numbered nodes, whereas internal nodes of the tree (i.e., intersections) correspond to filled nodes. Note that multiple roads may meet at a single intersection. Here, d3,9 = 9+1+7+6 = 23. If r = 1 and t = 5, then running from house 3 to house 9 takes Joe 1 × 23 + 3 × 5 = 38 seconds. In the neighborhood shown above, this is the longest possible route, timewise, that Joe can take.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input test file will contain multiple cases. Each test case begins with a line containing three integers: n (where 1 ≤ n ≤ 50), the total number of houses in the neighborhood, r (where 1 ≤ r ≤ 10), the number of seconds per meter traveled, and t (where 1 ≤ t ≤ 100), the number of seconds needed to cross each intersection. Then, the next n lines each contain n values indicating the distances dij (where 1 ≤ dij ≤ 1000) between each pair of houses. The distances are specified in row-major order; i.e., the jth entry of the ith line is dij .</p>
+<p>You are guaranteed that dii = 0 for each i and that dij = dji for i 6= j. Furthermore, you may as-<br/>
+sume that the distance matrix corresponds to path lengths along some valid tree, no house coincides with any internal node of the tree, each internal node of the tree has degree ≥ 3, and all edges in the tree have positive length. Input is terminated by a single line containing the number 0; do not process this line.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, you must print a single line of output containing the longest total travel time possible.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>9 1 5
+0 8 22 16 16 13 24 14 11
+8 0 20 14 14 11 22 12 9
+22 20 0 12 12 11 22 12 23
+16 14 12 0 4 5 16 6 17
+16 14 12 4 0 5 16 6 17
+13 11 11 5 5 0 13 3 14
+24 22 22 16 16 13 0 14 25
+14 12 12 6 6 3 14 0 15
+11 9 23 17 17 14 25 15 0
+0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>38</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

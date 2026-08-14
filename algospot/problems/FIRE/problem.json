@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "FIRE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 4000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:41.914545Z",
+    "http_status": 200,
+    "semantic_html_sha256": "0f8983af0b3cd0cf94fd95cbc0fbc44bdf95ff8a8bc5f715b5d21107946b4ace"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/FIRE",
+  "statistics": {
+    "acceptance_percent": 13,
+    "accepted": 152,
+    "submissions": 1135
+  },
+  "tags": [],
+  "title": "봉화대 설치"
+}

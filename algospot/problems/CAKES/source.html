@@ -1,0 +1,89 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CAKES">CAKES</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CAKES"><b>541</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CAKES/"><b>126</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%202007">Stanford Local 2007</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Tom’s birthday is coming up, and you have been put in charge of baking cakes for his monstrous birthday party. However, you have a great number of cakes to make, and a very short amount of time, so you are not sure that you will even finish before the party!</p>
+<p>You have a list of different cakes to make, each requiring a certain amount of time to bake. You also have exactly 3 ovens to bake the cakes in, and each oven can only bake one cake at a time. Assuming that the time required to take a cake out and put another one in is negligible, can you determine the smallest amount of time you will need to spend baking, given the list of cakes to make?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input test file will contain multiple cases, with each case on a single line. The line begins with an integer n (where 1 ≤ n ≤ 40), the number of cakes to bake. Following are n integers, t1, . . . , tn (where 1 ≤ ti ≤ 30), indicating the time in minutes required to bake each of your cakes. End-of-input is marked by a single line containing 0; do not process this line.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, output on a single line the smallest amount of time, in minutes, that you need to bake all of your cakes.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1 30
+3 15 10 20
+5 6 7 8 9 10
+0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>30
+20
+15</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

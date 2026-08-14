@@ -1,0 +1,60 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/d671da9657c7c7c0-being.png",
+      "sha256": "41a776eec37f9ce337acb21600beee5fedbe1f0cc5016cafb493187573c3c962",
+      "source_url": "https://www.algospot.com/media/judge-attachments/8db54d066523e236caa5c7c0bd12ecec/being.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/024709ec5a38baa0-drawing.png",
+      "sha256": "92bab56c1378f8659bc8538fed93a5af033a43c8e46db0ad2261fa7379aa5409",
+      "source_url": "https://www.algospot.com/media/judge-attachments/7b2b37a73ac928482afda080943aae21/drawing.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/089f6a5c34c5d8e5-hint1.png",
+      "sha256": "df8b257c5cfb8db088f9191abbc429e2bf4de9ba86e865d1956e621296a3b410",
+      "source_url": "https://www.algospot.com/media/judge-attachments/23805d294bdac5e5ce1ea085d4d386fb/hint1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/1226299ef9a3f1e5-hint2.png",
+      "sha256": "ae883db1cf147a7fdc51f20b4a993d7ba271a22c51c99648010bf0741d0788e3",
+      "source_url": "https://www.algospot.com/media/judge-attachments/3d82bec9fe152b4ea342540b8be99f1f/hint2.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BEING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:07:20.378331Z",
+    "http_status": 200,
+    "semantic_html_sha256": "6376013a4799f5aa9aa56d9e5466bbcfe272b4c027f180193abedecd6ab6df5f"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BEING",
+  "statistics": {
+    "acceptance_percent": 5,
+    "accepted": 4,
+    "submissions": 77
+  },
+  "tags": [],
+  "title": "단칼빙"
+}

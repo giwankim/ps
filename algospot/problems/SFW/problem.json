@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/258c35ddb7d8e9e6-figure1.png",
+      "sha256": "3720004924ebd52f63f8961068c99fb4f29020b459cb145e402a6cc96b39e303",
+      "source_url": "https://algospot.com/media/judge-attachments/329f8dcb3786be2142087b50c0e7a3d8/figure1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/d40bbbe5e0acf96d-figure2.png",
+      "sha256": "927d369350477aa188bda9bf69a3ac20c515f7b8da0ed0a6ce27849badcee8f1",
+      "source_url": "https://algospot.com/media/judge-attachments/e36bc6996bf53175babd52d032b0cfea/figure2.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "SFW",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:16:07.987128Z",
+    "http_status": 200,
+    "semantic_html_sha256": "7122984df224d67ac2345b20db056ef46a9afec895e25e0d80806012330b7173"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/SFW",
+  "statistics": {
+    "acceptance_percent": 31,
+    "accepted": 45,
+    "submissions": 144
+  },
+  "tags": [],
+  "title": "슈퍼판타 지워"
+}

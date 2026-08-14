@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FOURGODS">FOURGODS</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FOURGODS"><b>347</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FOURGODS/"><b>85</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B2%BD%EC%9A%B0%EC%9D%98%EC%88%98">경우의수</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>사신(四神)에 대해서 들어본 적이 있는가?<br/>
+동서남북 네 방위를 대표하는 네 마리의 신수로써, 각각 청룡(靑龍), 백호(白虎), 주작(朱雀), 현무(玄武)를 한꺼번에 일컫는 말이다. 이들은 방위와 동시에 사계절을 각각 나타낸다고 알려져 있으며, 고분 벽화에서 발견되는 등 지금까지도 이들에 관련된 많은 이야기를 종종 접해볼 수 있다.<br/>
+고고학자 kureyo는 고구려 시대 유적을 발굴하던 중 흥미로운 모양의 석판을 찾아내었다. 석판 위에 새겨진 글씨로부터 새로운 해의 풍작 여부를 예언하기 위해 쓰이는 석판임은 알아내었지만, 정작 판에 새겨진 기호들을 해석하는 일에 어려움을 느끼고 있는 중이었다. 해석이 불가능한 것은 아니나, 해석을 하기 위해서는 석판 위에 있는 수많은 점들 중 사신(四神)의 위치를 먼저 확정해야 하기 때문이었다.<br/>
+다만 단서가 없는 것은 아니었다. 석판 위에는 수많은 점과 점들을 이어주는 직선이 새겨져 있는데, 사신(四神)은 한 점에서 시작하여 다른 세 점을 걸쳐 다시 시작점으로 돌아올 수 있는 4 점만이 사신(四神)의 위치가 될 수 있는 후보지이기 때문이다. 또한 선의 연결 관계도 중요한데, kureyo는 선으로 이어진 4개의 점들이 순서대로 청룡-주작-백호-현무(-그리고 다시 청룡)으로 이어진다고 추측한다. 왜냐하면 각 동물들이 상징하는 것이 봄-여름-가을-겨울 순이기 때문이다. 따라서 a-b-c-d(-a)와 a-b-d-c(-a)의 연결 관계는 다른 그림으로 간주한다. (a-b-c-d와 a-d-c-b는 같은 그림으로 간주할 수 있다. 고구려 시대의 사람들이 어떤 방향으로 기록하는 것을 선호했는지 알 수 없기 때문이다.)<br/>
+해석에 착수하기에 앞서, kureyo는 사신이 될 수 있는 그림의 종류가 몇 가지나 되는지 궁금해졌다. 마침 알고스팟에서 주최하는 프로그래밍 대회 Coder’s high 2013이 열린다는 소식을 들은 kureyo는 알고스팟에 부탁하여 석판의 해독을 도움받고자 한다. 한국 고고학계의 발전을 위해서 kureyo를 도와주자!</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 석판의 개수 T가 입력된다.<br/>
+이 후 T개의 석판 데이터가 주어지며, 매 데이터의 첫 줄은 석판 위에 있는 점의 개수 N과 점들을 이어주는 선의 개수 M(1 ≤ N ≤ 500, 0 ≤ M ≤ N*(N-1)/2 )이 주어진다.<br/>
+이 후 M 줄에 걸쳐 2개의 정수 u<sub>i</sub>,v<sub>i</sub>(1 ≤ u<sub>i</sub>&lt; v<sub>i</sub> ≤ N, 1 ≤ i ≤ M)이 주어지며, 이는 u<sub>i</sub>번 점과 v<sub>i</sub>번 점이 서로 연결되어 있다는 것을 뜻한다. 중복되는 연결은 입력으로 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>한 석판에 대하여 한 줄로 사신 후보지가 될 수 있는 4개 점의 가짓수를 출력한다. 다만 가짓수가 너무 많을 수 있기 때문에 가짓수를 20130728로 나머지 한 결과를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+6 8
+2 4
+3 6
+2 6
+1 4
+1 6
+4 5
+2 3
+4 6
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>1-4-2-6(또는 1-6-2-4)와 2-4-6-3(또는 2-3-6-4)이 사신도로 해석이 가능한 그림이다.</p>
+<p>데이타 : Kureyo<br/>
+디스크립션 : xhae</p>
+</p>
+</section>

@@ -1,0 +1,150 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/UBW">UBW</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=UBW"><b>208</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/UBW/"><b>38</b> (<b>18</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>What do you think of magic? Magic used to be a secretive and mysterious art, only known by a select few during the ancient era. However, modern-day magic is very different: it is very scientific, reproducible, and has a textual form. Maybe you have seen it, or have used it already. Here's an example:</p>
+<pre><code>def main
+ loop 5
+  loop 3
+   Unlimited
+  Blade
+ Works</code></pre>
+<p>Modern day magic is defined by a <strong>magic code</strong>, which is composed of one or more <strong>module</strong> definitions. For example, the above magic code defines a "main" module. A module contains a series of <strong>operations</strong>, which will be executed in order when the module is <strong>invoked</strong>. Each operation is either a <strong>loop</strong> or a <strong>module invocation</strong>.</p>
+<p>The operations that are contained by a module could be identified by a single space character (that is, indented by a single space) before the operation. Therefore, "main" module above consists of two operations; <code>loop 5</code> and <code>Works</code>.</p>
+<p>What do these operations do?</p>
+<ul>
+<li>An operation in the form of <code>loop N</code> contains 0 or more operations, and executes them <span class="mathjax-preview">N</span><script type="math/tex">N</script> times. You can identify the contained operations by looking for one more space in front of those operations; for example, <code>loop 5</code> operation above contains two operations <code>loop 3</code> and <code>Blade</code>. <code>loop 3</code> operation contains only a single operation, <code>Unlimited</code>.</li>
+<li>All other operations are in the form of <code>ModuleName</code>, and they simply invoke the given module. After the invoked module terminates (all operations in the invoked module is executed), we will resume executing this module at the next operation.</li>
+</ul>
+<p>For example, <code>loop 3</code> operation above will invoke the module <code>Unlimited</code> 3 times, and then we will proceed to the next operation <code>Blade</code>.</p>
+<p>(For a concrete description on magic code, look below.)</p>
+<p>Your friend in WinterTree city is an unpredictable guy. He makes blades for a living. Today he wrote a new magic code, which can be performed by invoking the "main" module. The magic will eventually call the module "Blade" 0 or more times - every time the "Blade" module is called, it will create a blade. However, he is not sure how many blades this magic is going to make. You, as one of his wizard friends, should help him to calculate how many blades will be created after unlimited time is passed.</p>
+<h3 id="toc_0">Magic code specification</h3>
+<ul>
+<li>A <strong>magic code</strong> is a text file, consisting of multiple lines.
+
+<ul>
+<li>Each line can be "indented" by prepending one or more space characters.</li>
+<li>A magic code consists of one or more module definitions.</li>
+</ul></li>
+<li>A <strong>module definition</strong> begins with a line of the form "def (modulename)".
+
+<ul>
+<li>Zero or more consecutive lines follow, each containing a single operation indented by one or more spaces. Out of those, all operations that are indented by a single space that come before the next module definition or the end of the magic code are contained by this module.</li>
+</ul></li>
+<li>An <strong>operation</strong> is either:
+
+<ul>
+<li>A <strong>loop</strong> operation in the form of <code>loop N</code>.
+
+<ul>
+<li>N is a positive integer, less than 10.</li>
+<li>Zero or more lines follow, each containing a single operation indented <strong>more</strong> than the loop operation. Out of those, all operations that are indented by exactly <strong>one more space than the loop operation</strong> are contained by this loop.</li>
+</ul></li>
+<li>A module invocation in the form of <code>ModuleName</code>.</li>
+</ul></li>
+</ul>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains the number of test cases T.</p>
+<p>Each test case starts with N (<span class="mathjax-preview">1 \le N \le 80</span><script type="math/tex">1 \le N \le 80</script>), the number of lines in the magic code. After that, N lines of magic code will be given.</p>
+<p>You can assume the following:</p>
+<ul>
+<li>All lines are 120 characters or shorter.</li>
+<li>All module names consist of 1 to 15 alphanumeric characters.</li>
+<li>There will always be a "main" module.</li>
+<li>No two modules will have the same name.</li>
+<li>The code will not define modules named "Blade", "def" or "loop". </li>
+<li>The code will not invoke any module that is not defined within the code (except "Blade", of course).</li>
+</ul>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the number of blades manufactured when the "main" module is invoked, after infinite time passes.</p>
+<p>If this number is greater than 100,000, print -1 instead.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+11
+def hello
+ loop 5
+  world
+def world
+ loop 2
+  loop 4
+   Blade
+def main
+ loop 3
+  hello
+  world
+3
+def main
+ loop 5
+ Blade</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>144
+1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>Description 검수: <a class="user" href="/user/username/JongMan" title="JongMan">JongMan</a></p>
+</p>
+</section>

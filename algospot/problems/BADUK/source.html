@@ -1,0 +1,101 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BADUK">BADUK</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BADUK"><b>139</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BADUK/"><b>34</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Spring%202009">RUN Programming Contest, Spring 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>바둑이란 두 사람이 흑, 백의 바둑돌을 규칙에 따라 바둑판에 교대로 돌을 놓으며 진행하는 두뇌게임이다.<br/>
+바둑판에는 가로 19줄, 세로 19줄의 선이 그어져 있고, 교차점에 돌을 놓는다.<br/>
+처음에 흑이 먼저 두고, 그 다음에 백이 둔다. 이렇게 한번씩 두는 돌 하나하나를 '수'라고 부른다.</p>
+<p>바둑은 보통 250 ~ 300 수 사이에서 끝나는데,<br/>
+첫 수부터 30수에서 50수 정도까지를 '포석'이라고 한다.</p>
+<p>포석에서 돌이 놓인 배치가 같으면 '같은 포석'이라고 한다.</p>
+<p>하나의 포석이 놓인 바둑판은 상하좌우 어느 방향에서 봐도 같은 포석이고,<br/>
+모든 돌의 배치를 좌우나 상하로 뒤집어도 역시 같은 포석이다.</p>
+<p>그러므로 아래 8개의 포석은 모두 같은 포석이다.</p>
+<p><img alt="judge-attachments/42ed1e258540cce381a8ad719bd8b394/b1.PNG" src="http://algospot.com/media/judge-attachments/42ed1e258540cce381a8ad719bd8b394/b1.PNG"/><br/>
+<img alt="judge-attachments/37c4678388a6e13c6fcca1bf35975485/b2.PNG" src="http://algospot.com/media/judge-attachments/37c4678388a6e13c6fcca1bf35975485/b2.PNG"/></p>
+<p>바둑판의 가로선과 세로선의 개수가 둘다 n개인 바둑판이 있고,<br/>
+흑, 백, 흑이 교대로 한 수씩 놓아 3수까지 진행되었을 때, 나올 수 있는 모든 포석의 개수를 구하라.<br/>
+위 그림은 n = 19 인 경우다.<br/>
+물론 같은 포석은 한번만 센다.</p>
+<p>힌트 : 답은 10<sup>18</sup> 보다 작다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫째 줄에는 테스트 케이스의 개수 T가 주어진다. ( T &lt;= 100 )<br/><br/>
+그 다음 T줄에 걸쳐, 정수 n이 주어진다. ( 2 &lt;= n &lt;= 1500 )</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각각 테스트 케이스에 대해, 나올 수 있는 모든 포석의 개수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+2
+3
+4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+38
+219</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

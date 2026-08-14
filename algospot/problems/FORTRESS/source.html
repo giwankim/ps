@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FORTRESS">FORTRESS</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FORTRESS"><b>4505</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FORTRESS/"><b>1586</b> (<b>35</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>,
+						
+						<a href="/judge/problem/list/?tag=%ED%8A%B8%EB%A6%AC">트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><center><img alt="castle.svg.png" src="http://algospot.com/media/judge-attachments/6b98991b489acef77ed1b63dc31bc32f/castle.svg.png"/></center></p>
+<p>중세의 성과 요새들은 보안을 튼튼히 하면서도 더 넓은 영역을 보호하기 위해 여러 개의 성벽을 갖고 있었다고 하지요. 전세계에서 가장 편집증이 심한 영주가 지은 스트로고(<a href="http://en.wikipedia.org/wiki/Hogwarts">Strawgoh</a>) 요새는 이의 극치를 보여줍니다. 이 요새는 그림과 같이 커다란 원형 외벽 내에 여러 개의 원형 성벽이 겹겹이 지어진 형태로 구성되어 있는데, 어떤 성벽에도 문이 없어서 성벽을 지나가려면 사다리를 타고 성벽을 오르내려야 합니다. 요새 내에서도 한 곳에서 다른 곳으로 이동하는 데 시간이 너무 오래 걸린다는 원성이 자자해지자, 영주는 요새 내에서 왕래가 불편한 곳들을 연결하는 터널을 만들기로 했습니다. 계획을 세우기 위해 요새 내에서 서로 왕래하기 위해 가장 성벽을 많이 넘어야 하는 두 지점을 찾으려고 합니다. 예를 들어 위 그림의 경우, 별표로 표시된 두 지점 간을 이동하기 위해서는 다섯 번이나 성벽을 넘어야 하지요.</p>
+<p>성벽들의 정보가 주어질 때 가장 성벽을 많이 넘어야 하는 두 지점 간을 이동하기 위해 몇 번이나 성벽을 넘어야 하는지 계산하는 프로그램을 작성하세요. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 100) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 성벽의 수 N (1 &lt;= N &lt;= 100) 이 주어집니다. 그 후 N 줄에는 각 3개의 정수로 각 성벽의 위치와 크기에 대한 정보 x<sub>i</sub> , y<sub>i</sub> , r<sub>i</sub> 가 주어집니다. (0 &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 1000,1 &lt;= r<sub>i</sub> &lt;= 1000,0 &lt;= i&lt;N) 이 때 i 번 성벽은 (x<sub>i</sub>, y<sub>i</sub>) 를 중심으로 하는 반지름 r<sub>i</sub> 인 원형으로 설치되어 있습니다. 편의상 모든 성벽의 두께는 0이라고 가정하며, 입력에 주어지는 성벽들은 서로 겹치거나 닿지 않습니다. 입력에 주어지는 첫 번째 성벽은 외벽이며, 외벽은 입력에 주어지는 모든 다른 성벽을 포함합니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 두 지점 간 이동을 위해 최대 몇 번이나 성벽을 넘어야 하는지를 출력하세요.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+5 5 15
+5 5 10
+5 5 5
+8 
+21 15 20 
+15 15 10 
+13 12 5 
+12 12 3 
+19 19 2 
+30 24 5 
+32 10 7 
+32 9 4 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

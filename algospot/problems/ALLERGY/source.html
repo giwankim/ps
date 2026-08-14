@@ -1,0 +1,149 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ALLERGY">ALLERGY</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ALLERGY"><b>6485</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ALLERGY/"><b>1263</b> (<b>19</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%ED%83%90%EC%83%89">탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>집들이에 n 명의 친구를 초대하려고 합니다. 할 줄 아는 m 가지의 음식 중 무엇을 대접해야 할까를 고민하는데, 친구들은 각각 알러지 때문에 못 먹는 음식들이 있어서 아무 음식이나 해서는 안 됩니다. 만들 줄 아는 음식의 목록과, 해당 음식을 못 먹는 친구들의 목록이 다음과 같은 형태로 주어진다고 합시다.</p>
+<table><thead>
+<tr>
+<th>친구</th>
+<th>갈비찜</th>
+<th>피자</th>
+<th>잡채</th>
+<th>떡볶이</th>
+<th>탕수육</th>
+<th>닭강정</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>채린</td>
+<td>x</td>
+<td>o</td>
+<td>o</td>
+<td>o</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>봄</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>o</td>
+<td>o</td>
+</tr>
+<tr>
+<td>다라</td>
+<td>o</td>
+<td>x</td>
+<td>o</td>
+<td>x</td>
+<td>o</td>
+<td>x</td>
+</tr>
+<tr>
+<td>민지</td>
+<td>o</td>
+<td>o</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>o</td>
+</tr>
+</tbody></table>
+<p>각 친구가 먹을 수 있는 음식이 최소한 하나씩은 있도록 하려면 최소 몇 가지의 음식을 해야 할까요? 위 경우라면 다 같이 먹을 수 있는 음식이 없기 때문에 결국 두 가지 이상 음식을 해야 합니다. 피자와 탕수육, 혹은 잡채와 닭강정처럼 두 개 이상의 음식을 선택해야만 모두가 음식을 먹을 수 있지요. 친구들의 정보가 주어질 때 최소한 만들어야 하는 요리의 가지수를 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T  (T &lt;= 50 ) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 친구의 수 n  (1 &lt;=  n &lt;= 50) 과 할 줄 아는 음식의 수 m  (1 &lt;=  m &lt;= 50) 이 주어집니다. 다음 줄에는 n 개의 문자열로 각 친구의 이름이 주어집니다. 친구의 이름은 10 자 이하의 알파벳 소문자로만 구성된 문자열입니다. 그 후 m  줄에 하나씩 각 음식에 대한 정보가 주어집니다. 각 음식에 대한 정보는 해당 음식을 먹을 수 있는 친구의 수와 각 친구의 이름으로 주어집니다.</p>
+<p>모든 친구는 하나 이상의 음식을 먹을 수 있다고 가정해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 만들어야 할 최소의 음식 수를 출력합니다. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 6
+cl bom dara minzy
+2 dara minzy
+2 cl minzy
+2 cl dara
+1 cl
+2 bom dara
+2 bom minzy
+10 7
+a b c d e f g h i j
+6 a c d h i j
+3 a d i
+7 a c f g h i j
+3 b d g
+5 b c f h i
+4 b e g j
+5 b c g h i </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+3</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

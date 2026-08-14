@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/AUTOPRODUCTION">AUTOPRODUCTION</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=AUTOPRODUCTION"><b>730</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/AUTOPRODUCTION/"><b>147</b> (<b>20</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>,
+						
+						<a href="/judge/problem/list/?tag=%EC%9D%B4%EB%B6%84%EB%B2%95">이분법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>M 게임에는 여러 재료 아이템들을 활용하여 새로운 아이템을 만들어 내는 기능이 구현되어 있다. 한 개의 생산물을 만들기 위해서는 어떤 재료 아이템이 각각 몇 개씩 필요한 지 미리 정의되어 있고 알려져 있다. 이를테면 철괴를 만들기 위해서는 철광석 조각이 5개 필요하다던지, 나무판 3개와 일반 옷감 3개를 사용하여 스탠딩 램프를 만들 수 있는 식이다. 한편으로 각 재료 아이템은 플레이어가 가진 가방의 각 칸에 보관되는데, 한 칸에 일정 수량씩 묶여 있는 식이다. 예를 들어, 철광석 조각이 세 칸에 각각 20, 18, 13 개씩 있을 수 있다.</p>
+<p>이 게임에서 수 년 전까지만 하더라도 플레이어는 아이템을 여러 개 만들기 위해서 한 개의 아이템을 만들 때마다 가방에서 알맞은 재료가 들어 있는 각 칸을 지정하여 생산을 시도해야 했다. 그러나 수백 개씩 생산해야 하는 일이 흔했기 때문에 사람이 할 필요가 없는 그저 무의미한 반복 작업일 뿐이었다.</p>
+<p>그러나 "자동 생산" 이라는 기능이 도입되면서 많은 것이 달라졌다. 이 기능을 사용하면 가방의 칸들 중에서 생산에 필요한 재료인 것들을 모두 합쳐 최대 10칸 자동으로 선택하여 주고, 그 선택된 재료들을 가지고 재료가 충분한 동안 계속해서 한 개씩 생산하기를 반복한다. 예를 들어 스탠딩 램프를 "자동 생산" 하면 나무판과 일반 옷감이 보관된 칸들이 합쳐서 10칸 이내로 자동으로 선택된 뒤 선택된 칸들의 나무판과 일반 옷감의 수를 모두 합쳐 각각 3개 이상일 동안 계속해서 생산을 반복하게 되는 것이다. 당연하게도, 자동 생산 알고리즘이 어떤 칸을 선택하느냐에 따라서 생산할 수 있는 갯수가 달라질 것이다.</p>
+<p>어떤 아이템을 생산하기 위해 필요한 각 재료의 갯수와, 플레이어의 가방에 각 재료가 보관되어 있는 칸의 아이템 갯수가 주어질 때 자동 생산 기능을 한 차례 작동시켜 만들어낼 수 있는 최대 생산물 갯수는 몇 개인지 알아내는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script> 가 주어진다.</p>
+<p>각 테스트 케이스의 첫 줄에는 생산을 위해 필요한 재료의 가짓수 <span class="mathjax-preview">N \; (1 \le N \le 10)</span><script type="math/tex">N \; (1 \le N \le 10)</script> 이 주어진다.<br/>
+다음 <span class="mathjax-preview">2N</span><script type="math/tex">2N</script> 줄에 걸쳐 두 줄씩 묶어 각 재료에 대한 정보가 주어진다. 각 묶음의 첫 줄에는 생산을 위해 필요한 그 재료의 갯수 <span class="mathjax-preview">R_i (1 \le R_i \le 1,000)</span><script type="math/tex">R_i (1 \le R_i \le 1,000)</script>와 가방에 있는 그 재료 칸의 수 <span class="mathjax-preview">C_i \; (1 \le C_i \le 10)</span><script type="math/tex">C_i \; (1 \le C_i \le 10)</script> 가 공백으로 구분되어 주어진다. 두 번째 줄에는 가방의 각 칸에 들어 있는 재료의 개수를 나타내는 <span class="mathjax-preview">C_i</span><script type="math/tex">C_i</script> 개의 정수가 공백으로 구분되어 주어진다. 각 칸에 들어 있는 재료의 수는 <span class="mathjax-preview">1</span><script type="math/tex">1</script> 이상 <span class="mathjax-preview">1,000</span><script type="math/tex">1,000</script> 이하이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 한 줄에 하나씩 자동 생산시 최대 생산물의 개수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+1
+5 3
+20 18 13
+2
+3 6
+1 3 3 4 4 4
+3 6
+2 3 4 7 8 10</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10
+6
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

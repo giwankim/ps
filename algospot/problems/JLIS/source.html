@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/JLIS">JLIS</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=JLIS"><b>9515</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/JLIS/"><b>2454</b> (<b>25</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>어떤 수열에서 0개 이상의 숫자를 지운 결과를 원 수열의 <strong>부분 수열</strong>이라고 부릅니다. 예를 들어 '4 7 6'은 '4 3 7 6 9'의 <strong>부분 수열</strong>입니다. 중복된 숫자가 없고 오름 차순으로 정렬되어 있는 <strong>부분 수열</strong>들을 가리켜 <strong>증가 부분 수열</strong>이라고 부르지요. 예를 들어 '3 6 9'는 앞의 수열의 <strong>증가 부분 수열</strong>입니다.</p>
+<p>두 개의 정수 수열 A 와 B 에서 각각 <strong>증가 부분 수열</strong>을 얻은 뒤 이들을 크기 순서대로 합친 것을 <strong>합친 증가 부분 수열</strong>이라고 부르기로 합시다. 이 중 가장 긴 수열을 <strong>합친 LIS</strong>(JLIS, Joined Longest Increasing Subsequence)이라고 부릅시다. 예를 들어 '1 3 4 7 9' 은 '1 9 4' 와 '3 4 7' 의 <strong>JLIS</strong>입니다. '1 9' 와 '3 4 7' 을 합쳐 '1 3 4 7 9'를 얻을 수 있기 때문이지요. </p>
+<p>A 와 B 가 주어질 때, <strong>JLIS</strong>의 길이를 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 c  ( 1 &lt;=  c &lt;= 50 ) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 A 와 B 의 길이 n 과 m 이 주어집니다 (1 &lt;=  n,m &lt;= 100). 다음 줄에는 n 개의 정수로 A 의 원소들이, 그 다음 줄에는 m 개의 정수로 B 의 원소들이 주어집니다. 모든 원소들은 32비트 부호 있는 정수에 저장할 수 있습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에, JLIS 의 길이를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+3 3
+1 2 4
+3 4 7
+3 3
+1 2 3
+4 5 6
+5 3
+10 20 30 1 2
+10 20 30</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+6
+5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

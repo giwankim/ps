@@ -1,0 +1,129 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/QUOD">QUOD</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=QUOD"><b>100</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/QUOD/"><b>35</b> (<b>35</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/11">Toivoa</a></li>
+<li class="source"><a href="/judge/problem/list/?source=YUTAR%20Local%202009">YUTAR Local 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Quod 는 컴퓨터 과학자인 G. Keith Still 이 만든 보드게임입니다. 이 게임은 11x11 의 격자 모양 게임판을 이용해 진행하며, 이 격자 판의 네 모퉁이를 제외한 117개의 칸을 이용합니다. 게임을 하는 두 사람은 파랑색과 빨강색 말 중 하나를 택해, 각자 자신의 색의 조각 20개 (Quods) 와 방어용 조각 6개<br/>
+ (Quasars) 를 가지고 번갈아 가면서 플레이합니다.</p>
+<p>자신의 턴에 할 수 있는 일은 다음과 같습니다.</p>
+<ol>
+<li>먼저 자신이 가진 Quaser 를 마음대로 놓습니다. 한 턴에 놓을 수 있는 Quaser 의 개수 제한은 없으며, Quaser 를 사용하지 않는 것도 가능합니다.</li>
+<li>Quaser 를 다 놓으면 자신의 Quod 를 하나 놓습니다.</li>
+</ol>
+<p>위와 같이 번갈아 가면서 플레이하다가, 자신의 Quod 를 네 꼭지점으로 갖는 정사각형을 먼저 만드는 쪽이 승리합니다. 만들어지는 정사각형의 종류에는 제한이 없으며, Quaser 는 상대가 정사각형을 만들지 못하도록 방어하는 용도로만 사용됩니다. 아래 그림은 Quod 게임의 예입니다.</p>
+<p><img alt="judge-attachments/29c97b7963321f346f53cdb1421d105d/quod.png" src="http://algospot.com/media/judge-attachments/29c97b7963321f346f53cdb1421d105d/quod.png"/></p>
+<p>이것까지는 간단한 것 같지만, 이 게임에서 막상 어려운 것은 실제로 정사각형이 만들어졌는지를 판단하는 것입니다. Quod 게임에서 만들어질 수 있는 정사각형의 개수는 1173개나 되기 때문에, 이미 정사각형이 만들었는데도 만든 줄 모르고 계속 플레이하는 경우가 잦습니다. (위 그림과 같이 찾기 쉬운 정사각형이 만들어졌다면 다행입니다만) 이 문제를 해결하기 위해 당신은 진행 중인 Quod 게임의 게임판을 입력받아서 정사각형이 완성되었는지 여부를 판단해 주는 프로그램을 만들기로 했습니다.</p>
+<p>마지막 테스트 케이스에서 만들어지는 정사각형은 다음과 같습니다.<br/>
+<img alt="judge-attachments/45e3ab11f1c9fd369e8df623c769b725/quod2.png" src="http://algospot.com/media/judge-attachments/45e3ab11f1c9fd369e8df623c769b725/quod2.png"/></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수 T (1 &lt;= T &lt;= 10000) 가 주어집니다.<br/>
+ 각각의 테스트 케이스는 11줄에 각각 11개의 문자로 구성되어 있으며, Quod 게임이 진행중인 11x11의 격자의 상태를 나타냅니다. 'X'는 조각을 놓을 수 없는 격자판 의 네 귀퉁이이며,  '.'은 빈칸, 'B'는 파랑색, 'R'은 빨강색, 'W'는 Quaser를 나타냅니다. 정사각형이 두 개 이상 생기는 경우는 없습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄을 출력하되, 정사각형이 만들어진 경우 정사각형을 만든 조각의 색 ('Blue' 혹은 'Red') 을 출력하고, 정사각형이 없는 경우 'No squares' 를 출력합니다. 따옴표는 출력하지 않습니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3 
+XR..B..W..X 
+R.....RR... 
+.B..BBRR... 
+....B.RB... 
+....RBRB..R 
+.....B..... 
+........... 
+........... 
+........... 
+........... 
+X.........X 
+X.........X 
+.....B..... 
+.....R..... 
+........... 
+........... 
+........... 
+........... 
+........... 
+........... 
+........... 
+X.........X 
+X.........X 
+..B........ 
+.B...B..... 
+...BRR..... 
+..BRRB.W... 
+..RRWR.B... 
+...BWR..... 
+....B..R... 
+........... 
+........... 
+X.........X 
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Red 
+No squares 
+Blue 
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

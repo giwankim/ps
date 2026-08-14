@@ -1,0 +1,104 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SETI">SETI</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SETI"><b>126</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SETI/"><b>27</b> (<b>21</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%AC%B8%EC%9E%90%EC%97%B4">문자열</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>SETI (Search for Extra-Terrestrial Intelligence) is an effort driven by NASA, to analyze radio signal data from the space and see if they are messages from aliens. We plan to help NASA by analyzing some radio signals at ICPC, so NASA sent us a set of signal records that are suspected to be alien messages. These signal records are represented by strings consisting of alphabet letters <code>a</code> to <code>d</code>.</p>
+<p>According to our newest theory, all the messages from aliens are composed by concatenating even-length palindromes. For example, <code>bbaabaab</code> is a message from aliens since it can be decomposed into three even-length palindromes: <code>bb</code>, <code>aa</code>, and <code>baab</code>. The whole message can be composed of one palindrome too, like in <code>abccba</code>. However, strings like <code>ababba</code> which cannot be decomposed into even-length palindromes are not from aliens; they are treated as noises.</p>
+<p>The data we got from NASA are encrypted by a simple encoding scheme. The encoding scheme uses a password, which is one-to-four digit number, each digit being <code>0</code> to <code>3</code>. </p>
+<p>The encryption process is described below:</p>
+<ol>
+<li>The original text is lined up with the password, repeating the password if the text is longer.</li>
+<li>Each letter in the original text is incremented by the digit written below: for example, if '<code>a</code>' is incremented by 1, it will become '<code>b</code>'. </li>
+<li>If the incremented letter is after '<code>d</code>', they will wrap around to '<code>a</code>'. For example, if '<code>c</code>' is incremented by 2, it will become '<code>a</code>' instead of '<code>e</code>'.</li>
+</ol>
+<div class="highlight"><pre>    a b b a d a a d
+    0 2 3 0 2 3 0 2
+    ---------------
+    a d a a b d a b
+</pre></div>
+<p>The above depicts the encryption process, with original text '<code>abbadaad</code>' and password <code>023</code>.</p>
+<p>Unfortunately, the password was lost during the transmissions so we are left only with encrypted data. </p>
+<p>Write a program that given an encrypted text, determine if there can be a password which makes the decrypted text an alien message.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test cases <span class="mathjax-preview">C</span><script type="math/tex">C</script>. <span class="mathjax-preview">C</span><script type="math/tex">C</script> lines follow, which will contain the encrypted text. The length of each encrypted string is equal to, or less than <span class="mathjax-preview">1000</span><script type="math/tex">1000</script>.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print one line for each test case: print '<code>Alien!</code>' if there is a password which makes the original text an alien message, and print '<code>noise</code>' otherwise. (Quotes are for clarity)</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+bbaabaab
+bcabbbac
+bbbbc
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Alien!
+Alien!
+noise
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

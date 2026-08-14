@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/5b13510734f995c1-problems.pdf",
+      "sha256": "0693150f2d11c975ea2ace2e11a9fe60a31b0e36a013c5c8fccfcdf443fb9920",
+      "source_url": "http://algospot.com/static/contest/2011warmup/problems.pdf"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CHWA",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:12:54.769827Z",
+    "http_status": 200,
+    "semantic_html_sha256": "59152e5a11b89a1f8449ba3cff47b82cfaff8b8135d9d01a72c95efeeb4b10f7"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CHWA",
+  "statistics": {
+    "acceptance_percent": 25,
+    "accepted": 5,
+    "submissions": 20
+  },
+  "tags": [],
+  "title": "Prof. Chwa and his magicCircle class"
+}

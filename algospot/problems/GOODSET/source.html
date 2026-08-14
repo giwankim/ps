@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GOODSET">GOODSET</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GOODSET"><b>717</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GOODSET/"><b>242</b> (<b>33</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/5829">etaehyun4</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2014%20KAIST%20ACM-ICPC%20%EB%AA%A8%EC%9D%98%EB%8C%80%ED%9A%8C">2014 KAIST ACM-ICPC 모의대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>K모 대학의 한 교수님께서는 대회에 사용되는 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 문제들이 있을 때 다음의 조건을 만족해야 '좋은 문제 집합' 이라고 정의하신다.</p>
+<ol>
+<li> 모든 참가자는 적어도 한 문제를 풀어야 한다.</li>
+<li> 모든 문제를 푼 참가자는 없어야 한다.</li>
+<li> 각 문제는 적어도 한 참가자에 의해 풀려야 한다.</li>
+</ol>
+<p>경근이는 KAIST ACM-ICPC 모의대회의 검수를 하게 되었다. 그는 대회에 참가할 <span class="mathjax-preview">N</span><script type="math/tex">N</script>명의 참가자가 어떤 문제들을 풀지 문제들의 수준을 보고 예상 하였다. 그 예상한 결과가 실제로 이루어졌을 때 과연 문제들은 '좋은 문제 집합' 의 기준을 만족할까? </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.</p>
+<p>각 테스트 케이스마다 첫 번째 줄에는 참가자의 수 <span class="mathjax-preview">N(1 \le N \le 500)</span><script type="math/tex">N(1 \le N \le 500)</script>과 문제의 수 <span class="mathjax-preview">M(1 \le M \le 500)</span><script type="math/tex">M(1 \le M \le 500)</script>이 주어진다. 다음 N개의 줄에는 각 참가자들이 풀 수 있다고 예상된 문제들에 대한 정보들이 주어진다. 각 줄에는 <span class="mathjax-preview">i</span><script type="math/tex">i</script>번째 참가자가 풀 수 있다고 예상되는 문제들의 개수 <span class="mathjax-preview">X_i(0 \le X_i \le M)</span><script type="math/tex">X_i(0 \le X_i \le M)</script>가 먼저 주어지고 뒤이어 참가자가 풀 수 있다고 보이는 문제의 번호들을 나타내는 서로 다른 <span class="mathjax-preview">X_i</span><script type="math/tex">X_i</script>개의 수가 주어진다. (모든 문제는 <span class="mathjax-preview">1,2, \cdots ,M</span><script type="math/tex">1,2, \cdots ,M</script>으로 숫자가 매겨진다)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트케이스마다 문제 집합이 ‘좋은 문제 집합’이면 YES, 아니면 NO를 한 줄에 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 4
+2 3 4
+3 1 2 3
+1 1
+3 3
+3 3 2 1
+2 2 1
+1 1
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+NO
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

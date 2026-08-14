@@ -1,0 +1,122 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MAXTACK">MAXTACK</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MAXTACK"><b>289</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MAXTACK/"><b>66</b> (<b>22</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">자료구조</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>스택 머신은 현재는 더 이상 사용되지 않는 컴퓨터의 구현 방법 및 구성 중 하나로, 레지스터 대신에 내부적으로 스택을 활용하여 모든 연산을 수행하는 방식으로 동작한다. 스택 머신은 여러 장점을 가졌지만 결과적으로 요새는 물리적으로 이런 구조를 구현한 컴퓨터는 멸종하였고, 대신 내부적으로 레지스터를 사용하여 레지스터 사이의 계산을 정의하는 것이 일반적이다. 하드웨어적으로 스택을 구현하고 지원할 정도의 성능이면 레지스터들을 지원하는 편이 여러 모로 이득이기 때문이다. 이해를 돕기 위해 코드를 살펴 보자. 아래의 평범한 MIPS 어셈블리 코드는 두 상수를 더하기 위해 레지스터에 불러 온 뒤에 덧셈 인스트럭션을 수행하여 결과를 저장한다.</p>
+<pre><code>li $r1, 0x10        # $r1 = 0x10
+li $r2, 0x20        # $r2 = 0x20
+add $r0, $r1, $r2   # $r0 = $r1 + $r2</code></pre>
+<p>한편으로 보통의 스택 머신에서는 아래와 같이 계산할 수 있다.</p>
+<pre><code>push 0x10   # push 0x10 to the stack
+push 0x20   # push 0x20 to the stack
+add         # pop two values from the stack, add them and push the result back</code></pre>
+<p>이렇듯 서로 다른 계산 방식을 가지게 된다. 그런데, 만약에 우리가 하드웨어가 아닌 소프트웨어를 통해 컴퓨터를 구현한다면 구현의 난이도 측면에서 어떤 방식이 더 쉬울까? 당연히 후자가 그 가상 머신을 위한 컴파일러를 만드는 측면에서도, 인터프리터를 만드는 측면에서도 훨씬 유리하다. 이 외에도 몇 가지 이유로 Java Virtual Machine, CIL 코드(즉, .net 코드) 수행을 위한 VES, Adobe ActionScript의 구동을 위해 쓰이는 ActionScript Virtual Machine 등은 스택 기반의 가상 머신으로 구현되었다.</p>
+<p>하여 우리도 아주 간단한 스택 머신을 하나 정의하여 보기로 하자. 우리의 스택 머신은 단 네 가지 인스트럭션을 갖는다.</p>
+<ul>
+<li><code>push</code>: 외부에서 정수를 입력받아 그 값을 스택에 push한다.</li>
+<li><code>add</code>: 스택에서 두 값을 꺼내 더하고 결과를 스택에 push한다.</li>
+<li><code>subtract</code>: 스택에서 두 값을 꺼내 먼저 꺼낸 것에서 나중에 꺼낸 것을 빼고 결과를 스택에 push한다.</li>
+<li><code>negate</code>: 스택에서 값을 하나 꺼내, -1을 곱한 결과를 스택에 push한다.</li>
+</ul>
+<p>예를 들어, 입력으로 <span class="mathjax-preview"></span><script type="math/tex"></script>[5, 3, 2, 10]<span class="mathjax-preview"></span><script type="math/tex"></script> 이 순서대로 주어질 때 다음 어셈블리 코드를 수행하고 나면 스택에는 16만이 남게 된다.</p>
+<pre><code>push         # [5]
+push         # [5, 3]
+add          # [8]
+push         # [8, 2]
+subtract     # [-6]
+negate       # [6]
+push         # [6, 10]
+add          # [16]</code></pre>
+<p>이 어셈블리 언어에 대한 인터프리터를 구현하는 것은 전산학과 학부생이라면 누구라도 10분 안에 할 수 있는 일이기 때문에 문제를 조금 더 재미있게 바꿔 보자: 우리의 가상 머신에 대한 어셈블리 코드와 이 코드를 실행시킬 때 입력으로 제공할 수들의 수열이 주어지면, 이 수열의 원소들의 순서를 마음대로 변경하여 스택에 마지막으로 남는 값을 최대화하기 위해서는 어떻게 해야 할까?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.</p>
+<p>각 테스트 케이스의 첫 줄에는 실행할 어셈블리 코드의 인스트럭션 수 <span class="mathjax-preview">I\;(1 \le I \le 1000)</span><script type="math/tex">I\;(1 \le I \le 1000)</script> 가 주어진다.<br/>
+다음 <span class="mathjax-preview">I</span><script type="math/tex">I</script> 줄에 걸쳐 어셈블리 코드를 구성하는 각 인스트럭션이 한 줄에 하나씩 주어진다.<br/>
+마지막 줄에 입력으로 주어진 어셈블리 코드 중 <code>push</code> 인스트럭션의 개수만큼의 정수가 공백으로 구분되어 주어진다. 모든 정수들은 <span class="mathjax-preview">0</span><script type="math/tex">0</script> 이상 <span class="mathjax-preview">2^{32}-1</span><script type="math/tex">2^{32}-1</script> 이하이다.</p>
+<p>입력으로 주어지는 프로그램의 수행을 마친 뒤에는 항상 스택에 있는 원소가 하나뿐임이 보장되며 인스트럭션을 수행하기에 스택에 있는 원소의 수가 부족한 경우도 존재하지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 두 줄에 걸쳐 결과를 출력하여야 한다. 첫 줄에는 최대화한 연산 결과를 출력한다. 두 번째 줄에는 최대화한 결과를 얻기 위해 입력으로 사용한 정수들을 순서에 따라 공백 하나씩으로 구분하여 출력한다. 만약 여러 방법이 존재하는 경우 사전순으로 가장 작은 것을 출력하도록 한다.</p>
+<p>길이가 같은 두 수열 <span class="mathjax-preview">P, Q</span><script type="math/tex">P, Q</script>에 대해 <span class="mathjax-preview">P</span><script type="math/tex">P</script>가 <span class="mathjax-preview">Q</span><script type="math/tex">Q</script>보다 사전 순으로 앞선다는 것은, <span class="mathjax-preview">P_i \neq Q_i</span><script type="math/tex">P_i \neq Q_i</script> 인 가장 작은 <span class="mathjax-preview">i</span><script type="math/tex">i</script>에 대해 <span class="mathjax-preview">P_i &lt; Q_i</span><script type="math/tex">P_i < Q_i</script> 임을 의미한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+8
+push
+push
+add
+push
+subtract
+negate
+push
+add
+5 3 2 10</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>16
+3 5 2 10</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PINBALL">PINBALL</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PINBALL"><b>711</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PINBALL/"><b>237</b> (<b>33</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img alt="pinball1.png" src="http://algospot.com/media/judge-attachments/5e54d3c58d9353ea54cb2cb4c567a35f/pinball1.png"/></p>
+<p>동혁이는 새로 나온 핀볼 게임을 하고 있습니다. 이 핀볼 게임은 아주 큰 게임판에 여러 개의 장애물을 놓고, 밖에서 공을 던져 가장 많은 장애물을 맞추는 것을 목표로 합니다. 공과 장애물은 완전한 원형이며, 공은 장애물에 부딪히면 항상 입사각과 반사각이 같도록 정반사됩니다. 장애물은 게임판에 고정되어 있기 때문에 움직이지 않습니다. 위 그림은 예제 게임판에서 동혁이가 던진 공이 장애물들에 순서대로 부딪히는 과정을 보여줍니다.</p>
+<p>장애물들의 위치와 크기가 주어지고, 공의 위치와 방향이 주어질 때 공이 부딪히는 장애물들의 번호를 계산하는 프로그램을 작성하세요. 공은 반지름 1인 원이며, 항상 직선으로 움직인다고 가정합니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C(C &lt;= 50)가 주어집니다. 각 테스트 케이스의 첫 줄에는 5개의 정수 x, y, dx, dy, N 이 주어집니다. 이 때 x, y  (0 &lt;= x, y &lt;= 100)는 현재 공 중심의 위치를 나타내며, dx, dy (-10 &lt;= dx, dy &lt;= 10)는 공의 방향을 나타냅니다. 이 때 공은 현재 (x,y) 에서 (x+dx, y+dy)를 향해 일직선으로 굴러가고 있습니다. N(0 &lt;= N &lt;= 50)은 장애물의 개수를 나타내며, 각 장애물에는 0번부터 N-1번까지의 번호가 매겨져 있습니다. 그 다음 N줄에는 0번부터 각 장애물의 정보가 3개의 정수 x_i, y_i, r_i 로 주어집니다. (0 &lt;= x_i, y_i, r_i &lt;= 100) 이 때 i번 장애물은 (x_i, y_i)을 중심으로 한 반지름 r_i인 원 형태를 하고 있습니다.</p>
+<p>장애물은 게임판 밖에 걸쳐 있을 수도 있습니다. 두 장애물 사이의 거리가 2 이하인 경우는 없습니다. 시작 위치에서 공은 장애물과 겹쳐 있거나 닿아 있지 않습니다.</p>
+<p>공은 게임판의 벽에 닿는 순간 게임판에서 떨어진다고 가정합니다. 입력에 공이 게임판의 벽과 장애물에 동시에 닿는 경우는 주어지지 않습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 공이 닿는 순서대로 각 장애물의 번호를 출력합니다. 만약 공이 장애물에 100번 넘게 부딪힐 경우 첫 100번 부딪히는 장애물의 번호만을 출력합니다.</p>
+<p>주어진 입력에서 장애물의 크기나 위치가 10^-7 만큼 변하더라도 답은 변하지 않는다고 가정해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+5 5 1 1 5
+22 40 12
+61 26 20
+19 78 21
+51 86 7
+84 57 15</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0 1 2 1 2 0 3 4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

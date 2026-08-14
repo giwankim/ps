@@ -1,0 +1,100 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MORDOR">MORDOR</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MORDOR"><b>2793</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MORDOR/"><b>1236</b> (<b>44</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%EA%B0%84%ED%8A%B8%EB%A6%AC">구간트리</a>,
+						
+						<a href="/judge/problem/list/?tag=%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">자료구조</a>,
+						
+						<a href="/judge/problem/list/?tag=%ED%8A%B8%EB%A6%AC">트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>모르도르 지방의 <a href="http://en.wikipedia.org/wiki/Mordor#Geography">아름다운 경치</a>를 한 눈에 볼 수 있는 명산 <a href="http://en.wikipedia.org/wiki/Orodruin#Adaptations">오로드루인</a>에는 길기로 유명한 등산로가 있습니다. 이 등산로는 산등성이를 따라 오르락내리락하며 구성되어 있지요. 이 등산로는 너무 길기 때문에 특수 장비(예를 들면, <a href="http://en.wikipedia.org/wiki/One_Ring">절대반지</a> 등)를 갖춘 사람이 아니라면 처음부터 끝까지 정복하기가 힘이 듭니다. 관광 자원 개척을 위해 이 등산로 중 몇 군데를 별도의 등산로로 개방하려고 합니다.</p>
+<p>등산로에는 100미터 간격으로 표지판이 있는데, 각 표지판의 해발 고도를 측정한 자료가 있습니다. 이 때 등산로의 난이도는 등산로를 가다 만나는 표지판 중 최대 해발 고도와 최저 해발 고도의 차이입니다. 개방을 검토하고 있는 등산로의 일부가 주어질 때, 각 부분의 난이도를 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 30) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 원래 등산로에 있는 표지판의 수 N (1 &lt;= N &lt;= 100,000)과 개방을 고려하고 있는 등산로의 수 Q (1 &lt;= Q &lt;= 10,000)가 주어집니다. 그 다음 줄에 N 개의 정수로 각 표지판의 해발 고도 h<sub>i</sub> 가 순서대로 주어집니다. (0 &lt;= h<sub>i</sub> &lt;= 20,000) 각 표지판은 입력에 주어지는 순서대로 0 번부터 N-1 번까지 번호가 매겨져 있습니다. 그 다음 Q 줄에 각 2개의 정수로 개방을 고려하고 있는 등산로의 첫 번째 표지판과 마지막 표지판의 번호 a , b (0 &lt;= a &lt;= b &lt; N) 가 주어집니다. </p>
+<p><strong>입력 데이터의 양이 많으니 가능한 빠른 입출력 방법을 사용하시기 바랍니다.</strong></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>한 줄에 하나씩 개방을 고려하고 있는 각 등산로의 난이도를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 1
+1 2 3
+0 2
+10 4
+3 9 5 6 10 8 7 1 2 4 
+1 6
+4 7
+9 9
+5 8</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+5
+9
+0
+7</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

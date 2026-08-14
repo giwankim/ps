@@ -1,0 +1,108 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MINASTIRITH">MINASTIRITH</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MINASTIRITH"><b>1258</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MINASTIRITH/"><b>421</b> (<b>33</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>단 한 번도 함락된 적이 없다는 성채도시 <a href="http://en.wikipedia.org/wiki/Minas_Tirith">미나스 아노르</a>에는 반지름이 8 킬로미터나 되는 거대한 원형 성벽, <a href="http://en.wikipedia.org/wiki/Minas_Tirith#Rammas_Echor">람마스 에코르</a>가 있습니다. 도시 전체를 감싸는 이 거대한 성벽에는 n 개의 초소가 배치되어 있습니다. 각 초소들은 해당 위치를 중심으로 반지름 r<sub>i</sub> 의 원 내부를 감시할 수 있는데, 성벽의 구조 때문에 초소는 불규칙하게 배치되어 있고 초소마다 감시할 수 있는 범위도 모두 다릅니다. </p>
+<p><img alt="castlewatch.png" src="http://algospot.com/media/judge-attachments/07add06628a4ca3129affe2b379f6fa6/castlewatch.png"/></p>
+<p>위 그림에서 굵은 실선은 성벽, 별은 초소의 위치, 그리고 점선은 각 초소가 감시할 수 있는 영역을 나타냅니다. 최소의 인원으로 성벽의 모든 부분을 감시하기 위해, 일부 초소에만 병사를 배치하려고 합니다. 각 초소의 위치와 감시 범위가 주어질 때, 성벽의 모든 부분을 감시하기 위해 필요한 최소한의 병사 수를 계산하는 프로그램을 작성하세요.</p>
+<p>문제를 간단하게 하기 위해 성벽은 두께가 없는 원이고 초소는 점이라고 가정합니다. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 c (c &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 초소의 개수 n (1 &lt;= n &lt;= 100) 이 주어지며, 그 후 n 줄에 각 3 개의 실수로 각 초소의 위치 y<sub>i</sub>, x<sub>i</sub>, 그리고 감시 범위 r<sub>i</sub> (0 &lt; r<sub>i</sub> &lt;= 16.001) 가 주어집니다. </p>
+<p>성벽은 (0,0) 을 중심으로 하는 반지름 8 인 원으로, 모든 초소는 이 성벽 위에 위치합니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 필요한 최소의 병사 위치를 출력합니다. 만약 어떻게 하더라도 성벽의 모든 부분을 감시할 수 없다면 IMPOSSIBLE 을 대신 출력합니다. 입력에 주어지는 초소의 좌표, 혹은 감시 범위가 최대 0.0000001 만큼 변하더라도 답은 변하지 않는다고 가정해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+10
+7.02066050 -3.83540431 4.0
+-7.23257714 -3.41903904 2.0
+0.00000000 -8.00000000 8.0
+-8.00000000 -0.00000000 4.8
+-6.47213595 4.70228202 3.2
+-4.70228202 6.47213595 4.8
+7.60845213 -2.47213595 1.6
+-2.47213595 -7.60845213 8.8
+6.47213595 4.70228202 7.6
+-0.00000000 8.00000000 4.8
+4
+8.00000000 0.00000000 8.00
+0.00000000 -8.00000000 8.00
+-8.00000000 -0.00000000 8.00
+1.25147572 7.90150672 5.40
+1
+8 0 15.99
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+4
+IMPOSSIBLE</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

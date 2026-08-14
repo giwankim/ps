@@ -1,0 +1,116 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BISHOPS">BISHOPS</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BISHOPS"><b>597</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BISHOPS/"><b>290</b> (<b>48</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/11">Toivoa</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Ajou%20U%20Programming%20Contest%2C%201st">Ajou U Programming Contest, 1st</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>“N*N의 체스판에 Queen이 서로 공격하지 않도록 놓을 수 있는 방법을 찾아라.”</p>
+<p>위 문제는 유명한 N-Queen 문제이다. 자료구조 시간에 N-Queen 문제를 풀면서 백트래킹을 마스터했다고 생각한 LIBe는 보다 더 어려운 문제를 풀이보기 위해서 문제를 다음과 같이 변경하였다.</p>
+<p>“체스판에 장애물들이 있고, Queen이 장애물을 넘어갈 수 없을 때 최대로 놓을 수 있는 Queen의 개수는 몇 개일까?”</p>
+<p>그러나 세상의 모든 일은 생각대로 되지 않는 법. 코딩 스킬이 부족했던 LIBe는 위 문제를 풀다가 포기하고 결국 문제를 다음과 같이 변경하였다.</p>
+<p>“체스판에 장애물들이 있고, Bishop이 장애물을 넘어갈 수 없을 때 최대로 놓을 수 있는 Bishop의 개수는 몇 개일까?”</p>
+<p>LIBe는 과연 이 문제를 풀 수 있을까?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 여러 개의 테스트 케이스로 주어진다. 입력의 첫 줄에는 테스트 케이스의 개수 T가 들어온다.<br/>
+각각의 테스트 케이스의 첫 줄에는 체스판의 크기 N (1 &lt;= N &lt;= 8)이 주어진다.<br/>
+이후 N줄에는 체스판의 상태가 주어진다. .은 Bishop을 놓을 수 있는 곳이며, *은 장애물이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각각의 테스트 케이스들에 대해 최대로 놓을 수 있는 Bishop의 개수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5
+.....
+.....
+.....
+.....
+.....
+8
+..**.*.*
+**.***.*
+*.**...*
+.*.**.**
+*.**.*.*
+..**.*.*
+...*.*.*
+**.*.*.*
+8
+*.*.*.*.
+.*.*.*.*
+*.*.*.*.
+.*.*.*.*
+*.*.*.*.
+.*.*.*.*
+*.*.*.*.
+.*.*.*.*
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>8
+18
+7
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

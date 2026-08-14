@@ -1,0 +1,107 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/RSP">RSP</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=RSP"><b>27</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/RSP/"><b>11</b> (<b>40</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/89">Yongrok</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Spring%202009">RUN Programming Contest, Spring 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>kimyolo 는 대학스키팀 GHOST의 멤버다. GHOST는 주중 8시30분부터 14시30분까지 계속 스키를 타는데 11시부터 11시 반까지 잠깐 쉬면서 간식을 먹는다. 간식비로 주어진 팀비는 만원이지만 팀비만으로는 간식의 양이 너무 적다. 그래서 GHOST는 간식시간마다 복불복 가위바위보를 한다. 복불복에서 걸린 사람은 만원을 더 내고 팀비와 합친 2만원으로 팀은 비교적 풍족한 간식생활을 영위한다.</p>
+<p>kimyolo는 매일같이 복불복을 하면서 가위바위보에 대해 고민했다. 그러던 중 만약 한사람을 항상 이길 수 있다면 복불복에서 절대 걸리지 않는다는 점을 발견했다. 하지만 한 사람을 항상 이길 수 있는것은 무척 힘든 일이었다. 하지만 매일같은 복불복에서 kimyolo는 모든 팀원들의 가위바위보를 내는 비율을 파악했다.</p>
+<p>kimyolo를 제외한 n명의 팀원들에 대한 가위바위보 내는 비율이 주어졌을 때, kimyolo가 복불복에 걸릴 확률을 계산하는 프로그램을 작성하자. 단 kimyolo는 비율을 바탕으로 최선을 다 한다고 가정한다.</p>
+<p>보충 설명 : 복불복 가위 바위 보<br/><br/>
+처음에는 다같이 가위 바위 보를 하고, 승자와 패자가 나뉠 경우에 패자끼리 다시 가위 바위 보를 한다. 이런 식으로 계속 진행해서, 최종적으로 1명의 패자가 남으면 그 사람이 복불복에 걸린 것이다.</p>
+<p>힌트 : 가위 바위 보가 영원히 끝나지 않는 경우, kimyolo는 복불복에 걸리지 않는 것으로 간주한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫째 줄에는 테스트 케이스의 개수 T가 주어진다. ( T &lt;= 30 )<br/><br/>
+<br/><br/>
+각 입력의 첫 줄에는 kimyolo를 제외한 팀원의 수 1 &lt;= n &lt;= 10 이 주어진다.<br/><br/>
+둘째 줄부터 n줄에 걸쳐 kimyolo를 제외한 각 팀원이 가위바위보를 내는 비율인 정수 Si Ri Pi가 주어진다. 가위, 바위, 보 순으로 주어지는 것에 유의하라.<br/><br/>
+모든 i에 대해 0 &lt; Si+Ri+Pi &lt; 10000, 0 &lt;= Si, Ri, Pi 를 만족한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>kimyolo가 주어진 정보를 바탕으로 최선을 다 했으나 복불복에 걸릴 확률을 구한다.<br/><br/>
+출력은 소수점 다섯째 자리에서 반올림하여 넷째 자리까지 출력하도록 한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+1 
+4 3 3
+1
+33 33 34
+4
+2 3 5
+80 10 10
+30 40 30
+5 5 0
+4
+20 30 50
+80 10 10
+30 40 30
+33 33 34</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0.4286
+0.4925
+0.0000
+0.0554</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

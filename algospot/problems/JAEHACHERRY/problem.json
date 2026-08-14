@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/e9d5e8f9b85dc421-C1.png",
+      "sha256": "842ab2929f67fa1d3ece3746b41d5c1a36ec0947f826911f46a93de8ede012b0",
+      "source_url": "http://algospot.com/media/judge-attachments/1443ba80fc3c13284666a261b765d8d8/C1.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "JAEHACHERRY",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:36:31.438337Z",
+    "http_status": 200,
+    "semantic_html_sha256": "950a95ba52bcdf7098b1b21dcfa53c589ca6e941b8b258aef7313a2052f86e5c"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/JAEHACHERRY",
+  "statistics": {
+    "acceptance_percent": 16,
+    "accepted": 43,
+    "submissions": 268
+  },
+  "tags": [],
+  "title": "재하와 버찌씨 여덟개"
+}

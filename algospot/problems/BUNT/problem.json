@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/013af074f6649f25-bunt.png",
+      "sha256": "dde72d695023c2afa5a3a994c6201f8f66a70ae15492a6da9dc130100c63bd06",
+      "source_url": "https://www.algospot.com/media/judge-attachments/84cffa97e84760cf474f01cd73db60a7/bunt.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BUNT",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:11:28.270616Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e291c18766bde77fd697cbc6a0f26a80dffdac6e81d8e87137dc10734c9a5f60"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BUNT",
+  "statistics": {
+    "acceptance_percent": 8,
+    "accepted": 21,
+    "submissions": 241
+  },
+  "tags": [
+    "기하"
+  ],
+  "title": "번트의 장인"
+}

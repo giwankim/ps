@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/c2740f82995252f5-maemi.png",
+      "sha256": "0d34de16072310eec79a14ce4278fed47c7effa71e1bcf827d22258c126adc1f",
+      "source_url": "http://algospot.com/media/judge-attachments/ddbebb45c6e07905bc388252f0d70e92/maemi.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CICADAPRINCIPLE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:13:01.391763Z",
+    "http_status": 200,
+    "semantic_html_sha256": "3c6fe56b54db86c53626ffec9c77123f00890a95752e3152ad1a6cb8b04e004e"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CICADAPRINCIPLE",
+  "statistics": {
+    "acceptance_percent": 22,
+    "accepted": 20,
+    "submissions": 90
+  },
+  "tags": [],
+  "title": "매미 원리"
+}

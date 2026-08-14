@@ -1,0 +1,38 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ORDERING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:02:06.618986Z",
+    "http_status": 200,
+    "semantic_html_sha256": "6fac58d3263bb728107eded65b8b2215f01eebc41224567c6e336cb94c74b7ad"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ORDERING",
+  "statistics": {
+    "acceptance_percent": 29,
+    "accepted": 439,
+    "submissions": 1482
+  },
+  "tags": [
+    "구현",
+    "그래프"
+  ],
+  "title": "할 일 순서 정하기"
+}

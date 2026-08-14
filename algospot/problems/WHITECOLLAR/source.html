@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WHITECOLLAR">WHITECOLLAR</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WHITECOLLAR"><b>808</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WHITECOLLAR/"><b>139</b> (<b>17</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제1회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>전미 최고의 사기꾼. 안 해본 도둑질, 안 해본 사기가 없는 닐 카프리는 오늘 저녁 세계 최고의 미술품 중 하나인 “뮤직박스”를 훔칠 예정이다.<br/>
+오늘 아침, 이 정보를 입수한 Algospot은 그를 검거하기 위한 작전을 세우고 있다. Algospot은 그가 현재 어느 도시에 있는지, 그리고 뮤직박스가 어느 도시에 있는지 파악했고, 그를 잡기 위해 직원들을 배치할 것이다. Algospot이 입수한 정보에 의하면 닐 카프리는 매우 급한 성격(?)이고, 그의 성격으로 볼 때, 현재 위치에서 뮤직박스가 있는 곳까지 최단 경로로 이동할 것이다.<br/>
+그래서 Algospot은 현재 닐 카프리가 있는 도시와 뮤직박스가 있는 도시, 그리고 그가 이동할 때 거쳐 갈 가능성이 있는 모든 도시에 직원들을 배치하려고 한다. 지도를 보고 직원들을 배치해야 되는 도시를 모두 골라내자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T 개의 테스트 케이스로 구성된다. 입력의 첫 행에는 T 가 주어진다.</p>
+<p>각 테스트 케이스 의 첫 행에는 도시의 수 N (2 &lt;= N &lt;= 1,000), 도시 간에 연결된 길의 수 M (1 &lt;= M &lt;= 50,000) 이 주어진다. 그 다음 M 행에 연결된 도시의 번호 A<sub>i</sub>와 B<sub>i</sub>가 주어진다. 모든 길은 그 길이가 같은 A<sub>i</sub>에서 B<sub>i</sub> 로 이동하는 일방통행 길이다. (1 &lt;= A<sub>i</sub>, B<sub>i</sub> &lt;= N;A<sub>i</sub> != B<sub>i</sub>)<br/>
+닐 카프리는 현재 1번 도시에 위치해 있고, 뮤직박스는 N번 도시에 위치해 있다. 1번 도시에서 N번 도시로 이동 가능한 경로는 반드시 하나 이상 존재한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 한 행에 하나씩 Algospot이 직원들을 배치해야하는 도시의 번호를 오름차순으로 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 5
+1 2
+2 1
+1 3
+3 4
+4 3
+5 6
+1 2
+1 3
+2 5
+3 4
+3 5
+4 5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 3 4
+1 2 3 5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DOBRA">DOBRA</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DOBRA"><b>80</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DOBRA/"><b>40</b> (<b>50</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=COCI%202009/2010%20Contest%20%231">COCI 2009/2010 Contest #1</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Lea runs into a lot of words in her life. A lot of them she finds unpleasant. To compensate for that she started making up plesant words. Lea makes up new words by writing a nice looking string of characters on a piece of paper. She than erases a few of the most nasty looking characters and replaces them with underscores '_'. After that she tries to replace the underscores with more acceptable characters trying to form a plesant word.</p>
+<p>Lea considers words plesant if they do not contain 3 sequential vowels, 3 sequential consonants and contain at least one letter 'L'. </p>
+<p>In Croatian vowels are letters A, E, I, O, U only. All other lettters are consonants.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first and only line of input contains a string of characters, at most 100. The string contains only of uppercase english letters and characters '_'. There will be at most 10 characters '_'.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>The first and only line of output should cotain a single integer - the total number of plesant words that can be formed by substituing underscores with uppercase letters of the english alphabet.</p>
+<p>Warning: Use 64 bit number formats. long long in C/C++, int64 in Pascal.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>Example 1
+L_V
+
+Example 2
+V__K
+
+Example 3
+JA_BU_K_A</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Example 1
+5
+
+Example 2
+10
+
+Example 3
+485</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>Due to technical difficulty in AOJ, the given input and output examples are displayed in a single box. Please note that they should be considered as completely different instances of input and output, unlike other problems. Every test cases will be judged against a fresh instance of compiled submission process.</p>
+</p>
+</section>

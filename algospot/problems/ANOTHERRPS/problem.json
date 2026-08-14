@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ANOTHERRPS",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:03:08.041675Z",
+    "http_status": 200,
+    "semantic_html_sha256": "bd0fcd8fe30fca8ed29d469fc8c64c84d91caa42d05aec686fe579d0fed00b8d"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ANOTHERRPS",
+  "statistics": {
+    "acceptance_percent": 34,
+    "accepted": 108,
+    "submissions": 313
+  },
+  "tags": [
+    "수학"
+  ],
+  "title": "Another Rock-Paper-Scissors Problem"
+}

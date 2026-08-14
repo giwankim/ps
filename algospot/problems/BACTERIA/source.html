@@ -1,0 +1,108 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BACTERIA">BACTERIA</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BACTERIA"><b>565</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BACTERIA/"><b>70</b> (<b>12</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/181">강원</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>A famous biologist, <strong>K. C. Morris</strong>, studies on the behavior of bacteria. So he wants to simulate a large swarm of bacteria.</p>
+<p>There is a square dish, divided into W columns and H rows - it means there are W x H cells in the dish. Each cell is in one of two possible states, <strong>live</strong> or <strong>dead</strong>. <strong>Live</strong> means there are bacteria in the cell, and <strong>dead</strong> means there aren't. Each cell has at most four horizontally or vertically adjacent cells. Because bacteria are affected by their neighbors, the state of each live cell can be changed:</p>
+<ul>
+<li>If a live cell has fewer than two live neighbors, it is changed to the dead state after a second because of under-population.</li>
+<li>If a live cell has more than two live neighbors, it is changed to the dead state after a second because of overcrowding.</li>
+<li>If a live cell has exactly two live neighbors, it remains in the live state.</li>
+</ul>
+<p>With the above rule, the swarm of bacteria can be extinct. For example, Figure 1 shows the 3 × 4 dish with 7 live cells, and Figure 2 shows the number of live neighbors for each live cell. Only 3 live cells will remain in the live state after one second, and the swarm will be extinct after two seconds. But the swarm in Figure 4 will not be extinct, because all live cells have exactly two live neighbors.</p>
+<div class="highlight"><pre>    **.           12.           .*.           ***
+    .**           .32           ..*           *.*
+    .**           .32           ..*           *.*
+    .*.           .1.           ...           ***
+
+[Figure 1]    [Figure 2]    [Figure 3]    [Figure 4]
+</pre></div>
+<p>Given initial states of cells, write a program that figure out when the swarm will be extinct.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains one integer T, the number of test cases.</p>
+<p>Each test case begins with a line containing two positive integers W and H, the width and height of the dish (W, H &lt;= 500). Then H lines follow, each containing W characters. The characters describe the initial states of the cells; '.' denotes a dead cell, and '*' denotes a live cell.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the time in seconds that the warm will be extinct in one line. If the swarm will not be extinct forever, print -1 instead.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 4
+**.
+.**
+.**
+.*.
+3 4
+***
+*.*
+*.*
+***</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+-1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

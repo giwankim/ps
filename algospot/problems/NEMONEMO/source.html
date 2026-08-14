@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NEMONEMO">NEMONEMO</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NEMONEMO"><b>107</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NEMONEMO/"><b>17</b> (<b>15</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=SNUTOC%202014">SNUTOC 2014</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script>과 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>로 구성된 길이 <span class="mathjax-preview">N</span><script type="math/tex">N</script>의 이진 수열이 있다. 이러한 이진 수열은 <span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script> 또는 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>이 연속적으로 나타난 것을 이어붙인 모양을 하게 되는데, 이처럼 한 문자가 연속적으로 나타나는 것을 체인이라고 한다. 예를 들어 이진 수열 <span class="mathjax-preview">\texttt{1001110000}</span><script type="math/tex">\texttt{1001110000}</script>이 주어지면, 이것은 차례로 길이가 <span class="mathjax-preview">1</span><script type="math/tex">1</script>인 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>의 체인, 길이가 <span class="mathjax-preview">2</span><script type="math/tex">2</script>인 <span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script>의 체인, 길이가 <span class="mathjax-preview">3</span><script type="math/tex">3</script>인 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>의 체인, 그리고 길이가 <span class="mathjax-preview">4</span><script type="math/tex">4</script>인 <span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script>의 체인을 이어붙인 모양을 하고 있다. 이진 수열에 포함된 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>의 체인의 길이를 차례로 나열한 것을 이 수열의 힌트 수열이라고 한다. 예를 들어 이진 수열 <span class="mathjax-preview">\texttt{1001110000}</span><script type="math/tex">\texttt{1001110000}</script>의 힌트 수열은 <span class="mathjax-preview">\langle {1,\;3} \rangle</span><script type="math/tex">\langle {1,\;3} \rangle</script>이고, 이진 수열 <span class="mathjax-preview">\texttt{01110001111101001}</span><script type="math/tex">\texttt{01110001111101001}</script>의 힌트 수열은 <span class="mathjax-preview">\langle {3,\;5,\;1,\;1} \rangle</span><script type="math/tex">\langle {3,\;5,\;1,\;1} \rangle</script>이다.</p>
+<p>당신은 힌트 수열이 주어졌을 때 이를 바탕으로 원래의 이진 수열을 복원하려고 한다. 예를 들어 힌트 수열이 <span class="mathjax-preview">\langle {1,\;2,\;3} \rangle</span><script type="math/tex">\langle {1,\;2,\;3} \rangle</script>이고, <span class="mathjax-preview">N=8</span><script type="math/tex">N=8</script>이라면, 이를 바탕으로 원래의 이진 수열 <span class="mathjax-preview">\texttt{10110111}</span><script type="math/tex">\texttt{10110111}</script>을 복원해 낼 수 있다. 수열을 완전히 복원하진 못하더라도 일부분을 복원할 수 있는 경우도 있다. 예를 들어 힌트 수열이 <span class="mathjax-preview">\langle {3} \rangle</span><script type="math/tex">\langle {3} \rangle</script>이고 <span class="mathjax-preview">N=5</span><script type="math/tex">N=5</script>라면, 가능한 경우는 <span class="mathjax-preview">\texttt{11100}</span><script type="math/tex">\texttt{11100}</script>, <span class="mathjax-preview">\texttt{01110}</span><script type="math/tex">\texttt{01110}</script>, <span class="mathjax-preview">\texttt{00111}</span><script type="math/tex">\texttt{00111}</script>의 세 가지 경우밖에 없다. 이 때에는 어떤 경우라도 가운데 위치에 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>이 오기 때문에, 이를 <span class="mathjax-preview">\texttt{??1??}</span><script type="math/tex">\texttt{??1??}</script>로 복원할 수 있다. 여기서 <span class="mathjax-preview">\texttt{?}</span><script type="math/tex">\texttt{?}</script>는 해당 위치를 복원할 수 없었음을 나타낸다.</p>
+<p>그러나 경우에 따라서는 수열을 추가적으로 복원하지 못할 수도 있다. 예를 들어 힌트 수열이 <span class="mathjax-preview">\langle {3,\;2} \rangle</span><script type="math/tex">\langle {3,\;2} \rangle</script>이고 <span class="mathjax-preview">N=11</span><script type="math/tex">N=11</script>이라고 하자. 그러면 이를 이진 수열로 복원하는 방법은  <span class="mathjax-preview">\texttt{11100000011}</span><script type="math/tex">\texttt{11100000011}</script>, <span class="mathjax-preview">\texttt{00011101100}</span><script type="math/tex">\texttt{00011101100}</script>, <span class="mathjax-preview">\texttt{11100011000}</span><script type="math/tex">\texttt{11100011000}</script> 등 여러 가지가 있다. 이처럼 수열의 각 위치에 <span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script>이 올 수도 있고 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>이 올 수도 있기 때문에, 수열의 어느 위치도 하나로 확정할 수가 없다. 하지만 이진 수열의 일부를 미리 알고 있다면 복원에 도움이 되기도 한다. 예를 들어, 힌트 수열이 <span class="mathjax-preview">\langle {3,\;2} \rangle</span><script type="math/tex">\langle {3,\;2} \rangle</script>이고, <span class="mathjax-preview">N=11</span><script type="math/tex">N=11</script>이며, 수열의 일부가 <span class="mathjax-preview">\texttt{??1?0?0???0}</span><script type="math/tex">\texttt{??1?0?0???0}</script>와 같다고 하자. 여기서 <span class="mathjax-preview">\texttt{?}</span><script type="math/tex">\texttt{?}</script>는 해당 위치를 알 수 없었음을 나타낸다. 이에 맞춰서 복원하는 경우를 모두 따져보면 <span class="mathjax-preview">\texttt{11100001100}</span><script type="math/tex">\texttt{11100001100}</script>, <span class="mathjax-preview">\texttt{11100000110}</span><script type="math/tex">\texttt{11100000110}</script>, <span class="mathjax-preview">\texttt{01110001100}</span><script type="math/tex">\texttt{01110001100}</script>, <span class="mathjax-preview">\texttt{01110000110}</span><script type="math/tex">\texttt{01110000110}</script> 의 네 가지 경우가 가능하다. 가능한 모든 경우에 대해 한 위치가 동일하게 복원되는 것들을 모두 모아보면, 이 경우에는 이진 수열을 <span class="mathjax-preview">\texttt{?11?000?1?0}</span><script type="math/tex">\texttt{?11?000?1?0}</script>로 복원할 수 있음을 알 수 있다.</p>
+<p><span class="mathjax-preview">N</span><script type="math/tex">N</script>, 힌트 수열, 그리고 이진 수열의 일부가 주어졌을 때, 수열을 복원하는 프로그램을 작성하여라. 주어진 정보로부터 복원 가능한 모든 경우를 따져 보았을 때, 어떤 특정 위치에 한 문자(<span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script> 또는 <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>)가 모든 경우에 대해 공통적으로 나타난다면, 해당 위치를 해당 문자로 복원할 수 있는 것이다. 만일 주어진 이진 수열에 비해 추가적으로 복원하는 것이 불가능하다면 주어진 이진 수열을 그대로 출력하면 된다. 또한 원래 주어진 정보에 모순이 있다면 복원 가능한 경우가 하나도 존재하지 않을 수 있는데, 이러한 경우에는 <span class="mathjax-preview">\texttt{IMPOSSIBLE}</span><script type="math/tex">\texttt{IMPOSSIBLE}</script> 을 출력한다. 예를 들어, 힌트 수열이 <span class="mathjax-preview">\langle {3,\;3} \rangle</span><script type="math/tex">\langle {3,\;3} \rangle</script>이고 주어진 이진 수열이 <span class="mathjax-preview">\texttt{??010??}</span><script type="math/tex">\texttt{??010??}</script>이었다면, 여기에 모순되지 않게 수열을 복원할 수는 없다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫째 줄에는 테스트 케이스의 개수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다. 다음 줄부터 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스가 주어지며, 각 테스트 케이스는 한 줄로 이루어진다. 먼저 자연수 <span class="mathjax-preview">N(1 \leq N \leq 50)</span><script type="math/tex">N(1 \leq N \leq 50)</script>이 주어진다. 다음으로는 힌트 수열의 길이를 나타내는 정수 <span class="mathjax-preview">M(0 \leq M \leq 50)</span><script type="math/tex">M(0 \leq M \leq 50)</script>이 주어지고, 이어서 힌트 수열을 나타내는 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 1 이상의 자연수가 주어진다. 마지막으로는 이진 수열을 나타내는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 문자로 구성된 문자열이 주어진다. 문자열은 <span class="mathjax-preview">\texttt{0}</span><script type="math/tex">\texttt{0}</script>, <span class="mathjax-preview">\texttt{1}</span><script type="math/tex">\texttt{1}</script>, <span class="mathjax-preview">\texttt{?}</span><script type="math/tex">\texttt{?}</script>로만 구성된다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>출력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 줄에 각 테스트 케이스에 대한 답을 출력한다. 만일 해당 케이스에 모순이 있었다면 <span class="mathjax-preview">\texttt{IMPOSSIBLE}</span><script type="math/tex">\texttt{IMPOSSIBLE}</script>가 답이 되고, 그렇지 않은 경우라면 해당 케이스에 대해서 이진 수열을 복원한 것이 답이 된다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>7
+10 2 1 3 1??111????
+17 4 3 5 1 1 0???000?????0?00?
+8 3 1 2 3 10110111
+5 1 3 ?????
+11 2 3 2 ???????????
+11 2 3 2 ??1?0?0???0
+7 2 3 3 ??010??</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1001110000
+01110001111101001
+10110111
+??1??
+???????????
+?11?000?1?0
+IMPOSSIBLE</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,100 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CANADATRIP">CANADATRIP</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CANADATRIP"><b>1775</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CANADATRIP/"><b>792</b> (<b>44</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%9D%B4%EB%B6%84%EB%B2%95">이분법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>동건이는 여름 방학을 맞아 자동차를 끌고 캐나다 횡단 여행을 떠나기로 했습니다. 캐나다의 1번 고속도로는 세계에서 가장 긴 고속도로 중 하나로, 캐나다의 동쪽 끝에서 서쪽 끝까지 있는 모든 주요 도시를 연결합니다. 동건이는 이 고속도로를 타고 캐나다의 서쪽 끝 빅토리아에서 동쪽 끝 세인트 존까지 8,030km 를 달리기로 마음먹었습니다.</p>
+<p>이 고속도로는 굉장히 많은 표지판이 있기로도 유명합니다(이 문장부터는 사실이 아닙니다..). 이 고속도로는 N개의 주요 도시를 지나치는데, 각 도시까지의 남은 거리를 나타내는 표지판이 많기 때문입니다. i번째 도시까지의 거리를 나타내는 표지판은 도시에 도착하기 M<sub>i</sub>미터 전부터 시작해서 도시에 도착할 때까지 G<sub>i</sub>미터 간격으로 설치되어 있습니다. 예를 들어 M<sub>0</sub>=500이고 G<sub>0</sub>=50이라고 하면 여행자는 다음과 같은 11개의 표지판을 순서대로 보게 됩니다.</p>
+<ul>
+<li>"0번 도시 500미터 전"</li>
+<li>"0번 도시 450미터 전"</li>
+<li>...</li>
+<li>"0번 도시 50미터 전"</li>
+<li>"0번 도시: 환영합니다"</li>
+</ul>
+<p>시작점으로부터 각 도시까지의 거리 L<sub>i</sub>와 M<sub>i</sub>, G<sub>i</sub>가 주어질 때, 시작점으로부터 여행하면서 동건이가 보게 되는 K번째 표지판의 위치를 계산하는 프로그램을 작성하세요. 한 위치에 표지판이 여러 개 있을 경우에도 각각의 표지판을 따로 세기로 합니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T (T &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 도시의 수 N (1 &lt;= N &lt;= 5000) 과 K (1 &lt;= K &lt;= 2^31-1) 가 주어집니다. 그 후 N줄에는 각 3개의 정수로 L<sub>i</sub>, M<sub>i</sub>, G<sub>i</sub> (1 &lt;= G<sub>i</sub> &lt;= M<sub>i</sub> &lt;= L<sub>i</sub> &lt;= 8,030,000) 가 주어집니다. M<sub>i</sub>는 항상 G<sub>i</sub>의 배수입니다. K는 항상 총 표지판의 수 이하입니다.</p>
+<p><strong>입출력 데이터의 양이 많으니 빠른 입출력 방법을 사용하시기 바랍니다.</strong></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 K번째 표지판의 위치를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 15
+500 100 10
+504 16 4
+510 60 6
+2 1234567
+8030000 8030000 1
+2 2 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>480
+1234563
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

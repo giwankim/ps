@@ -1,0 +1,68 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/08eb7505700e6b68-aaa.jpg",
+      "sha256": "3a1842daff7b36cd0ae46ba9f63521d0d61b474672351f1af7a6b36ed5f632c2",
+      "source_url": "http://algospot.com/media/judge-attachments/143b96312fae537e53910428b6d5638d/aaa.jpg"
+    },
+    {
+      "archived": true,
+      "path": "assets/f2aeb29cfa7763f3-anoa.jpg",
+      "sha256": "e61ac110479a0283927cd6f1f76ba09afce6c92699d4c37bc4e0bd1873847dcd",
+      "source_url": "http://algospot.com/media/judge-attachments/c4979025ff31c581ec59ed80265caf23/anoa.jpg"
+    },
+    {
+      "archived": true,
+      "path": "assets/c2e35979bdbb7d63-conda.jpg",
+      "sha256": "b81be57e89c92cf89c41ad6331a8457e452cdbf9fa04c29089b3ec42daf9e492",
+      "source_url": "http://algospot.com/media/judge-attachments/293aa44b8d2291b890bdf69c78036feb/conda.jpg"
+    },
+    {
+      "archived": true,
+      "path": "assets/de54d2dc4e55e77c-whosad.jpg",
+      "sha256": "5c2180dfa1c3244afda49c1f0d3f8795f4d29231a55b9ced72351a843cd23a38",
+      "source_url": "http://algospot.com/media/judge-attachments/874d3e640cf8579065c1189e47ff5e9b/whosad.jpg"
+    },
+    {
+      "archived": true,
+      "path": "assets/05766f10736896ae-stris.jpg",
+      "sha256": "e7958266ee4f7782c097b14649364d2209e6b631741db23667308e338aecf0dc",
+      "source_url": "http://algospot.com/media/judge-attachments/749f266bfdff82e3e3f592a9174d0ec2/stris.jpg"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "SPETIAL",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:19:04.971856Z",
+    "http_status": 200,
+    "semantic_html_sha256": "595d48b1cd4bfa7b9eb87135c305655f942aff1729d2dc485326368dbe310ad3"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/SPETIAL",
+  "statistics": {
+    "acceptance_percent": 57,
+    "accepted": 19,
+    "submissions": 33
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "Spatial Concepts Test"
+}

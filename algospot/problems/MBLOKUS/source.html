@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MBLOKUS">MBLOKUS</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MBLOKUS"><b>32</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MBLOKUS/"><b>18</b> (<b>56</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%202%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 2주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A1%B0%ED%95%A9%ED%83%90%EC%83%89">조합탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>평소에 보드게임을 너무너무 좋아하는 LIBe 는 이번에는 Blokus 에 도전해 보기로 하였다. 하지만 LIBe 는 친구가 많지 않아 대개 혼자 놀기 때문에 원래 형태의 Blokus 를 하기 힘들었고, 고민 끝에 자신만의 게임을 만들기로 했다. LIBe 가 만든 새로운 게임은 N*M 크기의 게임판에서 진행하며, 이 중 몇 개의 칸에 장애물 블럭을 설치한다. 장애물 블럭이 있는 칸에는 다른 블럭을 놓을 수 없다. LIBe 는 아래의 9가지의 블럭을 가지고 게임을 진행하며, 각 블럭들은 회전/대칭 변환이 가능하다.</p>
+<p><img alt="judge-attachments/b97321c885a684b04c80caf4b35bba4a/blokus1.png" src="http://algospot.com/media/judge-attachments/b97321c885a684b04c80caf4b35bba4a/blokus1.png"/></p>
+<ul>
+<li>한 번에 하나의 블럭을 게임판에 놓을 수 있다.</li>
+<li>첫 번째 블럭은 항상 게임판의 맨 왼쪽 위 칸을 포함하고 있어야 한다. 장애물이 있는 경우에는 게임이 끝난다.</li>
+<li>두 번째 블럭부터는 자기가 이미 게임판에 놓은 블럭의 꼭지점을 공유하면서 이어나간다. 이 때 자기의 블럭과 변을 공유하면 놓을 수 없다. 예를 들어, 아래의 왼쪽 그림에서는 새 블럭이 이전 블럭과 꼭지점을 공유하기 때문에 그대로 놓을 수 있지만, 오른쪽 그림에서는 변을 공유하기 때문에 불가능하다.</li>
+</ul>
+<p><img alt="judge-attachments/56a04722a17db63d19c6b3089b9a2c21/blokus2.png" src="http://algospot.com/media/judge-attachments/56a04722a17db63d19c6b3089b9a2c21/blokus2.png"/></p>
+<ul>
+<li>더 이상 블럭을 놓을 수 없거나, 모든 블럭을 게임판에 놓은 경우 게임이 종료된다.</li>
+<li>종료시에 모든 블럭을 게임판에 내려놓았을 경우 50점을 받게 되고, 그렇지 못하면 블럭의 칸수에 따라 감점을 받는다. 예를 들어 1칸짜리 블럭을 놓지 못했으면 -1점을 받고, 3칸짜리 ㄴ 자 블럭을 놓지 못했으면 -3점을 받게 되는 것이다. 블럭을 하나도 놓지 못하면 -29점이 된다.</li>
+</ul>
+<p>게임을 시작하기 전 장애물이 배치된 상태의 게임판이 주어질 때, LIBe 가 얻을 수 있는 최대 점수를 구하는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 50) 가 주어진다. 각 테스트 케이스의 첫 줄에는 보드의 크기 N, M (1 &lt;= N,M &lt;= 30)이 주어지고, 그 후 N 줄에 보드의 상태가 주어진다. 한 줄에는 M 개의 문자가 공백없이 주어지며, . 은 빈칸을, * 는 장애물을 나타낸다. </p>
+<p>게임판에 있는 빈칸의 수는 항상 30 이하이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 줄에 LIBe 가 얻을 수 있는 최대점수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2 
+3 3 
+... 
+.*. 
+... 
+3 17
+.*.*...*.*...*..* 
+.*..****..*.**..* 
+..**....*.**..**.</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>-23
+50</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

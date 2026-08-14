@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/cd56610be8b5e252-fence.png",
+      "sha256": "0960bd4f02db37488d263c8038f7fda993a2eed8fccfc0059b90cbb08e358c89",
+      "source_url": "http://algospot.com/media/judge-attachments/506874700c7251881727ee4e70a1d502/fence.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "FENCE",
+  "limits": {
+    "memory_kb": 131072,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:26.201175Z",
+    "http_status": 200,
+    "semantic_html_sha256": "a396e9c2df41a1d7f3a5f2246a3b49f6c8a75f6597c659e8c78824e4a249588b"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/FENCE",
+  "statistics": {
+    "acceptance_percent": 33,
+    "accepted": 5692,
+    "submissions": 16979
+  },
+  "tags": [
+    "분할정복",
+    "스위핑"
+  ],
+  "title": "울타리 잘라내기"
+}

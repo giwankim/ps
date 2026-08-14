@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WEDDING">WEDDING</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WEDDING"><b>79</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WEDDING/"><b>11</b> (<b>13</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/13">legend12</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A0%95%EB%A0%AC">정렬</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>JongMan (a.k.a JM) asked his girlfriend to marry him. His girlfriend said yes to his proposal, but it is a conditional consent. JongMan earned lots of money, but she wanted to save down expenses for the wedding march. However, JongMan already sorted out all the expenses for the wedding, except for the day of the wedding. So, JongMan plans to reduce expenses by collecting congratulatory money (축의금). JongMan knows who will come to wedding, and how much each of them will pay. Therefore, it's an easy problem to find the day which will maximize the total income from congratulatory money. However, JongMan is too busy, so he passed this problem to his wedding consultant. You are going to help the consultant to find the maximum income.</p>
+<p>Each wedding guest's congratulatory money is determined with the following rules:</p>
+<ul>
+<li>Each guest will donate 0.1% of his yearly salary for the congratulatory money.</li>
+<li>All people work from birth until retirement, and everybody retires at the same age, which is fixed. </li>
+<li>Before retirement, one's salary changes with a linear amount every year.</li>
+<li>From the year of retirement, one will receive pension; the annual amount of pension will equal the average of last 5 year's annual salary.</li>
+</ul>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains one integer C, the number of test cases. (1 &lt;= C &lt;= 50)<br/>
+T cases follow. For each test cases, the first line consists of two integers N (1 &lt;= N &lt;= 1,000), R (2 &lt;= R &lt;= 1,000,000), the number of wedding guests and the retirement age. And the following N lines each contain 3 integers Ai, Si, Di. Ai (1 &lt;= Ai &lt;= 1,000,000) is the current age of the guest i, and Si (0 &lt;= Si &lt;= 1,000,000) is the current income of the guest. Di (-100,000 &lt;= Di &lt;= 100,000) will be the annual salary change rate of the guest.</p>
+<p>For the purpose of this problem, let's assume that everybody lives forever. You can also assume that the given data will have nobody receiving a negative salary during his career.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each case, print the maximum congratulatory money JongMan can get, as a single floating point number rounded to the nearest 0.001. All output numbers must have three digits after the decimal point.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2 
+2 70
+20 100 1
+60 1000 -100
+2 51
+15 100 10
+49 100000 -100 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1.100
+100.550</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

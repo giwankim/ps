@@ -1,0 +1,92 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/TRIANGLE">TRIANGLE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=TRIANGLE"><b>33</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/TRIANGLE/"><b>2</b> (<b>6</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>There are two triangles in 3D space. Write a program that determines the shape of the intersection of the two triangles. The answer should be one of the followings: no intersection (empty), point, segment, or others.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test cases C. Each test case consists of two lines, each containing the coordinates of a triangle in the following order: (x<sub>1</sub>, y<sub>1</sub>, z<sub>1</sub>), (x<sub>2</sub>, y<sub>2</sub>, z<sub>2</sub>), (x<sub>3</sub>, y<sub>3</sub>, z<sub>3</sub>) All coordinates are integers with absolute value equal to or less than 1000.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print one line for each test case. If the two triangles are disjoint, print <code>EMPTY</code>. If two triangles intersect at a point, print <code>POINT</code>. If the intersection is a line segment, print <code>SEGMENT</code>. Otherwise, print <code>OTHERS</code>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+5 5 0 15 5 0 10 10 0
+10 10 0 15 15 0 15 5 0
+5 5 0 15 5 0 10 10 0
+10 10 0 15 15 0 5 15 0
+5 5 0 15 5 0 10 10 0
+11 9 0 16 14 0 6 13 0
+17 14 16 68 52 51 38 30 29
+56 42 47 41 25 60 89 62 88</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>SEGMENT
+POINT
+OTHERS
+EMPTY</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

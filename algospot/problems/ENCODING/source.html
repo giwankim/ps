@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ENCODING">ENCODING</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ENCODING"><b>522</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ENCODING/"><b>162</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Greater%20New%20York%20Regional%202007">Greater New York Regional 2007</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Chip and Dale have devised an encryption method to hide their (written) text messages. They first agree secretly on two numbers that will be used as the number of rows (<span class="mathjax-preview">R</span><script type="math/tex">R</script>) and columns (<span class="mathjax-preview">C</span><script type="math/tex">C</script>) in a matrix. The sender encodes an intermediate format using the following rules:</p>
+<ol>
+<li>The text is formed with uppercase letters [<code>A</code>-<code>Z</code>] and space.</li>
+<li>Each text character will be represented by decimal values as follows:
+      space = 0, <code>A</code> = 1, <code>B</code> = 2, <code>C</code> = 3, ..., <code>Y</code> = 25, <code>Z</code> = 26</li>
+</ol>
+<p>The sender enters the 5 digit binary representation of the characters’ values in a spiral pattern along the matrix as shown below. The matrix is padded out with zeroes (0) to fill the matrix completely. For example, if the text to encode is: "<code>ACM</code>" and <span class="mathjax-preview">R</span><script type="math/tex">R</script>=4 and <span class="mathjax-preview">C</span><script type="math/tex">C</script>=4, the matrix would be filled in as follows:</p>
+<p><img alt="judge-attachments/2bee8fe34d83e658ae889403e67cd663/ctemp.jpg" src="http://algospot.com/media/judge-attachments/2bee8fe34d83e658ae889403e67cd663/ctemp.jpg"/></p>
+<p>The bits in the matrix are then concatenated together in row major order and sent to the receiver. The example above would be encoded as: <code>0000110100101100</code></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of input contains a single integer <span class="mathjax-preview">N\,(1 \le N \le 1000)</span><script type="math/tex">N\,(1 \le N \le 1000)</script> which is the number of datasets that follow.</p>
+<p>Each dataset consists of a single line of input containing <span class="mathjax-preview">R\,(1 \le R\le 21)</span><script type="math/tex">R\,(1 \le R\le 21)</script>, a space, <span class="mathjax-preview">C\,(1 \le C \le 21)</span><script type="math/tex">C\,(1 \le C \le 21)</script>,<br/>
+a space, and a text string consisting of uppercase letters [<code>A</code>-<code>Z</code>] and space. The length of the text string is guaranteed to be <span class="mathjax-preview">\le (R\times C)/5</span><script type="math/tex">\le (R\times C)/5</script>.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each dataset, you should generate one line of output with the following values: The dataset number as a decimal integer (start counting at one), a space, and a string of binary digits <span class="mathjax-preview">(R \times C)</span><script type="math/tex">(R \times C)</script> long describing the encoded text. The binary string represents the values used to fill in the matrix in row-major order. You may have to fill out the matrix with zeroes (<code>0</code>) to complete the matrix.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+4 4 ACM
+5 2 HI
+2 6 HI
+5 5 HI HO</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 0000110100101100
+2 0110000010
+3 010000001001
+4 0100001000011010110000010</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

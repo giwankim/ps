@@ -1,0 +1,113 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BUS">BUS</a></li>
+<li class="timelimit"><b>20000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BUS"><b>118</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BUS/"><b>51</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/36">kcm1700</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9C%A0%EB%9F%89">네트워크유량</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The 2024 UCPC summer contest is finally over! The day after the contest, participants will join an excursion to Kyungbok palace to blow off the steam of the contest. Everyone is looking forward to it, and the organizing committee arranged everything for the trip.</p>
+<p>However one small problem remains; the transportation. The committee plans to rent two buses to take participants to the palace and back - a Tayo bus, and a Tobot bus. And each participant has a different preference on which bus to ride. If the <span class="mathjax-preview">i</span><script type="math/tex">i</script>th participant takes the Tayo bus, (s)he will get a satisfaction value of <span class="mathjax-preview">A[i]</span><script type="math/tex">A[i]</script>. Taking the Tobot bus instead will give him(her) a satisfaction value of <span class="mathjax-preview">B[i]</span><script type="math/tex">B[i]</script>. (Each participant can take only one bus.) The total satisfaction between all participants is calculated by the sum of individual satisfaction values. </p>
+<p>Okay, this sounds like an easy problem - everyone can take the bus they prefer(each bus is big enough for all participants)! However, the problem is complicated by the fact people's satisfaction <em>decreases</em> when two friends take different buses. If <span class="mathjax-preview">i</span><script type="math/tex">i</script>th participant and <span class="mathjax-preview">j</span><script type="math/tex">j</script>th participant take different buses, the total satisfaction will decrease by <span class="mathjax-preview">H[i,j]</span><script type="math/tex">H[i,j]</script>! However, if either <span class="mathjax-preview">i</span><script type="math/tex">i</script> or <span class="mathjax-preview">j</span><script type="math/tex">j</script> doesn't go to the excursion at all, there will be no satisfaction decreases.</p>
+<p>The organizing committee wants to find a plan that maximizes the overall satisfaction. To do this, they can assign each participant to one of the buses, or exclude him(her) from the excursion at all. </p>
+<p>Write a program that calculates the maximum satisfaction.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of multiple test cases. The first line of the input will contain the number of test cases <span class="mathjax-preview">T</span><script type="math/tex">T</script>.</p>
+<p>Each test case begins with a line containing <span class="mathjax-preview">N</span><script type="math/tex">N</script> (<span class="mathjax-preview">2 \le N \le 200</span><script type="math/tex">2 \le N \le 200</script>), the number of participants. Each of the next <span class="mathjax-preview">N</span><script type="math/tex">N</script> lines will contain two integers, <span class="mathjax-preview">A[i]</span><script type="math/tex">A[i]</script> and <span class="mathjax-preview">B[i]</span><script type="math/tex">B[i]</script>. The next <span class="mathjax-preview">N</span><script type="math/tex">N</script> lines will give you the friendship information between the participants. Each line will contain <span class="mathjax-preview">N</span><script type="math/tex">N</script> integers, and the <span class="mathjax-preview">j</span><script type="math/tex">j</script>th number of <span class="mathjax-preview">i</span><script type="math/tex">i</script>th line will be <span class="mathjax-preview">H[i,j]</span><script type="math/tex">H[i,j]</script>. </p>
+<p>You can assume the following:</p>
+<ul>
+<li>All preferences (<span class="mathjax-preview">A[i]</span><script type="math/tex">A[i]</script>, <span class="mathjax-preview">B[i]</span><script type="math/tex">B[i]</script>, <span class="mathjax-preview">H[i,j]</span><script type="math/tex">H[i,j]</script>) are nonnegative integers less than or equal to 1000.</li>
+<li><span class="mathjax-preview">H[i,j] = H[j,i]</span><script type="math/tex">H[i,j] = H[j,i]</script> for all <span class="mathjax-preview">i</span><script type="math/tex">i</script> and <span class="mathjax-preview">j</span><script type="math/tex">j</script>.</li>
+<li><span class="mathjax-preview">H[i,j] = 0</span><script type="math/tex">H[i,j] = 0</script> when <span class="mathjax-preview">i=j</span><script type="math/tex">i=j</script>.</li>
+</ul>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print a single line with the maximum satisfaction achievable.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+2
+1 1
+1 1
+0 0
+0 0
+3
+1 1
+5 2
+4 7
+0 9 2
+9 0 1
+2 1 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+11</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>The optimal solution for the second test case:</p>
+<ul>
+<li>Participant 1 doesn't go to the excursion.</li>
+<li>Participant 2 takes the Tayo bus.</li>
+<li>Participant 3 takes the Tobot bus.</li>
+</ul>
+<p>The individual satisfaction from participant 2 and 3 are 5 and 7, respectively. Also, since the two participants are taking different buses, the total satisfaction is decreased by <span class="mathjax-preview">H[2,3] = 1</span><script type="math/tex">H[2,3] = 1</script>.</p>
+<p>Description 작성: <a class="user" href="/user/username/JongMan" title="JongMan">JongMan</a></p>
+</p>
+</section>

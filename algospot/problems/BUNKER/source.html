@@ -1,0 +1,155 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BUNKER">BUNKER</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BUNKER"><b>99</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BUNKER/"><b>45</b> (<b>45</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/319">꿀호떡</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>'BoxeR' Lim, Yo-Hwan(임요환) and 'Yellow' Hong, Jin-Ho(홍진호) will face each other at the StarCraft 6 Championship in 2022!</p>
+<p>StarCraft is a real-time strategy video game series. The series consists of many gameplay modes, but usually two players compete to destroy each other. Players choose one of many strategies to play each match, for example, "Bunker Rush" or "Hidden Barracks". Sometimes, the result of a match is trivially determined based on players' strategies like a rock-scissors-paper game. So in professional tournaments, it is usual to play more than a single match to declare who is victorious.</p>
+<p>BoxeR has a peculiar style of choosing his game plans: he chooses a sequence of strategies, and repeats them over multiple games.</p>
+<table><thead>
+<tr>
+<th>Match No.</th>
+<th>Strategy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Game 1</td>
+<td>Bunker Rush</td>
+</tr>
+<tr>
+<td>Game 2</td>
+<td>Bunker Rush</td>
+</tr>
+<tr>
+<td>Game 3</td>
+<td>Bunker Rush</td>
+</tr>
+</tbody></table>
+<p>For example, the above  table shows how BoxeR chose to use one strategy (the Bunker Rush) three times in a row (in a best-of-five series). In this case, the sequence was of length 1 and was repeated three times. </p>
+<table><thead>
+<tr>
+<th>Match No.</th>
+<th>Strategy</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Game 1</td>
+<td>Marine Rush</td>
+</tr>
+<tr>
+<td>Game 2</td>
+<td>Bunker Rush</td>
+</tr>
+<tr>
+<td>Game 3</td>
+<td>Double Command Center</td>
+</tr>
+<tr>
+<td>Game 4</td>
+<td>Bunker Rush</td>
+</tr>
+<tr>
+<td>Game 5</td>
+<td>Double Command Center</td>
+</tr>
+<tr>
+<td>Game 6</td>
+<td>Dropship Rush</td>
+</tr>
+<tr>
+<td>Game 7</td>
+<td>Dropship Rush</td>
+</tr>
+</tbody></table>
+<p>The above table shows another example. In this case, BoxeR played "Marine Rush" once, and he repeated a sequence of length 2 twice - "Bunker Rush" and "Double Command Center". Finally, he repeated a sequence of length 1 twice, which was "Dropship Rush".</p>
+<p>An average player would notice if his opponent repeats the same sequence of strategies more than two times, and will not get fooled the third time. However, Yellow has had bad games against BoxeR before, and now Yellow is determined to be not fooled again.</p>
+<p>As such, Yellow is interested in finding all sequences of strategies that BoxeR used three times consecutively in the past. You are to write a program that tells Yellow how many such sequences exist as well as the length of the longest such sequence, given a complete log of strategies used by BoxeR in his career.</p>
+<p>Please help Yellow prepare for the championship series! </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line contains the number of test cases, T.</p>
+<p>For each test case, a single line contains a string that describes the complete log of the strategies used by BoxeR. Each character is an English letter (either lower-case or upper-case) that represents a single-game strategy. The total number of games of BoxeR is no more than 10,000 for each test case.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, output two integers in a single line, separated by a single white space: the number of all sequences of strategies that BoxeR repeatedly used three times, and the length of the longest such sequence.</p>
+<p>Note that if the same sequence of strategies was repeatedly used at different times, then it must be counted multiple times, once per its starting index (see the sample test case for clarification). </p>
+<p>If no sequence of strategies was repeated three times or more, output two '-2's, separated by a single space (quotes for clarification only). </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+aabcbcbcbcbcbcbcbc
+AaABABAAAB
+abcdefabcdef</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>16 4
+1 1
+-2 -2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>Clarification for the sample input and output:</p>
+<ol>
+<li>There are four different sequences of strategies that BoxeR repeated three times. One is 'bc' that starts and ends at the indices [3, 8], [5, 10], [7, 12], [9, 14], [11, 16], and [13, 18].  Another is 'cb' that starts and ends at the indices [4, 9], [6, 11], [8, 13], [10, 15], and [12, 17], and 'bcbc' that starts and ends at the indices [3, 14], [5, 16], and [7, 18]. The other is 'cbcb' that starts and ends at the indices [4, 15] and [6, 17]. Hence, the total number of sequences of the interest is 16 and the length of the longest one is 4 due to 'bcbc'.</li>
+<li>The only sequence that was repeated three times is 'A' at index 7. Hence the correct answer is '1 1'.</li>
+<li>In this case no sequence was repeated three times. </li>
+</ol>
+</p>
+</section>

@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "PARTNER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:02:59.085336Z",
+    "http_status": 200,
+    "semantic_html_sha256": "6e2a8d343b18805f1f3ac9cad84bee3938dcd81a8630e83368891cc048ec85e5"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/PARTNER",
+  "statistics": {
+    "acceptance_percent": 40,
+    "accepted": 54,
+    "submissions": 134
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "Broken Partnership"
+}

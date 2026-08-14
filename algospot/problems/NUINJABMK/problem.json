@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/1c1fce4d0d1b426e-B1.png",
+      "sha256": "db23a39dd971a00c777570fdf71f2e454402562d5db5f48ae4a461fb9b5cd250",
+      "source_url": "http://algospot.com/media/judge-attachments/aa13bfbb5ac0bfb58bddb0f1da4f53f6/B1.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "NUINJABMK",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 25000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:59:11.811107Z",
+    "http_status": 200,
+    "semantic_html_sha256": "afc83d6cf5c370a02e3462553418dbe92da6aa3f4fa391c9f1956992a64937b0"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/NUINJABMK",
+  "statistics": {
+    "acceptance_percent": 5,
+    "accepted": 6,
+    "submissions": 120
+  },
+  "tags": [],
+  "title": "늰자 김병만"
+}

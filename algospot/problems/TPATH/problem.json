@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/f1efd5a2e3b8714f-interface.php.png",
+      "sha256": "b21c630ae08b37c2d3682cd044755d4f4e4a27b2d7f0c6351253d2d8300da66d",
+      "source_url": "http://algospot.com/media/judge-attachments/0644ef7d68a0223bf7661c4c80fc9022/interface.php.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "TPATH",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 4000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:25:03.637820Z",
+    "http_status": 200,
+    "semantic_html_sha256": "0bb83c196059ba0db7dfe0277a2bfeeb9bae27080f153735332592e7af074111"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/TPATH",
+  "statistics": {
+    "acceptance_percent": 33,
+    "accepted": 829,
+    "submissions": 2482
+  },
+  "tags": [
+    "그래프"
+  ],
+  "title": "여행 경로 정하기"
+}

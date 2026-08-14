@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/OLYMPICS">OLYMPICS</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=OLYMPICS"><b>114</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/OLYMPICS/"><b>11</b> (<b>9</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제1회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>4년마다 열리는 올림픽에서는 순위에 따라 선수들에게 금, 은, 동메달을 수여한다. 따라서 선수들의 국적을 바탕으로 각 국가가 획득한 메달의 수를 셀 수 있다. 공식적으로는 이를 통해 각 국가의 순위를 가리는 방법이 없지만, 본질적으로 순위를 매기는 편이 더 재미있고 열기를 고취시킬 수 있기 때문에 순위를 매기는 방법들이 고안되었다. 이 문제에서는 널리 쓰이는 두 가지 방법을 생각해 본다.</p>
+<ul>
+<li>국가 <span class="mathjax-preview">x</span><script type="math/tex">x</script>의 등수는 (국가 <span class="mathjax-preview">x</span><script type="math/tex">x</script>보다 좋은 성적을 거둔 국가의 수 + 1) 로 정의한다.</li>
+<li>방법 1. 메달의 수를 종류에 관계 없이 세어 많은 국가가 적은 국가보다 좋은 성적이라 정의한다.</li>
+<li>방법 2. 금메달이 많은 국가가 적은 국가보다 좋은 성적이라 정의한다. 단, 같을 경우는 은메달이 많은 국가를 좋은 성적으로 정의하며, 은메달도 같은 경우는 동메달이 많은 국가를 좋은 성적으로 정의한다.</li>
+</ul>
+<p>N개의 국가가 경쟁 중이며, 앞으로 <span class="mathjax-preview">K</span><script type="math/tex">K</script>개의 경기가 남았다. 앞선 경기는 반드시 그렇지는 않았지만 남은 경기 모두는 금, 은, 동메달이 서로 다른 국가에 하나씩 주어지는 종목이다. 지금까지 그들이 획득한 메달의 수가 주어질 때, 앞으로 남은 <span class="mathjax-preview">K</span><script type="math/tex">K</script> 경기의 결과에 따른 최선의 등수를 두 방법 각각에 대해 구하는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script> 개의 테스트 케이스로 구성된다. 입력의 첫 행에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script> 가 주어진다.</p>
+<p>각 테스트 케이스의 첫 행에는 두 정수 <span class="mathjax-preview">N\,(3 \le N \le 100)</span><script type="math/tex">N\,(3 \le N \le 100)</script>, <span class="mathjax-preview">K\,(0 \le K \le 1,000)</span><script type="math/tex">K\,(0 \le K \le 1,000)</script> 가 공백으로 구분되어 주어진다. 다음 <span class="mathjax-preview">N</span><script type="math/tex">N</script> 행에 걸쳐 한 행에 하나씩 각 국가가 획득한 금, 은, 동메달의 수가 공백으로 구분되어 주어진다.<br/>
+각 메달의 수는 <span class="mathjax-preview">1,000</span><script type="math/tex">1,000</script>을 넘지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 두 행에 나누어 입력에서 주어진 순서에 따라 각 국가의 방법 1에 따른 최선의 등수를 공백으로 구분하여 출력하고, 다음 행에 마찬가지로 방법 2에 따른 최선의 등수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 1
+1 1 1
+0 1 0
+0 0 1
+0 0 1
+4 1
+0 0 0
+1 0 0
+0 1 0
+0 0 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 2 2 2
+1 2 2 2
+3 1 1 1
+1 1 1 1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>첫 번째 테스트 케이스: 첫 번째 국가가 남은 경기에서 메달을 획득하지 못하더라도 다른 국가가 어떤 방법으로도 더 잘 할 수 없다.</li>
+<li>두 번째 테스트 케이스: 방법 1에 의하면, 첫 번째 국가를 제외한 모든 국가는 적어도 공동 1위가 될 수 있다. 그러나 첫 번째 국가의 경우 세 국가 중 적어도 둘은 메달을 획득하므로 첫 번째 국가보다 앞설 수밖에 없다. 방법 2에 의하면 어느 국가도 자신이 금메달을 획득하고 나머지 국가들이 적당히 은, 동메달을 나누어 가지면 1위가 될 수 있다.</li>
+</ul>
+</p>
+</section>

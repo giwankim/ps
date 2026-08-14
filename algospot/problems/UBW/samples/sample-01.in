@@ -1,0 +1,17 @@
+2
+11
+def hello
+ loop 5
+  world
+def world
+ loop 2
+  loop 4
+   Blade
+def main
+ loop 3
+  hello
+  world
+3
+def main
+ loop 5
+ Blade

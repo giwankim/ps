@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ITES">ITES</a></li>
+<li class="timelimit"><b>15000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ITES"><b>4116</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ITES/"><b>1774</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0">자료구조</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>수환이는 외계에서 날아오는 전파를 연구하는 범세계 대규모 프로젝트, <a href="http://setiathome.berkeley.edu/">ITES@home</a>에 참가하고 있습니다. 외계에서 날아오는 전파는 전처리를 거쳐 각 숫자가 [1,10000]  범위 안에 들어가는 자연수 수열로 주어지는데, 이 전파가 과연 단순한 노이즈인지 아니면 의미 있는 패턴을 가지고 있는 것인지를 파악하고 싶습니다. 수환이는 전파의 부분 수열 중에 합이 K인 것이 유독 많다는 것을 눈치챘습니다. 부분 수열이란 연속된 수열의 일부를 말합니다. 예를 들어 수열 {1,4,2,1,4,3,1,6} 에서 합이 7 인 부분 수열은 모두 5개 있습니다. {1,4,2} , {4,2,1} , {2,1,4}, {4,3}, {1,6}  이 부분 수열들은 서로 겹쳐도 된다는 데 유의합시다. </p>
+<p>K가 외계인에게 의미 있는 숫자일까요? 수환이의 가설을 확인하기 위해, 길이 N인 신호 기록이 주어질 때 합이 K인 부분 수열이 몇 개나 있는지 계산하는 프로그램을 작성하세요.</p>
+<h3 id="toc_0">입력 생성</h3>
+<p>입력의 크기가 큰 관계로, 이 문제에서는 신호 기록을 입력받는 대신 다음과 같은 식을 통해 프로그램 내에서 직접 생성합니다. </p>
+<ul>
+<li>A[0] = 1983 </li>
+<li>A[i] = (A[i-1] * 214013 + 2531011) % 2<sup>32</sup> </li>
+</ul>
+<p>이 때 i(1 &lt;= i &lt;= N)번째 입력 신호는 A[i-1] % 10000 + 1입니다. 문제의 해법은 입력을 생성하는 방식과는 아무 상관이 없습니다. 이 규칙에 따르면 첫 5개의 신호는 각각 1984, 8791, 4770, 7665, 3188입니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력 파일의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 20)가 주어지고, 그 후 C 줄에 각 2개의 정수로 K(1 &lt;= K &lt;= 5,000,000) 과 N(1 &lt;= N &lt;= 50,000,000) 이 주어집니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 첫 N 개의 신호 중 합이 K 인 구간의 수를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+8791 20
+5265 5000
+3578452 5000000</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+4
+1049</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

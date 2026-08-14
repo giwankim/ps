@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/7d675deac21fc85b-jumpgame.png",
+      "sha256": "d1329abef74cca5a4a61178cb0c2f55b17d672c748f7be536a13076868730e1e",
+      "source_url": "http://algospot.com/media/judge-attachments/3a3560eb4194bc927e325514b88468df/jumpgame.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "JUMPGAME",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:40:12.277074Z",
+    "http_status": 200,
+    "semantic_html_sha256": "0853addc85917b2facdeabb3c25ed88683af0ec1e204798826221147c7e53745"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/JUMPGAME",
+  "statistics": {
+    "acceptance_percent": 38,
+    "accepted": 5793,
+    "submissions": 15050
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "외발 뛰기"
+}

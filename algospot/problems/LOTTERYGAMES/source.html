@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LOTTERYGAMES">LOTTERYGAMES</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LOTTERYGAMES"><b>86</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LOTTERYGAMES/"><b>27</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/130">ltdtl</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제1회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%88%98%ED%95%99">수학</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>You live in a lively town named Lottery Vegas where lots of different kinds of lottery games are available for you to play. Next to your house, you found an interesting lottery game that is called Double ticket winner ainu7 for the win, named after a really famous Miku-admirer.</p>
+<p>The ainu7 lottery game consists of P different lottery tickets. The i-th ticket contains numbers between 1 and N_i, inclusive, and you are to pick M_i numbers out of them. The ainu7 lottery game seller also picks M_i numbers while you are picking. For each lottery ticket, you win if you and the seller have at least K_i numbers in common with the seller. You can assume that the seller picks the numbers at random, regardless of what you pick.</p>
+<p>You are curious which of the P tickets gives you the highest winning odds. If there are multiple such tickets with the same highest winning odds, you want to know them all.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases. The number of test cases T is given in the first line of the input.</p>
+<p>The first line of each test case contains a single integer P (2 &lt;= P &lt;= 100), the number of lottery tickets.<br/>
+Following P lines contains three numbers each: N_i, M_i, and K_i where 3 &lt;= Ni &lt;= 50, 1 &lt;= Mi &lt;= Ni, and 1 &lt;= Ki &lt;= Mi.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, you must output a single line of integer(s). It must contain the lottery game number(s) with highest winning odds. If there are multiple, you must sort them, and the game number is 1-based.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4
+3 1 1
+8 2 1
+8 4 2
+8 3 1
+7
+8 7 1
+8 7 2
+8 7 3
+8 7 4
+8 7 5
+8 7 6
+8 7 7</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+1 2 3 4 5 6</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

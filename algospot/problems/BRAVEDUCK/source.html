@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BRAVEDUCK">BRAVEDUCK</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BRAVEDUCK"><b>2744</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BRAVEDUCK/"><b>596</b> (<b>21</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/1061">Pekaz</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>어느 더운 여름날, '모두의 오리'라는 오리 농장에서 복날을 맞이해 농장 주인이 1번 오리부터 차례대로 트럭에 집어넣고 있었다. 그러나 용감한 오리 Pekaz가 농장으로부터 탈출하고 말았다 (후일 이 오리는 0번째 오리라고 알려졌다).</p>
+<p>Pekaz가 농장으로부터 완전히 벗어나기 위해서는 커다란 강을 건너야 했다. 불행하게도 최근 장마로 인해 물살이 너무 거세져 제대로 헤엄을 칠 수 없기에, 그 대신 강 위에 설치된 돌다리를 이용해 건너기로 했다.</p>
+<p>여기서 강은 2차원 평면으로, 돌다리를 구성하는 각 돌은 그 위의 점으로 보기로 하자. 우리의 Pekaz는 돌다리가 아닌 강 위의 특정 지점에서 출발해 목표 지점까지 이동하려고 한다. </p>
+<p>Pekaz는 언제건 자신이 위치한 곳에서 직선거리가 J 이하인 곳으로 뛰어서 이동할 수 있다. 이 J를 최대 점프력이라 하자. 뛰어오르는 횟수에는 아무런 제약이 없지만, 만약 돌다리가 아닌 곳으로 뛸 경우 거센 물살에 휩쓸려 내려가 버리고 말 것이다.</p>
+<p>과연 우리의 Pekaz는 탈출에 성공할 수 있을까? 아니면 안정적인 맛의 오리고기가 되고 말 것인가? 돌다리의 구성과 점프력이 주어질 때, Pekaz의 탈출 계획이 성공할 수 있는지 알아내는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T 개의 테스트 케이스로 이뤄지며, 입력의 첫 줄에는 T가 주어진다.</p>
+<p>각 테스트 케이스의 첫 번째 줄에는 Pekaz의 최대 점프력인 정수 J (1 &lt;= J &lt;= 1000)가 주어진다. 두 번째 줄과 세 번째 줄에는 각각 Pekaz의 시작 지점의 좌표와 도착 지점의 좌표가 주어지고, 네 번째 줄에는 돌다리를 구성하는 돌의 개수 N (0 &lt; N &lt;= 100)이 주어진다. 그다음 줄부터 N개의 줄에 걸쳐 각 돌의 좌표가 주어진다. 모든 좌표는 공백으로 구분된 두 정수 x, y (-1000 &lt;= x, y &lt;= 1000) 꼴로 주어지며 시작 지점, 도착 지점 및 각 돌의 좌표들이 동일한 경우는 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 하나씩 탈출이 가능하면 "<code>YES</code>" , 불가능하면 "<code>NO</code>" 를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+2
+1 1
+4 1
+3
+4 2
+1 2
+3 2
+3
+1 1
+10 10
+5
+6 7
+4 1
+9 7
+6 4
+4 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+NO</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

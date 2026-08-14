@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MEETING">MEETING</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MEETING"><b>4473</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MEETING/"><b>1284</b> (<b>28</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%201%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 1주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A0%95%EB%A0%AC">정렬</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>유명 단체 미팅 주선회사 ACM(Ansp Couple Manager)이 낮은 성공률로 인해 부도 위기에 몰려있다! ACM의 사장인 LIBe는 유명 기밀 정보 수집가 Kogle에게 남아있는 ACM 자산의 상당분을 지급하고, 한창 잘나가는 astein이 사장으로 있는 ICPC(Intensive Complete Perfect Couple)의 정보를 빼내 오라고 지시하였다. 하지만 ICPC의 보안은 치밀했고, Kogle은 모든 정보를 완전히 빼내 오는데 실패하였다. 하지만 ICPC가 잘 나갈 수밖에 없는 원인을 알아내게 되었다.</p>
+<p>보고 있으면 무언가 떠오르는 회사의 이름답게, ICPC는 회원들의 수치를 정수로 모델링 한 다음, <em>짝을 짓는 남녀간의 수치의 차이의 합을 최소화</em> 하는 알고리즘을 사용하고 있었다. </p>
+<p>LIBe는 실제 커플 성사율이 90%를 육박하는 ICPC사의 알고리즘을 당장 사용하고자 하였지만, Kogle이 그 알고리즘까지는 알아내지 못했다. 고민 끝에 LIBe는 프로그래밍 경시대회에서 두각을 나타내고 있는 당신에게 풍선을 대가로 남녀간의 수치의 차이의 합을 최소화하는 프로그램을 구현해 달라고 요청하였다. LIBe가 요청한 프로그램을 구현하여 (더군다나 자기 자신도 안생겨서 슬퍼하는) LIBe에게 조금이나 위안을 주자.</p>
+<p>남성과 여성의 수는 동일하며, 동성간이 짝을 짓는 경우는 고려하지 않으며, 모든 사람은 반드시 짝을 지어야 하고, 한 사람이 두 명과 짝을 짓는 경우는 없다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 번째 줄에는 테스트 케이스의 개수 T(1 &lt;= T &lt;= 50)가 주어진다.<br/>
+테스트 케이스의 첫 번째 줄에는 ACM에서 주최하는 단체 미팅에 등록한 남녀 회원의 수 N(1 &lt;= N &lt;= 10,000)이 주어진다.</p>
+<p>테스트 케이스의 두 번째 줄에는 남성 회원의 수치를 나타내는 N개의 정수가 주어지고,<br/>
+세 번째 줄에는 여성 회원의 수치를 나타내는 N개의 정수가 주어진다.</p>
+<p>이 수치는 절대값이 1,000을 넘지 않는 정수이며, 각 수치 사이는 공백으로 구분된다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해서 짝을 짓는 남녀간의 수치의 차이의 합의 최소값을 한 줄에 하나씩 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4
+1 2 3 4
+8 6 7 5
+3
+-1 0 1
+-1 -1 -1
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>16
+3
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

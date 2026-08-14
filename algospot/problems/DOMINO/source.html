@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DOMINO">DOMINO</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DOMINO"><b>321</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DOMINO/"><b>189</b> (<b>58</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=COCI%202009/2010%20Contest%20%231">COCI 2009/2010 Contest #1</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Dominoes are gaming pieces used in numerous tile games. Each doimno piece contains two marks. Each mark consists of a number of spots (possibly zero).<br/>
+The number of spots depends on the set size. Each mark in a size N domino set can contain between 0 and N spots, inclusive. Two tiles are considered identical if their marks have the same number of spots, irregardles of reading order. For example tile with 2 and 8 spot marks is identical to the tile having 8 and 2 spot marks. A proper domino set contains no duplicate tiles. A complete set of size N contains all posible tiles with N or less spots and no duplicate tiles. For example, the complete set of size 2 contains 6 tiles:</p>
+<p><img alt="judge-attachments/f0e1a9a5c74aeca51801208a34aec0ab/pic01.jpg" src="http://algospot.com/media/judge-attachments/f0e1a9a5c74aeca51801208a34aec0ab/pic01.jpg"/></p>
+<p>Write a program that will determine the total number of spots on all tiles of a complete size N set.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first and only line of input contains a single integer, N (1 ≤ N ≤ 1000), the size of the complete set.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>The first and only line of output should contain a single integer, total number of spots in a complete size N set.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>Example 1
+2
+
+Example 2
+3
+
+Example 3
+15</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Example 1
+12
+
+Example 2
+30
+
+Example 3
+2040</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

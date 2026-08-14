@@ -1,0 +1,116 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ORIVIRUS">ORIVIRUS</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ORIVIRUS"><b>557</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ORIVIRUS/"><b>204</b> (<b>36</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/319">꿀호떡</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>KAIST에 무시무시한 전염병 "오리 독감"이 돌고 있다!</p>
+<p>사실 "오리 독감"은 바이러스를 통해 전염되는데, KAIST의 대학원생들의 혼신의 노력 끝에 전염 조건을 밝혀내고야 말았다. 특이하게도, 이 바이러스는 친구 중에 두 명이 감염되면 자신도 무조건 감염된다고 한다.</p>
+<p>학교 당국은 전염병이 더 퍼지는 것을 막기 위해 대책을 세우기로 하였다. 그러나 정확히 무엇을 대비해야 할 지 몰랐기 때문에, 여러 가지 시나리오를 세우고 각각 대비하기로 하였다.</p>
+<p>학교에서 준비하고 있는 시나리오란, "어떤 학생 A와 B가 오리 독감의 최초 발병자라고 가정할 때, 전염병에 걸렸을 것으로 예상되는 모든 학생을 격리시키는 것"이다. 사실 학교는 모든 학생들을 철저히 감시하고 있기 때문에, 모든 KAIST 학생들의 친구 관계를 알고 있다(!). 따라서 이론적으로는 각 시나리오에 대해서 최종적으로 어떤 사람들이 전염병에 걸릴지 완벽히 예측할 수 있다. 유일한 문제는, 직원들이 손으로 계산하기엔 KAIST의 학생 수가 너무 많다는 것이다. </p>
+<p>전교 학생들의 친구 관계와 가능한 시나리오들이 주어질 때, 각 시나리오마다 전염병 환자가 몇 명 발생하는지를 예측하는 프로그램을 작성해서 직원들을 도와주도록 하자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.</p>
+<p>각 테스트 케이스에 대해, KAIST 학생들의 수 <span class="mathjax-preview">N(1 \le N \le 100)</span><script type="math/tex">N(1 \le N \le 100)</script>이 주어진다. 다음 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 줄에는 각각 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 0 또는 1이 주어진다. 이는 각 학생들의 친구 관계 <span class="mathjax-preview">F(i,j)</span><script type="math/tex">F(i,j)</script>를 나타내는데, <span class="mathjax-preview">F(i,j)</span><script type="math/tex">F(i,j)</script>가 1이면 <span class="mathjax-preview">i</span><script type="math/tex">i</script>와 <span class="mathjax-preview">j</span><script type="math/tex">j</script>는 친구이고, 0이면 친구가 아니다. <span class="mathjax-preview">F(i,i)</span><script type="math/tex">F(i,i)</script>는 항상 0이고, <span class="mathjax-preview">F(i,j)</span><script type="math/tex">F(i,j)</script>는 항상 <span class="mathjax-preview">F(j,i)</span><script type="math/tex">F(j,i)</script>와 같다.</p>
+<p>다음 줄에는 시나리오의 수 <span class="mathjax-preview">M(1 \le M \le 100)</span><script type="math/tex">M(1 \le M \le 100)</script>이 주어진다. 다음 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 줄에는 각각 두 개의 숫자가 주어진다. 이 숫자는 그 시나리오에서의 최초 발병자를 나타낸다. 각 학생들의 번호는 <span class="mathjax-preview">1</span><script type="math/tex">1</script>번 이상 <span class="mathjax-preview">N</span><script type="math/tex">N</script>번 이하이고, 두 개의 숫자는 서로 같지 않다. 모든 시나리오는 서로 독립적이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 시나리오에서 최종적으로 전염병에 걸리는 환자의 수를 나타내는 정수를 공백을 사이에 두고 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+0 1 1
+1 0 1
+1 1 0
+2
+1 2
+2 3
+8
+0 1 0 0 0 1 0 0
+1 0 1 0 0 1 1 0
+0 1 0 1 0 0 0 0 
+0 0 1 0 1 0 1 1
+0 0 0 1 0 0 0 1
+1 1 0 0 0 0 0 0
+0 1 0 1 0 0 0 0
+0 0 0 1 1 0 0 0
+3
+1 3
+1 8
+5 8</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3 3
+4 2 3</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>예제 설명(두번째 예제)<br/>
+<img alt="orivirus_example" src="/media/judge-attachments/6130c620bd2cadd1f188384702e2f597/orivirusex.png"/><br/><br/>
+시나리오 1:<br/>
+  1, 3이 감염된 경우 가장 먼저 2가 감염되고, 1과 2에 의해 6이 감염된다.<br/>
+시나리오 2:<br/>
+  1, 8이 감염된 경우 추가 감염자는 존재하지 않는다.<br/>
+시나리오 3:<br/>
+  5, 8이 감염된 경우 4만 감염된다.</p>
+</p>
+</section>

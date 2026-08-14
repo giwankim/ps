@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LUCKYNUM">LUCKYNUM</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LUCKYNUM"><b>260</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LUCKYNUM/"><b>73</b> (<b>28</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/130">ltdtl</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>,
+						
+						<a href="/judge/problem/list/?tag=%EC%88%98%ED%95%99">수학</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Haden is so interested in numbers, especially large natural numbers. He defined 'lucky lucky numbers' as following:</p>
+<p>First, he picks two natural numbers n and k. n can be quite large (up to 200 digits) and k must be between 5 and 8, inclusive.</p>
+<p>Then, he defines the lucky lucky number as a number consisting of k's only and with the same length as that of n. For instance, if n is a three digit number and k is 5, the lucky lucky number is 555. Haden becomes quite bored of this lucky lucky number definition so that he defined 'alternate lucky number'. Any alternate lucky number, given n and k, must satisfy the following two properties:</p>
+<ol>
+<li>the number must be an anagram of n</li>
+<li>the number must be closest to the lucky lucky number of n and k. </li>
+</ol>
+<p>Here, 'closest' means absolute difference between two numbers. Depending on n and k, there can be several such alternate lucky numbers. The best alternate lucky number among them is the largest. Haden wants you to help him find the best alternate lucky number given n and k.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>First line contains the number of test cases T (less than 200). Next T lines contain two integers each, n and k. n is a natural number with no leading zero(s), up to 200 digits. k is one of 5, 6, 7, and 8.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the lucky lucky number, which is an anagram of n. Note that the number should not contain leading zero(s).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+426 5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>624</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/5b13510734f995c1-problems.pdf",
+      "sha256": "0693150f2d11c975ea2ace2e11a9fe60a31b0e36a013c5c8fccfcdf443fb9920",
+      "source_url": "http://algospot.com/static/contest/2011warmup/problems.pdf"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "UNORDSEQ2",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 6000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:27:41.160873Z",
+    "http_status": 200,
+    "semantic_html_sha256": "7d4da6f4175c25a4bec9e9f42e11de51a05535b3005d40bc97a93695770be8ad"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/UNORDSEQ2",
+  "statistics": {
+    "acceptance_percent": 31,
+    "accepted": 38,
+    "submissions": 119
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "Unordered Subsequence 2"
+}

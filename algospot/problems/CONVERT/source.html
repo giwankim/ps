@@ -1,0 +1,121 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CONVERT">CONVERT</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CONVERT"><b>4859</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CONVERT/"><b>2412</b> (<b>49</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Greater%20New%20York%20Regional%202007">Greater New York Regional 2007</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Conversion between the metric and English measurement systems is relatively simple. Often, it<br/>
+involves either multiplying or dividing by a constant. You must write a program that converts between the following units:</p>
+<table><thead>
+<tr>
+<th>Type</th>
+<th>Metric</th>
+<th>English equivalent</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Weight</td>
+<td>1.000 kilogram</td>
+<td>2.2046 pounds</td>
+</tr>
+<tr>
+<td></td>
+<td>0.4536 kilograms</td>
+<td>1.0000 pound</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>1.000 liter</td>
+<td>0.2642 gallons</td>
+</tr>
+<tr>
+<td></td>
+<td>3.7854 liters</td>
+<td>1.000 gallon</td>
+</tr>
+</tbody></table>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of input contains a single integer N, (1 ≤ N ≤ 1000) which is the number of datasets that follow.<br/>
+Each dataset consists of a single line of input containing a floating point (double precision) number, a space and the unit specification for the measurement to be converted. The unit specification is one of kg, lb, l, or g referring to kilograms, pounds, liters and gallons respectively.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each dataset, you should generate one line of output with the following values: The dataset<br/>
+number as a decimal integer (start counting at one), a space, and the appropriately converted value rounded to 4 decimal places, a space and the unit specification for the converted value.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>5
+1 kg
+2 l
+7 lb
+3.5 g
+0 l</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 2.2046 lb
+2 0.5284 g
+3 3.1752 kg
+4 13.2489 l
+5 0.0000 g</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

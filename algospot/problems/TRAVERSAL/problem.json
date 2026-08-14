@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/dab30873d2b1f6eb-traversal.png",
+      "sha256": "a3efdce0f958d61ce5bc0163e4925f59c371a38cfd8891eaccd4a21ad6212739",
+      "source_url": "http://algospot.com/media/judge-attachments/bbdb1ada72f7eb16c9291ed59d4761ff/traversal.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "TRAVERSAL",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:25:54.892513Z",
+    "http_status": 200,
+    "semantic_html_sha256": "bee964d837b0854232d0a6d4ab23ee60627cd0eef521659fb21845b0aad78fb5"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/TRAVERSAL",
+  "statistics": {
+    "acceptance_percent": 57,
+    "accepted": 2053,
+    "submissions": 3576
+  },
+  "tags": [
+    "자료구조",
+    "트리"
+  ],
+  "title": "트리 순회 순서 변경"
+}

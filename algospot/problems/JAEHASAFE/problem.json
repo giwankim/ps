@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/07cd008ef21c1f7b-problems.pdf",
+      "sha256": "14be49ae3dae1a7c6751b83800cff5aba581ddab770d52d7f69649352c2ee9b8",
+      "source_url": "http://algospot.com/static/contest/4th/problems.pdf"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "JAEHASAFE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:36:45.583153Z",
+    "http_status": 200,
+    "semantic_html_sha256": "3b09d4221a75f377760d2c93b584ecd56628c07789775f283abe0f0e0e55682f"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/JAEHASAFE",
+  "statistics": {
+    "acceptance_percent": 31,
+    "accepted": 781,
+    "submissions": 2487
+  },
+  "tags": [
+    "문자열"
+  ],
+  "title": "Jaeha’s Safe"
+}

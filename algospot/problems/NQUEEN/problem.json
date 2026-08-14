@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/5b1574c34f7b9049-nqueen.png",
+      "sha256": "0549facde9ab6ab0297ac171153229a50b6df97a620515bf746ef8995919d3aa",
+      "source_url": "http://algospot.com/media/judge-attachments/bc92d43c2acc9acf45702485b3fb1e9e/nqueen.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "NQUEEN",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:58:02.711065Z",
+    "http_status": 200,
+    "semantic_html_sha256": "ff462f6a4a380f19a2dbc0adc2ffa4f8267e4b5c2e8ab62f202e4d6444102885"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/NQUEEN",
+  "statistics": {
+    "acceptance_percent": 50,
+    "accepted": 1848,
+    "submissions": 3690
+  },
+  "tags": [
+    "조합탐색"
+  ],
+  "title": "N-Queen"
+}

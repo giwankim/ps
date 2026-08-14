@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ESCAPEGEESE">ESCAPEGEESE</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ESCAPEGEESE"><b>518</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ESCAPEGEESE/"><b>134</b> (<b>25</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/5829">etaehyun4</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>KAIST 오리연못에는 각각 <span class="mathjax-preview">0,1,2, \cdots ,N-1</span><script type="math/tex">0,1,2, \cdots ,N-1</script>로 이름이 부여된 <span class="mathjax-preview">N</span><script type="math/tex">N</script>마리의 거위가 살고 있다. 어느 화창한 날, 몇몇 거위들이 단체로 반항을 일으키며 탈출 계획을 세웠고 총 <span class="mathjax-preview">K</span><script type="math/tex">K</script>마리의 거위가 탈출에 성공하였다. 급해진 당신은 목격자를 찾다가, 유일한 목격자인 오리에게 다음과 같은 정보를 얻었다.</p>
+<blockquote>
+<p>탈출한 거위들의 숫자의 합은 <span class="mathjax-preview">N</span><script type="math/tex">N</script>으로 나누어 떨어진다.</p>
+</blockquote>
+<p>당신의 할 일은 가능한 탈출한 거위들의 집합이 총 몇 가지인가를 구하는 것이다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.<br/>
+각 테스트 케이스에 대해, 두 정수 <span class="mathjax-preview">N, K</span><script type="math/tex">N, K</script>가 주어진다. <span class="mathjax-preview">(1 \le N \le 500, 1 \le K \le \min(N,100))</span><script type="math/tex">(1 \le N \le 500, 1 \le K \le \min(N,100))</script></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 가능한 총 경우수를 <span class="mathjax-preview">1,000,000,007</span><script type="math/tex">1,000,000,007</script> 로 나눈 나머지를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+7 4
+1 1
+58 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+1
+7322</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

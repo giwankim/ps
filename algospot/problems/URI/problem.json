@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "URI",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:27:59.067626Z",
+    "http_status": 200,
+    "semantic_html_sha256": "bdfe07275c50a842ad0c6872d7a5856c2094be47c20a5f05a6f2cb464e2c5ad8"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/URI",
+  "statistics": {
+    "acceptance_percent": 32,
+    "accepted": 3224,
+    "submissions": 10041
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "URI Decoding"
+}

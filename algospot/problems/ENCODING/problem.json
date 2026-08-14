@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/51be80e7bc726c1d-ctemp.jpg",
+      "sha256": "6c0b621d3bebec69e9f60a9e590626b9288b24239b6412766e41ef7148e75c60",
+      "source_url": "http://algospot.com/media/judge-attachments/2bee8fe34d83e658ae889403e67cd663/ctemp.jpg"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ENCODING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:02.064356Z",
+    "http_status": 200,
+    "semantic_html_sha256": "3ca81cf3c4c5f84620b5e0d0cf12b8592d2ca720075c06d358181253f9058a6d"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ENCODING",
+  "statistics": {
+    "acceptance_percent": 31,
+    "accepted": 162,
+    "submissions": 522
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "Encoding"
+}

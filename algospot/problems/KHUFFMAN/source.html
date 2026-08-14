@@ -1,0 +1,172 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KHUFFMAN">KHUFFMAN</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KHUFFMAN"><b>203</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KHUFFMAN/"><b>51</b> (<b>25</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/4">zizavino</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C2%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제2회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Huffman 나라의 문자는 N개의 문자로 이루어져 있다. 0과 1로 이루어진 이진 인코딩이 발달한 대한민국과는 달리, Huffman 나라에서는 0부터 K-1까지의 숫자로 이루어진 K진법 인코딩이 발달했다.</p>
+<p>우리는 Huffman 나라의 언어를 K진법으로 인코딩하려 한다. 이 때 다음 조건을 만족해야 한다.</p>
+<ol>
+<li>N개의 각 문자에 K진법 문자열을 하나씩 배정해야 한다.</li>
+<li>배정된 K진법 문자열들이 서로의 접두사(prefix)일 수 없다.</li>
+</ol>
+<p>예를 들어 아래의 표는 !, @, #, + 4개의 문자를 3진법으로 올바르게 인코딩한 예이다.</p>
+<table><thead>
+<tr>
+<th>문자</th>
+<th>인코딩</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>!</td>
+<td>012</td>
+</tr>
+<tr>
+<td>@</td>
+<td>120</td>
+</tr>
+<tr>
+<td>#</td>
+<td>201</td>
+</tr>
+<tr>
+<td>+</td>
+<td>210</td>
+</tr>
+</tbody></table>
+<p>4개의 문자 각각에 서로의 접두사가 아닌 3진법 문자열을 할당했음을 확인해 볼 수 있다. 반면,</p>
+<table><thead>
+<tr>
+<th>문자</th>
+<th>인코딩</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>!</td>
+<td>013</td>
+</tr>
+<tr>
+<td>@</td>
+<td>120</td>
+</tr>
+<tr>
+<td>#</td>
+<td>201</td>
+</tr>
+<tr>
+<td>+</td>
+<td>210</td>
+</tr>
+</tbody></table>
+<p>은 !에 013을 배정해서 첫 번째 조건을 만족하지 않고,</p>
+<table><thead>
+<tr>
+<th>문자</th>
+<th>인코딩</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>!</td>
+<td>012</td>
+</tr>
+<tr>
+<td>@</td>
+<td>120</td>
+</tr>
+<tr>
+<td>#</td>
+<td>201</td>
+</tr>
+<tr>
+<td>+</td>
+<td>20</td>
+</tr>
+</tbody></table>
+<p>은 +이 #의 접두사이기 때문에 두 번째 조건을 만족하지 않는다.</p>
+<p>Huffman 나라 언어 문자열이 하나 주어졌을 때, 이 문자열을 K진법으로 인코딩한 결과를 가장 짧게 만들면 길이가 어떻게 될까?<br/>
+예를 들어 !!!@@@@#####++++++ 과 같이 !가 3번, @가 4번, #가 5번, +가 6번 문자열에 나타났다면, 첫 번째 표에서 제시한 인코딩을 적용한 경우 총 길이는 54가 된다 (3*3+4*3+5*3+6*3=54).</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 T가 주어진다.</p>
+<p>각 테스트 케이스 첫 줄에는 두 정수 N (2 &lt;= N &lt;= 10000), K (2 &lt;= K &lt;= 10000)가 공백으로 구분되어 주어진다. N은 Huffman 나라의 문자의 수이고 K는 인코딩할 진법을 나타낸다. 다음 줄에는 각 문자가 문자열에 몇 번이나 나타나는지를 의미하는 N 개의 정수 C<sub>i</sub> (0 &lt;= C<sub>i</sub> &lt;= 100000) 가 공백으로 구분되어 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 하나씩 주어진 문자열의 가능한 최소 K진법 인코딩의 길이를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 2
+0 1 2 3
+4 2
+0 1 2 2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10
+9
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>출제: zizavino</li>
+<li>검수: altertain</li>
+</ul>
+</p>
+</section>

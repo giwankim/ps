@@ -1,0 +1,95 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LUNCHBOX">LUNCHBOX</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LUNCHBOX"><b>4926</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LUNCHBOX/"><b>1921</b> (<b>38</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>After suffering from the deficit in summer camp, Ainu7 decided to supply lunch boxes instead of eating outside for Algospot.com winter camp.</p>
+<p>He contacted the famous packed lunch company "Doosot" to prepare <span class="mathjax-preview">N</span><script type="math/tex">N</script> lunch boxes for <span class="mathjax-preview">N</span><script type="math/tex">N</script> participants. Due to the massive amount of order, Doosot was not able to prepare the same menu. Instead, they provided different <span class="mathjax-preview">N</span><script type="math/tex">N</script> lunch boxes. Ainu7 put all the lunch boxes to a refrigerator.</p>
+<p>The lunch time has come, and suddenly Ainu7 noticed that there is only one microwave available. As all lunch boxes are not the same, they need a different amount of time to microwave and eat. Specifically, <span class="mathjax-preview">i</span><script type="math/tex">i</script>-th lunch box needs <span class="mathjax-preview">M_i</span><script type="math/tex">M_i</script> seconds to microwave and <span class="mathjax-preview">E_i</span><script type="math/tex">E_i</script> seconds to eat.</p>
+<p>Ainu7 needs to schedule microwave usage order to minimize lunch time. Lunch time is defined as the duration from the beginning of microwaving of any lunch box to the end of eating for all participants. Write a computer program that finds minimum lunch time to help Ainu7. Note that substituting lunch while microwave is turned on is totally unnecessary, because the lunch will be cooled down.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains one integer <span class="mathjax-preview">T</span><script type="math/tex">T</script>, the number of test cases.</p>
+<p>Each test case consists of three lines. The first line of each test case contains <span class="mathjax-preview">N\,(1 \le N \le 10000)</span><script type="math/tex">N\,(1 \le N \le 10000)</script>, the number of the participants.</p>
+<p><span class="mathjax-preview">N</span><script type="math/tex">N</script> integers will follow on the second line. They represent <span class="mathjax-preview">M_1</span><script type="math/tex">M_1</script>, <span class="mathjax-preview">M_2</span><script type="math/tex">M_2</script>, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script>, <span class="mathjax-preview">M_N</span><script type="math/tex">M_N</script>.<br/>
+Similarly, <span class="mathjax-preview">N</span><script type="math/tex">N</script> integers will follow on the third line, representing <span class="mathjax-preview">E_1</span><script type="math/tex">E_1</script>, <span class="mathjax-preview">E_2</span><script type="math/tex">E_2</script>, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script>, <span class="mathjax-preview">E_N</span><script type="math/tex">E_N</script>.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the minimized lunch time in one line. It is guaranteed that the answer is always strictly less than <span class="mathjax-preview">2^{31}</span><script type="math/tex">2^{31}</script>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+2 2 2
+2 2 2
+3
+1 2 3
+1 2 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>8
+7
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

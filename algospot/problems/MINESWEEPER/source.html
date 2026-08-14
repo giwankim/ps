@@ -1,0 +1,114 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MINESWEEPER">MINESWEEPER</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MINESWEEPER"><b>237</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MINESWEEPER/"><b>91</b> (<b>38</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><b>C0ffee</b>, a famous hacker, plays Minesweeper game a lot in his spare time. After hours and hours of playing Minesweeper, <b>C0ffee</b> finally got bored and wrote a hack program for the game. With this hack, <b>C0ffee</b> instantly knows which cells contain mines. <b>C0ffee</b> now wants to set a speed record using this hack. But alas, his mouse is broken so he cannot make right clicks. So he must clear the board using left clicks only.</p>
+<p>In case you are rusty with Minesweeper, here is a quick refresher on how the game works:</p>
+<ul>
+<li>An empty cell is <b>opened</b> when you left click on it.</li>
+<li>When a cell is opened, it will show the number of mines in adjacent cells. Two cells are adjacent if they share an edge or a corner. See figure 1 for an exmple.</li>
+<li>If all the adjacent cells are empty(not containing a mine), all adjacent cells are opened automatically, and this process goes on until no more cells are automatically opened. Figure 2 shows an example; when the cell with X is clicked, all those cells will open at once.</li>
+</ul>
+<p>Given a minsweeper board, write a program to compute the minimum number of left clicks <b>C0ffee</b> has to make in order to clear the given board.</p>
+<p><img alt="judge-attachments/ba1f4b314fbd3ef70f43a2d937315954/problemC.jpg" src="http://algospot.com/media/judge-attachments/ba1f4b314fbd3ef70f43a2d937315954/problemC.jpg"/></p>
+<p><b>Notes</b></p>
+<ul>
+<li>Figure 3 describes the second sample input.</li>
+<li>Figure 4 describes the minimum clicks required to clear the board: cells marked with Xs and white dots must be clicked.</li>
+</ul>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases.<br/>
+The number of test cases T is given in the first line of the input.<br/>
+The first line of each test case contains two integers R and C (1 &lt;= R, C &lt;= 200),<br/>
+where R is the number of rows and C is the number of columns.<br/>
+The following R lines will each contain C characters, where mines are denoted by an asterisk('*') and empty cells by a dot('.').</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case.<br/>
+The line should contain an integer indicating the minimum number of left clicks required to clear the board.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 4
+....
+*..*
+....
+8 8
+.....*..
+*..*....
+..*.....
+........
+..**.*..
+..*.....
+.......*
+......*.
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10
+15</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

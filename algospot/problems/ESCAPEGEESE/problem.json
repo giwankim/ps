@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ESCAPEGEESE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:12.979473Z",
+    "http_status": 200,
+    "semantic_html_sha256": "449f85c7b9557cf3d7dc6588c91e0c4fa7fdd7d6a891938bbd61d945c088221f"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ESCAPEGEESE",
+  "statistics": {
+    "acceptance_percent": 25,
+    "accepted": 134,
+    "submissions": 518
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "탈출한 거위들"
+}

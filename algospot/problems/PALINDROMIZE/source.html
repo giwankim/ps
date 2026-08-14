@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PALINDROMIZE">PALINDROMIZE</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PALINDROMIZE"><b>3301</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PALINDROMIZE/"><b>803</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%AC%B8%EC%9E%90%EC%97%B4">문자열</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>앞에서부터 읽었을 때와 뒤로부터 읽었을 때 똑같은 문자열을 팰린드롬(palindrome)이라고 합니다. 예를 들면 “noon”이나 “stats” 같은 단어들이 팰린드롬입니다. 주어진 문자열 S 뒤에 적절히 문자열을 붙여서 S 를 팰린드롬으로 만들려고 합니다. 예를 들어 S = “anon”이면 뒤에 “ona”를 붙여서 “anonona”를 만들 수도 있고, “a”를 붙여서 “anona”를 만들 수도 있지요. 물론 S를 뒤집은 문자열을 S 뒤에 붙이면 항상 팰린드롬이 되므로, 결과 팰린드롬이 가능한 한 짧았으면 합니다.</p>
+<p>S가 주어질 때 S에서 만들 수 있는 가장 짧은 팰린드롬의 길이를 출력하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C(&lt;=50)가 주어집니다. 그 후 각 테스트 케이스마다 문자열 S가 주어집니다. 주어지는 문자열의 길이는 1 이상 10만 이하이며, 알파벳 소문자로만 구성됩니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 S를 이용해 만들 수 있는 가장 짧은 팰린드롬의 길이를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+there
+amanaplanacanal
+xyz
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>7
+21
+5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

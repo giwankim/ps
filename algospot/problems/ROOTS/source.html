@@ -1,0 +1,90 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ROOTS">ROOTS</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ROOTS"><b>925</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ROOTS/"><b>405</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%88%98%EC%B9%98%ED%95%B4%EC%84%9D">수치해석</a>,
+						
+						<a href="/judge/problem/list/?tag=%EC%9D%B4%EB%B6%84%EB%B2%95">이분법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>실수 근만을 갖는 ax<sup>2</sup> + bx + c = 0과 같은 형태의 단변수 다항 방정식이 주어질 때, 이들의 근을 계산하는 프로그램을 작성하세요.</p>
+<p>다항식의 모든 해의 절대값은 10 이하라고 가정해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C(C&lt;=50)가 주어집니다. 각 테스트 케이스의 첫 줄에는 방정식의 차수 n(2 &lt;= n &lt;= 5)이 주어지고, 그 다음 줄에 n+1개의 실수로 방정식의 차수가 고차항부터 주어집니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 n개의 실수로 오름차순으로 정렬된 방정식의 해를 출력합니다. 방정식의 해는 모두 다르다고 가정해도 좋습니다. 10<sup>-8</sup> 이하의 상대/절대 오차가 있는 답은 정답으로 처리됩니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+1.00 -6.00 11.00 -6.00
+2
+1.00 -12.50 31.50</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1.000000000000 2.000000000000 3.000000000000 
+3.500000000000 9.000000000000 
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

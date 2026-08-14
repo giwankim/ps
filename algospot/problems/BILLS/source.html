@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BILLS">BILLS</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BILLS"><b>349</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BILLS/"><b>78</b> (<b>22</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>After being retired from ACM-ICPC, Mr. R decided to quit studying computer science to become a farmer. This year, he harvested <span class="mathjax-preview">N</span><script type="math/tex">N</script> cabbages, and the price of one cabbage is <span class="mathjax-preview">K</span><script type="math/tex">K</script> won. R wants to sell all of these cabbages to the Farm Co-Op, but the Farm Co-Op has a rather complicated purchasing policy:</p>
+<ol>
+<li>R can split the cabbages into any number of bunches, and sell them separately.</li>
+<li>Every time R cells a bunch of cabbages, he has two ways to collect his earnings:
+
+<ol>
+<li>He can get a check: however, checks can be issued only for amounts multiple of 10,000 won, and the remaining money will be thrown away.</li>
+<li>He can get the money wired to his bank account: however, the bank will take 10% as transaction fee and round down the remaining money to the nearest won. </li>
+</ol></li>
+</ol>
+<p>So, how much money can Mr.R can get at most by selling all of the cabbages?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input file will contain the number of test cases, <span class="mathjax-preview">C</span><script type="math/tex">C</script>. Each line consists of two integers, <span class="mathjax-preview">N</span><script type="math/tex">N</script> and <span class="mathjax-preview">K</span><script type="math/tex">K</script>.</p>
+<ul>
+<li><span class="mathjax-preview">C \le 1,000</span><script type="math/tex">C \le 1,000</script></li>
+<li><span class="mathjax-preview">1 \le N \le 100,000,000</span><script type="math/tex">1 \le N \le 100,000,000</script></li>
+<li><span class="mathjax-preview">1 \le K \le 100,000,000</span><script type="math/tex">1 \le K \le 100,000,000</script></li>
+<li><span class="mathjax-preview">K \times N \le 2^{31}-1</span><script type="math/tex">K \times N \le 2^{31}-1</script></li>
+</ul>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the maximum amount of money Mr.R can get.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+10000 1
+9999 1
+4 9800
+4 2700</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10000
+8999
+35280
+10000</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

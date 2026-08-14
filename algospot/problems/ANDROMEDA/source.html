@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ANDROMEDA">ANDROMEDA</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ANDROMEDA"><b>99</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ANDROMEDA/"><b>39</b> (<b>39</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The Space Elevator to the Andromeda was shut down due to recent economic meltdown. Two of the today’s passengers, Won-seok and his sister Yeon-Gyoung, decided to climb prepared emergency space stairs.</p>
+<p>Yeon-Gyoung really likes to play the game of Rock-Paper-Scissors, and thought this trip could be a little boring, so she proposed a special rule to her brother.</p>
+<ol>
+<li>Play one throw(i.e., two players throw their gesture once) each step to the Andromeda.</li>
+<li>It needs n throw-wins to win each match. When a match ﬁnishes, next match will start in the next
+step.</li>
+<li>If a match is still being played when two reaches Andromeda, that match will be ignored.</li>
+</ol>
+<p>For each throw, wining/drawing/losing probability is them same, i.e., 1/3. She thought normal play could be meaningless, and so she decided to maximize the number of matches won, by giving up and restarting matches she doesn’t have a good probability to win.</p>
+<p>Let’s take steps = 6 and n = 3 as an example, and assume that she already lost the ﬁrst two throws. If she proceed without abandoning the game, her probability to still win one game is 7/81 — win/win/win/anything, draw/win/win/win, win/draw/win/win, win/win/draw/win, lose/win/win/win: 1/27+4/81. But if she resigns and starts a new next game here, the probability increases to 9/81 = 1/9, as she gains two more ways to win(win/lose/win/win, win/win/lose/win).</p>
+<p>Given steps and n, calculate the average number of matches she can win, when she plays optimally. </p>
+<p>Note that Won-seok is patient, so he won’t give up any match.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The ﬁrst line of the input will contain the number of test cases C(1 ≤ C ≤ 20). C lines will follow, each<br/>
+line is for each test case, consisting two numbers steps and n, separated by a single space. steps will be a<br/>
+positive integer equals to or less than 100, 000, 000. n will be a positive integer equals to or less than 10.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print one ﬂoating point number for each test case that represents the average number of matches that<br/>
+Yeon-Gyoung can win. Your answer should be correct up to an error(relative/absolute) of 1e−7.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 2
+15 1
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0.25925926
+5.0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

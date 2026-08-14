@@ -1,0 +1,130 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DESIGNSCHOOL">DESIGNSCHOOL</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DESIGNSCHOOL"><b>99</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DESIGNSCHOOL/"><b>24</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C2%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제2회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>"Woojoo! Where have you been?"<br/>
+"What's the matter, teacher?"<br/>
+"I told you that the admissions information on Algospot Design School was out, and that you needed to prepare a portfolio for that. Did you finish drawing it yet?"<br/>
+"Yeah, sure. All done, perfectly."<br/>
+"Really? Let me take a look at it."<br/>
+"I forgot to bring it today. I can show you tomorrow."<br/>
+"Are you sure? Don't forget!"</p>
+<p>After talking to the teacher, Woojoo rushed to meet her best friend, Bada.</p>
+<p>"Hey, Bada! I'm screwed!"<br/>
+"What's up? Why?"<br/>
+"I forgot to prepare a portfolio for Algospot Design School. Do you have any extra one that I can borrow?"<br/>
+"Extra ones... Oh, I have one that I drew for the exhibition the other day. Wait a second..."</p>
+<p>Bada found her sketchbook and gave it to Woojoo. The book had a lot of drawings, on both front and back of the pages. </p>
+<p>"That's a gift for you. You can use however you would like."<br/>
+"Really? Is that OK?"<br/>
+"It's my pleasure."</p>
+<p><img alt="그림" src="http://algospot.com/media/judge-attachments/00c653c5dad328d2e1d30dfa41682d52/DesignSchool.png"/></p>
+<p>On the next day, Woojoo brought the sketchbook to the teacher. </p>
+<p>"Hmm... the drawings look good, but why did you on earth draw so many things on a single page? Worse yet, you have drawings on the back, too. I think you would need to cut the drawings out. Try to cut them so that you will be left with the most drawings."</p>
+<p>Here comes your task:</p>
+<p>We place a single, square page from the sketchbook on a 2D plane, with two opposite corners at (0,0) and (100,100). When you want to cut out a piece of drawing from the page, you have to cut it along the smallest enclosing axis-aligned (i.e. borders are parallel to either X or Y axis) rectangle. You are given coordinates of these rectangles, and which side the drawing is on. Find the maximum number of pieces that can be cut out from the page. Please note that a single piece can only count for up to 1 drawing even if it contains other drawings on the other side.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases, each representing a sheet of the sketchbook. The first line of the input contains T.</p>
+<p>Each test case describes the drawings on the sheet. <br/>
+The first line of the test case contains the number of drawings on both sides of the sheet, N (1 &lt;= N &lt;= 100).</p>
+<p>The following N lines describe the N drawings: the coordinates of the bottom-left corner, the coordinates of the upper-right corner, and its side (F for front, B for back). The coordinates will be given as four integers, and each token will be separated by a single space. You can assume that no two drawings on the same page will overlap with each other.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each sheet, output the maximum number of drawings you can cut-out of the sheet. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+2
+0 0 1 1 F
+0 0 1 1 B
+3
+1 1 4 4 F
+0 0 2 2 B
+2 2 5 5 B
+4
+0 0 1 1 F
+0 1 1 2 F
+0 0 1 2 B
+0 2 1 4 B
+4
+0 0 50 50 F
+50 50 100 100 F
+0 50 50 100 B
+50 0 100 50 B</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+2
+3
+4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>출제: Taeyoon_Lee</li>
+<li>번역: ltdtl</li>
+<li>번역 감수: JongMan</li>
+<li>검수: Being</li>
+<li>일러스트: rainpunch</li>
+</ul>
+</p>
+</section>

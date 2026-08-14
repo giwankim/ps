@@ -1,0 +1,90 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NQUEEN">NQUEEN</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NQUEEN"><b>3690</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NQUEEN/"><b>1848</b> (<b>50</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A1%B0%ED%95%A9%ED%83%90%EC%83%89">조합탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img alt="judge-attachments/bc92d43c2acc9acf45702485b3fb1e9e/nqueen.png" src="http://algospot.com/media/judge-attachments/bc92d43c2acc9acf45702485b3fb1e9e/nqueen.png"/></p>
+<p>N-Queen 퍼즐은 N x N 크기의 체스판에 N 개의 퀸을, 서로 공격할 수 없도록 올려놓는 퍼즐이다. (퀸은 체스에서 가장 강력한 기물로, 자신의 위치에서 상하좌우, 그리고 대각선 8방향으로 이어진 직선 상의 어떤 기물도 공격할 수 있다)</p>
+<p>예를 들어, 맨 위의 그림은 8x8 크기의 체스판에 8개의 퀸을 서로 공격할 수 없도록 올려놓은 예를 보인다.</p>
+<p>체스판의 크기 N 이 주어졌을 때, N-Queen 퍼즐의 답이 모두 몇 개나 되는지를 계산하는 프로그램을 작성하시오. 한 답은 N개 퀸 모두의 위치로 정의되며, 한 퀸의 위치만 다르더라도 다른 답이라고 가정한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수 C 가 주어지며, 그 이후 한 줄에 하나씩 테스트 케이스로 체스판의 크기 N (1 &lt;= N &lt;= 12) 이 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄의 답을 출력하며, 주어진 보드 크기에 대해 N-Queen 문제의 답을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1
+2
+8
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+0
+92</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

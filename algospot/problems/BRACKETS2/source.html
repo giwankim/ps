@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BRACKETS2">BRACKETS2</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BRACKETS2"><b>13029</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BRACKETS2/"><b>4226</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%202%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 2주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Best White is a mathematics graduate student at T1 University. Recently, he finished writing a paper and he decided to polish it. As he started to read it from the beginning, he realized that some of the formulas have problems: some of the brackets are mismatched! Since there are so many formulas in his paper, he decided to check their validity with a computer program.</p>
+<p>The following kinds of brackets are included in Best White’s paper.</p>
+<ul>
+<li>Round brackets are opened by a <code>(</code> and closed by a <code>)</code>.</li>
+<li>Curly brackets are opened by a <code>{</code> and closed by a <code>}</code>.</li>
+<li>Square brackets are opened by a <code>[</code> and closed by a <code>]</code>.</li>
+</ul>
+<p>A formula is said well-matched when the following conditions are met:</p>
+<ol>
+<li>Every bracket has a corresponding pair. <code>(</code> corresponds to <code>)</code>, <code>[</code> corresponds to <code>]</code>, et cetera.</li>
+<li>Every bracket pair is opened first, and closed later.</li>
+<li>No two pairs "*cross*" each other. For example, <code>[(])</code> is not well-matched.</li>
+</ol>
+<p>Write a program to help Best White by checking if each of his formulas is well-matched. To make the problem easier, everything other than brackets are removed from the formulas.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test cases <span class="mathjax-preview">C\ (1 \le C \le 100)</span><script type="math/tex">C\ (1 \le C \le 100)</script>. Each test is given in a single line as a character string. The strings will only include characters in "<code>[](){}</code>" (quotes for clarity). The length of the string will not exceed 10,000.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print a single line "<code>YES</code>" when the formula is well-matched; print "<code>NO</code>" otherwise. (quotes for clarity)</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+()()
+({[}])
+({}[(){}])</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+NO
+YES</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,100 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DRUNKENWALK">DRUNKENWALK</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DRUNKENWALK"><b>33</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DRUNKENWALK/"><b>9</b> (<b>27</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%20Programming%20Contest%202011">Stanford Local Programming Contest 2011</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>After having a bit too much to drink in the evening, you ﬁnd yourself going on a long walk on a directed graph—but not too long, as there are no cycles. You start at vertex 0, and whenever you are at a vertex, you will randomly leave the vertex along one of its outgoing edges with probability proportional to the weight of the edge.</p>
+<p>You continue walking until you reach a vertex that has no edges leaving it, after which you fall asleep. The length of your walk is the number of edges you traverse. Moreover, before leaving vertex 0, you may choose one edge from anywhere in the graph that you do not like and ignore it during your walk (or you may choose to not ignore any of them). Determine the longest possible expected length of your walk.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of multiple test cases. Each test case begins with a line containing two integers N, 2 ≤ N ≤ 10,000, and M, 1 ≤ M ≤ 100,000, the number of vertices and edges in the graph, respectively. The next M lines each contain three integers u, v, and w (1 ≤ w ≤ 1,000), indicating that there is a directed edge from vertex u to vertex v (numbered from 0 to N − 1) with weight w. The input terminates with a line with N = M = 0.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print out a single line that contains the longest possible expected length of your walk. Your answer will be considered correct if it is within 10^(−8) absolute or relative precision. In the ﬁrst sample case, ignoring the edge from vertex 0 to vertex 3 gives the maximum possible expected length of 2. (Without ignoring it, the expected length is 1.5.)</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4 5
+0 1 2
+0 2 1
+0 3 3
+1 3 1
+2 3 4
+9 8
+0 1 1
+1 2 1
+2 3 1
+0 4 2
+4 5 10
+4 6 1
+6 7 1
+7 8 1
+0 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2.00000000
+3.66666667</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

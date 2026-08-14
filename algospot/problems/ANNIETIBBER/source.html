@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ANNIETIBBER">ANNIETIBBER</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ANNIETIBBER"><b>669</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ANNIETIBBER/"><b>102</b> (<b>15</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B3%84%EC%82%B0%EA%B8%B0%ED%95%98">계산기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<div style="text-align: center; "><img src="http://algospot.com/media/judge-attachments/971c3c459ae76a0eb69a1e42677a01e4/annietibber.png" style="width: 50%;"/></div>
+<p>애니와 티버는 x축 위에서 여행을 하고 있었다. 애니의 위치는 P(p, 0)이고, 티버의 위치는 Q(q, 0)이다. 어느 날 문득 하늘을 바라본 애니와 티버는 서로 이야기를 하던 도중 별들 사이의 좌우관계에 흥미를 가지게 되었다. </p>
+<blockquote>
+<p><em>애니</em>: A별이 B별보다 왼쪽에 있네!<br/>
+<em>티버</em>: 응!<br/>
+<em>애니</em>: 그리고 B별은 C별보다 왼쪽에 있네!<br/>
+<em>티버</em>: B가 C보다 오른쪽에 있는것 같은데?<br/>
+<em>애니</em>: 그래? 내가 봤을때는 왼쪽에 있는데?!</p>
+</blockquote>
+<p>여기서 점 X에서 보았을 때 A별이 B별보다 왼쪽에 있다는 것은, X-&gt;B-&gt;A 가 왼쪽으로 꺾였다는 것을 의미한다.  애니는 하늘에 있는 모든 별들의 쌍 중에서 티버가 보았을 때와 좌우관계가 반대인 쌍이 몇 개나 되는지 알고 싶어졌다. (A, B) 쌍은 (B, A) 쌍과 같은 것으로 보아 한 번씩만 센다. 모든 별들은 애니가 보았을때도 직선상에 둘 이상 있지 않고, 티버가 보았을때도 직선상에 둘 이상 있지 않다. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에 테스트 케이스의 수 T가 주어진다.<br/>
+각 테스트 케이스마다 첫 번째 줄에 애니와 티버가 관찰한 별의 수 N(1 &lt;= N &lt;= 100,000)과 애니의 위치와 티버의 위치를 표현하는 두 정수 p, q 가 주어진다. </p>
+<p>그 다음 줄부터 N줄에 걸쳐 애니와 티버가 관찰한 별의 좌표를 표현하는 두 정수 x<sub>i</sub>, y<sub>i</sub> 가 주어진다. 애니, 티버의 위치와 모든 별의 x 좌표는 -10<sup>6</sup> 이상 10<sup>6</sup> 이하의 정수이다. 모든 별의 y 좌표는 1 이상 10<sup>6</sup> 이하의 정수이다. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해서 애니와 티버가 보았을 때 서로 좌우관계가 반대인 쌍의 수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+3 -5 5
+-2 4
+2 5
+1 1
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

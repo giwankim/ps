@@ -1,0 +1,96 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GREEDYAINTA">GREEDYAINTA</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GREEDYAINTA"><b>172</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GREEDYAINTA/"><b>65</b> (<b>37</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2590">tncks0121</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Jaehyun, who teaches <span class="mathjax-preview">N</span><script type="math/tex">N</script> children in his kindergarten, decided to give them candies, because it was his birthday! Each child is denoted as an integer number from 0 to <span class="mathjax-preview">N-1</span><script type="math/tex">N-1</script>. Because Jaehyun tends to give freedom to the kids, he let them take candies as much as they want. As a result, child <span class="mathjax-preview">i</span><script type="math/tex">i</script> (<span class="mathjax-preview">0 \le i &lt; N</span><script type="math/tex">0 \le i < N</script>) took <span class="mathjax-preview">a_{i}</span><script type="math/tex">a_{i}</script> candies.</p>
+<p>Seunghyun, who is denoted as child <span class="mathjax-preview">0</span><script type="math/tex">0</script>, was disappointed because he couldn't obtain all the candies. After a deep thought, Seunghyun came out with an idea. He gathered all the kids in the kindergarten, and suggested to distribute candies by the following way:</p>
+<ol>
+<li>Seunghyun chooses an integer <span class="mathjax-preview">k</span><script type="math/tex">k</script> which is bigger than <span class="mathjax-preview">0</span><script type="math/tex">0</script> and smaller than <span class="mathjax-preview">N</span><script type="math/tex">N</script>.</li>
+<li>Child <span class="mathjax-preview">k</span><script type="math/tex">k</script> must hand out one candy to each of child <span class="mathjax-preview">0</span><script type="math/tex">0</script>, child <span class="mathjax-preview">1</span><script type="math/tex">1</script>, ... child <span class="mathjax-preview">k-1</span><script type="math/tex">k-1</script>. After this, child <span class="mathjax-preview">k</span><script type="math/tex">k</script> will lose <span class="mathjax-preview">k</span><script type="math/tex">k</script> candies, and child <span class="mathjax-preview">0</span><script type="math/tex">0</script>, child <span class="mathjax-preview">1</span><script type="math/tex">1</script>, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script>, child <span class="mathjax-preview">k-1</span><script type="math/tex">k-1</script> will get one candy.</li>
+</ol>
+<p>All the children agreed because they thought that it was a great idea! However, as the only purpose of this suggestion was taking all the candies, Seunghyun wants to know whether he could achieve his goal by repeating this process 0 or more times.</p>
+<p>You are to write a program which determines whether Seunghyun can get all the candies.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains the number of test cases <span class="mathjax-preview">T</span><script type="math/tex">T</script>. </p>
+<p>Each test case starts with a line containing <span class="mathjax-preview">N</span><script type="math/tex">N</script> (<span class="mathjax-preview">2 \le N \le 100,000</span><script type="math/tex">2 \le N \le 100,000</script>), the number of children that Jaehyun teaches. The following line contains <span class="mathjax-preview">N</span><script type="math/tex">N</script> space-separated integers <span class="mathjax-preview">a_{0}, a_{1}, \cdots, a_{N-1}</span><script type="math/tex">a_{0}, a_{1}, \cdots, a_{N-1}</script>, where <span class="mathjax-preview">a_{i}</span><script type="math/tex">a_{i}</script> (<span class="mathjax-preview">0 \le a_{i} \le 10^{9}</span><script type="math/tex">0 \le a_{i} \le 10^{9}</script>) is the number of candies that child <span class="mathjax-preview">i</span><script type="math/tex">i</script> has taken.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, if Seunghyun can take all candies, print "POSSIBLE" (without quotes). If not print "IMPOSSIBLE" (without quotes).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+2
+1 5
+4
+1 5 4 2
+5
+1 5 4 2 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>POSSIBLE
+IMPOSSIBLE
+POSSIBLE</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

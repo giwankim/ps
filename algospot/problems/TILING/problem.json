@@ -1,0 +1,62 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/9e82452928ca5595-block1.PNG",
+      "sha256": "493786f8f6be2faad4cf557a4d9188dc4024f926536873c03c6a586d6e7cdf5a",
+      "source_url": "http://algospot.com/media/judge-attachments/8ec053d4e8cbc01dd1f0c1c74cecf251/block1.PNG"
+    },
+    {
+      "archived": true,
+      "path": "assets/61b5c5b4f21e1a0a-block2.PNG",
+      "sha256": "73b34be0a42c8f064a9edb7a64c977f18988267396d19e4bb139aee355dd4944",
+      "source_url": "http://algospot.com/media/judge-attachments/282da89de5ab43890caa0f4c9f5a5206/block2.PNG"
+    },
+    {
+      "archived": true,
+      "path": "assets/5337de24c2a2c4f5-n2.PNG",
+      "sha256": "b0e8ab38e2e349e009c70dc22d47006152bb7291b30ac9e087b5f96c9cbac779",
+      "source_url": "http://algospot.com/media/judge-attachments/2a2359ca71c59e46228d6ee6948eae3f/n2.PNG"
+    },
+    {
+      "archived": true,
+      "path": "assets/ccb557714eb7332c-n3.PNG",
+      "sha256": "2d6ce6d4b167e323e26a558cedd1b1863ff40296a3b81ff97162db7b18f45c74",
+      "source_url": "http://algospot.com/media/judge-attachments/5a7b4b5ca005b7f0bca007c46fffbe34/n3.PNG"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "TILING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:23:34.012943Z",
+    "http_status": 200,
+    "semantic_html_sha256": "bec2583eb65381ea8a67bf07205e89f818fdda70d562f5695fb0117bea9232e6"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/TILING",
+  "statistics": {
+    "acceptance_percent": 16,
+    "accepted": 31,
+    "submissions": 186
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "Tiling"
+}

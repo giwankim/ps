@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "SIDEWALK10",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 25000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:16:33.222384Z",
+    "http_status": 200,
+    "semantic_html_sha256": "58a7df2f20f8ca2342bc964628c7d16515fb9882152949976d7158b68e20d264"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/SIDEWALK10",
+  "statistics": {
+    "acceptance_percent": 17,
+    "accepted": 8,
+    "submissions": 47
+  },
+  "tags": [],
+  "title": "보도블록 10계명"
+}

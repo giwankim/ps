@@ -1,0 +1,128 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/URI">URI</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=URI"><b>10041</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/URI/"><b>3224</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><em>URI</em> (Uniform Resource Identifier) is a compact string used to identify or name resources on the Internet. Some examples of <em>URI</em> are below:</p>
+<ul>
+<li><code>http://icpc.baylor.edu.cn/</code></li>
+<li><code>mailto:foo@bar.org</code></li>
+<li><code>ftp://127.0.0.1/pub/linux</code></li>
+<li><code>readme.txt</code></li>
+</ul>
+<p>When transmitting *URI*s through the Internet, we escape some special characters in *URI*s with percent-encoding. Percent-encoding encodes an ASCII character into a percent sign ("<code>%</code>") followed by a two-digit Hexadecimal representation of the ASCII number. The other characters are not touched in the encoding process. The following table shows the special characters and their corresponding encodings:</p>
+<table><thead>
+<tr>
+<th>Special Character</th>
+<th>Encoded String</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>" "</td>
+<td><code>%20</code></td>
+</tr>
+<tr>
+<td>"<code>!</code>"</td>
+<td><code>%21</code></td>
+</tr>
+<tr>
+<td>"<code>$</code>"</td>
+<td><code>%24</code></td>
+</tr>
+<tr>
+<td>"<code>%</code>"</td>
+<td><code>%25</code></td>
+</tr>
+<tr>
+<td>"<code>(</code>"</td>
+<td><code>%28</code></td>
+</tr>
+<tr>
+<td>"<code>)</code>"</td>
+<td><code>%29</code></td>
+</tr>
+<tr>
+<td>"<code>*</code>"</td>
+<td><code>%2a</code></td>
+</tr>
+</tbody></table>
+<p>Note that the quotes are for clarity only.</p>
+<p>Write a program which reverses this process.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input file will contain the number of test cases <span class="mathjax-preview">C</span><script type="math/tex">C</script> <span class="mathjax-preview">(1 \le C \le 100)</span><script type="math/tex">(1 \le C \le 100)</script>. The following <span class="mathjax-preview">C</span><script type="math/tex">C</script> lines will each contain a test case — which is the percent-encoded <em>URI</em>. Their length will be at most 80.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print one line for each test cases — the decoded original <em>URI</em>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+Happy%20Joy%20Joy%21
+http://algospot.com/%2a</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Happy Joy Joy!
+http://algospot.com/*</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

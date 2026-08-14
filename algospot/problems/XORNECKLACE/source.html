@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/XORNECKLACE">XORNECKLACE</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=XORNECKLACE"><b>223</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/XORNECKLACE/"><b>72</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/133">wookayin</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C2%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제2회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Frograms, Inc. has been busy developing necklaces with brand-new design and feature. Every programmer working at Frograms now wears this necklace. A necklace consists of multiple beads stringed by a thread, as seen below. Each bead is given a number between 0 to 10<sup>9</sup> (inclusive).</p>
+<p><img alt="" src="http://algospot.com/media/judge-attachments/155ebecd3c9663ed63ac59c3c4440f15/necklace.png"/></p>
+<p>Most of the programmers have left for their summer vacation, and there is only a few programmers in the office today. So they decided to play a game using their own necklace to decide who will buy lunch for everyone. The rule is simple: for each pair of consecutive beads in the necklace, we take the XOR of their numbers. A programmer's score is defined as the sum of all those XOR values. The programmer with the lowest score loses! More formally, if there are N beads and their value is denoted by A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>N</sub> in the order they are stringed together, then the score is:</p>
+<p>(A<sub>1</sub> xor A<sub>2</sub>) + (A<sub>2</sub> xor A<sub>3</sub>) + ... + (A<sub>N-1</sub> xor A<sub>N</sub>) + (A<sub>N</sub> xor A<sub>1</sub>)</p>
+<p>However, you, the most talented programmer in Frograms, Inc., is going to cheat the game by removing zero or more beads to maximize the score. What is the maximum score if you are allowed to remove some of the beads in a given necklace? Note that you cannot reorder the beads, nor leave one or less beads in a necklace.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases. The first line of the input contains T.</p>
+<p>Each test case starts with a line containing a single integer N (2 &lt;= N &lt;= 500), the number of beads on your necklace. The next line contains N integers A<sub>1</sub>, A<sub>2</sub>, ..., A<sub>N</sub>, separated by a single space.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the maximum score possible you can get in a single line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+6
+2 31 23 27 10 20</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>118</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>출제: wookayin</li>
+<li>디스크립션: Being</li>
+<li>데이터 준비: wookayin</li>
+<li>검수: Being</li>
+</ul>
+</p>
+</section>

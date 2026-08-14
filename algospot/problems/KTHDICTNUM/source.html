@@ -1,0 +1,96 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KTHDICTNUM">KTHDICTNUM</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KTHDICTNUM"><b>262</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KTHDICTNUM/"><b>38</b> (<b>14</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/19">Kureyo</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B2%BD%EC%9A%B0%EC%9D%98%EC%88%98">경우의수</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5">분할정복</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>위대한 정복자 나폴레옹은 '내 사전에 불가능이란 없다'고 말했다.그러자 한 프랑스 병사가 나폴레옹에게 질문했다: '사전에 숫자도 들어있나요?' <br/>
+그래서 나폴레옹은 사전에 숫자들도 집어넣기로 했다. 다만 사전에 숫자들을 쓰려고 하다 보니 “1 다음은 10, 10 다음은 100, 100 다음은 1000, 1000 다음은 10000 …”등으로 무한히 길어지기 때문에 나폴레옹은 자신이 좋아하는 두 음이 아닌 정수 a,b사이의 모든 정수들을 집어넣는 것으로 타협을 보았다. 그럼에도 불구하고 그 사전의 크기는 매우 방대하였고 그 사전은 단 한 권밖에 인쇄돼지 못했다. (소문에 따르면 나폴레옹의 몰락은 이 사전을 편찬하기 위해 들어간 막대한 예산의 탓도 있다고 한다.)<br/>
+당신은 세인트 헬레나 섬에서 우연히 이 사전을 발견했다. 그러자 나폴레옹의 망령이 나타나서 이렇게 말했다: '내 사전에 들어있는 k번째 숫자를 맞춰야만 이 사전을 들고 섬에서 벗어날 수 있을 것이다.’<br/>
+그리하여 당신은 생존을 위해서 본 문제를 해결해야만 한다. 단, 당신은 훌륭한 컴퓨터 공학도이고 나폴레옹도 그 사실을 알기 때문에 질문의 k는 0-indexed이다. 자세한 것은 아래 예제를 참조하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 수 T가 주어진다.<br/>
+각 테스트 케이스는 한 줄로 구성되어 있으며, 매 테스트 케이스마다 3개의 숫자 a,b,k(0 ≤ a ≤ b &lt;  2<sup>63</sup>, 0 ≤ k ≤ b – a)가 공백을 사이에 두고 입력으로 들어온다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 입력마다 정답을 한 줄에 하나씩 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1 10 0
+1 10 1
+1 10 2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+10 
+2
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

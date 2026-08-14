@@ -1,0 +1,84 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PLANET">PLANET</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PLANET"><b>32</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PLANET/"><b>14</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%202004">Stanford Local 2004</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>In a fictitious solar system consisting of star S, a planet P, and its moon M, planet P orbits in a perfect circle around star S with a revolution period of exactly T Earth days, and moon M orbits in a perfect circle around planet P with an unknown revolution period. Given the position of moon M relative to star S at three different time points, your goal is to compute the distance of planet P from star S.</p>
+<p>To do this, consider a two-dimensional Cartesian coordinate system with its origin centered at star S. You may assume that P’s counterclockwise orbit around S and M’s counterclockwise orbit around P both lie completely within the x−y coordinate plane. Let (x1, y1) denote the position of the moon M on the first observation, let (x2, y2) denote its position k1 Earth days later, and let (x3, y3) denote its position k2 Earth<br/>
+days after the second observation.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input test file will contain multiple test cases. Each test case consists of two lines. The first line contains the integers T , k1, and k2, where 1  T, k1, k2  1000. The second line contains six floating-point values x1, y1, x2, y2, x3, and y3. Input points have been selected so as to guarantee a unique solution; the final distance from planet P to star S will always be within 0.1 of the nearest integer. The end-of-file is denoted with a single line containing “0 0 0”.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each input case, the program should print the distance from planet P to star S, rounded to the nearest integer.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>360 90 90
+5.0 1.0 0.0 6.0 -5.0 1.0
+0 0 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

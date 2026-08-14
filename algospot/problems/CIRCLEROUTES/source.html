@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CIRCLEROUTES">CIRCLEROUTES</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CIRCLEROUTES"><b>40</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CIRCLEROUTES/"><b>23</b> (<b>57</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/200">Corea</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%209%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 9주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The city of Algospot has lots of circle bus routes. A circle bus route means the bus’s route ends at where it started. Donghyun runs a bus company, which will be servicing a new circle bus route. He wants to find out the minimum number of buses he needs to meet the bus schedule. The schedule works like this:</p>
+<ol>
+<li>Every day, the first bus departs from the terminal at time <span class="mathjax-preview">S</span><script type="math/tex">S</script>.</li>
+<li>After that, a new bus will depart from the terminal periodically, with a fixed interval <span class="mathjax-preview">D</span><script type="math/tex">D</script>. For example, a new bus will depart at time <span class="mathjax-preview">S</span><script type="math/tex">S</script>, <span class="mathjax-preview">S+D</span><script type="math/tex">S+D</script>, <span class="mathjax-preview">S+2D</span><script type="math/tex">S+2D</script>, and so on.</li>
+<li>The last bus of the day departs the terminal at <span class="mathjax-preview">E</span><script type="math/tex">E</script>. (You can assume the difference between <span class="mathjax-preview">E</span><script type="math/tex">E</script> and <span class="mathjax-preview">S</span><script type="math/tex">S</script> is a multiple of <span class="mathjax-preview">D</span><script type="math/tex">D</script>.)</li>
+<li>Each bus takes a fixed amount of time, <span class="mathjax-preview">C</span><script type="math/tex">C</script>, to traverse the route and come back to the terminal.</li>
+</ol>
+<p>For example, let’s assume the following scenario: the first bus departs at 05:50, and a new bus departs every 30 minutes until the last bus departs at 20:20. How many buses do we need, if it takes 65 minutes for a bus to traverse the route?</p>
+<p>The first bus departs at 05:50 and returns to the terminal at 06:55. The second bus departs at 06:20 and returns at 07:25. The third bus departs at 06:50, and returns at 07:55. The fourth bus must depart at 07:20 - but at this time, the first bus is already back in the terminal, so Donghyun only needs 3 buses to serve this schedule.</p>
+<p>Write a program to find the minimum number of buses.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input gives the number of test cases <span class="mathjax-preview">T</span><script type="math/tex">T</script>. (<span class="mathjax-preview">1 \le T \le 10\,000</span><script type="math/tex">1 \le T \le 10\,000</script>) <span class="mathjax-preview">T</span><script type="math/tex">T</script> lines follow, each containing a test case. The test case consists of four strings <span class="mathjax-preview">S</span><script type="math/tex">S</script>, <span class="mathjax-preview">E</span><script type="math/tex">E</script>, <span class="mathjax-preview">D</span><script type="math/tex">D</script> and <span class="mathjax-preview">C</span><script type="math/tex">C</script>, in the form HH:MM. <span class="mathjax-preview">S</span><script type="math/tex">S</script>, <span class="mathjax-preview">E</span><script type="math/tex">E</script> (<span class="mathjax-preview">S \le E</span><script type="math/tex">S \le E</script>) represent the time of the first and the last bus, respectively. <span class="mathjax-preview">D</span><script type="math/tex">D</script> and <span class="mathjax-preview">C</span><script type="math/tex">C</script> (<span class="mathjax-preview">0 &lt; D</span><script type="math/tex">0 < D</script>, <span class="mathjax-preview">0 &lt; C</span><script type="math/tex">0 < C</script>) each represent the time interval between buses, and the time it takes a bus to traverse the route.</p>
+<p>In each string HH:MM, HH represents the hour part of the time (or time interval), and MM represents the minute part. Concretely, HH will be a zero-padded integer between <span class="mathjax-preview">0</span><script type="math/tex">0</script> and <span class="mathjax-preview">23</span><script type="math/tex">23</script> (<span class="mathjax-preview">00</span><script type="math/tex">00</script>, <span class="mathjax-preview">01</span><script type="math/tex">01</script>, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script>, <span class="mathjax-preview">23</span><script type="math/tex">23</script>). Likewise, MM will be a zero-padded integer between <span class="mathjax-preview">0</span><script type="math/tex">0</script> and <span class="mathjax-preview">59</span><script type="math/tex">59</script> (<span class="mathjax-preview">00</span><script type="math/tex">00</script>, <span class="mathjax-preview">01</span><script type="math/tex">01</script>, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script>, <span class="mathjax-preview">59</span><script type="math/tex">59</script>).</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print a single line per each test case, containing the minimum number of buses required for the schedule.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+05:50 20:20 00:30 01:05
+05:50 20:20 00:30 01:00
+05:00 20:00 15:00 16:00
+01:00 23:00 00:10 21:39</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3
+2
+2
+130</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

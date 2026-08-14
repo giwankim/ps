@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "SPACE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:18:58.927210Z",
+    "http_status": 200,
+    "semantic_html_sha256": "54a3427c1968c64105f892f322c3a18ad8d5e57e33e3eefb7623f2e804fce953"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/SPACE",
+  "statistics": {
+    "acceptance_percent": 21,
+    "accepted": 31,
+    "submissions": 142
+  },
+  "tags": [],
+  "title": "우주 개발의 길은 멀고도 멀다"
+}

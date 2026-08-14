@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MVP">MVP</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MVP"><b>122</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MVP/"><b>28</b> (<b>22</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The season of professional programming league has just ended and it’s time for the MVP(Most Valuable Programmer) voting! There are n newspapers reporters who can vote, and the number of candidate programmers is m.</p>
+<p>The voting process will be in several stages:</p>
+<ul>
+<li>Each reporter sorts the list of programmers in his/her preference, and will vote for the most preferred programmer on his list.</li>
+<li>If the programmer has eliminated in former stage, he/she will vote for the second most preferred programmer.</li>
+<li>If that programmer’s also eliminated, he/she will vote for the third most preferred programmer, and so on.</li>
+</ul>
+<p>After each stage, the programmers who got the least number of votes will be eliminated. In case of tie, all programmers tied at the least number of votes will be eliminated. However, if all candidate programmers have the same number of votes, all of them will share the MVP title and the voting process also ends.</p>
+<p>Given each reporter’s sorted list, compute who will be the MVP.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases. The number of test cases T(1 &lt;= T &lt;= 100) is given in the first line of the input. In the first line of each case, two integer n (1 &lt;= n &lt;= 100) and m (3 &lt;= m &lt;= 10) will be given. In the next n lines, the preference list of each reporter will be given. Each number is in the range of 1 and m, and no number is repeated. The first number in the list represents the reporter’s most preferred programmer, and the m-th number will represent the least preferred programmer.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case. For each test case, print the number of the MVP(s) in increasing order. Separate each player’s number by a single space, and do not print any heading/trailing whitespace(s).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5 3
+1 2 3
+3 1 2
+1 3 2
+2 1 3
+2 3 1
+3 3
+1 2 3
+2 3 1
+3 1 2
+8 5
+3 1 5 4 2
+2 4 3 1 5
+4 2 5 1 3
+1 3 5 2 4
+5 2 1 3 4
+3 1 2 4 5
+2 5 4 3 1
+5 2 4 3 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+1 2 3
+2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

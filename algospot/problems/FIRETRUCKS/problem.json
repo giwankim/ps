@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/1c4b6ad153d9b5a0-fire_trucks.png",
+      "sha256": "6f197e6d3fa0d2588fc211677f3963a544f105cde4108e26dfe955d567e4cad0",
+      "source_url": "https://algospot.com/media/judge-attachments/6b8e03be0c11199d7c39e153f553181a/fire_trucks.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "FIRETRUCKS",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:44.024939Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e7fd28b7be846a7983e8828006d6ecf48352447266e137ce80bfbd3cd51100e3"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/FIRETRUCKS",
+  "statistics": {
+    "acceptance_percent": 41,
+    "accepted": 988,
+    "submissions": 2364
+  },
+  "tags": [
+    "그래프",
+    "최단거리"
+  ],
+  "title": "소방차"
+}

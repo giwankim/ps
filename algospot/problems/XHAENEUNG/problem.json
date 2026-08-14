@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "XHAENEUNG",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:32:03.574330Z",
+    "http_status": 200,
+    "semantic_html_sha256": "a18fcdb41a1134429de01622871549eccfd4b0a5b656fe4f544d1b2adaebaa5d"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/XHAENEUNG",
+  "statistics": {
+    "acceptance_percent": 26,
+    "accepted": 2049,
+    "submissions": 7851
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "째능 교육"
+}

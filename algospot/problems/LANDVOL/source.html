@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LANDVOL">LANDVOL</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LANDVOL"><b>25</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LANDVOL/"><b>8</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C2%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제2회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Recently, Frograms Inc. acquired a calm and beautiful uninhabited island in the Pacific Ocean to set up their new headquarter office. Before embarking on the construction, we want to come up with a good disaster plan. Luckily, the new office is architected to resist catastrophes such as hurricane, earthquake, and nuclear plant meltdowns. But there is one thing we haven't considered yet; the global warming.</p>
+<p>Experts agree that in the future, as the average temperature of Earth rises, the ice sheets in Antartica and Greenland will melt and the global sea level will rise up to 6 meters. We want to avoid the situation in which our office gets underwater.</p>
+<p>Therefore, you are given with the following task: given a <strong>heightmap</strong> of the island, calculate the  volume of the land mass above sea level after the sea level rises by <em>L</em> meters, approximated from using <strong>triangulated terrains</strong> from a <strong>heightmap</strong>. If you don't know what <strong>heightmap</strong>s or <strong>triangulated terrains</strong> are, don't worry and read on.</p>
+<p><img alt="" src="http://algospot.com/media/judge-attachments/6c22d963d622f7596853efb233349734/heightmap-grid.png"/></p>
+<p>To measure the terrain landscape, a commercial satelite will scan a rectangular area of R-1 meters by C-1 meters. (You can be sure that this area will completely enclose the island.) The area is then divided into an uniform grid with RxC grid points, and the satelite will measure the elevation above sea level (in <em>centimeters</em>) at every grid point. The above figure gives such an example; the elevation will be measured for every red point in the grid. The resulting 2D array is called a <strong>heightmap</strong>, and this will be given as your input. </p>
+<p>Given a heightmap, there are multiple ways to approximate the actual shape of the terrain. One obvious way is to assume that each point in a heightmap correspond to a 1x1 meter square with the given elevation (if you know what it is, think Minecraft) -- but those approximations are too crude.</p>
+<p>Another way that is still simple, but gives a better precision is approximating the surface as a set of triangles in the 3D space. We can do it as follows: let's take all the squares in the grid, and cut them diagonally to make two congruent triangles. For any square with four corners at (r,c), (r+1,c), (r,c+1) and (r+1,c+1), we cut them through the line passing (r+1,c) and (r,c+1). See below for an example.</p>
+<p><img alt="" src="http://algospot.com/media/judge-attachments/7605b60b9fc82909e045d9ef7be46194/heightmap-grid2.png"/></p>
+<p>After that, we can shift each grid point in the 3D space vertically to match its measured height. Now, each triangle connects three points in the 3D space. This is how we approximate the shape of the terrain.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases. The number of test cases T is given in the first line of the input.</p>
+<p>The first line of each test case will contain three integers R, C (3 &lt;= R, C &lt;= 100) and L (0 &lt;= L &lt;= 2<sup>16</sup> - 1). The following R lines will contain the heightmap. Each of those lines will contain C nonnegative integers H<sub>r, c</sub> (0 &lt;= H<sub>r, c</sub> &lt;= 2<sup>16</sup> - 1), representing the elevation of the point above sea level, in <em>centimeters</em>.</p>
+<p>Since the island is on the sea, the measurements at the border of the heightmap are always zero.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print exactly one line for each test case. The line should contain the volume of the land in unit of cubic meters(m<sup>3</sup>), assuming the sea level has risen by L meters (including lakes). Your result should be accurate to within a relative or absolute error of 10<sup>-8</sup>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 3 0
+0 0 0
+0 100 0
+0 0 0
+4 5 50
+0 0 0 0 0
+0 100 50 50 0
+0 50 100 50 0
+0 0 0 0 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1.00000000000
+0.58333333333</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>출제: Being</li>
+<li>디스크립션 작성: JongMan</li>
+<li>검수: astein, altertain</li>
+<li>그림: JongMan</li>
+</ul>
+</p>
+</section>

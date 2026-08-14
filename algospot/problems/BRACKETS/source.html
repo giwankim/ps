@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BRACKETS">BRACKETS</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BRACKETS"><b>733</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BRACKETS/"><b>170</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%202004">Stanford Local 2004</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>We give the following inductive definition of a “regular brackets” sequence:</p>
+<ul>
+<li>the empty sequence is a regular brackets sequence,</li>
+<li>if <span class="mathjax-preview">s</span><script type="math/tex">s</script> is a regular brackets sequence, then <span class="mathjax-preview">(s)</span><script type="math/tex">(s)</script> and <span class="mathjax-preview">[s]</span><script type="math/tex">[s]</script> are regular brackets sequences, and</li>
+<li>if <span class="mathjax-preview">a</span><script type="math/tex">a</script> and <span class="mathjax-preview">b</span><script type="math/tex">b</script> are regular brackets sequences, then <span class="mathjax-preview">ab</span><script type="math/tex">ab</script> is a regular brackets sequence.</li>
+<li>no other sequence is a regular brackets sequence</li>
+</ul>
+<p>For instance, all of the following character sequences are regular brackets sequences:</p>
+<pre><code>(), [], (()), ()[], ()[()]</code></pre>
+<p>while the following character sequences are not:</p>
+<pre><code>(, ], )(, ([)], ([(]</code></pre>
+<p>Given a brackets sequence of characters <span class="mathjax-preview">a_1, a_2, \cdots, a_n</span><script type="math/tex">a_1, a_2, \cdots, a_n</script>, your goal is to find the length of the longest regular brackets sequence that is a subsequence of <span class="mathjax-preview">s</span><script type="math/tex">s</script>. That is, you wish to find the largest <span class="mathjax-preview">m</span><script type="math/tex">m</script> such that for indices <span class="mathjax-preview">i_1, i_2, \cdots, i_m</span><script type="math/tex">i_1, i_2, \cdots, i_m</script> where <span class="mathjax-preview">1 \le i_1 &lt; i_2 &lt; \cdots &lt; i_m \le n</span><script type="math/tex">1 \le i_1 < i_2 < \cdots < i_m \le n</script>, <span class="mathjax-preview">a_{i_1}, a_{i_2}, \cdots, a_{i_m}</span><script type="math/tex">a_{i_1}, a_{i_2}, \cdots, a_{i_m}</script> is a regular brackets sequence.</p>
+<p>For an example, given the initial sequence <code>([([]])]</code>, the longest regular brackets subsequence is <code>[([])]</code>.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input test file will contain multiple test cases. Each input test case consists of a single line containing only the characters (, ), [, and ]; each input test will have length between 1 and 100, inclusive. The end-of-file is marked by a line containing the word “end” and should not be processed.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each input case, the program should print the length of the longest possible regular brackets subsequence on a single line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>((()))
+()()()
+([]])
+)[)(
+([][][)
+end</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>6
+6
+4
+0
+6</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

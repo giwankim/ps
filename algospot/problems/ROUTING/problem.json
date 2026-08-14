@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/3a08dee4cd30640d-delivery7.png",
+      "sha256": "6792db2168016bfbf64a08d37f944c9dbd6827734587ffef29e46d994269f77c",
+      "source_url": "http://algospot.com/media/judge-attachments/97b28a9bc67d610b59be1fc7e9a39841/delivery7.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ROUTING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:14:05.895973Z",
+    "http_status": 200,
+    "semantic_html_sha256": "d081c372d601349f09b84c2096392f5d863175e3400b2f2b153419b872f1e162"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ROUTING",
+  "statistics": {
+    "acceptance_percent": 18,
+    "accepted": 1632,
+    "submissions": 8805
+  },
+  "tags": [
+    "그래프"
+  ],
+  "title": "신호 라우팅"
+}

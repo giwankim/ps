@@ -1,0 +1,109 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WORDLENGTH">WORDLENGTH</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WORDLENGTH"><b>1606</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WORDLENGTH/"><b>191</b> (<b>11</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=TopCoder">TopCoder</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>(주의: 이 문제는 TopCoder SRM 202 Div 1 Easy 의 번역입니다)</p>
+<p>단어들의 길이는 어떤 문장이 어렵게 쓰여진 문장인지, 쉬운 문장인지를 가르는 데 좋은 척도가 됩니다. 예를 들어, 초등학교 교과서에는 obtain, manufacture 등의 단어를 쓰는 것보다 get, make 등의 더 짧은 단어를 사용하는 것이 적합합니다. 이를 위해 영어 문장에 쓰인 단어의 평균 길이를 계산하려고 합니다.</p>
+<p>영어 문장은 여러 줄로 나뉘어 있고, 알파벳 소문자와 빈칸, 그리고 - 만을 포함합니다. 기본적으로 연속되는 두 줄에 쓰인 단어들은 연결되지 않지만, - 을 사용해 두 개 이상의 줄로 나뉜 단어를 연결할 수 있습니다. 만약 어떤 줄의 마지막 글자가 - 이고, 그 앞 글자가 알파벳이며, 다음 줄의 첫 글자가 알파벳이라면 두 글자는 같은 단어에 속하는 것으로 가정합니다. 예를 들어</p>
+<pre><code>extermi-
+nate</code></pre>
+<p>는 한 단어인 exterminate 라고 봅니다. 반면</p>
+<pre><code>global equali -
+zation</code></pre>
+<p>에는 세 개의 단어가 있습니다. 문장들이 주어질 때 단어의 평균 길이를 계산하는 프로그램을 작성하세요. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (&lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄엔 해당 문장의 줄 수 N (&lt;= 50) 이 주어지며, 그 후  줄에 문장들이 주어집니다. 각 문장의 길이는 0 이상 80 이하이며, 빈칸, 알파벳 소문자, 그리고 - 만으로 구성됩니다. 각 테스트 케이스에는 단어가 하나 이상 존재합니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 단어의 평균 길이를 소숫점 네번째 자리에서 반올림해 출력하세요.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+3
+hello-$
+there-$
+world$
+4
+a-$
+-$
+-$
+b$
+3
+i am ver-$
+y sleepy arent-$
+ you$ 
+1
+jong-man rules$
+
+(주의: 위 입력의 $ 기호는 줄바꿈을 보여주기 위해 추가한 것이며, 실제 입력에는 존재하지 않습니다. )</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>15.000
+1.000
+3.500
+4.000</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

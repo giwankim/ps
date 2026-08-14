@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/f1f6ab5bb8aee058-500px-Kakuro_black_box.svg_032__040_1_041_.png",
+      "sha256": "661caf9419239136de56221390daf74a4a115c92c8bca3deccacf59681b23ea8",
+      "source_url": "http://algospot.com/media/judge-attachments/c546f52aba0339eb3808dbfc11de334a/500px-Kakuro_black_box.svg_032__040_1_041_.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "KAKURO1",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:40:50.314470Z",
+    "http_status": 200,
+    "semantic_html_sha256": "af2d890cd7f95ddeec5586aab29897d37cb60bac10019c05a5eada37708c43a7"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/KAKURO1",
+  "statistics": {
+    "acceptance_percent": 33,
+    "accepted": 153,
+    "submissions": 458
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "Kakuro I"
+}

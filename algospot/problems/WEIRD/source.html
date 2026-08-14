@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WEIRD">WEIRD</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WEIRD"><b>8530</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WEIRD/"><b>1263</b> (<b>14</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%201%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 1주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%88%98%ED%95%99">수학</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>In mathematics, weird numbers are natural numbers that are abundant but not semiperfect. In other words, a natural number N is a weird number if and only if:</p>
+<ul>
+<li>Sum of its proper divisors (i.e. less than N ) is greater than the number.</li>
+<li>No subset of its divisors sum to N.</li>
+</ul>
+<p>For example, the set of proper divisors of 12 is { 1, 2, 3, 4, 6 } . The sum of these numbers exceed 12, however, 12 is not a weird number since 1 + 2 + 3 + 6 = 12.<br/>
+However, 70 is a weird number since its proper divisors are {1, 2, 5, 7, 10, 14, 35} and no subset sums to 70 .</p>
+<p>Write a program to determine if the given numbers are weird or not.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>In the first line of input, the number of test cases C ( &lt;= 200 ) is given. In each of the following C lines, a natural number N_i is given. All input numbers are greater than 1, and less than or equal to 500,000 .</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Output will consist of C lines, each line containing either weird or not weird , denoting the weird-ness of the corresponding input.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+12
+70</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>not weird
+weird</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

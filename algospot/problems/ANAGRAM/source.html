@@ -1,0 +1,89 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ANAGRAM">ANAGRAM</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ANAGRAM"><b>3371</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ANAGRAM/"><b>835</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/13">legend12</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%204%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 4주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Algospot Inc. is planning to launch a new product iWook on September 2011. iWook, is a diskless desktop computer and will be used by geek CS major students around the world. To classify each device, a unique serial number is assigned.</p>
+<p>Wookayin, the tech lead of iWook, decided that the password for a iWook device must use all letters from the device’s serial number exactly once in a case-sensitive way, and <strong>not</strong> in the same order as the original number (*Obviously, in the real world, it’s a faily bad security practice to enforce such restrictions to passwords.*)</p>
+<p>Algospot Inc. just hired you to write a program to verify passwords entered by users. For a successful launch, develop the perfect verifier ASAP!</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of <em>T</em> test cases. The number of test cases <em>T</em> is given in the first line of the input.</p>
+<p>The following <em>T</em> lines will each contain two strings, the first of which being the serial number of the device, and the second being a password entered by a user for the device.</p>
+<p>Both strings will only contain alphanumeric characters, and will not exceed 100 characters in length.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print a single line. If the given password is valid for the device, print <strong>“Yes”</strong> (quotes are for clarity). Otherwise, print <strong>“No.”</strong>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+weird wired
+apple angle
+apple elppa</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Yes
+No.
+Yes</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

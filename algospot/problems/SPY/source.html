@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SPY">SPY</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SPY"><b>8</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SPY/"><b>2</b> (<b>25</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Fall%202009">RUN Programming Contest, Fall 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>10 월 31일, RUN에서 파견된 스파이 M명이 접선 장소인 첨단 프로그래밍 도시 Algospot에 모였다. 그들은 신속하게 회의를 끝냈고, 내일부터 다시 RUN으로 돌아가려고 한다. 그들은 이동할 때, 항상 기차를 이용한다. 기차 노선은 매일 똑같이 K개가 있고, 노선은 '출발 도시, 출발 시간, 도착 도시, 도착 시간' 4가지 정보로 구성된다.</p>
+<p>스파이들은 기차를 갈아타기 전에 시간이 남으면, 기차역 안에 머무르면서 다음 기차를 기다린다. 그리고 시간이 남지 않으면, 기차역 안에 머무르지 않고, 바로 다음 기차에 탑승한다. 스파이들은 보안을 철저히 하기 위해, 서로의 이동 경로가 겹치지 않도록 하고 싶다. 그래서 그들은 두 사람 이상이 같은 기차를 타지 않고, 두 사람 이상이 같은 시간에 같은 기차역에 머무르지 않는다. (단, 접선 장소인 Algospot과 RUN은 예외로 두 명 이상이 같이 머무를 수 있다.)</p>
+<p>스파이들을 막기 위해 국제적인 경찰 조직 ICPC는 매일 똑같은 시간에 기차역을 통제한다. 기차역 통제는 '통제될 도시, 시작 시간, 끝 시간' 3가지 정보로 구성된다. 통제에 들어간 도시는 스파이가 머무를 수 없다. 단, 기차에서 내리자마자 다른 기차로 갈아타는 것은 가능하다. (스파이들은 재빠르다.) 그리고 접선 장소인 Algospot과 RUN은 통제되지 않는다.</p>
+<p>모든 스파이가 RUN으로 돌아가려면 최소 며칠이 걸리겠는가?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에는 테스트 케이스의 개수 T가 주어진다. ( T &lt;= 50 )<br/><br/>
+ 각 테스트 케이스의 첫 번째 줄에는 도시의 개수 N과 스파이의 수 M이 주어지고, 다음 줄에 기차 노선의 개수 K가 주어진다. ( 2 &lt;= N &lt;= 30, 1 &lt;= M &lt;= 30, 0 &lt;= K &lt;= 500 )<br/><br/>
+ 그 다음 K 줄에 걸쳐서 노선 정보가 '출발 도시, 출발 시간, 도착 도시, 도착 시간' 순서로 주어진다.<br/><br/>
+ 모든 도시는 알파벳 소문자와 숫자로 이루어진 문자열로 주어지고, 모든 시간은 0000부터 2359까지 시와 분을 합친 숫자로 주어진다. 도착 시간은 항상 출발 시간보다 늦다.<br/><br/>
+ 도시 이름은 10글자를 넘지 않고, algospot과 run은 모든 테스트 케이스에 등장한다.<br/><br/>
+ 그 다음 줄에는 통제 정보의 개수를 의미하는 자연수 L이 주어진다. ( 0 &lt;= L &lt;= 200 )<br/><br/>
+ 그 다음 L 줄에는 통제 정보가 '통제될 도시, 시작 시간, 끝 시간' 3가지 숫자로 주어진다.<br/><br/>
+ 통제될 도시 이름 중에 run이나 algospot은 없다. 모든 시간은 0000 부터 2359까지 시간과 분을 합친 숫자로 주어진다. 끝 시간은 항상 시작 시간보다 늦다.<br/></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>모든 스파이가 RUN으로 돌아가는 데 필요한 일 수를 출력한다. 모든 스파이가 돌아가는 게 불가능하면 -1을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 3
+6
+algospot 0000 seoul 0030
+algospot 0200 daejeon 0700
+algospot 1300 run 2100
+seoul 0100 daejeon 0500
+daejeon 0800 run 1200
+daejeon 0700 run 1500
+1
+daejeon 0600 0800
+3 3
+6
+algospot 0000 seoul 0030
+algospot 0200 daejeon 0700
+algospot 1300 run 2100
+seoul 0100 daejeon 0500
+daejeon 0800 run 1200
+daejeon 0700 run 1500
+0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

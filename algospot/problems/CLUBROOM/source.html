@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CLUBROOM">CLUBROOM</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CLUBROOM"><b>210</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CLUBROOM/"><b>45</b> (<b>21</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2585">mjy0503</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%EA%B0%84%ED%8A%B8%EB%A6%AC">구간트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>2차원 평면상에 존재하는 KAIST에는 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 복지시설과 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 동아리방(이하 동방)이 있다. 복지시설과 동방은 2차원 상의 좌표 <span class="mathjax-preview">(x,y)</span><script type="math/tex">(x,y)</script> 로 표현된다. 가을학기가 개학하고, 동아리연합회에서는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 동아리 회장들을 불러 각각 하나의 동방을 선택하게 하였다. <span class="mathjax-preview">N</span><script type="math/tex">N</script>명의 동아리 회장들은 도착한 순서대로 <span class="mathjax-preview">1,2,...,N</span><script type="math/tex">1,2,...,N</script> 이라는 번호를 부여받았으며, 번호 <span class="mathjax-preview">i</span><script type="math/tex">i</script>를 가진 사람은 <span class="mathjax-preview">i</span><script type="math/tex">i</script>번째로 동방을 선택할 수 있게 되었다. </p>
+<p>동아리연합회에서는 각 회장들이 어느 동방을 선택했는지 지켜보았고, 그들이 좋은 동방을 선택했는지 조사해보기로 하였다. <span class="mathjax-preview">i</span><script type="math/tex">i</script>번째 회장이 선택한 동방을 <span class="mathjax-preview">A_i</span><script type="math/tex">A_i</script>라 하자. 이 동방이 좋은 동방임은, 앞서 선택된 모든 동방 <span class="mathjax-preview">A_1, A_2, \cdots, A_{i-1}</span><script type="math/tex">A_1, A_2, \cdots, A_{i-1}</script> 중 그 어떤 임의의 동방 <span class="mathjax-preview">A_j</span><script type="math/tex">A_j</script>에 대해서도 모든 편의시설 <span class="mathjax-preview">P_k (1 \le k \le M)</span><script type="math/tex">P_k (1 \le k \le M)</script>에 대해 <span class="mathjax-preview">\mathrm{dist}(A_i, P_k) &gt; \mathrm{dist}(A_j, P_k)</span><script type="math/tex">\mathrm{dist}(A_i, P_k) > \mathrm{dist}(A_j, P_k)</script> 이지 않음으로 정의된다. 다시 말해 자신보다 앞서 선택한 어떤 동아리방이 모든 편의시설과의 거리가 자신의 선택보다 전부 작다면 그 동방은 나쁜 동방이다. 이 때, 두 지점 사이의 거리는 <span class="mathjax-preview">\mathrm{dist}((x_{1},y_{1}),(x_{2},y_{2}))=\max(|x_{1}-x_{2}|,|y_{1}-y_{2}|)</span><script type="math/tex">\mathrm{dist}((x_{1},y_{1}),(x_{2},y_{2}))=\max(|x_{1}-x_{2}|,|y_{1}-y_{2}|)</script> 로 정의한다.</p>
+<p><img alt="동방_예제" src="/media/judge-attachments/7e7aab1131d0e65e6d5a3f0bc8baf763/clubroomex.png"/> </p>
+<p>예를 들어, 위와 같은 그림에서 검은점이 복지시설, 흰점이 동방들의 후보라고 하자. 1번째 회장이 <span class="mathjax-preview">(2,3)=B</span><script type="math/tex">(2,3)=B</script>을 선택하였고, 2번째 회장이 <span class="mathjax-preview">(1,5)=A</span><script type="math/tex">(1,5)=A</script>를 동방으로 선택하였다면 <span class="mathjax-preview">\mathrm{dist}(A,1)=3&gt;1=\mathrm{dist}(B,1), \mathrm{dist}(A,2)=2&gt;1=\mathrm{dist}(B,2)</span><script type="math/tex">\mathrm{dist}(A,1)=3>1=\mathrm{dist}(B,1), \mathrm{dist}(A,2)=2>1=\mathrm{dist}(B,2)</script> 가 되므로 <span class="mathjax-preview">A</span><script type="math/tex">A</script>는 나쁜 동방이 된다.</p>
+<p>당신에게 복지시설들의 위치, 각 동아리 회장들이 어느 동방을 선택했는지가 도착한 순서대로 주어진다. <span class="mathjax-preview">N</span><script type="math/tex">N</script> 명의 동아리 회장들이 좋은 동방을 선택했는지, 나쁜 동방을 선택했는지 구별해 보자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.<br/>
+각 테스트 케이스에 대해, 복지시설의 개수 <span class="mathjax-preview">M(1 \le M \le 100)</span><script type="math/tex">M(1 \le M \le 100)</script>, 동방의 개수 <span class="mathjax-preview">N(1 \le N \le 100,000)</span><script type="math/tex">N(1 \le N \le 100,000)</script>이 주어진다.<br/>
+그 다음 <span class="mathjax-preview">M</span><script type="math/tex">M</script>줄에는 각 복지시설의 좌표가 주어진다. 그리고 그 다음 <span class="mathjax-preview">N</span><script type="math/tex">N</script>줄에는 동방의 좌표가 주어진다. 이는 1번째 동아리 회장이 선택한 동방 위치, 2번째 동아리 회장이 선택한 동방 위치, <span class="mathjax-preview">\cdots</span><script type="math/tex">\cdots</script> , <span class="mathjax-preview">N</span><script type="math/tex">N</script>번째 동아리 회장이 선택한 동방 위치를 의미한다. 모든 좌표는 1이상 1024이하의 정수이며 서로 좌표가 겹치는 경우는 없다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 각 <span class="mathjax-preview">N</span><script type="math/tex">N</script>명의 회장이 뽑은 동방이 좋은 동방이면 '<code>G</code>' 나쁜 동방이면 '<code>B</code>'를 공백으로 구분하여 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1 2
+3 1
+1 1
+2 3
+2 4
+1 2
+3 4
+1 5
+2 3
+3 6
+5 2
+2 3
+3 3
+6 7
+6 6
+4 4 
+5 5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>G G
+G G B B
+G G G</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

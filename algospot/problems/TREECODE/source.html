@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/TREECODE">TREECODE</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=TREECODE"><b>26</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/TREECODE/"><b>7</b> (<b>26</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Taeyoon, a professional computer programmer, has made a problem related to the binary tree structure in the latest contest. After writing the problem description and the judge solution, he had to make test cases which would be used in the contest. However, making various tree structure was not an easy problem. After long and thoughtful consideration, he finally came up with an idea called the <b>tree code</b>.</p>
+<p>Consider a simple binary tree with a single (root) node. Then, we can choose one of the two branches in order to add a node.</p>
+<p><img alt="1.png" src="http://algospot.com/media/judge-attachments/e5b8c1ec9f9e2461abea6d356aa8aa41/1.png"/></p>
+<p>After adding a child node to the root, now the tree has two nodes. Then again, we can choose one of the three branches to add another node.</p>
+<p><img alt="2.png" src="http://algospot.com/media/judge-attachments/defb6f1fd3f26c87435ae872cf5d8957/2.png"/></p>
+<p>Put differently, if we want to add a new node to the current binary tree with K nodes, we should choose one of the K+1 branches. As we can see from the figure below, these K+1 branches can be labeled using numbers between 0 and K, inclusive, according to their appearance in the in-order search performed on the tree (informally, the left-most node will be labeled as 0 as in the figure below). </p>
+<p><img alt="3.png" src="http://algospot.com/media/judge-attachments/58a48d45ff2c3c37f81add65f1482af6/3.png"/></p>
+<p>As we build a binary tree from a single root node, if we record the sequence of the branch numbers to which we add a new node, then the resulted string can describe a binary tree we end up with. This string is called the <b>tree code</b> for the binary tree we construct. </p>
+<p>A tree code consists of numbers and uppercase alphabets. Branch numbers 0 to 9 are described as '0' to '9', and 10 to 35 as 'A' to 'Z'. One tree code can uniquely describe a binary tree, but a tree can be described by a number of different tree codes. For example, both 02 and 10 describe the binary tree consisting of a root and its two children. </p>
+<p>You are given a binary tree and asked to find the lexicographically M-th tree code that describes the given tree. </p>
+<p>A tree code A is lexicographically smaller than a tree code B of the same length if the i-th character of A is smaller than the i-th character of B where i is the first position where A and B differ ('0' is smaller than '1').  Character-wise, a numeric digit (0-9) is lexicographically smaller than any alphabet.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases.<br/>
+The number of test cases T is given in the first line of the input.<br/>
+The first line of each test case contains a tree code describing a binary tree, and an integer M(1 &lt;= M &lt;= 10^18). <br/>
+Each tree code will contain at least one character, and its length will not exceed 36.  You can assume that all tree codes given in the input data are valid.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case.<br/>
+The line should contain the lexicographically M-th tree code which can describe the given tree.<br/>
+If the number of tree codes that describe the given tree is smaller than M, print 'IMPOSSIBLE'(without quotation marks).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+02 2
+1010 4	
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10
+0130	
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

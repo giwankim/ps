@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NPOLY">NPOLY</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NPOLY"><b>126</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NPOLY/"><b>81</b> (<b>64</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=YUTAR%20Local%202009">YUTAR Local 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>정사각형들의 변들을 서로 완전하게 붙여 만든 도형들을 폴리오미노 (Polymino)라고 부릅니다. n개의 정사각형으로 구성된 폴리오미노들을 만드려고 하는데, 이 중 세로로 단조 (montone)인 폴리오미노의 수가 몇 개나 되는지 세고 싶습니다. 세로로 단조라는 말은, 어떤 가로줄도 폴리오미노를 두 번 이상 교차하지 않는다는 뜻입니다. 그런데, 미적인 이유 때문에 그 중에서도 세로로 대칭인 폴리오미노는 세고 싶지 않습니다. 이와 같은 조건을 만족하는 폴리오미노의 수를 계산하는 프로그램을 작성하세요.</p>
+<p><img src="http://algospot.com/media/judge-attachments/e00ab15f9d7b869cf99cff531355d3eb/yutarlocalb.png" width="90%"/></p>
+<p>예를 들어, 위 그림에서 (a)는 정상적인 세로 단조 폴리오미노입니다. 그러나, (b)는 점선이 폴리오미노를 두번 교차하기 때문에 세로 단조 폴리오미노가 아닙니다. (c)는 맨 오른쪽 아래 있는 정사각형이 다른 정사각형과 변을 완전히 맞대고 있지 않기 때문에 폴리오미노가 아닙니다. (d)는 내부에 빈 공간이 있는 폴리오미노로, 세로 단조 폴리오미노가 아닙니다. (e)는 세로 단조 폴리오미노이지만, 세로로 대칭이기 때문에 세지 않습니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 50)가 주어집니다. 그 후 각 줄에,  폴리오미노를 구성할 정사각형의 수 n (1 &lt;= n &lt;= 100)가 주어집니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다, n 개의 정사각형으로 구성된 세로 단조 폴리오미노 중 세로 대칭이 아닌 것의 수를 출력합니다. 이 수가 20090711보다 같거나 클 경우 20090711로 나눈 값을 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+2
+4
+92</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0
+14
+10202127</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

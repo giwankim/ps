@@ -1,0 +1,127 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PLUGIN">PLUGIN</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PLUGIN"><b>102</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PLUGIN/"><b>35</b> (<b>34</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A1%B0%ED%95%A9%ED%83%90%EC%83%89">조합탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Consider a socket having X rows of pin-holes, and a sensor having X rows of pins. Some pin-holes on the socket may not be hollow, which do not allow a pin to be plugged in (because a pin can only be plugged into a hollow pin-hole). Similarly, some pins on the sensor might be missing. A sensor can be connected to a socket if all pins could be plugged into corresponding pin-holes.</p>
+<p align="center"><img src="http://algospot.com/media/judge-attachments/e7f9769fae8b1e2438c0a73974f4eb10/Problem1Fig1.png"/></p>
+<p>For example, a socket with 5 pin-holes being not hollow and a sensor with 6 missing pins are in the figure.<br/>
+This sensor could be connected to the socket because for all 9 pins it has, the socket has corresponding hollow pin-holes (here, the correspondence is remarked by numbers from 1 to 15). Note that the pin #6 is missing in the sensor while the pin-hole #6 is hollow, but it can still be connected.</p>
+<p>Given 3 sockets and 3 sensors, write a program to determine whether the three sensors can be connected to the three sockets. Each sensors could be connected to any socket, but all three sensors must be connected to distinct sockets simultaneously.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases. The number of test cases T is given in the first line of the input. The first line of each test case contains two integers X and Y (3 &lt;= X, Y &lt;=  10), where Y is the number of pin-holes and pins in each row.</p>
+<p>The next 3X lines describe the three sensors in binary representation, such that the first X lines for the first sensor, the following X lines for the second sensor, and the last X lines for the third sensor. Each row will contain a binary string of length Y where 0 indicates that the pin is missing and 1 indicates that there is a pin. </p>
+<p>The next 3X lines describe the three sockets in the same manner. For sockets, 0 indicates that the hole is not hollow and 1 indicates that it is hollow.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case. For each test case, print ‘YES’(quotations for clarification only) if it is possible to connect all three sensors. Otherwise, print ‘NO’.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 5
+00000
+01010
+00110
+00000
+10101
+11111
+00111
+00000
+01001
+00000
+01110
+01110
+00011
+10111
+11111
+01111
+00000
+01111
+3 3
+000
+011
+000
+010
+010
+000
+000
+110
+000
+000
+010
+010
+000
+110
+000
+000
+110
+000</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+NO
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

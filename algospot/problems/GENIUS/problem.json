@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "GENIUS",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 20000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:28:45.660478Z",
+    "http_status": 200,
+    "semantic_html_sha256": "afc0d852b4202c81bf71fbf29ed608104654326d96f331114241ad4da660b1f3"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/GENIUS",
+  "statistics": {
+    "acceptance_percent": 27,
+    "accepted": 394,
+    "submissions": 1458
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "지니어스"
+}

@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CIV5">CIV5</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CIV5"><b>580</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CIV5/"><b>49</b> (<b>8</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010%20-%20Practice%20Session">Algospot ICPC Daejeon Regional Warmup 2010 - Practice Session</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img alt="civ5.jpg" src="http://algospot.com/media/judge-attachments/9920051cd64858667ce4e78e212445e9/civ5.jpg"/></p>
+<p><b>Civilization V</b> has hexagonal grids, different from the previous <b>Civilization</b> game series. </p>
+<p>You would like to know the number of shortest paths from grid cell A to grid cell B where the grid plane is infinitely large (there is no bound).  From each grid cell, you can only move to its one of the six adjacent grid cells, and you can always move to one of them (e.g. nothing prevents you from moving between any pair of adjacent cells).  </p>
+<p>Two paths from grid cell A to B are considered different if one of the paths visits a grid cell that is not visited by the other path.  </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line contains the number of test cases T.  Each test case is given by a single line that contains four integers x_1, y_1, x_2, y_2 where (x_1, y_1) denotes the coordinates of cell A and (x_2, y_2) denotes the coordinates of cell B.  The absolute values of the coordinates will not exceed 100,000. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, output the number of shortest paths from cell A to B.  The answers are guaranteed to be no greater than 2^31 - 1. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+0 0 3 4
+5 2 0 2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>35
+1
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CLEANING">CLEANING</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CLEANING"><b>216</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CLEANING/"><b>43</b> (<b>19</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2585">mjy0503</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EC%9C%A0%EB%9F%89">네트워크유량</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>대부분의 KAISTIAN들은 방청소를 하지 않아 기숙사에 물건들이 매우 어지럽게 널려있다. 어느 날, 철수는 방이 너무 더러워 오랜만에 물건들을 깔끔하게 정리정돈하기로 결정하였다. 깔끔하다는 것은 방을 정확히 절반으로 나누는 직선을 <span class="mathjax-preview">l</span><script type="math/tex">l</script> 이라고 할 때 임의의 물건의 위치에서 <span class="mathjax-preview">l</span><script type="math/tex">l</script>에 선대칭 시킨 위치에 어떤 물건이 있는 것이다. 이 때, 현재 위치에 있는 물건의 개수와 선대칭 시킨 위치에 있는 물건의 개수가 같아야 한다. 물건들을 옮기는 일은 매우 힘든 일이다. 따라 철수는 물건들을 하나씩 옮기는데 그 거리들의 합을 최소화 하려고 한다. (철수가 물건을 들지 않고 이동하는 거리는 무시하자)</p>
+<p>이 문제에선 <span class="mathjax-preview">l</span><script type="math/tex">l</script>을 <span class="mathjax-preview">y</span><script type="math/tex">y</script>축으로 정의하며, 물건들의 좌표가 2차원상의 좌표로 주어진다고 하자. 철수를 도와서 모든 물건들을 깔끔하게 정리정돈 했을 때, 물건들이 이동하는 거리의 합의 최솟값을 구하자. (거리는 유클리드 거리를 사용한다) </p>
+<p>※ 유클리드 거리 <span class="mathjax-preview">D = \sqrt{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}}</span><script type="math/tex">D = \sqrt{(x_{1}-x_{2})^{2}+(y_{1}-y_{2})^{2}}</script></p>
+<p><img alt="cleaningroom_example" src="/media/judge-attachments/30a743c6359cbc36b68a8034c6918e00/cleaningroomex.png"/></p>
+<p>예를 들어, 다음과 같이 물건이 주어진다면 오른쪽의 물건을 1칸 아래로 내리면 정리정돈이 되고, 이때 물건의 이동거리는 1이다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.<br/>
+각 테스트 케이스에 대해, 정수 <span class="mathjax-preview">N(1 \le N \le 100)</span><script type="math/tex">N(1 \le N \le 100)</script>이 주어진다. 그 다음 <span class="mathjax-preview">N</span><script type="math/tex">N</script>줄에 각 물건들의 위치가 차례대로 주어진다. 각 좌표는 <span class="mathjax-preview">-1,000</span><script type="math/tex">-1,000</script>이상 <span class="mathjax-preview">1,000</span><script type="math/tex">1,000</script>이하의 정수이다. 물건들이 겹쳐있는 경우는 없다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 모든 물건들을 깔끔하게 정리정돈 했을 때, 물건들이 이동하는 거리의 합의 최솟값을 소수점 셋째자리까지 반올림해 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1
+-2 3
+2
+2 2
+-2 1
+8
+2 2
+7 1
+9 -4
+-10 1
+-6 -9
+-6 10
+8 8
+2 -4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2.000
+1.000
+15.659</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

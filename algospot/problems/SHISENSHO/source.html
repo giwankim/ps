@@ -1,0 +1,116 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SHISENSHO">SHISENSHO</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SHISENSHO"><b>1589</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SHISENSHO/"><b>379</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A1%B0%ED%95%A9%ED%83%90%EC%83%89">조합탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Shisen-sho(in Korean, Sa-Cheon-Sung <em>사천성</em>) is a board game that originated in Japan, which is popular in Korea as well. The game is played on a rectangular game board with <span class="mathjax-preview">N \times M</span><script type="math/tex">N \times M</script> cells, and various tiles are placed on some of the cells. The object of the game is to remove all of the tiles from the board, and the only way to remove tiles from the board is to remove one pair of matching tiles connected by a <em>valid path</em>. Throughout the game play, the player continues to remove pairs of tiles from the board, pair by pair.</p>
+<p>A <em>valid path</em> is a path on the game board which satisfies the following:</p>
+<ul>
+<li>The path connects two matching tiles.</li>
+<li>The path consists of at most three axis-aligned line segments, starting and ending at the center of two tiles.</li>
+<li>The path should not touch or pass through any cells containing tiles, except the starting and ending tiles.</li>
+</ul>
+<p><img alt="sample.png" src="http://algospot.com/media/judge-attachments/15e952ef2cb343589c23cbcaeb58dd0f/sample.png"/></p>
+<p>For example, the above figure shows a possible game board and some valid and invalid paths.</p>
+<ul>
+<li>The green path is a valid one.</li>
+<li>The gray path is invalid, because it connects two different tiles.</li>
+<li>The yellow path is invalid, because it contains 4 line segments.</li>
+<li>The red path is invalid, because it passes through a cell that is not empty.</li>
+</ul>
+<p>We want to assign difficulty levels to a set of Shisen-sho game boards.<br/>
+The difficulty level is defined by the number of distinct pairs of tiles that can be removed from the board with a single move. A single move means removing a pair of tiles connected by a valid path.<br/>
+Given a game board, Write a program to compute the difficulty level of the board.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of <span class="mathjax-preview">T</span><script type="math/tex">T</script> test cases.<br/>
+The number of test cases <span class="mathjax-preview">T</span><script type="math/tex">T</script> is given in the first line of the input.<br/>
+The first line of each test case contains two integers <span class="mathjax-preview">H</span><script type="math/tex">H</script> and <span class="mathjax-preview">W\;(3 \le H, W \le 50)</span><script type="math/tex">W\;(3 \le H, W \le 50)</script>.<br/>
+<span class="mathjax-preview">H</span><script type="math/tex">H</script> lines will follow, each of which contains <span class="mathjax-preview">W</span><script type="math/tex">W</script> characters where each character denotes a cell in the game board.<br/>
+A period(<code>.</code>) denotes an empty cell, and lower and upper alphabet characters denote different kind of tiles.<br/>
+For all test cases, the first row, first column, last row, and last column of the game board will be empty.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case.<br/>
+The line should contain an integer indicating the number of distinct pair of tiles that can be removed from the board with a single move.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 5
+.....
+.A.A.
+...A.
+.....
+4 7
+.......
+.A.X.A.
+.A.Y.A.
+.......</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3
+4
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

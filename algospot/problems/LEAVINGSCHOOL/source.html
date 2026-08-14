@@ -1,0 +1,111 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LEAVINGSCHOOL">LEAVINGSCHOOL</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LEAVINGSCHOOL"><b>53</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LEAVINGSCHOOL/"><b>2</b> (<b>3</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/5829">etaehyun4</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>이미 알고있는 사실이겠지만, KAIST에서 휴학을 하기 위해선 많은 절차가 필요하다. 지도교수님도 찾아뵈어야 하고, 도서관도 가야하고.. 갈 곳이 많은 게 현실이다. 당신은 휴학계를 어떻게든! 제출하기 위해 방문해야 하는 점들을 적어도 한번 씩 방문하고 돌아오는 시간을 최소화하고 싶다.</p>
+<p>휴학을 하기 위해선 총 <span class="mathjax-preview">N</span><script type="math/tex">N</script>군데를 방문해야 하는데 각각 번호가  <span class="mathjax-preview">1,2, \cdots ,N</span><script type="math/tex">1,2, \cdots ,N</script>으로 나타난다. 당신은 <span class="mathjax-preview">1</span><script type="math/tex">1</script>번점인 학적팀에서 출발하여 <span class="mathjax-preview">2, \cdots ,N</span><script type="math/tex">2, \cdots ,N</script>점을 적어도 한번 씩 방문하고 다시 1번점인 학적팀으로 돌아오려고 한다. 각 점 사이의 거리는 인접행렬로 주어지며 각 거리는 언제나 최단거리이다.</p>
+<p>거리는 주어지지만 속도는 교통수단에 따라 다르다. KAIST에서 이용할 수 있는 교통수단은 총 3가지이다.</p>
+<ul>
+<li>OLEV(셔틀버스) : <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 점 <span class="mathjax-preview">B_{1},B_{2}, \cdots ,B_{N}</span><script type="math/tex">B_{1},B_{2}, \cdots ,B_{N}</script> 를 순서대로 이동한다. <span class="mathjax-preview">B_{1},B_{2}, \cdots ,B_{N}</span><script type="math/tex">B_{1},B_{2}, \cdots ,B_{N}</script>은 <span class="mathjax-preview">1</span><script type="math/tex">1</script>부터 <span class="mathjax-preview">N</span><script type="math/tex">N</script>까지의 수중 하나이고 모두 다르며, OLEV는 <span class="mathjax-preview">B_{N}</span><script type="math/tex">B_{N}</script>를 방문한 뒤 <span class="mathjax-preview">B_{1}</span><script type="math/tex">B_{1}</script>으로 이동한다. OLEV는 <span class="mathjax-preview">B_{1}</span><script type="math/tex">B_{1}</script>에서 시간이 0일 때 출발하여, 다음 점을 이동할 때까지 그 거리만큼 시간이 소요된다. 즉, OLEV는 어느 점에서 타이밍을 맞춰야 이용할 수 있는 교통수단이다.</li>
+<li>타슈(자전거) : 타슈는 KAIST 내에서 단기간 빌려쓸 수 있는 자전거이며 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 점에 설치되어있다. 단, 타슈는 한번 이용하는데 요금이 들기 때문에, 제한된 예산을 가지고 있는 당신은 이를 <span class="mathjax-preview">M</span><script type="math/tex">M</script>번 이하 이용 가능하다. 이 때 걸리는 시간은 거리의 2배이다. 단, 건물을 방문하기 전에는 타슈를 반납해야 한다.</li>
+<li><p>걷기 : 가장 느린 방법이며, 거리의 4배 만큼 시간이 소요된다.</p>
+<p>LEV를 타거나 내리는 것, 타슈를 빌리거나 반납하는 것, 건물을 방문하는 것은 시간이 소요되지 않는다고 가정하자. 현재 당신은 시간 <span class="mathjax-preview">T</span><script type="math/tex">T</script>에 학적팀에 있다. 모든 점을 적어도 한번 방문하고 빨리 학적팀으로 돌아오려고 할 때, 그 시각을 구하자. 휴학을 위해서!</p></li>
+</ul>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 여러 개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 테스트케이스의 개수가 주어진다.<br/>
+각 테스트 케이스에 대해, 첫 번째 줄에는 정수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>이 주어진다.<span class="mathjax-preview">(2 \le N \le 15)</span><script type="math/tex">(2 \le N \le 15)</script><br/>
+다음 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 줄에는 거리에 대한 정보들이 주어지는데 각 줄마다 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 음이 아닌 정수가 주어진다. <span class="mathjax-preview">i</span><script type="math/tex">i</script>번째 줄의 <span class="mathjax-preview">j</span><script type="math/tex">j</script>번째 숫자 <span class="mathjax-preview">(1 \le i,j \le N)</span><script type="math/tex">(1 \le i,j \le N)</script>의 의미는 <span class="mathjax-preview">i</span><script type="math/tex">i</script>번 점에서 <span class="mathjax-preview">j</span><script type="math/tex">j</script>번 점까지의 최단거리이다. (<span class="mathjax-preview">i=j</span><script type="math/tex">i=j</script>인 경우를 제외하고는 양의 정수<span class="mathjax-preview">( \le 100)</span><script type="math/tex">( \le 100)</script>가 주어지며 <span class="mathjax-preview">(i,j)</span><script type="math/tex">(i,j)</script>의 값과 <span class="mathjax-preview">(j,i)</span><script type="math/tex">(j,i)</script>의 값은 같다)<br/>
+그 다음 줄엔 <span class="mathjax-preview">B_{1},B_{2}, \cdots ,B_{N}</span><script type="math/tex">B_{1},B_{2}, \cdots ,B_{N}</script>을 나타내는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 정수가 차례대로 주어진다.<br/>
+마지막 줄엔 현재 시간을 나타내는 정수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>와 타슈 이용제한 수인 <span class="mathjax-preview">M</span><script type="math/tex">M</script>이 주어진다. <span class="mathjax-preview">(0 \le T \le 10,000 , 0 \le M \le N)</span><script type="math/tex">(0 \le T \le 10,000 , 0 \le M \le N)</script></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 최대한 빨리 모든 점을 적어도 한 번씩 방문하고 학적팀으로 돌아왔을 때의 시간을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+0 2 1
+2 0 3
+1 3 0
+2 3 1
+0 1
+4
+0 2 2 3
+2 0 3 2
+2 3 0 1
+3 2 1 0
+4 2 3 1
+2 2 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>10
+16</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<h5 id="toc_0">예제 설명(첫번째 예제)</h5>
+<p>1번 점인 학적팀에서 타슈를 타고 2번 점으로 이동한다. (시간 4 소요)<br/>
+다음 시간 6 때 OLEV를 타고 시간 9 때 3번 점에 도착한다.<br/>
+3번 점에서 다시 OLEV를 타고 시간 10 때 1번 점에 도착한다.</p>
+</p>
+</section>

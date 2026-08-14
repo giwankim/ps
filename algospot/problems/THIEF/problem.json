@@ -1,0 +1,39 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "THIEF",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:23:29.439103Z",
+    "http_status": 200,
+    "semantic_html_sha256": "7438689084e5ffe45391ae7f180237c3775560163ccc5a0f1ca0132ffc61ed41"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/THIEF",
+  "statistics": {
+    "acceptance_percent": 5,
+    "accepted": 2,
+    "submissions": 36
+  },
+  "tags": [
+    "동적계획법",
+    "비트마스크",
+    "탐색"
+  ],
+  "title": "이웃랜드의 도적"
+}

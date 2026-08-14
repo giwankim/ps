@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ANDROMEDA",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:02:58.866877Z",
+    "http_status": 200,
+    "semantic_html_sha256": "449348b2444e46dc61344dc6448a5dc55ca71691ee0e304206bfcb971009e518"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ANDROMEDA",
+  "statistics": {
+    "acceptance_percent": 39,
+    "accepted": 39,
+    "submissions": 99
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "Walking To The Andromeda"
+}

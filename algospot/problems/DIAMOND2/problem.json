@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "DIAMOND2",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:20:00.283108Z",
+    "http_status": 200,
+    "semantic_html_sha256": "d0a971d46e0fe3c215e4049682649124f9a35ff91ccce0c17ec9a8b1723cc958"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/DIAMOND2",
+  "statistics": {
+    "acceptance_percent": 30,
+    "accepted": 137,
+    "submissions": 443
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "다이아몬드 2"
+}

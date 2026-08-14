@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CHANGE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:12:42.075391Z",
+    "http_status": 200,
+    "semantic_html_sha256": "6227329a9cf27146b737f8ad0d29b43663bce36353e7d5d7c1b3fafbf07be4ce"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CHANGE",
+  "statistics": {
+    "acceptance_percent": 36,
+    "accepted": 28,
+    "submissions": 76
+  },
+  "tags": [],
+  "title": "Change"
+}

@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SVSS">SVSS</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SVSS"><b>16</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SVSS/"><b>5</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/89">Yongrok</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Fall%202009">RUN Programming Contest, Fall 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>altertain은 카드를 오름차순으로 정렬하고 있는 중이다. 일렬로 늘어놓은 카드 중에서 두 장을 골라서 서로 위치를 바꾸는 작업(교환)을 통해 카드를 정렬하고 있다. 그리고 그는 가장 적은 교환을 통해 카드를 오름차순으로 정렬하고 싶어한다.</p>
+<p>어린이는 카드 정렬을 방해하고 있는 중이다. altertain이 한 번 카드를 바꾸고 나면 어린이도 카드를 한 번 바꿔서 altertain의 정렬을 방해한다. altertain 은 어린이를 혼내는 대신, 어린이의 행동 패턴을 파악해서 어린이를 골려 주려고 한다. 어린이가 방해하는 모습을 유심히 본 altertain은 어린이가 카드의 배치 상태가 어떻든 상관 없이 일정한 패턴으로 카드를 바꾼다는 사실을 발견했다.</p>
+<p>카드의 상태와 어린이의 행동 패턴이 주어졌을 때, 최소의 교환으로 카드를 정렬할 수 있는 방법을 찾아서 altertain을 도와주자. 단, 우리의 목적은 어린이를 골려주기 위한 것이므로 어린이가 마지막에 카드를 바꾸면 정렬이 완료되도록 한다.</p>
+<p><img alt="judge-attachments/43d79234ef9d466c7e07e798d44e5429/f0039379_49da056bd638f.jpg" src="http://algospot.com/media/judge-attachments/43d79234ef9d466c7e07e798d44e5429/f0039379_49da056bd638f.jpg"/></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수 T가 주어진다. ( T≤60 )    <br/></p>
+<p>각 입력의 첫 줄에는 카드의 수를 의미하는 자연수 N과 어린이의 행동 패턴 주기를 의미하는 자연수 M이 주어진다. ( 2 ≤ N ≤ 1000, 1 ≤ M ≤ 1000 )<br/></p>
+<p>다음 줄에는 N개의 카드가 편의상 1~N의 숫자로 주어진다. 목표는 카드를 오름차순으로 정렬하는 것이다. 카드는 섞여있으므로, 이미 정렬된 경우는 입력으로 주어지지 않는다.<br/>
+<br/></p>
+<p>다음 줄부터는 어린이가 바꿀 카드의 위치 i j가 M줄에 걸쳐서 주어진다.(i &lt; j)<br/></p>
+<p>altertain이 카드를 한 번 바꿀 때마다, 어린이는 순서대로 i번째 위치의 카드와, j번째 위치의 카드를 바꾼다. M번 이후에 어린이는 다시 처음부터 같은 패턴을 반복한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스별로 첫 줄에는 최소 횟수 K를 출력한다.<br/></p>
+<p>altertain 은 카드를 바꾸는 척만 할 수도 있다. 단, 이도 정렬하는 횟수에 들어간다. 어린이를 골려줄 수 없는 경우에는 한 줄에 impossible을 출력하라.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 2
+1 4 2 3
+1 3
+1 4
+3 2
+1 3 2
+1 3
+2 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

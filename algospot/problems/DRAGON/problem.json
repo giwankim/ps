@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/b81c3cbe63000e04-dragon10b.png",
+      "sha256": "5ac5c3c1e49e835f8b79d394225e0b92b9eb54ae3be651bf1a44af07a92245e3",
+      "source_url": "http://algospot.com/media/judge-attachments/a36791bf9ce9c0a34c9a3d013384e8da/dragon10b.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "DRAGON",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:20:57.989791Z",
+    "http_status": 200,
+    "semantic_html_sha256": "390ad39aa7ad26a4feb1b44f8de222280652220e73778ae8bd1b8893df10b294"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/DRAGON",
+  "statistics": {
+    "acceptance_percent": 60,
+    "accepted": 1229,
+    "submissions": 2021
+  },
+  "tags": [
+    "경우의수",
+    "동적계획법"
+  ],
+  "title": "드래곤 커브"
+}

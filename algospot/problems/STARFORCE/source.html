@@ -1,0 +1,115 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/STARFORCE">STARFORCE</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=STARFORCE"><b>209</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/STARFORCE/"><b>17</b> (<b>8</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6271">suckzoo</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2014%20KAIST%20ACM-ICPC%20%EB%AA%A8%EC%9D%98%EB%8C%80%ED%9A%8C">2014 KAIST ACM-ICPC 모의대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>카이스트 동아리 “RUN”에서 새로 만든 “레전드 오브 오리연못” 이라는 게임은 강화시스템이 존재한다. 특히, 스타포스 강화 시스템이라는 엄청난 시스템이 있다.<br/>
+스타포스 강화는 새로 생긴 NPC인 “별의 기운을 뿜는 모루”를 통해 할 수 있다. 모루에는 “카드 뽑기”, “카드 버리기”, “강화” 이렇게 세가지 버튼이 있다.</p>
+<ul>
+<li>  “카드 뽑기” 버튼을 누르면 0보다 크거나 같고 65536보다 작은 정수가 적힌 카드가 한 장 나온다.</li>
+<li>  “카드 버리기” 버튼을 누르면 사용되지 않은 모든 숫자 카드가 증발한다.</li>
+<li>  “강화” 버튼을 누르면 사용되지 않은 모든 카드의 숫자가 bitwise-or로 합쳐진다. 이 숫자를 S라고 할 때, 강화 버튼을 누른 직후의 장비 상수는 원래 갖고 있던 장비 상수 e와 bitwise-and 연산을 수행한 값인 e&amp;S가 된다. 이후, 여기에 사용된 모든 카드는 증발한다.</li>
+<li>  “카드 뽑기” 버튼은 정확히 N번 누를 수 있고, “강화” 버튼은 뽑혔으나 아직 사용되지 않은 카드가 최소 1개 이상 있을 때 누를 수 있다.</li>
+</ul>
+<p>또한 모루에는 “어이쿠 손이 미끄러졌네”라는 징크스가 있어서, 강화버튼을 정확히 M번 누르지 않으면 강화하던 장비가 폭발해 버린다. <br/>
+이웃 동네 티르코네일에 살고 있던 퍼거스씨는, 장비 상수가 65535인 장비를 갖고 있다. 그는 이 장비를 스타포스 강화 시스템을 이용하여 최강의 장비로 만들고 싶어한다. 그는 게임의 운영자를 협박하여 카드 뽑기를 통하여 얻을 수 있는 N개의 카드를 순서대로 알아내었다. 그리고 그는 이제 당신을 협박하고 있다. 그는 당신을 협박하며 가장 강한 장비를 만들었을 때의 능력치를 알려달라고 하고 있다. 가장 강한 장비를 만들었을 때, 장비의 능력치를 알아보자.<br/>
+여기서 장비의 능력치는 강화가 끝난 후의 장비 상수를 2진법으로 나타내었을 때, 1의 개수를 말하며, 가장 강한 장비는 장비의 능력치가 가장 큰 장비를 말한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스 T가 주어진다.<br/>
+그 다음 줄부터 두 정수 N과 M이 주어진다. N은 카드의 개수를 의미하고, M은 강화 버튼을 누르는 횟수이다. 1&lt;=N&lt;=200, 1&lt;=M&lt;=N이다.<br/>
+그 다음 줄부터 N개의 줄에는 카드에 적힌 숫자가 차례대로 주어진다. 이는 0 이상 65535 이하의 정수이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스 별 가장 강한 장비의 장비상수에 있는 1의 개수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+6 2
+8
+7
+4
+12
+2
+1
+3 2
+4
+2
+1
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>###Bitwise-or과 Bitwise-and<br/>
+Bitwise-or는 두 수를 이진법으로 나타내고, 각 자리 별로 or 연산을 하는 것이다. 예를 들면 다음과 같다.<br/>
+12 | 11 = 1100 | 1011 = 1111 = 15<br/>
+Bitwise-and는 두 수를 이진법으로 나타내고, 각 자리 별로 and 연산을 하는 것이다. 예를 들면 다음과 같다.<br/>
+12 &amp; 10 = 1100 &amp; 1010 = 1000 = 8<br/>
+C와 C++, Java에서 두 수 x와 y의 bitwise-or 결과는 x | y, bitwise-and의 결과는 x &amp; y를 이용하여 알아낼 수 있다.</p>
+<p>###Hint<br/>
+1번 예제의 경우, 카드 뽑기 2회 ▷ 강화 ▷ 카드 뽑기 4회 ▷ 강화를 통해 15 = 1111(2)를 얻을 수 있고, 이 때의 능력치는 1이 4개 있으므로 4가 된다.<br/>
+2번 예제의 경우 어떠한 방법으로도 능력치를 0보다 크게 키울 수 없다.</p>
+</p>
+</section>

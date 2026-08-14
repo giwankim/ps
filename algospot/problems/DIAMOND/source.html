@@ -1,0 +1,113 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DIAMOND">DIAMOND</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DIAMOND"><b>910</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DIAMOND/"><b>226</b> (<b>24</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<pre><code>......#............................
+..#.######......................... 
+.##########..........###........... 
+..#.#########......#######......... 
+......#............#######......... 
+....................####.#......... 
+.......................##..........</code></pre>
+<p>위 그림과 같이, <code>#</code> 와 <code>.</code> 만으로 구성된  크기의 격자가 주어집니다. 여기에, # 만으로 아래와 같은 모양이 구성될 경우 이것을 다이아몬드라고 부릅니다.</p>
+<pre><code>.........#...........
+........###..........
+.......#####.........
+......#######........ 
+.......#####......... 
+........###.......... 
+.........#...........</code></pre>
+<p>격자에서 찾아낼 수 있는 가장 큰 다이아몬드의 크기를 계산하는 프로그램을 작성하세요. 다이아몬드의 크기는 가운데 줄의 가로 길이로 계산하며, 따라서 위 다이아몬드의 크기는 7 입니다. </p>
+<p>이 문제에서는 짝수 크기를 갖는 다이아몬드는 없습니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (&lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄엔 격자의 줄 수 N (1 &lt;= N &lt;= 50) 이 주어집니다. 그 후  줄에 각각 M 길이의 # 와 . 로 구성된 문자열이 주어집니다. (1 &lt;= M &lt;= 50) </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 찾을 수 있는 가장 큰 다이아몬드의 크기를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+5
+#####
+.###.
+..#..
+.....
+.....
+7
+......#............................ 
+..#.######......................... 
+.##########..........###........... 
+..#.#########......#######......... 
+......#............#######......... 
+....................####.#......... 
+.......................##.......... </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3
+5
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

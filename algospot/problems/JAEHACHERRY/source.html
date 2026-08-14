@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/JAEHACHERRY">JAEHACHERRY</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=JAEHACHERRY"><b>268</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/JAEHACHERRY/"><b>43</b> (<b>16</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F%20%EC%83%88%EC%8B%B9%20%EC%BD%98%ED%85%8C%EC%8A%A4%ED%8A%B8">제1회 알고스팟 새싹 콘테스트</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>"사탕 3개 주세요."</p>
+<p>영특한 꼬마 신사 재하가 착한 과자가게 리베 아저씨에게 열 개의 버찌씨를 주며 말했습니다.</p>
+<p>"모자라나요?"</p>
+<p>리베 아저씨는 조용히 한숨을 내쉬고는 대답했습니다.</p>
+<p>"이건... 너무 많은데...?"</p>
+<p>리베 아저씨는 사탕 3개와 함께 버찌씨 2개를 돌려주었습니다.</p>
+<p>"와~ 감사합니다. 내일 또 올게요~"</p>
+<p>"오냐~ 내일은 엄마랑 같이 오렴~"</p>
+<p>다음 날 재하는 과자가게에 또 혼자 갔습니다.(엄마는 이 썩는다고 사탕을 잘 안 사주시거든요.) 그리고 이번에는 사과씨 5개를 내밀며 말했습니다.</p>
+<p>"사탕 주세요!"</p>
+<p>"어디 보자... 오늘은 사과씨 5개구나..."</p>
+<p>리베 아저씨는 조금 고민하다가 어제와 같은 사탕 3개를 주었습니다.</p>
+<p>"아저씨, 감사합니다~ 내일 또 봬요~"</p>
+<p>"그래~ 내일은 아빠랑 꼭 같이 오렴~ ^^<img alt="짜증" src="http://algospot.com/media/judge-attachments/1443ba80fc3c13284666a261b765d8d8/C1.png"/>"</p>
+<p>그렇게 N일동안 재하는 하루도 빠짐없이 과자가게에 가서 포도씨, 자두씨, 값싼 미국산 버찌씨 등과 과자를 교환했습니다. 가끔은 전에 받았던 과자를 다른 과자로 교환하기도 했습니다. N일이 지나고 재하는 문뜩 생각했습니다.</p>
+<p>'음... 버찌씨 8개랑 사과씨 5개가 사탕 3개였지...? 저번엔 도깨비바늘 2개에 사탕 3개 주셨으니까... 도깨비바늘이 제일 좋은 거구나~ ^^ 앞으론 도깨비바늘을 모아야겠다.......어? 그런데 저번에 솔방울 하나에 초콜릿 5개 주셨는데... 그럼 솔방울이 더 좋은 건가...?'</p>
+<p>뭐가 제일 좋은 건지 궁금해진 재하는 아빠.....에겐 몰래 과자 사먹었다고 혼날까봐 물어보지 못하고, 삼촌들(여러분^^)에게 물어보기로 했습니다.</p>
+<p>"뭐가 제일 좋은 거고, 뭐가 제일 나쁜 거에요?"</p>
+<p>재하의 기준으로 가장 좋은 건 한 개의 가치가 가장 큰 물건이고, 가장 나쁜 건 한 개의 가치가 가장 작은 물건입니다. 재하가 리베 아저씨랑 N일동안 교환한 물건들의 종류는 N+1가지고, 어떤 두 물건의 비교가 불가능한 경우는 없으며, 가장 좋은 물건과 가장 나쁜 물건의 가치 차이는 2000배 이하입니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C가 주어집니다. 각 테스트 케이스의 첫 줄에는 재하가 과자가게 간 일 수 N이 주어집니다. 그 후 N줄에 각 날마다 재하가 아저씨에게 준 물건의 이름과 개수 그리고 아저씨에게 받은 물건의 이름과 개수가 주어집니다. 물건의 이름은 길이 20이하의 알파벳 소문자로 구성되고, 물건의 개수는 항상 1개 이상 8개 이하입니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 재하의 기준으로 가장 좋은 것부터 가장 나쁜 것까지 순서대로 이름을 출력하세요. 만약 가치가 같은 물건이 있다면, 사전 순으로 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+cherryseed 8 candy 3
+appleseed 5 candy 3
+spanishneedle 2 candy 3
+5
+cherryseed 8 candy 3
+appleseed 5 candy 3
+spanishneedle 2 candy 3
+pinecone 1 chocolate 5
+chocolate 4 candy 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>spanishneedle candy appleseed cherryseed
+pinecone spanishneedle candy chocolate appleseed cherryseed</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>1 ≤ N ≤ 16</p>
+</p>
+</section>

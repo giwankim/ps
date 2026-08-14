@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NBEAT">NBEAT</a></li>
+<li class="timelimit"><b>15000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NBEAT"><b>44</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NBEAT/"><b>13</b> (<b>29</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C2%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제2회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>N-beat is a popular rhythm arcade game, in which you push buttons arranged in a x*y grid. The buttons light up when you have to push them; you have to push them with precise timing to get scores. </p>
+<p>One game of N-beat consists of one or more screens. A <strong>screen</strong> is a configuration of lit buttons which you have to push.</p>
+<p><img alt="" src="http://algospot.com/media/judge-attachments/b6be6249eb0fc089f126e0c85a8dadb6/text8657-small.png"/></p>
+<p>For example, the picture above shows 4 successive <strong>screen</strong>s for a N-beat machine with 4*4 grid. Here, boxes with the target mark are the lit buttons you have to press. </p>
+<p>A sequence of screens in a game is called a <strong>transcription</strong>.</p>
+<p>Now, Jaeha Koo, a genius composer, just made a new song for N-beat. You're going to make transcription for this song.</p>
+<p>There are B beats in this song, so this transcription will consist of B <strong>screen</strong>s. Therefore, without any restriction, there are a total of (2^(x*y))^B possible transcriptions.</p>
+<p>But <strong>transcription</strong>s differ in difficulty. Generally, you can push one button with one finger, so it's harder when a single screen has more lit buttons. Especially, if a screen has more than 10 lit buttons, it's very difficult to push them successfully. Also, adjacent screens having a lot of lit buttons can also can make the game difficult. For example, two successive screens with 7 and 6 lit buttons each might be more difficult than two screens with 2 and 8 lit buttons each. </p>
+<p>As a generous transcriptor, you decided to limit the number of lit buttons. The limit is given as three nonnegative integers: p<sub>1</sub>, p<sub>2</sub>, and p<sub>3</sub>. p<sub>1</sub> is the maximum number of lit buttons you can have in any one screen. p<sub>2</sub> is the maximum number of lit buttons you can have in any two consecutive screens. Also, as you guessed, p<sub>3</sub> is the maximum number of lit buttons you can have in any three consecutive screens. In the picture above, 4 screens each have 4, 8, 6, 8 of turned-on buttons, so this transcription will only be valid if p<sub>1</sub> &gt;= 8, p<sub>2</sub> &gt;= 14, and p<sub>3</sub> &gt;= 22. </p>
+<p>Your task is to calculate the number of possible transcriptions given x, y, B, p<sub>1</sub>, p<sub>2</sub> and p<sub>3</sub>. As the result can be quite huge, just calculate the answer MOD 10<sup>9</sup>+7.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases. The first line of the input contains T.</p>
+<p>Each test case starts with 6 integers x, y (1 &lt;= x, y &lt;= 1000), B (1 &lt;= B &lt;= 10^9), p<sub>1</sub> (0 &lt;= p<sub>1</sub> &lt;= 10), p<sub>2</sub> (0 &lt;= p<sub>2</sub> &lt;= 20), p<sub>3</sub> (0 &lt;= p<sub>3</sub> &lt;= 30) separated by a whitespace.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the number of possible transcriptions MOD 10<sup>9</sup>+7, in a single line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+2 2 3 4 8 11
+1 1 10 1 2 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4095
+1024</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li>출제: 일루</li>
+<li>영문 감수: JongMan</li>
+<li>그림: Being</li>
+</ul>
+</p>
+</section>

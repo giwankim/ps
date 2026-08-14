@@ -1,0 +1,127 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SUSHI">SUSHI</a></li>
+<li class="timelimit"><b>8000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SUSHI"><b>3284</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SUSHI/"><b>1314</b> (<b>40</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>문제 풀이 내기에서 모인 벌금이 많이 쌓여서 알고스팟 운영진들은 회식을 하러 회전초밥집에 갔습니다. 회전초밥집에 들어선 운영진들은 초밥은 먹지 않고 전략 회의를 시작했습니다. 회전초밥집에는 n종류의 메뉴가 있는데, 운영진들은 각 메뉴에 대해 선호도를 매겼습니다.</p>
+<table><thead>
+<tr>
+<th>초밥</th>
+<th>계란</th>
+<th>연어</th>
+<th>장어</th>
+<th>대뱃살</th>
+<th>스테이크</th>
+<th>후라이드 치킨</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>가격</td>
+<td>2500</td>
+<td>3000</td>
+<td>4000</td>
+<td>5000</td>
+<td>10000</td>
+<td>15000</td>
+</tr>
+<tr>
+<td>선호도</td>
+<td>7</td>
+<td>9</td>
+<td>10</td>
+<td>12</td>
+<td>20</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>운영진들은 주어진 예산 안에서 선호도의 합을 최대한으로 하도록 초밥을 먹고 싶습니다. 각 종류의 초밥은 무한정으로 공급된다고 가정합시다. 이 때 얻을 수 있는 최대한의 선호도는 얼마일까요?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 c(1 &lt;= c &lt;= 50)가 주어집니다. 각 테스트 케이스의 첫 줄에는 초밥의 종류 n(1 &lt;= n &lt;= 20)과 운영진들의 예산 m  (1 &lt;= m &lt;= 2,147,483,647)이 주어집니다. 그 후 n  줄에 각 초밥의 가격과 선호도가 순서대로 주어집니다. 가격은 20,000 이하의 자연수로, 항상 100 의 배수입니다. 선호도는 20 이하의 자연수입니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스별로 한 줄에 가능한 선호도의 최대 합을 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+6 10000
+2500 7
+3000 9
+4000 10
+5000 12
+10000 20
+15000 1
+6 543975612
+2500 7
+3000 9
+4000 10
+5000 12
+10000 20
+15000 1 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>28
+1631925</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

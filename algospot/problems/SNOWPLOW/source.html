@@ -1,0 +1,127 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SNOWPLOW">SNOWPLOW</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SNOWPLOW"><b>28</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SNOWPLOW/"><b>11</b> (<b>39</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><b>Seoul National University(SNU)</b>, colloquially known in Korean as <b>Seoul-dae</b>, is a national research university in Seoul, Korea.<br/>
+Originally, the main campus, which embraced the College of Humanities and Sciences and College of Law, was located on <b>Daehangno(University Street)</b> in <b>Jongno</b>.<br/>
+Most parts of the university were relocated to a new campus in  <b>Gwanak</b> in the period between 1975 and 1979, where Gwanak campus is located on the northwest slope of <b>Gwanaksan</b>, a small mountain in Seoul.</p>
+<p>Last winter, it snowed often in Korea, and particularly, it snowed heavily in <b>Gwanak-gu</b>, a district of Seoul where SNU and Gwanaksan are located.<br/>
+When it snows heavily, cars and buses cannot move along the roads which are on the slope of Gwanaksan.<br/>
+Lots of building are located all around the campus, and the buildings are connected with a bidirectional roads.<br/>
+Since there is exactly one simple path(a path without any duplicate road) from one building to another, professors and students claim for their inconvenience every snowy winter.</p>
+<p>The administration center of SNU has bought snow-plow cars(a vehicle intended for removing snow from the road) and placed them on every road.<br/>
+However, as it snowed heavily last winter, all snow-plow cars are now broken.<br/>
+The administration center decided to fix snow-plow cars, but due to limited budget, they cannot fix every single snow-plow car.<br/>
+Therefore, they decided to pick some of the snow-plow cars to be fixed, in order to make it easy to remove snow from the roads on the mountain slope (note that each road may or may not be on the mountain slope). <br/>
+For each slope road, the snow on the road can be removed if the snow-plow car on the road itself is fixed or that on any of its adjacent road is fixed.  Two roads are said to be adjacent if they are connected to the same building.</p>
+<p><img alt="sampletree.png" src="http://algospot.com/media/judge-attachments/204759473fb66f57762f142344afd02d/sampletree.png"/></p>
+<p>For example, on the above figure, there are six building numbered from 0 to 5, and there are 3 roads in red (namely, 0-1, 2-3, and 4-5) that are on the mountain slope. The number on the road is the cost to fix the snow-plow car on that road. If all snow-plow cars on slope roads are fixed, it costs 5(=2+2+1).<br/>
+On the other hand, if snow-plow cars on road 0-4 and 2-3 are fixed, it costs 6=(4+2). snow-plow car on road 0-4 covers two slope roads, 0-1 and 4-5.  The optimal way is to fix the snow-plow cars on road 0-2, 4-5, which costs 4(=3+1). In this case, the snow-plow car on road 0-2 covers road 0-1 and 2-3.</p>
+<p>Given a tree representing the buildings and roads of SNU, write a program to compute the minimum cost to fix snow-plow cars in order to satisfy the requirements.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases.<br/>
+The number of test cases T is given in the first line of the input.<br/>
+The first line of each test case contains an integer, n (1 &lt;= n &lt;= 10,000), the number of buildings in SNU.<br/>
+Each line of the next n-1 lines contains four integers, x, y, z, and c, where there is road connecting building number x and y.<br/>
+Third integer z will be 1 if the road is on the mountain slope, and 0 if the road is <b>not</b> on the mountain slope.<br/>
+The cost for fixing a snow-plow car on this road is c(1 &lt;= c &lt;= 100,000)<br/>
+Building numbers will be distinct integers from 0 to n-1.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case.<br/>
+The line should contain the minimum cost to fix snow-plow cars.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+6
+0 1 1 2
+3 2 1 2
+2 0 0 3
+4 0 0 4
+4 5 1 1
+4
+0 1 1 1
+1 2 1 2
+2 3 1 4
+6
+0 4 1 2
+4 5 0 3
+5 2 1 2
+3 5 1 2
+4 1 1 2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+2
+3
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

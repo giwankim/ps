@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BASEBALL",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:07:13.225151Z",
+    "http_status": 200,
+    "semantic_html_sha256": "518d0b257a878f0a1ab980ab235e8c7b3092f6fc32da20c7a6e3a10c58891ef4"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BASEBALL",
+  "statistics": {
+    "acceptance_percent": 18,
+    "accepted": 188,
+    "submissions": 1020
+  },
+  "tags": [
+    "그리디"
+  ],
+  "title": "2010 프로야구"
+}

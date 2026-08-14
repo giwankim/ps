@@ -1,0 +1,117 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GRAPHCON">GRAPHCON</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GRAPHCON"><b>50</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GRAPHCON/"><b>14</b> (<b>28</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>A directed graph G(V,E) is a mathematical structure consisting of two sets V and E. V = {1, 2, · · · , n} is the set of nodes, and E  V × V is the set of edges. A pair of nodes (u, v) is in E if and only if there is a directed edge from a node u to v.</p>
+<p>Given a directed graph G(V,E), we define a connectivity set C(G)  V ×V . A pair of nodes (x, y) is in C(G) if and only if there is a directed path from node x to y.</p>
+<p>Given a directed graph, it is easy to compute the connectivity set. This problem is about the opposite direction: Given a directed graph G(V,E), find a graph G0(V,E) which has the same connectivity set(C(G) = C(G0)) and has the least number of edges. </p>
+<p><img alt="judge-attachments/c7da6791d9837f58de5f4d5d9d5bd369/tr.png" src="http://algospot.com/media/judge-attachments/c7da6791d9837f58de5f4d5d9d5bd369/tr.png"/></p>
+<p>The left figure illustrates a graph G with n = 5, E = {(1, 2), (1, 3), (1, 4), (1, 5), (2, 4), (3, 5), (3, 5), (4, 5)}. The connectivity set C(G) is {(1, 2), (1, 3), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)}. The right figure illustrates a graph G0 with n = 5, E = {(1, 2), (1, 3), (2, 4), (3, 4), (4, 5)}. The connectivity set C(G0) is as same as C(G), and there is no other graph with 4 or less edges which has the same connectivity set.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases. The number of test cases T(1 &lt;= T &lt;= 100) is given in the first line of the input. In the first line of each case, two integer n(1 &lt;= n &lt;= 200) and m(0 &lt;= m &lt;= n^2) will be given. In the next m lines, each element<br/>
+of edge set E will be given.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case. For each<br/>
+test case, print the minimum number of edges.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>5
+5 8
+1 2
+1 4
+1 3
+2 4
+3 4
+1 5
+3 5
+4 5
+2 2
+1 2
+2 1
+4 6
+1 3
+2 1
+2 4
+1 2
+1 4
+2 3
+1 1
+1 1
+4 4
+1 2
+2 1
+1 1
+2 2</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+2
+4
+1
+2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

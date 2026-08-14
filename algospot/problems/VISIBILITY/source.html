@@ -1,0 +1,123 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/VISIBILITY">VISIBILITY</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=VISIBILITY"><b>8</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/VISIBILITY/"><b>3</b> (<b>37</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Daejeon%20Regional%20Warmup%202010">Algospot ICPC Daejeon Regional Warmup 2010</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>In computer graphics, identifying visible lines and surfaces is an important task.<br/>
+When a polygon or a polyhedron is rendered by a graphical program, only visible parts(lines and surfaces) are considered and rendered.<br/>
+This might reduce the computational time and space, and most of all, it makes the rendered object to be realistic.</p>
+<p align="center">![judge-attachments/6ba8d6588d3d6102525e45582928851f/figure1.png](http://algospot.com/media/judge-attachments/6ba8d6588d3d6102525e45582928851f/figure1.png)</p>
+<p>Consider a polyhedron(pentahedron) in the figure.<br/>
+When it is viewed from the front, only two surfaces are visible and rendered as in the figure in the middle.<br/>
+However, if the other surfaces are rendered as in the right-most figure,<br/>
+the result is not realistic(it is rather like bottom-back view).</p>
+<p>When a polygon on two dimensional plane is given, the visibility measure could be defined roughly as follows.<br/>
+If there exists a point outside the polygon where the number of visible line segments of the polygon is K, we say that the polygon is K-visible.<br/>
+The <b>visibility measure</b> of the polygon is the maximum value of K.</p>
+<p>A formal definition is as follows:<br/>
+First, let S be the set of points on the boundary of a polygon.<br/>
+For a point <img src="http://eq.springnote.com/tex_image?source=q'%20\notin%20S"/>, a point <img src="http://eq.springnote.com/tex_image?source=p'%20\in%20S"/> is visible from q if and only if</p>
+<p align="center">
+<img src="http://eq.springnote.com/tex_image?source=%20%20%20%20%5Cnexists%20r%20%5Cin%20S%20%5C%3B%5C%3B%5Ctextrm%7Bsuch%20that%7D%5C%3B%5C%3B%20p%20%5Cneq%20r%20%5C%3B%5C%3B%5Cland%5C%3B%5C%3B%20p%2C%5C%3B%20q%2C%5C%3B%20r%5C%3B%20%5Ctextrm%7Bare%20co-linear%7D%20%5C%3B%5C%3B%5Cland%5C%3B%5C%3B%0A%09%7C%5Coverline%7Bqr%7D%7C%20%3C%20%7C%5Coverline%7Bqp%7D%7C%0A"/>
+</p>
+<p>where <img src="http://eq.springnote.com/tex_image?source=%7C%5Coverline%7Bqr%7D%7C"/>denotes the distance between q and r.</p>
+<p>For a fixed q, we define V(q,S) as the set of line segments of polygon S which are visible from q.<br/>
+If there exists a point <img src="http://eq.springnote.com/tex_image?source=q'%20%5Cnotin%20S"/> where the cardinality(number of elements) of V(q',S) is K, we say that S is K-visible.<br/>
+The <b>visibility measure</b> of S is the maximum value of K which satisfies that S is K-visible.</p>
+<p>Given a convex polygon S on two dimensional plane, write a program to compute the visibility measure of S.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases.<br/>
+The number of test cases T is given in the first line of the input.<br/>
+The first line of each test case contains an integer, n(3 &lt;= n &lt;= 20,000),<br/>
+the number of vertices of S.<br/>
+Each line of the next n lines contains two integers, x and y,<br/>
+where (x, y) is the coordinates of each vertex (-10^9 &lt;= x,y &lt;= 10^9).<br/>
+For each test case, the order of vertices would be either clockwise or counter-clockwise, and no three points(vertices) are co-linear. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case.<br/>
+The line should contain an integer indicating the visibility measure of the given polygon.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4
+-2 1
+2 1
+2 -1
+-2 -1
+7
+0 0
+127 0
+205 69
+180 153
+97 169
+13 152
+-68 76</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+3
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

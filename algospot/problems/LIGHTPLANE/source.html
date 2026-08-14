@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LIGHTPLANE">LIGHTPLANE</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LIGHTPLANE"><b>94</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LIGHTPLANE/"><b>25</b> (<b>26</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/36">kcm1700</a></li>
+<li class="source"><a href="/judge/problem/list/?source=SNUTOC%202014">SNUTOC 2014</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>비행기 조종사 형석이는 최근 여객용 경비행기를 하나 사들였다. 여객기를 사들이게 된 것에는 여러가지 이유가 있지만 돈을 벌기 위해서였다. 형석이의 경비행기는 조종사 포함 두 명이 탈 수 있으므로 손님은 한 명만 탈 수 있다. 그리고 형석이의 경비행기가 운행할 지역을 2차원 평면으로 취급하려고 한다. 각 지역의 좌표는 <span class="mathjax-preview">(x,y)</span><script type="math/tex">(x,y)</script>로 나타낼 수 있다고 한다.</p>
+<p>형석이의 경비행기는 비행할 때마다 정비 등의 작업을 해야하기 때문에, 적어도 3시간의 시간 간격을 확보하려고 한다. 예를 들어 오전 1시에 착륙을 했다고 해보자. 그러면 다음 비행 일정은 같은 날 오전 4시 또는 그 이후에 착륙하게 하려 한다. 형석이의 경비행기는 성능이 좋기 때문에 비행 시간은 무시할 수 있을 정도로 짧다.</p>
+<p>또 다음과 같은 방식으로 손님에게 돈을 받기로 결정했다. <span class="mathjax-preview">(x_1, y_1)</span><script type="math/tex">(x_1, y_1)</script>에서 <span class="mathjax-preview">(x_2, y_2)</span><script type="math/tex">(x_2, y_2)</script>로 비행을 하는 경우, <span class="mathjax-preview">\max(|x_1 - x_2|, |y_1 - y_2|)</span><script type="math/tex">\max(|x_1 - x_2|, |y_1 - y_2|)</script>를 기본 운임으로 한다. 즉, 출발지와 목적지의 Chebyshev 거리(<span class="mathjax-preview">\mathrm{L}_{\infty}</span><script type="math/tex">\mathrm{L}_{\infty}</script> metric, maximum metric)에 해당하는 금액을 받기로 한 것이다. 그리고 연료비, 정비료 등 비행하기 위해 필요한 추가 금액은 손님 부담으로 하기로 결정했다.</p>
+<p>형석이는 착륙이 가능한 지점들을 모두 조사하였다. 착륙이 가능한 지점이라고 해도 항상 착륙이 가능하지는 않았고, 특정한 시각에만 착륙할 수 있었다. 그 특정한 시각이 지나면 착륙할 수 없고, 정확히 특정한 시각에만 도착해야 했다. 게다가 착륙을 하는 데에도 비용이 들었고 지점마다 비용이 달랐다. 그래서 착륙이 가능한 지점의 위치, 시각, 비용을 모두 조사하였다. 착륙하는 데 필요한 비용마저 손님에게 부담시키는 것은 하기 싫었기 때문에 착륙하는 데 필요한 비용은 형석이가 내기로 결심했다.</p>
+<p>조사한 정보를 바탕으로 형석이는 자신의 집 <span class="mathjax-preview">(0, 0)</span><script type="math/tex">(0, 0)</script>에서 경비행기 운영을 시작하려고 한다. 형석이와 함께 경비행기를 타고 싶어하는 사람은 매우 많기 때문에, 경비행기가 뜨기만 하면 항상 손님을 태우고 이동할 수 있다고 한다. 형석이가 가장 많은 돈을 벌기 위해 최선의 방법으로 경비행기를 운영한다면, 마지막 착륙 이후 얻을 수 있는 최대 금액은 얼마인지 계산해야 한다. 만약 어떤 방법을 써도 비행하는 것이 손해라면 형석이는 아예 비행을 포기할 수도 있고 이 때 얻을 수 있는 최대 금액은 0이다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수를 의미하는 정수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>(<span class="mathjax-preview">T \le 100</span><script type="math/tex">T \le 100</script>)가 주어진다. </p>
+<p>각 테스트 케이스의 첫 줄에는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>(<span class="mathjax-preview">1 \le N \le 200,000</span><script type="math/tex">1 \le N \le 200,000</script>)이 주어진다. <span class="mathjax-preview">N</span><script type="math/tex">N</script>은 형석이가 조사한 착륙 지점의 개수를 의미 한다. 그 이후 <span class="mathjax-preview">i</span><script type="math/tex">i</script>(<span class="mathjax-preview">1 \le i \le N</span><script type="math/tex">1 \le i \le N</script>)번째 줄에 세 정수 <span class="mathjax-preview">X_i</span><script type="math/tex">X_i</script>, <span class="mathjax-preview">Y_i</span><script type="math/tex">Y_i</script>, <span class="mathjax-preview">C_i</span><script type="math/tex">C_i</script> (<span class="mathjax-preview">|X_i|, |Y_i| \le 200,000</span><script type="math/tex">|X_i|, |Y_i| \le 200,000</script>, <span class="mathjax-preview">1 \le C_i \le 100,000</span><script type="math/tex">1 \le C_i \le 100,000</script>)가 공백을 사이에 두고 주어진다.   형석이가 운영을 시작한 시각으로부터 <span class="mathjax-preview">i</span><script type="math/tex">i</script>시간 뒤에 <span class="mathjax-preview">(X_i, Y_i)</span><script type="math/tex">(X_i, Y_i)</script> 지점에 착륙할 수 있고, 이 때 필요한 비용은 <span class="mathjax-preview">C_i</span><script type="math/tex">C_i</script>이다. 모든 <span class="mathjax-preview">i \neq j</span><script type="math/tex">i \neq j</script>에 대해 <span class="mathjax-preview">(X_i, Y_i) \neq (X_j, Y_j)</span><script type="math/tex">(X_i, Y_i) \neq (X_j, Y_j)</script>라고 한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 얻을 수 있는 최대 금액을 한 줄에 하나씩 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1
+0 0 170
+6
+1 5 10
+-5 3 4
+3 -6 8
+-3 -3 3
+3 -2 5
+0 0 1
+4
+9 9 2
+8 8 2
+7 7 2
+6 6 2</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0
+5
+8</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>입출력이 크기 때문에 cin/cout으로는 시간초과가 날 수 있습니다.</p>
+</p>
+</section>

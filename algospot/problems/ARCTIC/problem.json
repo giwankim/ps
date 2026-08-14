@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/af81717fa6ecad41-arctic.png",
+      "sha256": "ae3c33242d04527afdf13abc084982b546c0ab7e5ab61d38a8c1c76cf2971c7a",
+      "source_url": "http://algospot.com/media/judge-attachments/c32422238dae9e7dcb7c3d878c5f1c15/arctic.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ARCTIC",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:03:59.912845Z",
+    "http_status": 200,
+    "semantic_html_sha256": "707f6d4ff77fecb64f48280d5fcdf4066250c4ab8c5905e8e4f842bd1be39e7c"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ARCTIC",
+  "statistics": {
+    "acceptance_percent": 28,
+    "accepted": 1886,
+    "submissions": 6623
+  },
+  "tags": [
+    "그래프",
+    "이진탐색"
+  ],
+  "title": "남극 기지"
+}

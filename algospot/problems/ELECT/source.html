@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ELECT">ELECT</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ELECT"><b>89</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ELECT/"><b>41</b> (<b>46</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%202004">Stanford Local 2004</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Given the voting preferences of a population of <span class="mathjax-preview">M</span><script type="math/tex">M</script> people, you are to determine the winner of an election among <span class="mathjax-preview">N</span><script type="math/tex">N</script> candidates, numbered <span class="mathjax-preview">1, \cdots ,N</span><script type="math/tex">1, \cdots ,N</script>. For this problem, the <span class="mathjax-preview">M</span><script type="math/tex">M</script> people are partitioned into <span class="mathjax-preview">G</span><script type="math/tex">G</script> “groups”where all members within a group have the same voting preferences. The candidate preferences for a group are specified by listing candidates from most preferred to least preferred. Election results are determined by an instant-runoff voting procedure.<br/>
+In this method, the first choices of the M people in the population are counted and the least popular candidate is eliminated. In the event of a tie, the highest-numbered candidate is eliminated. Then, the eliminated candidate is removed from the preference list of all <span class="mathjax-preview">M</span><script type="math/tex">M</script> individuals in the population, and again the least popular candidate is eliminated. This process repeats until only a single candidate is left.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input test file will contain multiple test cases. Each input test case begins with a single line containing the integers <span class="mathjax-preview">G</span><script type="math/tex">G</script> and <span class="mathjax-preview">N</span><script type="math/tex">N</script> where <span class="mathjax-preview">2 \le N \le 5</span><script type="math/tex">2 \le N \le 5</script> and <span class="mathjax-preview">1 \le G \le 20</span><script type="math/tex">1 \le G \le 20</script>. The next <span class="mathjax-preview">G</span><script type="math/tex">G</script> lines are of the format “<span class="mathjax-preview">M_i\;a_{i_1}\;a_{i_2}\; \cdots a_{i_N}</span><script type="math/tex">M_i\;a_{i_1}\;a_{i_2}\; \cdots a_{i_N}</script>” where <span class="mathjax-preview">1 \le Mi \le 20</span><script type="math/tex">1 \le Mi \le 20</script> and <span class="mathjax-preview">a_{i_1}, \cdots , a_{i_N}</span><script type="math/tex">a_{i_1}, \cdots , a_{i_N}</script> is a permutation of the integers <span class="mathjax-preview">1, \cdots ,N</span><script type="math/tex">1, \cdots ,N</script>. <span class="mathjax-preview">M_i</span><script type="math/tex">M_i</script> is the number of individuals in the <span class="mathjax-preview">i</span><script type="math/tex">i</script>th group, and <span class="mathjax-preview">a_{i_1}, \cdots , a_{i_N}</span><script type="math/tex">a_{i_1}, \cdots , a_{i_N}</script> is the ordering of the <span class="mathjax-preview">N</span><script type="math/tex">N</script> candidates from most preferred to<br/>
+least preferred for the <span class="mathjax-preview">i</span><script type="math/tex">i</script>th group. The end-of-file is marked by a test case with <span class="mathjax-preview">G = N = 0</span><script type="math/tex">G = N = 0</script> and should not be processed.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each input case, the program should print the winner of the election on a single line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3 4
+10 1 4 2 3
+15 3 2 1 4
+12 4 3 2 1
+3 2
+10 1 2
+10 1 2
+20 2 1
+0 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

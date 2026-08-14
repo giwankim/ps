@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ROUNDUP">ROUNDUP</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ROUNDUP"><b>89</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ROUNDUP/"><b>21</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/319">꿀호떡</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>성진이는 얼마 전 "전대프연 행성"이라는 회사의 재무 담당자로 고용되었다. </p>
+<p>이 회사에서는 특이한 방식으로 월급을 지급한다. 모든 직원의 회사 기여도를 %로 나타내어 구한 후, 한 달 월급 총액을 기여도에 곱하여 십만의 자리에서 반올림한 만큼 월급을 지급한다.</p>
+<p>하지만 성진이는 똑똑했기 때문에, 입사하자마자 이 방식의 문제점을 금방 알아차릴 수 있었다.</p>
+<p>예를 들어, 성진이가 35%, 승현이가 35%, 수찬이가 30%의 기여도를 가지고 있고, 총 월급이 200만원이라고 해 보자. 이 경우 성진이와 승현이는 200만원 <span class="mathjax-preview">\times</span><script type="math/tex">\times</script> 35% = 70만원, 수찬이는 200만원 <span class="mathjax-preview">\times</span><script type="math/tex">\times</script> 30% = 60만원이므로 셋 모두 100만원씩을 받게 된다. 하지만 예산은 총 200만원이므로, 300만원을 지급하게 되어 100만원의 예산 구멍이 생긴다!</p>
+<p>깜짝 놀란 성진이는 각 직원의 기여도를 살짝 조정하여 예산을 맞추는 프로그램을 작성하려고 하였다. 이 회사의 월급 지급에는 몇 가지 규칙이 있는데,</p>
+<p>(1) 미리 정한 총 월급 예산이 모자라지도, 남지도 않아야 한다.<br/>
+(2) 기여도의 총합은 반드시 100%여야 하고, 모든 기여도는 항상 음이 아닌 정수여야 한다.<br/>
+(3) 월급이 너무 많이 바뀌면 직원들이 혼란에 빠지기 때문에, 기여도 변화의 차이가 가장 큰 것을 최소화하여야 한다.</p>
+<p>하지만 성진이는 매우매우 바빠서 그만 프로그램을 작성할 수 없게 되었다. 여러분이 성진이를 도와주어야 한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다. (<span class="mathjax-preview">T \le 50</span><script type="math/tex">T \le 50</script>)<br/>
+각 테스트 케이스의 첫 번째 줄에는 직원의 수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>(<span class="mathjax-preview">1 \le N \le 1,000</span><script type="math/tex">1 \le N \le 1,000</script>)과 총 월급액 <span class="mathjax-preview">M</span><script type="math/tex">M</script>(<span class="mathjax-preview">1 \le M \le 100,000</span><script type="math/tex">1 \le M \le 100,000</script>)이 공백을 사이에 두고 주어진다. <span class="mathjax-preview">M</span><script type="math/tex">M</script>은 항상 <span class="mathjax-preview">100</span><script type="math/tex">100</script>의 배수로 주어지며 단위는 만원이다.<br/>
+각 테스트 케이스의 두 번째 줄에는 각 직원의 기여도를 나타내는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 정수 <span class="mathjax-preview">A_i</span><script type="math/tex">A_i</script> 가 공백을 사이에 두고 주어진다. (<span class="mathjax-preview">0 \le A_i \le 100</span><script type="math/tex">0 \le A_i \le 100</script>, <span class="mathjax-preview">\sum{A_i} = 100</span><script type="math/tex">\sum{A_i} = 100</script>, <span class="mathjax-preview">A_i</span><script type="math/tex">A_i</script>의 단위는 퍼센트(%)이다)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 하나씩 가장 큰 기여도 변화의 최솟값을 퍼센트 단위로 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+3 200
+35 35 30
+3 300
+35 35 30
+3 100
+49 2 49
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>6
+0
+1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

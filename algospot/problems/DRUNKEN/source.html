@@ -1,0 +1,108 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DRUNKEN">DRUNKEN</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DRUNKEN"><b>1723</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DRUNKEN/"><b>599</b> (<b>34</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>As the holiday season approaches, the number of incidents caused by Driving While Intoxicated (known as DWI) increases rapidly. To prevent this, the city of Seoul has proclaimed a war against drunken driving. Every day, the city will pick a spot at random, and inspect all the drivers passing by.</p>
+<p><img alt="judge-attachments/36a320ccba6e74fd847e44f8961c2667/figure.png" src="http://algospot.com/media/judge-attachments/36a320ccba6e74fd847e44f8961c2667/figure.png"/></p>
+<p>In this problem, the downtown of Seoul is modeled as a set of V locations and E bidirectional roads connecting them as in the above figure. Each road is marked with the time required to travel along the road. Each location is marked with the expected delay in case the inspection takes place at this location.</p>
+<p>While the inspection is all good for everybody’s safety, this may cause unwanted delays in travel. Hyoseung is right now at location A, and he is late for his appointment with his friends at location B. Help him by finding a path which has the smallest expected time, or he must buy the dinner.</p>
+<p>The expected time of a path is defined as follows:</p>
+<pre><code>[Expected time] = [Travel time along the edges] + [Delay caused by inspection]</code></pre>
+<p>As Hyoseung does not know where the inspection is taking place, we will calculate the worst expected time by assuming the inspection is done at the location which will cause the largest delay.</p>
+<p>However, we can assume that the we will not be delayed by any inspections done at the staring or ending location.</p>
+<p>For example, see the path marked with thicker lines. It will take 3 + 6 + 2 = 11 minutes to travel along the roads. Since we assume inspections at starting and ending places will not affect us, we will only consider two locations. As we don’t know which of the two places will be inspected, we will play it safe and assume the worst case - we will be inspected at the first place to get 6 minutes of delay. Therefore, the expected time of this path is 17. Write a program to calculate the smallest expected time from place A to B.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of a single map of Seoul and T test cases.</p>
+<p>The number of places V (1 &lt;= V &lt;= 500), the number of roads E(1 &lt;= E &lt;= V  (V + 1)/2) are given in the first line of the input. A list of V natural numbers follows, and i-th number in this list denotes the delay caused by drunken driving inspection at this place. After that, E lines follow, each contains three integers A, B and C. (1 &lt;= A,B &lt;= V ). The next line will the number of test cases T(1 &lt;= T &lt;= 1000). T test case will follow: each test case will consist of two integers A and B (1 &lt;= A,B &lt;= V ), and they denote the place Hyoseung is currently at, and the place his friends are waiting at.</p>
+<p>Assume every vertex is reachable for all other vertices, using one or more roads. All times given do not exceed 100.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print a single integer which is the smallest worst time to go from A to B.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>8 12
+8 6 5 8 3 5 8 4
+1 6 9
+1 2 3
+2 8 3
+6 8 5
+6 7 3
+8 7 3
+6 5 5
+4 5 7
+3 4 4
+3 5 2
+2 3 6
+7 5 1
+2
+1 5
+6 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>17
+10</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

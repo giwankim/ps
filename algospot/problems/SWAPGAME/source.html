@@ -1,0 +1,112 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SWAPGAME">SWAPGAME</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SWAPGAME"><b>163</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SWAPGAME/"><b>44</b> (<b>26</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/764">kriii</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%EA%B0%84%ED%8A%B8%EB%A6%AC">구간트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>StarMask is another superheroine that you’ve never heard of. As she is a heroine anyway, it is always your pleasure to play a game with her. This time, you are playing a game to sort a permutation of <span class="mathjax-preview">N</span><script type="math/tex">N</script> numbers. In a permutation, each number from 1 to <span class="mathjax-preview">N</span><script type="math/tex">N</script> appears exactly once and these are denoted as <span class="mathjax-preview">P[1], …, P[N]</span><script type="math/tex">P[1], …, P[N]</script>. The goal of this game is to sort a given permutation in increasing order using only one exchange rule. The rule is to follow the instructions below sequentially.</p>
+<ol>
+<li>Choose two numbers <span class="mathjax-preview">i</span><script type="math/tex">i</script> and <span class="mathjax-preview">j</span><script type="math/tex">j</script> such that <span class="mathjax-preview">1 \le i&lt;j \le N</span><script type="math/tex">1 \le i<j \le N</script>.</li>
+<li>Find the maximum value and minimum value among <span class="mathjax-preview">P[i], P[i + 1], …, P[j - 1], P[j]</span><script type="math/tex">P[i], P[i + 1], …, P[j - 1], P[j]</script>.</li>
+<li>Exchange these two values.</li>
+</ol>
+<p>StarMask knows <span class="mathjax-preview">N</span><script type="math/tex">N</script> but does not know the permutation. Meanwhile, you know the exact permutation. At the beginning of the game, you announce the inversion of the permutation. The inversion is defined as the number of pairs of <span class="mathjax-preview">(i, j)</span><script type="math/tex">(i, j)</script> such that <span class="mathjax-preview">1 \le i &lt; j \le N</span><script type="math/tex">1 \le i < j \le N</script> and <span class="mathjax-preview">P[i] &gt; P[j]</span><script type="math/tex">P[i] > P[j]</script>. For example, a permutation “2 3 1” has the inversion of 2. As the game goes on, StarMask uses the exchange rule explained above, and you announce the inversion after each exchange rule is executed. Of course, the optimal strategy will be depend on your announcement.<br/>
+Unfortunately, StarMask’s super power is about physical strength not intellectual brightness and she already made her mind to use which exchange rules even before the game has started. Now, it doesn’t have to be responsive that you are going to make a program to announce the inversion instead of you. That way, you can have fun playing other games with StarMask. But be careful. She will be very mad if your announcement is wrong.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input is <span class="mathjax-preview">T</span><script type="math/tex">T</script> which shows the number of the test cases. The first line of a test case has two numbers <span class="mathjax-preview">N (1 \le N \le 100,000)</span><script type="math/tex">N (1 \le N \le 100,000)</script> and <span class="mathjax-preview">M (0 \le M \le 100,000)</span><script type="math/tex">M (0 \le M \le 100,000)</script>. These show the size of permutation and the number of exchanges that StarMask ordered, respectably. The second line of a test case has <span class="mathjax-preview">N</span><script type="math/tex">N</script> numbers showing <span class="mathjax-preview">P[1]</span><script type="math/tex">P[1]</script> to <span class="mathjax-preview">P[N]</span><script type="math/tex">P[N]</script>. Then, from the third line, a pair of two integers <span class="mathjax-preview">i</span><script type="math/tex">i</script> and <span class="mathjax-preview">j</span><script type="math/tex">j</script> (<span class="mathjax-preview">1 \le i&lt;j \le N</span><script type="math/tex">1 \le i<j \le N</script>) are given <span class="mathjax-preview">M</span><script type="math/tex">M</script> times showing the orders of StarMask.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, your program should print a integer: sum of <span class="mathjax-preview">M+1</span><script type="math/tex">M+1</script> inversions that you were supposed to announce.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 0
+2 4 3 1
+6 2
+5 6 3 4 2 1
+1 6
+2 4
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+28</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>First Example: StarMask had no interest and didn’t exchange any numbers. So, you simply need to announce the inversion of the initial permutation.</p>
+<p>Second Example: As you follow the orders of StarMask, the permutation changes as below. On each line, red numbers represent the maximum and blue numbers represent the minimum of a given range.</p>
+<table>
+<tr>
+<td> permutation </td> <td> inversion </td>
+</tr>
+<tr>
+<td> [5 <font color="red">6</font> 3 4 2 <font color="blue">1</font>] </td> <td> 13 </td>
+</tr>
+<tr>
+<td> 5 [<font color="blue">1</font> 3 <font color="red">4</font>] 2 6 </td> <td> 6 </td>
+</tr>
+<tr>
+<td> 5 4 3 1 2 6  </td> <td> 9 </td>
+</tr>
+</table>
+</p>
+</section>

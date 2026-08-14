@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PCOMPLETE">PCOMPLETE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PCOMPLETE"><b>524</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PCOMPLETE/"><b>228</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2590">tncks0121</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>팰린드롬 만들기 대회 (Palindrome Creating Contest, PC^2)가 개최된다! 이 대회는 알파벳 소문자 'a'와 'b'로 구성된 팰린드롬들 중에서 어느 것이 가장 아름다운가를 겨루는 대회이다.</p>
+<p>승현이는 PC^2에 출품하기 위해 'a'와 'b'로 구성된 길이가 <span class="mathjax-preview">N</span><script type="math/tex">N</script>인 팰린드롬을 하나 만들었다. 승현이는 기쁜 마음으로 팰린드롬을 들고 집을 나서 대회장으로 향했다. 불운하게도, 승현이는 돌부리에 걸려 넘어져 팰린드롬의 일부를 망가뜨리고 말았다.</p>
+<p>놀란 승현이는 일단 팰린드롬을 고치기로 마음먹고 집으로 돌아갔다. 승현이는 망가진 팰린드롬에서 온전한 부분을 제외한 나머지 부분을 모두 제거했다. 글자들은 틀에 끼어 있기 때문에, 한 글자를 제거하면 빈칸 하나가 생긴다. 빈칸이 있는 팰린드롬은 아름답지 않으므로, 승현이는 빈칸들을 'a' 또는 'b'로 적당히 채워 팰린드롬을 만들어야 한다. 문제는 글자들에 장식을 달아야 하므로, 'a'를 만드는 데 <span class="mathjax-preview">p</span><script type="math/tex">p</script>분, 'b'를 만드는 데 <span class="mathjax-preview">q</span><script type="math/tex">q</script>분이라는 막대한 시간이 걸린다는 것이다. 설상가상으로 승현이는 동시에 2개 이상의 글자를 만들 수 없다. 다행히도 글자를 만든 뒤 틀에 끼우는 데에는 시간이 들지 않는다.</p>
+<p>승현이는 최소한의 시간을 들여 팰린드롬을 다시 완성하고자 한다. 여러분은 승현이의 망가진 팰린드롬과 <span class="mathjax-preview">p</span><script type="math/tex">p</script>, <span class="mathjax-preview">q</span><script type="math/tex">q</script>가 주어질 때, 승현이가 팰린드롬을 만들기 위해 들여야 할 최소한의 시간을 구하는 프로그램을 작성해야 한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스들로 구성된다. 첫 번째 줄에 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script> (<span class="mathjax-preview">1 \le T \le 200</span><script type="math/tex">1 \le T \le 200</script>)가 주어진다. </p>
+<p>각 테스트 케이스의 첫 번째 줄에는 망가진 팰린드롬의 길이 <span class="mathjax-preview">N</span><script type="math/tex">N</script> (<span class="mathjax-preview">1 \le N \le 1,000</span><script type="math/tex">1 \le N \le 1,000</script>)이, 두 번째 줄에는 망가진 팰린드롬을 나타낸 문자열 <span class="mathjax-preview">S</span><script type="math/tex">S</script>가 주어진다. <span class="mathjax-preview">S</span><script type="math/tex">S</script>는 'a'(아스키 코드 97), 'b'(아스키 코드 98), '?'(아스키 코드 63)으로만 구성되어 있다. '?'는 빈 칸을 나타낸다. 세 번째 줄에는 'a'를 만드는 데 걸리는 시간 <span class="mathjax-preview">p</span><script type="math/tex">p</script>와 'b'를 만드는 데 걸리는 시간 <span class="mathjax-preview">q</span><script type="math/tex">q</script> (<span class="mathjax-preview">1 \le p, q \le 100</span><script type="math/tex">1 \le p, q \le 100</script>)가 공백을 사이로 두고 분 단위로 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 하나씩 망가진 팰린드롬을 팰린드롬으로 바꾸기 위해 드는 최소 시간을 분 단위로 출력한다. 불가능한 경우는 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+6
+b???bb
+1 3
+1
+?
+1 2</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+1
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>어떤 문자열 <span class="mathjax-preview">S = s_{1}s_{2}\cdots s_{n}</span><script type="math/tex">S = s_{1}s_{2}\cdots s_{n}</script>이 팰린드롬이라는 것은 이것을 앞에서부터 뒤로 읽으나 뒤에서부터 앞으로 읽으나 동일하다는 것과 같다. 즉,</p>
+<p><center><span class="mathjax-preview">s_{1} s_{2} \cdots s_{n-1} s_{n} = s_{n} s_{n-1} \cdots s_{2} s_{1}</span><script type="math/tex">s_{1} s_{2} \cdots s_{n-1} s_{n} = s_{n} s_{n-1} \cdots s_{2} s_{1}</script></center></p>
+</p>
+</section>

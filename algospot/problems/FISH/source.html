@@ -1,0 +1,104 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FISH">FISH</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FISH"><b>15</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FISH/"><b>3</b> (<b>20</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=IOI%202008">IOI 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>It was told by Scheherazade that far away, in the middle of the desert, there is a lake. Originally this lake had F fish in it. K different kinds of gemstones were chosen among the most valuable on Earth, and to each of the F fish exactly one gem was given for it to swallow. Note, that since K might be less than F, two or more fish might swallow gems of the same kind.</p>
+<p>As time went by, some fish ate some of the other fish. One fish can eat another if and only if it is at least twice as long (fish A can eat fish B if and only if LA &gt;= 2 * LB). There is no rule as to when a fish decides to eat. One fish might decide to eat several smaller fish one after another, while some fish may decide not to eat any fish, even if they can. When a fish eats a smaller one, its length doesn’t change, but the gems in the stomach of the smaller fish end up undamaged in the stomach of the larger fish.</p>
+<p>Scheherazade has said that if you are able to find the lake, you will be allowed to take out one fish and keep all the gems in its stomach for yourself. You are willing to try your luck, but before you head out on the long journey, you want to know how many different combinations of gems you could obtain by catching a single fish.</p>
+<p>Write a program that given the length of each fish and the kind of gemstone originally swallowed by each fish, finds the number of different combinations of gems that can end up in the stomach of any fish, modulo some given integer M. A combination is defined only by the number of gems from each of the K kinds. There is no notion of order between gems, and any two gems of the same kind are indistinguishable.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<ul>
+<li>1 &lt;= F &lt;= 500,000 The original number of fish in the lake.</li>
+<li>1 &lt;= K &lt;= F The number of different gemstone kinds.</li>
+<li>2 &lt;=M &lt;= 30,000</li>
+<li>1 &lt;= LX &lt;= 1,000,000,000 The length of fish X.</li>
+</ul>
+<p>Your program must read from the standard input the following data:</p>
+<ul>
+<li>Line 1 contains the integer F, the original number of fish in the lake.</li>
+<li>Line 2 contains the integer K, the number of kinds of gemstones. The kinds of gemstones are represented by integers 1 to K, inclusive.</li>
+<li>Line 3 contains the integer M.</li>
+<li>Each of the following F lines describes one fish using 2 integers separated by a single space: the length of the fish followed by the kind of gemstone originally swallowed by that fish.</li>
+</ul>
+<p>NOTE: For all test cases used for evaluation, it is guaranteed that there is at least one gemstone from each of the K kinds.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program must write to the standard output a single line containing one integer between 0 and M‐1 (inclusive): the number of different possible combinations of gemstones modulo M.<br/>
+Note that for solving the task, the value of M has no importance other than simplifying computations.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>5
+3
+7
+2 2
+5 1
+8 3
+4 1
+2 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/bdf5428131374562-captcha.png",
+      "sha256": "ad187d246cf3808010a09f5383a73817bb226fb57a0d446fd3920d601dc30c5c",
+      "source_url": "http://algospot.com/media/judge-attachments/3d5500abd199c44cb9957d6fa6cd5885/captcha.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/e78476b7ed602eae-example.png",
+      "sha256": "0c5572129114ee5202a85e6f1bc495c7ba493f2e32699cd5645e95979bc6024d",
+      "source_url": "http://algospot.com/media/judge-attachments/fc182ab45b14cf3721e2bce441afca48/example.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "RECAPTCHA",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:12:37.578828Z",
+    "http_status": 200,
+    "semantic_html_sha256": "c57ad8ad550fb4d1486a1052e90233518db4b99726ed2c75156c284be01319e3"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/RECAPTCHA",
+  "statistics": {
+    "acceptance_percent": 39,
+    "accepted": 50,
+    "submissions": 128
+  },
+  "tags": [],
+  "title": "reCAPTCHA"
+}

@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/TOYOFJAEHA">TOYOFJAEHA</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=TOYOFJAEHA"><b>97</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/TOYOFJAEHA/"><b>18</b> (<b>18</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제1회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>얼마 전에 태어난 깜짝 스타 재하는 순식간에 무럭무럭 자랐다. 누구를 닮았는지 호기심이 유달리 강해 주위<br/>
+사물들에 손을 뻗어서 만지작거리곤 하는데, 재하의 아버지와 어머니는 이러한 재하를 위해서 장난감을 한 개<br/>
+사다 주었다. 이 장난감은 선분과 선분이 환형으로 연결된 모양이라, 아이가 입에 넣는 것이 쉽지 않도록 되어<br/>
+있다.</p>
+<p><img alt="judge-attachments/e0539be4487e059ac23bdfeef5ac2d43/img0.png" src="http://algospot.com/media/judge-attachments/e0539be4487e059ac23bdfeef5ac2d43/img0.png"/></p>
+<p>재하는 장난기가 발동하여 다음과 같은 다양한 모양으로 장난감을 이리저리 흐트러트리기 시작했다.</p>
+<p><img alt="judge-attachments/f3866edac57434f5577cff2e5c0775a4/polygons.png" src="http://algospot.com/media/judge-attachments/f3866edac57434f5577cff2e5c0775a4/polygons.png"/></p>
+<p>엄밀하게 말하자면, 이 장난감은 (x_1, y_1), (x_2, y_2), ..., (x_n, y_n), (x_1, y_1) 의 인접한 점들을 선분으로 이은 교차점이나 교차선이 있을 수 있는 다각형으로 정의된다.<br/>
+이 장난감이 만들어낸 넓이가 0이 넘는 영역의 수를 구하라. 단, 이 장난감 가장 바깥에 원래부터 존재하고 있었던 무한대 넓이의 영역은 세지 않는 것으로 한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T 개의 테스트 케이스로 구성된다. 입력의 첫 행에는 T 가 주어진다.</p>
+<p>각 테스트 케이스의 첫 행에는 장난감을 이루는 꼭지점의 수 N (3 &lt;= N &lt;= 100) 이 주어진다. 그 후 N 줄에 각 꼭지점의 좌표 x_i, y_i (0 &lt;= x_i, y_i &lt;= 100) 가 주어진다. 각 테스트 케이스 안에서, 같은 좌표의 꼭지점은 입력으로 들어오지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 행에 하나씩 문제에서 설명한 영역의 수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4
+0 1
+1 0
+1 1
+0 0
+6
+0 0
+1 0
+1 1
+2 1
+2 0
+3 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "QUANTIZE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:12:16.593276Z",
+    "http_status": 200,
+    "semantic_html_sha256": "341728db1db3d468f0ebc66b4b36bdeb7098a96e3973c9972bef0b2b35656014"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/QUANTIZE",
+  "statistics": {
+    "acceptance_percent": 34,
+    "accepted": 2613,
+    "submissions": 7606
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "Quantization"
+}

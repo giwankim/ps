@@ -1,0 +1,38 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "GRADUATION",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:31:25.509951Z",
+    "http_status": 200,
+    "semantic_html_sha256": "f3fcf305b71fea84284b52707bd8dab53cf7a98ad1d4c866cfc2f7d2d87f8c82"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/GRADUATION",
+  "statistics": {
+    "acceptance_percent": 25,
+    "accepted": 1042,
+    "submissions": 4112
+  },
+  "tags": [
+    "동적계획법",
+    "비트마스크"
+  ],
+  "title": "졸업 학기"
+}

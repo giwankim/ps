@@ -1,0 +1,108 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NTHLON">NTHLON</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NTHLON"><b>1176</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NTHLON/"><b>551</b> (<b>46</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%202%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 2주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>두 나라 A국과 B국은 항상 사이가 좋지 않은데, 국민들 간에 쌓인 감정을 털어버리기 위해 양국의 대표 선수들이 한 명씩 나와 친선 스포츠 경기를 하기로 했다. 채택된 종목은 철인 N종 경기이다. 철인 N종 경기의 코스는 여러 구간들로 구성되는데, 각 선수는 각 구간에서 정해진 종목을 이용해 결승점으로 이동해야 한다. 예를 들어, 어떤 철인 N종 경기의 코스는 수영 1500km, 마라톤 42.195km, 크로스컨트리 60km, 기어가기 1km 으로 구성될 수 있다.</p>
+<p>당신은 국제 철인 N종 경기 협회장으로서, 이 경기에 사용될 종목들과 그 순서를 정하는 역할을 하게 되었다. 두 나라 국민 사이 감정의 앙금을 쌓이지 않게 하기 위해, 가능한 한 두 대표 선수가 비기도록 종목들을 고르고 싶다. 다행히, 당신은 협회장이기 때문에 두 선수가 각 종목에 걸릴 시간을 비교적 정확히 예상할 수 있다. 당신의 예상이 정확하다고 할 때, 두 선수가 비기도록 코스를 설계할 수 있을까? 또한, 비기는 코스 중 걸리는 시간이 가장 짧은 코스는 무엇일까?</p>
+<p><center><table><br/>
+<tr><td>종목명</td><td>A국 선수의 예상 기록</td><td>B국 선수의 예상 기록</td></tr><br/>
+<tr><td>63빌딩 계단 오르기</td><td>17분</td><td>15분</td></tr><br/>
+<tr><td>남산 스키타고 내려오기</td><td>217분</td><td>217분</td></tr><br/>
+<tr><td>슬리퍼 신고 42.195km 마라톤</td><td>134분</td><td>135분</td></tr><br/>
+<tr><td>1500m 앞구르기</td><td>31분</td><td>37분</td></tr><br/>
+<tr><td>2000m 깽깽이 뛰기</td><td>10분</td><td>11분</td></tr><br/>
+</table></center></p>
+<p>이와 같이 5개의 종목이 있다고 하자. 그러면, 남산 스키타고 내려오기로 코스를 정하면 양국 선수가 비긴다는 것을 쉽게 알 수 있다. 그러나 그보다 더 좋은 방법이 있다. 63빌딩 계단 오르기 이후 2000m 깽깽이 뛰기를 두번 하도록 코스를 정하면 양국 선수 모두 37분으로 비기기 때문이다.</p>
+<p>이와 같은 최적의 코스를 찾는 프로그램을 작성하라.</p>
+<p><strong>단, 한 종목을 두 번 이상 코스에 추가할 수도 있다.</strong></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 번째 줄에는 테스트 케이스의 수 C (1 &lt;=  C &lt;= 50) 가 주어진다. 각 테스트 케이스의 첫 줄에는 채택 가능한 종목의 수 M (1 &lt;=  M &lt;= 500) 이 주어지고, 그 후 M 줄에 각 두 개의 숫자로 해당 종목을 완주하는데 두 선수가 걸리는 시간이 정수로 주어진다. 걸리는 시간은 분 단위이며, 항상 1 과 200 사이의 정수이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄로, 최적 코스의 완주 시간을 출력한다. 만약 두 선수가 비기는 코스를 만들 수 없다면, 'IMPOSSIBLE' 을 출력한다. (따옴표 제외)</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5
+1 2
+3 4
+5 6
+7 8
+7 3
+3
+1 100
+21 20
+10 1 
+3
+10 81
+63 71
+16 51</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>11
+111
+IMPOSSIBLE</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

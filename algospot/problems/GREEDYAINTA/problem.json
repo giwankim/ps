@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "GREEDYAINTA",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:31:42.102177Z",
+    "http_status": 200,
+    "semantic_html_sha256": "0663c6a27a43089f9fd4f86dd9d21d749af71ee7dafd3f589cfe21ffb438613c"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/GREEDYAINTA",
+  "statistics": {
+    "acceptance_percent": 37,
+    "accepted": 65,
+    "submissions": 172
+  },
+  "tags": [],
+  "title": "Greedy Seunghyun"
+}

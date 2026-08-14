@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/8d5c789f172f0050-keypad.jpg",
+      "sha256": "e873639c7fcbf8a1072b7103e6bb89e4b9cc3d48314fa6509619ca1b0bd8a788",
+      "source_url": "http://algospot.com/media/judge-attachments/9578195aab824c4544f3ee223b61095c/keypad.jpg"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BROKENKEY",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:10:54.888234Z",
+    "http_status": 200,
+    "semantic_html_sha256": "11f4ac3a46b5a67a4a438fb1eca9067316c7374dc4a76d79b97a7a689fd3a218"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BROKENKEY",
+  "statistics": {
+    "acceptance_percent": 6,
+    "accepted": 10,
+    "submissions": 153
+  },
+  "tags": [
+    "조합탐색"
+  ],
+  "title": "Broken Keypad"
+}

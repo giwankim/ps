@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "GGGCCCDDDHARD",
+  "limits": {
+    "memory_kb": 8192,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:31:14.483279Z",
+    "http_status": 200,
+    "semantic_html_sha256": "9d9edb32e8ab9419d2b94d9e9c40131e46f26a5483da60a2671311748fbfca3c"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/GGGCCCDDDHARD",
+  "statistics": {
+    "acceptance_percent": 17,
+    "accepted": 11,
+    "submissions": 64
+  },
+  "tags": [
+    "정수론"
+  ],
+  "title": "GGGCCCDDDHARD"
+}

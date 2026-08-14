@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "STARCRAFT",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:20:09.077580Z",
+    "http_status": 200,
+    "semantic_html_sha256": "de9bdf6c398d2523b84e07091d24c064f763713759cb3467ad1b6a8388ed6c99"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/STARCRAFT",
+  "statistics": {
+    "acceptance_percent": 39,
+    "accepted": 319,
+    "submissions": 814
+  },
+  "tags": [],
+  "title": "S@iNT 그룹 권회장의 스타크래프트 대회"
+}

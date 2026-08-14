@@ -1,0 +1,107 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/RAILGUN">RAILGUN</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=RAILGUN"><b>114</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/RAILGUN/"><b>12</b> (<b>10</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>미금이는 어떤 과학과 마술이 교차하는 시대에 살고 있는 중학생 소녀로, 레일건(초전자포) 발사가 특기다. 레일건이란 오백원짜리 동전에 전기를 충전하면 왠지 모를 이유로 동전이 놀라운 속도와 함께 직선으로 날아가는 현상을 말한다.<br/>
+오늘 미금이는 수학시간에 공간좌표에 대해서 공부했다. 3차원 좌표계를 처음으로 접해본 미금이는 수학이 이토록 우리 생활과 밀접한 관계에 있을 수 있다는 사실에 깜짝 놀랐다. 이는 곧 미금이의 특기인 레일건에 어떻게 적용을 해 볼 수 있을지 미금이를 고민하게 만들었고, 고민끝에 미금이는 놀라운 결론을 내리게 되었다.<br/>
+미금이가 사용하는 레일건에는 두 가지 약점이 있으며, 이는 다음과 같다.</p>
+<ol>
+<li>오백원짜리 동전의 내구성덕에 미금이의 레일건은 직선으로 50미터까지밖에 발사할 수가 없다. 이 이상 지속될 경우 에너지를 보존할 고체(오백원)가 모두 증발해버리고 만다.</li>
+<li>직선으로만 움직이기 때문에 중간에 장애물이 있을 경우 레일건을 목표물에 맞출 수 없게 된다.</li>
+</ol>
+<p>그러나 오늘 수학시간에 공부한 공간좌표, 그리고 사전에 배치된 엑셀러레이터를 이용하면 목표물의 위치, 거리에 좀 더 영향을 받지 않고 목표물을 레일건으로 맞출 수 있게 되는 것이다!<br/>
+엑셀러레이터란 에너지의 벡터를 변경하는 기계이며, 상세한 기능은 아래와 같다.</p>
+<ol>
+<li>모든 엑셀러레이터는 힘을 반사할 때 에너지를 실어 나를 수 있는 새로운 질량(오백원)을 제공하며, 모든 엑셀러레이터를 지나갈 때 레일건의 에너지는 새로운 질량체 위로 이동한다.<br/></li>
+<li>외부에서 액셀러레이터로 유입된 힘은 액셀러레이터의 배치 방향에 따라 힘의 크기는 유지한 채 힘의 입사각과 반사각이 같도록 힘의 벡터(방향)만을 반사시킨다.</li>
+</ol>
+<p>공간좌표와 액셀러레이터를 좀 더 능숙하게 사용하기 위해서 미금이가 받은 수학 과제는 다음과 같다. 사전에 레일건 발사지점과 엑셀러레이터들의 초기 위치, 그리고 목표지점이 모두 2차원 좌표계에서 점으로 주어진다. 엑셀러레이터는 위치좌표 외에도 초기에 배치된 배치 방향이 벡터로 주어지며, 매 번 레일건을 반사하기 직전에 미금이가 원하는데로 엑셀러레이터의 배치방향을 초기 배치방향에서 최대 주어진 세타만큼 기울일 수 있다(부채꼴 모양). 이 때 주어진 엑셀러레이터들을 적절하게 사용, 레일건을 발사위치에서 목표위치으로 보내는 것이 가능한지를 판단하는 것이다.</p>
+<p><img src="http://pds21.egloos.com/pds/201307/29/91/b0047291_51f5f827e5193.png"/></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 수 T가 주어진다.<br/>
+모든 테스트 케이스의 첫 줄에는 엑셀러레이터의 숫자 N (0 ≤ N ≤ 50) 이 주어진다.<br/>
+이후 N 줄에 걸쳐 엑셀러레이터의 정보가 5개의 실수로 주어지며, 순서대로 엑셀러레이터의 위치정보 x<sub>i</sub>,y<sub>i</sub>, 엑셀러레이터의 배치방향 nx<sub>i</sub>,ny<sub>i</sub> 그리고 기울일 수 있는 각도 theta<sub>i</sub>(0 ≤ theta<sub>i</sub> ≤ 90)가 degree 단위로 주어진다. (0 ≤ i &lt; N)<br/>
+이 후 가장 마지막 줄에는 레일건의 발사위치 x<sub>s</sub>,y<sub>s</sub>와 목표위치 x<sub>t</sub>,y<sub>t</sub>가 주어진다.<br/>
+모든 엑셀러레이터와 발사위치, 목표위치는 거리가 서로 10<sup>-2</sup> 이상 떨어져 있음이 보장된다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 걸쳐 목표지점에 도착 가능하면 “Yes”, 아닐 경우에는 “No”를 출력한다. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+0
+0.0 0.0 51.0 0.0
+1
+6.0 8.0 2.0 1.0 40.8
+-5.0 -3.0 -29.0 43.0
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>No
+Yes
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

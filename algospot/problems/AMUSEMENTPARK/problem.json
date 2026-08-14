@@ -1,0 +1,54 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/f00e60fda08582f6-figure1.png",
+      "sha256": "bf99ebd469cc780b36b4d8889cea54c682528b3ce72521f8174e82a74c40cf56",
+      "source_url": "https://www.algospot.com/media/judge-attachments/30cfec762917474baa25469d6d05d893/figure1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/323789bc583346e5-figure2.png",
+      "sha256": "f125d89650b0b37c86a00b2269cfd7f8a7f838b79e9f3724a045a6031df72a7d",
+      "source_url": "https://www.algospot.com/media/judge-attachments/c644bb25a67ad78fe749dedb50c5e0ac/figure2.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/17df016042b25de1-figure3.png",
+      "sha256": "2e395d4fe4bf99e09b4d09cb09ba12e1750d4ba3a4d1a80c3ff23f7ac6dfe445",
+      "source_url": "https://www.algospot.com/media/judge-attachments/5f1a213319f570c1090777b91dbe6ef3/figure3.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "AMUSEMENTPARK",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:02:45.418779Z",
+    "http_status": 200,
+    "semantic_html_sha256": "ebf27dbf426a0e7b2d5e21f28781ea300696da9a17b9395604f2749d7fb9c46c"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/AMUSEMENTPARK",
+  "statistics": {
+    "acceptance_percent": 6,
+    "accepted": 21,
+    "submissions": 350
+  },
+  "tags": [],
+  "title": "놀이 공원"
+}

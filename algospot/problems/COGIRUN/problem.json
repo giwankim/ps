@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/47c2c144ceefb014-cogicogi.png",
+      "sha256": "4d57febeccd468f115bb2cdd8905aa7653ee1351c2a75c72c9ef94a9e05fd3ae",
+      "source_url": "https://algospot.com/media/judge-attachments/fcb293482d832d57fb05b27dda800dee/cogicogi.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "COGIRUN",
+  "limits": {
+    "memory_kb": 131072,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:17:51.293679Z",
+    "http_status": 200,
+    "semantic_html_sha256": "d90726324860f264bc0824b7de43d93e0a564062d5644b619c4be8b84e5eb5b4"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/COGIRUN",
+  "statistics": {
+    "acceptance_percent": 15,
+    "accepted": 46,
+    "submissions": 302
+  },
+  "tags": [],
+  "title": "코기런"
+}

@@ -1,0 +1,98 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CITYDRIVING">CITYDRIVING</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CITYDRIVING"><b>91</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CITYDRIVING/"><b>16</b> (<b>17</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%20Programming%20Contest%202011">Stanford Local Programming Contest 2011</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%ED%8A%B8%EB%A6%AC">트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>You recently started frequenting San Francisco in your free time and realized that driving in the city is a huge pain. There are only N locations in the city that interest you, though, and you have decided to try to improve your driving experience. Since you lack a GPS and cannot remember too many diﬀerent routes, you wrote down the directions and how long it takes to get between N diﬀerent pairs of locations (the same in both directions), ensuring that using only these paths you can get from any location to any other one.</p>
+<p>Now you are planning your trip for the weekend and you need to ﬁgure out the fastest way to get between Q pairs of locations in the city using only the routes you have written down.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of multiple test cases. The ﬁrst line contains a single integer N, 3 ≤ N ≤ 100,000, the number of locations of interest and the number of routes you wrote down. The next N lines each contain three integers u, v, and w (1 ≤ w ≤ 1,000), indicating that you have directions from location u to location v and vice-versa (0-indexed) which take w time. The following line contains a single integer Q, 1 ≤ Q ≤ 10,000, the number of pairs of locations you need to compute the travel time for. The next Q lines each contain two integers u and v, indicating that you should ﬁnd the minimum time to get from location u to location v. The input terminates with a line with N = 0.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print out Q lines, one for each pair of locations u and v you are ﬁnding the fastest routes for. Each line should simply contain the minimum time it takes to travel from location u to location v.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>7
+0 1 2
+0 2 3
+1 3 2
+2 3 8
+2 4 3
+3 5 1
+1 6 7
+3
+4 5
+0 6
+1 2
+0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>11
+9
+5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

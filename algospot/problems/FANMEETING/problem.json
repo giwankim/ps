@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/21aa665cc41cb206-Screenshot_20from_202013-01-14_2022_3A31_3A18.png",
+      "sha256": "c94ba148ac71b85eb366001431f2e891a9883a90e3c5688d2d346c1cc2014e0a",
+      "source_url": "http://algospot.com/media/judge-attachments/bcbb33d48baf27a4347cf09608aece35/Screenshot%20from%202013-01-14%2022%3A31%3A18.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "FANMEETING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 15000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:25:19.524995Z",
+    "http_status": 200,
+    "semantic_html_sha256": "803ceec08c0dcc6a4b02ba2bd93b4845a1aa44efd57fc004aacfc689ba2259d4"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/FANMEETING",
+  "statistics": {
+    "acceptance_percent": 17,
+    "accepted": 1545,
+    "submissions": 8946
+  },
+  "tags": [
+    "분할정복"
+  ],
+  "title": "팬미팅"
+}

@@ -1,0 +1,95 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NOTE">NOTE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NOTE"><b>972</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NOTE/"><b>358</b> (<b>36</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=COCI%202009/2010%20Contest%20%231">COCI 2009/2010 Contest #1</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>C major scale consists of 8 tones: c d e f g a b C. For this task we number the notes using numbers 1 through 8. The scale can be played ascending, from 1 to 8, descending, from 8 to 1, or mixed. Write a program that, given the sequence of notes, determines wether the scale was played ascending, descending or mixed.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>First and only line of input will contain 8 integers, from 1 to 8 inclusive. Each integer will appear exactley once in the input.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>In the first and only line of input print "descending" if the scale was played descending, "ascending" if the scale was played ascending and "mixed" if the scale was played mixed.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>Example 1
+1 2 3 4 5 6 7 8
+
+Example 2
+8 7 6 5 4 3 2 1
+
+Example 3
+8 1 7 2 6 3 5 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Example 1
+ascending
+
+Example 2
+descending
+
+Example 3
+mixed</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

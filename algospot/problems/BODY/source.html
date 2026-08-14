@@ -1,0 +1,107 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BODY">BODY</a></li>
+<li class="timelimit"><b>15000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BODY"><b>76</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BODY/"><b>24</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F%20%EC%83%88%EC%8B%B9%20%EC%BD%98%ED%85%8C%EC%8A%A4%ED%8A%B8">제1회 알고스팟 새싹 콘테스트</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>대한민국 최대의 불법 아르바이트 조직 albarden은 얼마 전까지만 해도 소문만 무성할 뿐, 실체가 없는 조직이었습니다. 그런데 며칠 전, albarden의 한 말단 조직원이 유명 해킹 사이트 todayspot에 댓글을 남기다 덜미가 잡혀, albarden의 조직도와 조직에 대한 몇 가지 정보가 유출되었습니다. 조직도에는 조직원 N명의 연결 관계가 트리 형태로 표현되어 있었고, 유출된 정보를 통해 이들 중 1명은 조직의 우두머리, M-1명은 조직의 몸통(중간 보스?)이라는 사실이 밝혀졌습니다. 또한 조직의 몸통들은 우두머리와 바로 연결되거나 다른 몸통들 만을 통해서 우두머리와 연결된다고 합니다. todayspot의 감 좋은 맴버 altertain은 N명 중 Q명의 우두머리 후보를 골라냈습니다. 각각의 우두머리 후보에 대해 가능한 몸통 맴버 구성의 가지 수를 계산하세요.</p>
+<p>예를 들어 albarden의 조직도가 아래와 같고, 몸통이 2명일 때,</p>
+<p><img alt="조직도" src="http://algospot.com/media/judge-attachments/b8fcbe1b07680c745a6e01347311c131/G1.png"/></p>
+<p>5번이 우두머리라면 몸통은 (1, 6)이나 (1, 2)로 구성될 수 있고, 가지 수는 2입니다. 1번이 우두머리라면 몸통은 (5, 6), (5, 2), (6, 2), (2, 3)으로 구성될 수 있고, 가지 수는 4입니다.</p>
+<p>입력으로 서로 다른 조직원의 번호 A, B가 주어집니다. Q명의 우두머리 후보는 조직도에서 A와 B를 연결하는 경로의 Ki번째 조직원들로 구성됩니다. 예를 들어 위 그림에서 A = 6, B = 4, Q = 3이고 Ki가 각각 1 3 5라면, 각각 6, 2, 4번 조직원이 우두머리일 때의 가지 수를 세면 됩니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C가 주어집니다. 각 테스트 케이스의 첫 줄에는 조직원의 수 N, 우두머리와 몸통의 수 M, 그리고 조직원의 번호 A, B가 주어집니다. 그 후 N-1줄에 각각 연결된 두 조직원의 번호 Vi, Ui가 주어집니다. 그 다음 줄에는 우두머리 후보의 수 Q가 주어집니다. 그 다음 줄에는 Q명의 우두머리 후보를 나타내는 수 Ki가 주어집니다. Ki는 항상 조직도에서 A와 B를 연결하는 경로 상의 조직원 수 이하입니다. 조직원의 번호는 1부터 N까지의 자연수입니다. 한 조직원은 최대 5명의 조직원과 연결됩니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 Q명의 우두머리 후보에 대해 가능한 몸통 맴버 구성의 가지 수를 출력합니다. 답이 클 수 있으므로 답을 20130203으로 나눈 나머지를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+6 3 6 4
+1 5
+1 6
+1 2
+2 3
+3 4
+5
+1 2 3 4 5
+9 4 1 4
+1 2
+2 3
+3 4
+5 1
+6 1
+9 3
+3 7
+8 4
+4
+1 2 3 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2 4 4 2 1 
+6 10 12 7</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>2 ≤ N ≤ 1000<br/>
+2 ≤ M ≤ min(100, N)<br/>
+1 ≤ A, B, Q, Ki ≤ N</p>
+</p>
+</section>

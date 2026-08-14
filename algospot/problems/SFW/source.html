@@ -1,0 +1,92 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SFW">SFW</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SFW"><b>144</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SFW/"><b>45</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/472">Arine</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%209%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 9주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>원하의 팀이 관리하는 모바일 게임 중 하나인 '슈퍼판타 지워'는 플레이어가 슈퍼 주인 아주머니가 되어 슈퍼를 노리는 진상 고객으로부터 슈퍼를 지키는 턴제 RPG 경영 게임이다. 모바일 RPG 게임 시장에서 자동 전투 모드가 없는 게임은 경쟁력이 떨어지므로, '슈퍼판타 지워'도 이번 대규모 업데이트에 자동 전투를 추가하려고 한다.</p>
+<p>'슈퍼판타 지워'의 전투 화면은 내부적으로 아래와 같이 <span class="mathjax-preview">(0, 0)</span><script type="math/tex">(0, 0)</script>부터 <span class="mathjax-preview">(N-1, M-1)</span><script type="math/tex">(N-1, M-1)</script>의 정수 칸으로 되어 있다.</p>
+<p><img alt="" src="https://algospot.com/media/judge-attachments/329f8dcb3786be2142087b50c0e7a3d8/figure1.png"/></p>
+<p>처음 슈퍼 아주머니는 <span class="mathjax-preview">(r0, c0)</span><script type="math/tex">(r0, c0)</script>에서 시작하여, 한 턴 당 세로로 최대 <span class="mathjax-preview">A</span><script type="math/tex">A</script>칸을 이동하거나, 가로로 최대 <span class="mathjax-preview">B</span><script type="math/tex">B</script>칸을 이동할 수 있다. 진상 손님의 위치가 <span class="mathjax-preview">(r, c)</span><script type="math/tex">(r, c)</script>라면, 슈퍼 아주머니가 <span class="mathjax-preview">(r, c)</span><script type="math/tex">(r, c)</script>에 도달하면 진상 손님을 쫓아낼 수 있다. 이 때, 진상 손님은 턴이 지나도 움직이지 않는다.</p>
+<p>자동 전투 AI를 만들기 위해 슈퍼 주인 아주머니 캐릭터가 최소 몇 턴이 지나야 진상 손님을 쫓아낼 수 있는지 계산해야 한다.</p>
+<p>예를 들어, <span class="mathjax-preview">A = 4</span><script type="math/tex">A = 4</script>, <span class="mathjax-preview">B = 3</span><script type="math/tex">B = 3</script>이고, 슈퍼 아주머니의 처음 위치가 <span class="mathjax-preview">(1, 2)</span><script type="math/tex">(1, 2)</script>, 진상 손님이 <span class="mathjax-preview">(9, 9)</span><script type="math/tex">(9, 9)</script>에 있다고 하면 아래와 같이 이동하여 5턴만에 진상 손님을 쫓아낼 수 있다.</p>
+<p><img alt="" src="https://algospot.com/media/judge-attachments/e36bc6996bf53175babd52d032b0cfea/figure2.png"/></p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 여러개의 테스트케이스로 이뤄지며, 첫 줄에 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script> (<span class="mathjax-preview">1 \le T \le 1\,000</span><script type="math/tex">1 \le T \le 1\,000</script>)가 정수로 주어진다.</p>
+<p>테스트 케이스마다 정수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>, <span class="mathjax-preview">M</span><script type="math/tex">M</script> (<span class="mathjax-preview">1 \le N, M \le 2\,000\,000\,000</span><script type="math/tex">1 \le N, M \le 2\,000\,000\,000</script>), <span class="mathjax-preview">r0</span><script type="math/tex">r0</script>, <span class="mathjax-preview">c0</span><script type="math/tex">c0</script>, <span class="mathjax-preview">r</span><script type="math/tex">r</script>, <span class="mathjax-preview">c</span><script type="math/tex">c</script> (<span class="mathjax-preview">0 \le r0, r &lt; N</span><script type="math/tex">0 \le r0, r < N</script>, <span class="mathjax-preview">0 \le c0, c &lt; M</span><script type="math/tex">0 \le c0, c < M</script>), <span class="mathjax-preview">A</span><script type="math/tex">A</script>, <span class="mathjax-preview">B</span><script type="math/tex">B</script> (<span class="mathjax-preview">1 \le A &lt; 2\,000\,000\,000</span><script type="math/tex">1 \le A < 2\,000\,000\,000</script>, <span class="mathjax-preview">1 \le B &lt; 2\,000\,000\,000</span><script type="math/tex">1 \le B < 2\,000\,000\,000</script>)가 각각 공백 하나로 구분되어 한 줄에 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 첫 번째 줄에 정답을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+9 9 0 1 8 8 4 3
+9 9 8 8 0 1 4 3
+9 9 1 1 1 1 3 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5
+5
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,93 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SORTGAME">SORTGAME</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SORTGAME"><b>3352</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SORTGAME/"><b>1052</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>중복이 없는 정수 수열이 주어진다. 이 때, 우리는 이 수열의 임의의 구간을 선택해서 해당 구간을 뒤집을 수 있다. 이 뒤집기 연산을 통해 전체 수열을 정렬하고 싶다. 그런데, 같은 수열도 두 가지 이상의 방식으로 정렬할 수 있다. 예를 들어 <code>3 4 1 2</code> 는, <code>3 4</code> 와 <code>1 2</code> 를 각각 뒤집어 <code>4 3 2 1</code> 을 만든 뒤, 전체를 뒤집어 정렬할 수도 있지만, <code>4 1 2</code> 를 먼저 뒤집고, <code>3 2 1</code> 을 다시 뒤집으면 두 번만의 연산으로 정렬할 수도 있다.</p>
+<p>정렬을 위해 뒤집기 연산을 최소 몇 번 해야 하는지를 계산하는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (&lt;= 1000) 이 주어진다. 각 테스트 케이스의 첫 줄에는 수열의 길이 N (1 &lt;= N &lt;= 8) 이 주어진다. 다음 줄에 N개의 정수로 각 수열의 원소들이 순서대로 주어진다. 한 수열에 같은 수가 두 번 출현하지 않는다고 가정해도 좋다. 모든 수는 1부터 1백만 사이의 정수이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 입력을 정렬하기 위해 필요한 최소 뒤집기 연산의 수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+8
+1 2 3 4 8 7 6 5
+4
+3 4 1 2
+3
+1 2 3
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+2
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/7923a5dc783b26da-dcw7khwc_21dt52x7gc_b.png",
+      "sha256": "cb4cab1e341d6789105cf2b7e8097741cb39deadfcc49b8f276630366b04e526",
+      "source_url": "http://algospot.com/media/judge-attachments/5b4c2ae203c98dedc1f2b5811acc9326/dcw7khwc_21dt52x7gc_b.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "LADDER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:43:07.970154Z",
+    "http_status": 200,
+    "semantic_html_sha256": "7acc6933f3dfe50359b024d52bbd2c47631b0a8e139b6536193f8f913ce44935"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/LADDER",
+  "statistics": {
+    "acceptance_percent": 11,
+    "accepted": 32,
+    "submissions": 269
+  },
+  "tags": [],
+  "title": "운명의 사다리"
+}

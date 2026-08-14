@@ -1,0 +1,137 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FLAPPY">FLAPPY</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FLAPPY"><b>240</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FLAPPY/"><b>64</b> (<b>26</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><center><br/>
+<img src="/media/judge-attachments/f6f903afe5ed8931d12a9a6f71956037/Screenshot_2014-08-11-00-51-34.png" width="300px"/><br/>
+</center></p>
+<p>Everyone knows about Flappy Bird: it's a mobile game in which you control a bird to fly through a series of pipes without touching them. You are seriously addicted to the game, and have wasted countless hours playing it. </p>
+<p>To fight this addiction, you decided to "solve" the game with your programming skills instead. In this task, you have to write an AI for a simplified form of Flappy Bird.</p>
+<h2 id="toc_0">Game Description</h2>
+<p>The game level description is given as a grid of size <span class="mathjax-preview">H \times W</span><script type="math/tex">H \times W</script> (<span class="mathjax-preview">1 \le H \le 20</span><script type="math/tex">1 \le H \le 20</script>, <span class="mathjax-preview">1 \le W \le 1000</span><script type="math/tex">1 \le W \le 1000</script>). Each cell of this grid is either occupied by a pipe (represented by a '#') or empty (represented by a '.'). Your bird will occupy exactly one cell in the leftmost column, represented by a '@'. Each pipe is a vertical strip of #s, with possibly one or more openings so the bird can pass through. No two adjacent columns will both contain pipes.</p>
+<p>So, It looks like this:</p>
+<pre><code>.....#.....#.....#.....#.....#
+.....#...........#...........#
+.....#...........#...........#
+@..........#.....#.....#......
+...........#...........#......
+.....#.....#.................#
+.....#.....#.....#...........#</code></pre>
+<p>(Note the 4th pipe has two openings!)</p>
+<p>The bird's movement is simulated in time slices. In each time slice, the bird will move exactly one column to the right. Also, you can choose to flap (thus propelling the bird upwards) or stay (the bird will fall to the ground): </p>
+<ul>
+<li>If you choose to flap, the bird will move up by 4 rows(when you reach the top of the game level, you cannot go up further), and its vertical speed will be set to 0. </li>
+<li>If you choose to stay, the bird's vertical speed will be increased by 1; and the bird will move down by the new vertical speed.</li>
+</ul>
+<p>At the beginning of the game, your bird has a vertical speed of 0. For example, consider the following level description:</p>
+<pre><code>.AB...
+..C...
+......
+......
+@.....
+.D....
+......
+..E...</code></pre>
+<ul>
+<li>If you decide to flap at time #0, you will arrive at the location denoted by A in time #1. Then,
+
+<ul>
+<li>If you choose to flap again, you will arrive at B in time #2 (you cannot go above the top of the level). </li>
+<li>If you choose to stay, you will arrive at C in time #2 (the vertical speed is reset to 0 after flapping).</li>
+</ul></li>
+<li>If you decide to stay at time #0, you will arrive at D in time #1. Then,
+
+<ul>
+<li>If you choose to flap, you will arrive at C in time #2.</li>
+<li>If you choose to stay again, you will arrive at E in time #2 (the vertical speed is 2 now).</li>
+</ul></li>
+</ul>
+<p>The game is over when you arrive at a cell occupied by a pipe, move below the bottom row, or move past the rightmost column. </p>
+<h2 id="toc_1">Task</h2>
+<p>Find the maximum score you can achieve given a level description. Your score is the number of the time slices you have played. For example, if you collided into a pipe after flapping just once, your score is 1.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The number of test cases <span class="mathjax-preview">C</span><script type="math/tex">C</script> (<span class="mathjax-preview">1 \le C \le 100</span><script type="math/tex">1 \le C \le 100</script>) will be given in the first line of the input.</p>
+<p>Each test case will begin with two integers <span class="mathjax-preview">H</span><script type="math/tex">H</script> and <span class="mathjax-preview">W</span><script type="math/tex">W</script> (<span class="mathjax-preview">1 \le H \le 20</span><script type="math/tex">1 \le H \le 20</script>, <span class="mathjax-preview">1 \le W \le 1000</span><script type="math/tex">1 \le W \le 1000</script>). Then, the following <span class="mathjax-preview">H</span><script type="math/tex">H</script> lines will contain the level description, from the top row to the bottom row. It will be formatted as described above.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print one integer, that is the maximum score achievable with an optimal AI player.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+5 9
+....#....
+..#.#..#.
+@.#.#..#.
+..#.#..#.
+..#....#.
+2 10
+...#.#..#.
+@#........</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+10</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

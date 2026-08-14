@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/RATIO">RATIO</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=RATIO"><b>7785</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/RATIO/"><b>1596</b> (<b>20</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%9D%B4%EC%A7%84%ED%83%90%EC%83%89">이진탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>싸비는 윈도우XP 운영체제에 포함되어 있는 스파이더 카드게임을 매우 좋아한다. 처음에는 지는 경우가 있었는데, 점점 연습을 함에 따라 필승법을 발견하였고 매번 승리를 하게 되었다.</p>
+<p>스파이더 게임을 하면 플레이어에 대한 정보가 다음과 같이 주어지는데 싸비는 이것을 보다 표시되고 있는 승률을 1%이상 올리기 위해선 최소한 몇 번의 연승이 필요한지 의구심이 들었다.</p>
+<p>플레이 횟수 : N<br/>
+승리 횟수 : M(Z %)</p>
+<p>여기서 Z%의 경우 소수점을 제외한 부분의 승률이다. 즉, 승률이 88.68% 일 경우 Z = 88% 이다.</p>
+<p>N, M이 주어졌을 때, Z를 올리기 위한 최소한의 연승횟수가 필요한지 구하는 프로그램을 작성하라. 여기서 답이 되는 연승횟수는 2,000,000,000 이하라고 가정한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫번째 줄에는 테스트 케이스의 개수 T가 입력되고, 다음 줄 부터 한줄에 하나씩 T개의 테스트 케이스가 입력된다.<br/>
+테스트케이스는 두 개의 숫자로 이루어진다. 처음에 들어오는 숫자는 스파이더를 플레이를 한 횟수N(1&lt;=N&lt;=1,000,000,000)를 의미하며, 나중에 들어온 숫자는 승리한 횟수M(0&lt;=M&lt;=N)를 의미한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해서 한줄에 승률을 올릴 수 있을 경우 이를 위한 최소한의 연승 수를 출력하며, 불가능할 경우 -1을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>5
+10 8
+100 80
+47 47
+99000 0
+1000000000 470000000
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+6
+-1
+1000
+19230770</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CANDLESTICK">CANDLESTICK</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CANDLESTICK"><b>487</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CANDLESTICK/"><b>162</b> (<b>33</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%201%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 1주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>A candlestick chart, often abbreviated to candle chart, is a variation of a bar chart. It is mostly used to describe the price of a stock over time.</p>
+<p><img alt="judge-attachments/a847817dd32f28a0483c29ac456eace5/chart2.png" src="http://algospot.com/media/judge-attachments/a847817dd32f28a0483c29ac456eace5/chart2.png"/></p>
+<p>You are using a simple candle chart which looks like above. Each bar in the graph shows the range of prices at which the stock has been traded in a day. The top of the bar denotes the highest price, and the bottom denotes the lowest price.</p>
+<p>Looking at this chart, you want to find out the true price of the stock. You think the price will move around the true price, above and below. Your strategy is simple: buy the stock below this price, and sell it above this price, so you will always make money.</p>
+<p>In your model, the true price fluctuates within a certain interval. This interval should have the following properties:</p>
+<ol>
+<li>Since smaller intervals are unlikely to be true, larger intervals are better than smaller intervals.</li>
+<li>In most of the days, the range(interval) [lowest traded price, highest traded price] will contain this interval.</li>
+</ol>
+<p>According to this, you make a selection criteria. Let’s say that an interval [low, high] satisfies a day if the interval is completely contained within the traded price range. For example, [10, 18] satisfies [8, 20] but not [11, 30]. If then, the score for this interval is: (Maximal number of consecutive days that this interval satisfies) × (high − low). For example, suppose a stock was traded for three days, where on each day the price ranged in [10,18], [9,16], and [12,19]. An interval [10, 16] will satisfy the first two days, so<br/>
+it has a score of 2×6 = 12. [16, 18] satisfies at most one consecutive day(first or third day), so the score is 1 × 2 = 2.</p>
+<p>Given a candle chart, write a program to find the highest scoring interval.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input has the number of test cases T(1 &lt;= T &lt;= 50). T test cases follow.<br/>
+In each test case, the first line contain the number of days in the chart N(1 &lt;= N &lt;= 2, 000). In the following N lines, the traded price range of each day will be given – low and high. All prices are positive integers less than 100,000.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print T lines, one line for each test case. In each line, print out the score of the highest-scoring interval.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+10 18
+9 16
+12 19
+3
+10 18
+12 17
+5 18</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>12
+15</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

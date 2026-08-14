@@ -1,0 +1,119 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/RECAPTCHA">RECAPTCHA</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=RECAPTCHA"><b>128</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/RECAPTCHA/"><b>50</b> (<b>39</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>위의 알고스팟 회원 가입 양식에 보이는 Security Check 는 스팸 봇과 사용자를 구별하기 위한 도구로, <b>reCAPTCHA</b> 라고 부른다.<br/>
+이미지에 쓰여 있는 글씨를 읽어내는 작업은 기계가 하기 어렵기 때문에 사람이 직접 해야 하고, 따라서 프로그램을 돌려 자동으로 회원 가입하는 것을 방지하는 좋은 수단이 된다.<br/>
+그런데 지난 8월에 열린 해킹 컨퍼런스 데프콘 18 에서 이 <b>reCAPTCHA</b> 를 높은 확률로 해결할 수 있는 기술이 발표되었다. 이 문제에서는 이 알고리즘의 마지막 부분만을 풀어 본다.<br/>
+<center><br/>
+<img alt="judge-attachments/3d5500abd199c44cb9957d6fa6cd5885/captcha.png" src="http://algospot.com/media/judge-attachments/3d5500abd199c44cb9957d6fa6cd5885/captcha.png"/><br/>
+</center><br/>
+이 알고리즘은 크게 전처리, 경계 추출, 유사도 판정, 단어 판별의 네 단계로 나뉜다.</p>
+<ul>
+<li>전처리 - 전처리 과정에서는 변형되어 있는 글자들을 원래의 형태로 변형한다. 위 그림의 (a) 는 전처리가 끝난 이미지를 보여준다.</li>
+<li>경계 추출 - 경계 추출 과정에서는 글자의 경계 같아 보이는 부분들을 휴리스틱 알고리즘으로 추출한다. 그림 (b) 의 붉은 선들이 그 예이다. 9개의 경계 후보를 추출했다고 하고, 이들을 1 부터 9 까지의 번호로 부르자.</li>
+<li>유사도 판정 - 경계 후보들 사이의 각 구간이 어떤 글자와 닮았는지를 판단한다. 유사도 함수 sim(s,e,C)는, s - e 구간이 알파벳 C와 얼마나 닮았는지를 표현한다. 예로 그림 (b) 를 보면 sim(1,3,h) 는 sim(1,3,y) 보다 훨씬 높은 값을 가질 거라는 것을 알 수 있다.</li>
+<li>단어 판정 - 두 번째 과정에서 골라낸 경계 후보 중 어떤 선을 택해야 할지를 결정한다. (b) 에서, 2-3 구간이 어떤 글자와도 닮지 않았다는 것을 고려하면, 2번 후보를 무시하고 1-3 구간을 h로 해석해야 한다는 것을 알 수 있다.</li>
+</ul>
+<p><center><br/>
+<img alt="judge-attachments/fc182ab45b14cf3721e2bce441afca48/example.png" src="http://algospot.com/media/judge-attachments/fc182ab45b14cf3721e2bce441afca48/example.png"/><br/>
+</center><br/>
+전처리, 경계 추출, 유사도 판정이 완료된 데이터가 주어질 때, 마지막 단어 판정 과정을 구현하는 프로그램을 작성하라. 단어 판정 과정에서는 경계 후보 중 어떤 것을 선택하고 나눠진 각 구간을 어떤 글자로 보아야 할 지를 결정하는데, 가능한 모든 경우 중 각 구간별 유사도의 곱이 가장 큰 경우를 선택한다. 예를 들어, 그림 (b) 에서 가장 유사도의 곱이 큰 경우는<br/>
+<center><br/>
+sim(1,3,h) * sim(3,5,e) * sim(5,6,l) * sim(6,7,l) * sim(7,9,o)<br/>
+</center></p>
+<p>가 된다.</p>
+<ul>
+<li>입력으로 주어지는 <b>CAPTCHA</b> 에는 항상 알파벳 소문자만 출현한다.</li>
+<li>"w|  |o|r|d" 에서처럼 어떤 글자도 없이 비어 있는 구간은 없다고 가정한다.</li>
+</ul>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수 T 가 주어진다. 그 후, T 개의 테스트 케이스가 순서대로 주어진다.</p>
+<p>각 테스트 케이스의 처음에는 추출한 경계의 수 N (2 &lt;= N &lt;= 50) 가 주어진다. 이후, N*(N-1)/2개의 줄에 각 구간의 유사도가 주어진다. 구간은 왼쪽 경계가 앞에 있는 구간, 왼쪽 경계가 같은 경우 오른쪽 경계가 앞에 있는 구간이 먼저 오는 순서로 주어지며, 각 줄에는 해당 구간의 각 글자에 대한 유사도가 a부터 z까지 26개의 실수로 주어진다. 모든 유사도는 0부터 1 사이의 값을 갖는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 한 줄에 하나씩 가장 유사도가 높은 단어를 출력한다.</p>
+<p>최대 유사도를 갖는 단어는 유일하다. 엄밀히 말해, 최대 유사도를 x라 할 때 0.999999 x 이상의 유사도를 갖는 다른 단어는 존재하지 않는다고 가정해도 무방하다.</p>
+<p>Hint: 첫 번째 예제에서, 유사도 값을 포함하는 세 개의 줄은 순서대로 1 - 2 구간, 1 - 3 구간, 2 - 3 구간의 알파벳 별 유사도를 나타낸다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.98
+0 0.99 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+4
+0.200 0.295 0.289 0.253 0.262 0.420 0.198 0.288 0.450 0.437 0.213 0.550 0.243 0.281 0.276 0.321 0.224 0.285 0.256 0.413 0.224 0.241 0.276 0.195 0.285 0.170
+0.099 0.107 0.156 0.170 0.142 0.173 0.128 0.120 0.197 0.105 0.084 0.248 0.112 0.086 0.190 0.150 0.129 0.070 0.093 0.152 0.116 0.126 0.113 0.139 0.082 0.084
+0.027 0.029 0.018 0.041 0.030 0.037 0.031 0.020 0.030 0.024 0.036 0.062 0.022 0.012 0.020 0.033 0.013 0.027 0.022 0.031 0.023 0.035 0.031 0.037 0.027 0.038
+0.267 0.419 0.307 0.314 0.229 0.278 0.406 0.214 0.287 0.258 0.281 0.369 0.298 0.294 0.550 0.362 0.387 0.149 0.256 0.248 0.156 0.229 0.192 0.176 0.275 0.227
+0.067 0.068 0.088 0.078 0.078 0.109 0.074 0.097 0.136 0.123 0.060 0.180 0.069 0.043 0.065 0.095 0.079 0.092 0.069 0.139 0.063 0.078 0.052 0.077 0.078 0.074
+0.238 0.097 0.211 0.196 0.196 0.267 0.161 0.146 0.388 0.329 0.164 0.540 0.174 0.162 0.277 0.155 0.185 0.070 0.082 0.265 0.118 0.208 0.160 0.181 0.169 0.208</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>ab
+lol</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

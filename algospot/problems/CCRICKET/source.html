@@ -1,0 +1,109 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CCRICKET">CCRICKET</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CCRICKET"><b>432</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CCRICKET/"><b>70</b> (<b>16</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><center><br/>
+<img alt="judge-attachments/88c9045ad10557114eacc3241f94df3e/image.jpg" src="http://algospot.com/media/judge-attachments/88c9045ad10557114eacc3241f94df3e/image.jpg"/><br/>
+</center><br/>
+룸메이트가 추석연휴를 맞아 집에 가 있는 동안 <b>LIBe</b>는 화장실에 침입한 <b>꼽등이(Camel Cricket!)</b>를 보고 흥분한 나머지 옆에 있던 망치로 꼽등이를 잡다가 화장실에 있는 타일을 많이 부수고 말았다.</p>
+<p>당황한 <b>LIBe</b>는 집 근처에서 타일을 파는 <b>Kureyo Company</b>와 <b>Being Mart</b>를 방문했다.<br/>
+세계적인 타일 제조 회사로 유명한 두 회사에서는 각각 다른 크기의 타일을 만든다.<br/>
+<b>Kureyo Company</b>에서는 1x1 크기의 타일을,  <b>Being Mart</b>에서는 1x2 크기의 타일을 만든다.<br/>
+두 회사의 타일 제조 과정이 달라서 비용에 차이가 있지만, 국제 타일 규격을 준수하기 때문에 어느 타일을 사용해도 크게 문제가 되지 않았다.</p>
+<p><b>LIBe</b>는 화장실에 타일이 깨진 모양을 살펴보고 최소한의 비용으로 복구하기 위해 프로그래밍을 시작했다.<br/>
+하지만 꼽등이를 본 충격으로 말미암아 손이 마음대로 움직이지 않아 여러분에게 도움을 청하고 말았다. <br/>
+부서진 타일들의 정보가 입력으로 주어질 때, 모든 타일을 교체하는 데 필요한 최소한의 비용을 구하시오.<br/>
+다만, 꼽등이를 잡는 데 사용했던 망치에는 연가시가 서식하고 있어 사용할 수 없으므로 부서지지 않은 타일은 더는 떼어낼 수 없다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T 가 주어진다.</p>
+<p>각 테스트 케이스의 첫 줄에는 화장실의 크기 N, M (1 &lt;= N, M &lt;= 100) 과 <b>Kureyo Company</b> 에서 판매하는 타일의 개당 가격인 P_1, <b>Being Mart</b> 에서 판매하는 타일의 개당 가격인 P_2 가 공백을 사이에 두고 주어진다 (1 &lt;= P_1, P_2 &lt;= 1000).<br/>
+그 다음 N 줄에 걸쳐 한 줄에 M 개씩의 숫자가 공백 없이 입력되며, 각 숫자는 해당 위치의 타일이 깨졌다면 0, 깨지지 않았다면 1이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 한 줄에 하나씩 화장실의 깨진 타일을 모두 복구하는 데 필요한 비용을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+3 4 5 8
+0100
+0101
+0000
+3 4 7 10
+0000
+0000
+0000
+4 3 2 3
+101
+010
+101
+010</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>37
+60
+12</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

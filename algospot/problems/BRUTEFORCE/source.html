@@ -1,0 +1,93 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BRUTEFORCE">BRUTEFORCE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BRUTEFORCE"><b>1075</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BRUTEFORCE/"><b>351</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5">분할정복</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>암호학에서 <a href="http://en.wikipedia.org/wiki/Brute_force_attack">Brute-Force Attack</a> 은, 암호를 풀기 위해서 무식하게 수많은 암호를 하나하나 시도하는 방법을 일컫는다. 대부분의 경우 Brute-Force Attack 을 사용하는 것은 무의미하지만, 시스템이 허용하는 암호의 수가 제한되어 있다면 Brute-Force Attack 이 유용할 수도 있다.</p>
+<p>예를 들어, 은행 비밀번호는 항상 4자리의 10진수로 구성되어 있기 때문에 10000개의 암호 조합만이 사용 가능하다.</p>
+<p>당신은 어떤 시스템의 암호를 Brute-Force Attack 으로 알아내고 싶다. 이 시스템에서 최소 A자리에서 최대 B자리의 암호를 사용할 수 있다고 하며, 암호의 각 자리에는 N종류의 글자 중 하나를 사용할 수 있다고 하자. (예를 들어, 은행의 비밀번호에 대해서는 A=B=4, N=10 이다.) 이 때 이 시스템에서 사용할 수 있는 암호 조합의 수를 계산하는 프로그램을 작성하라.</p>
+<p>답이 클 경우, 1000000007 의 나머지만을 출력한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에 테스트 케이스의 개수 C (&lt;= 100) 가 주어진다. 그 후 C줄에 각각 A 와 B, N 이 세 개의 자연수로 주어진다. (1 &lt;= A &lt;= B &lt;= 100 000 000, 1 &lt;= N &lt;= 128)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다, 시스템에서 사용할 수 있는 암호 조합의 수를 1000000007 로 나눈 나머지를 한 줄에 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+1 100000 1
+4 4 10
+4 8 36
+3567404 46749457 21
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>100000
+10000
+712979373
+278986658
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

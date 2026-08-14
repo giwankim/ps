@@ -1,0 +1,66 @@
+{
+  "assets": [
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://eq.springnote.com/tex_image?source=q'%20\\notin%20S"
+    },
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://eq.springnote.com/tex_image?source=p'%20\\in%20S"
+    },
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://eq.springnote.com/tex_image?source=%20%20%20%20%5Cnexists%20r%20%5Cin%20S%20%5C%3B%5C%3B%5Ctextrm%7Bsuch%20that%7D%5C%3B%5C%3B%20p%20%5Cneq%20r%20%5C%3B%5C%3B%5Cland%5C%3B%5C%3B%20p%2C%5C%3B%20q%2C%5C%3B%20r%5C%3B%20%5Ctextrm%7Bare%20co-linear%7D%20%5C%3B%5C%3B%5Cland%5C%3B%5C%3B%0A%09%7C%5Coverline%7Bqr%7D%7C%20%3C%20%7C%5Coverline%7Bqp%7D%7C%0A"
+    },
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://eq.springnote.com/tex_image?source=%7C%5Coverline%7Bqr%7D%7C"
+    },
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://eq.springnote.com/tex_image?source=q'%20%5Cnotin%20S"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "VISIBILITY",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:28:33.229749Z",
+    "http_status": 200,
+    "semantic_html_sha256": "c566695c3ff801aefee6f5015b0f86d14bf21d929604065cdd518afcbc58d4a4"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/VISIBILITY",
+  "statistics": {
+    "acceptance_percent": 37,
+    "accepted": 3,
+    "submissions": 8
+  },
+  "tags": [],
+  "title": "Visibility Measure"
+}

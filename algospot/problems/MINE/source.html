@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MINE">MINE</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MINE"><b>457</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MINE/"><b>106</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%202%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 2주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>2020년, 전세계에서 유일한 분단국가인 남한과 북한이 통일을 선언했다. 남북은 통일이 되면서 DMZ (남한과 북한의 경계에 있는 비무장지대) 에 묻혀 있는 지뢰를 모두 제거하기로 했다. 지뢰는 H*W 격자로 이루어진 땅에 묻혀 있고, 각 칸에 최대 한 개가 묻혀 있다. 우리는 지뢰가 어디에 묻혀 있는지는 정확히 알 수 없으나, 센서를 이용해서 각 칸의 위험도를 알 수 있다. 지뢰가 묻혀 있는 칸에 인접한 상하좌우 네 칸은 각각 위험도가 U, D, L, R 만큼 증가한다. 이 때 U, D, L, R 은 서로 다른 자연수이다.</p>
+<p><center></center></p>
+<table style="border-spacing: 4px;"><tr>
+<td><img src="http://algospot.com/media/judge-attachments/4fc0b413a434e375118083c26cb4ef7f/mine1.PNG"/></td>
+<td><img src="http://algospot.com/media/judge-attachments/a48c9ea316adde841160d0ee65bec95e/mine2.PNG"/></td></tr>
+<tr><td style="text-align: center;">(a)</td>
+<td style="text-align: center;">(b)</td></tr>
+<tr><td><img src="http://algospot.com/media/judge-attachments/d2e448c1c40e1bcc8462f521209ed157/mine3.PNG"/></td>
+<td><img src="http://algospot.com/media/judge-attachments/77a1c0684fb1c998bf65412a18dee371/mine4.PNG"/></td></tr>
+<tr><td style="text-align: center;">(c)</td>
+<td style="text-align: center;">(d)</td></tr></table>
+<p></p>
+<p>예를 들어, 그림 (a) 와 같이 3*3 크기의 격자로 이루어진 땅이 있고, U=1, D=2, L=3, R=4 라고 하자. 만약 (2,2) 에 지뢰가 있다면, 각 칸의 위험도는 그림 (b) 와 같이 된다. 그림 (c) 와 (d) 는 (1,2) 와 (1,1) 에 순서대로 지뢰를 추가했을 때의 각 칸의 위험도를 보여준다. </p>
+<p>모든 칸의 위험도가 주어졌을 때, 지뢰가 어디에 있는지 찾아내는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫번째 줄에는 테스트 케이스의 개수 C 가 주어진다. (1&lt;= C&lt;=20) 각 테스트 케이스의 첫번째 줄에는 정수 H 와 W 가 주어지며, (2&lt;= H&lt;=20, 2&lt;= W&lt;=1,000) 두번째 줄에는 서로 다른 네 개의 정수 U, D, L, R 이 주어진다. (1&lt;= U,D,L,R&lt;=10) 그 후 H 줄에 걸쳐 각각 W 개의 정수로, 각 칸의 위험도가 주어진다. 지도 바깥에는 지뢰가 존재하지 않는다. </p>
+<p>답이 여러 가지인 경우는 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 지뢰가 있는 지점은 1 로 표시하고, 지뢰가 없는 지점은 0 으로 표시한 H*W 크기의 격자 지도를 출력한다. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2 
+3 3 
+8 1 2 7 
+0 9 0 
+9 0 9 
+0 9 0
+3 4 
+1 2 3 4 
+4 1 5 0 
+3 10 4 4
+5 2 6 0 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 0 1 
+0 0 0 
+1 0 1
+0 1 0 0 
+1 1 1 0 
+0 1 0 0 </pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

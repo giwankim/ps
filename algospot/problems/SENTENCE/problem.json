@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "SENTENCE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:15:16.094848Z",
+    "http_status": 200,
+    "semantic_html_sha256": "01dad961513552d1e184a089b49a560520f7f00faeda713428f08dcb4fd8a579"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/SENTENCE",
+  "statistics": {
+    "acceptance_percent": 20,
+    "accepted": 927,
+    "submissions": 4434
+  },
+  "tags": [],
+  "title": "문장 찾기"
+}

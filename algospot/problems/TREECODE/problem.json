@@ -1,0 +1,57 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/9a878f6f14e3636e-1.png",
+      "sha256": "93a9a372c6c5ce17f24a5d9bb480bf79f192dee1db4896b532a29499e0299b89",
+      "source_url": "http://algospot.com/media/judge-attachments/e5b8c1ec9f9e2461abea6d356aa8aa41/1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/f18ee50d5e9be52f-2.png",
+      "sha256": "6ab2691c9b02ebafa046662e66dd548ef48851db343ec516110b9b8a19d0cf56",
+      "source_url": "http://algospot.com/media/judge-attachments/defb6f1fd3f26c87435ae872cf5d8957/2.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/f8447977a5fd0427-3.png",
+      "sha256": "3e0ea8b08cea57ac09b672bda3312000a110cfffb7481c06d643646710945fea",
+      "source_url": "http://algospot.com/media/judge-attachments/58a48d45ff2c3c37f81add65f1482af6/3.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "TREECODE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:26:36.844463Z",
+    "http_status": 200,
+    "semantic_html_sha256": "5aa645da703967f85abfdb0f18c32fbb1e8aa675c5370392da10d5fb7b4a1470"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/TREECODE",
+  "statistics": {
+    "acceptance_percent": 26,
+    "accepted": 7,
+    "submissions": 26
+  },
+  "tags": [
+    "그래프",
+    "동적계획법"
+  ],
+  "title": "Tree Code"
+}

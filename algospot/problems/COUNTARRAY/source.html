@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/COUNTARRAY">COUNTARRAY</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=COUNTARRAY"><b>67</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/COUNTARRAY/"><b>19</b> (<b>28</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2590">tncks0121</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>2014 개정수학 수II의 함수 단원을 공부하던 수찬이는 반복적인 학습이 지겨워서, 문제집에서 다루지 않는 함수를 만들기로 했다!</p>
+<p>수찬이는 자신의 이니셜을 딴 <span class="mathjax-preview">\texttt{sc}(A, x)</span><script type="math/tex">\texttt{sc}(A, x)</script>라는 함수를 만들기로 했다. <span class="mathjax-preview">A[1..n]</span><script type="math/tex">A[1..n]</script>는 길이가 <span class="mathjax-preview">n</span><script type="math/tex">n</script>인 자연수(1 이상의 정수)로 구성된 배열이고, <span class="mathjax-preview">x</span><script type="math/tex">x</script>는 자연수이다.</p>
+<p>수찬이는 이 함수를 어떻게 정의하면 좋을지 고민하다가, 우연히 지학이를 만났다. 지학이는 배열에 아래와 같은 연산을 하며 놀고 있었다.</p>
+<ul>
+<li>두 정수 <span class="mathjax-preview">l</span><script type="math/tex">l</script>과 <span class="mathjax-preview">r</span><script type="math/tex">r</script> (<span class="mathjax-preview">1 \le l \le r \le n</span><script type="math/tex">1 \le l \le r \le n</script>)을 정한다.</li>
+<li><span class="mathjax-preview">A[l], A[l+1], \cdots, A[r-1], A[r]</span><script type="math/tex">A[l], A[l+1], \cdots, A[r-1], A[r]</script>에 각각 1을 더한다.</li>
+</ul>
+<p>수찬이는 이 모습을 보고, <span class="mathjax-preview">\texttt{sc}(A, x)</span><script type="math/tex">\texttt{sc}(A, x)</script>를 이렇게 정의하기로 했다.</p>
+<ul>
+<li><span class="mathjax-preview">A[i] &gt; x</span><script type="math/tex">A[i] > x</script>를 만족하는 <span class="mathjax-preview">i</span><script type="math/tex">i</script> (<span class="mathjax-preview">1 \le i \le n</span><script type="math/tex">1 \le i \le n</script>)가 존재한다면 <span class="mathjax-preview">-1</span><script type="math/tex">-1</script></li>
+<li>존재하지 않는다면, <span class="mathjax-preview">A</span><script type="math/tex">A</script>의 모든 원소를 <span class="mathjax-preview">x</span><script type="math/tex">x</script>로 만들기 위해 지학이의 연산을 해야 하는 최소 횟수 </li>
+</ul>
+<p>수찬이는 함수를 정의한 기념으로, <span class="mathjax-preview">\texttt{sc}(A, k) = l</span><script type="math/tex">\texttt{sc}(A, k) = l</script>를 만족하는 길이가 <span class="mathjax-preview">n</span><script type="math/tex">n</script>인 서로 다른 배열 <span class="mathjax-preview">A</span><script type="math/tex">A</script>가 몇 개나 되는지 세고자 한다. 그러나 수찬이가 직접 세기에는 이러한 경우의 수가 너무나 많았다.</p>
+<p>수찬이를 도와 경우의 수가 몇 개인지 세어 보자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.</p>
+<p>이후, 각 테스트 케이스마다 <span class="mathjax-preview">n</span><script type="math/tex">n</script>, <span class="mathjax-preview">k</span><script type="math/tex">k</script>, <span class="mathjax-preview">c</span><script type="math/tex">c</script> (<span class="mathjax-preview">1 \le n \le 5000</span><script type="math/tex">1 \le n \le 5000</script>, <span class="mathjax-preview">1 \le k \le 2000</span><script type="math/tex">1 \le k \le 2000</script>, <span class="mathjax-preview">1 \le c \le 100</span><script type="math/tex">1 \le c \le 100</script>)가 공백을 사이로 두고 한 줄에 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 <span class="mathjax-preview">c+1</span><script type="math/tex">c+1</script>개의 음이 아닌 정수를 출력한다. 이 중 <span class="mathjax-preview">(l+1)</span><script type="math/tex">(l+1)</script>번째 수 (<span class="mathjax-preview">0 \le l \le c</span><script type="math/tex">0 \le l \le c</script>)는 <span class="mathjax-preview">\texttt{sc}(A, k) = l</span><script type="math/tex">\texttt{sc}(A, k) = l</script>를 만족하는 배열 <span class="mathjax-preview">A</span><script type="math/tex">A</script>의 개수를 1,000,000,009 (<span class="mathjax-preview">= 10^{9} + 9</span><script type="math/tex">= 10^{9} + 9</script>)로 나눈 나머지여야 한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+3 2 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 6 1 0
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<ul>
+<li><span class="mathjax-preview">\texttt{sc}(A, 2) = 0</span><script type="math/tex">\texttt{sc}(A, 2) = 0</script>인 경우: [2, 2, 2]</li>
+<li><span class="mathjax-preview">\texttt{sc}(A, 2) = 1</span><script type="math/tex">\texttt{sc}(A, 2) = 1</script>인 경우: [1, 1, 1], [1, 1, 2], [1, 2, 2], [2, 1, 1], [2, 1, 2], [2, 2, 1]</li>
+<li><span class="mathjax-preview">\texttt{sc}(A, 2) = 2</span><script type="math/tex">\texttt{sc}(A, 2) = 2</script>인 경우: [1, 2, 1]</li>
+<li><span class="mathjax-preview">\texttt{sc}(A, 2) = 3</span><script type="math/tex">\texttt{sc}(A, 2) = 3</script>인 경우: 없음</li>
+</ul>
+<p>어떤 두 배열 <span class="mathjax-preview">A[1..n]</span><script type="math/tex">A[1..n]</script>과 <span class="mathjax-preview">B[1..n]</span><script type="math/tex">B[1..n]</script>이 서로 다르다는 것은, <span class="mathjax-preview">A[i] \neq B[i]</span><script type="math/tex">A[i] \neq B[i]</script> (<span class="mathjax-preview">1 \le i \le n</span><script type="math/tex">1 \le i \le n</script>)을 만족하는 <span class="mathjax-preview">i</span><script type="math/tex">i</script>가 존재한다는 것과 같다.</p>
+</p>
+</section>

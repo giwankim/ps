@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/54474a57af8d37f8-stf2004C.png",
+      "sha256": "ea9dba4b496550988514e07965266ad08ac7ce76efe899b3488857a7b22c9c5b",
+      "source_url": "http://algospot.com/media/judge-attachments/6ac745f8b898c59a833a49720e0cfa2d/stf2004C.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "NASH",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:56:35.611922Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e76262428a01cae0f12d32f7faff8dbcd722e75324fc474ac3fd8452844560ef"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/NASH",
+  "statistics": {
+    "acceptance_percent": 54,
+    "accepted": 31,
+    "submissions": 57
+  },
+  "tags": [],
+  "title": "Nash Equilibrium"
+}

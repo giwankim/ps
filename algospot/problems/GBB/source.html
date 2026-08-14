@@ -1,0 +1,89 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GBB">GBB</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GBB"><b>71</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GBB/"><b>8</b> (<b>11</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>After gambling with his all money, finally Kaiji faced bankruptcy. His main creditor Endo Yuji, suggested another type of gambling, card game named Limited Gawi-Bawi-Bo. </p>
+<p>In this game, two players are given cards where one of Gawi, Bawi, or Bo is drawn. The game consists of one or more rounds. In each round, each player shows one card from his cards. Gawi cards win against Bo cards, Bo cards win against Bawi cards, and Bawi cards win against Gawi cards. If one player wins, another player’s card will be discarded. If they show same type of cards, all two cards will be discarded. After this, next round starts. The game will end when one player loses all his cards. The player that loses all his cards loses, and the remaining player will be the winner. If two players lose all their cards simultaneously, a special match will be played. In this match, two players will play traditional Gawi-Bawi-Bo game, until winner is decided. So if a special match is played, each player’s winning probability is exactly 0.5.</p>
+<p>Kaiji will bet all his remaining money, and he’ll lose all money if he lost. But if he wins, he’ll get rid of all his dept. So he’ll try to find a strategy to maximize his likelihood of winning in the game. His opponent, Kouji, is also as desperate as Kaiji, facing bankruptcy himself. But he lacks tactics, and he’ll show random card in each round.<br/>
+Kaiji knows how many cards he and the opponent have of each kind at the start of the game. Given the starting condition, calculate the probability of Kaiji winning the game.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T ( 100) test cases. The number of test cases T is given in the first line of the input. For each test case, 6 non-negative integers will be given, representing starting condition of Kaiji and his opponent Kouji. Number of Kaiji’s Gawi, Bawi, Bo cards, and number of Kouji’s Gawi, Bawi, Bo cards, will be given respectively. Number of each player’s total cards will be between 1 and 20, inclusive.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one number for each test case, representing the maximal probability of Kaiji winning the game. Your result should be accurate to within a relative or absolute value of 10^-5.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1 0 0 1 0 0
+1 1 0 1 1 0
+1 1 1 1 1 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0.5
+0.75
+0.666667</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NORMDIST">NORMDIST</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NORMDIST"><b>274</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NORMDIST/"><b>46</b> (<b>16</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Hyun-hwan is the instructor for ACM-ICPC contestants in Ajou University. Last week, he held a team selection contest for the seoul regional contest. After the contest is over, he calculated scores of each contestants using an obscure formula. According to this formula, each contest receives a score between 0 to N − 1 (inclusive) and N is multiple of 10.</p>
+<p>As a measure of the quality of the problem set, we want to find out if distribution of the scores follow the normal distribution or not: we believe a better problem set will result in normally distributed scores. Unfortunately, Hyun-hwan is not good at statistics, so he came up with a simple alternative procedure. The procedure is as follows:</p>
+<p>Let f[i] = number of scores between 10*i to 10*i+9 ( 0 &lt;= i &lt;= N/10-1 ) Then, if the following relation</p>
+<pre><code>f[0] &lt; f[1] &lt; ... &lt; f[k] &gt; f[k + 1] &gt; ... &gt; f[N/10 − 1]</code></pre>
+<p>holds for some k (k &gt; 0 and N/10-1-k &gt; 0), we can say 'the distribution of the scores is similar to normal distribution', otherwise, we can’t say that.</p>
+<p>Write a program that will determine distribution of given scores is similar to normal distribution.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T test cases. The number of test cases T (1 &lt;= T &lt;= 20) is given in the first line of the input. In the first line of each case, two integers S (1 &lt;= S &lt;= 20, 000) and N (10 &lt;= N &lt;= 100) will be given. In the second line of each case, scores of S contestants will be given.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one line for each test case. For each test case, print ‘<code>YES</code>’ if the distribution of the scores is similar to normal distribution, otherwise print ‘<code>NO</code>’(without quotes).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+6 30
+5 9 10 18 19 21
+4 20
+0 0 19 19</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+NO</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

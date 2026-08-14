@@ -1,0 +1,90 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BUNT">BUNT</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BUNT"><b>241</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BUNT/"><b>21</b> (<b>8</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/966">joinsung</a></li>
+<li class="source"><a href="/judge/problem/list/?source=SNUTOC%202014">SNUTOC 2014</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>콩대 야구부의 조인성 타자는 번트의 장인이다. 그는 투수가 어떤 공을 던지든 일정한 범위 내에서 자신이 원하는 위치로 공을 정확하게 보낼 수 있는 능력을 가지고 있다. 공을 보낸 위치가 수비수와 너무 가까울 경우, 수비수가 공이 있는 위치로 뛰어간 뒤 공을 1루에 던지기까지 걸리는 시간이 타자가 1루까지 뛰는 시간보다 가까워 아웃될 수 있다. 따라서 타자는 수비수의 수비 시간보다 빠르게 1루에 도착할 수 있는 위치로 공을 보내야 한다.</p>
+<p>문제를 간단히 하기 위해 다음과 같은 가정을 하자. 야구장은 각도가 <span class="mathjax-preview">90 ^{\circ}</span><script type="math/tex">90 ^{\circ}</script>인 부채꼴 모양이며, 내야는 한 변의 길이가 <span class="mathjax-preview">d</span><script type="math/tex">d</script>미터인 정사각형이다. 내야의 꼭지점은 반시계 순서로 홈, 1루, 2루, 3루이다. 타구를 잡아 1루로 던지는 수비수는 3루수가 유일하며, 공이 배트에 닿는 순간 3루(정사각형의 꼭지점)에서 출발한다. 타자는 홈(정사각형의 꼭지점)에서 <span class="mathjax-preview">r</span><script type="math/tex">r</script>미터 반경 이내의 야구장 공간 중 임의의 위치로 공을 보낼 수 있으며, 공은 배트에 닿자 마자 타자가 원하는 위치로 순간이동한다.<br/>
+배트에 맞은 공은 상당히 빠르게 움직이기 때문에 문제를 간단히 하기 위하여 순간이동으로 취급한다.<br/>
+3루수는 <span class="mathjax-preview">v_t</span><script type="math/tex">v_t</script> m/s의 일정한 속도로 공의 위치로 직선으로 달려가며, 공을 잡자마자 1루에 정확하게 던지고 그 공은 <span class="mathjax-preview">t</span><script type="math/tex">t</script>초 후에 도착한다. 타자는 공이 배트에 닿자마자 <span class="mathjax-preview">v_h</span><script type="math/tex">v_h</script> m/s의 일정한 속도로 1루로 달려간다. 공이 1루에 도착하는 시간이 타자가 1루에 도착하는 시간보다 빠르면 타자는 아웃, 그렇지 않으면 세이프다. 이를 그림으로 나타내면 아래와 같다.</p>
+<p><img alt="야구장 모양" src="/media/judge-attachments/84cffa97e84760cf474f01cd73db60a7/bunt.png"/></p>
+<p>조인성 타자는 자신이 출루에 성공하기 위해 얼마나 많은 곳으로 공을 보낼 수 있는지 알고 싶어한다. 내야의 크기 <span class="mathjax-preview">d</span><script type="math/tex">d</script>, 타자가 공을 보낼 수 있는 반경 <span class="mathjax-preview">r</span><script type="math/tex">r</script>, 3루수의 이동 속도 <span class="mathjax-preview">v_t</span><script type="math/tex">v_t</script>, 송구 시간 <span class="mathjax-preview">t</span><script type="math/tex">t</script>, 타자의 이동 속도 <span class="mathjax-preview">v_h</span><script type="math/tex">v_h</script>가 주어졌을 때, 타자가 공을 보내면 출루에 성공하는 영역의 넓이를 구하는 프로그램을 작성하시오. 절대/상대 오차 <span class="mathjax-preview">10^{-8}</span><script type="math/tex">10^{-8}</script> 이하는 정답으로 인정한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에 테스트 케이스의 수 <span class="mathjax-preview">T</span><script type="math/tex">T</script> (<span class="mathjax-preview">T \le 1000</span><script type="math/tex">T \le 1000</script>)가 주어진다. 두 번째 줄부터 <span class="mathjax-preview">T</span><script type="math/tex">T</script>줄에 걸쳐 각각의 테스트 케이스가 입력된다.<br/>
+각 테스트 케이스는 음이 아닌 10000 이하의 다섯 개의 실수로 입력되며, 각각 <span class="mathjax-preview">d</span><script type="math/tex">d</script>, <span class="mathjax-preview">r</span><script type="math/tex">r</script>, <span class="mathjax-preview">v_t</span><script type="math/tex">v_t</script>, <span class="mathjax-preview">t</span><script type="math/tex">t</script>, <span class="mathjax-preview">v_h</span><script type="math/tex">v_h</script>이다. 문제의 상황이 성립할 수 없는 입력은 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해, 공을 보내면 출루에 성공하는 영역의 넓이를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+25 20 2.5 5 2
+25 20 2 3 2.5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>172.8993355702
+244.5757755887</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

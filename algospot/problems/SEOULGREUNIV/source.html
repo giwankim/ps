@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SEOULGREUNIV">SEOULGREUNIV</a></li>
+<li class="timelimit"><b>15000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SEOULGREUNIV"><b>13</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SEOULGREUNIV/"><b>5</b> (<b>38</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C1%ED%9A%8C%20%EC%95%8C%EA%B3%A0%EC%8A%A4%ED%8C%9F%20%EC%83%88%EC%8B%B9%20%EC%BD%98%ED%85%8C%EC%8A%A4%ED%8A%B8">제1회 알고스팟 새싹 콘테스트</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>미취학 아동을 돌보는 어린이집 세울큰학원에는 어린이들에게 수학과 미술을 동시에 가르치는 특이한 수업이 있습니다. 하루는 수학 겸 미술 담당 연우주 선생님이 말했습니다.</p>
+<p><img alt="그림1" src="http://algospot.com/media/judge-attachments/3adcb803fc2b1585c232aa7629b23aff/E1.png"/></p>
+<p>"여기 두 선분을 연결하는 모든 선분을 상상해보렴. 그리고 함께 그려보자."</p>
+<p><img alt="그림2" src="http://algospot.com/media/judge-attachments/fbdf6866c935516cfc0c0ee569f30fc1/E2.png"/></p>
+<p>모든 선분을 그리니 결국 색칠한 형태가 되었고, 연우주 선생님이 말했습니다. "자, 우리가 색칠한 부분의 면적은 얼마일까요?" 정말 이상한 수업입니다. 뭐 어쨌든 이런 수업에 아이들은 조금씩 익숙해져갔고, 점점 정확하고 빠르게 답을 맞히기 시작했습니다. 연우주 선생님은 수업 난이도를 더 올리기로 하고, 문제를 조금 변형시켰습니다.</p>
+<p><img alt="그림3" src="http://algospot.com/media/judge-attachments/bfdd1ce5b53857a90ac91504cbeac539/E3.png"/></p>
+<p>"여기 세 선분 중 두 선분을 연결하는 모든 선분을 상상해보렴. 그리고 함께 그려보자."</p>
+<p><img alt="그림4" src="http://algospot.com/media/judge-attachments/ea2a363387f41f8b6e4d35e84c7e83a3/E4.png"/></p>
+<p>역시 선분을 모두 긋고 보니 색칠한 꼴이 되었습니다. "우리가 색칠한 부분의 면적은 얼마일까요?" 아이들은 이번에는 자신이 조금 없는 눈치입니다. 그런데 그건 선생님도 마찬가지였습니다. 음... 여러분은 답을 알 수도 있을 것 같은데... 조금 어렵나요? ^^</p>
+<p>N개의 선분이 주어집니다. 그 중 두 선분을 연결하는 모든 선분을 그렸을 때, 그것이 이루는 면적을 구하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C가 주어집니다. 각 테스트 케이스의 첫 줄에는 선분의 개수 N이 주어집니다. 그 후 N줄에 각 선분의 두 꼭지점 좌표 X1, Y1, X2, Y2가 주어집니다. 어떤 두 선분도 교차하거나 접하지 않습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 색칠되는 면적을 출력하세요. 10^-7 이하의 절대/상대 오차를 갖는 답은 정답으로 인정됩니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+2
+0 0 0 2
+2 0 2 4
+3
+1 0 2 0
+0 2 0 4
+3 2 3 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>6
+9.5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>2 ≤ N ≤ 8<br/>
+0 ≤ X1, Y1, X2, Y2 ≤ 100</p>
+</p>
+</section>

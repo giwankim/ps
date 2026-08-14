@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DART">DART</a></li>
+<li class="timelimit"><b>8000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DART"><b>15</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DART/"><b>7</b> (<b>46</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202009">Algospot ICPC Seoul Regional Warmup 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Nana was given a beautiful dart table as a surprise present from friends. Front side of it was a standard dart table, and back side was a target, consisting of circles each having score associated with the circle. In addition to the circles originally drawn in the target, Nana’s friends drew more circles and wrote sentences they wanted him to read in the circles and score behind each circle.</p>
+<p>After enjoying the table for some time, Nana started to think about expected score he could get when he throws a dart on the table. He had an idea, and he wanted to verify whether his idea was valid.</p>
+<p>Given circles in a big circle representing the whole table, calculate the expected score for each dart Nana throws. Every point of the table will have equal probability to be hit by a dart, and no dart will miss the big circle. Also, if a dart hits a place where two or more circles overlap, only the highest score will be given to the throw.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program is to read from standard input. The input consists of T(&lt;= 100) test cases. The number of test cases T is given in the first line of the input. In the first line of each test case, information of a whole table will be given as 3 integers, center of the circle, x (−10000 &lt;= x &lt;= 10000), y (−10000 &lt;= y &lt;=  10000), and radius r (1 &lt;= r &lt;= 10000). In the next line, number of<br/>
+inner circles, an integer m (1 &lt;= m &lt;= 100), will be given. In each of following m lines, information of each inner circle will be give as 3 integers, center of the circle, x (−10000 &lt;= x &lt;= 10000), y(−10000 &lt;= y &lt;= 10000), radius r (1 &lt;= r &lt;= 10000), and s (1 &lt;= s &lt;= 10000), score associated with the circle. Every inner circle is guaranteed to be inside or to touch internally the big circle.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Your program is to write to standard output. Print exactly one number for each test case, representing the expected score for a dart thrown to the target. Your result should be accurate to within a relative or absolute value of 10^-7.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+0 0 5
+3
+0 0 1 10
+0 0 2 5
+0 0 3 1
+1 2 10
+2
+-1 2 8 2
+3 2 8 5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1.2
+3.603152</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

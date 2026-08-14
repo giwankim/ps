@@ -1,0 +1,38 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "COUNTPALIN",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:19:15.788337Z",
+    "http_status": 200,
+    "semantic_html_sha256": "1287f67e29cedf9a612626ffac9f1e4d1db14124d0f3772b09bf868c241572c7"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/COUNTPALIN",
+  "statistics": {
+    "acceptance_percent": 16,
+    "accepted": 142,
+    "submissions": 860
+  },
+  "tags": [
+    "동적계획법",
+    "문자열"
+  ],
+  "title": "얼마나 많은 회문 거리가 있을까?"
+}

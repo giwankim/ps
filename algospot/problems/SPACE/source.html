@@ -1,0 +1,92 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SPACE">SPACE</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SPACE"><b>142</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SPACE/"><b>31</b> (<b>21</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>지구가 망하고, 사람들은 지구를 탈출했습니다. 우주는 우리의 예상과는 다르게(?) 3차원 큐브 모양이었고, 각 축에 대해 0부터 255까지 정수 좌표를 붙일 수 있었습니다. 각 3차원 정수 좌표에는 행성이 하나씩 있었습니다. 그래서 우주에는 행성이 모두 256*256*256 = 16777216개가 존재했습니다. 지구에서 탈출한 사람들은 우주의 어떤 한 행성에 모여 살았고, 사람들은 그 행성을 F라고 이름 붙였습니다.</p>
+<p>어느 날, 사람들은 지구에 이어 F도 점점 망해가는 것을 느꼈습니다. 그래서 몇몇 지식인들은 새로운 행성으로 이주하기로 결정했습니다. 우주에는 사람이 살 수 없는 오염된 행성이 꽤 많았기 때문에, 사람들은 우주에서 F로부터 가장 멀면서 오염되지 않은 행성으로 가기로 결정했습니다. 그리고 사람들은 그 행성을 G라고 이름 붙였습니다.</p>
+<p>역사는 반복됩니다. G에서 살던 사람들은 지구와 F에 이어 G도 점점 망해가는 것을 느꼈습니다. 그래서 또 몇몇 지식인들은 F도 G도 아닌 새로운 행성으로 이주하기로 결정했습니다. 이 사람들은 우주에서 F, G와의 두 거리 합이 가장 크면서 오염되지 않은 행성으로 가기로 결정했고, 사람들은 그 행성을 H라고 이름 붙였습니다.</p>
+<p>F의 좌표와 오염된 행성 구역이 주어집니다. H의 좌표를 구하세요.</p>
+<p>거리를 계산할 때는 항상 맨해튼 거리를 이용합니다. 다시 말해, 두 행성의 좌표 (X1, Y1, Z1)과 (X2, Y2, Z2)가 있을 때, 거리는 |X1 - X2| + |Y1 - Y2| + |Z1 - Z2| 로 계산됩니다. 행성 G를 결정할 때, F로부터의 거리가 같은 행성이 여럿 있다면, 그중 X좌표가 가장 작은 행성을 택합니다. X좌표도 같다면 Y좌표가 가장 작은 행성을, Y좌표도 같다면 Z좌표가 가장 작은 행성을 택합니다. 이 규칙은 행성 H를 정할 때도 똑같이 적용됩니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T가 주어집니다. 각 테스트 케이스의 첫 줄에는 F의 좌표 Fx, Fy, Fz가 주어집니다.(0 &lt;= Fx, Fy, Fz &lt;= 255) 두 번째 줄에는 오염된 행성 구역의 개수 P가 주어집니다.(0 &lt;= P &lt;= 20) 그 후 P줄에 오염된 행성 구역의 Xmin, Ymin, Zmin, Xmax, Ymax, Zmax 값이 주어집니다. 3차원 큐브 형태인 [Xmin, Xmax]-[Ymin, Ymax]-[Zmin, Zmax]에 해당되는 모든 행성이 오염된 것으로 간주됩니다.(0 &lt;= Xmin &lt;= Xmax &lt;= 255, 0 &lt;= Ymin &lt;= Ymax &lt;= 255, 0 &lt;= Zmin &lt;= Zmax &lt;= 255) F는 오염된 구역에 포함되지 않고, 최소 3개의 행성은 오염되지 않은 상태로 남아 있습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 H의 좌표를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+0 0 0
+0
+128 128 128
+1
+254 254 254 255 255 255
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0 0 1
+253 255 255
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

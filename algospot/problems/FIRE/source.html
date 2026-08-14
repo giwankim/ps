@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FIRE">FIRE</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FIRE"><b>1135</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FIRE/"><b>152</b> (<b>13</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Fall%202009">RUN Programming Contest, Fall 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>봉화는 나라에 재난이 일어났음을 알리기 위해 봉화대에서 올리는 횃불을 말한다. 낮에는 연기를 피워 올리고 밤에는 횃불로써 급박한 상황을 전달했던 비상연락시설이다.</p>
+<p>RUN 왕국에서는 오랑캐들의 침략에 대비해 봉화대를 설치하기로 했다. 오랑캐가 국경에 침입해오면, 국경 가장 가까이에 있는 봉화대에서 불을 올린다. 봉화대에 불이 오르면 그 봉화가 보이는 다음 봉화대에서 또 불을 올린다. 이런 방식으로 국경에서 수도까지 봉화를 통해 연락을 취할 것이다.</p>
+<p>봉화대를 설치하기 위해 우선 국경과 수도 사이에 같은 간격으로 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 후보 지점을 선정했다. 모든 후보 지점에서는 앞뒤로 각각 <span class="mathjax-preview">P</span><script type="math/tex">P</script>개의 후보 지점이 보인다. 국경과 수도에서도 역시 <span class="mathjax-preview">P</span><script type="math/tex">P</script>개의 후보 지점이 보인다. 다시 말해 국경에 가장 가까운 <span class="mathjax-preview">P</span><script type="math/tex">P</script>개의 후보 지점 중에 적어도 한 곳에는 봉화대를 설치해야 하고, 수도에 가장 가까운 <span class="mathjax-preview">P</span><script type="math/tex">P</script>개의 후보 지점 중에 적어도 한 곳에도 봉화대를 설치해야 한다.</p>
+<p>각 후보 지점을 봉화대로 만들기 위해서는 공사가 필요한데, 공사 비용은 지점의 지형에 따라 다르다. 국경에서 수도까지 최소의 공사 비용으로 봉화를 설치하면 얼마의 비용이 들까?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫째 줄에는 테스트 케이스의 개수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.<br/>
+ 각 테스트 케이스의 첫 줄에는 후보 지점의 개수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>과 봉화대의 시야 <span class="mathjax-preview">P</span><script type="math/tex">P</script>가 주어진다. (<span class="mathjax-preview">2 ≤ N ≤ 100000, 1 ≤ P &lt; N</span><script type="math/tex">2 ≤ N ≤ 100000, 1 ≤ P < N</script>)<br/>
+ 다음 줄에는 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 각 후보 지점에 봉화대를 설치할 때에 드는 공사 비용이 주어진다.<br/>
+ 공사 비용은 1000 이하의 자연수다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 최소의 공사 비용을 한 줄에 하나씩 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+8 3
+3 1 4 2 3 4 2 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

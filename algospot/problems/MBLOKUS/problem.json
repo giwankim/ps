@@ -1,0 +1,50 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/71e3fc18389316ab-blokus1.png",
+      "sha256": "3b706062837b6486cf9a440bfe579356234e241347780ba0ddb19a651cceea4b",
+      "source_url": "http://algospot.com/media/judge-attachments/b97321c885a684b04c80caf4b35bba4a/blokus1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/c1596651c9e4fbe8-blokus2.png",
+      "sha256": "2e4a175a58df64bab270b372a4e7a28d02853d436211deb6bf04f2e936e7516f",
+      "source_url": "http://algospot.com/media/judge-attachments/56a04722a17db63d19c6b3089b9a2c21/blokus2.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "MBLOKUS",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:46:51.085458Z",
+    "http_status": 200,
+    "semantic_html_sha256": "f9b7e3cb16005e8960731b5272dd096678ba89a01e7dd5fbc1298ac78633afe7"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/MBLOKUS",
+  "statistics": {
+    "acceptance_percent": 56,
+    "accepted": 18,
+    "submissions": 32
+  },
+  "tags": [
+    "조합탐색"
+  ],
+  "title": "Mini Blokus"
+}

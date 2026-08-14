@@ -1,0 +1,105 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SKICOURSE">SKICOURSE</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SKICOURSE"><b>873</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SKICOURSE/"><b>191</b> (<b>21</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/36">kcm1700</a></li>
+<li class="source"><a href="/judge/problem/list/?source=SNUTOC%202014">SNUTOC 2014</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>이번 겨울에는 친구들과 스키장으로 놀러가기로 하였다. 스키장은 산자락에 지어져 있었고, 슬로프가 굉장히 다양했다. 볼거리가 많기로 유명한 슬로프들도 있었고, 보잘것 없는 슬로프도 있었다.</p>
+<p>산에는 지점이 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개 있다. 모든 지점은 <span class="mathjax-preview">1</span><script type="math/tex">1</script> 이상 <span class="mathjax-preview">N</span><script type="math/tex">N</script> 이하의 정수로 번호가 매겨져 있다. 지점의 번호는 높이 순서에 따라 붙여진다. 지점의 번호가 증가하면 높이는 감소한다. <span class="mathjax-preview">1</span><script type="math/tex">1</script>번 지점이 가장 높고, <span class="mathjax-preview">N</span><script type="math/tex">N</script>번 지점이 가장 낮다. 각 지점의 높이는 정해져있고, 모든 지점은 높이가 다르다. 일부 지점들 사이에는 스키를 타고 이동할 수 있는 슬로프가 있다.</p>
+<p>스키를 한번 타기 시작하면 슬로프를 내려가는 것밖에 할 수 없다. 낮은 지점에서 높은 지점으로 올라가는 것은 불가능하다.</p>
+<p>각 슬로프에는 흥미도가 매겨져 있고, 수치가 클수록 재미있는 슬로프이다. 반대로 너무 지루해서 흥미도가 음수인 슬로프도 있을 수 있다.</p>
+<p>찬민이는 이러한 산에서 스키를 한 번 타려고 한다. 스키를 타고 슬로프를 따라 내려가기만 하고, 다른 지점으로 가기 위해서는 반드시 슬로프를 타고 내려가려고 한다. 하지만 체력이 좋지 않아서 슬로프는 최대 <span class="mathjax-preview">S</span><script type="math/tex">S</script>개만 사용하고 싶어한다. 최대 <span class="mathjax-preview">S</span><script type="math/tex">S</script>개의 슬로프만 사용한다고 할 때, 찬민이는 지나게 되는 슬로프의 흥미도의 합을 최대화 하고 싶다. 출발 지점은 찬민이가 목표를 달성하기 위해 원하는 대로 고를 수 있다. 경우에 따라서는 슬로프를 하나도 이용하지 않아도 된다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 개수를 의미하는 정수 <span class="mathjax-preview">T</span><script type="math/tex">T</script>(<span class="mathjax-preview"> \le 100</span><script type="math/tex"> \le 100</script>)이 주어진다.<br/>
+각 테스트 케이스의 첫 줄에 세 정수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>(<span class="mathjax-preview">1 \le N \le 50,000</span><script type="math/tex">1 \le N \le 50,000</script>), <span class="mathjax-preview">M</span><script type="math/tex">M</script>(<span class="mathjax-preview">0 \le M \le 100,000</span><script type="math/tex">0 \le M \le 100,000</script>), <span class="mathjax-preview">S</span><script type="math/tex">S</script>(<span class="mathjax-preview">1 \le S \le 100</span><script type="math/tex">1 \le S \le 100</script>)가 빈 칸을 사이에 두고 주어진다.<br/>
+<span class="mathjax-preview">N</span><script type="math/tex">N</script>은 스키장에 있는 지점의 개수, <span class="mathjax-preview">M</span><script type="math/tex">M</script>은 스키장에 있는 슬로프의 개수, <span class="mathjax-preview">S</span><script type="math/tex">S</script>는 최대 이용 가능한 슬로프의 개수이다.<br/>
+그 다음 <span class="mathjax-preview">M</span><script type="math/tex">M</script>개의 줄에 세 정수 <span class="mathjax-preview">A_i</span><script type="math/tex">A_i</script>, <span class="mathjax-preview">B_i</span><script type="math/tex">B_i</script>, <span class="mathjax-preview">C_i</span><script type="math/tex">C_i</script>가 빈 칸을 사이에 두고 주어진다.<br/>
+(<span class="mathjax-preview">1 \le i \le M</span><script type="math/tex">1 \le i \le M</script>) <span class="mathjax-preview">1 \le A_i &lt; B_i \le N</span><script type="math/tex">1 \le A_i < B_i \le N</script>이고, <span class="mathjax-preview">-100,000 \le C_i \le 100,000</span><script type="math/tex">-100,000 \le C_i \le 100,000</script>이다.<br/>
+<span class="mathjax-preview">A_i</span><script type="math/tex">A_i</script>와 <span class="mathjax-preview">B_i</span><script type="math/tex">B_i</script>는 슬로프가 잇는 두 지점의 번호를 의미하고, <span class="mathjax-preview">C_i</span><script type="math/tex">C_i</script>는 해당 슬로프의 흥미도를 나타낸다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트케이스마다 최대 <span class="mathjax-preview">S</span><script type="math/tex">S</script> 개의 슬로프를 연속으로 이용하여 얻을 수 있는 흥미도의 합의 최대값을 한 줄에 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 5 2
+1 2 10
+1 3 20
+2 3 50
+2 4 25
+3 4 15
+4 5 2
+1 2 -5
+1 3 20
+2 3 50
+2 4 25
+3 4 -20</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>65
+50</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

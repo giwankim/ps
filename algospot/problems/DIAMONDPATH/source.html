@@ -1,0 +1,114 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DIAMONDPATH">DIAMONDPATH</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DIAMONDPATH"><b>2498</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DIAMONDPATH/"><b>1097</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%97%B0%EC%8A%B5%EB%AC%B8%EC%A0%9C">연습문제</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<pre><code>6 
+   1 2 
+  6 7 4
+ 9 4 1 7
+6 7 5 9 4
+ 4 4 3 2 
+  1 2 3 
+   6 1
+    7</code></pre>
+<p>위 그림과 같이 자연수들이 다이아몬드 형태대로 배치되어 있다. 이 때, 각 가로줄에서 한 개씩의 숫자를 골라 맨 위에서 맨 아래칸으로 내려오는 경로를 구성하고 싶다. 경로에서 앞뒤에 위치한 숫자들은 서로 인접해 있어야 한다: 예를 들어, 위 그림에서 세 번째 줄의 7 은 그 아랫 줄의 4 또는 1 과만 이어질 수 있다.</p>
+<p>이와 같은 경로 중, 포함된 숫자의 합이 가장 큰 경로를 찾고 해당 숫자의 합을 계산하시오.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 100) 가 주어진다. 각 테스트 케이스의 첫 줄에는 다이아몬드 가운데 줄의 가로 길이 N (1 &lt;= N &lt;= 100) 이 주어진다. 그 후 2*N-1 줄에, 맨 윗 줄부터, 다이아몬드의 각 가로줄에 속한 숫자가 왼쪽부터 순서대로 주어진다. 각 수는 100 이하의 자연수라고 가정해도 좋다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 숫자들의 합이 가장 큰 경로에 대해 해당 합을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+5
+6
+1 2
+6 7 4
+9 4 1 7
+6 7 5 9 4
+4 4 3 2
+1 2 3
+6 1
+7
+5
+39
+43 16
+74 94 24
+25 76 98 62
+79 58 71 67 98
+43 55 27 44
+10 96 56
+73 31
+95
+
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>48
+664</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

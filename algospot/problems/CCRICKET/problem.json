@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/fc53ab6c986c2b54-image.jpg",
+      "sha256": "0e978f0ec580c9d21365f6f1363919d165804e5993a70eb4e048accbd938436a",
+      "source_url": "http://algospot.com/media/judge-attachments/88c9045ad10557114eacc3241f94df3e/image.jpg"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CCRICKET",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:12:33.523277Z",
+    "http_status": 200,
+    "semantic_html_sha256": "c643cea6e618c91584ee4277400a683c6c012a3504a201e0f718a13fa418acad"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CCRICKET",
+  "statistics": {
+    "acceptance_percent": 16,
+    "accepted": 70,
+    "submissions": 432
+  },
+  "tags": [
+    "그래프"
+  ],
+  "title": "Camel Cricket"
+}

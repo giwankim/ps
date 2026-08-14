@@ -1,0 +1,90 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MAGICPOWER">MAGICPOWER</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MAGICPOWER"><b>1133</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MAGICPOWER/"><b>421</b> (<b>37</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2585">mjy0503</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>,
+						
+						<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>KAIST에는 우리가 모르는 전설의 마법사(!)가 살고 있다. 전설의 마법사는 아이템을 사용해서 마력을 보충하는데, 아이템에 쓰여 있는 수만큼 마력을 얻을 수 있다고 한다. 그리고 아이템을 사용하면, 해당 아이템에 쓰여 있는 수가 1씩 줄어들다가 0이 되는 순간 아이템이 사라진다고 한다.</p>
+<p>연구를 하던 중 모든 마력을 쓴 마법사는 아이템에서 마력을 급히 보충하기로 하였다. 마법사는 아이템을 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개 가지고 있고, 각 아이템에 쓰여 있는 수는 다를 수 있다. 마법사는 시간이 없는 관계로 최대 <span class="mathjax-preview">M</span><script type="math/tex">M</script>번의 아이템 사용으로 최대한 많은 마력을 얻길 원한다. 여러분이 마법사를 도와서 얻을 수 있는 최대 마력을 구해주자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script>개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.<br/>
+각 테스트 케이스에 대해, 정수 <span class="mathjax-preview">N(1 \le N \le 100)</span><script type="math/tex">N(1 \le N \le 100)</script>, <span class="mathjax-preview">M(1 \le M \le 10,000)</span><script type="math/tex">M(1 \le M \le 10,000)</script> 이 주어진다. 그 다음 줄에 <span class="mathjax-preview">N</span><script type="math/tex">N</script>개의 아이템에 적혀있는 수들이 공백으로 구분하여 차례대로 주어진다. 각 정수는 <span class="mathjax-preview">1</span><script type="math/tex">1</script>이상 <span class="mathjax-preview">10,000</span><script type="math/tex">10,000</script>이하의 수이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 마법사가 최대로 얻을 수 있는 마력을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+2 1
+3 4
+3 3
+3 2 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+10</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

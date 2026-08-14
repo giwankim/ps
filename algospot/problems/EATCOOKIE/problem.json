@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/a51b4f24b9278995-seat.png",
+      "sha256": "e37dac2567de1c9f123db7643e1b983ea0e420e57c8c16ab3204f9f7dd7dce8c",
+      "source_url": "https://www.algospot.com/media/judge-attachments/8001e74e904139d854cc19b190821097/seat.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "EATCOOKIE",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:21:43.402342Z",
+    "http_status": 200,
+    "semantic_html_sha256": "5f8997c23cc9929a8b20c7f8bf276aaecc37db1fa7dbf9ee77541ce78c965061"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/EATCOOKIE",
+  "statistics": {
+    "acceptance_percent": 9,
+    "accepted": 9,
+    "submissions": 94
+  },
+  "tags": [
+    "경우의수"
+  ],
+  "title": "쿠키를 먹자"
+}

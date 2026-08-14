@@ -1,0 +1,111 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GAME">GAME</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GAME"><b>1344</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GAME/"><b>318</b> (<b>23</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/89">Yongrok</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Fall%202009">RUN Programming Contest, Fall 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img alt="judge-attachments/524c10d6db98315a807d673a047601f2/qosdg_a8.jpg" src="http://algospot.com/media/judge-attachments/524c10d6db98315a807d673a047601f2/qosdg_a8.jpg"/><br/><br/>
+<center>Random Backoff - Network에서의 눈치게임</center></p>
+<p>ICU Programming Club RUN은 ICPC 시즌을 맞아, 대전 근교 장태산으로 엠티를 갔다. 밤이 되고 함께 술을 마시며 놀다가, 그들은 눈치 게임을 시작했다. 눈치게임은 다음과 같은 방식으로 진행한다.</p>
+<pre><code>N명의 사람이 있다. 편의상 각 사람을  1...N 번 사람이라고 부른다.
+이들은 서로 눈치를 보며 1부터 K까지 순서대로 숫자를 외친다. K는 N보다 작다
+두 사람 이상이 동시에 같은 숫자를 외치면 그 사람들은 게임에 지게 된다. 
+한 번 숫자를 외친 사람은 더 이상 다른 숫자를 외치지 않는다.
+K 까지 숫자를 외치는 동안 패자가 없으면, 숫자를 외치지 못한 나머지 사람들이 지게 된다.</code></pre>
+<p>게임이 시작하면 1을 외칠 수 있고, 누군가 j를 외치면 그 순간부터 j+1을 외칠 수 있다. i번 사람은 숫자 j를 외칠 수 있는 순간부터 W(i,j) 시간만큼 기다리며 눈치를 본다. 그리고 그 시간동안 아무도 숫자를 외치지 않으면 j를 외친다.</p>
+<p>N명이 각각 숫자에 대해서 기다리는 시간이 주어졌을 때 눈치게임에서 지는 사람은 누구인가?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 게임의 회수 T가 주어진다. (1 ≤ T ≤ 100 )<br/><br/>
+ 각 테스트 케이스의 첫 줄에는 정수 N과 K가 주어진다. (1 ≤ K &lt; N ≤ 500)<br/><br/>
+ 다음 줄부터 N 줄에 걸쳐서 N x K 의 행렬이 주어진다.<br/><br/>
+ i행의 j열에 있는 수는 W(i,j)를 나타낸다.                 (0 ≤ W(i,j) ≤ 60, 1 ≤ i ≤ N, 1 ≤ j ≤ K)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각각의 게임에 대하여 지는 사람의 목록을 오름차순으로 한 줄에 출력한다.<br/><br/>
+ 각 사람은 한 칸의 공백으로 구분하도록 한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+4 3
+0 1 3
+7 0 1
+5 1 3
+1 2 3
+3 2
+1 1
+1 2
+1 3
+5 3
+0 1 2
+2 0 1
+1 2 0
+1 2 3
+1 1 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3 4
+1 2 3
+4 5</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>입력 개수가 매우 많으니, 빠른 입출력 함수를 사용하세요.</p>
+</p>
+</section>

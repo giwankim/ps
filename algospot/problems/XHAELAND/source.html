@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/XHAELAND">XHAELAND</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=XHAELAND"><b>64</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/XHAELAND/"><b>7</b> (<b>10</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img src="http://pds26.egloos.com/pds/201307/29/23/b0048523_51f5d7b910284.png"/></p>
+<p>매우 넓은 격자판 위에 A와 B가 있습니다. A와 B는 자기의 위치에서 교차하는 십자가 모양의 섬에 있습니다. 십자가 모양의 끝 지점은 금지구역으로 설정되어 있어서 아무도 출입할 수가 없습니다.</p>
+<p>A와 B는 모두 섬 위에서는 자동차를 타고 이동할 수 있기 때문에 시간이 들지 않습니다. 하지만 섬 밖에서 이동하기 위해서는 배를 타고 이동해야 하고, 한 칸을 이동하는 동안에는 하루의 시간이 소모됩니다. </p>
+<p>A는 자기가 살고 있는 섬의 한 지점에서 배를 타고 출발하여 B가 살고 있는 섬의 한 지점으로 이동하고 싶습니다. 최대한 빨리 이동하는 데 며칠의 시간이 필요한지를 구하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 수 T가 주어집니다.</p>
+<p>각 테스트 케이스는 두 줄로 구성되어 있다. 첫 줄에는 A의 위치 Xa , Ya (0 ≤ Xa, Ya ≤ 50,000)와 A의 위치를 기준으로 동서남북으로 몇 칸씩 갈 수 있는지를 나타내는 숫자 4개(0 이상 50,000 이하)가 주어진다. 두 번째 줄에는 B의 위치 Xb, Yb(0 ≤ Xb, Yb ≤ 50,000)와 B의 위치를 기준으로 동서남북으로 몇 칸씩 갈 수 있는지를 나타내는 숫자 4개(0 이상 50,000 이하)가 주어집니다. </p>
+<p>동쪽은 +x, 남쪽은 +y축에 대응됩니다. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 걸쳐 최단 시간을 출력합니다. A에서 B에 도달할 수 없는 경우는 입력으로 주어지지 않습니다. 또한 A와 B는 서로 연결되어 있지 않으며, 금지구역이 상대방이 갈 수 있는 곳에 위치하는 경우도 없다고 가정합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+3 3 5 2 4 2
+11 9 1 2 2 4
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

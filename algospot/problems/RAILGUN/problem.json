@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://pds21.egloos.com/pds/201307/29/91/b0047291_51f5f827e5193.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "RAILGUN",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:12:29.572273Z",
+    "http_status": 200,
+    "semantic_html_sha256": "d3f9fd0e4b653e5ebf7d7f954d5a2971eb1760c10fe0d26c3fc167183cf52246"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/RAILGUN",
+  "statistics": {
+    "acceptance_percent": 10,
+    "accepted": 12,
+    "submissions": 114
+  },
+  "tags": [
+    "기하"
+  ],
+  "title": "미금이의 수학과제"
+}

@@ -1,0 +1,99 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PROMISES">PROMISES</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PROMISES"><b>2460</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PROMISES/"><b>459</b> (<b>18</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%EC%B5%9C%EB%8B%A8%EA%B1%B0%EB%A6%AC">최단거리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>경제가 침체기에 빠졌을 때 정치인들이 흔히 내거는 공약으로 대규모 토목 공사를 통한 경기 부양책이 있습니다. 이번에 집권당에서는 향후 N 년간 1년에 하나씩 전국의 주요 도시들을 잇는 대형 고속도로를 건설하겠다는 공약을 내걸었습니다. 재야 경제 연구가인 의권이는 이들의 공약을 훑어보다가 이들이 아무 생각 없이 공약을 내걸었다는 결정적인 증거를 발견했습니다. 이들 중 일부 고속도로는 건설하는 의미가 거의 없다는 것입니다.</p>
+<p>어떤 고속도로를 새로 건설할 당위성이 있기 위해서는 기존에 고속도로를 통해 오갈 수 없던 두 도시가 새로 연결되거나, 두 도시를 오가는 데 걸리는 시간이 단축되어야 합니다. 의권이는 공약 중 일부 고속도로는 이 두 조건중 아무 것도 만족하지 못한다는 사실을 알아냈습니다.</p>
+<p><img alt="promises.png" src="http://algospot.com/media/judge-attachments/a2d94c1833ee5e532d74b0824251c067/promises.png"/></p>
+<p>위 그림과 같이 4개의 도시 a, b, c, d가 있는데, 이 중 a와 b, a와 d는 굵은 실선으로 표시된 고속도로들로 연결되어 있다고 합시다. 각 선에 표시된 숫자는 두 도시를 오가는 데 걸리는 시간을 나타냅니다. 이 때 a와 c사이에 새 고속도로를 건설한다고 합시다. c는 다른 도시와 고속도로를 통해서 왕복할 방법이 없었으므로, 이 고속도로는 의미가 있습니다. 그런데 그 다음 해에 b와 c를 잇는 고속도로를 건설한다고 합시다. 이 고속도로가 없더라도 a를 경유하면 b와 c 사이를 6시간만에 움직일 수 있으므로, 편도 6시간이 걸리는 이 고속도로는 아무런 의미가 없습니다.</p>
+<p>기존에 존재하는 고속도로들의 정보와 앞으로 N 년간 건설하기로 예정된 고속도로들의 정보가 주어질 때, 새로 건설하기로 한 고속도로들 중 몇 개가 건설할 의미가 없는지 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (1 &lt;= C &lt;= 50) 이 주어집니다. 각 테스트 케이스의 첫 줄에는 도시의 수 V (2 &lt;= V &lt;= 200) 와 현재 존재하는 고속도로의 수 M, 그리고 앞으로 건설될 고속도로의 수 N 이 주어집니다. (0 &lt;= M+N &lt;= 1000) 그 후 M 줄에는 각 줄에 3개의 정수 a, b, c (0 &lt;= a,b &lt;= V-1,1 &lt;= c &lt;= 100000) 로 이미 존재하는 고속도로의 정보가 주어집니다. a 와 b 는 이 고속도로가 연결하는 도시의 번호, 그리고 c 는 해당 고속도로를 통해 두 도시 간을 이동하는 데 걸리는 시간을 나타냅니다. 그 후 N 줄에 같은 형태로 앞으로 건설할 고속도로의 정보가 순서대로 주어집니다.</p>
+<p>모든 도로는 양방향 통행이 가능하며, 각 경우의 통행 시간은 같습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 N 개의 고속도로를 순서대로 건설했을 때 건설할 의미가 없는 고속도로의 수를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 2 2
+0 1 4
+0 3 1
+0 2 2
+1 2 6
+4 2 2
+0 1 4
+0 3 1
+1 2 6
+0 2 2</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

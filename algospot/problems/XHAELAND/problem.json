@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": false,
+      "path": null,
+      "sha256": null,
+      "source_url": "http://pds26.egloos.com/pds/201307/29/23/b0048523_51f5d7b910284.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "XHAELAND",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:32:00.487719Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e9fa66680d550b2f068a6e8dfd7d9573a60e0f635bd679c657e1b6952df3b8c1"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/XHAELAND",
+  "statistics": {
+    "acceptance_percent": 10,
+    "accepted": 7,
+    "submissions": 64
+  },
+  "tags": [],
+  "title": "Travel in xhaeland"
+}

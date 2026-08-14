@@ -1,0 +1,86 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/4453c017aad2edc2-13.png",
+      "sha256": "30889430d195693fa17002be34d034401b57c54c4598f9a278ae3a9c1a0fb7dd",
+      "source_url": "http://algospot.com/media/judge-attachments/99b44b86e82ea246a21867a6970aedfb/13.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/c47eac14703daf8b-12.png",
+      "sha256": "7fb4d0eed6610bc4ac255853cf44e9cca0efbff843e03d74afbdebabaeb93eb7",
+      "source_url": "http://algospot.com/media/judge-attachments/eabd9fdeb757541289354b1dde1357f0/12.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/0cf5d8358fa7a41a-11.png",
+      "sha256": "4c2e75801b6085bdb6426121930795d17325bf32df4dbc391abdb095e25ee03a",
+      "source_url": "http://algospot.com/media/judge-attachments/56f26d8f5217e108489083aa594fca16/11.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/223df9623cad2a95-10.png",
+      "sha256": "4a0cc7fd96a6e3282a8001192f847d7a224953ba145795805915d2cc21b46eff",
+      "source_url": "http://algospot.com/media/judge-attachments/b60ba1f71aaa61dde733d5088c75b82b/10.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/a74dbf85b9c36517-09.png",
+      "sha256": "6f1efa69ddced6d2da826b7249105a18f9fb55b1baad14874b1adab7d9ba5fd0",
+      "source_url": "http://algospot.com/media/judge-attachments/03beebe7a6a34a588d0742a71e6d63e4/09.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/7b1500e64b3638e3-07.png",
+      "sha256": "3ab4c74b19230b9f1504dd667bcf826811b92d5b55491337a4309ad4c2b3a1fb",
+      "source_url": "http://algospot.com/media/judge-attachments/71701ba4f30e767b1894c86b216a5daa/07.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/609a5771a0f6d5cc-14.png",
+      "sha256": "b7d6ae56370e24170b0b1b9bf1b2e80010f1b869b197bb5ee26e7b7ed45b9a35",
+      "source_url": "http://algospot.com/media/judge-attachments/25c64a7a37ecfc8c5b2691d24c237510/14.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/dcf7659a325f5cb5-08.png",
+      "sha256": "b318e8245eb9bf719e217c306b7553162c753a44a7d8ba0ce6dd5a1053bac849",
+      "source_url": "http://algospot.com/media/judge-attachments/c9dec0372bcc0b198a30305af57364fa/08.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ASYMTILING",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:04:41.984851Z",
+    "http_status": 200,
+    "semantic_html_sha256": "25bffde2a898fbbe6e1b136e2381187e91983f6cb8b82c2245d4570c2b949cbb"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ASYMTILING",
+  "statistics": {
+    "acceptance_percent": 55,
+    "accepted": 3035,
+    "submissions": 5476
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "비대칭 타일링"
+}

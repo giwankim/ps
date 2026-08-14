@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MASTEROFBADUK">MASTEROFBADUK</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MASTEROFBADUK"><b>16</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MASTEROFBADUK/"><b>3</b> (<b>18</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/48">일루</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%209%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 9주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Baduk is an ancient board game which requires deep strategy and tactics, where two players (Black and White) exchange their turns to place a stone in one of empty positions of the board. Black play with black stones, and White with white stones. You can also ‘pass’ to give up your opportunity to place a stone.</p>
+<p>Baduk is known to be notoriously hard to solve with computers, but don’t worry! We will be dealing with a simplified and highly abstracted version of the game. See below for the rules of the game.</p>
+<p>In this version of Baduk, each player has one stone group. Each empty position which is adjacent to a stone is called a liberty. We can classify each liberty as one of the following three types:</p>
+<ul>
+<li>Shared liberties (<span class="mathjax-preview">S</span><script type="math/tex">S</script>) - empty positions adjacent to both colors of stones.</li>
+<li>Inner liberties (<span class="mathjax-preview">I</span><script type="math/tex">I</script>) - empty positions completely enclosed within a stone group.</li>
+<li>Outer liberties (<span class="mathjax-preview">O</span><script type="math/tex">O</script>) - empty positions that is adjacent to a stone, which are not either Shared or Inner liberties.</li>
+</ul>
+<p>Using these definitions, we can summarize the entire state of the game board into 5 non-negative integers: <span class="mathjax-preview">BO</span><script type="math/tex">BO</script> (# of Outer liberties of Black), <span class="mathjax-preview">BI</span><script type="math/tex">BI</script> (# of Inner liberties of Black), <span class="mathjax-preview">WO</span><script type="math/tex">WO</script> (# of Outer liberties of White), <span class="mathjax-preview">WI</span><script type="math/tex">WI</script> (# of Inner liberties of White), <span class="mathjax-preview">S</span><script type="math/tex">S</script> (# of liberties shared by White and Black).</p>
+<p>At each turn, a player can choose one of the numbers and decrease it by 1. There are a few rules:</p>
+<ol>
+<li>No move can result in a negative number of liberties. (i.e. <span class="mathjax-preview">BO</span><script type="math/tex">BO</script>, <span class="mathjax-preview">BI</span><script type="math/tex">BI</script>, <span class="mathjax-preview">WO</span><script type="math/tex">WO</script>, <span class="mathjax-preview">WI</span><script type="math/tex">WI</script>, <span class="mathjax-preview">S</span><script type="math/tex">S</script> should all be <span class="mathjax-preview">0</span><script type="math/tex">0</script> or greater after a move)</li>
+<li>To decrease <span class="mathjax-preview">BI</span><script type="math/tex">BI</script> from <span class="mathjax-preview">1</span><script type="math/tex">1</script> to <span class="mathjax-preview">0</span><script type="math/tex">0</script>, both <span class="mathjax-preview">BO</span><script type="math/tex">BO</script> and <span class="mathjax-preview">S</span><script type="math/tex">S</script> must be <span class="mathjax-preview">0</span><script type="math/tex">0</script> already.</li>
+<li>To decrease <span class="mathjax-preview">WI</span><script type="math/tex">WI</script> from <span class="mathjax-preview">1</span><script type="math/tex">1</script> to <span class="mathjax-preview">0</span><script type="math/tex">0</script>, both <span class="mathjax-preview">WO</span><script type="math/tex">WO</script> and <span class="mathjax-preview">S</span><script type="math/tex">S</script> must be <span class="mathjax-preview">0</span><script type="math/tex">0</script> already.</li>
+<li>A player can pass his/her turn.</li>
+</ol>
+<p>The winner of the game is determined as follows.</p>
+<ul>
+<li>A player loses when it does not have any liberties. For example, when <span class="mathjax-preview">BO = BI = S = 0</span><script type="math/tex">BO = BI = S = 0</script>, White wins.</li>
+<li>When all five numbers become <span class="mathjax-preview">0</span><script type="math/tex">0</script> by decreasing <span class="mathjax-preview">S</span><script type="math/tex">S</script> the last time, the last person who made the move wins.</li>
+</ul>
+<p>Write a program that, given the 5 numbers, determine who will win assuming Black plays first, and both players play optimally. Note that there are cases where no player can win the game.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test cases <span class="mathjax-preview">N</span><script type="math/tex">N</script>. (<span class="mathjax-preview">1 \le N \le 10\,000</span><script type="math/tex">1 \le N \le 10\,000</script>) <span class="mathjax-preview">N</span><script type="math/tex">N</script> lines follow, with 5 non-negative integers, each representing <span class="mathjax-preview">BO</span><script type="math/tex">BO</script>, <span class="mathjax-preview">BI</span><script type="math/tex">BI</script>, <span class="mathjax-preview">S</span><script type="math/tex">S</script>, <span class="mathjax-preview">WO</span><script type="math/tex">WO</script> and <span class="mathjax-preview">WI</span><script type="math/tex">WI</script>, in this order. (<span class="mathjax-preview">0 \le BO</span><script type="math/tex">0 \le BO</script>, <span class="mathjax-preview">WO</span><script type="math/tex">WO</script>, <span class="mathjax-preview">S \le 10^9</span><script type="math/tex">S \le 10^9</script>, <span class="mathjax-preview">0 \le BI</span><script type="math/tex">0 \le BI</script>, <span class="mathjax-preview">WI \le 2</span><script type="math/tex">WI \le 2</script>, <span class="mathjax-preview">BO + BI + S \ge 1</span><script type="math/tex">BO + BI + S \ge 1</script>, <span class="mathjax-preview">WO + WI + S \ge 1</span><script type="math/tex">WO + WI + S \ge 1</script>)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print a single line containing the winner of the game ("White" or "Black"). In case no one can win the game, print "Neither".</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+3 0 0 3 0
+3 0 0 4 0
+0 0 2 0 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Black
+White
+Neither</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

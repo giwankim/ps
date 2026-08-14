@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/TREASURE">TREASURE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=TREASURE"><b>462</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/TREASURE/"><b>194</b> (<b>41</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B3%84%EC%82%B0%EA%B8%B0%ED%95%98">계산기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>위대한 해적 <a href="http://en.wikipedia.org/wiki/Guybrush_Threepwood">가이브러시 포피우드</a>가 위대한 보물 <a href="http://ko.wikipedia.org/wiki/%EC%9B%90%ED%94%BC%EC%8A%A4_(%EB%A7%8C%ED%99%94)">투피스</a>를 숨겨뒀다는 보물섬을 오랜 고난을 거쳐 찾아냈습니다. 가이브러시는 이 보물섬 어디엔가 투피스를 묻어뒀다고 알려지고 있는데, 그 위치가 어디인지는 모릅니다. 섬을 다 뒤집어 엎기 직전, 지도에는 <a href="http://ko.wikipedia.org/wiki/%ED%8E%98%EB%A5%B4%EB%A7%88%EC%9D%98_%EB%A7%88%EC%A7%80%EB%A7%89_%EC%A0%95%EB%A6%AC">여백이 부족해 적지 않았던</a> 보물의 위치가 적힌 쪽지를 발견했습니다. 이 쪽지에는 보물이 묻혀 있는 곳이 적혀 있는데, 설명이 길고 장황한 데다 군데 군데 지워져 정확히 알아보기 쉽지 않았습니다. 쪽지를 열심히 연구한 결과, 보물이 묻혀 있는 곳의 범위를 어느 정도 좁힐 수 있었습니다. </p>
+<p><img alt="treasure2.png" src="http://algospot.com/media/judge-attachments/1d2e9fedb622ddb6765f33d3c0e37461/treasure2.png"/></p>
+<p>섬의 지도가 위 그림과 같이 N개의 점을 갖는 다각형으로 주어질 때, 보물이 묻혀 있을 수 있는 곳은 두 점 (x<sub>1</sub>,y<sub>1</sub>)과 (x<sub>2</sub>,y<sub>2</sub>) 를 서로 대칭인 꼭지점으로 갖고, 네 변이 모두 x축 혹은 y축에 평행한 직사각형 내부입니다. 우리는 이 직사각형 내에 포함된 육지를 전부 조사하고 싶습니다. 우리가 조사해야 할 부분의 넓이를 계산하는 프로그램을 작성하세요. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (C &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 다섯 개의 정수로 직사각형의 꼭지점의 좌표 x<sub>1</sub> , y<sub>1</sub> , x<sub>2</sub> , y<sub>2</sub>  (0 &lt;=  x<sub>1</sub> &lt; x<sub>2</sub> &lt;= 100,0 &lt;=  y<sub>1</sub> &lt; y<sub>2</sub> &lt;= 100)  그리고 섬의 지도를 나타내는 다각형 꼭지점의 수 N (3 &lt;=  N &lt;= 100) 이 주어집니다. 그 후 N 줄에 각 2개의 정수로 각 꼭지점의 좌표 X<sub>i</sub> , Y<sub>i</sub>  (0 &lt;=  X<sub>i</sub>, Y<sub>i</sub> &lt;= 100) 가 주어집니다. 꼭지점은 시계 반대 방향으로 주어지며, 마지막 점은 첫 번째 점과 연결되어 있습니다.</p>
+<p>주어진 섬의 면적이 0이거나, 섬의 경계선이 자기 자신과 교차하거나 겹치는 경우는 없습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 조사해야 할 육지의 넓이를 출력합니다. 10<sup>-7</sup>  이하의 절대/상대 오차를 갖는 답은 정답으로 인정됩니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+26 34 76 72 15
+41 52
+50 71
+42 87
+26 84
+16 58
+33 33
+51 23
+64 32
+73 17
+86 14
+91 38
+92 68
+82 79
+68 45
+61 58
+50 20 70 80 4
+86 50 
+30 10
+90 50
+30 90</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1343.0948739496 
+57.1428571429 </pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

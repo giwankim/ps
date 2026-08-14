@@ -1,0 +1,126 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KAKURO2">KAKURO2</a></li>
+<li class="timelimit"><b>20000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KAKURO2"><b>868</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KAKURO2/"><b>386</b> (<b>44</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%201%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 1주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A1%B0%ED%95%A9%ED%83%90%EC%83%89">조합탐색</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Having written a input file generator in <a href="http://algospot.com/judge/problem/read/KAKURO1">Kakuro I</a>, we can now set problems to solve Kakuro puzzles. </p>
+<p>Write a program to solve kakuro puzzles. For Kakuro rules, refer to <a href="http://algospot.com/judge/problem/read/KAKURO1">Kakuro I</a>.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of input file has the number of test cases T.</p>
+<p>In the first line of each test case, the size of the game board N (&lt;= 20) is given. The next N lines will give a description of the board, from top to bottom. These lines will have N numbers, where 0 denote black/hint cells, and 1 denote white cells. In the next line, the number of hint Q is given. The following Q lines give the hints on the board, each described with four integers: y, x, direction, and sum. sum is the value of the clue (1 &lt;= sum &lt;= 45), and (y, x) is the 1-based coordinate of the hint cell. direction is 0 if hint clue is a horizontal sum, 1 if the clue is a vertical sum.</p>
+<p>You can assume for all test cases, there will be a unique valid solution.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print out the solved Kakuro board in N lines each with N numbers. Print 0 for black or hint cells, and print the filled number for white cells.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+8
+0 0 0 0 0 0 0 0
+0 1 1 0 0 1 1 1
+0 1 1 0 1 1 1 1
+0 1 1 1 1 1 0 0
+0 0 1 1 0 1 1 0
+0 0 0 1 1 1 1 1
+0 1 1 1 1 0 1 1
+0 1 1 1 0 0 1 1
+24
+2 1 0 16
+2 5 0 24
+3 1 0 17
+3 4 0 29
+4 1 0 35
+5 2 0 7
+5 5 0 8
+6 3 0 16
+7 1 0 21
+7 6 0 5
+8 1 0 6
+8 6 0 3
+1 2 1 23
+1 3 1 30
+1 6 1 27
+1 7 1 12
+1 8 1 16
+2 5 1 17
+3 4 1 15
+4 7 1 12
+5 5 1 7
+5 8 1 7
+6 2 1 11
+6 3 1 10
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0 0 0 0 0 0 0 0
+0 9 7 0 0 8 7 9
+0 8 9 0 8 9 5 7
+0 6 8 5 9 7 0 0
+0 0 6 1 0 2 6 0
+0 0 0 4 6 1 3 2
+0 8 9 3 1 0 1 4
+0 3 1 2 0 0 2 1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

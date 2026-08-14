@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "DEATH",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 20000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:19:40.553663Z",
+    "http_status": 200,
+    "semantic_html_sha256": "fbfd5e17546e6fd45ce0097d73a65dd3c41236b4945ceb322d9744f4aa8d4917"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/DEATH",
+  "statistics": {
+    "acceptance_percent": 25,
+    "accepted": 96,
+    "submissions": 374
+  },
+  "tags": [
+    "동적계획법"
+  ],
+  "title": "The Game of Death"
+}

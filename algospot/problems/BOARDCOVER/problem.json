@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/be3179995507cbb6-03.png",
+      "sha256": "42cb53a513d696a88e2e79f27d218f33e3e9ad9215f8a2caea9622266a19b3ab",
+      "source_url": "http://algospot.com/media/judge-attachments/2b7bfee35cbec2f4e799bb011ac18f69/03.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BOARDCOVER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:07:41.928807Z",
+    "http_status": 200,
+    "semantic_html_sha256": "bd38a898838749314280c0f73ab89c005dae6bef4ae25610373429baba251a46"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BOARDCOVER",
+  "statistics": {
+    "acceptance_percent": 48,
+    "accepted": 5781,
+    "submissions": 12020
+  },
+  "tags": [
+    "탐색"
+  ],
+  "title": "게임판 덮기"
+}

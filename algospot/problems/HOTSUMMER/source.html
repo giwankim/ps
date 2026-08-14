@@ -1,0 +1,93 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/HOTSUMMER">HOTSUMMER</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=HOTSUMMER"><b>6625</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/HOTSUMMER/"><b>3294</b> (<b>49</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>점점 더워지는 여름! 가뜩이나 집에서 바깥바람과 선풍기만으로 더위를 이겨내려고 하는 대학원생 LIBe에게 근무 시간 내내 에어컨을 틀 수 있었던 연구실은 지상낙원이었다.</p>
+<p>어느 날 갑자기 연구실에 근로학생이 찾아와 청천벽력 같은 소식을 전했다. 교내 전체 전력 사용량 감축을 위해 학교 모든 연구실에서 특정시간 동안 에어컨 가동을 중단하기로 했다는 이야기였다. </p>
+<p>이야기를 듣자마자 시설팀에 전화를 걸어 항의를 해보았지만, 시설팀에서는 전기 사용량을 정부가 제시한 목표량 이상으로 감축하지 못할 경우 많은 벌금이 부과되기 때문에 어쩔 수 없다는 말만 되풀이할 뿐이었다. 더위를 못 이겨 몰래 에어컨을 켜면 금세 근로학생이 나타나 에어컨을 끄는 것을 부탁하느라 이마저도 포기했다.</p>
+<p>이러한 날이 계속되던 와중에, 마침 시설팀에서 감축 정책 개시 이후 첫날의 건물별 시간당 전기 사용량을 알리는 공지 메일을 보냈고, 이를 본 LIBe는 과연 학교에서 정한 감축 정책이 정말 실효를 거두고 있는지를 확인해보려 한다. 메일에는 건물별 목표 전력 사용량과 9시부터 18시까지의 시간대별 전력 사용량이 적혀있다. 이를 토대로 건물별로 목표하는 전력 사용량을 지켰는지를 확인하는 프로그램을 작성하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫째 줄에는 교내 건물의 수를 뜻하는 숫자 T가 입력된다.</p>
+<p>그다음 줄부터 총 T개의 건물의 전력 사용량에 대한 정보가 입력되는데, 이는 두 줄로 이뤄진다. 첫째 줄은 해당 건물의 목표 전력 사용량인 W가 입력되고, 둘째 줄에는 총 9개의 숫자 A<sub>9</sub>, A<sub>10</sub>, ..., A<sub>17</sub>가 입력되는데, A<sub>i</sub>는 i 시부터 i+1 시까지의 전력 사용량을 뜻한다. 전력 사용량에서 입력되는 숫자는 모두 0 이상 1,000 이하의 정수이며, 숫자는 공백으로 구분된다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 건물에 대해 입력된 순서대로 전체 전력 사용량의 합이 목표 사용량 이하일 경우 "<code>YES</code>"를, 그렇지 못할 경우에는 "<code>NO</code>"를 한 줄에 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+90
+10 10 10 10 10 10 10 10 10
+1000
+77 77 70 11 34 35 41 83 54
+50
+10 20 30 40 50 60 50 40 30
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+YES
+NO</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

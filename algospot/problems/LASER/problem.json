@@ -1,0 +1,35 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "LASER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:43:36.229993Z",
+    "http_status": 200,
+    "semantic_html_sha256": "494a81d21f05df1a7b2c9709773dc732c2c9ce20a744b693d4225afaf2644f94"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/LASER",
+  "statistics": {
+    "acceptance_percent": 15,
+    "accepted": 88,
+    "submissions": 570
+  },
+  "tags": [],
+  "title": "LASER"
+}

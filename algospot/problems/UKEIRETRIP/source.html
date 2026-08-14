@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/UKEIRETRIP">UKEIRETRIP</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=UKEIRETRIP"><b>61</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/UKEIRETRIP/"><b>20</b> (<b>32</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>알고스팟 대회의 단골 출제위원 태윤이는 지금 영국과 아일랜드를 여행하고 있다. 태윤이는 여행을 떠나기에 앞서, 가고 싶은 여행지 N개를 골랐다. 그리고 각 여행지에 1부터 N까지 번호를 붙였고, 인접한 여행지 사이에 거리를 기록해 여행지도를 만들었다. (역시 프덕후!)</p>
+<p>태윤이의 이번 여행은 런던(1번 여행지)에서 시작해 더블린(N번 여행지)에서 끝난다. 그리고 그사이에 가게 될 여행지는 아래와 같은 방법으로 결정한다.</p>
+<p>태윤이는 현재 위치를 떠날 때마다, 인접한 모든 여행지를 확인한다. 현재 위치부터 더블린까지의 최단거리보다 인접한 여행지부터 더블린까지의 최단거리가 더 짧다면, 그곳은 이동 가능한 여행지다.</p>
+<p>이동 가능한 여행지를 뽑은 후에는, 그중에 현재 위치에서 가장 가까운 여행지부터 순위를 매긴다. 거리가 같다면 번호가 작은 여행지가 더 높은 순위를 가진다. 이동 가능한 여행지 P개가 있다면, 1위는 50%, 2위는 25%, 3위는 12.5% ... P위는 100/2<sup>P</sup>% 확률로 다음 여행지를 결정하고 이동한다. 이동한 후에는 다시 또 그다음 여행지를 고민하기 시작한다……. 아! 그리고 나머지 100/2<sup>P</sup>% 확률로는 아이스크림을 하나 사 먹고, 더 이상 고민 없이 현재 위치에서 최단경로로 더블린까지 쭉 간다. 거리가 같은 최단경로가 여러 개 있다면, 매 순간 그중 가장 번호가 작은 여행지로 이동한다.</p>
+<p>입력으로 여행 지도와 Q개의 여행지 번호가 주어진다. Q개의 여행지에 대해, 태윤이가 여행 도중 지나갈 확률을 구하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T 개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 T가 주어진다.</p>
+<p>각 테스트 케이스의 첫 줄에는 여행지의 개수 N과 인접한 여행지들을 잇는 길의 개수 M이 주어진다.(2 &lt;= N &lt;= 10000, 1 &lt;= M &lt;= 30000) 그 후 M줄에 각각 길의 정보로써 인접한 두 여행지의 번호 V<sub>i</sub>, U<sub>i</sub>와 길의 거리를 나타내는 정수 D<sub>i</sub>가 주어진다.(1 &lt;= V<sub>i</sub> &lt; U<sub>i</sub> &lt;= N, 1 &lt;= D<sub>i</sub> &lt;= 100) 인접한 두 여행지는 양쪽에서 서로 이동이 가능하다. 즉, V<sub>i</sub>에서 U<sub>i</sub>로 이동할 수도 있고, U<sub>i</sub>에서 V<sub>i</sub>로도 가능하다. 또한, 두 여행지 사이에는 길이 두 개 이상 존재하지 않는다.<br/>
+그다음 줄에는 확률을 계산해야 할 여행지의 개수 Q가 주어지고, 그다음 줄에는 Q개의 여행지 번호 B<sub>i</sub>가 주어진다. (1 &lt;= Q &lt;= 100, 1 &lt;= B<sub>i</sub> &lt;= N)</p>
+<p>런던에서 더블린으로 가는 길은 항상 하나 이상 존재한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 Q개씩, 각 도시에 대해 태윤이가 여행 도중 지나갈 확률을 공백으로 구분하여 출력한다. 1e-8 이내의 절대/상대 오차는 정답으로 인정된다. 그러므로 소수점 이하 8자리 이상 출력하기를 권장한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 3
+1 3 7
+1 2 3
+2 3 2
+3
+1 2 3
+5 9
+1 2 2
+1 3 3
+1 4 1
+1 5 8
+3 4 5
+2 3 1
+2 5 4
+3 5 3
+4 5 9
+5
+1 2 3 4 5</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 0.75 1
+1 0.625 0.75 0 1</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

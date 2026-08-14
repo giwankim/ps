@@ -1,0 +1,108 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/COUNTPALIN">COUNTPALIN</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=COUNTPALIN"><b>860</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/COUNTPALIN/"><b>142</b> (<b>16</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/19">Kureyo</a></li>
+<li class="source"><a href="/judge/problem/list/?source="></a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>,
+						
+						<a href="/judge/problem/list/?tag=%EB%AC%B8%EC%9E%90%EC%97%B4">문자열</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>섬시티(SumCity)에는 도시를 가로지르는 거대한 대로가 있다. 그 대로를 따라 상가들이 늘어서 있다. 석환이는 섬시티의 지도를 보고 상가들의 앞 글자를 쭉 읽으며 회문이 되는 부분 문자열(palindrome)을 찾는 것을 즐긴다. 또한 한 글자는 회문인것이 명백하므로, 석환이는 길이가 2이상인 부분 문자열들에 대해서만 회문의 갯수를 세고 싶다.</p>
+<p>예를 들어 1번지부터 존재하는 상가명들이 다음과 같다고 하자:</p>
+<p>Engine Studio<br/>
+White dwarf bucks<br/>
+Honja<br/>
+Sumsung<br/>
+Positronic arts<br/>
+Sanwang money<br/>
+Harmplus<br/>
+Algojaspot<br/>
+Affle<br/>
+Hoohle<br/>
+Down team<br/>
+Angdroid<br/>
+Andromeda Express</p>
+<p>이 때 첫 글자만 딴다면 'EWHSPSHAAHDAA'이다.<br/>
+석환이가 원하는 부분문자열은 'HSPSH','SPS','HAAH','AA','AA'으로 답은 5이다.</p>
+<p>석환이를 돕기 위해 유능한 해커인 당신은 섬시티 시청을 해킹해서 지도를 빼와 출력한 후 문자 인식을 통해 대로상에 존재하는 모든 상가들의 첫 글자들을 모은 하나의 문자열을 얻는데 성공했다.<br/>
+이제 당신이 할 유일한 일은 석환이가 원하는 답을 구하는 것이다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에는 입력의 종류 T(&lt;=50)이 주어진다.<br/>
+그 뒤로 T개의 줄에 하나의 숫자 N(1&lt;=N&lt;=1,000,000)과 길이가 N인 문자열이 주어진다.<br/>
+문자열은 항상 알파벳 소문자로 구성되어있고, 공백은 없다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 입력마다 석환이가 원하는 답을 한 줄씩 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+1 a
+4 aaaa
+8 abcddcba</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0
+6
+4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

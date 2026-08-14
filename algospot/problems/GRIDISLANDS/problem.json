@@ -1,0 +1,56 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/319c641a02f25647-islands1.png",
+      "sha256": "a8981f6cd11898631d1146ae667cd18f4cae48f27f44ecfdf9c0e16f00ec879b",
+      "source_url": "http://algospot.com/media/judge-attachments/00d1aba05aa75077b6169509f76a2a7a/islands1.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/ad59ee04fea2ebf3-islands2.png",
+      "sha256": "425849d9d477d389a7ca15a2baf294cf366a603215e627a49fbe927a1bebb666",
+      "source_url": "http://algospot.com/media/judge-attachments/016b4a18498ef5bb6cff26e1eb0f844c/islands2.png"
+    },
+    {
+      "archived": true,
+      "path": "assets/7eedcf408e830de1-islands3.png",
+      "sha256": "9892784653a7128d03cf5c91f88922d2298421a4c586182f3859d84dc0c2585d",
+      "source_url": "http://algospot.com/media/judge-attachments/c194041240cfc607c8969be2210e7272/islands3.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "GRIDISLANDS",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:32:51.499050Z",
+    "http_status": 200,
+    "semantic_html_sha256": "de3f5df8a31ba5505cbad43df5fcbe58d35f158f6f6f5d9c27a7a93b7a64a1a1"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/GRIDISLANDS",
+  "statistics": {
+    "acceptance_percent": 58,
+    "accepted": 105,
+    "submissions": 178
+  },
+  "tags": [
+    "수학"
+  ],
+  "title": "Grid Islands"
+}

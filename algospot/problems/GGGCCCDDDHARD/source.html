@@ -1,0 +1,107 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GGGCCCDDDHARD">GGGCCCDDDHARD</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>8192</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GGGCCCDDDHARD"><b>64</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GGGCCCDDDHARD/"><b>11</b> (<b>17</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/764">kriii</a></li>
+<li class="source"><a href="/judge/problem/list/?source="></a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%A0%95%EC%88%98%EB%A1%A0">정수론</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>어떤 사람이 <a class="problem" href="/judge/problem/read/GGGCCCDDD" title="GGGCCCDDD">GGGCCCDDD</a>와 <a href="http://bit.ly/12NHgZ4">이 문제</a>를 보고 다음과 같은 생각을 했다고 합니다.</p>
+<blockquote>
+<p>GGGCCCDDD문제에서는 루프의 각 변수의 초기값이 1이었지만, gcd(0,N) = gcd(N,0) = N이니까, 각 변수의 초기값을 0으로 시작해도 되지 않을까?</p>
+</blockquote>
+<p>그래서 그는 다음과 같은 루프를 돌려보았습니다.</p>
+<div class="highlight"><pre><span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">a1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a1</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">a1</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">a2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a2</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">a2</span><span class="o">++</span><span class="p">)</span>
+        <span class="c1">// ......</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">aM</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">aM</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">aM</span><span class="o">++</span><span class="p">)</span>
+                    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">gcd</span><span class="p">(</span><span class="n">a2</span><span class="p">,...</span> <span class="p">,</span><span class="n">gcd</span><span class="p">(</span><span class="n">aM</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">aM</span><span class="p">))....));</span>
+</pre></div>
+<p>그리고 그는 좀 더 빠르게 sum을 구하는 방법까지 구상해 보았는데 이 방법이 GGGCCCDDD문제와 다를 것이 없다는 것을 깨달았습니다. 그래서 N과 M의 범위를 조금만 더 늘리기로 하였습니다. sum을 구하기 위한 좋은 방법을 찾아주세요!</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T 개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 T가 주어진다.</p>
+<p>각 테스트 케이스에 대해, 한 줄에 정수 N과 M (0 &lt;= N &lt;= 10<sup>9</sup>, 1 &lt;= M &lt;= 10<sup>9</sup>) 이 공백으로 구분되어 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 하나씩 답을 출력한다. 단, 답이 매우 클 수 있으므로 답을 1,000,000,007로 나눈 나머지를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+2 2
+10 4
+100000 100000</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>11
+17255
+732485951</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>N = 10, M = 4 인 경우, 아래처럼 계산해볼 수 있다.</p>
+<div class="highlight"><pre><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">b</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">b</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">c</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">c</span><span class="o">++</span><span class="p">)</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">d</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span>
+                <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">gcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">gcd</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">)));</span>
+</pre></div>
+</p>
+</section>

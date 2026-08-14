@@ -1,0 +1,89 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/CSBASEBALL">CSBASEBALL</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=CSBASEBALL"><b>1620</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/CSBASEBALL/"><b>902</b> (<b>55</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/5829">etaehyun4</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2013%20KAIST%20%EA%B5%90%EB%82%B4%20%EB%8C%80%ED%9A%8C">2013 KAIST 교내 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>현재 CS 야구팀과 화나 핀토스(Hwana Pintos)팀의 야구 경기가 진행 중이다. 지금은 CS 야구팀의 공격 상황. 주자는 아무도 없지만 이들은 계속 안타(1루타)를 치기 시작하였다. 안타를 칠 때마다 주자들은 1루씩 진루한다. 그들은 적어도 몇 개의 안타를 쳐야 상대팀보다 더 높은 점수를 가질 수 있을까?</p>
+<p>야구 경기는 사각형 모양으로 구성된 네 베이스를 놓고 진행하는 스포츠 경기로써, 야구에서는 한 명의 선수가 타자로써 홈에서 출발하여 반시계방향 순서로 1루, 2루, 3루를 돌아 다시 홈으로 들어올 때 비로소 1점을 획득한다. '진루' 한다는 것은 시계 반대 방향으로 한 칸 움직인다는 것이다. 따라서 위 문제에서는 1루, 2루, 3루 모두에 선수가 없는 상황에서, 안타를 치면 모든 선수가 한 칸씩 움직일 때 승리하기 위해서는 몇 개의 안타가 필요한 지 묻고 있다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 줄에는 테스트 케이스의 개수가 주어진다.<br/>
+각 테스트 케이스마다 한 줄에 하나씩 현재 CS야구팀의 점수 <span class="mathjax-preview">A</span><script type="math/tex">A</script>와 화나 핀토스팀의 점수 <span class="mathjax-preview">B</span><script type="math/tex">B</script>가 주어진다. <br/>
+<span class="mathjax-preview">(0 \le A,B \le 1,000,000,000)</span><script type="math/tex">(0 \le A,B \le 1,000,000,000)</script></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 정답을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5 5
+4 5
+6 4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+5
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

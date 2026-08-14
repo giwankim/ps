@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "MERCY",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:49:09.661436Z",
+    "http_status": 200,
+    "semantic_html_sha256": "8318f9dafd7eece0470f742a57de5affc97f2a04afecf5dfb726cfdc763122c6"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/MERCY",
+  "statistics": {
+    "acceptance_percent": 47,
+    "accepted": 9189,
+    "submissions": 19341
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "Merciful Algospot"
+}

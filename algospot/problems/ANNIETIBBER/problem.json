@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/83f878cc3b653c78-annietibber.png",
+      "sha256": "e97976e6bfd0b53a6b45c437e7bf48a459c8b5f49555d6a615a097f40a3d44e3",
+      "source_url": "http://algospot.com/media/judge-attachments/971c3c459ae76a0eb69a1e42677a01e4/annietibber.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "ANNIETIBBER",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 10000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:03:00.962701Z",
+    "http_status": 200,
+    "semantic_html_sha256": "b7a5dc43a49a0ea9b1ab4e46b3d0932a82b61e3f1b5ea056d6a5b8dbba82f6dc"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/ANNIETIBBER",
+  "statistics": {
+    "acceptance_percent": 15,
+    "accepted": 102,
+    "submissions": 669
+  },
+  "tags": [
+    "계산기하"
+  ],
+  "title": "Annie and Tibber"
+}

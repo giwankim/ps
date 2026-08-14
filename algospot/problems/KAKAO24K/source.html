@@ -1,0 +1,114 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KAKAO24K">KAKAO24K</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KAKAO24K"><b>20</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KAKAO24K/"><b>10</b> (<b>50</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/1565">unbing</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>카카오에는 뛰어난 개발자들을 위한 다양한 행사들이 있는데, 그 중 하나가 24K라고 하는 사내 해커톤 행사이다. 이 행사에서 카카오 크류들은 잉여력을 폭발시켜 기발한 제품들을 만들어낼 수 있다. 24K가 크류들의 가슴을 뛰게하는 또 다른 이유는 바로 제공되는 어마어마한 상품들이다. 행사의 진행을 맡은 Patrick은 크류들이 24시간동안 여러가지 게임들을 즐기면서 많은 상품을 가져갈 수 있도록 계획을 세웠다. 그 중 하나가 무지무지라는 게임이다. 게임의 방법은 다음과 같다.</p>
+<p>총 <span class="mathjax-preview">N (1 \le N \le 30)</span><script type="math/tex">N (1 \le N \le 30)</script> 종류의 무지(MUZI) 인형이 있다. 편의상 이 인형들을 <span class="mathjax-preview">1</span><script type="math/tex">1</script>번부터 <span class="mathjax-preview">N </span><script type="math/tex">N </script>번 인형이라고 구분하자. 이 중 오직 <span class="mathjax-preview">1</span><script type="math/tex">1</script>번 인형만 사내 스토어에서 <span class="mathjax-preview">A (1 \le A \le 1000)</span><script type="math/tex">A (1 \le A \le 1000)</script>원에 구매할 수 있다. <span class="mathjax-preview">i (1 \le i &lt; N)</span><script type="math/tex">i (1 \le i < N)</script>번 인형은 <span class="mathjax-preview">i+1</span><script type="math/tex">i+1</script>번 인형으로 바꿀 수 있는데, 이는 위험과 비용을 감수해야 하는 일이다. 번호가 클 수록  인형이 엄청 귀여워지기 때문이다. 위험을 감수하겠다고 결정을 했으면 우선 <span class="mathjax-preview">c_i (1 \le c_i \le 100)</span><script type="math/tex">c_i (1 \le c_i \le 100)</script>원을 지불하고,  <span class="mathjax-preview">i</span><script type="math/tex">i</script>번 인형을 Patrick에게 맡겨야 한다.</p>
+<p>Patrick은 인형의 운명을 다음과 같이 결정한다.</p>
+<ul>
+<li><span class="mathjax-preview">s_i (1 \le s_i &lt; 100)</span><script type="math/tex">s_i (1 \le s_i < 100)</script>% 성공 확률로 <span class="mathjax-preview">i + 1</span><script type="math/tex">i + 1</script>번 인형으로 교환해준다.</li>
+<li>실패한다면
+
+<ul>
+<li><span class="mathjax-preview">d_i (0 \le d_i \le 100)</span><script type="math/tex">d_i (0 \le d_i \le 100)</script> 확률로 인형을 어린이 병원에 기부한다.</li>
+<li>기부하지 않는다면
+
+<ul>
+<li><span class="mathjax-preview">b_i = 0</span><script type="math/tex">b_i = 0</script>일 경우 <span class="mathjax-preview">i</span><script type="math/tex">i</script>번 인형을 돌려준다.</li>
+<li><span class="mathjax-preview">b_i = 1</span><script type="math/tex">b_i = 1</script>일 경우 <span class="mathjax-preview">i - 1</span><script type="math/tex">i - 1</script>번 인형을 돌려준다. (<span class="mathjax-preview">b_1</span><script type="math/tex">b_1</script>은 항상 <span class="mathjax-preview">0</span><script type="math/tex">0</script>이다.)</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>인형을 기부하고 나면 이 게임에 참가하기위해 다시 <span class="mathjax-preview">1</span><script type="math/tex">1</script>번 인형을 <span class="mathjax-preview">A</span><script type="math/tex">A</script>원에 구매해야만 한다.</p>
+<p>게임의 설계를 마친 Patrick은 똑똑한 크류에게 게임을 조금 더 유리하게 만들어주기로 결심했다. 각각의 크류는 게임을 DA 모드와 UM 모드 중 하나로 즐길 수 있다. (단, 한 번 정하면 바꿀 수 없다.) </p>
+<ul>
+<li>DA 모드: 각각의 성공률 <span class="mathjax-preview">s_i</span><script type="math/tex">s_i</script>가 <span class="mathjax-preview">K (1 \le K \le 100)</span><script type="math/tex">K (1 \le K \le 100)</script>%만큼 증가한다. 예를 들어, <span class="mathjax-preview">s_i</span><script type="math/tex">s_i</script>가 50%이고, K가 10이라면 성공률은 10% 증가한 55%가 된다. 절대적으로 증가하는 것이 아니라 상대적으로 증가함에 유의하자. 물론 성공율이 100%를 넘으면 무조건 성공한다. </li>
+<li>UM 모드: <span class="mathjax-preview">S (1 \le S \le 3)</span><script type="math/tex">S (1 \le S \le 3)</script>번 연속 번호가 낮은 인형으로 교환받을 때, 그 바로 다음 시도는 성공율을 100%로 보장해준다. 이 때, 성공율이 100%여도 비용은 동일하게 지불해야한다. 예를 들어, <span class="mathjax-preview">S</span><script type="math/tex">S</script> = 2 라고 하자. 5번 인형을 Patrick에게 맡겼는데 4번 인형을 돌려주었고, 이 4번 인형을 다시 맡겼을 때 3번 인형을 돌려주었다면 이 3번 인형을 다시 Patrick에게 맡겼을 때, 무조건 4번 인형으로 돌려준다. 비용은 인형을 맡길 때 마다 모두 정상적으로 지불해야 한다. 기부를 해서 1번 인형을 다시 구매해야하는 경우는 더 낮은 인형을 돌려받은 것으로 고려하지 않는다. 또한 같은 번호의 인형을 돌려받은 경우도 해당되지 않는다.</li>
+</ul>
+<p>게임의 황제 Chloe는 꼭 <span class="mathjax-preview">i (1 &lt; i \le N)</span><script type="math/tex">i (1 < i \le N)</script>번 인형을 갖고 싶다. 집요한 승부사인 Chloe는 <span class="mathjax-preview">i</span><script type="math/tex">i</script>번 인형을 얻을 때 까지 무한히 게임을 반복할 예정이다. (인형은 Patrick이 무수히 많이 준비해 두었으니 걱정하지 않아도 된다.) 이 경우 Chloe는 DA 모드로 게임을 해야할까 UM 모드로 게임을 해야할까?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 T개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 T가 주어진다.<br/>
+각 테스트 케이스는 4개의 정수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>, <span class="mathjax-preview">A</span><script type="math/tex">A</script>, <span class="mathjax-preview">K</span><script type="math/tex">K</script>, <span class="mathjax-preview">S</span><script type="math/tex">S</script>로 시작한다. 그리고 다음 <span class="mathjax-preview">N - 1</span><script type="math/tex">N - 1</script> 줄에 걸쳐서 각 줄에 <span class="mathjax-preview">c_i</span><script type="math/tex">c_i</script>, <span class="mathjax-preview">s_i</span><script type="math/tex">s_i</script>, <span class="mathjax-preview">d_i</span><script type="math/tex">d_i</script>, <span class="mathjax-preview">b_i</span><script type="math/tex">b_i</script>가 주어진다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스 당 한 줄씩 출력한다. 그 줄은 각각의 <span class="mathjax-preview">i (1 &lt; i \le N)</span><script type="math/tex">i (1 < i \le N)</script>에 대해, <span class="mathjax-preview">i</span><script type="math/tex">i</script>번 인형을 얻을 때 까지 무한히 게임을 반복한다고 했을 때, DA와 UM 중 기대 비용이 낮은 모드를 나타내게 된다. 예를 들어 <span class="mathjax-preview">N</span><script type="math/tex">N</script>이 4라고 하자. 그리고 2, 3번 인형을 얻을 때 까지는 DA 모드가 유리하고, 4번 인형을 얻을 때는 UM 모드가 유리하다고 하자. (예제의 첫 번째 케이스 참고) 그러면 출력은 DADAUM 으로 하면 된다.<br/>
+DA 모드와 UM 모드의 기대 비용 차이는 상대오차가 1e-6 이상이며, 두 값이 같은 경우는 존재하지 않는다. (즉, DA모드의 비용이 <span class="mathjax-preview">a</span><script type="math/tex">a</script>이고, UM모드의 비용이 <span class="mathjax-preview">b</span><script type="math/tex">b</script>일 때, <span class="mathjax-preview">abs(a - b) / max(a, b) \ge 10^{-6}</span><script type="math/tex">abs(a - b) / max(a, b) \ge 10^{-6}</script>)<br/>
+<span class="mathjax-preview">N</span><script type="math/tex">N</script>번 인형을 얻는데 드는 기대 비용은 <span class="mathjax-preview">10^9</span><script type="math/tex">10^9</script> 이하 이다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 10 10 1
+5 95 0 0
+10 50 10 1
+20 10 20 1
+3 1 1 3
+10 90 100 0
+50 95 100 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>DADAUM
+DADA</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

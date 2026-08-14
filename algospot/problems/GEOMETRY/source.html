@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GEOMETRY">GEOMETRY</a></li>
+<li class="timelimit"><b>500</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GEOMETRY"><b>73</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GEOMETRY/"><b>13</b> (<b>17</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=RUN%20Programming%20Contest%2C%20Fall%202009">RUN Programming Contest, Fall 2009</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>대학원생이 된 kimyolo는 기하 문제에 대해서 연구하고 있다. kimyolo와 함께 기하 문제를 풀어보자.<br/>
+ N각 볼록다각형과 함수 F와 G가 주어진다. 함수 F와 G는 아래와 같이 정의된다.</p>
+<p>F(i) = i번째 점을 제외하고, 나머지 N-1개의 꼭지점 중에 3개의 꼭지점을 임의로 리턴한다.<br/><br/>
+ G(i) = F(i)의 꼭지점으로 그려지는 삼각형의 넓이의 기대값<br/><br/>
+( 1 ≤ i ≤ N )</p>
+<p>G(1) 부터 G(N) 중에 가장 작은 값을 구하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에는 테스트 케이스의 개수 T가 주어진다. (T ≤ 30)<br/><br/>
+ 각 테스트 케이스의 첫 번째 줄에는 꼭지점의 개수를 의미하는 자연수 N이 주어진다. ( 4 ≤ N ≤ 500 )<br/><br/>
+ 그리고 그 다음 N개 줄에 걸쳐 i번째 꼭지점의 좌표가 Xi Yi 형태로 주어진다.<br/><br/>
+ (-100 ≤ Xi, Yi ≤ 100, Xi와 Yi는 실수)<br/><br/>
+ 입력되는 좌표를 순서대로 연결하면 볼록다각형이 그려진다.<br/></p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>가장 작은 G(i)값을 소수점 첫째자리에서 반올림하여 출력한다. ( 1 ≤ i ≤ N )</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+5
+-4 -8
+8 -6
+8 -3
+2 9
+-10 0
+5
+-4 -8
+8 -6
+8 5
+-4 9
+-9 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>41
+72</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

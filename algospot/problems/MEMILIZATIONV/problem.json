@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/07cd008ef21c1f7b-problems.pdf",
+      "sha256": "14be49ae3dae1a7c6751b83800cff5aba581ddab770d52d7f69649352c2ee9b8",
+      "source_url": "http://algospot.com/static/contest/4th/problems.pdf"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "MEMILIZATIONV",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:49:02.158894Z",
+    "http_status": 200,
+    "semantic_html_sha256": "33f667fe673b6e9682d48a1b6f2e8cb877a4e600334d0a41ed9c097f81d7207e"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/MEMILIZATIONV",
+  "statistics": {
+    "acceptance_percent": 14,
+    "accepted": 10,
+    "submissions": 68
+  },
+  "tags": [],
+  "title": "Memilization V"
+}

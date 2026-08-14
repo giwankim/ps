@@ -1,0 +1,45 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/4f14b60005643301-midgame.png",
+      "sha256": "1d264eaca20732f8ae6a0a064561322b858c5cbf427ad8f1043b99798035c0ed",
+      "source_url": "http://algospot.com/media/judge-attachments/065ff270c832fbe7dbc54af1227ddd5b/midgame.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "BLOCKGAME",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 2000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:07:35.440430Z",
+    "http_status": 200,
+    "semantic_html_sha256": "e67857e51ea994e3b54d475a4416dfd88cac48b65a786cef05b43f11872be03d"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/BLOCKGAME",
+  "statistics": {
+    "acceptance_percent": 37,
+    "accepted": 977,
+    "submissions": 2624
+  },
+  "tags": [
+    "게임",
+    "동적계획법"
+  ],
+  "title": "블록 게임"
+}

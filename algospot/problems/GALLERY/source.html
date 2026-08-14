@@ -1,0 +1,97 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/GALLERY">GALLERY</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=GALLERY"><b>3017</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/GALLERY/"><b>947</b> (<b>31</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%9E%98%ED%94%84">그래프</a>,
+						
+						<a href="/judge/problem/list/?tag=%ED%8A%B8%EB%A6%AC">트리</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>전세계의 유명한 인물화들을 모아 두는 미술관에 괴도 <a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">콩</a>의 도전장이 날아들었습니다. <a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">2</a>0<a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">2</a><a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">2</a>년 <a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">2</a>월 <a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">2</a>일을 기념하여, 미술관에 전시된 인물화 중 하나의 얼굴을 <a href="http://ko.wikipedia.org/wiki/%ED%99%8D%EC%A7%84%ED%98%B8">모 프로게이머</a>의 얼굴로 합성하겠다는 것입니다. 미술관의 관장을 맡고 있는 재하는 이와 같은 사태를 방지하기 위해 감시 카메라를 설치하기로 마음먹었습니다. 미술관은 여러 개의 갤러리와 이들을 연결하는 복도로 구성되어 있으며, 한 갤러리에 감시 카메라를 설치하면 이 갤러리와, 복도로 직접 연결된 갤러리들을 감시할 수 있습니다. 모든 갤러리를 감시하기 위해 필요한 최소 감시 카메라의 수는 몇 개일까요?</p>
+<p>미술관은 한 번 관람한 갤러리를 다시 가기 위해서는 이전에 지나왔던 복도를 반드시 한 번 지나야 하는 구조로 설계되어 있으며, 모든 갤러리가 서로 연결되어 있지 않을 수도 있습니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (C &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 미술관에 포함된 갤러리의 수 G (1 &lt;= G &lt;= 1000) 와 갤러리들을 연결하는 복도의 수 H (0 &lt;= H &lt; G) 가 주어집니다. 각 갤러리에는 0번부터 G-1 번까지의 고유 번호가 있습니다. 그 후 H 줄에 각 2개의 정수로 각 복도가 연결하는 두 갤러리의 번호가 주어집니다. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 한 줄에 필요한 카메라의 최소 개수를 출력합니다. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+6 5
+0 1
+1 2
+1 3
+2 5
+0 4
+4 2
+0 1
+2 3
+1000 1
+0 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3
+2
+999</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

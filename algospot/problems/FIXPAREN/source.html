@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/FIXPAREN">FIXPAREN</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=FIXPAREN"><b>1429</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/FIXPAREN/"><b>560</b> (<b>39</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>You are working on a sequence of parentheses. There are four types of parentheses and the symbols used are ( ), { }, [ ], &lt; &gt;. We call '(', '{', '[', and '&lt;' the left parentheses and ')', '}', ']', and '&gt;' the right parentheses. </p>
+<p>The original sequence was a perfectly matched sequence. That is, every left parenthesis was matched to a right parenthesis of the same type (e.g. '(' and ')'). But by a mistake, some of the left parentheses are incorrectly transcribed to left parentheses of different type(s), and so are some of the right parentheses. </p>
+<p>You want to modify the sequence such that the resulting sequence is a perfectly matched sequence, by correcting a mismatched pair of a left parenthesis and a right parenthesis into a matched pair of parentheses of the same type. However, the problem complicates as there is a rule you must follow: to correct a mismatched pair, you should change exactly one of the two parentheses. Also, you can only replace a lower priority parenthesis with a higher priority parenthesis -- not the other way. Suppose that the type '{ }' has higher priority than the type '( )'. Then you must correct the mismatched pair '( }' to '{ }', but not to '( )'. </p>
+<p>Given the mistranscribed seqeunce of parentheses and an ordering of priority of different types, write a program that fixes the given sequence. You are to find all of the mismatched pairs, and for each pair, change the parenthesis of lower-priority type to a higher-priority type.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of T test cases. T will be given in the first line of the input file, and T test cases will follow.</p>
+<p>Each test case will be given by two strings in a single line. The first string is the sequence of transcribed parentheses, and the second string denotes the priority order of parentheses types. Each character of the first string(sequence of parentheses) will be one of the eight symbols: '(', ')', '{', '}', '[', ']', '&lt;', '&gt;'. And for the priority order, left parenthesis symbols will be given in the order of highest to lowest.</p>
+<p>Strings will not contain any whitespaces, and two strings will be separated by a single space. The length of the first string will not exceed 100, and the length of the second string will be always 4.</p>
+<p>Note that you started with a perfectly matched sequence and that no left parentheses are wrongly transcribed to right parentheses, and vice versa. For example, '(}', '()([)]', and '([}{])' are valid mis-transcribed sequences, but '(}}', '()(([)]', '([}]{])' are not. You can assume that input will consist only of valid sequences.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each of the test case, print the resulting sequence in a single line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+(} {(&lt;[
+()([)&gt; &lt;({[</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>{}
+()&lt;()&gt;</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>For the second test case, there are two mismatched pairs: ( &gt; and [ ). The priority order of the parentheses, from highest to lowest, is &lt; &gt;, ( ), { }, and [ ]. The first mismatched pair ( &gt; should be modified to &lt; &gt;, as &lt; &gt; has higher priority than ( ). And the second mismatched pair [ ) should be modified to ( ), as ( ) has higher priority than [ ]. Thus the result should be ()&lt;()&gt;.</p>
+</p>
+</section>

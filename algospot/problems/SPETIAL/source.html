@@ -1,0 +1,110 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/SPETIAL">SPETIAL</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=SPETIAL"><b>33</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/SPETIAL/"><b>19</b> (<b>57</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Greater%20New%20York%20Regional%202007">Greater New York Regional 2007</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The Flathead Testing Corporation (FTC) supplies various tests for Human Resources departments at many companies. One type of test they supply includes spatial concepts questions such as:</p>
+<p>When the following figure is folded back on the interior lines it forms a cube.</p>
+<p><img alt="judge-attachments/143b96312fae537e53910428b6d5638d/aaa.jpg" src="http://algospot.com/media/judge-attachments/143b96312fae537e53910428b6d5638d/aaa.jpg"/></p>
+<p>Which of the following could be an image of one corner of the resulting cube?</p>
+<p><img alt="judge-attachments/c4979025ff31c581ec59ed80265caf23/anoa.jpg" src="http://algospot.com/media/judge-attachments/c4979025ff31c581ec59ed80265caf23/anoa.jpg"/></p>
+<p>among the choices and another (given in the example) had two solutions among the choices (1 and 3).</p>
+<p>FTC needs a routine which will read in a specification of the unfolded cube and specifications of corner views and determine, for each corner view, whether it is a view of a corner of the cube specified in the unfolded part.</p>
+<p>FTC uses the following images as faces of each cube. Each image is symmetrical about the vertical axis and has a distinguished end (up in each image).</p>
+<p><img alt="judge-attachments/293aa44b8d2291b890bdf69c78036feb/conda.jpg" src="http://algospot.com/media/judge-attachments/293aa44b8d2291b890bdf69c78036feb/conda.jpg"/></p>
+<p>The unfolded cube is specified by a string of six pairs of a letter indicating the image on the face and a number indicating the orientation of the distinguished end of the face: 1 is up, 2 is right, 3 is down and 4 is left. The faces are specified in the order given in the following figure with the orientations indicated in the square to the right:</p>
+<p><img alt="judge-attachments/874d3e640cf8579065c1189e47ff5e9b/whosad.jpg" src="http://algospot.com/media/judge-attachments/874d3e640cf8579065c1189e47ff5e9b/whosad.jpg"/></p>
+<p>So the unfolded cube in the example is specified as “F3E4E2D3C2F3”. FTC has a routine which<br/>
+reads this specification and generates the unfolded image for the question.</p>
+<p>The answer images are specified by three pairs of a letter and a digit indicating a face image and an orientation as indicated in the following diagram. The faces are specified in the order top, right, left (indicated by numbers in brackets in the figures), that is clockwise around the center vertex starting at the top. The orientation of the distinguished end of each face is indicated by the numbers on the edges in the diagram. They circle each face clockwise, starting at the center vertex.</p>
+<p><img alt="judge-attachments/749f266bfdff82e3e3f592a9174d0ec2/stris.jpg" src="http://algospot.com/media/judge-attachments/749f266bfdff82e3e3f592a9174d0ec2/stris.jpg"/></p>
+<p>For the example, the answer figures are specified as “C2D2F2”, “E3F3C4”, “F2C2D2”, “D1E1F3” and “E1C1E1”. Again, FTC has a routine which reads this specification and generates each answer image for the question. They just need your routine to make sure there is exactly one correct answer to each question.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of input contains a single integer N, (1 ≤ N ≤ 1000) which is the number of datasets that follow.<br/>
+Each dataset consists of six lines of input. The first line of input is the specification for the folded out cube as described above. This line is followed by five lines, each of which gives the specification of one answer image as described above.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each dataset, output on a single line the dataset number, (1 through N), a blank, the number of answers which are solutions of the problem (corners of the cube specified in the folded out line), a blank and five ‘Y’ or ‘N’ characters separated by a blank indicating which of the answer images was a solution (‘Y’ for a solution, ‘N’ for not a solution).</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+F3E4E2D3C2F3
+C2D2F2
+E3F3C4
+F2C2D2
+D1E1F3
+E1C1E1
+A2F4F1A3A3C4
+C3A4A2
+F3F4A1
+F3C4A1
+A2C3A2
+A4A4F1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1 2 Y N Y N N
+2 0 N N N N N</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

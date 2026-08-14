@@ -1,0 +1,20 @@
+2
+3 3
+6
+algospot 0000 seoul 0030
+algospot 0200 daejeon 0700
+algospot 1300 run 2100
+seoul 0100 daejeon 0500
+daejeon 0800 run 1200
+daejeon 0700 run 1500
+1
+daejeon 0600 0800
+3 3
+6
+algospot 0000 seoul 0030
+algospot 0200 daejeon 0700
+algospot 1300 run 2100
+seoul 0100 daejeon 0500
+daejeon 0800 run 1200
+daejeon 0700 run 1500
+0

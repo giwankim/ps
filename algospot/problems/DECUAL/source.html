@@ -1,0 +1,103 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DECUAL">DECUAL</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DECUAL"><b>642</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DECUAL/"><b>40</b> (<b>6</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2014%20KAIST%20ACM-ICPC%20%EB%AA%A8%EC%9D%98%EB%8C%80%ED%9A%8C">2014 KAIST ACM-ICPC 모의대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>ACM(Ap Chook Method)형식으로 압축된 두 문자열 A, B가 주어진다. 압축을 풀었을 때, 두 문자열이 같은지 비교하는 프로그램을 작성하시오.</p>
+<p>ACM 형식 압축</p>
+<ol>
+<li>ACM 형식 압축은 알파벳 대문자로 구성된 문자열을 압축한다.</li>
+<li>괄호와 숫자를 이용해 반복되는 부분 문자열을 짧게 표현할 수 있다. 예를 들어, RUNRUNRUN을 (RUN)^3으로 표현할 수 있다.</li>
+<li>괄호 안에는 적어도 하나 이상의 알파벳 대문자가 들어가고, 알파벳 대문자 외에 다른 문자는 들어갈 수 없다. 다시 말해, 괄호 안에 다시 괄호가 들어갈 수는 없다.</li>
+<li>')' 바로 다음에는 항상 '^'를 쓰고, '^' 바로 다음에는 괄호 안의 문자열이 반복되는 횟수를 쓴다.</li>
+<li>반복되는 횟수는 1이상 1억 이하의 정수다.</li>
+</ol>
+<p>아래는 ACM 형식으로 압축된 문자열에 대한 몇 가지 예제다. 왼쪽은 압축된 문자열이고, 오른쪽은 압축을 푼 문자열이다.<br/>
+C(O)^2KIE(RUN)^5 = COOKIERUNRUNRUNRUNRUN<br/>
+CO(OKIER)^1(UNR)^4UN = COOKIERUNRUNRUNRUNRUN<br/>
+KCM(HAD)^2HI(S)^2ECONDWFEARLY = KCMHADHADHISSECONDWFEARLY<br/>
+KR(I)^3T(O)^2 = KRIIITOO<br/>
+JONGMANALSO = JONGMANALSO</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에 테스트 케이스의 수 T가 주어진다.<br/>
+각 테스트 케이스는 두 줄로 구성되며 첫 번째 줄에는 압축된 문자열 A, 두 번째 줄에는 압축된 문자열 B가 주어진다. 압축된 문자열 A와 B의 길이는 5이상 1000이하이고, 압축을 푼 문자열은 알파벳 대문자로만 구성된다. 위에 설명한 형식에 어긋나는 입력은 주어지지 않는다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해 압축을 풀었을 때, 두 문자열이 같으면 "YES"를 출력하고, 다르면 "NO"를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+C(O)^2KIE(RUN)^5
+COOKIER(UNR)^4UN
+C(O)^2KIE(RUN)^50
+CO(OKIER)^1(UNR)^49UN
+KR(I)^3(I)^4
+K(RI)^4</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>YES
+YES
+NO</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

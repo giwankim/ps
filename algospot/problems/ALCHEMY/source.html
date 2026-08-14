@@ -1,0 +1,136 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ALCHEMY">ALCHEMY</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ALCHEMY"><b>396</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ALCHEMY/"><b>45</b> (<b>11</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/133">wookayin</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Alchemists are mysterious people who try to synthesize valuable materials (such as gold) out of mundane materials (such as copper or lead). According to legends, their work has culminated in a cryptic piece of book, called the Emerald Tablet. The Emerald Tablet is said to contain the ultimate recipe --- for synthesizing gold, and the Elixir of Life!</p>
+<p>By a lucky coincidence, you found an ancient book that you suspect to be the Emerald Tablet. This book deals with <span class="mathjax-preview">N</span><script type="math/tex">N</script> kinds of materials, each of them numbered with unique integers from 1 to <span class="mathjax-preview">N</span><script type="math/tex">N</script>. Each material is either:</p>
+<ul>
+<li>Synthesizable: synthesizable materials can be made from mixing other materials (possibly synthesizable or non-synthesizable) listed in this book. We would be rich if gold was synthesizable, and we would be immortal if Elixir of Life was!</li>
+<li>Non-synthesizable: non-synthesizable materials cannot be made from other materials, so you'll have to harvest or buy them.</li>
+</ul>
+<p>The book lists all of the N materials that are known to the world, both synthesizable and non-synthesizable. The book also provides a recipe for each of the synthesizable material. A recipe specifies a list of the ingredients need to synthesize the target material, where each ingredient is one of the <span class="mathjax-preview">N</span><script type="math/tex">N</script> materials.</p>
+<p>To synthesize a (synthesizable) material, you need to put the ingredients of the target material into the "Mysterious Flask", <strong>one at a time</strong>. The Mysterious Flask will take care of mixing the ingredients. As soon as you put the last ingredient into the flask, the target material will be synthesized, and pop out of the flask magically.</p>
+<p>This all sounds very simple, and we seem to be on our way to infinite wealth and eternal life, but there is a problem in practice; you may not be able to synthesize what you want!</p>
+<p>For example, consider the following case: there are two synthesizable materials, X and Y. X can be made by mixing A and C in the flask, and Y can be made by mixing A, B, C and D. In order to make Y, you can try to put the 4 ingredients into the flask in the following order: A, B, C and D. However, the moment you put C in the flask, X will be synthesized in the flask, and pop up!</p>
+<p>You would think you can avoid this problem by putting the ingredients in a different order, such as A, B, D, and then C. Well, after you put C into the flask, it contains the ingredients of Y as well as those of X --- which of the two will be synthesized in the flask, then? After numerous experiments, you have finally figured out the following rule:</p>
+<ul>
+<li>When there are two or more materials that can be synthesized (from the ingredients in the flask), the Mysterious Flask mixes and synthesizes the one that needs the largest number of ingredients. </li>
+<li>In case of a tie, the material with the largest number (which has the highest reactivity) will be synthesized.</li>
+</ul>
+<p>With the above rule in effect, Y will be synthesized as it requires 4 ingredients while X requires 2 ingredients, in our example.</p>
+<p>Unfortunately, the recipes in the Emerald Tablet do not tell us in what order we should put the ingredients into the flask. But we can't stop here! To gain infinite wealth and eternal life, write a program that finds an ordering of ingredients that can synthesize the desired material for each recipe.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test case, <span class="mathjax-preview">T (T \le 100)</span><script type="math/tex">T (T \le 100)</script>.</p>
+<p>Each test case starts with a line containing <span class="mathjax-preview">N (1 \le N \le 16)</span><script type="math/tex">N (1 \le N \le 16)</script>, the number of known materials. <span class="mathjax-preview">N</span><script type="math/tex">N</script> following lines will give information of each material, from <span class="mathjax-preview">1</span><script type="math/tex">1</script> to <span class="mathjax-preview">N</span><script type="math/tex">N</script>. The <span class="mathjax-preview">i+1</span><script type="math/tex">i+1</script>-th line contains an integer <span class="mathjax-preview">c_{i}</span><script type="math/tex">c_{i}</script> which is the number of ingredients needed for synthesizing material <span class="mathjax-preview">i</span><script type="math/tex">i</script>. Then <span class="mathjax-preview">c_{i}</span><script type="math/tex">c_{i}</script> distinct integers follow, which are the number of ingredients needed (none of them equals <span class="mathjax-preview">i</span><script type="math/tex">i</script>). If <span class="mathjax-preview">c_{i}</span><script type="math/tex">c_{i}</script> is <span class="mathjax-preview">0</span><script type="math/tex">0</script>, material i is non-synthesizable.</p>
+<p>Test cases are separated by a blank line.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print <span class="mathjax-preview">N</span><script type="math/tex">N</script> lines. Each of this lines should be a reordered recipe for each of the materials, from <span class="mathjax-preview">1</span><script type="math/tex">1</script> to <span class="mathjax-preview">N</span><script type="math/tex">N</script>. <br/>
+Each line should begin with <span class="mathjax-preview">c_{i}</span><script type="math/tex">c_{i}</script>, and <span class="mathjax-preview">c_{i}</span><script type="math/tex">c_{i}</script> numbers should follow which is the order of the ingredients. If the material was listed as synthezable, but cannot be synthezed, print a line containing "<code>IMPOSSIBLE</code>" (without quotes) instead.<br/>
+If there are multiple orderings that can synthesize a material, print any of them.</p>
+<p>Separate adjacent test cases by a blank line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+
+3
+0
+1 1
+1 1
+
+6
+0
+0
+0
+0
+2 1 2
+4 1 2 3 4   
+
+5
+0
+0
+1 5
+2 1 3
+2 2 3</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0
+IMPOSSIBLE
+1 1
+
+0
+0
+0
+0
+2 2 1
+4 4 3 2 1
+
+0
+0
+1 5
+2 3 1
+2 3 2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

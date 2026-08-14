@@ -1,0 +1,37 @@
+{
+  "assets": [],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "PASS486",
+  "limits": {
+    "memory_kb": 131072,
+    "time_ms": 5000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T05:03:03.057099Z",
+    "http_status": 200,
+    "semantic_html_sha256": "681a862f976ec656a73a101291845148d92b53626c18c4f849b2fe6f237856ed"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/PASS486",
+  "statistics": {
+    "acceptance_percent": 38,
+    "accepted": 1019,
+    "submissions": 2623
+  },
+  "tags": [
+    "정수론"
+  ],
+  "title": "비밀번호 486"
+}

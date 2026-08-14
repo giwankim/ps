@@ -1,0 +1,91 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/BALLPAINTING">BALLPAINTING</a></li>
+<li class="timelimit"><b>4000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=BALLPAINTING"><b>172</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/BALLPAINTING/"><b>70</b> (<b>40</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/42">VOCList</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Stanford%20Local%20Programming%20Contest%202011">Stanford Local Programming Contest 2011</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>There are 2N white balls on a table in two rows, making a nice 2-by-N rectangle. Jon has a big paint bucket full of black paint. (Don’t ask why.) He wants to paint all the balls black, but he would like to have some math fun while doing it. (Again, don’t ask why.) First, he computed the number of diﬀerent ways to paint all the balls black. In no time, he ﬁgured out that the answer is (2N)! and thought it was too easy. So, he introduced some rules to make the problem more interesting.</p>
+<ul>
+<li>The ﬁrst ball that Jon paints can be any one of the 2N balls.</li>
+<li>After that, each subsequent ball he paints must be adjacent to some black ball (that was already painted). Two balls are assumed to be adjacent if they are next to each other horizontally, vertically, or diagonally.</li>
+</ul>
+<p>Jon was quite satisﬁed with the rules, so he started counting the number of ways to paint all the balls according to them. Can you write a program to ﬁnd the answer faster than Jon?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of multiple test cases. Each test case consists of a single line containing an integer N, where 1 ≤ N ≤ 1,000.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print out a single line that contains the number of possible ways that Jon can paint all the 2N balls according to his rules. The number can become very big, so print out the number modulo 1,000,000,007.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>1
+2
+3
+0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>2
+24
+480</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

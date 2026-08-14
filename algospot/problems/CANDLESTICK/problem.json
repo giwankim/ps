@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/a7a9e1e1f0c695e5-chart2.png",
+      "sha256": "f1e55dcb9bea8fd18dd7b2b1782d05ee313c970c67939d48ed774f608e4fa487",
+      "source_url": "http://algospot.com/media/judge-attachments/a847817dd32f28a0483c29ac456eace5/chart2.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CANDLESTICK",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 3000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:11:45.585444Z",
+    "http_status": 200,
+    "semantic_html_sha256": "5566f2153c72e86d9ff7548c7067875f358c6e2fcb7c23d526546f7741a671a3"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CANDLESTICK",
+  "statistics": {
+    "acceptance_percent": 33,
+    "accepted": 162,
+    "submissions": 487
+  },
+  "tags": [
+    "구현"
+  ],
+  "title": "Candlestick Charts"
+}

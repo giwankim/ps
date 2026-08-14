@@ -1,0 +1,106 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/LECTURE">LECTURE</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=LECTURE"><b>6129</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/LECTURE/"><b>3003</b> (<b>48</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/9">lewha0</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B5%AC%ED%98%84">구현</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Professor <b>Lew</b> teaches Algorithm course in <b>Sonyusi University (소녀시대학교)</b>.<br/>
+It is his first year as a professor, so he spends a lot of time making lecture notes.<br/>
+He'll teach recursion and sorting algorithms in the next class,<br/>
+and he wants to make some examples which will be included in his lecture note.</p>
+<p>While making some examples for his lecture note, he noticed that one of his work was quite difficult.<br/>
+The example was for sorting a string, and the exact process was as follows:<br/>
+First, the original string of length 2n is divided into n substrings, each of length 2.<br/>
+Then sort the n strings in lexicographic order, and then concatenate them to obtain the result string.<br/>
+Note that the sorting process will be performed on n strings, but not each of the n strings.<br/>
+The following example illustrates the process: <br/>
+<center><br/>
+abbaaccb → ab ba ac cb → ab &lt; ac &lt; ba &lt; cb → abacbacb<br/>
+</center><br/>
+Since the process was quite confusing,</p>
+<p>professor <b>Lew</b> decides to use a computer program for verification.<br/>
+Given an alphabetic string of even length, write a program that prints the result of the sorting process.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains one integer T, the number of test cases.</p>
+<p>The first line of each test case contains a string. The length of the string will not exceed 1000, and will only contain lowercase alphabet letters.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the result in one line.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+abbaaccb
+dddcccbbbaaa
+geegeegeegeebabybabybaby
+oh</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>abacbacb
+aababbccdcdd
+babababybybyeeeeegeggege
+oh
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>Writer : lewha0, altertain</p>
+</p>
+</section>

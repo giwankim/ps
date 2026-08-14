@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "archived": true,
+      "path": "assets/35ad377a6978353a-stf2004A.png",
+      "sha256": "78f21ea90a096e7cbd5b6cf6f659a117a5d815bdd83e9635b762bd5bdd7e228f",
+      "source_url": "http://algospot.com/media/judge-attachments/26cf22fe33f9bea02c0438cceaef86af/stf2004A.png"
+    }
+  ],
+  "author": "출제자",
+  "content": {
+    "raw_html": "source.html",
+    "statement_markdown": "statement.md"
+  },
+  "id": "CAKECUT",
+  "limits": {
+    "memory_kb": 65536,
+    "time_ms": 1000
+  },
+  "retrieval": {
+    "fetched_at": "2026-08-14T04:11:34.523213Z",
+    "http_status": 200,
+    "semantic_html_sha256": "1e083bf03bc6ec45508e8d9b724c956145c18a1e8039701d306b2a9d44476d1d"
+  },
+  "samples": [
+    {
+      "input": "samples/sample-01.in",
+      "name": "sample-01",
+      "output": "samples/sample-01.out"
+    }
+  ],
+  "schema_version": 1,
+  "source": "출처",
+  "source_url": "https://www.algospot.com/judge/problem/read/CAKECUT",
+  "statistics": {
+    "acceptance_percent": 42,
+    "accepted": 101,
+    "submissions": 239
+  },
+  "tags": [],
+  "title": "Cake Cutting"
+}

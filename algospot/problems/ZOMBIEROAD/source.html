@@ -1,0 +1,107 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/ZOMBIEROAD">ZOMBIEROAD</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=ZOMBIEROAD"><b>473</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/ZOMBIEROAD/"><b>79</b> (<b>16</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C4%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제4회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>전대프국에 좀비가 나타났다!!! 2014년 12월에 처음 발견된 좀비는 이후 꾸준히 확산되어, 2015년 1월에는 전대프국의 교통을 마비시켜 버렸다.<br/>
+"헐, 나 졸업식 가야 되는데...?!"<br/>
+2015년 2월 졸업식을 앞둔 태윤이는 학교 가는 길이 좀비 때문에 끊겨버린 것을 알게 되었다.<br/>
+'나 말고도 학교 가는 길이 끊어진 전대프국 사람들이 있지 않을까?'<br/>
+과연 그랬다. 학교 가는 길은 물론이요, 이제 더 이상 모두가 한 자리에 모일 수 없게 되었고, 전대프연 대회도 열릴 수 없게 되었다. 그래서 대회(기념품?)에 목마른 전대프국 사람들은 좀비들을 퇴치하기로 결의했다.<br/>
+전대프국은 정점과 간선으로 이루어진 하나의 트리 형태로 생겼다. 현재 몇몇 간선은 좀비에게 점령 당한 상태이고, 이렇게 점령된 간선을 좀비로드라고 부른다. 좀비에게 점령되지 않은 모든 간선에는 전대프국 사람들이 살고 있고, 이런 간선을 생존로드라고 부른다. 전대프국 사람들이 서로 한 자리에 모이기 위해서 점령해야 할 좀비로드의 최소 개수를 구하라.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력은 <span class="mathjax-preview">T</span><script type="math/tex">T</script> 개의 테스트 케이스로 구성된다. 입력의 첫 줄에는 <span class="mathjax-preview">T</span><script type="math/tex">T</script>가 주어진다.</p>
+<p>각 테스트 케이스의 첫 줄에는 정점의 개수 <span class="mathjax-preview">N</span><script type="math/tex">N</script>이 주어진다. <span class="mathjax-preview">(3 \le N \le 20000)</span><script type="math/tex">(3 \le N \le 20000)</script> 그 다음 <span class="mathjax-preview">N-1</span><script type="math/tex">N-1</script>줄에 각각 간선의 정보로써 인접한 두 정점의 번호 <span class="mathjax-preview">V_i</span><script type="math/tex">V_i</script>, <span class="mathjax-preview">U_i</span><script type="math/tex">U_i</script>와 좀비로드 여부를 나타내는 <span class="mathjax-preview">Z_i</span><script type="math/tex">Z_i</script>가 주어진다. <span class="mathjax-preview">(0 \le V_i, U_i &lt; N, 0 \le Z_i \le 1)</span><script type="math/tex">(0 \le V_i, U_i < N, 0 \le Z_i \le 1)</script> <span class="mathjax-preview">Z_i</span><script type="math/tex">Z_i</script>가 1이면 좀비로드, 0이면 생존로드임을 의미한다.</p>
+<p>각 테스트 케이스에 대해, 생존로드는 하나 이상 존재한다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 전대프국 사람들이 점령해야 할 좀비로드의 최소 개수를 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5
+0 1 1
+0 2 0
+3 1 0
+4 1 1
+6
+0 1 1
+0 3 0
+0 4 1
+2 1 1
+4 5 1
+7
+0 1 1
+0 2 1
+3 1 1
+4 1 0
+2 5 1
+2 6 0</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+0
+2</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

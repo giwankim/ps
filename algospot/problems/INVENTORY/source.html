@@ -1,0 +1,121 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/INVENTORY">INVENTORY</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>131072</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=INVENTORY"><b>61</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/INVENTORY/"><b>11</b> (<b>18</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%A0%9C3%ED%9A%8C%20%EC%A0%84%EA%B5%AD%20%EB%8C%80%ED%95%99%EC%83%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EB%8C%80%ED%9A%8C%20%EB%8F%99%EC%95%84%EB%A6%AC%20%EC%97%B0%ED%95%A9%20%EB%8C%80%ED%9A%8C">제3회 전국 대학생 프로그래밍 대회 동아리 연합 대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Diablo 3 (which is so out of fashion now that only oldies play it) is all about collecting good items. In this game, each player has a bag organized as a grid with 6 rows and 10 columns. </p>
+<p><img alt="노-득" src="http://algospot.com/media/judge-attachments/8246ea0ba7d62566cf1e7679c5a3aa84/diablo_inventory.jpg"/></p>
+<div style="text-align: center">이래봐야_득은_없습니다.jpg</div>
+<p>As you can see in the picture above, all items are of size <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script> or <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script>. Items cannot overlap or be rotated. <br/>
+The game has a variety of items with different sizes, but in this problem we only consider two kinds of items: rings (of size <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script>) and daggers (of size <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script>). Furthermore, the game allows multiple items of the same kind to be "stacked", but we will ignore that feature in this problem. </p>
+<p>When the player picks up a new item, the item is placed in the bag according to the following simple algorithm dependent on the size of the item:</p>
+<ul>
+<li>If the new item's size is <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script>: Starting from the left top cell of the bag, look for an empty cell from top to bottom first, and then left to right. The item is placed into the first empty cell found.</li>
+<li>If the new item's size is <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script>: Starting from left top cell of the bag, look for two vertically adjacent empty cells from left to right first, then top to bottom. The item is placed into the first 2-vertically-adjacent-empty cells found.</li>
+</ul>
+<p>Because of the algorithm above, you might not be able to pick up an item even if the bag is not full, if you pick up items in the wrong order. Consider the following case with a <span class="mathjax-preview">2 \times 2</span><script type="math/tex">2 \times 2</script> small bag, with an item of size <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script> placed in the upper right cell. What happens when you pick up a ring and a dagger?</p>
+<blockquote>
+<div class="highlight"><pre>. X
+. .
+</pre></div>
+</blockquote>
+<p>If you pick up the dagger first, both items would fit in the bag. However, if you pick up the ring first, there will be no room for the dagger to be placed in the bag.</p>
+<p>Now, suppose you have a bag of size <span class="mathjax-preview">R \times C</span><script type="math/tex">R \times C</script>, and there are <span class="mathjax-preview">N</span><script type="math/tex">N</script> rings and <span class="mathjax-preview">M</span><script type="math/tex">M</script> daggers that you want to pick up. <br/>
+You would like to calculate the number of orderings that allow you to pick up all items. Assume that items of the same type are indistinguishable when counting the number of orderings, since those are unidentified yet. See the sample test case for clarification. </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of <span class="mathjax-preview">T</span><script type="math/tex">T</script> test cases. <span class="mathjax-preview">T</span><script type="math/tex">T</script> will be given in the first line of the input file, and <span class="mathjax-preview">T</span><script type="math/tex">T</script> test cases will follow.</p>
+<p>Each test case starts with a line with 4 integers, <span class="mathjax-preview">R, C \,(1 \le R, C \le 15)</span><script type="math/tex">R, C \,(1 \le R, C \le 15)</script>, <span class="mathjax-preview">N</span><script type="math/tex">N</script> and <span class="mathjax-preview">M\,(0 \le N, M \le 225)</span><script type="math/tex">M\,(0 \le N, M \le 225)</script>. The next <span class="mathjax-preview">R</span><script type="math/tex">R</script> lines will tell you the current state of the bag. Each line denotes a row in the bag, and a '<code>.</code>' represents an empty cell, and a '<code>X</code>' represents a cell occupied with an item.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each of the test case, print the number of orderings which will let you pick up all items, MOD 20130817.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+2 2 4 0
+..
+..
+2 2 1 1
+.X
+..
+3 3 3 1
+XX.
+XX.
+...</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1
+1
+4</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>대회가 끝나고 공개되었던 풀이입니다. 풀이의 도움을 받지 않고 문제를 해결한다면 훨씬 더 도움이 되겠죠? :)</p>
+<p><div class="spoiler"></div></p>
+<p><span class="mathjax-preview">DP[n, m, r, c]</span><script type="math/tex">DP[n, m, r, c]</script> 를 잡아 경우의 수를 계산합니다. <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script> 아이템 <span class="mathjax-preview">n</span><script type="math/tex">n</script>개, <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script> 아이템 <span class="mathjax-preview">m</span><script type="math/tex">m</script>개를 획득하였는데 가방의 왼쪽 위에서부터 (<span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script>) 아이템을 주우면 채워지는 방향인) 아래쪽으로 계산해 최초로 등장하는 빈칸이 <span class="mathjax-preview">(r, c)</span><script type="math/tex">(r, c)</script>인 상태입니다.</p>
+<p>이러면 가방을 두 영역으로 나누어 생각할 수 있습니다.</p>
+<ul>
+<li><span class="mathjax-preview">(r, c)</span><script type="math/tex">(r, c)</script> 전까지</li>
+<li><span class="mathjax-preview">(r, c)</span><script type="math/tex">(r, c)</script> 이후</li>
+</ul>
+<p>이 때 '이전 영역'까지는 가득 채워진 상태이고, <span class="mathjax-preview">1 \times 1</span><script type="math/tex">1 \times 1</script> 아이템은 무조건 '이전 영역' 안에 포함되어 있을 것이므로 '이전 영역'에 포함된 <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script> 아이템의 개수를 알 수 있습니다.</p>
+<p>따라서 이전 영역에 포함되지 않은 모든 <span class="mathjax-preview">2 \times 1</span><script type="math/tex">2 \times 1</script> 아이템은 오른쪽으로 쌓여나갔을 것이므로 위의 변수들만으로 가방의 상태를 온전히 복원할 수 있습니다.</p>
+<p></p></p></section>

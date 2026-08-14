@@ -1,0 +1,113 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/NUMB3RS">NUMB3RS</a></li>
+<li class="timelimit"><b>2000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=NUMB3RS"><b>7413</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/NUMB3RS/"><b>3114</b> (<b>42</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>,
+						
+						<a href="/judge/problem/list/?tag=%ED%99%95%EB%A5%A0">확률</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>위험한 살인마 <a href="http://ko.wikipedia.org/wiki/%ED%95%9C%EB%8B%88%EB%B0%9C_%EB%A0%89%ED%84%B0">두니발 박사</a>가 감옥에서 탈출했습니다. 수배지를 붙이고 군경이 24시간 그를 추적하고 있지만 용의주도한 두니발 박사는 쉽사리 잡히지 않았습니다. d일이 지난 후에야 경찰은 프로그래밍의 천재인 <a href="http://ko.wikipedia.org/wiki/%EB%84%98%EB%B2%84%EC%8A%A4_(%EB%93%9C%EB%9D%BC%EB%A7%88">찰리 교수</a>)를 찾아왔습니다. 찰리 교수는 두니발 박사가 감옥에 남겨둔 노트를 분석해 다음과 같은 가설을 세웠습니다.</p>
+<ul>
+<li>두니발 박사는 검문을 피해 산길로만 이동한다.</li>
+<li>두니발 박사는 교도소를 탈출한 당일, 교도소와 인접한 마을 하나로 도망쳐 은신한다.</li>
+<li>두니발 박사는 수색을 피하기 위해 그 후 매일 인접한 마을로 움직여 은신한다.</li>
+</ul>
+<p><img alt="dunibal.png" src="http://algospot.com/media/judge-attachments/298903b8a37b6938ae6915ce1cab80fd/dunibal.png"/></p>
+<p>이 가설을 검증하기 위해 교도소로부터 산길로 연결된 n 개 마을들의 지도를 위 그림과 같이 구했습니다. 두니발 박사가 이 가설에 맞춰 행동하고, 움직일 수 있는 마을이 여러 개 있을 경우 그 중의 하나를 임의로 선택한다고 합시다. d 일 후에 두니발 교수가 각 마을에 있을 확률을 계산하는 프로그램을 작성하세요.</p>
+<p>예를 들어 위 지도에서 3번 마을에 교도소가 있다고 합시다. 탈옥 직후 두니발 교수는 0번, 1번, 2번, 4번, 5번 중의 한 도시를 임의로 골라 도망칩니다. 따라서 1일 후에 두니발 교수가 0번 마을에 숨어 있을 확률은 1/5이고, 2일 후에 1번 마을에 숨어 있을 확률은 1/15입니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 c (1 &lt;= c &lt;= 50) 가 주어집니다. 그 후 각 줄에 지도에 포함된 마을의 수 n (2 &lt;= n &lt;= 50) 과 탈출 후 지금까지 지난 일수 d (1 &lt;= d &lt;= 100), 그리고 교도소가 있는 마을의 번호 p (0 &lt;= p &lt; n) 가 주어집니다. 마을은 0번부터 n-1 번까지 순서대로 번호가 매겨져 있습니다. 그 후 n 줄에는 각각 n 개의 정수로 행렬 A 가 주어집니다. i 번 행의 j 번 숫자 A[i][j] 가 1인 경우 i 번 마을에서 j 번 마을을 잇는 산길이 있다는 것을 의미하며, 0인 경우 길이 없다는 것을 의미합니다. 그 다음 줄에 확률을 계산할 마을의 수 t (1 &lt;= t &lt;= n) 가 주어지고, 그 다음 줄에 t 개의 정수로 확률을 계산할 마을의 번호 q (0 &lt;= q &lt; n) 가 주어집니다.</p>
+<p>한 마을에서 다른 마을로 길이 있으면 반대 방향으로도 항상 있으며, 한 마을에서 자기 자신으로 연결되는 길은 없다고 가정해도 좋습니다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 t 개의 실수로 각 마을에 두니발 박사가 숨어 있을 확률을 출력합니다. 10<sup>-7</sup> 이하의 절대/상대 오차가 있는 경우 정답으로 처리됩니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+5 2 0
+0 1 1 1 0
+1 0 0 0 1
+1 0 0 0 0
+1 0 0 0 0
+0 1 0 0 0
+3
+0 2 4
+8 2 3
+0 1 1 1 0 0 0 0
+1 0 0 1 0 0 0 0
+1 0 0 1 0 0 0 0
+1 1 1 0 1 1 0 0
+0 0 0 1 0 0 1 1
+0 0 0 1 0 0 0 1
+0 0 0 0 1 0 0 0
+0 0 0 0 1 1 0 0
+4
+3 1 2 6
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0.83333333 0.00000000 0.16666667
+0.43333333 0.06666667 0.06666667 0.06666667</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

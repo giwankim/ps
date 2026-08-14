@@ -1,0 +1,93 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/WITHDRAWAL">WITHDRAWAL</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=WITHDRAWAL"><b>1224</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/WITHDRAWAL/"><b>531</b> (<b>43</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98%20%EB%AC%B8%EC%A0%9C%20%ED%95%B4%EA%B2%B0%20%EC%A0%84%EB%9E%B5">알고리즘 문제 해결 전략</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>이번 학기에 욕심을 부려 학점 초과신청을 한 백준이는 중간고사 성적을 보고 한숨을 토할 수밖에 없었습니다. 다음 학기 장학금을 받을 만큼 성적이 잘 나오지 않았기 때문입니다. 이제 백준이에게 남은 희망은 다음 주의 수강 철회 기간 뿐입니다.</p>
+<p>백준이네 학교에서는 장학금을 학생의 중간고사 등수와 기말고사 등수에 따라 배정합니다. 어떤 학생이 듣는 i번째 과목의 수강생 수가 c<sub>i</sub>라고 합시다. 그리고 이 학생의 i번째 과목 중간 고사 등수가 r<sub>i</sub>라고 하면, 이 학생의 중간 고사 누적 등수 <em>cumulativeRank</em> 는 다음과 같이 정의됩니다.</p>
+<p><em>cumulativeRank</em> = sum(r<sub>i</sub>) / sum(c<sub>i</sub>)</p>
+<p>예를 들어 백준이가 수강생이 각각 150, 200, 15명인 3개의 과목을 듣는데, 각각 100, 10, 5등을 했다면 백준이의 누적 등수를 다음과 같이 계산할 수 있지요.</p>
+<p>(100 + 10 + 5) / (150 + 200 + 15) = 115 / 365 = 0.315..</p>
+<p>수강 철회를 하면 철회한 과목은 중간 고사의 누적 등수 계산에 들어가지 않게 됩니다. 다행히 백준이네 학교에서는 수강 철회를 해도 남은 과목이 k 개 이상이라면 장학금을 받을 수 있습니다. 백준이가 적절히 과목을 철회했을 때 얻을 수 있는 최소 누적 등수를 계산하는 프로그램을 작성하세요.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T (T &lt;= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 백준이가 수강하는 과목의 수 n(1 &lt;= n &lt;= 1,000)과 남겨둬야 할 과목의 수 k(1 &lt;= k &lt;= n)가 주어집니다. 다음 줄에는 n 개의 정수 쌍 (r<sub>i</sub>,c<sub>i</sub>) 이 순서대로 주어집니다. (1 &lt;= r<sub>i</sub> &lt;= c<sub>i</sub> &lt;= 1,000)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 줄마다 백준이가 얻을 수 있는 최소의 누적 등수를 출력합니다. 정답과 10<sup>-7</sup> 이하의 오차가 있는 답은 정답으로 인정됩니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+3 2
+1 4 6 10 10 17
+4 2
+4 8 9 12 3 10 2 5
+10 5
+70 180 192 192 1 20 10 200 6 102 60 1000 4 9 1 12 8 127 100 700 </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>0.5000000000 
+0.3333333333 
+0.0563991323</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

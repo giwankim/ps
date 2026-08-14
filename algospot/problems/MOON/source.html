@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/MOON">MOON</a></li>
+<li class="timelimit"><b>3000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=MOON"><b>364</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/MOON/"><b>205</b> (<b>56</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/34">Taeyoon_Lee</a></li>
+<li class="source"><a href="/judge/problem/list/?source=2014%20KAIST%20ACM-ICPC%20%EB%AA%A8%EC%9D%98%EB%8C%80%ED%9A%8C">2014 KAIST ACM-ICPC 모의대회</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>재의는 매일 밤마다 달 사진을 찍는다. 사진에는 달과 달을 가리는 어두운 그림자가 보인다. 사진 상에서, 달과 그림자는 반지름이 각각 M과 S인 원이고, 달의 중심과 그림자의 중심 사이 거리는 C이다. 그림자에 가려지지 않은 달의 넓이를 구해보자.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>첫 번째 줄에 테스트 케이스의 수 T가 주어진다.<br/>
+각 테스트 케이스는 한 줄로 구성되며 M, S, C가 순서대로 주어진다. M, S, C는 모두 정수이다.<br/>
+(2 &lt;= M &lt; S &lt; C &lt;= 12, C &lt; M + S)</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해, 그림자에 가려지지 않은 달의 넓이를 소수점 아래 넷째 자리에서 반올림하여 한 줄에 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+3 4 6
+4 5 6</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>25.864
+36.466</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>파이(원주율)를 구하는 방법</p>
+<div class="highlight"><pre><span class="c1">// C++ 코드</span>
+<span class="cp">#include &lt;math.h&gt;</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">acos</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">);</span> <span class="c1">// acos는 cos의 역함수를 의미한다.</span>
+</pre></div>
+<div class="highlight"><pre><span class="c1">// Java 코드</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">acos</span><span class="o">(-</span><span class="mf">1.0</span><span class="o">);</span> <span class="c1">// acos는 cos의 역함수를 의미한다.</span>
+</pre></div>
+<p>소수점 아래 넷째 자리에서 반올림하여 출력하는 방법</p>
+<div class="highlight"><pre><span class="c1">// C++ 코드</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">acos</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"%.3f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">pi</span><span class="p">);</span>
+</pre></div>
+<div class="highlight"><pre><span class="c1">// Java 코드</span>
+<span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">acos</span><span class="o">(-</span><span class="mf">1.0</span><span class="o">);</span>
+<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">printf</span><span class="o">(</span><span class="s">"%.3f\n"</span><span class="o">,</span> <span class="n">pi</span><span class="o">);</span>
+</pre></div>
+</p>
+</section>

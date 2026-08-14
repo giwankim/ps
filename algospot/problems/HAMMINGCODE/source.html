@@ -1,0 +1,288 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/HAMMINGCODE">HAMMINGCODE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=HAMMINGCODE"><b>1626</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/HAMMINGCODE/"><b>969</b> (<b>59</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%204%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 4주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Jaeha is writing an operating system for his toys, so they will be able to communicate with each other. However, the wireless chips in his toys are very cheap, so they are prone to transmission errors. Quite frequently, Jaeha is seeing some noises in the transmitted data: some bits get flipped during the transmission process. Jaeha wants to implement Hamming Code to remedy this situation.</p>
+<p>The following is a brief description of how Hamming Code works.</p>
+<p>Hamming(7,4) code encodes 4 bits of data into a 7-bit code, by adding 3 bits of parity data. The parity data ensures that the receiver will be able to decode the correct data even when one of the 7 bits get flipped during transmission. The encoding process is as follows.</p>
+<ol>
+<li>First, we number the bits in the encoded message from 1 to 7.</li>
+<li>Next, we assign the data to be transmitted to the 3rd, 5th, 6th, 7th bit of the encoded data. For example, if we were to transmit data 1011, the encoded message will look like <code>_ _ 1 _ 0 1 1</code>, leaving 3 bits to be filled in.</li>
+<li>Next, the remaining bits are filled by parity data, from the first bit, as follows.
+
+<ul>
+<li>The 1st bit is filled so that the XOR of 1st, 3rd, 5th and 7th bit is 0. In the above
+example, the XOR of 3rd, 5th and 7th bit is already 0, so the 1st bit must be 0.</li>
+<li>The 2nd bit is filled so that the XOR of 2nd, 3rd, 6th and 7th bit is 0. In the above
+example, the XOR of 3rd, 6th and 7th bit is 1, so the 2nd bit must be 1.</li>
+<li>The 4th bit is filled so that the XOR of 4th, 5th, 6th and 7th bit is 0. In the above
+example, the XOR of 5th, 6th and 7th bit is already 0, so the 4th bit must be 0.</li>
+</ul></li>
+<li>After the process, we get the fully encoded message <code>0 1 1 0 0 1 1</code>.</li>
+</ol>
+<table><thead>
+<tr>
+<th>Position</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Raw Message</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Encoded Message</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Now, let’s talk about the decoding process of Hamming(7,4) code. To see how the code corrects an isolated error, let’s suppose that the 3rd bit gets flipped incorrectly when the message <code>0 1 1 0 0 1 1</code> is transmitted. Therefore, the receiver will receive the following corrupted message instead: <code>0 1 0 0 0 1 1</code>.</p>
+<table><thead>
+<tr>
+<th>Position</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Encoded Message</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Error</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Corrupted Message</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>The receiver then calculates a 3-bit integer, called <strong>syndrome</strong>, as follows.</p>
+<ul>
+<li>The 1st (lowest) bit is determined as the XOR of 1st, 3rd, 5th and 7th bit. In the above corrupted message, this bit will be 1.</li>
+<li>The 2nd bit is determined as the XOR of 2nd, 3rd, 6th and 7th bit. In the above corrupted message, this bit will be 1.</li>
+<li>The 3rd bit is determined as the XOR of 4th, 5th, 6th and 7th bit. In the above corrupted message, this bit will be 0.</li>
+</ul>
+<p>Concatenating these three digits, the syndrome will be 011<sub>2</sub> = 3<sub>10</sub>: the location of the error bit.</p>
+<table><thead>
+<tr>
+<th>Position</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>XOR</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Check 1</td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Check 2</td>
+<td></td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Check 3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><center><strong>syndrome</strong> = 011<sub>2</sub> = 3<sub>10</sub></center></p>
+<p>Thus the receiver can flip the 3rd bit in the received message. The resulting sequence of 0’s and 1’s will be now correct and we can take the 3rd, 5th, 6th and 7th bit to get the original message: <code>1 0 1 1</code>.</p>
+<table><thead>
+<tr>
+<th>Position</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Corrupted Message</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Indicated Error</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Corrected Message</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Decoded Message</td>
+<td></td>
+<td></td>
+<td>1</td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>Note when all bits are transmitted correctly, the syndrome will be 0 and no bit needs to be flipped.</p>
+<p>As a smart baby, Jaeha had no problem writing the encoding procedure. However, his parents don’t allow him to use the computer more than 10 minutes a day, because he is only 3 months old. Let’s help Jaeha by implementing the decoding procedure</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The input consists of <em>T</em> test cases. The number of test cases <em>T</em> is given in the first line of the input. The next <em>T</em> line each contains a transmitted message in 7 binary digits, starting from the 1st bit. The message will contain at most a single incorrect bit.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, you must output a single line of four binary digits denoting the decoded message.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+0100011
+1111111</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>1011
+1111</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

@@ -1,0 +1,94 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/KOOGLE">KOOGLE</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=KOOGLE"><b>2163</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/KOOGLE/"><b>415</b> (<b>19</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/6">hyunhwan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%202%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 2주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EC%88%98%ED%95%99">수학</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>각종 프로그래밍 대회에서 두각을 나타내던 Astein 은 최근 IT 업계에서 최고라고 평가 받는 Koogle 에 입사하게 되었다. Koogle 은 특히 사내 보안에 대해서 매우 엄격한 보안 규칙을 적용하기로 유명하다. 그 대표적인 예로, Koogle 은 신입 사원에게 사내에서 사용할 비밀번호를 굉장히 특이한 방식으로 부여한다. 아이디의 경우 제약이 없으나, 비밀 번호의 경우 사원이 임의로 결정하는 것이 아닌 사내에 존재하는 암호 사전 중에서 하나를 사용하여야 한다. 암호 사전에 들어있는 암호들은 알파벳 소문자와 숫자들의 조합으로 구성되어 있는데, 상당히 긴 편이고, 외우기도 어렵다. Astein 은 암호를 결정하려고 암호 사전을 살펴 보다가, 암호의 세기를 수치화 해서 표현한 다음 이 중에서 가장 센 암호를 사용하기로 마음먹었다. </p>
+<p>임의의 암호 문자열 x 가 영문 소문자 A 글자와 숫자 B 글자를 포함하고 있다고 할 때, x 의 세기는 다음과 같이 정의된다.</p>
+<pre><code>Strength(x) = 26^A * 10^B</code></pre>
+<p>예를 들어, x="ab1e4" 일 경우, Strength(x)=26^3 * 10^2 = 1757600 이다.</p>
+<p>Astein 은 이러한 공식을 세우고 손으로 이를 계산하고자 하였는데, 계산을 통해 나오는 값이 매우 커서 계산하기가 어려웠다. 더군다나 회사에 출근한 첫날이기 때문에 Astein 의 컴퓨터에는 아무런 프로그램도 깔려 있지 않았으며, Astein 이 처음 깐 프로그램은 Astein 이 즐겨 쓰는 Mate on 메신저와 게임 Nabimogi 가 전부였다. 메신저에 접속한 Astein 은 친구이자 Astein 만큼 프로그래밍 대회에서 두각을 나타내는 당신에게 암호의 세기를 비교하기 위한 프로그램을 작성해달라고 이야기 하였다. Astein 은 "지금부터 3시간 동안 Nabimogi 를 할터이니 답을 내놓아라" 고 이야기를 하고 Nabimogi 를 하러 갔다. 3시간이 지나서도 답을 내놓지 못할 경우, 불쌍한 Astein 은 회사에서 잘릴지도 모른다! 재빨리 Astein 이 원하는 프로그램을 짜주자! </p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫번째 줄에는 테스트 케이스의 개수 C (1 &lt;= C &lt;= 50) 가 주어진다. 각 테스트 케이스의 첫 번째 줄에는 암호 사전에 포함된 암호 후보의 수 N (1 &lt;= N &lt;= 100) 이 주어지고, 그 후 N 줄에 암호 사전에 포함된 암호들이 주어진다. 모든 암호는 알파벳 소문자와 숫자로만 구성되어 있으며, 그 길이는 1,000 이하이다.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스에 대해서 <em>세기</em>가 가장 큰 암호를 출력한다. 만약 <em>세기</em>가 가장 큰 암호가 여러 개 있을 경우 사전 순으로 가장 빠른 암호를 선택하라. 사전에서 숫자는 영문 소문자 보다 앞에 등장한다. </p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2 
+3 
+abc 
+012 
+a01 
+3 
+cdf 
+cde 
+fdb </pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>abc
+cde</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

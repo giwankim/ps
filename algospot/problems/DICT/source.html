@@ -1,0 +1,92 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DICT">DICT</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DICT"><b>1009</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DICT/"><b>283</b> (<b>28</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/2">JongMan</a></li>
+<li class="source"><a href="/judge/problem/list/?source=TopCoder">TopCoder</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95">동적계획법</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>(주의: 이 문제는 TopCoder SRM428 Div2 Hard 의 번역 문제입니다.)</p>
+<p><code>a</code> 와 <code>b</code> 로만 이루어진 단어들을 담고 있는 사전이 있다. 이 사전은 <code>n</code> 개의 <code>a</code> 와 <code>m</code> 개의 <code>b</code> 로 이루어진 단어들을 _전부_ 포함하는데, 예를 들어 <code>n=2</code>, <code>m=2</code> 인 경우, 사전에는 <code>aabb</code>, <code>abba</code> 등의 단어들이 포함된다.</p>
+<p><code>n</code> 과 <code>m</code> 이 주어질 때, 이 사전의 <code>k</code> 번째 단어를 출력하는 프로그램을 작성하라. 단어들은 사전 순서대로 정렬되어 있다고 가정한다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 C (&lt;= 50) 가 주어진다. 각 테스트 케이스의 첫 줄에 n, m (0 &lt;= n, m &lt;= 100) 그리고 k (1 &lt;= k &lt;= 100,000,000) 가 주어진다. </p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 사전의 해당 단어를 한 줄에 출력한다. 만약 사전의 k 번째 단어가 없을 경우 (사전의 단어 수가 k 보다 적을 경우) 에는 NONE 을 출력한다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>4
+5 2 11
+5 6 17
+1 1 2
+4 0 2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>abaaaab
+aaabbabbbab
+ba
+NONE
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

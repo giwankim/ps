@@ -1,0 +1,187 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/PPAP">PPAP</a></li>
+<li class="timelimit"><b>1000</b>ms</li>
+<li class="memorylimit"><b>524288</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=PPAP"><b>143</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/PPAP/"><b>19</b> (<b>13</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%209%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 9주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p><img src="/media/judge-attachments/84f82012325813f6560f2f5543fb6f36/ppap.png" width="60%"/><br/>
+<em>I have a pen</em><br/>
+<em>I have an apple</em><br/>
+<em>Apple pen!</em></p>
+<p><em>I have a pen</em><br/>
+<em>I have a pineapple</em><br/>
+<em>Pineapple pen!</em></p>
+<p><em>Apple pen,</em><br/>
+<em>Pineapple pen,</em><br/>
+<em>pen-pineapple-apple-pen</em></p>
+<hr/>
+<p>Piko just can't stop singing along to PPAP! PPAP is an extremely addictive song which became an internet meme. Piko is especially obsessed with the song's chorus part, which just repeats the words "pen-pineapple-apple-pen". One afternoon, Piko started repeatedly singing PPAP's chorus part, while writing down the lyrics in a notebook as he sang. Piko delimited words with a dash(-) and each chorus part with a forward slash(/). The first 30 characters Piko has written down can be seen below:</p>
+<table><thead>
+<tr>
+<th align="center">Index</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+<th align="center">5</th>
+<th align="center">6</th>
+<th align="center">7</th>
+<th align="center">8</th>
+<th align="center">9</th>
+<th align="center">10</th>
+<th align="center">11</th>
+<th align="center">12</th>
+<th align="center">13</th>
+<th align="center">14</th>
+<th align="center">15</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center"></td>
+<td align="center">p</td>
+<td align="center">e</td>
+<td align="center">n</td>
+<td align="center">-</td>
+<td align="center">p</td>
+<td align="center">i</td>
+<td align="center">n</td>
+<td align="center">e</td>
+<td align="center">a</td>
+<td align="center">p</td>
+<td align="center">p</td>
+<td align="center">l</td>
+<td align="center">e</td>
+<td align="center">-</td>
+<td align="center">a</td>
+</tr>
+</tbody></table>
+<table><thead>
+<tr>
+<th align="center">Index</th>
+<th align="center">16</th>
+<th align="center">17</th>
+<th align="center">18</th>
+<th align="center">19</th>
+<th align="center">20</th>
+<th align="center">21</th>
+<th align="center">22</th>
+<th align="center">23</th>
+<th align="center">24</th>
+<th align="center">25</th>
+<th align="center">26</th>
+<th align="center">27</th>
+<th align="center">28</th>
+<th align="center">29</th>
+<th align="center">30</th>
+<th align="center">...</th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="center"></td>
+<td align="center">p</td>
+<td align="center">p</td>
+<td align="center">l</td>
+<td align="center">e</td>
+<td align="center">-</td>
+<td align="center">p</td>
+<td align="center">e</td>
+<td align="center">n</td>
+<td align="center">/</td>
+<td align="center">p</td>
+<td align="center">e</td>
+<td align="center">n</td>
+<td align="center">-</td>
+<td align="center">p</td>
+<td align="center">i</td>
+<td align="center">...</td>
+</tr>
+</tbody></table>
+<p>The song was so addictive, Piko spent the entire afternoon writing down the lyrics! While Piko has gone to the bathroom, his friend Taro came over and discovered Piko’s notebook. He started wondering the following: how many times does a given pattern <span class="mathjax-preview">P</span><script type="math/tex">P</script> appear as a substring of Piko’s string, within a given range?</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>Your program needs to solve the problem for a single test case. A test case is given in a single line as two integers <span class="mathjax-preview">L</span><script type="math/tex">L</script>, <span class="mathjax-preview">R</span><script type="math/tex">R</script> and a string <span class="mathjax-preview">P</span><script type="math/tex">P</script>, separated by a single space. (<span class="mathjax-preview">1 \le L \le R \le 1\,000\,000</span><script type="math/tex">1 \le L \le R \le 1\,000\,000</script>). <span class="mathjax-preview">L</span><script type="math/tex">L</script> and <span class="mathjax-preview">R</span><script type="math/tex">R</script> respectively represents the index of the first and the last character of the range Taro is interested in. (The first character of the string has index <span class="mathjax-preview">1</span><script type="math/tex">1</script>.) <span class="mathjax-preview">P</span><script type="math/tex">P</script> is a string that only consists of lowercase alphabet letters, dashes, and forward slash, and its length will be between <span class="mathjax-preview">1</span><script type="math/tex">1</script> and <span class="mathjax-preview">10\,000</span><script type="math/tex">10\,000</script>, inclusive.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>Print the number of times <span class="mathjax-preview">P</span><script type="math/tex">P</script> appears as a substring of Pico's string, starting on or after index <span class="mathjax-preview">L</span><script type="math/tex">L</script> and ending on or before index <span class="mathjax-preview">R</span><script type="math/tex">R</script>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>Example 1
+1 25 pen
+
+Example 2
+1 48 -pen
+
+Example 3
+1 999999 melon</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>Example 1
+2
+
+Example 2
+2
+
+Example 3
+0</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+<p>예제 입출력에서 Example로 시작하는 줄은 실제 입출력에 포함되지 않습니다. 각각을 하나의 입출력 세트로 읽어주세요.</p>
+</p>
+</section>

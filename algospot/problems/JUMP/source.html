@@ -1,0 +1,88 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/JUMP">JUMP</a></li>
+<li class="timelimit"><b>10000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=JUMP"><b>1149</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/JUMP/"><b>254</b> (<b>22</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Coder%27s%20high%202013">Coder's high 2013</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>당신은 현재 무한히 펼쳐진 평면 위의 원점에 위치해 있습니다. 당신은 하루에 한 번씩 점프를 할 수 있는데, 동/서/남/북 중의 한 방향을 정해서 점프할 수 있습니다.</p>
+<p>첫 번째 날에는 한 칸을, 두 번째 날에는 두 칸을, …, 이렇게 K 번째 날에는 정확히 K칸 만큼 뛸 수 있습니다. (K칸 보다 작게 뛸 수는 없습니다.)</p>
+<p>K 번째 날이 지난 후 (즉, K 칸 만큼 뛴 이후에) 당신이 도착할 수 있는 위치의 경우의 수를 구하세요.</p>
+<p><img src="http://algospot.com/media/judge-attachments/65fc3d8e7b28a994b6c05423d24fde73/jump.png"/></p>
+<p>왼쪽 그림은 시작 위치에서 하루가 지났을 때 도달할 수 있는 지역을 나타내고, 오른쪽 그림은 이틀째가 되었을 때, 시작위치에서 왼쪽 점에서 갈 수 있는 지역을 나타낸 그림입니다.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>입력의 첫 줄에는 테스트 케이스의 수 T가 주어집니다. 각 테스트 케이스는 정수 숫자 K(0 ≤ K ≤ 1,000)으로 구성되어 있습니다..</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>각 테스트 케이스마다 위치할 수 있는 경우의 수를 20130728로 나눈 나머지를 출력합니다.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+1
+2
+</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>4
+16</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

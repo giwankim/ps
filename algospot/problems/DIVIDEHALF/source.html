@@ -1,0 +1,102 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/DIVIDEHALF">DIVIDEHALF</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=DIVIDEHALF"><b>39</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/DIVIDEHALF/"><b>1</b> (<b>2</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/24">Being</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%20ICPC%20Seoul%20Regional%20Warmup%202008">Algospot ICPC Seoul Regional Warmup 2008</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B8%B0%ED%95%98">기하</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>Recently, abundant amount of offshore minerals has been revealed by Andromeda Express Co. near South Korea. ROK and AE argued about the rights for those minerals; finally they decided to divide the region into half.</p>
+<p>The region found can be expressed as planar convex polygon on the sea, with N vertices defining the border of the region. The region includes M volcanic islands, which are never on the border. We plan to build research labs and harvesting facilities on those volcanic island. So the two groups agreed to choose two islands to build each one's main facilities on them, and split the region; each point in this region will belong to the nearer base.  </p>
+<p>Since the harvesting equipments can move in only four cardinal directions (parallel to x-axis or y-axis), the distance between a point and a base is not measured by the usual Euclidean distance, but by Manhattan distance. The manhattan distance for two points - (x1, y1), (x2, y2) is defined by <code>|x1 - x2| + |y1 - y2|</code>.</p>
+<p>Write a program that chooses two islands that will minimize the difference of two split regions' areas.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input will contain the number of test cases C (C &lt;= 50).</p>
+<p>The first line of following test cases will contain two integers, N and M (3 &lt;= N &lt;= 50, 2 &lt;= M &lt;= 50).  Next N lines will specify the coordinates of border vertices with two integers, x_i and y_i. The vertices will be given in either clockwise or counter-clockwise order. The border may contain three or more collinear points.  Next M lines of each test case will supply the coordinates of the volcanic islands by giving two integers, x_j and y_j.</p>
+<p>All coordinates are integers in the range [-1000, 1000].</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>For each test case, print the minimal difference between the two split regions, by choosing appropriate islands. Absolute/relative errors less than 1e-7 will be tolerated.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>2
+4 4
+0 0
+0 3
+3 3
+3 0
+1 1
+1 2
+2 1
+2 2
+3 2
+-2 0
+2 0
+0 4
+0 1
+0 2</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre> 0.000000
+ 1.750000</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>

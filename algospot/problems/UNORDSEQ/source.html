@@ -1,0 +1,100 @@
+<section class="problem_info">
+<h4>문제 정보</h4>
+<ul class="problem_info tabular">
+<li class="header">
+<ul>
+<li class="problemid">문제 ID</li>
+<li class="timelimit">시간 제한</li>
+<li class="memorylimit">메모리 제한</li>
+<li class="submissions">제출 횟수</li>
+<li class="accepted">정답 횟수 (비율)</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="problem-id"><a href="/judge/problem/read/UNORDSEQ">UNORDSEQ</a></li>
+<li class="timelimit"><b>5000</b>ms</li>
+<li class="memorylimit"><b>65536</b>kb</li>
+<li class="submissions"><a href="/judge/submission/recent/?problem=UNORDSEQ"><b>234</b></a></li>
+<li class="accepted"><a href="/judge/problem/stat/UNORDSEQ/"><b>35</b> (<b>14</b>%)</a></li>
+</ul>
+</li>
+<li class="header">
+<ul>
+<li class="author">출제자</li>
+<li class="source">출처</li>
+<li class="category">분류</li>
+</ul>
+</li>
+<li class="content">
+<ul>
+<li class="author"><a class="username" href="/user/profile/3">astein</a></li>
+<li class="source"><a href="/judge/problem/list/?source=Algospot%203%EC%A3%BC%EB%85%84%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC">Algospot 3주년 모의고사</a></li>
+<li class="category">
+<a href="#" id="show_category">보기</a>
+<span id="problem_category" style="display: none;">
+<a href="/judge/problem/list/?tag=%EA%B7%B8%EB%A6%AC%EB%94%94">그리디</a>
+</span>
+</li>
+</ul>
+<script language="javascript">
+				$(function() {
+					$("#show_category").click(function() {
+						$(this).hide();
+						$("#problem_category").fadeIn("slow");
+					});
+				});
+			</script>
+</li>
+</ul>
+</section>
+<section class="problem_statement">
+<h4>문제</h4>
+<p class="kor">
+<p>The sequence is called <strong>ordered</strong> if it is <strong>non-decreasing</strong> (i.e. A<sub>i</sub> &lt;= A<sub>i+1</sub> for 1 &lt;= i &lt; N) or <strong>non-increasing</strong> (i.e. A<sub>i</sub> &gt;= A<sub>i+1</sub> for 1 &lt;= i &lt; N). Therefore, the sequence [1, 3, 3, 1] is <strong>not</strong> ordered.</p>
+<p>You are given a sequence of numbers. You are to find its shortest subsequence which is <strong>not</strong> ordered. Note that subsequence does not need to be consecutive.</p>
+</p>
+</section>
+<section class="problem_input">
+<h4>입력</h4>
+<p class="kor">
+<p>The first line of the input contains one integer T, the number of test cases.</p>
+<p>The first line of each test case contains one integer N (1 &lt;= N &lt;= 10^5).<br/>
+The second line contains N space-seperated integers - the given sequence.<br/>
+Absolute values of numbers in input sequences do not exceed 10^6.</p>
+</p>
+</section>
+<section class="problem_output">
+<h4>출력</h4>
+<p class="kor">
+<p>If the given sequence does not contain any unordered subsequences, output 0.</p>
+<p>Otherwise, output the length K of the shortest such subsequence.<br/>
+Then output K integers on the next line, representing indexes of the subsequence from the input sequence.</p>
+<p>If there are several solutions, output the lexicographically earlist one.<br/>
+Sequence A is lexicographically earlier than sequence B if A<sub>i</sub> &lt; B<sub>i</sub> for the smallest index i such that A<sub>i</sub> != B<sub>i</sub>.</p>
+</p>
+</section>
+<section class="problem_sample_input">
+<h4>예제 입력</h4>
+<pre>3
+5             
+67 499 600 42 23
+3                        
+1 2 3
+3                        
+2 3 1</pre>
+</section>
+<section class="problem_sample_output">
+<h4>예제 출력</h4>
+<pre>3
+1 2 4
+0
+3
+1 2 3
+</pre>
+</section>
+<section class="problem_note">
+<h4>노트</h4>
+<p class="kor">
+</p>
+</section>
