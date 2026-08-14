@@ -1,38 +1,20 @@
 package algospot.packing;
 
-import static algospot.packing.MainRecursive.main;
-import static org.assertj.core.api.Assertions.assertThat;
-
 import java.io.IOException;
-import org.junit.jupiter.api.Test;
-import org.junitpioneer.jupiter.StdIo;
-import org.junitpioneer.jupiter.StdOut;
 
-class PackingRecursiveTest {
+/**
+ * Runs the {@link PackingContract} ladder against {@link MainRecursive}, the memoized top-down
+ * variant that recovers the chosen items by re-querying the memo rather than by walking a table.
+ *
+ * <p>Same contract, different shape of solution -- which is the point of sharing the ladder: the
+ * two implementations differ in how they reconstruct the bag, and nothing in the contract may
+ * depend on that. In particular this is where pinning an item order rather than an item set would
+ * have shown up as a false failure.
+ */
+class PackingRecursiveTest extends PackingContract {
 
-  @Test
-  @StdIo({"""
-      2
-      6 10
-      laptop 4 7
-      camera 2 10
-      xbox 6 6
-      grinder 4 7
-      dumbell 2 5
-      encyclopedia 10 4
-      6 17
-      laptop 4 7
-      camera 2 10
-      xbox 6 6
-      grinder 4 7
-      dumbell 2 5
-      encyclopedia 10 4
-      """})
-  void packing(StdOut out) throws IOException {
-    main(new String[0]);
-
-    assertThat(out.capturedLines())
-        .containsExactly(
-            "24 3", "laptop", "camera", "grinder", "30 4", "laptop", "camera", "xbox", "grinder");
+  @Override
+  void solve() throws IOException {
+    MainRecursive.main(new String[0]);
   }
 }
