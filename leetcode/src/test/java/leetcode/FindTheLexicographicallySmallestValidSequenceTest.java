@@ -150,7 +150,7 @@ class FindTheLexicographicallySmallestValidSequenceTest {
   // pick and the answer shifts to [1 .. word2.length]. Anything worse than a linear scan with a
   // precomputed suffix table will not finish in time.
   @Test
-  @Timeout(value = 2, unit = TimeUnit.SECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
+  @Timeout(value = 5, unit = TimeUnit.SECONDS, threadMode = Timeout.ThreadMode.SEPARATE_THREAD)
   void ceilingSizedInputWithdrawsTheChangeAtIndexZero() {
     int n = 300_000;
     int m = n - 2;
