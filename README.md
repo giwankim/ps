@@ -246,6 +246,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [2130. Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)
 - [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)
 - [2196. Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions)
+- [2213. Longest Substring of One Repeating Character](https://leetcode.com/problems/longest-substring-of-one-repeating-character)
 - [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
 - [2492. Minimum Score of a Path Between Two Cities](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
@@ -289,11 +290,12 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [Programmers](https://programmers.co.kr)
 
-- [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [12912. 두 정수 사이의 합](https://school.programmers.co.kr/learn/courses/30/lessons/12912)
 - [12932. 자연수 뒤집어 배열로 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/12932)
 - [12940. 최대공약수와 최소공배수](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
+- [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [17681. 비밀지도](https://school.programmers.co.kr/learn/courses/30/lessons/17681)
+- [42889. 실패율](https://school.programmers.co.kr/learn/courses/30/lessons/42889)
 - [68645. 삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
 - [72412. 순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
 - [81301. 숫자 문자열과 영단어](https://school.programmers.co.kr/learn/courses/30/lessons/81301)
