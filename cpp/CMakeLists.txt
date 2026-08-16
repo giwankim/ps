@@ -45,7 +45,12 @@ if(NOT PS_SCOPE STREQUAL "all")
     math(EXPR _after "${_slash} + 1")
     string(SUBSTRING "${PS_SCOPE}" ${_after} -1 _scope_problem)
   endif()
-  if(_scope_judge STREQUAL "" OR _scope_problem MATCHES "/")
+  # A trailing slash ("boj/") leaves an empty problem, which would disable the
+  # per-problem filter below and silently widen the scope to the whole judge —
+  # the opposite of what a scope guard is for.
+  if(_scope_judge STREQUAL ""
+     OR _scope_problem MATCHES "/"
+     OR (NOT _slash EQUAL -1 AND _scope_problem STREQUAL ""))
     message(FATAL_ERROR
       "cpp: PS_SCOPE must be 'all', '<judge>', or '<judge>/<problem>' (got '${PS_SCOPE}')")
   endif()
@@ -61,7 +66,9 @@ foreach(judge IN LISTS judges)
 
   file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/*.cpp")
   foreach(src IN LISTS sources)
-    get_filename_component(problem "${src}" NAME_WE)
+    # NAME_WLE, not NAME_WE: NAME_WE strips from the first dot, so "1000.alt.cpp"
+    # would collapse to "1000" and collide with 1000.cpp's target and data dir.
+    get_filename_component(problem "${src}" NAME_WLE)
     # A "<judge>/<problem>" scope narrows to exactly one problem.
     if(NOT _scope_problem STREQUAL "" AND NOT _scope_problem STREQUAL "${problem}")
       continue()
@@ -79,7 +86,9 @@ foreach(judge IN LISTS judges)
     endif()
 
     foreach(input IN LISTS inputs)
-      get_filename_component(stem "${input}" NAME_WE)
+      # Likewise NAME_WLE: a dotted stem such as "sample.1.in" must pair with
+      # "sample.1.out", not be truncated to "sample" and rejected as unpaired.
+      get_filename_component(stem "${input}" NAME_WLE)
       if(NOT EXISTS "${data_dir}/${stem}.out")
         message(FATAL_ERROR
           "cpp: ${judge}/${problem}/${stem}.in has no matching ${stem}.out")

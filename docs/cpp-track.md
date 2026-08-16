@@ -6,7 +6,7 @@ Gradle build. Design: [docs/superpowers/specs/2026-08-16-cpp-track-design.md](su
 ## Setup
 
 ```bash
-brew install cmake ninja clang-format
+brew install cmake ninja clang-format gcc
 ```
 
 `cpp/.clang-format` is Google style at `ColumnLimit: 100`; the repo's git pre-commit hook runs
@@ -16,6 +16,12 @@ above is for.
 `g++-16` must be at `/opt/homebrew/bin/g++-16`; every preset pins it. Apple
 clang is never used — `<bits/stdc++.h>` and `__gnu_pbds` are libstdc++-only, so
 building with clang would diverge from the judges.
+
+`gcc` is what supplies that binary: the formula is GCC 16.1.0 today, and it
+installs the versioned `g++-16` rather than a bare `g++`. The formula tracks the
+newest major, so when it moves to GCC 17 the presets keep pinning a `g++-16`
+that a fresh machine no longer has — at that point bump `CMAKE_CXX_COMPILER` in
+`cpp/CMakePresets.json`, or `brew install gcc@16` to keep the pinned path valid.
 
 Open `cpp/` as its own CLion project. The repo root has no `CMakeLists.txt`
 because it is a Gradle build. CLion run configurations have a "Redirect input
