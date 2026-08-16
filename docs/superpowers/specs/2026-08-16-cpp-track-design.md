@@ -31,7 +31,7 @@ g++ / libstdc++ judge rather than macOS defaults.
 | Test framework | GoogleTest (+ gmock matchers), function-signature problems only |
 | Layout | Flat: `cpp/<judge>/<problem>.cpp`, data in `cpp/<judge>/tests/<problem>/` |
 | Compiler | Homebrew `g++-16` (`/opt/homebrew/bin/g++-16`), pinned in presets |
-| Standard | C++20, `CMAKE_CXX_EXTENSIONS OFF` (`-std=c++20`, matching judge flags) |
+| Standard | C++23 via `PS_STD` cache variable, `CMAKE_CXX_EXTENSIONS OFF` (`-std=c++23`) |
 | Scoping | `PS_SCOPE` cache variable; active-problem by default, `all` preset for sweeps |
 | Formatting | clang-format, Google style, `ColumnLimit: 100` |
 | Lint gate | Extend the existing `.githooks/pre-commit`, plus its regression suite |
@@ -228,7 +228,9 @@ reconfigure when switching between "the problem I am solving" and "everything."
 | `judge` | `build/judge` | `all` | `-O2`, no sanitizers — BOJ/Codeforces parity |
 
 All presets pin `CMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-16`, generator
-`Ninja`, and `CMAKE_CXX_STANDARD=20` with extensions off.
+`Ninja`, and `CMAKE_CXX_STANDARD=${PS_STD}` with extensions off. `PS_STD` is a
+cache variable defaulting to `23`, so a problem on a judge that rejects a C++23
+construct can be rebuilt with `-DPS_STD=20` without editing any file.
 
 Your machine-local active problem lives in a gitignored `CMakeUserPresets.json`
 inheriting from `dev`. In CLion the equivalent switch is the profile's "CMake
@@ -250,13 +252,23 @@ Local fidelity to the judge is a recurring concern in this repo, not a one-off:
   `-Wl,-stack_size,0x4000000` (64 MB), guarded by `if(APPLE)`.
 - **libstdc++.** Homebrew g++-16 provides `<bits/stdc++.h>` and `__gnu_pbds`;
   Apple clang's libc++ does not.
-- **Flags.** The `judge` preset uses `-O2 -std=c++20`, matching how BOJ and
+- **Flags.** The `judge` preset uses `-O2 -std=c++23`, matching how BOJ and
   Codeforces compile.
+- **Compiler version.** This is the parity gap C++23 introduces. Local g++-16
+  implements more of C++23 than the judges' GCC does — Codeforces' G++23 is
+  GCC 14, and BOJ's version is unconfirmed. Under C++17 or C++20 the gap was
+  harmless because every implementation was complete; under C++23 it is live,
+  and the failure mode is a compile error *on the judge* for code that built
+  cleanly here. Newer library additions (`<print>`, `std::ranges::to`,
+  `std::mdspan`, `<stdfloat>`) are the likely offenders.
 
 Remaining known divergence: macOS vs Linux (`__int128` formatting, `long
 double` width). A Docker profile pinning the judge's exact GCC and Linux
 libstdc++ was considered and rejected as too slow a loop for the value; revisit
-only if a divergence actually bites.
+only if a divergence actually bites. Note that such a profile would also close
+the compiler-version gap above, which strengthens the case for it if C++23
+compile errors on the judge turn out to be a recurring annoyance rather than a
+one-off.
 
 ## Formatting and the pre-commit hook
 
@@ -342,9 +354,11 @@ against one sample from the IDE.
    which needs no sanitizer runtime) plus `-fsanitize=undefined` alone. That
    combination catches out-of-bounds on `std::vector` and `std::array` but not
    on raw C arrays — an accepted reduction, not a silent one.
-2. **BOJ's available C++ standards** could not be confirmed; acmicpc.net is
-   unreachable (see `docs/boj-problem-archive.md`). C++20 is the assumption.
-   Changing it is one line in the presets.
+2. **BOJ's available C++ standards and GCC version** could not be confirmed;
+   acmicpc.net is unreachable (see `docs/boj-problem-archive.md`). C++23 is the
+   assumption. Confirm when the site is reachable; until then the first BOJ
+   submission doubles as the check. `-DPS_STD=20` is the fallback and needs no
+   file edit.
 3. **Configure time** with several hundred targets under `PS_SCOPE=all`. Expected
    to stay in the low seconds with Ninja; if it does not, per-judge scoping
    already exists as the mitigation.
