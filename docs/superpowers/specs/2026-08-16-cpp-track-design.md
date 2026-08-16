@@ -147,19 +147,20 @@ of the above applies.
 
 ### `cmake/RunCase.cmake`
 
-Invoked as a CMake script with `EXE`, `IN`, and `EXPECTED` defined:
+Invoked as a CMake script with `EXE`, `INPUT` (INPUT, not IN, because IN is a
+foreach keyword), and `EXPECTED` defined:
 
 ```cmake
 add_test(NAME boj/1000/max-values COMMAND ${CMAKE_COMMAND}
   -DEXE=$<TARGET_FILE:boj_1000>
-  -DIN=${CMAKE_SOURCE_DIR}/boj/tests/1000/max-values.in
+  -DINPUT=${CMAKE_SOURCE_DIR}/boj/tests/1000/max-values.in
   -DEXPECTED=${CMAKE_SOURCE_DIR}/boj/tests/1000/max-values.out
   -P ${CMAKE_SOURCE_DIR}/cmake/RunCase.cmake)
 ```
 
 Behavior:
 
-- Runs `EXE` with `INPUT_FILE ${IN}`, capturing stdout and stderr.
+- Runs `EXE` with `INPUT_FILE ${INPUT}`, capturing stdout and stderr.
 - **Non-zero exit is a failure** reporting the exit code and stderr. This is
   the runtime-error signal; under the sanitizer build an out-of-bounds write
   fails here rather than producing mystery output.
