@@ -17,3 +17,26 @@ enable_testing()
 if(APPLE)
   add_link_options(-Wl,-stack_size,0x4000000)
 endif()
+
+# --- discover judges -------------------------------------------------------
+# A judge is any subdirectory of cpp/ other than cmake/ and build/. Adding a new
+# judge therefore needs no edit to this file.
+file(GLOB _entries CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*")
+set(judges "")
+foreach(entry IN LISTS _entries)
+  if(IS_DIRECTORY "${entry}")
+    get_filename_component(_name "${entry}" NAME)
+    if(NOT _name MATCHES "^(cmake|build)$")
+      list(APPEND judges "${_name}")
+    endif()
+  endif()
+endforeach()
+
+foreach(judge IN LISTS judges)
+  file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/*.cpp")
+  foreach(src IN LISTS sources)
+    get_filename_component(problem "${src}" NAME_WE)
+    string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
+    add_executable("${judge}_${safe}" "${src}")
+  endforeach()
+endforeach()
