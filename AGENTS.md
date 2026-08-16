@@ -7,3 +7,7 @@ dependency-update workflow.
 acmicpc.net is down. Recover BOJ problem statements, constraints, and samples
 from the local archive rather than by triangulating mirrors — see
 [docs/boj-problem-archive.md](docs/boj-problem-archive.md).
+
+The `cpp/` directory is a standalone C++ competitive-programming track built
+with CMake, outside the Gradle build. See [docs/cpp-track.md](docs/cpp-track.md)
+for layout, presets, and the per-problem workflow.

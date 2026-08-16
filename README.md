@@ -12,6 +12,12 @@ chmod +x .githooks/pre-commit
 See [docs/dependency-updates.md](docs/dependency-updates.md) for the
 review-file workflow, pin/skip rules, and Gradle wrapper update.
 
+## C++ Track
+
+Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
+[cpp/README.md](cpp/README.md) for the index and
+[docs/cpp-track.md](docs/cpp-track.md) for setup.
+
 ## [LeetCode](https://leetcode.com/)
 
 - [1. Two Sum](https://leetcode.com/problems/two-sum)
