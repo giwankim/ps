@@ -52,6 +52,7 @@ if(NOT PS_SCOPE STREQUAL "all")
 endif()
 
 set(missing_tests "")
+set(_scope_matched FALSE)
 foreach(judge IN LISTS judges)
   # Skip judges outside PS_SCOPE. PS_SCOPE is "all", a judge name, or "<judge>/<problem>".
   if(NOT _scope_judge STREQUAL "" AND NOT _scope_judge STREQUAL "${judge}")
@@ -65,6 +66,7 @@ foreach(judge IN LISTS judges)
     if(NOT _scope_problem STREQUAL "" AND NOT _scope_problem STREQUAL "${problem}")
       continue()
     endif()
+    set(_scope_matched TRUE)
     string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
     set(target "${judge}_${safe}")
     add_executable("${target}" "${src}")
@@ -97,4 +99,11 @@ endforeach()
 if(missing_tests)
   string(REPLACE ";" ", " _missing "${missing_tests}")
   message(WARNING "cpp: no test data for: ${_missing}")
+endif()
+
+# A scope that matched a real judge/problem but has no test data yet is fine (the
+# WARNING above covers it). A scope that matched nothing at all is always a typo and
+# must not configure a silent zero-test success.
+if(NOT PS_SCOPE STREQUAL "all" AND NOT _scope_matched)
+  message(FATAL_ERROR "cpp: PS_SCOPE='${PS_SCOPE}' matched no problem. Check the judge and problem names.")
 endif()

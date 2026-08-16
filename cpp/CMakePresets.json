@@ -45,6 +45,7 @@
   ],
   "testPresets": [
     { "name": "dev", "configurePreset": "dev", "output": { "outputOnFailure": true } },
-    { "name": "all", "configurePreset": "all", "output": { "outputOnFailure": true } }
+    { "name": "all", "configurePreset": "all", "output": { "outputOnFailure": true } },
+    { "name": "judge", "configurePreset": "judge", "output": { "outputOnFailure": true } }
   ]
 }
