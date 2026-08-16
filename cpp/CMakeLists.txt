@@ -32,12 +32,25 @@ foreach(entry IN LISTS _entries)
   endif()
 endforeach()
 
+# Split PS_SCOPE once: "all" | "<judge>" | "<judge>/<problem>". Compared with STREQUAL
+# rather than MATCHES so a judge or problem name is never interpreted as a regex.
+set(_scope_judge "")
+set(_scope_problem "")
+if(NOT PS_SCOPE STREQUAL "all")
+  string(FIND "${PS_SCOPE}" "/" _slash)
+  if(_slash EQUAL -1)
+    set(_scope_judge "${PS_SCOPE}")
+  else()
+    string(SUBSTRING "${PS_SCOPE}" 0 ${_slash} _scope_judge)
+    math(EXPR _after "${_slash} + 1")
+    string(SUBSTRING "${PS_SCOPE}" ${_after} -1 _scope_problem)
+  endif()
+endif()
+
 set(missing_tests "")
 foreach(judge IN LISTS judges)
   # Skip judges outside PS_SCOPE. PS_SCOPE is "all", a judge name, or "<judge>/<problem>".
-  if(NOT PS_SCOPE STREQUAL "all"
-     AND NOT PS_SCOPE STREQUAL "${judge}"
-     AND NOT PS_SCOPE MATCHES "^${judge}/")
+  if(_scope_judge AND NOT _scope_judge STREQUAL "${judge}")
     continue()
   endif()
 
@@ -45,7 +58,7 @@ foreach(judge IN LISTS judges)
   foreach(src IN LISTS sources)
     get_filename_component(problem "${src}" NAME_WE)
     # A "<judge>/<problem>" scope narrows to exactly one problem.
-    if(PS_SCOPE MATCHES "/" AND NOT PS_SCOPE STREQUAL "${judge}/${problem}")
+    if(_scope_problem AND NOT _scope_problem STREQUAL "${problem}")
       continue()
     endif()
     string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
