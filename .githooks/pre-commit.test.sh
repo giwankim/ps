@@ -17,12 +17,29 @@ ORIG=$(pwd)
 PASS=0
 FAIL=0
 
+# PATH the hook runs under. Tests prepend their sandbox bin/ so the fake
+# clang-format is found; T16 points it somewhere without one.
+PS_TEST_PATH="$PATH"
+
 # Fake gradlew: a whole-tree linter that fails on any on-disk *.java with BADFORMAT.
 FAKE_GRADLEW='#!/usr/bin/env bash
 if grep -rq --include="*.java" --exclude-dir=.git BADFORMAT . 2>/dev/null; then
   echo "fake-lint: BADFORMAT present"; exit 1
 fi
 echo "fake-lint: clean"; exit 0
+'
+
+# Fake clang-format: a per-file checker that fails on any argument containing
+# BADFORMAT. Mirrors FAKE_GRADLEW so tests can prove WHICH tool ran.
+FAKE_CLANG_FORMAT='#!/usr/bin/env bash
+for f in "$@"; do
+  case "$f" in --*) continue;; esac
+  if [ -f "$f" ] && grep -q BADFORMAT "$f"; then
+    echo "fake-clang-format: $f needs formatting" >&2
+    exit 1
+  fi
+done
+exit 0
 '
 
 new_sandbox() {
@@ -37,9 +54,13 @@ new_sandbox() {
   chmod +x "$d/.hooks/pre-commit"
   printf '%s' "$FAKE_GRADLEW" >"$d/gradlew"
   chmod +x "$d/gradlew"
-  # Track gradlew + the hook (as in the real repo) so --include-untracked never
-  # stashes them; commit with --no-verify so this setup commit skips the hook.
-  git -C "$d" add gradlew .hooks/pre-commit
+  mkdir -p "$d/bin"
+  printf '%s' "$FAKE_CLANG_FORMAT" >"$d/bin/clang-format"
+  chmod +x "$d/bin/clang-format"
+  # Track gradlew + the hook + the fake clang-format (as in the real repo) so
+  # --include-untracked never stashes them; commit with --no-verify so this
+  # setup commit skips the hook.
+  git -C "$d" add gradlew .hooks/pre-commit bin/clang-format
   git -C "$d" commit -q --no-verify -m baseline
   printf '%s' "$d"
 }
@@ -55,7 +76,7 @@ assert() { # label  actual  expected
 }
 
 # Commit in the current dir; echo yes/no for success. Hook chatter -> hook.log.
-try_commit() { if git commit -qm "$1" >hook.log 2>&1; then printf yes; else printf no; fi; }
+try_commit() { if PATH="$PS_TEST_PATH" git commit -qm "$1" >hook.log 2>&1; then printf yes; else printf no; fi; }
 stash_count() { git stash list | grep -c . | tr -d ' '; }
 
 echo "Testing hook: $HOOK"
@@ -151,6 +172,78 @@ printf 'class A {}\n// BADFORMAT\n' >두_정수.java
 git add 두_정수.java
 assert "T9 non-ascii staged path trips java gate" "$(try_commit nine)" "no"
 cd "$ORIG"
+
+# T10 -- clean staged C++ commits (the gate must admit .cpp/.hpp).
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'int main() { return 0; }\n' >a.cpp
+git add a.cpp
+assert "T10 clean staged cpp commits" "$(try_commit ten)" "yes"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T11 -- a violation in staged C++ blocks the commit.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'int main() { return 0; }\n// BADFORMAT\n' >a.cpp
+git add a.cpp
+assert "T11 dirty staged cpp blocks" "$(try_commit eleven)" "no"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T12 -- a mixed commit runs BOTH linters: clean Java must not excuse dirty C++.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'class A {}\n' >A.java
+printf 'int main() { return 0; }\n// BADFORMAT\n' >a.cpp
+git add A.java a.cpp
+assert "T12 mixed commit lints cpp too" "$(try_commit twelve)" "no"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T13 -- a Java-only commit must NOT invoke clang-format. Proven with a fake
+#        that always fails: if it ran, the commit would be blocked.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf '#!/usr/bin/env bash\nexit 1\n' >bin/clang-format
+chmod +x bin/clang-format
+# COMMIT the always-failing fake: an unstaged edit would be reverted by the
+# hook's stash, restoring the permissive fake and making this test vacuous.
+git add bin/clang-format
+git commit -q --no-verify -m always-fail-clang-format
+printf 'class A {}\n' >A.java
+git add A.java
+assert "T13 java-only skips clang-format" "$(try_commit thirteen)" "yes"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T14 -- a C++-only commit must NOT invoke Gradle (which is slow to start).
+#        Proven with a gradlew that always fails.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf '#!/usr/bin/env bash\nexit 1\n' >gradlew
+chmod +x gradlew
+# COMMIT the always-failing fake, for the same reason as T13: gradlew is tracked,
+# so an unstaged edit would be stashed away and the permissive fake restored.
+git add gradlew
+git commit -q --no-verify -m always-fail-gradlew
+printf 'int main() { return 0; }\n' >a.cpp
+git add a.cpp
+assert "T14 cpp-only skips gradle" "$(try_commit fourteen)" "yes"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T15 -- lints the STAGED snapshot: an unstaged dirty .cpp must not block.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'int main() {\n  return 0;\n}\n' >a.cpp
+git add a.cpp
+printf 'int main() {\n  return 0;\n}\n// BADFORMAT\n' >a.cpp
+assert "T15 staged-clean cpp commits despite dirty worktree" "$(try_commit fifteen)" "yes"
+assert "T15 unstaged cpp edit restored" "$(grep -c BADFORMAT a.cpp)" "1"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T16 -- staged C++ with no clang-format on PATH: blocked, and no leaked stash.
+d=$(new_sandbox); cd "$d"
+mkdir -p "$d/nocf"
+ln -s "$(command -v git)" "$d/nocf/git"
+PS_TEST_PATH="$d/nocf:/usr/bin:/bin"
+printf 'int main() { return 0; }\n' >a.cpp
+git add a.cpp
+printf 'class B {}\n' >B.java          # untracked, so a stash would be taken
+assert "T16 missing clang-format blocks" "$(try_commit sixteen)" "no"
+assert "T16 message names clang-format" "$(grep -c clang-format hook.log)" "1"
+assert "T16 no leaked stash" "$(stash_count)" "0"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
 
 echo "----"
 echo "PASS=$PASS FAIL=$FAIL"
