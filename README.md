@@ -292,6 +292,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 - [12912. 두 정수 사이의 합](https://school.programmers.co.kr/learn/courses/30/lessons/12912)
 - [12932. 자연수 뒤집어 배열로 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/12932)
+- [12933. 정수 내림차순으로 배치하기](https://school.programmers.co.kr/learn/courses/30/lessons/12933)
 - [12940. 최대공약수와 최소공배수](https://school.programmers.co.kr/learn/courses/30/lessons/12940)
 - [12949. 행렬의 곱셈](https://school.programmers.co.kr/learn/courses/30/lessons/12949)
 - [17681. 비밀지도](https://school.programmers.co.kr/learn/courses/30/lessons/17681)
