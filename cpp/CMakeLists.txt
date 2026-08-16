@@ -45,12 +45,16 @@ if(NOT PS_SCOPE STREQUAL "all")
     math(EXPR _after "${_slash} + 1")
     string(SUBSTRING "${PS_SCOPE}" ${_after} -1 _scope_problem)
   endif()
+  if(_scope_judge STREQUAL "" OR _scope_problem MATCHES "/")
+    message(FATAL_ERROR
+      "cpp: PS_SCOPE must be 'all', '<judge>', or '<judge>/<problem>' (got '${PS_SCOPE}')")
+  endif()
 endif()
 
 set(missing_tests "")
 foreach(judge IN LISTS judges)
   # Skip judges outside PS_SCOPE. PS_SCOPE is "all", a judge name, or "<judge>/<problem>".
-  if(_scope_judge AND NOT _scope_judge STREQUAL "${judge}")
+  if(NOT _scope_judge STREQUAL "" AND NOT _scope_judge STREQUAL "${judge}")
     continue()
   endif()
 
@@ -58,7 +62,7 @@ foreach(judge IN LISTS judges)
   foreach(src IN LISTS sources)
     get_filename_component(problem "${src}" NAME_WE)
     # A "<judge>/<problem>" scope narrows to exactly one problem.
-    if(_scope_problem AND NOT _scope_problem STREQUAL "${problem}")
+    if(NOT _scope_problem STREQUAL "" AND NOT _scope_problem STREQUAL "${problem}")
       continue()
     endif()
     string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
