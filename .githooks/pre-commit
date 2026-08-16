@@ -25,9 +25,16 @@ if [ -z "$staged" ]; then
   echo "pre-commit: nothing staged; skipping."
   exit 0
 fi
-if ! grep -qE '\.(java|kts?)$' <<<"$staged"; then
-  echo "pre-commit: no staged Java/Kotlin files; skipping lint."
+jvm_staged=$(grep -E '\.(java|kts?)$' <<<"$staged" || true)
+cpp_staged=$(grep -E '\.(cpp|hpp)$' <<<"$staged" || true)
+if [ -z "$jvm_staged" ] && [ -z "$cpp_staged" ]; then
+  echo "pre-commit: no staged Java/Kotlin/C++ files; skipping lint."
   exit 0
+fi
+# Checked before the stash: a missing tool must fail without touching the tree.
+if [ -n "$cpp_staged" ] && ! command -v clang-format >/dev/null 2>&1; then
+  echo "pre-commit: clang-format not found; install with 'brew install clang-format'." >&2
+  exit 1
 fi
 
 # 2. Is there anything to hide (unstaged tracked edits or untracked files)?
@@ -65,8 +72,15 @@ if [ "$need_stash" = true ]; then
 fi
 
 # 5. Lint the staged snapshot now on disk. One Gradle invocation for both tools.
-echo "pre-commit: running spotlessCheck + ktlintCheck on staged changes..."
-./gradlew spotlessCheck ktlintCheck
+echo "pre-commit: linting staged changes..."
+if [ -n "$jvm_staged" ]; then
+  ./gradlew spotlessCheck ktlintCheck
+fi
+if [ -n "$cpp_staged" ]; then
+  # tr/xargs -0 rather than word-splitting, so paths with spaces survive; with
+  # core.quotePath=false above, so do non-ASCII paths (see T9).
+  printf '%s\n' "$cpp_staged" | tr '\n' '\0' | xargs -0 clang-format --dry-run --Werror --
+fi
 
 echo "pre-commit: lint passed."
 # The EXIT trap restores your working tree, then git creates the commit from the index.
