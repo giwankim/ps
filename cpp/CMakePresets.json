@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "cacheVariables": {
+        "CMAKE_CXX_COMPILER": "/opt/homebrew/bin/g++-16",
+        "CMAKE_BUILD_TYPE": "",
+        "PS_STD": "23",
+        "PS_SCOPE": "all",
+        "PS_TIMEOUT": "5"
+      }
+    },
+    {
+      "name": "dev",
+      "displayName": "dev (sanitizers; override PS_SCOPE per problem)",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build/dev",
+      "cacheVariables": {
+        "CMAKE_CXX_FLAGS": "-g -O0 -fno-omit-frame-pointer -fsanitize=address,undefined -D_GLIBCXX_ASSERTIONS",
+        "CMAKE_EXE_LINKER_FLAGS": "-fsanitize=address,undefined"
+      }
+    },
+    {
+      "name": "all",
+      "displayName": "all (full sweep, never scoped)",
+      "inherits": "dev",
+      "binaryDir": "${sourceDir}/build/all"
+    },
+    {
+      "name": "judge",
+      "displayName": "judge (-O2, BOJ/Codeforces parity)",
+      "inherits": "base",
+      "binaryDir": "${sourceDir}/build/judge",
+      "cacheVariables": { "CMAKE_CXX_FLAGS": "-O2" }
+    }
+  ],
+  "buildPresets": [
+    { "name": "dev", "configurePreset": "dev" },
+    { "name": "all", "configurePreset": "all" },
+    { "name": "judge", "configurePreset": "judge" }
+  ],
+  "testPresets": [
+    { "name": "dev", "configurePreset": "dev", "output": { "outputOnFailure": true } },
+    { "name": "all", "configurePreset": "all", "output": { "outputOnFailure": true } }
+  ]
+}
