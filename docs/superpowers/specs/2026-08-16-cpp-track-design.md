@@ -98,6 +98,35 @@ whereas an extension is.
 The two mechanisms cannot overlap: `*.cpp` at a judge's top level is always an
 executable, `*.hpp` is always a header linked into gtest.
 
+### Why function-signature solutions are `.hpp`
+
+A LeetCode solution is a `class Solution` with methods defined inline. A
+GoogleTest file cannot call `Solution::minPathSum` without the class
+definition in scope, and a class's members cannot be usefully
+forward-declared — so the test must textually include the solution file. That
+much is structural. The file genuinely is a header, and `.hpp` names it
+accurately.
+
+The build also needs *some* way to keep a `main`-less file out of the
+executable glob, or it produces a target failing to link with `undefined
+symbol: _main`. The extension does that as a side effect, decidably from the
+filename alone. Two alternatives were considered:
+
+- **Per-judge registration** (`set(PS_FUNCTION_JUDGES leetcode programmers)`,
+  excluding those judges from the executable glob). Keeps every solution named
+  `.cpp`, at the cost of one build-file line per function-style judge and
+  `#include "TwoSum.cpp"` in every test — including a translation unit, to
+  preserve a filename convention.
+- **Per-problem inference** (function-style iff `tests/<problem>_test.cpp`
+  exists). Needs no registration and supports mixed judges, but writing a
+  solution before its test fails with an obscure link error, which is a normal
+  workflow step.
+
+The extension is not a deviation from the flat layout: `.hpp` files are still
+one-per-problem at the judge's top level and still paste-able whole. Only the
+extension differs, on exactly the files whose role differs. The distinction
+affects LeetCode and Programmers only; every other judge is stdin/stdout.
+
 ### Why subprocess, not in-process
 
 Stdin/stdout solutions are launched as separate processes rather than linked
