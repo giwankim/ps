@@ -34,9 +34,20 @@ endforeach()
 
 set(missing_tests "")
 foreach(judge IN LISTS judges)
+  # Skip judges outside PS_SCOPE. PS_SCOPE is "all", a judge name, or "<judge>/<problem>".
+  if(NOT PS_SCOPE STREQUAL "all"
+     AND NOT PS_SCOPE STREQUAL "${judge}"
+     AND NOT PS_SCOPE MATCHES "^${judge}/")
+    continue()
+  endif()
+
   file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/*.cpp")
   foreach(src IN LISTS sources)
     get_filename_component(problem "${src}" NAME_WE)
+    # A "<judge>/<problem>" scope narrows to exactly one problem.
+    if(PS_SCOPE MATCHES "/" AND NOT PS_SCOPE STREQUAL "${judge}/${problem}")
+      continue()
+    endif()
     string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
     set(target "${judge}_${safe}")
     add_executable("${target}" "${src}")
