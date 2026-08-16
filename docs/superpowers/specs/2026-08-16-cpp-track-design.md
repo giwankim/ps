@@ -66,9 +66,9 @@ cpp/
 │       └── 1000/
 │           ├── sample-1.in / sample-1.out
 │           └── max-values.in / max-values.out
-├── codeforces/
-│   ├── 1woA.cpp
-│   └── tests/1woA/ ...
+├── atcoder/
+│   ├── abc300_a.cpp
+│   └── tests/abc300_a/ ...
 └── leetcode/
     ├── MinimumPathSum.hpp    # Solution class, methods defined inline, no main
     └── tests/
@@ -280,18 +280,74 @@ Accepted consequence: a formatted file is not byte-identical to what was pasted
 into the judge. In practice you format, then paste.
 
 `.githooks/pre-commit` is **extended, not duplicated** — its stash-and-restore
-logic manipulates the working tree and must remain a single boundary. Two
-edits:
+logic manipulates the working tree and must remain a single boundary. Steps 2–4
+(stash detection, the restore trap, the stash push) are untouched. Two edits:
 
-1. Widen the staged-file gate from `\.(java|kts?)$` to also match
-   `\.(cpp|hpp)$`.
-2. Run each checker only when its language is staged: `./gradlew spotlessCheck
-   ktlintCheck` for Java/Kotlin, `clang-format --dry-run --Werror` on the
-   staged C++ paths. `--dry-run --Werror` is clang-format's check mode; it must
-   never rewrite files, since the hook lints a stashed snapshot.
+1. **The gate becomes two lists instead of a boolean.** It stops answering "is
+   there anything to lint?" and starts answering "*what* is there to lint?",
+   with the lists reused below so nothing is computed twice:
 
-`.githooks/pre-commit.test.sh` gains matching cases: a C++-only commit lints, a
-mixed commit lints both, a Java-only commit skips clang-format.
+   ```bash
+   jvm_staged=$(grep -E '\.(java|kts?)$' <<<"$staged" || true)
+   cpp_staged=$(grep -E '\.(cpp|hpp)$' <<<"$staged" || true)
+   if [ -z "$jvm_staged" ] && [ -z "$cpp_staged" ]; then
+     echo "pre-commit: no staged Java/Kotlin/C++ files; skipping lint."
+     exit 0
+   fi
+   if [ -n "$cpp_staged" ] && ! command -v clang-format >/dev/null 2>&1; then
+     echo "pre-commit: clang-format not found; install with 'brew install clang-format'." >&2
+     exit 1
+   fi
+   ```
+
+   The tool-presence check sits **before** the stash, so a missing tool fails
+   without ever touching the working tree. Every path exiting after step 4 must
+   be provably restore-safe; the cheapest way to be safe is to not be there yet.
+
+2. **Each checker runs only when its language is staged**, after the stash, so
+   both see the staged snapshot on disk:
+
+   ```bash
+   if [ -n "$jvm_staged" ]; then
+     ./gradlew spotlessCheck ktlintCheck
+   fi
+   if [ -n "$cpp_staged" ]; then
+     printf '%s\n' "$cpp_staged" | tr '\n' '\0' | xargs -0 clang-format --dry-run --Werror --
+   fi
+   ```
+
+Three constraints the implementation must honor:
+
+- `--dry-run --Werror` is clang-format's check mode (there is no `--check`). It
+  must never rewrite files, since the hook lints a stashed snapshot.
+- `tr '\n' '\0' | xargs -0` rather than word-splitting, so paths with spaces
+  survive. Combined with the existing `core.quotePath=false`, so do Korean
+  filenames — the bug T9 exists for.
+- **No `mapfile` or arrays.** macOS ships bash 3.2 and the existing script
+  sticks to constructs that work there.
+
+### Regression suite additions
+
+`pre-commit.test.sh` gains a fake `clang-format` on `PATH`, mirroring the
+existing `FAKE_GRADLEW` — a content-sensitive fake failing iff a staged
+`.cpp`/`.hpp` contains `BADFORMAT`. New cases append from T10 (the file already
+has a gap at T3; appending rather than renumbering keeps existing failures
+greppable against git history).
+
+| Test | Contract |
+| --- | --- |
+| T10 | Clean staged C++ commits — the gate admits `.cpp`/`.hpp` |
+| T11 | `BADFORMAT` in staged C++ blocks the commit |
+| T12 | Mixed Java+C++ commit runs both linters — dirty `.cpp` blocks even when the Java is clean |
+| T13 | Java-only commit never invokes clang-format — proven with an always-failing fake; the commit must still succeed |
+| T14 | C++-only commit never invokes Gradle — proven with an always-failing fake gradlew |
+| T15 | Unstaged dirty `.cpp` does not block (the C++ mirror of T5) |
+| T16 | Missing clang-format with staged C++ → blocked, clear message, no leaked stash |
+
+T13 and T14 are the load-bearing cases: they are the only ones proving
+*conditional* dispatch. Without them, a refactor that unconditionally ran both
+linters would pass every other test while making every C++ commit pay a full
+Gradle startup.
 
 ## Per-problem workflow
 
@@ -320,6 +376,25 @@ mixed commit lints both, a Java-only commit skips clang-format.
 
 Because no solution is split across a header and an implementation file,
 submission is always a single copy with no bundler step.
+
+## Seed scope
+
+The initial implementation creates two judge directories, **`cpp/boj/` and
+`cpp/atcoder/`**, each with at least one already-solved problem carrying real
+statement samples and passing tests. Two judges rather than one is deliberate:
+a single judge cannot demonstrate that the judge-directory glob generalizes,
+and AtCoder was just registered on the Java side, so it is live work rather
+than a contrived example.
+
+`cpp/codeforces/` and `cpp/leetcode/` are **not** created. Adding them later
+requires no build-file edit — that is the discovery model's central claim, and
+leaving them out is what puts the claim under test.
+
+Consequence to note: both seed judges are stdin/stdout, so the GoogleTest half
+of the design ships without a problem exercising it. Whether that half is built
+in the first pass or deferred until the first LeetCode problem is a sequencing
+decision for the implementation plan, not a design decision — the two
+mechanisms share no code beyond the top-level `CMakeLists.txt`.
 
 ## Prerequisites
 
