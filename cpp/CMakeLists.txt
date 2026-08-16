@@ -37,6 +37,21 @@ foreach(judge IN LISTS judges)
   foreach(src IN LISTS sources)
     get_filename_component(problem "${src}" NAME_WE)
     string(REGEX REPLACE "[^A-Za-z0-9_.+-]" "_" safe "${problem}")
-    add_executable("${judge}_${safe}" "${src}")
+    set(target "${judge}_${safe}")
+    add_executable("${target}" "${src}")
+
+    set(data_dir "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/tests/${problem}")
+    file(GLOB inputs CONFIGURE_DEPENDS "${data_dir}/*.in")
+    foreach(input IN LISTS inputs)
+      get_filename_component(stem "${input}" NAME_WE)
+      set(test_name "${judge}/${problem}/${stem}")
+      add_test(NAME "${test_name}"
+               COMMAND ${CMAKE_COMMAND}
+                       "-DEXE=$<TARGET_FILE:${target}>"
+                       "-DINPUT=${input}"
+                       "-DEXPECTED=${data_dir}/${stem}.out"
+                       -P "${CMAKE_CURRENT_SOURCE_DIR}/cmake/RunCase.cmake")
+      set_tests_properties("${test_name}" PROPERTIES TIMEOUT ${PS_TIMEOUT})
+    endforeach()
   endforeach()
 endforeach()
