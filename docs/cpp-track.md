@@ -9,6 +9,10 @@ Gradle build. Design: [docs/superpowers/specs/2026-08-16-cpp-track-design.md](su
 brew install cmake ninja clang-format
 ```
 
+`cpp/.clang-format` is Google style at `ColumnLimit: 100`; the repo's git pre-commit hook runs
+`clang-format --dry-run --Werror` on staged `.cpp`/`.hpp` files, which is what `clang-format`
+above is for.
+
 `g++-16` must be at `/opt/homebrew/bin/g++-16`; every preset pins it. Apple
 clang is never used — `<bits/stdc++.h>` and `__gnu_pbds` are libstdc++-only, so
 building with clang would diverge from the judges.
@@ -47,8 +51,8 @@ Cache variables:
 | `PS_STD` | `23` | C++ standard |
 | `PS_TIMEOUT` | `5` | Per-test timeout in seconds |
 
-Keep your active problem in `cpp/CMakeUserPresets.json` (gitignored), or
-override per configure:
+Keep your active problem in `cpp/CMakeUserPresets.json` (gitignored — CMake merges it
+with `CMakePresets.json` automatically), or override per configure:
 
 ```bash
 cd cpp
@@ -56,6 +60,36 @@ cmake --preset dev -DPS_SCOPE=boj/1000
 cmake --build --preset dev
 ctest --preset dev
 ```
+
+`CMakeUserPresets.json` is not tracked, so its shape has to live here. Template:
+
+```json
+{
+  "version": 3,
+  "cmakeMinimumRequired": { "major": 3, "minor": 24, "patch": 0 },
+  "configurePresets": [
+    {
+      "name": "current",
+      "displayName": "current problem",
+      "inherits": "dev",
+      "cacheVariables": { "PS_SCOPE": "boj/1000" }
+    }
+  ]
+}
+```
+
+`current` defines only a *configure* preset — there is no matching `current` entry under
+`buildPresets` or `testPresets`, so `cmake --build --preset current` fails. Because `current`
+inherits `dev` (and therefore `dev`'s `binaryDir`), the loop that actually works is:
+
+```bash
+cd cpp
+cmake --preset current
+cmake --build --preset dev
+ctest --preset dev
+```
+
+Edit `PS_SCOPE` in the file each time you switch problems.
 
 ## Adding a problem
 
@@ -66,7 +100,7 @@ ctest --preset dev
 3. `cmake --preset dev -DPS_SCOPE=<judge>/<problem> && cmake --build --preset dev && ctest --preset dev`
 4. Submit: `pbcopy < cpp/<judge>/<problem>.cpp`. Every solution is one
    self-contained file, so there is no bundling step.
-5. Add the problem to [../cpp/README.md](../cpp/README.md).
+5. Add the problem to [cpp/README.md](../cpp/README.md).
 
 ## Judge-environment parity
 
