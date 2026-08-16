@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 #
-# Pre-commit hook: run spotless + ktlint against the STAGED snapshot (exactly what
-# the commit will contain), then restore your uncommitted work precisely -- even
-# on lint failure, Ctrl-C, or partially-staged files.
+# Pre-commit hook: lint the STAGED snapshot (exactly what the commit will
+# contain) -- spotless + ktlint for Java/Kotlin, clang-format for C++ -- then
+# restore your uncommitted work precisely -- even on lint failure, Ctrl-C, or
+# partially-staged files.
 #
 # See pre-commit.test.sh for the regression suite. Key design choices:
-#   * Runs only when Java/Kotlin is actually staged.
+#   * Runs only when Java/Kotlin or C++ is actually staged, and each linter
+#     runs only for the language(s) actually staged.
 #   * Hides BOTH unstaged tracked edits and untracked files, so an unrelated WIP
 #     file can't fail the build and the linter sees only the staged content.
 #   * Restores by re-applying the stash onto a clean HEAD (reset --hard + apply
@@ -71,7 +73,9 @@ if [ "$need_stash" = true ]; then
   stash_ref=$(git rev-parse -q --verify 'stash@{0}')
 fi
 
-# 5. Lint the staged snapshot now on disk. One Gradle invocation for both tools.
+# 5. Lint the staged snapshot now on disk: one Gradle invocation for the JVM
+#    tools, one clang-format invocation for C++, each run only when its
+#    language is actually staged.
 echo "pre-commit: linting staged changes..."
 if [ -n "$jvm_staged" ]; then
   ./gradlew spotlessCheck ktlintCheck

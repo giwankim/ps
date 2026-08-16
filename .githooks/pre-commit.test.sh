@@ -2,12 +2,16 @@
 #
 # Regression tests for the pre-commit hook (.githooks/pre-commit).
 #
-# Each test builds a throwaway git repo with a FAKE ./gradlew -- no real Gradle or
-# JVM runs -- then drives the hook through a real `git commit` and asserts its
-# contract. The fake gradlew models a whole-tree linter: it fails iff some *.java
-# on disk contains the marker "BADFORMAT". That lets the tests prove WHICH content
-# the hook puts on disk (the staged snapshot) at lint time, and that it restores
-# the working tree afterward.
+# Each test builds a throwaway git repo with a FAKE ./gradlew and a FAKE
+# bin/clang-format -- no real Gradle, JVM, or clang-format runs -- then drives
+# the hook through a real `git commit` and asserts its contract. The fake
+# gradlew models a whole-tree linter: it fails iff some *.java on disk contains
+# the marker "BADFORMAT". The fake clang-format models a per-file linter: it
+# fails iff the file it's given contains that marker (or, to catch a dispatch
+# bug, if it's ever handed a *.java file at all). Together they let the tests
+# prove WHICH content the hook puts on disk (the staged snapshot) at lint time,
+# WHICH tool runs for a given staged language, and that the hook restores the
+# working tree afterward.
 #
 # Usage: .githooks/pre-commit.test.sh [path-to-hook]   (defaults to ./pre-commit)
 set -uo pipefail
@@ -30,10 +34,14 @@ echo "fake-lint: clean"; exit 0
 '
 
 # Fake clang-format: a per-file checker that fails on any argument containing
-# BADFORMAT. Mirrors FAKE_GRADLEW so tests can prove WHICH tool ran.
+# BADFORMAT, or on any *.java argument (clang-format has a Java mode, so
+# feeding it Java files -- e.g. by dispatching on $staged instead of
+# $cpp_staged -- would be a real bug, not just a test artifact). Mirrors
+# FAKE_GRADLEW so tests can prove WHICH tool ran, and WHICH files it received.
 FAKE_CLANG_FORMAT='#!/usr/bin/env bash
 for f in "$@"; do
   case "$f" in --*) continue;; esac
+  case "$f" in *.java) echo "fake-clang-format: should never see $f" >&2; exit 1;; esac
   if [ -f "$f" ] && grep -q BADFORMAT "$f"; then
     echo "fake-clang-format: $f needs formatting" >&2
     exit 1
@@ -243,6 +251,38 @@ printf 'class B {}\n' >B.java          # untracked, so a stash would be taken
 assert "T16 missing clang-format blocks" "$(try_commit sixteen)" "no"
 assert "T16 message names clang-format" "$(grep -c clang-format hook.log)" "1"
 assert "T16 no leaked stash" "$(stash_count)" "0"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T17 -- clang-format failing AFTER the stash must still restore the tree.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'int main() { return 0; }\n// BADFORMAT\n' >a.cpp
+git add a.cpp
+printf 'int main() { return 1; }\n// WIP-UNSTAGED\n' >a.cpp
+printf 'scratch\n' >untracked.txt
+assert "T17 dirty staged cpp blocks" "$(try_commit seventeen)" "no"
+assert "T17 no leaked stash after cpp block" "$(stash_count)" "0"
+assert "T17 unstaged cpp edit restored" "$(grep -c WIP-UNSTAGED a.cpp)" "1"
+assert "T17 untracked file restored" "$(cat untracked.txt)" "scratch"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T18 -- a mixed commit runs Gradle too: clean C++ must not excuse dirty Java.
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'class A {}\n// BADFORMAT\n' >A.java
+printf 'int main() { return 0; }\n' >a.cpp
+git add A.java a.cpp
+assert "T18 mixed commit lints java too" "$(try_commit eighteen)" "no"
+cd "$ORIG"; PS_TEST_PATH="$PATH"
+
+# T19 -- a clean mixed commit succeeds. T12/T18 alone don't prove clang-format
+#        receives C++ paths only ($cpp_staged, not $staged): both stage one
+#        dirty file, so the commit is expected to block either way. Here
+#        everything is clean, so if clang-format were handed the staged .java
+#        too it would spuriously block (see FAKE_CLANG_FORMAT's *.java guard).
+d=$(new_sandbox); cd "$d"; PS_TEST_PATH="$d/bin:$PATH"
+printf 'class A {}\n' >A.java
+printf 'int main() { return 0; }\n' >a.cpp
+git add A.java a.cpp
+assert "T19 clean mixed commit succeeds" "$(try_commit nineteen)" "yes"
 cd "$ORIG"; PS_TEST_PATH="$PATH"
 
 echo "----"
