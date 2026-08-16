@@ -299,6 +299,7 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 - [17682. 다트 게임](https://school.programmers.co.kr/learn/courses/30/lessons/17682)
 - [42889. 실패율](https://school.programmers.co.kr/learn/courses/30/lessons/42889)
 - [68645. 삼각 달팽이](https://school.programmers.co.kr/learn/courses/30/lessons/68645)
+- [72410. 신규 아이디 추천](https://school.programmers.co.kr/learn/courses/30/lessons/72410)
 - [72412. 순위 검색](https://school.programmers.co.kr/learn/courses/30/lessons/72412)
 - [81301. 숫자 문자열과 영단어](https://school.programmers.co.kr/learn/courses/30/lessons/81301)
 - [81302. 거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
