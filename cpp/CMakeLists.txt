@@ -32,6 +32,7 @@ foreach(entry IN LISTS _entries)
   endif()
 endforeach()
 
+set(missing_tests "")
 foreach(judge IN LISTS judges)
   file(GLOB sources CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/*.cpp")
   foreach(src IN LISTS sources)
@@ -42,8 +43,17 @@ foreach(judge IN LISTS judges)
 
     set(data_dir "${CMAKE_CURRENT_SOURCE_DIR}/${judge}/tests/${problem}")
     file(GLOB inputs CONFIGURE_DEPENDS "${data_dir}/*.in")
+    if(NOT inputs)
+      list(APPEND missing_tests "${judge}/${problem}")
+      continue()
+    endif()
+
     foreach(input IN LISTS inputs)
       get_filename_component(stem "${input}" NAME_WE)
+      if(NOT EXISTS "${data_dir}/${stem}.out")
+        message(FATAL_ERROR
+          "cpp: ${judge}/${problem}/${stem}.in has no matching ${stem}.out")
+      endif()
       set(test_name "${judge}/${problem}/${stem}")
       add_test(NAME "${test_name}"
                COMMAND ${CMAKE_COMMAND}
@@ -55,3 +65,8 @@ foreach(judge IN LISTS judges)
     endforeach()
   endforeach()
 endforeach()
+
+if(missing_tests)
+  string(REPLACE ";" ", " _missing "${missing_tests}")
+  message(WARNING "cpp: no test data for: ${_missing}")
+endif()
