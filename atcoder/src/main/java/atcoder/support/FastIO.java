@@ -23,7 +23,7 @@ import java.util.StringTokenizer;
  * <p>This class is a reference template, not a dependency -- nothing imports it. AtCoder requires
  * every Java submission to be a single {@code Main.java} declaring {@code public class Main}, so
  * the judge never sees {@code atcoder.support}. Copy this in as a nested {@code static class}
- * beside the solution logic, the way {@code atcoder.abc300d.Main} and friends do, and keep the
+ * beside the solution logic, the way {@code atcoder.abc471.a.Main} and friends do, and keep the
  * edits that a given problem needs (an extra {@code nextChar}, a byte-level reader) local to that
  * copy.
  */
