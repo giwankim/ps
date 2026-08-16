@@ -470,6 +470,7 @@ One package per task, named after the task ID with the underscore turned into a 
 - [ABC 471](https://atcoder.jp/contests/abc471)
     - [A. Nine or Nein](https://atcoder.jp/contests/abc471/tasks/abc471_a)
     - [B. Survey Tabulation](https://atcoder.jp/contests/abc471/tasks/abc471_b)
+    - [C. Cookies and Greedy Takahashi](https://atcoder.jp/contests/abc471/tasks/abc471_c)
 
 ## [USACO](https://usaco.org/index.php)
 
