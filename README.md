@@ -463,9 +463,13 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 ## [AtCoder](https://atcoder.jp/)
 
-One package per task, named after the task ID with the underscore stripped: `abc300_d` lives in
-`atcoder.abc300d`. AtCoder requires every Java submission to declare `public class Main`, so each
-task needs a package of its own.
+One package per task, named after the task ID with the underscore turned into a package separator:
+`abc471_a` lives in `atcoder.abc471.a`. AtCoder requires every Java submission to declare
+`public class Main`, so each task needs a package of its own.
+
+- [ABC 471](https://atcoder.jp/contests/abc471)
+    - [A. Nine or Nein](https://atcoder.jp/contests/abc471/tasks/abc471_a)
+    - [B. Survey Tabulation](https://atcoder.jp/contests/abc471/tasks/abc471_b)
 
 ## [USACO](https://usaco.org/index.php)
 
