@@ -461,6 +461,12 @@ review-file workflow, pin/skip rules, and Gradle wrapper update.
 
 - [01230. MODEX](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=247&page=show_problem&problem=3671)
 
+## [AtCoder](https://atcoder.jp/)
+
+One package per task, named after the task ID with the underscore stripped: `abc300_d` lives in
+`atcoder.abc300d`. AtCoder requires every Java submission to declare `public class Main`, so each
+task needs a package of its own.
+
 ## [USACO](https://usaco.org/index.php)
 
 - [2024 January](https://usaco.org/index.php?page=jan24results)
