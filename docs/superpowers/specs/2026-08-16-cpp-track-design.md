@@ -390,11 +390,13 @@ than a contrived example.
 requires no build-file edit — that is the discovery model's central claim, and
 leaving them out is what puts the claim under test.
 
-Consequence to note: both seed judges are stdin/stdout, so the GoogleTest half
-of the design ships without a problem exercising it. Whether that half is built
-in the first pass or deferred until the first LeetCode problem is a sequencing
-decision for the implementation plan, not a design decision — the two
-mechanisms share no code beyond the top-level `CMakeLists.txt`.
+Consequence: both seed judges are stdin/stdout, so nothing would exercise the
+GoogleTest half. **It is therefore deferred** — the first pass implements the
+stdin/stdout mechanism only, and GoogleTest lands with the first
+function-signature problem. Nothing unvalidated ships, and the deferral is
+cheap because the two mechanisms share no code beyond the top-level
+`CMakeLists.txt`. The design above stands as written; only its implementation
+is sequenced later.
 
 ## Prerequisites
 
@@ -443,6 +445,9 @@ against one sample from the IDE.
 Explicitly out of scope for the initial implementation, to be revisited once
 enough problems exist to know what the tooling should contain:
 
+- **The GoogleTest half** — `FetchContent`, the `<judge>_tests` targets, and
+  `.hpp` discovery. Designed in full above; implemented when the first
+  function-signature problem lands, so it is never shipped unexercised.
 - A `cpp/tools/ps.py` CLI with `new` (scaffold a problem) and `stress`
   (generator vs. brute-force differential testing) verbs.
 - A CLion External Tool bound to a shortcut that runs the current editor file's
