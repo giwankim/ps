@@ -244,6 +244,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings)
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 - [1732. Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)
+- [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately)
 - [1774. Closest Dessert Cost](https://leetcode.com/problems/closest-dessert-cost)
 - [1833. Maximum Ice Cream Bars](https://leetcode.com/problems/maximum-ice-cream-bars)
 - [1846. Maximum Element After Decreasing and Rearranging](https://leetcode.com/problems/maximum-element-after-decreasing-and-rearranging)
