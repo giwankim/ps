@@ -313,6 +313,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [87377. 교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
 - [92341. 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
 - [120807. 숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
+- [150370. 개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)
 - [468370. 중요한 단어를 스포 방지](https://school.programmers.co.kr/learn/courses/30/lessons/468370)
 
 ## [Baekjoon](https://www.acmicpc.net/)
