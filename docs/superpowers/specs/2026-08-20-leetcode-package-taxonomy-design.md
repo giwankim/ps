@@ -6,10 +6,10 @@
 
 ## Problem
 
-`leetcode/src/main/java/leetcode/` holds 282 solution classes in a single flat
+`leetcode/src/main/java/leetcode/` holds 281 solution classes in a single flat
 package, alongside `leetcode.support` (3 shared node types). The mirrored test
-tree holds 284 more. Browsing the module in the IDE means scrolling one
-undifferentiated list of 282 entries.
+tree holds 283 more. Browsing the module in the IDE means scrolling one
+undifferentiated list of 281 entries.
 
 Two properties of the module make this cheap to fix:
 
@@ -28,7 +28,7 @@ LeetCode problem number:
 leetcode/
 ├─ support/          ListNode, TreeNode, Node   (unchanged)
 ├─ p0001_0100/       68
-├─ p0101_0200/       47
+├─ p0101_0200/       46
 ├─ p0201_0300/       35
 ├─ p0301_0400/       13
 │  … 36 non-empty packages …
@@ -47,15 +47,17 @@ unrelated files to migrate packages. Fixed-width boundaries never move, which is
 the entire point of a number-keyed scheme.
 
 The cost is accepted imbalance — 36 packages with a long tail of 1–3-class ones,
-and 68 in `p0001_0100`. That is 68 instead of 282, in the package you navigate to
-most confidently.
+and 68 in `p0001_0100`. That is 68 instead of 281, in the package you navigate to
+most confidently. `p0001_0100` is also the fastest-growing package, and the
+javadoc stamp below is what makes splitting it later a scripted operation rather
+than a second research pass.
 
 ## Rejected alternatives
 
 | Alternative | Reason rejected |
 |---|---|
-| Topic/algorithm packages (`dp`, `graph`, `tree`) | Best browse story, but each class lives in exactly one package while many problems are genuinely multi-topic. Requires classifying 282 implementations by hand, and the taxonomy is subjective. |
-| One package per problem, `boj`-style (`leetcode.lc0322`) | `boj/` uses this because 138 of its 139 classes are named `Main.java` (a Baekjoon requirement) and cannot share a package. LeetCode has no such constraint, and 282 single-file folders would make the tree *more* crowded, not less. |
+| Topic/algorithm packages (`dp`, `graph`, `tree`) | Best browse story, but each class lives in exactly one package while many problems are genuinely multi-topic. Requires classifying 281 implementations by hand, and the taxonomy is subjective. |
+| One package per problem, `boj`-style (`leetcode.lc0322`) | `boj/` uses this because 138 of its 139 classes are named `Main.java` (a Baekjoon requirement) and cannot share a package. LeetCode has no such constraint, and 281 single-file folders would make the tree *more* crowded, not less. |
 | Difficulty packages (`easy`/`medium`/`hard`) | Leaves ~150 classes in `medium/`. Does not solve the crowding. |
 | No move; IntelliJ Scopes only | Supports multi-membership and zero churn, but is IDE-local config, invisible to anything outside IntelliJ and to the module's own structure. |
 
@@ -71,10 +73,10 @@ reworked problems.
 
 ### Resolution method
 
-Normalizing both sides to `[^a-z0-9]` -stripped lowercase matched **257 of 282
-(91%)** automatically. The remaining 25 were resolved by fuzzy match plus reading
-each class's method signature, and are marked **manual** in the appendix. Notable
-cases:
+Normalizing both sides to `[^a-z0-9]` -stripped lowercase matched **257 of 281
+(91.5%)** automatically. The remaining 24 were resolved by fuzzy match plus
+reading each class's method signature, and are marked **manual** in the appendix.
+Notable cases:
 
 - `ThreeSum` → 15 (*3Sum*), `Sqrt` → 69 (*Sqrt(x)*), `Pow` → 50 (*Pow(x, n)*) —
   digit/punctuation forms that normalization cannot bridge.
@@ -84,6 +86,10 @@ cases:
 - `MinStepsToMakeTwoStringsAnagram` → 1347, not 2186 (*II*): counts surplus in
   one direction only.
 - `CountCompletePairPairs2` → 3185 (*Complete Day II*), not 3184: returns `long`.
+
+The mapping is a verified bijection: every one of the 281 classes on disk has
+exactly one number, and every mapped class exists on disk. **No two classes map
+to the same problem number.**
 
 ## Javadoc problem stamp
 
@@ -101,15 +107,15 @@ topic taxonomy) becomes a scripted operation rather than a second research pass.
 
 Existing `@implNote` complexity javadoc on methods is untouched.
 
-## Open item: duplicate solution for #121
+## Resolved: duplicate solution for #121
 
-Mapping to numbers revealed that **`MaxProfit` and `BestTimeToBuyAndSellStock`
-are the same problem** (#121) — same signature, same min-price scan, same result.
-`MaxProfit` carries no `@implNote` and is the weaker of the two.
+Mapping to numbers revealed that `MaxProfit` and `BestTimeToBuyAndSellStock` were
+the same problem (#121) — same signature, same min-price scan, same result.
+Detected only because numbering provides a canonical key that class names do not.
 
-Both can coexist in `p0101_0200` (distinct class names), so this does not block
-the migration. **Deleting `MaxProfit` and its test is deferred to the user's
-decision** and is not part of this change.
+**Resolved before migration:** the user deleted `MaxProfit` and `MaxProfitTest`.
+Counts in this spec reflect the post-deletion state (281 solutions, 281 tests),
+and the mapping now contains no duplicate problem numbers.
 
 ## Migration plan
 
@@ -117,7 +123,7 @@ decision** and is not part of this change.
    `src/test/java/leetcode/`.
 2. `git mv` each solution and its `*Test` counterpart into its package —
    `git mv` preserves file history.
-3. Rewrite the `package` line in all 564 moved files.
+3. Rewrite the `package` line in all 562 moved files.
 4. **No import changes required.** Verified: `leetcode.support` is already a
    distinct package from `leetcode`, so all 46 dependent classes import it
    explicitly today and those imports stay valid at any package depth. Five
@@ -125,25 +131,25 @@ decision** and is not part of this change.
    `DesignAddAndSearchWordsDataStructure`, `ImplementTrie`,
    `PopulatingNextRightPointersInEachNodeII`) declare their own nested `Node`;
    nested-class resolution outranks imports, so these are unaffected.
-5. Add the javadoc stamp to each of the 282 solution classes.
+5. Add the javadoc stamp to each of the 281 solution classes.
 6. `./gradlew :leetcode:spotlessApply` (module uses palantir-java-format).
 
 Tests mirror main exactly: `TwoSumTest` follows `TwoSum` into `p0001_0100`.
-Pairing is currently perfect — every one of the 282 solutions has exactly one
+Pairing is currently perfect — every one of the 281 solutions has exactly one
 `*Test`, with no orphans in either direction. `leetcode.support` and its 2 tests
 stay where they are.
 
 ## Verification
 
-- `./gradlew :leetcode:test` — all 284 tests pass.
+- `./gradlew :leetcode:test` — all 283 tests pass.
 - `./gradlew :leetcode:spotlessCheck` — formatting clean.
-- Assert 282 solution classes still exist and each declares a `p####_####`
+- Assert 281 solution classes still exist and each declares a `p####_####`
   package: no file silently dropped or left behind in `leetcode`.
 - `git log --follow` on a sample moved file confirms history survived.
 
 ## Appendix: complete class → package mapping
 
-282 rows, grouped by target package. `manual` marks a number resolved by
+281 rows, grouped by target package. `manual` marks a number resolved by
 inspection rather than exact title match.
 
 ### `leetcode.p0001_0100` — 68 classes
@@ -219,7 +225,7 @@ inspection rather than exact title match.
 | 98 | `ValidateBinarySearchTree` | Validate Binary Search Tree | auto |
 | 100 | `SameTree` | Same Tree | auto |
 
-### `leetcode.p0101_0200` — 47 classes
+### `leetcode.p0101_0200` — 46 classes
 
 | # | Class | LeetCode title | Source |
 |---|---|---|---|
@@ -235,7 +241,6 @@ inspection rather than exact title match.
 | 117 | `PopulatingNextRightPointersInEachNodeII` | Populating Next Right Pointers in Each Node II | auto |
 | 120 | `Triangle` | Triangle | auto |
 | 121 | `BestTimeToBuyAndSellStock` | Best Time to Buy and Sell Stock | auto |
-| 121 | `MaxProfit` | Best Time to Buy and Sell Stock | **manual** |
 | 122 | `BestTimeToBuyAndSellStockII` | Best Time to Buy and Sell Stock II | auto |
 | 123 | `BestTimeToBuyAndSellStockIII` | Best Time to Buy and Sell Stock III | auto |
 | 124 | `BinaryTreeMaximumPathSum` | Binary Tree Maximum Path Sum | auto |
