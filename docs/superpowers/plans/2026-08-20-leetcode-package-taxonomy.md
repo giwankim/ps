@@ -19,7 +19,9 @@
 - **Run `./gradlew :leetcode:spotlessApply` before every commit** that touches `.java`. The module uses palantir-java-format; the pre-commit hook lints staged Java.
 - **American spelling** in all prose, javadoc, and comments.
 - **The spec appendix is the reviewed source of truth.** The generated TSV must agree with it row for row; Task 1 asserts this.
-- Do not commit the user's staged `MaxProfit` deletions or their unrelated WIP files. Commit only the paths each task names.
+- **Never `git add` an untracked file.** Roughly 25 solutions and tests are uncommitted WIP the user chose to leave uncommitted; the migration relocates them but must not commit them. Always `git add -u` with an explicit path limit. Verify after staging that `git status --short leetcode/ | grep '^??'` still lists them.
+- Work happens on branch `refactor/leetcode-package-taxonomy`, not `main`.
+- Commit only the paths each task names. Unrelated modifications (e.g. `boj/`) stay out.
 
 ## File Structure
 
@@ -303,10 +305,26 @@ def package_for(number: int) -> str:
     return f"p{lo:04d}_{lo + 99:04d}"
 
 
+def is_tracked(path: pathlib.Path) -> bool:
+    return subprocess.run(
+        ["git", "ls-files", "--error-unmatch", str(path)],
+        cwd=ROOT,
+        capture_output=True,
+    ).returncode == 0
+
+
 def move(path: pathlib.Path, package: str) -> None:
     target = path.parent / package / path.name
     target.parent.mkdir(exist_ok=True)
-    subprocess.run(["git", "mv", str(path), str(target)], check=True, cwd=ROOT)
+    # git mv preserves history but exits 128 on untracked files ("fatal: not
+    # under version control"). Roughly 25 files here are new uncommitted
+    # solves; they have no history to preserve, so a plain rename loses
+    # nothing. Note `git mv -n` does NOT reproduce the failure — the dry run
+    # skips the tracking check — so this must be decided per file at runtime.
+    if is_tracked(path):
+        subprocess.run(["git", "mv", str(path), str(target)], check=True, cwd=ROOT)
+    else:
+        path.rename(target)
     text = target.read_text(encoding="utf-8")
     if not text.startswith("package leetcode;\n"):
         raise SystemExit(f"{target}: unexpected first line, refusing to rewrite")
@@ -443,10 +461,17 @@ Expected: commits predating this migration are listed.
 
 - [ ] **Step 9: Format and commit**
 
+Use `git add -u` with an explicit path limit, **not** a bare `git add <dir>`.
+`git mv` already staged the tracked renames; `-u` picks up the package-line
+edits on top of them. A bare `git add` would additionally stage the ~25
+untracked WIP solutions, committing work the user chose to leave uncommitted.
+The path limit keeps unrelated modifications (e.g. `boj/`) out of the commit.
+
 ```bash
 cd /Users/gwk/Development/ps
 ./gradlew :leetcode:spotlessApply --console=plain
-git add leetcode/src/main/java/leetcode leetcode/src/test/java/leetcode
+git add -u leetcode/src/main/java/leetcode leetcode/src/test/java/leetcode
+git status --short leetcode/ | grep '^??' | wc -l   # expect ~25, still untracked
 git commit -m "refactor(leetcode): group solutions into numeric range packages
 
 Move 281 solutions and their 281 tests from the flat leetcode package into 36
@@ -578,7 +603,7 @@ Expected: `BUILD SUCCESSFUL`, exit 0.
 ```bash
 cd /Users/gwk/Development/ps
 ./gradlew :leetcode:spotlessApply --console=plain
-git add leetcode/src/main/java/leetcode
+git add -u leetcode/src/main/java/leetcode
 git commit -m "docs(leetcode): link each solution class to its problem
 
 Add a class-level javadoc link carrying the problem number, title, and URL, so
