@@ -1,5 +1,9 @@
 package leetcode.p0301_0400;
 
+/**
+ * <a href="https://leetcode.com/problems/longest-increasing-path-in-a-matrix/">329. Longest
+ * Increasing Path in a Matrix</a>
+ */
 public class LongestIncreasingPathInMatrix {
   private static int[] dx = {0, 0, -1, 1};
   private static int[] dy = {-1, 1, 0, 0};

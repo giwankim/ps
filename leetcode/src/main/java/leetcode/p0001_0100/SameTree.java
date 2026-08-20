@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import leetcode.support.TreeNode;
 
+/** <a href="https://leetcode.com/problems/same-tree/">100. Same Tree</a> */
 public class SameTree {
   /** @implNote Time {@code O(n)}, space {@code O(h)}. */
   public boolean isSameTree(TreeNode p, TreeNode q) {

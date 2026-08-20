@@ -3,6 +3,10 @@ package leetcode.p3501_3600;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-product-of-two-digits/">3536. Maximum Product of
+ * Two Digits</a>
+ */
 public class MaximumProductOfTwoDigits {
   /**
    * @implNote Time {@code O(d^2)} — the extraction loop peels {@code d} digits, then the nested

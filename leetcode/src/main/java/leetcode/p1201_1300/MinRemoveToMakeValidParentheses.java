@@ -3,6 +3,10 @@ package leetcode.p1201_1300;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/">1249. Minimum
+ * Remove to Make Valid Parentheses</a>
+ */
 public class MinRemoveToMakeValidParentheses {
   public String minRemoveToMakeValid(String s) {
     StringBuilder sb = new StringBuilder(s);

@@ -4,6 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * <a href="https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/">1481.
+ * Least Number of Unique Integers after K Removals</a>
+ */
 public class LeastNumberOfUniqueIntegers {
   public int findLeastNumOfUniqueInts(int[] arr, int k) {
     Map<Integer, Integer> freqMap = new HashMap<>();

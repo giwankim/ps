@@ -2,6 +2,7 @@ package leetcode.p0801_0900;
 
 import java.util.*;
 
+/** <a href="https://leetcode.com/problems/most-common-word/">819. Most Common Word</a> */
 public class MostCommonWord {
   public String mostCommonWord(String paragraph, String[] banned) {
     HashSet<String> blacklist = new HashSet<>(Arrays.asList(banned));

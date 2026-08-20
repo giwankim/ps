@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/summary-ranges/">228. Summary Ranges</a> */
 public class SummaryRanges {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public List<String> summaryRanges(int[] nums) {

@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import java.util.*;
 
+/** <a href="https://leetcode.com/problems/group-anagrams/">49. Group Anagrams</a> */
 public class GroupAnagrams {
   /** @implNote Time {@code O(n log m)}, space {@code O(nm)}. */
   public List<List<String>> groupAnagrams(String[] strs) {

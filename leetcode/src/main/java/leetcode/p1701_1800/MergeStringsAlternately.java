@@ -1,5 +1,9 @@
 package leetcode.p1701_1800;
 
+/**
+ * <a href="https://leetcode.com/problems/merge-strings-alternately/">1768. Merge Strings
+ * Alternately</a>
+ */
 public class MergeStringsAlternately {
   public String mergeAlternately(String word1, String word2) {
     int n = word1.length();

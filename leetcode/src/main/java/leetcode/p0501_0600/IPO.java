@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/** <a href="https://leetcode.com/problems/ipo/">502. IPO</a> */
 public class IPO {
   /** @implNote Time {@code O(n log n)}, space {@code O(n)}, where {@code n = profits.length}. */
   public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {

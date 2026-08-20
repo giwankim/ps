@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/zigzag-conversion/">6. Zigzag Conversion</a> */
 public class ZigzagConversion {
   public String convert(String s, int numRows) {
     StringBuilder[] sbs = new StringBuilder[numRows];

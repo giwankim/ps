@@ -1,5 +1,9 @@
 package leetcode.p3701_3800;
 
+/**
+ * <a href="https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/">3756.
+ * Concatenate Non-Zero Digits and Multiply by Sum II</a>
+ */
 public class ConcatenateNonZeroDigitsAndMultiplyBySumII {
   public static final int MOD = 1_000_000_007;
 

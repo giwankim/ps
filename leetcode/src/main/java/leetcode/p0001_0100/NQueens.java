@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/n-queens/">51. N-Queens</a> */
 public class NQueens {
   /**
    * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of row-by-row placements — at

@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/climbing-stairs/">70. Climbing Stairs</a> */
 public class ClimbingStairs {
   /**
    * @implNote Bottom-up tabulation of {@code f(n) = f(n-1) + f(n-2)}. Time {@code O(n)}, space

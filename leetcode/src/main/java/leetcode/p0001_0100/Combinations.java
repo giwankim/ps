@@ -3,6 +3,7 @@ package leetcode.p0001_0100;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/combinations/">77. Combinations</a> */
 public class Combinations {
   /**
    * @implNote Time {@code O(k * C(n, k))}, auxiliary space {@code O(k)} excluding the output, where

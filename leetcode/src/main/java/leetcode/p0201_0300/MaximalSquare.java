@@ -1,5 +1,6 @@
 package leetcode.p0201_0300;
 
+/** <a href="https://leetcode.com/problems/maximal-square/">221. Maximal Square</a> */
 public class MaximalSquare {
   /**
    * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for the {@code dp} grid,

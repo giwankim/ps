@@ -6,6 +6,9 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.com/problems/cinema-seat-allocation/">1386. Cinema Seat Allocation</a>
+ */
 public class CinemaSeatAllocation {
   private static final Set<Integer> LEFT = Set.of(2, 3, 4, 5);
   private static final Set<Integer> MIDDLE = Set.of(4, 5, 6, 7);

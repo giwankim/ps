@@ -2,6 +2,7 @@ package leetcode.p0201_0300;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/isomorphic-strings/">205. Isomorphic Strings</a> */
 public class IsomorphicStrings {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean isIsomorphic(String s, String t) {

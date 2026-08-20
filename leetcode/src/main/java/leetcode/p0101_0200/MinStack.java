@@ -3,7 +3,11 @@ package leetcode.p0101_0200;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-/** @implNote Time {@code O(1)}, space {@code O(n)}. */
+/**
+ * <a href="https://leetcode.com/problems/min-stack/">155. Min Stack</a>
+ *
+ * @implNote Time {@code O(1)}, space {@code O(n)}.
+ */
 public class MinStack {
   private final Deque<Pair<Integer, Integer>> stack;
 

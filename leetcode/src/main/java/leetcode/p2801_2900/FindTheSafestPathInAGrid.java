@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * <a href="https://leetcode.com/problems/find-the-safest-path-in-a-grid/">2812. Find the Safest
+ * Path in a Grid</a>
+ */
 public class FindTheSafestPathInAGrid {
   private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 

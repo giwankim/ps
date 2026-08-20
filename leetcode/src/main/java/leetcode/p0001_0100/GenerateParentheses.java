@@ -3,6 +3,7 @@ package leetcode.p0001_0100;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/generate-parentheses/">22. Generate Parentheses</a> */
 public class GenerateParentheses {
   /**
    * @implNote Time {@code O(4^n / √n)}, space {@code O(n)} excluding the output.

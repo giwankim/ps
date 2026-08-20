@@ -1,5 +1,9 @@
 package leetcode.p0901_1000;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-sum-circular-subarray/">918. Maximum Sum Circular
+ * Subarray</a>
+ */
 public class MaximumSumCircularSubarray {
   /** @implNote Time {@code O(n)}, auxiliary space {@code O(1)}, where {@code n = nums.length}. */
   public int maxSubarraySumCircular(int[] nums) {

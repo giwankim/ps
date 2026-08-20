@@ -1,5 +1,9 @@
 package leetcode.p3301_3400;
 
+/**
+ * <a href="https://leetcode.com/problems/smallest-divisible-digit-product-i/">3345. Smallest
+ * Divisible Digit Product I</a>
+ */
 public class SmallestDivisibleDigitProductI {
   /**
    * @implNote Time {@code O(d)}, auxiliary space {@code O(1)}, where {@code d} is the number of

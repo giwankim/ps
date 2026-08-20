@@ -3,6 +3,7 @@ package leetcode.p0201_0300;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/** <a href="https://leetcode.com/problems/meeting-rooms/">252. Meeting Rooms</a> */
 public class MeetingRooms {
   public boolean canAttendMeetings(int[][] intervals) {
     Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));

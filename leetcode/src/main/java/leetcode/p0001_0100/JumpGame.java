@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/jump-game/">55. Jump Game</a> */
 public class JumpGame {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean canJump(int[] nums) {

@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/powx-n/">50. Pow(x, n)</a> */
 public class Pow {
   /** @implNote Time {@code O(log |n|)}, space {@code O(1)}. */
   public double myPow(double x, int n) {

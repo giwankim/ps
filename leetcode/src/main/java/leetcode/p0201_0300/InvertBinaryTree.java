@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Queue;
 import leetcode.support.TreeNode;
 
+/** <a href="https://leetcode.com/problems/invert-binary-tree/">226. Invert Binary Tree</a> */
 public class InvertBinaryTree {
   /** @implNote Time {@code O(n)}, space {@code O(h)}. */
   public TreeNode invertTree(TreeNode root) {

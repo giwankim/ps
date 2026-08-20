@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 import leetcode.support.TreeNode;
 
+/**
+ * <a
+ * href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/">106.
+ * Construct Binary Tree from Inorder and Postorder Traversal</a>
+ */
 public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
   private int postIndex;
 

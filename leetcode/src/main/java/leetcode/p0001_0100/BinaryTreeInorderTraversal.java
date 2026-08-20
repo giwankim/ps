@@ -3,6 +3,10 @@ package leetcode.p0001_0100;
 import java.util.*;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">94. Binary Tree Inorder
+ * Traversal</a>
+ */
 public class BinaryTreeInorderTraversal {
   public List<Integer> inorderTraversal(TreeNode root) {
     if (root == null) {

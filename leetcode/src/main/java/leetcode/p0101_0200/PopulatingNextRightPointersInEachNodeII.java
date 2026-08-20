@@ -7,6 +7,10 @@ import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/**
+ * <a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/">117.
+ * Populating Next Right Pointers in Each Node II</a>
+ */
 public class PopulatingNextRightPointersInEachNodeII {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public Node connect(Node root) {

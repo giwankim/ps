@@ -3,6 +3,10 @@ package leetcode.p1001_1100;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * <a href="https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/">1081.
+ * Smallest Subsequence of Distinct Characters</a>
+ */
 public class SmallestSubsequenceOfDistinctCharacters {
   /**
    * @implNote Time {@code O(n)} since each character is pushed and popped at most once, auxiliary

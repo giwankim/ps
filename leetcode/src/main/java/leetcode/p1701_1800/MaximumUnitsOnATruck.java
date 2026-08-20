@@ -2,6 +2,10 @@ package leetcode.p1701_1800;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-units-on-a-truck/">1710. Maximum Units on a
+ * Truck</a>
+ */
 public class MaximumUnitsOnATruck {
   public int maximumUnits(int[][] boxTypes, int truckSize) {
     int result = 0;

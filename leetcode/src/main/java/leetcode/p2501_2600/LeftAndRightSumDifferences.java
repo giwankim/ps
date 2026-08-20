@@ -1,5 +1,9 @@
 package leetcode.p2501_2600;
 
+/**
+ * <a href="https://leetcode.com/problems/left-and-right-sum-differences/">2574. Left and Right Sum
+ * Differences</a>
+ */
 public class LeftAndRightSumDifferences {
   public int[] leftRightDifference(int[] nums) {
     int n = nums.length;

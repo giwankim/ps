@@ -1,5 +1,9 @@
 package leetcode.p0001_0100;
 
+/**
+ * <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">26. Remove
+ * Duplicates from Sorted Array</a>
+ */
 public class RemoveDuplicatesFromSortedArray {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int removeDuplicates(int[] nums) {

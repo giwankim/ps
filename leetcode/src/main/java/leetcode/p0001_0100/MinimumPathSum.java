@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/minimum-path-sum/">64. Minimum Path Sum</a> */
 public class MinimumPathSum {
   /**
    * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for the {@code dp} grid,

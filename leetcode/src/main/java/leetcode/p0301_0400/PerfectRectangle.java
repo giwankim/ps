@@ -3,6 +3,7 @@ package leetcode.p0301_0400;
 import java.util.HashMap;
 import java.util.Map;
 
+/** <a href="https://leetcode.com/problems/perfect-rectangle/">391. Perfect Rectangle</a> */
 public class PerfectRectangle {
 
   public boolean isRectangleCover(int[][] rectangles) {

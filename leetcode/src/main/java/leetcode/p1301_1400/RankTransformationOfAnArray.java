@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.com/problems/rank-transform-of-an-array/">1331. Rank Transform of an
+ * Array</a>
+ */
 public class RankTransformationOfAnArray {
   /**
    * @implNote Time {@code O(n log n)} from sorting the copy, auxiliary space {@code O(n)} for the

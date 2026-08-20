@@ -1,5 +1,9 @@
 package leetcode.p1101_1200;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-number-of-balloons/">1189. Maximum Number of
+ * Balloons</a>
+ */
 public class MaximumNumberOfBalloons {
   public int maxNumberOfBalloons(String text) {
     int[] counts = new int[26];

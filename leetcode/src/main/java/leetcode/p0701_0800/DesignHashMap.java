@@ -2,6 +2,7 @@ package leetcode.p0701_0800;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/design-hashmap/">706. Design HashMap</a> */
 public class DesignHashMap {
   private final int[] values;
 

@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/set-matrix-zeroes/">73. Set Matrix Zeroes</a> */
 public class SetMatrixZeroes {
   /** @implNote Time {@code O(mn)}, space {@code O(1)}. */
   public void setZeroes(int[][] matrix) {

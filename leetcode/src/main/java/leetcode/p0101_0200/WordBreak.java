@@ -3,6 +3,7 @@ package leetcode.p0101_0200;
 import java.util.List;
 import java.util.Set;
 
+/** <a href="https://leetcode.com/problems/word-break/">139. Word Break</a> */
 public class WordBreak {
   /**
    * @implNote Bottom-up DP testing each {@code O(n^2)} substring {@code s[j, i)} against a hashed

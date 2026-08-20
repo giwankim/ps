@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/longest-common-prefix/">14. Longest Common Prefix</a> */
 public class LongestCommonPrefix {
   /** @implNote Time {@code O(n*m)}, space {@code O(1)}. */
   public String longestCommonPrefix(String[] strs) {

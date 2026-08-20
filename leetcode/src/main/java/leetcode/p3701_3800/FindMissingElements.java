@@ -5,6 +5,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.com/problems/find-missing-elements/">3731. Find Missing Elements</a>
+ */
 public class FindMissingElements {
   /**
    * @implNote Time {@code O(n + r)} expected — one pass hashes every value while tracking the

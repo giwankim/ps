@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/unique-paths-ii/">63. Unique Paths II</a> */
 public class UniquePathsII {
   /**
    * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for the {@code dp} grid,

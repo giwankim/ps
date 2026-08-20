@@ -3,6 +3,10 @@ package leetcode.p3001_3100;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.com/problems/find-the-maximum-number-of-elements-in-subset/">3020. Find
+ * the Maximum Number of Elements in Subset</a>
+ */
 public class FindTheMaximumNumberOfElementsInSubset {
   /**
    * @implNote Time {@code O(n log log V)}, auxiliary space {@code O(n)} for the {@code freq} map,

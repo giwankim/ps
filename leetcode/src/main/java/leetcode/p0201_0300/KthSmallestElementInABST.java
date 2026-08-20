@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/">230. Kth Smallest Element
+ * in a BST</a>
+ */
 public class KthSmallestElementInABST {
   private int count;
   private int val;

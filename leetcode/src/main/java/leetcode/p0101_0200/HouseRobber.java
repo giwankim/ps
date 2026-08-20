@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/house-robber/">198. House Robber</a> */
 public class HouseRobber {
   /**
    * @implNote Time {@code O(n)}, auxiliary space {@code O(n)} for the {@code dp} array, where

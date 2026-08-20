@@ -2,6 +2,10 @@ package leetcode.p0101_0200;
 
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/">114. Flatten Binary
+ * Tree to Linked List</a>
+ */
 public class FlattenBinaryTreeToLinkedList {
   private TreeNode prev = null;
 

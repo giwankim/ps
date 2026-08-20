@@ -1,5 +1,10 @@
 package leetcode.p1301_1400;
 
+/**
+ * <a
+ * href="https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/">1347.
+ * Minimum Number of Steps to Make Two Strings Anagram</a>
+ */
 public class MinStepsToMakeTwoStringsAnagram {
   public int minSteps(String s, String t) {
     int result = 0;

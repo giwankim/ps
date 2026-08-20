@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/sliding-window-maximum/">239. Sliding Window Maximum</a>
+ */
 public class SlidingWindowMaximum {
   public int[] maxSlidingWindow(int[] nums, int k) {
     List<Integer> result = new ArrayList<>();

@@ -2,6 +2,10 @@ package leetcode.p0301_0400;
 
 import java.util.*;
 
+/**
+ * <a href="https://leetcode.com/problems/rearrange-string-k-distance-apart/">358. Rearrange String
+ * k Distance Apart</a>
+ */
 public class RearrangeStringKDistanceApart {
   public String rearrangeString(String s, int k) {
     Map<Character, Integer> freqMap = new HashMap<>();

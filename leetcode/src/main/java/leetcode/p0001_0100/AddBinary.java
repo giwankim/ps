@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/add-binary/">67. Add Binary</a> */
 public class AddBinary {
   /** @implNote Time {@code O(|a| + |b|)}, space {@code O(1)}. */
   public String addBinary(String a, String b) {

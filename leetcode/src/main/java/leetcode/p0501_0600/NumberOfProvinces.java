@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 @SuppressWarnings("unused")
+/** <a href="https://leetcode.com/problems/number-of-provinces/">547. Number of Provinces</a> */
 public class NumberOfProvinces {
   public int findCircleNum(int[][] isConnected) {
     int n = isConnected.length;

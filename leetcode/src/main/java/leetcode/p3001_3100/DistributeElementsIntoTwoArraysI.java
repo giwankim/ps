@@ -3,6 +3,10 @@ package leetcode.p3001_3100;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/distribute-elements-into-two-arrays-i/">3069. Distribute
+ * Elements Into Two Arrays I</a>
+ */
 public class DistributeElementsIntoTwoArraysI {
   /**
    * @implNote Time {@code O(n)} for the distribution pass plus the concatenation, auxiliary space

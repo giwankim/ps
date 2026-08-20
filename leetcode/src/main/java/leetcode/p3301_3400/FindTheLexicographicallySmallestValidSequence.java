@@ -1,5 +1,9 @@
 package leetcode.p3301_3400;
 
+/**
+ * <a href="https://leetcode.com/problems/find-the-lexicographically-smallest-valid-sequence/">3302.
+ * Find the Lexicographically Smallest Valid Sequence</a>
+ */
 public class FindTheLexicographicallySmallestValidSequence {
   /**
    * @implNote Time {@code O(n + m)}, space {@code O(n + m)}, where {@code n = word1.length()} and

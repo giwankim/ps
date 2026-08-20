@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Queue;
 import java.util.stream.IntStream;
 
+/**
+ * <a href="https://leetcode.com/problems/remove-methods-from-project/">3310. Remove Methods From
+ * Project</a>
+ */
 public class RemoveMethodsFromProject {
   private List<Integer>[] graph;
   private boolean[] suspicious;

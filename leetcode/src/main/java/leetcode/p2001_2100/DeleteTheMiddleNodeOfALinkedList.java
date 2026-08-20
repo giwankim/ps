@@ -2,6 +2,10 @@ package leetcode.p2001_2100;
 
 import leetcode.support.ListNode;
 
+/**
+ * <a href="https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/">2095. Delete the
+ * Middle Node of a Linked List</a>
+ */
 public class DeleteTheMiddleNodeOfALinkedList {
   public ListNode deleteMiddle(ListNode head) {
     if (head.next == null) {

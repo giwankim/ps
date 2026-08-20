@@ -1,5 +1,8 @@
 package leetcode.p0601_0700;
 
+/**
+ * <a href="https://leetcode.com/problems/palindromic-substrings/">647. Palindromic Substrings</a>
+ */
 public class PalindromicSubstrings {
   public int countSubstrings(String s) {
     int cnt = 0;

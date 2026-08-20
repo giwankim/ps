@@ -1,5 +1,9 @@
 package leetcode.p1901_2000;
 
+/**
+ * <a href="https://leetcode.com/problems/find-greatest-common-divisor-of-array/">1979. Find
+ * Greatest Common Divisor of Array</a>
+ */
 public class FindGreatesCommonDivisorOfArray {
   /**
    * @implNote Time {@code O(n + log m)} from one min/max scan plus a Euclidean gcd on the two

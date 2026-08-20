@@ -1,5 +1,8 @@
 package leetcode.p0601_0700;
 
+/**
+ * <a href="https://leetcode.com/problems/count-binary-substrings/">696. Count Binary Substrings</a>
+ */
 public class CountBinarySubstrings {
   public int countBinarySubstrings(String s) {
     int result = 0;

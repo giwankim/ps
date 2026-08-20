@@ -3,6 +3,7 @@ package leetcode.p0101_0200;
 import java.util.HashMap;
 import java.util.Map;
 
+/** <a href="https://leetcode.com/problems/max-points-on-a-line/">149. Max Points on a Line</a> */
 public class MaxPointsOnALine {
   /**
    * @implNote Time {@code O(n² log C)}, space {@code O(n)} excluding the input, where {@code n =

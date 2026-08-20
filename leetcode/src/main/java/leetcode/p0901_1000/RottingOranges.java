@@ -3,6 +3,7 @@ package leetcode.p0901_1000;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/** <a href="https://leetcode.com/problems/rotting-oranges/">994. Rotting Oranges</a> */
 public class RottingOranges {
   private static final int[] dx = {-1, 1, 0, 0};
   private static final int[] dy = {0, 0, -1, 1};

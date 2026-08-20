@@ -2,6 +2,10 @@ package leetcode.p0801_0900;
 
 import leetcode.support.ListNode;
 
+/**
+ * <a href="https://leetcode.com/problems/middle-of-the-linked-list/">876. Middle of the Linked
+ * List</a>
+ */
 public class MiddleOfLinkedList {
   public ListNode middleNode(ListNode head) {
     ListNode slow = head;

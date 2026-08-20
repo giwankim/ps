@@ -3,6 +3,10 @@ package leetcode.p1201_1300;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring/">1297.
+ * Maximum Number of Occurrences of a Substring</a>
+ */
 public class MaxOccurrencesOfASubstring {
   public int maxFreq(String s, int maxLetters, int minSize, int maxSize) {
     int result = 0;

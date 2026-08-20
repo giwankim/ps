@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/text-justification/">68. Text Justification</a> */
 public class TextJustification {
   /**
    * @implNote Time {@code O(m * W)}, auxiliary space {@code O(W)}, where {@code m = number of

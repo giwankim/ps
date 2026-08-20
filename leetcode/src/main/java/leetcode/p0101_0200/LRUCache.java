@@ -4,7 +4,11 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-/** @implNote Time {@code O(1)}, space {@code O(capacity)}. */
+/**
+ * <a href="https://leetcode.com/problems/lru-cache/">146. LRU Cache</a>
+ *
+ * @implNote Time {@code O(1)}, space {@code O(capacity)}.
+ */
 public class LRUCache {
   private final Map<Integer, Integer> cache;
 

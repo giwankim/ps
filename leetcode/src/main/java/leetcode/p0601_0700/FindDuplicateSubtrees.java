@@ -6,6 +6,9 @@ import java.util.List;
 import java.util.Map;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/find-duplicate-subtrees/">652. Find Duplicate Subtrees</a>
+ */
 public class FindDuplicateSubtrees {
   public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
     List<TreeNode> result = new ArrayList<>();

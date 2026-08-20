@@ -1,5 +1,6 @@
 package leetcode.p1501_1600;
 
+/** <a href="https://leetcode.com/problems/stone-game-iv/">1510. Stone Game IV</a> */
 public class StoneGameIV {
   /**
    * @implNote Time {@code O(n * sqrt(n))} since {@code dp} settles each of the {@code n} piles once

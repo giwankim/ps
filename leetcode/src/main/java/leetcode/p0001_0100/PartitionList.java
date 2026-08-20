@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import leetcode.support.ListNode;
 
+/** <a href="https://leetcode.com/problems/partition-list/">86. Partition List</a> */
 public class PartitionList {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public ListNode partition(ListNode head, int x) {

@@ -3,6 +3,10 @@ package leetcode.p1301_1400;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/number-of-paths-with-max-score/">1301. Number of Paths
+ * with Max Score</a>
+ */
 public class NumberOfPathsWithMaxScore {
   private static final int MOD = 1_000_000_007;
   private static final int[][] DIRS = {{1, 0}, {0, 1}, {1, 1}};

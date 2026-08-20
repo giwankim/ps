@@ -1,5 +1,6 @@
 package leetcode.p0201_0300;
 
+/** <a href="https://leetcode.com/problems/h-index/">274. H-Index</a> */
 public class HIndex {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int hIndex(int[] citations) {

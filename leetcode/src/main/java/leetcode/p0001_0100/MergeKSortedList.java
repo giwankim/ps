@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import leetcode.support.ListNode;
 
+/** <a href="https://leetcode.com/problems/merge-k-sorted-lists/">23. Merge k Sorted Lists</a> */
 public class MergeKSortedList {
   /**
    * @implNote Time {@code O(N log k)}, space {@code O(k)}.

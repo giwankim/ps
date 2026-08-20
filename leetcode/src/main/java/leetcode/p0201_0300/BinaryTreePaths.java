@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import leetcode.support.TreeNode;
 
+/** <a href="https://leetcode.com/problems/binary-tree-paths/">257. Binary Tree Paths</a> */
 public class BinaryTreePaths {
   public List<String> binaryTreePaths(TreeNode root) {
     List<String> result = new ArrayList<>();

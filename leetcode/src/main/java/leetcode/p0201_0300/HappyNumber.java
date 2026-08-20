@@ -1,5 +1,6 @@
 package leetcode.p0201_0300;
 
+/** <a href="https://leetcode.com/problems/happy-number/">202. Happy Number</a> */
 public class HappyNumber {
   /** @implNote Time {@code O(log n)}, space {@code O(1)}. */
   public boolean isHappy(int n) {

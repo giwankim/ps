@@ -3,6 +3,10 @@ package leetcode.p0401_0500;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * <a href="https://leetcode.com/problems/non-overlapping-intervals/">435. Non-overlapping
+ * Intervals</a>
+ */
 public class NonOverlapIntervals {
   public int eraseOverlapIntervals(int[][] intervals) {
     // sort by end time

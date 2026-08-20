@@ -3,6 +3,10 @@ package leetcode.p2601_2700;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/count-the-number-of-complete-components/">2685. Count the
+ * Number of Complete Components</a>
+ */
 public class CountTheNumberOfCompleteComponents {
   private static List<Integer>[] graph;
   private static boolean[] visited;

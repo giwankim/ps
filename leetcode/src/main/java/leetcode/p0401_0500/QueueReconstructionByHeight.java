@@ -2,6 +2,10 @@ package leetcode.p0401_0500;
 
 import java.util.*;
 
+/**
+ * <a href="https://leetcode.com/problems/queue-reconstruction-by-height/">406. Queue Reconstruction
+ * by Height</a>
+ */
 public class QueueReconstructionByHeight {
   public int[][] reconstructQueue(int[][] people) {
     Queue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] == b[0] ? a[1] - b[1] : b[0] - a[0]);

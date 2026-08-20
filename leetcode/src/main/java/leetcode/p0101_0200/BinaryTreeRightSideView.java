@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/binary-tree-right-side-view/">199. Binary Tree Right Side
+ * View</a>
+ */
 public class BinaryTreeRightSideView {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public List<Integer> rightSideView(TreeNode root) {

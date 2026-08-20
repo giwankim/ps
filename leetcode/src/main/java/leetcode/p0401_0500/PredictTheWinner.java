@@ -2,6 +2,7 @@ package leetcode.p0401_0500;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/predict-the-winner/">486. Predict the Winner</a> */
 public class PredictTheWinner {
   private static int n;
   private static int[][] dp;

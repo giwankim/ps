@@ -3,6 +3,7 @@ package leetcode.p0001_0100;
 import java.util.HashMap;
 import java.util.Map;
 
+/** <a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a> */
 public class TwoSum {
   /**
    * @implNote Time {@code O(n)} expected, auxiliary space {@code O(n)} for the {@code valueToIndex}

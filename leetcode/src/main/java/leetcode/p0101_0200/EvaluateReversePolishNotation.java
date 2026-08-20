@@ -5,6 +5,10 @@ import java.util.Deque;
 import java.util.Map;
 import java.util.function.IntBinaryOperator;
 
+/**
+ * <a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/">150. Evaluate Reverse
+ * Polish Notation</a>
+ */
 public class EvaluateReversePolishNotation {
   private static final Map<String, IntBinaryOperator> OPERATORS = Map.of(
       "+", (a, b) -> a + b,

@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * <a href="https://leetcode.com/problems/longest-consecutive-sequence/">128. Longest Consecutive
+ * Sequence</a>
+ */
 public class LongestConsecutiveSequence {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int longestConsecutive(int[] nums) {

@@ -1,5 +1,9 @@
 package leetcode.p0001_0100;
 
+/**
+ * <a href="https://leetcode.com/problems/container-with-most-water/">11. Container With Most
+ * Water</a>
+ */
 public class ContainerWithMostWater {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int maxArea(int[] height) {

@@ -1,5 +1,6 @@
 package leetcode.p0201_0300;
 
+/** <a href="https://leetcode.com/problems/missing-number/">268. Missing Number</a> */
 public class MissingNumber {
   public int missingNumber(int[] nums) {
     int n = nums.length;

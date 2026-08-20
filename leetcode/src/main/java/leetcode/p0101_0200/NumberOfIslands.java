@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/number-of-islands/">200. Number of Islands</a> */
 public class NumberOfIslands {
   /** @implNote Time {@code O(m * n)}, space {@code O(1)}. */
   public int numIslands(char[][] grid) {

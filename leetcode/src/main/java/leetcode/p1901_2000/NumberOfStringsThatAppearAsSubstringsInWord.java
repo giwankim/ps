@@ -1,5 +1,10 @@
 package leetcode.p1901_2000;
 
+/**
+ * <a
+ * href="https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/">1967.
+ * Number of Strings That Appear as Substrings in Word</a>
+ */
 public class NumberOfStringsThatAppearAsSubstringsInWord {
   /**
    * @implNote Time {@code O(p * n * m)}, auxiliary space {@code O(1)}, where {@code p =

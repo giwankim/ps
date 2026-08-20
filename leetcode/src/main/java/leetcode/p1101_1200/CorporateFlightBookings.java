@@ -1,5 +1,9 @@
 package leetcode.p1101_1200;
 
+/**
+ * <a href="https://leetcode.com/problems/corporate-flight-bookings/">1109. Corporate Flight
+ * Bookings</a>
+ */
 public class CorporateFlightBookings {
   public int[] corpFlightBookings(int[][] bookings, int n) {
     int[] result = new int[n];

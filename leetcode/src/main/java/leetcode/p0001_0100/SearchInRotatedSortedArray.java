@@ -2,6 +2,10 @@ package leetcode.p0001_0100;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">33. Search in Rotated
+ * Sorted Array</a>
+ */
 public class SearchInRotatedSortedArray {
   /** @implNote Time {@code O(log n)}, space {@code O(1)}, where {@code n = nums.length}. */
   public int search(int[] nums, int target) {

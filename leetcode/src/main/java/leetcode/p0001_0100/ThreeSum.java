@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/3sum/">15. 3Sum</a> */
 public class ThreeSum {
   /** @implNote Time {@code O(n^2)}, space {@code O(log n) for quicksort stack space}. */
   public List<List<Integer>> threeSum(int[] nums) {

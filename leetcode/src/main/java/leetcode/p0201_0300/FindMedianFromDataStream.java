@@ -4,6 +4,10 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * <a href="https://leetcode.com/problems/find-median-from-data-stream/">295. Find Median from Data
+ * Stream</a>
+ */
 public class FindMedianFromDataStream {
   static class MedianFinder {
     private final Queue<Integer> upper;

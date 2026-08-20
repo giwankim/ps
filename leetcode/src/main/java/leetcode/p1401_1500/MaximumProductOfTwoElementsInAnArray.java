@@ -1,5 +1,9 @@
 package leetcode.p1401_1500;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/">1464.
+ * Maximum Product of Two Elements in an Array</a>
+ */
 public class MaximumProductOfTwoElementsInAnArray {
   /**
    * @implNote Time {@code O(n)} — a single pass tracks the two largest values, demoting the

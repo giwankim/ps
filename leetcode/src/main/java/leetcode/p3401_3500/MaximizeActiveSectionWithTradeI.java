@@ -1,5 +1,9 @@
 package leetcode.p3401_3500;
 
+/**
+ * <a href="https://leetcode.com/problems/maximize-active-section-with-trade-i/">3499. Maximize
+ * Active Section with Trade I</a>
+ */
 public class MaximizeActiveSectionWithTradeI {
   /** @implNote Time {@code O(n)}, space {@code O(1)}, where {@code n = s.length()}. */
   public int maxActiveSectionsAfterTrade(String s) {

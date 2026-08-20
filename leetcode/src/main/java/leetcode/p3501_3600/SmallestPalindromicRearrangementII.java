@@ -1,5 +1,9 @@
 package leetcode.p3501_3600;
 
+/**
+ * <a href="https://leetcode.com/problems/smallest-palindromic-rearrangement-ii/">3518. Smallest
+ * Palindromic Rearrangement II</a>
+ */
 public class SmallestPalindromicRearrangementII {
   private static final int MAX = (int) 10e6 + 1;
 

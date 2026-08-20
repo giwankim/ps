@@ -1,5 +1,9 @@
 package leetcode.p3601_3700;
 
+/**
+ * <a href="https://leetcode.com/problems/gcd-of-odd-and-even-sums/">3658. GCD of Odd and Even
+ * Sums</a>
+ */
 public class GCDOfOddAndEvenSums {
   /**
    * @implNote Time {@code O(n)} from the two summation loops; the Euclid reduction adds only

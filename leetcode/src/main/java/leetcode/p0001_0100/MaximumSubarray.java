@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/maximum-subarray/">53. Maximum Subarray</a> */
 public class MaximumSubarray {
   /**
    * @implNote Time {@code O(n)}, auxiliary space {@code O(1)}, where {@code n = nums.length}.

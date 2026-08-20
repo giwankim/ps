@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/rotate-array/">189. Rotate Array</a> */
 public class RotateArray {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public void rotate(int[] nums, int k) {

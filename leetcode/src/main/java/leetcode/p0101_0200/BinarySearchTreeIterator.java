@@ -4,6 +4,10 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/binary-search-tree-iterator/">173. Binary Search Tree
+ * Iterator</a>
+ */
 public class BinarySearchTreeIterator {
   /** @implNote Time {@code O(n) (amortized O(1))}, space {@code O(h)}. */
   static class BSTIterator {

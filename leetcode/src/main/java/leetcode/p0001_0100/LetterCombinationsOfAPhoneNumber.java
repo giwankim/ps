@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/">17. Letter
+ * Combinations of a Phone Number</a>
+ */
 public class LetterCombinationsOfAPhoneNumber {
   private static final Map<Character, List<Character>> digitToLetters = Map.of(
       '2', List.of('a', 'b', 'c'),

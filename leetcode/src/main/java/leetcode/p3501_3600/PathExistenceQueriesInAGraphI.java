@@ -1,5 +1,9 @@
 package leetcode.p3501_3600;
 
+/**
+ * <a href="https://leetcode.com/problems/path-existence-queries-in-a-graph-i/">3532. Path Existence
+ * Queries in a Graph I</a>
+ */
 public class PathExistenceQueriesInAGraphI {
   /**
    * @implNote Time {@code O(n + q)} from one gap scan plus a component-id comparison per query,

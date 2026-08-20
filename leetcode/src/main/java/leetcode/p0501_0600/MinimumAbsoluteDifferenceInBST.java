@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-absolute-difference-in-bst/">530. Minimum Absolute
+ * Difference in BST</a>
+ */
 public class MinimumAbsoluteDifferenceInBST {
   TreeNode prev;
   int minDifference;

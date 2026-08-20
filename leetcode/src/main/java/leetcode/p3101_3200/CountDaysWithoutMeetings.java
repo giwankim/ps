@@ -2,6 +2,10 @@ package leetcode.p3101_3200;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/count-days-without-meetings/">3169. Count Days Without
+ * Meetings</a>
+ */
 public class CountDaysWithoutMeetings {
 
   public int countDays(int days, int[][] meetings) {

@@ -1,5 +1,9 @@
 package leetcode.p3501_3600;
 
+/**
+ * <a href="https://leetcode.com/problems/smallest-palindromic-rearrangement-i/">3517. Smallest
+ * Palindromic Rearrangement I</a>
+ */
 public class SmallestPalindromicRearrangementI {
   /**
    * @implNote Time {@code O(n)} since the counting pass and the fixed 26-bucket sweep each touch

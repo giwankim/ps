@@ -1,5 +1,9 @@
 package leetcode.p0001_0100;
 
+/**
+ * <a href="https://leetcode.com/problems/longest-palindromic-substring/">5. Longest Palindromic
+ * Substring</a>
+ */
 public class LongestPalindromicSubstring {
   public String longestPalindrome(String s) {
     int n = s.length();

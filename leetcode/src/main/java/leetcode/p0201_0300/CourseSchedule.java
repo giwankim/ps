@@ -3,6 +3,7 @@ package leetcode.p0201_0300;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/course-schedule/">207. Course Schedule</a> */
 public class CourseSchedule {
   /** @implNote Time {@code O(n + m)}, space {@code O(n + m)}. */
   public boolean canFinish(int numCourses, int[][] prerequisites) {

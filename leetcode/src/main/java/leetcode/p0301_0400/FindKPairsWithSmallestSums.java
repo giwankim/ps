@@ -5,6 +5,10 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
+/**
+ * <a href="https://leetcode.com/problems/find-k-pairs-with-smallest-sums/">373. Find K Pairs with
+ * Smallest Sums</a>
+ */
 public class FindKPairsWithSmallestSums {
   /** @implNote Time {@code O(k log k)}, auxiliary space {@code O(k)} excluding the output. */
   public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {

@@ -1,5 +1,9 @@
 package leetcode.p3701_3800;
 
+/**
+ * <a href="https://leetcode.com/problems/count-subarrays-with-majority-element-ii/">3739. Count
+ * Subarrays With Majority Element II</a>
+ */
 public class CountSubarraysWithMajorityElementII {
   public long countMajoritySubarrays(int[] nums, int target) {
     int n = nums.length;

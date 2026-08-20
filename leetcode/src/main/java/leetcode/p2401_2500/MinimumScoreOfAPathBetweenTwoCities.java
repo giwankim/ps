@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/">2492. Minimum
+ * Score of a Path Between Two Cities</a>
+ */
 public class MinimumScoreOfAPathBetweenTwoCities {
   /**
    * @implNote Time {@code O(n + m)}, auxiliary space {@code O(n + m)} for the adjacency list, the

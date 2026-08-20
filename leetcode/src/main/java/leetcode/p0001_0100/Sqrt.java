@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/sqrtx/">69. Sqrt(x)</a> */
 public class Sqrt {
   /** @implNote Time {@code O(log x)}, space {@code O(1)}, where {@code x} is the input value. */
   public int mySqrt(int x) {

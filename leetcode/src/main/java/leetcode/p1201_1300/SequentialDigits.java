@@ -3,6 +3,7 @@ package leetcode.p1201_1300;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/sequential-digits/">1291. Sequential Digits</a> */
 public class SequentialDigits {
   /**
    * @implNote Time {@code O(D^2)} to walk the stall-and-extend recursion tree ({@code D} stall

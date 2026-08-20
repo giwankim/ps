@@ -1,5 +1,9 @@
 package leetcode.p3001_3100;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/">3090.
+ * Maximum Length Substring With Two Occurrences</a>
+ */
 public class MaximumLengthSubstringWithTwoOccurrences {
   /**
    * @implNote Time {@code O(n)} since each index enters and leaves the sliding window at most once,

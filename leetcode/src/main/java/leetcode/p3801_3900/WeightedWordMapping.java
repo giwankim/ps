@@ -1,5 +1,8 @@
 package leetcode.p3801_3900;
 
+/**
+ * <a href="https://leetcode.com/problems/weighted-word-mapping/">3838. Weighted Word Mapping</a>
+ */
 public class WeightedWordMapping {
   public String mapWordWeights(String[] words, int[] weights) {
     StringBuilder result = new StringBuilder();

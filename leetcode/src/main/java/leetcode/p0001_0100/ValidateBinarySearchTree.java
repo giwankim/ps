@@ -2,6 +2,10 @@ package leetcode.p0001_0100;
 
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/validate-binary-search-tree/">98. Validate Binary Search
+ * Tree</a>
+ */
 public class ValidateBinarySearchTree {
   private TreeNode prev;
 

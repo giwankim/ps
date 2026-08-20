@@ -3,6 +3,10 @@ package leetcode.p1301_1400;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * <a href="https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid/">1391. Check if
+ * There is a Valid Path in a Grid</a>
+ */
 public class CheckIfThereIsValidPath {
 
   static final int[][][] DIRECTIONS = new int[][][] {

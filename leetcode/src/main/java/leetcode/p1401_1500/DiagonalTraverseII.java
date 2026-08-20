@@ -2,6 +2,7 @@ package leetcode.p1401_1500;
 
 import java.util.*;
 
+/** <a href="https://leetcode.com/problems/diagonal-traverse-ii/">1424. Diagonal Traverse II</a> */
 public class DiagonalTraverseII {
   public int[] findDiagonalOrder(List<List<Integer>> nums) {
     List<Integer> diagonals = new ArrayList<>();

@@ -2,6 +2,10 @@ package leetcode.p1201_1300;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/remove-covered-intervals/">1288. Remove Covered
+ * Intervals</a>
+ */
 public class RemoveCoveredIntervals {
   /** @implNote Time {@code O(n log n)}, space {@code O(1)}, where {@code n = intervals.length}. */
   public int removeCoveredIntervals(int[][] intervals) {

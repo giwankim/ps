@@ -3,6 +3,11 @@ package leetcode.p2901_3000;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * <a
+ * href="https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/">2996.
+ * Smallest Missing Integer Greater Than Sequential Prefix Sum</a>
+ */
 public class SmallestMissingIntegerGreaterThanSequentialPrefixSum {
   /**
    * @implNote Time {@code O(n)}, auxiliary space {@code O(n)} for the {@code seen} set, where

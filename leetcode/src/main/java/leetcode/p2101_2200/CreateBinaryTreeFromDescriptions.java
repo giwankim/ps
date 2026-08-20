@@ -6,6 +6,10 @@ import java.util.Map;
 import java.util.Set;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/create-binary-tree-from-descriptions/">2196. Create Binary
+ * Tree From Descriptions</a>
+ */
 public class CreateBinaryTreeFromDescriptions {
   /** @implNote Time {@code O(n)}, space {@code O(n)}, where {@code n = descriptions.length}. */
   public TreeNode createBinaryTree(int[][] descriptions) {

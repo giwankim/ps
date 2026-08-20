@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/plus-one/">66. Plus One</a> */
 public class PlusOne {
   /**
    * @implNote Time {@code O(n)}, auxiliary space {@code O(1)} excluding the returned array, where

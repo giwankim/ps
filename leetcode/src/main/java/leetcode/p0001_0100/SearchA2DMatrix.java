@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/search-a-2d-matrix/">74. Search a 2D Matrix</a> */
 public class SearchA2DMatrix {
   /**
    * Time: {@code O(log m + log n) = O(log(m * n))}, where {@code m} is the number of rows and

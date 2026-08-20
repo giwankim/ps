@@ -3,6 +3,7 @@ package leetcode.p0001_0100;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/combination-sum/">39. Combination Sum</a> */
 public class CombinationSum {
   /**
    * @implNote Time {@code O(N^(T/M + 1))}, space {@code O(T/M)} excluding the output, where

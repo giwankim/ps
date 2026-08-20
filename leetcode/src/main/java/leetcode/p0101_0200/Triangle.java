@@ -2,6 +2,7 @@ package leetcode.p0101_0200;
 
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/triangle/">120. Triangle</a> */
 public class Triangle {
   /**
    * @implNote Time {@code O(n²)}, auxiliary space {@code O(n)} for the {@code dp} grid, where

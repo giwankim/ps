@@ -3,6 +3,10 @@ package leetcode.p0001_0100;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-window-substring/">76. Minimum Window
+ * Substring</a>
+ */
 public class MinimumWindowSubstring {
   /** @implNote Time {@code O(n + m)}, space {@code O(n + m)}. */
   public String minWindow(String s, String t) {

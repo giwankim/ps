@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
 
+/** <a href="https://leetcode.com/problems/snapshot-array/">1146. Snapshot Array</a> */
 public class SnapshotArray {
   private int snapId;
   private final List<TreeMap<Integer, Integer>> snapshots;

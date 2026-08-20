@@ -1,5 +1,9 @@
 package leetcode.p2101_2200;
 
+/**
+ * <a href="https://leetcode.com/problems/partition-array-according-to-given-pivot/">2161. Partition
+ * Array According to Given Pivot</a>
+ */
 public class PartitionArrayAccordingToGivenPivot {
   /**
    * @implNote Time {@code O(n)}, auxiliary space {@code O(1)} excluding the output, where {@code n

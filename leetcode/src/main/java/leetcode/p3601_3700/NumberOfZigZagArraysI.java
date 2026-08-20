@@ -1,5 +1,9 @@
 package leetcode.p3601_3700;
 
+/**
+ * <a href="https://leetcode.com/problems/number-of-zigzag-arrays-i/">3699. Number of ZigZag Arrays
+ * I</a>
+ */
 public class NumberOfZigZagArraysI {
   private static final int MOD = 1_000_000_007;
 

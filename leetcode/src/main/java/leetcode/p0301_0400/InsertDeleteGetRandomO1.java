@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * <a href="https://leetcode.com/problems/insert-delete-getrandom-o1/">380. Insert Delete GetRandom
+ * O(1)</a>
+ */
 public class InsertDeleteGetRandomO1 {
   /** @implNote Time {@code O(1)}, space {@code O(n)}. */
   public static class RandomizedSet {

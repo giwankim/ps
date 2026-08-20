@@ -3,6 +3,7 @@ package leetcode.p0301_0400;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/** <a href="https://leetcode.com/problems/design-hit-counter/">362. Design Hit Counter</a> */
 public class HitCounter {
   private final Queue<Integer> queue;
 

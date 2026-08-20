@@ -2,6 +2,10 @@ package leetcode.p3801_3900;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/">3867. Sum of GCD of Formed
+ * Pairs</a>
+ */
 public class SumOfGcdOfFormedPairs {
   /**
    * @implNote Time {@code O(n log n + n log V)} where {@code n = nums.length} and {@code V =

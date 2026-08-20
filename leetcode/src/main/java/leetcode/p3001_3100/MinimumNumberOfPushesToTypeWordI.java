@@ -1,5 +1,9 @@
 package leetcode.p3001_3100;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i/">3014. Minimum
+ * Number of Pushes to Type Word I</a>
+ */
 public class MinimumNumberOfPushesToTypeWordI {
   /**
    * Time complexity: {@code O(n)}, where {@code n} is {@code word.length()}, because the loop runs

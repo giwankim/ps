@@ -4,6 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Map;
 
+/** <a href="https://leetcode.com/problems/valid-parentheses/">20. Valid Parentheses</a> */
 public class ValidParentheses {
   private static Map<Character, Character> MAP = Map.of(')', '(', ']', '[', '}', '{');
 

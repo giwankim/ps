@@ -8,6 +8,10 @@ import java.util.List;
 import java.util.Queue;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/">103. Binary
+ * Tree Zigzag Level Order Traversal</a>
+ */
 public class BinaryTreeZigzagLevelOrderTraversal {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public List<List<Integer>> zigzagLevelOrder(TreeNode root) {

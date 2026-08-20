@@ -2,6 +2,10 @@ package leetcode.p3001_3100;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-ii/">3016. Minimum
+ * Number of Pushes to Type Word II</a>
+ */
 public class MinimumNumberOfPushesToTypeWordII {
   /**
    * @implNote Time {@code O(n)} since the counting pass touches every character once while the sort

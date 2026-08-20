@@ -3,6 +3,7 @@ package leetcode.p0801_0900;
 import java.util.*;
 
 @SuppressWarnings("unchecked")
+/** <a href="https://leetcode.com/problems/possible-bipartition/">886. Possible Bipartition</a> */
 public class PossibleBipartition {
   public boolean possibleBipartition(int n, int[][] dislikes) {
     //    Map<Integer, List<Integer>> adjList = new HashMap<>();

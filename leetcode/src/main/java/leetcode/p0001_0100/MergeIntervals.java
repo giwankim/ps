@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/merge-intervals/">56. Merge Intervals</a> */
 public class MergeIntervals {
   /** @implNote Time {@code O(n log n)}, space {@code O(n)}. */
   public int[][] merge(int[][] intervals) {

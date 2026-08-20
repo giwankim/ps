@@ -2,6 +2,7 @@ package leetcode.p0001_0100;
 
 import leetcode.support.ListNode;
 
+/** <a href="https://leetcode.com/problems/rotate-list/">61. Rotate List</a> */
 public class RotateList {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public ListNode rotateRight(ListNode head, int k) {

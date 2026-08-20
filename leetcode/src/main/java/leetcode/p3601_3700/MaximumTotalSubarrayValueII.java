@@ -2,6 +2,10 @@ package leetcode.p3601_3700;
 
 import java.util.PriorityQueue;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-total-subarray-value-ii/">3691. Maximum Total
+ * Subarray Value II</a>
+ */
 public class MaximumTotalSubarrayValueII {
   public long maxTotalValue(int[] nums, int k) {
     int n = nums.length;

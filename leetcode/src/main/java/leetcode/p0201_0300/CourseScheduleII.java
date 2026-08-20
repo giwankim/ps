@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
+/** <a href="https://leetcode.com/problems/course-schedule-ii/">210. Course Schedule II</a> */
 public class CourseScheduleII {
   /** @implNote Time {@code O(n + m)}, space {@code O(n + m)}. */
   public int[] findOrder(int numCourses, int[][] prerequisites) {

@@ -1,5 +1,9 @@
 package leetcode.p1101_1200;
 
+/**
+ * <a href="https://leetcode.com/problems/longest-common-subsequence/">1143. Longest Common
+ * Subsequence</a>
+ */
 public class LongestCommonSubsequence {
   public int longestCommonSubsequence(String text1, String text2) {
     int[][] a = new int[text1.length() + 1][text2.length() + 1];

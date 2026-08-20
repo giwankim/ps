@@ -2,6 +2,9 @@ package leetcode.p1801_1900;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-ice-cream-bars/">1833. Maximum Ice Cream Bars</a>
+ */
 public class MaximumIceCreamBars {
   /**
    * @implNote Counting sort over the cost range. Time {@code O(n + C)}, auxiliary space

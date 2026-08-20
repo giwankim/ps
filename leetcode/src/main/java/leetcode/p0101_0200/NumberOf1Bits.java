@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/number-of-1-bits/">191. Number of 1 Bits</a> */
 public class NumberOf1Bits {
   /** @implNote Time {@code O(log n)}, space {@code O(1)}. */
   public int hammingWeight(int n) {

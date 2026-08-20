@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/find-peak-element/">162. Find Peak Element</a> */
 public class FindPeakElement {
   /**
    * Time: {@code O(log n)}.

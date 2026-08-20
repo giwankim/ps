@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+/** <a href="https://leetcode.com/problems/construct-quad-tree/">427. Construct Quad Tree</a> */
 public class ConstructQuadTree {
   /**
    * @implNote Time {@code O(n²)}, space {@code O(log n)} excluding the output, where {@code n =

@@ -2,6 +2,9 @@ package leetcode.p0501_0600;
 
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/subtree-of-another-tree/">572. Subtree of Another Tree</a>
+ */
 public class SubtreeOfAnotherTree {
   public boolean isSubtree(TreeNode root, TreeNode subRoot) {
     if (root == null) {

@@ -2,6 +2,7 @@ package leetcode.p0301_0400;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/coin-change/">322. Coin Change</a> */
 public class CoinChange {
   /**
    * @implNote Time {@code O(amount * n)}, auxiliary space {@code O(amount)} for the {@code dp}

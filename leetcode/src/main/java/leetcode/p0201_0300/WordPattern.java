@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/** <a href="https://leetcode.com/problems/word-pattern/">290. Word Pattern</a> */
 public class WordPattern {
   /** @implNote Time {@code O(|pattern| + |s|)}, space {@code O(|s|)}. */
   public boolean wordPattern(String pattern, String s) {

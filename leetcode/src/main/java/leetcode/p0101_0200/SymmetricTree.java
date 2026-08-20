@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import leetcode.support.TreeNode;
 
+/** <a href="https://leetcode.com/problems/symmetric-tree/">101. Symmetric Tree</a> */
 public class SymmetricTree {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public boolean isSymmetric(TreeNode root) {

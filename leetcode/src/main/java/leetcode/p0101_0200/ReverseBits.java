@@ -1,5 +1,6 @@
 package leetcode.p0101_0200;
 
+/** <a href="https://leetcode.com/problems/reverse-bits/">190. Reverse Bits</a> */
 public class ReverseBits {
   /** @implNote Time {@code O(1)}, space {@code O(1)}. */
   public int reverseBits(int n) {

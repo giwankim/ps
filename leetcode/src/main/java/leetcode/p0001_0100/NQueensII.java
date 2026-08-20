@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/n-queens-ii/">52. N-Queens II</a> */
 public class NQueensII {
   /**
    * <b>Time:</b> {@code O(n × n!)}. The recursion explores a tree of row-by-row placements — at

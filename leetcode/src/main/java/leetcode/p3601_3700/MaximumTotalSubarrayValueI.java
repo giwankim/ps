@@ -1,5 +1,9 @@
 package leetcode.p3601_3700;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-total-subarray-value-i/">3689. Maximum Total
+ * Subarray Value I</a>
+ */
 public class MaximumTotalSubarrayValueI {
   /** @implNote Time {@code O(n)}, auxiliary space {@code O(1)}, where {@code n = nums.length} */
   public long maxTotalValue(int[] nums, int k) {

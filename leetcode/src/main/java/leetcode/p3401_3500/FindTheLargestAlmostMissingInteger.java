@@ -2,6 +2,10 @@ package leetcode.p3401_3500;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/find-the-largest-almost-missing-integer/">3471. Find the
+ * Largest Almost Missing Integer</a>
+ */
 public class FindTheLargestAlmostMissingInteger {
   /**
    * @implNote Time {@code O(n + V)}, auxiliary space {@code O(V)} for {@code cnt} (which the

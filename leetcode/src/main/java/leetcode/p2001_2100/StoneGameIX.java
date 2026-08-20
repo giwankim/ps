@@ -1,5 +1,6 @@
 package leetcode.p2001_2100;
 
+/** <a href="https://leetcode.com/problems/stone-game-ix/">2029. Stone Game IX</a> */
 public class StoneGameIX {
   /**
    * @implNote Time {@code O(n)} for the single residue-tallying pass, auxiliary space {@code O(1)}

@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/trapping-rain-water/">42. Trapping Rain Water</a> */
 public class TrappingRainWater {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int trap(int[] height) {

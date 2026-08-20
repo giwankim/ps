@@ -3,6 +3,7 @@ package leetcode.p0201_0300;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/** <a href="https://leetcode.com/problems/basic-calculator/">224. Basic Calculator</a> */
 public class BasicCalculator {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int calculate(String s) {

@@ -6,6 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+/** <a href="https://leetcode.com/problems/snakes-and-ladders/">909. Snakes and Ladders</a> */
 public class SnakesAndLadders {
   /** @implNote Time {@code O(n^2)}, space {@code O(n^2)}. */
   public int snakesAndLadders(int[][] board) {

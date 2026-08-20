@@ -2,6 +2,10 @@ package leetcode.p0001_0100;
 
 import leetcode.support.ListNode;
 
+/**
+ * <a href="https://leetcode.com/problems/reverse-nodes-in-k-group/">25. Reverse Nodes in
+ * k-Group</a>
+ */
 public class ReverseNodesInKGroup {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public ListNode reverseKGroup(ListNode head, int k) {

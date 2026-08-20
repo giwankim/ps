@@ -2,6 +2,7 @@ package leetcode.p1501_1600;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/stone-game-v/">1563. Stone Game V</a> */
 public class StoneGameV {
   private int[][] dp;
   private int[] psum;

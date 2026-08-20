@@ -1,6 +1,7 @@
 package leetcode.p0701_0800;
 
 @SuppressWarnings("unused")
+/** <a href="https://leetcode.com/problems/binary-search/">704. Binary Search</a> */
 public class BinarySearch {
   public int search(int[] nums, int target) {
     int l = 0;

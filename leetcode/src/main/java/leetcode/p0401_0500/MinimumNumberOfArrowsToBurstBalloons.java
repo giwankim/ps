@@ -2,6 +2,10 @@ package leetcode.p0401_0500;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/">452. Minimum
+ * Number of Arrows to Burst Balloons</a>
+ */
 public class MinimumNumberOfArrowsToBurstBalloons {
   /** @implNote Time {@code O(n log n)}, space {@code O(1)}. */
   public int findMinArrowShots(int[][] points) {

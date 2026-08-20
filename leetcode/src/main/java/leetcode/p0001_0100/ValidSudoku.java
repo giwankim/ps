@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/valid-sudoku/">36. Valid Sudoku</a> */
 public class ValidSudoku {
   /** @implNote Time {@code O(1)}, space {@code O(1)}. */
   public boolean isValidSudoku(char[][] board) {

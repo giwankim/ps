@@ -2,6 +2,10 @@ package leetcode.p0201_0300;
 
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/count-complete-tree-nodes/">222. Count Complete Tree
+ * Nodes</a>
+ */
 public class CountCompleteTreeNodes {
   /** @implNote Time {@code O(log^2 n)}, space {@code O(log n)}. */
   public int countNodes(TreeNode root) {

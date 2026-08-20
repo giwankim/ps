@@ -2,6 +2,7 @@ package leetcode.p0101_0200;
 
 import leetcode.support.ListNode;
 
+/** <a href="https://leetcode.com/problems/linked-list-cycle/">141. Linked List Cycle</a> */
 public class LinkedListCycle {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean hasCycle(ListNode head) {

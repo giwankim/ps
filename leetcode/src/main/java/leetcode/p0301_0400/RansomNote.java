@@ -1,5 +1,6 @@
 package leetcode.p0301_0400;
 
+/** <a href="https://leetcode.com/problems/ransom-note/">383. Ransom Note</a> */
 public class RansomNote {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean canConstruct(String ransomNote, String magazine) {

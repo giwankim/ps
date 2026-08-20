@@ -2,6 +2,9 @@ package leetcode.p0601_0700;
 
 import java.util.Arrays;
 
+/**
+ * <a href="https://leetcode.com/problems/add-bold-tag-in-string/">616. Add Bold Tag in String</a>
+ */
 public class AddBoldTag {
   public String addBoldTag(String s, String[] words) {
     boolean[] bold = new boolean[s.length()];

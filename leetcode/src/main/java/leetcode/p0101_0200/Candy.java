@@ -2,6 +2,7 @@ package leetcode.p0101_0200;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/candy/">135. Candy</a> */
 public class Candy {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public int candy(int[] ratings) {

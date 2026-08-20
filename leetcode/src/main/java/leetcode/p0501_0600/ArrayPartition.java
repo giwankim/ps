@@ -2,6 +2,7 @@ package leetcode.p0501_0600;
 
 import java.util.Arrays;
 
+/** <a href="https://leetcode.com/problems/array-partition/">561. Array Partition</a> */
 public class ArrayPartition {
   public int arrayPairSum(int[] nums) {
     Arrays.sort(nums);

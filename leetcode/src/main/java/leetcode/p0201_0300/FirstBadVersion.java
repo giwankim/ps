@@ -6,6 +6,7 @@ class VersionControl {
   }
 }
 
+/** <a href="https://leetcode.com/problems/first-bad-version/">278. First Bad Version</a> */
 public class FirstBadVersion extends VersionControl {
   /**
    * Time complexity: {@code O(log n)} — the search window halves each iteration.

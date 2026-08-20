@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.Deque;
 import java.util.List;
 
+/**
+ * <a href="https://leetcode.com/problems/find-a-safe-walk-through-a-grid/">3286. Find a Safe Walk
+ * Through a Grid</a>
+ */
 public class FindASafeWalkThroughAGrid {
   private static final int[][] DIRECTIONS = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 

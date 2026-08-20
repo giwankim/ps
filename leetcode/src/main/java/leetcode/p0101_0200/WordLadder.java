@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.Set;
 
+/** <a href="https://leetcode.com/problems/word-ladder/">127. Word Ladder</a> */
 public class WordLadder {
   /**
    * @implNote Time {@code O(n * m^2)}, space {@code O(n * m)}, where {@code n = wordList.size()}

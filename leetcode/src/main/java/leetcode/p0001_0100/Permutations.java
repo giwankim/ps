@@ -3,6 +3,7 @@ package leetcode.p0001_0100;
 import java.util.ArrayList;
 import java.util.List;
 
+/** <a href="https://leetcode.com/problems/permutations/">46. Permutations</a> */
 public class Permutations {
   /**
    * @implNote Time {@code O(n * n!)}, auxiliary space {@code O(n)} excluding the output, where

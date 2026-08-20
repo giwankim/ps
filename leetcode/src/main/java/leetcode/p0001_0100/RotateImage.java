@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/rotate-image/">48. Rotate Image</a> */
 public class RotateImage {
   /** @implNote Time {@code O(n^2)}, space {@code O(1)}. */
   public void rotate(int[][] matrix) {

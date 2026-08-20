@@ -5,6 +5,10 @@ import java.util.Map;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
+/**
+ * <a href="https://leetcode.com/problems/copy-list-with-random-pointer/">138. Copy List with Random
+ * Pointer</a>
+ */
 public class CopyListWithRandomPointer {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public Node copyRandomList(Node head) {

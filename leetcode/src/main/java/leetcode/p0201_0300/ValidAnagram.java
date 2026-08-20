@@ -1,5 +1,6 @@
 package leetcode.p0201_0300;
 
+/** <a href="https://leetcode.com/problems/valid-anagram/">242. Valid Anagram</a> */
 public class ValidAnagram {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public boolean isAnagram(String s, String t) {

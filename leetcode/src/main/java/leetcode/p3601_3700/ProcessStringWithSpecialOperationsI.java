@@ -1,5 +1,9 @@
 package leetcode.p3601_3700;
 
+/**
+ * <a href="https://leetcode.com/problems/process-string-with-special-operations-i/">3612. Process
+ * String with Special Operations I</a>
+ */
 public class ProcessStringWithSpecialOperationsI {
   public String processStr(String s) {
     StringBuilder result = new StringBuilder();

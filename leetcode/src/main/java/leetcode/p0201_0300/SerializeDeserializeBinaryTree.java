@@ -5,6 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/">297. Serialize and
+ * Deserialize Binary Tree</a>
+ */
 public class SerializeDeserializeBinaryTree {
   private static final String SEPARATOR = ",";
   private static final String NULL_PLACEHOLDER = "X";

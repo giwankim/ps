@@ -1,5 +1,9 @@
 package leetcode.p1001_1100;
 
+/**
+ * <a href="https://leetcode.com/problems/greatest-common-divisor-of-strings/">1071. Greatest Common
+ * Divisor of Strings</a>
+ */
 public class GreatestCommonDivisorOfStrings {
   /**
    * @implNote Time {@code O(g·(n + m))}, space {@code O(n + m)}, where {@code n = str1.length()},

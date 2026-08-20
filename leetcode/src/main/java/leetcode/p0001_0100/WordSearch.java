@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/word-search/">79. Word Search</a> */
 public class WordSearch {
   /**
    * @implNote Time {@code O(m·n·3^L)}, space {@code O(L)}, where {@code m × n} are the board

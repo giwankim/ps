@@ -1,5 +1,9 @@
 package leetcode.p3501_3600;
 
+/**
+ * <a href="https://leetcode.com/problems/number-of-unique-xor-triplets-ii/">3514. Number of Unique
+ * XOR Triplets II</a>
+ */
 public class NumberOfUniqueXORTripletsII {
   /**
    * <b>Time complexity:</b> {@code O(n^2 + n * U)}, where {@code n} is {@code nums.length} and

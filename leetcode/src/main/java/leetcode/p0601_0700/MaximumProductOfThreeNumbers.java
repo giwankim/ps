@@ -1,5 +1,9 @@
 package leetcode.p0601_0700;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-product-of-three-numbers/">628. Maximum Product of
+ * Three Numbers</a>
+ */
 public class MaximumProductOfThreeNumbers {
   /**
    * @implNote Time {@code O(n)} — a single pass tracks the three largest and two smallest values,

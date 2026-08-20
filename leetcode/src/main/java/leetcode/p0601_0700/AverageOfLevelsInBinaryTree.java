@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Queue;
 import leetcode.support.TreeNode;
 
+/**
+ * <a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637. Average of Levels
+ * in Binary Tree</a>
+ */
 public class AverageOfLevelsInBinaryTree {
   /** @implNote Time {@code O(n)}, space {@code O(n)}. */
   public List<Double> averageOfLevels(TreeNode root) {

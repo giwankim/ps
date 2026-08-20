@@ -2,6 +2,10 @@ package leetcode.p2101_2200;
 
 import leetcode.support.ListNode;
 
+/**
+ * <a href="https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/">2130. Maximum Twin Sum
+ * of a Linked List</a>
+ */
 public class MaximumTwinSumOfALinkedList {
   public int pairSum(ListNode head) {
     ListNode dummy = new ListNode();

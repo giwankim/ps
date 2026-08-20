@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+/** <a href="https://leetcode.com/problems/length-of-last-word/">58. Length of Last Word</a> */
 public class LengthOfLastWord {
   /** @implNote Time {@code O(n)}, space {@code O(1)}. */
   public int lengthOfLastWord(String s) {

@@ -1,5 +1,6 @@
 package leetcode.p0401_0500;
 
+/** <a href="https://leetcode.com/problems/string-compression/">443. String Compression</a> */
 public class StringCompression {
   public int compress(char[] chars) {
     int i = 0;
