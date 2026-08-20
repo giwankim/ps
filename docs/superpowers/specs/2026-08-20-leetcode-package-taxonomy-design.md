@@ -1,7 +1,7 @@
 # LeetCode module package taxonomy
 
 **Date:** 2026-08-20
-**Status:** awaiting review
+**Status:** approved 2026-08-20
 **Scope:** `leetcode/` module only
 
 ## Problem
@@ -141,10 +141,24 @@ stay where they are.
 
 ## Verification
 
-- `./gradlew :leetcode:test` — all 283 tests pass.
+**The full suite is not a usable gate.** A baseline run of `:leetcode:test`
+exhausted the default heap after 1133 tests (29 failing, 1 skipped), and a rerun
+at 4 GB hung past 10 minutes, dying just after `InterleavingStringTest`. The
+cause is uncommitted work-in-progress solutions carrying
+`UnsupportedOperationException` stubs — pre-existing, unrelated to this change,
+and out of scope here.
+
+Compilation is the correct gate instead: this change edits `package` lines and
+comments only, never a method body, so unresolved symbols are the only failure
+mode it can introduce.
+
+- `./gradlew :leetcode:compileJava :leetcode:compileTestJava` — exit 0.
 - `./gradlew :leetcode:spotlessCheck` — formatting clean.
 - Assert 281 solution classes still exist and each declares a `p####_####`
   package: no file silently dropped or left behind in `leetcode`.
+- Targeted `--tests` run over a known-green sample that exercises `ListNode` and
+  `TreeNode`, proving `leetcode.support` imports still resolve from the deeper
+  packages.
 - `git log --follow` on a sample moved file confirms history survived.
 
 ## Appendix: complete class → package mapping
