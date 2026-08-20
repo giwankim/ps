@@ -4,7 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
-  /** @implNote Time {@code O(n)}, space {@code O(n)}. */
+  /**
+   * @implNote Time {@code O(n)} expected, auxiliary space {@code O(n)} for the {@code valueToIndex}
+   *     map, where {@code n = nums.length}. One pass hashes each value only after probing for its
+   *     complement, so an element is never paired with itself.
+   */
   public int[] twoSum(int[] nums, int target) {
     Map<Integer, Integer> valueToIndex = new HashMap<>();
     for (int i = 0; i < nums.length; i++) {
