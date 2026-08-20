@@ -78,7 +78,15 @@ def fetch_index() -> dict[int, tuple[str, str]]:
 def main() -> int:
     index = fetch_index()
     by_title = {norm(title): number for number, (title, _) in index.items()}
-    classes = sorted(path.stem for path in SRC.glob("*.java"))
+    # Solutions live under numeric range subpackages (p0001_0100/, ...), so the
+    # scan must recurse. `support/` holds shared node types (ListNode,
+    # TreeNode, Node) that have no problem number and must stay excluded.
+    classes = sorted(
+        path.stem for path in SRC.rglob("*.java") if path.parent.name != "support"
+    )
+    if not classes:
+        print(f"no solution classes found under {SRC}", file=sys.stderr)
+        return 1
 
     resolved, unresolved = {}, []
     for name in classes:

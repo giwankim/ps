@@ -36,20 +36,12 @@ It resolves class names against LeetCode's public problem index by normalized
 title compare, and fails loudly listing any class it could not resolve — add
 those to `OVERRIDES` in the script after checking the class's method signature.
 
-## Caveats
+## Caveat: the test suite
 
-**The problem-number script is stale.** Its class scan
-(`SRC.glob("*.java")` in `fetch_problem_numbers.py`) only looks directly
-inside `leetcode/src/main/java/leetcode/`, not the numeric packages this doc
-describes. Since the migration, running it finds zero classes and silently
-overwrites `problem_numbers.tsv` with an empty mapping instead of failing
-loudly. The glob needs to become recursive (`rglob`) before the script can be
-trusted again — until then, update the TSV by hand.
-
-**The test suite hangs.** `./gradlew :leetcode:test` currently OOMs and then
-hangs on work-in-progress solutions that contain `UnsupportedOperationException`
-stubs. Prefer `./gradlew :leetcode:compileJava :leetcode:compileTestJava` plus
-a targeted `--tests` filter.
+`./gradlew :leetcode:test` currently OOMs and then hangs on work-in-progress
+solutions that contain `UnsupportedOperationException` stubs. Prefer
+`./gradlew :leetcode:compileJava :leetcode:compileTestJava` plus a targeted
+`--tests` filter.
 
 Rationale and rejected alternatives:
 [docs/superpowers/specs/2026-08-20-leetcode-package-taxonomy-design.md](superpowers/specs/2026-08-20-leetcode-package-taxonomy-design.md)
