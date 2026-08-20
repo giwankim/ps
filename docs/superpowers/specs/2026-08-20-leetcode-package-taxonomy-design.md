@@ -13,10 +13,12 @@ undifferentiated list of 281 entries.
 
 Two properties of the module make this cheap to fix:
 
-- **No coupling between solutions.** No solution class imports another
-  (`grep -rE '^import leetcode\.[A-Z]'` returns nothing). Every solution is a
-  leaf; only `package` declarations change. The sole shared dependency is
-  `leetcode.support`, imported by 46 solution classes.
+- **Almost no coupling between solutions.** No solution class imports another,
+  so every solution is a leaf and only its `package` declaration changes. The
+  shared dependency is `leetcode.support`, imported by 46 solution classes,
+  which needs no rewriting. The one exception is on the test side: eight tests
+  import a nested helper from their solution class by flat FQN and must be
+  rewritten with the move — see step 4 of the migration plan below.
 - **Unique descriptive class names.** Unlike `boj/`, nothing forces a rename.
 
 ## Decision
@@ -124,13 +126,36 @@ and the mapping now contains no duplicate problem numbers.
 2. `git mv` each solution and its `*Test` counterpart into its package —
    `git mv` preserves file history.
 3. Rewrite the `package` line in all 562 moved files.
-4. **No import changes required.** Verified: `leetcode.support` is already a
-   distinct package from `leetcode`, so all 46 dependent classes import it
-   explicitly today and those imports stay valid at any package depth. Five
-   classes (`ConstructQuadTree`, `CopyListWithRandomPointer`,
-   `DesignAddAndSearchWordsDataStructure`, `ImplementTrie`,
-   `PopulatingNextRightPointersInEachNodeII`) declare their own nested `Node`;
-   nested-class resolution outranks imports, so these are unaffected.
+4. **Eight test files need an import rewrite.** `leetcode.support` itself needs
+   nothing: it is already a distinct package from `leetcode`, so its 46
+   dependents import it explicitly today and those imports hold at any package
+   depth. Five classes declare their own nested `Node`, and nested-class
+   resolution outranks imports, so those are unaffected too.
+
+   But eight tests import a *nested helper* from their solution class by flat
+   FQN, and those do break on the move:
+
+   ```
+   leetcode.BinarySearchTreeIterator.BSTIterator          -> leetcode.p0101_0200....
+   leetcode.ConstructQuadTree.Node                        -> leetcode.p0401_0500....
+   leetcode.CopyListWithRandomPointer.Node                -> leetcode.p0101_0200....
+   leetcode.DesignAddAndSearchWordsDataStructure.WordDictionary -> leetcode.p0201_0300....
+   leetcode.FindMedianFromDataStream.MedianFinder         -> leetcode.p0201_0300....
+   leetcode.ImplementTrie.Trie                            -> leetcode.p0201_0300....
+   leetcode.InsertDeleteGetRandomO1.RandomizedSet         -> leetcode.p0301_0400....
+   leetcode.PopulatingNextRightPointersInEachNodeII.Node  -> leetcode.p0101_0200....
+   ```
+
+   The imported class name always equals the test's own filename minus `Test`,
+   so the nested class always lands in the test's own new package. Rewrites must
+   not also match `leetcode.support.*`.
+
+   **This corrects an earlier claim in this spec that no import changes were
+   needed.** That claim rested on `grep -E '^import leetcode\.[A-Z][A-Za-z0-9]*;'`,
+   which requires a `;` immediately after the class name and so cannot match a
+   nested import. It returned zero matches, which was misread as "no coupling
+   between solutions." The correct probe is
+   `'^import leetcode\.[A-Z][A-Za-z0-9]*\.[A-Za-z0-9]+;'`.
 5. Add the javadoc stamp to each of the 281 solution classes.
 6. `./gradlew :leetcode:spotlessApply` (module uses palantir-java-format).
 

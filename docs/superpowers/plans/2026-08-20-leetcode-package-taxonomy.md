@@ -477,7 +477,14 @@ git commit -m "refactor(leetcode): group solutions into numeric range packages
 Move 281 solutions and their 281 tests from the flat leetcode package into 36
 fixed-width-100 packages keyed on the LeetCode problem number, so the IDE tree
 is browsable. Package is a pure function of the number, so it is stable as new
-solutions land. leetcode.support is unchanged; no imports needed rewriting."
+solutions land.
+
+leetcode.support needs no import changes: it was already a distinct package, so
+its dependents import it explicitly and those imports hold at any depth. Eight
+tests did need rewriting, though, because they import a nested helper from
+their solution class by flat FQN (ImplementTrie.Trie, FindMedianFromDataStream
+.MedianFinder, and six more). The imported name always equals the test's own
+filename minus Test, so each nested class moved into the test's own package."
 ```
 
 ---
