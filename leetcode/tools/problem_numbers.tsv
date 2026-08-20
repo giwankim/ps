@@ -1,0 +1,282 @@
+class	number	slug	title
+TwoSum	1	two-sum	Two Sum
+AddTwoNumbers	2	add-two-numbers	Add Two Numbers
+LongestSubstringWithoutRepeatingCharacters	3	longest-substring-without-repeating-characters	Longest Substring Without Repeating Characters
+MedianOfTwoSortedArrays	4	median-of-two-sorted-arrays	Median of Two Sorted Arrays
+LongestPalindromicSubstring	5	longest-palindromic-substring	Longest Palindromic Substring
+ZigzagConversion	6	zigzag-conversion	Zigzag Conversion
+PalindromeNumber	9	palindrome-number	Palindrome Number
+ContainerWithMostWater	11	container-with-most-water	Container With Most Water
+IntegerToRoman	12	integer-to-roman	Integer to Roman
+RomanToInteger	13	roman-to-integer	Roman to Integer
+LongestCommonPrefix	14	longest-common-prefix	Longest Common Prefix
+ThreeSum	15	3sum	3Sum
+LetterCombinationsOfAPhoneNumber	17	letter-combinations-of-a-phone-number	Letter Combinations of a Phone Number
+RemoveNthFromEndOfList	19	remove-nth-node-from-end-of-list	Remove Nth Node From End of List
+ValidParentheses	20	valid-parentheses	Valid Parentheses
+MergeTwoSortedLists	21	merge-two-sorted-lists	Merge Two Sorted Lists
+GenerateParentheses	22	generate-parentheses	Generate Parentheses
+MergeKSortedList	23	merge-k-sorted-lists	Merge k Sorted Lists
+ReverseNodesInKGroup	25	reverse-nodes-in-k-group	Reverse Nodes in k-Group
+RemoveDuplicatesFromSortedArray	26	remove-duplicates-from-sorted-array	Remove Duplicates from Sorted Array
+RemoveElement	27	remove-element	Remove Element
+FindTheIndexOfTheFirstOccurrenceInAString	28	find-the-index-of-the-first-occurrence-in-a-string	Find the Index of the First Occurrence in a String
+SubstringWithConcatenationOfAllWords	30	substring-with-concatenation-of-all-words	Substring with Concatenation of All Words
+SearchInRotatedSortedArray	33	search-in-rotated-sorted-array	Search in Rotated Sorted Array
+FindFirstAndLastPositionOfElementInSortedArray	34	find-first-and-last-position-of-element-in-sorted-array	Find First and Last Position of Element in Sorted Array
+SearchInsertPosition	35	search-insert-position	Search Insert Position
+ValidSudoku	36	valid-sudoku	Valid Sudoku
+CombinationSum	39	combination-sum	Combination Sum
+FirstMissingPositive	41	first-missing-positive	First Missing Positive
+TrappingRainWater	42	trapping-rain-water	Trapping Rain Water
+JumpGameII	45	jump-game-ii	Jump Game II
+Permutations	46	permutations	Permutations
+RotateImage	48	rotate-image	Rotate Image
+GroupAnagrams	49	group-anagrams	Group Anagrams
+Pow	50	powx-n	Pow(x, n)
+NQueens	51	n-queens	N-Queens
+NQueensII	52	n-queens-ii	N-Queens II
+MaximumSubarray	53	maximum-subarray	Maximum Subarray
+SpiralMatrix	54	spiral-matrix	Spiral Matrix
+JumpGame	55	jump-game	Jump Game
+MergeIntervals	56	merge-intervals	Merge Intervals
+InsertInterval	57	insert-interval	Insert Interval
+LengthOfLastWord	58	length-of-last-word	Length of Last Word
+RotateList	61	rotate-list	Rotate List
+UniquePaths	62	unique-paths	Unique Paths
+UniquePathsII	63	unique-paths-ii	Unique Paths II
+MinimumPathSum	64	minimum-path-sum	Minimum Path Sum
+PlusOne	66	plus-one	Plus One
+AddBinary	67	add-binary	Add Binary
+TextJustification	68	text-justification	Text Justification
+Sqrt	69	sqrtx	Sqrt(x)
+ClimbingStairs	70	climbing-stairs	Climbing Stairs
+SimplifyPath	71	simplify-path	Simplify Path
+EditDistance	72	edit-distance	Edit Distance
+SetMatrixZeroes	73	set-matrix-zeroes	Set Matrix Zeroes
+SearchA2DMatrix	74	search-a-2d-matrix	Search a 2D Matrix
+MinimumWindowSubstring	76	minimum-window-substring	Minimum Window Substring
+Combinations	77	combinations	Combinations
+WordSearch	79	word-search	Word Search
+RemoveDuplicatesFromSortedArrayII	80	remove-duplicates-from-sorted-array-ii	Remove Duplicates from Sorted Array II
+RemoveDuplicatesFromSortedListII	82	remove-duplicates-from-sorted-list-ii	Remove Duplicates from Sorted List II
+PartitionList	86	partition-list	Partition List
+MergeSortedArray	88	merge-sorted-array	Merge Sorted Array
+ReverseLinkedListII	92	reverse-linked-list-ii	Reverse Linked List II
+BinaryTreeInorderTraversal	94	binary-tree-inorder-traversal	Binary Tree Inorder Traversal
+InterleavingString	97	interleaving-string	Interleaving String
+ValidateBinarySearchTree	98	validate-binary-search-tree	Validate Binary Search Tree
+SameTree	100	same-tree	Same Tree
+SymmetricTree	101	symmetric-tree	Symmetric Tree
+BinaryTreeLevelOrderTraversal	102	binary-tree-level-order-traversal	Binary Tree Level Order Traversal
+BinaryTreeZigzagLevelOrderTraversal	103	binary-tree-zigzag-level-order-traversal	Binary Tree Zigzag Level Order Traversal
+MaximumDepthOfBinaryTree	104	maximum-depth-of-binary-tree	Maximum Depth of Binary Tree
+ConstructBinaryTreeFromPreorderAndInorderTraversal	105	construct-binary-tree-from-preorder-and-inorder-traversal	Construct Binary Tree from Preorder and Inorder Traversal
+ConstructBinaryTreeFromInorderAndPostorderTraversal	106	construct-binary-tree-from-inorder-and-postorder-traversal	Construct Binary Tree from Inorder and Postorder Traversal
+ConvertSortedArrayToBinarySearchTree	108	convert-sorted-array-to-binary-search-tree	Convert Sorted Array to Binary Search Tree
+PathSum	112	path-sum	Path Sum
+FlattenBinaryTreeToLinkedList	114	flatten-binary-tree-to-linked-list	Flatten Binary Tree to Linked List
+PopulatingNextRightPointersInEachNodeII	117	populating-next-right-pointers-in-each-node-ii	Populating Next Right Pointers in Each Node II
+Triangle	120	triangle	Triangle
+BestTimeToBuyAndSellStock	121	best-time-to-buy-and-sell-stock	Best Time to Buy and Sell Stock
+BestTimeToBuyAndSellStockII	122	best-time-to-buy-and-sell-stock-ii	Best Time to Buy and Sell Stock II
+BestTimeToBuyAndSellStockIII	123	best-time-to-buy-and-sell-stock-iii	Best Time to Buy and Sell Stock III
+BinaryTreeMaximumPathSum	124	binary-tree-maximum-path-sum	Binary Tree Maximum Path Sum
+ValidPalindrome	125	valid-palindrome	Valid Palindrome
+WordLadder	127	word-ladder	Word Ladder
+LongestConsecutiveSequence	128	longest-consecutive-sequence	Longest Consecutive Sequence
+SumRootToLeafNumbers	129	sum-root-to-leaf-numbers	Sum Root to Leaf Numbers
+SurroundedRegions	130	surrounded-regions	Surrounded Regions
+CloneGraph	133	clone-graph	Clone Graph
+GasStation	134	gas-station	Gas Station
+Candy	135	candy	Candy
+SingleNumber	136	single-number	Single Number
+SingleNumberII	137	single-number-ii	Single Number II
+CopyListWithRandomPointer	138	copy-list-with-random-pointer	Copy List with Random Pointer
+WordBreak	139	word-break	Word Break
+LinkedListCycle	141	linked-list-cycle	Linked List Cycle
+ReorderList	143	reorder-list	Reorder List
+LRUCache	146	lru-cache	LRU Cache
+SortList	148	sort-list	Sort List
+MaxPointsOnALine	149	max-points-on-a-line	Max Points on a Line
+EvaluateReversePolishNotation	150	evaluate-reverse-polish-notation	Evaluate Reverse Polish Notation
+ReverseWordsInAString	151	reverse-words-in-a-string	Reverse Words in a String
+FindMinimumInRotatedSortedArray	153	find-minimum-in-rotated-sorted-array	Find Minimum in Rotated Sorted Array
+MinStack	155	min-stack	Min Stack
+FindPeakElement	162	find-peak-element	Find Peak Element
+TwoSumII	167	two-sum-ii-input-array-is-sorted	Two Sum II - Input Array Is Sorted
+FactorialTrailingZeroes	172	factorial-trailing-zeroes	Factorial Trailing Zeroes
+BinarySearchTreeIterator	173	binary-search-tree-iterator	Binary Search Tree Iterator
+RotateArray	189	rotate-array	Rotate Array
+ReverseBits	190	reverse-bits	Reverse Bits
+NumberOf1Bits	191	number-of-1-bits	Number of 1 Bits
+HouseRobber	198	house-robber	House Robber
+BinaryTreeRightSideView	199	binary-tree-right-side-view	Binary Tree Right Side View
+NumberOfIslands	200	number-of-islands	Number of Islands
+BitwiseAndOfNumbersRange	201	bitwise-and-of-numbers-range	Bitwise AND of Numbers Range
+HappyNumber	202	happy-number	Happy Number
+IsomorphicStrings	205	isomorphic-strings	Isomorphic Strings
+ReverseLinkedList	206	reverse-linked-list	Reverse Linked List
+CourseSchedule	207	course-schedule	Course Schedule
+ImplementTrie	208	implement-trie-prefix-tree	Implement Trie (Prefix Tree)
+MinimumSizeSubarraySum	209	minimum-size-subarray-sum	Minimum Size Subarray Sum
+CourseScheduleII	210	course-schedule-ii	Course Schedule II
+DesignAddAndSearchWordsDataStructure	211	design-add-and-search-words-data-structure	Design Add and Search Words Data Structure
+WordSearchII	212	word-search-ii	Word Search II
+KthLargestElementInAnArray	215	kth-largest-element-in-an-array	Kth Largest Element in an Array
+ContainsDuplicate	217	contains-duplicate	Contains Duplicate
+ContainsDuplicateII	219	contains-duplicate-ii	Contains Duplicate II
+MaximalSquare	221	maximal-square	Maximal Square
+CountCompleteTreeNodes	222	count-complete-tree-nodes	Count Complete Tree Nodes
+BasicCalculator	224	basic-calculator	Basic Calculator
+InvertBinaryTree	226	invert-binary-tree	Invert Binary Tree
+SummaryRanges	228	summary-ranges	Summary Ranges
+KthSmallestElementInABST	230	kth-smallest-element-in-a-bst	Kth Smallest Element in a BST
+PalindromeLinkedList	234	palindrome-linked-list	Palindrome Linked List
+LowestCommonAncestorOfABinaryTree	236	lowest-common-ancestor-of-a-binary-tree	Lowest Common Ancestor of a Binary Tree
+ProductOfArrayExceptSelf	238	product-of-array-except-self	Product of Array Except Self
+SlidingWindowMaximum	239	sliding-window-maximum	Sliding Window Maximum
+ValidAnagram	242	valid-anagram	Valid Anagram
+MeetingRooms	252	meeting-rooms	Meeting Rooms
+BinaryTreePaths	257	binary-tree-paths	Binary Tree Paths
+MissingNumber	268	missing-number	Missing Number
+HIndex	274	h-index	H-Index
+FirstBadVersion	278	first-bad-version	First Bad Version
+MoveZeroes	283	move-zeroes	Move Zeroes
+GameOfLife	289	game-of-life	Game of Life
+WordPattern	290	word-pattern	Word Pattern
+FindMedianFromDataStream	295	find-median-from-data-stream	Find Median from Data Stream
+SerializeDeserializeBinaryTree	297	serialize-and-deserialize-binary-tree	Serialize and Deserialize Binary Tree
+LongestIncreasingSubsequence	300	longest-increasing-subsequence	Longest Increasing Subsequence
+CoinChange	322	coin-change	Coin Change
+LongestIncreasingPathInMatrix	329	longest-increasing-path-in-a-matrix	Longest Increasing Path in a Matrix
+CountingBits	338	counting-bits	Counting Bits
+ReverseString	344	reverse-string	Reverse String
+TopKFrequentElements	347	top-k-frequent-elements	Top K Frequent Elements
+RearrangeStringKDistanceApart	358	rearrange-string-k-distance-apart	Rearrange String k Distance Apart
+HitCounter	362	design-hit-counter	Design Hit Counter
+FindKPairsWithSmallestSums	373	find-k-pairs-with-smallest-sums	Find K Pairs with Smallest Sums
+InsertDeleteGetRandomO1	380	insert-delete-getrandom-o1	Insert Delete GetRandom O(1)
+RansomNote	383	ransom-note	Ransom Note
+PerfectRectangle	391	perfect-rectangle	Perfect Rectangle
+IsSubsequence	392	is-subsequence	Is Subsequence
+EvaluateDivision	399	evaluate-division	Evaluate Division
+QueueReconstructionByHeight	406	queue-reconstruction-by-height	Queue Reconstruction by Height
+LongestPalindrome	409	longest-palindrome	Longest Palindrome
+ConstructQuadTree	427	construct-quad-tree	Construct Quad Tree
+MinimumGeneticMutation	433	minimum-genetic-mutation	Minimum Genetic Mutation
+NonOverlapIntervals	435	non-overlapping-intervals	Non-overlapping Intervals
+StringCompression	443	string-compression	String Compression
+MinimumNumberOfArrowsToBurstBalloons	452	minimum-number-of-arrows-to-burst-balloons	Minimum Number of Arrows to Burst Balloons
+PredictTheWinner	486	predict-the-winner	Predict the Winner
+IPO	502	ipo	IPO
+MinimumAbsoluteDifferenceInBST	530	minimum-absolute-difference-in-bst	Minimum Absolute Difference in BST
+NumberOfProvinces	547	number-of-provinces	Number of Provinces
+ArrayPartition	561	array-partition	Array Partition
+SubtreeOfAnotherTree	572	subtree-of-another-tree	Subtree of Another Tree
+AddBoldTag	616	add-bold-tag-in-string	Add Bold Tag in String
+MaximumProductOfThreeNumbers	628	maximum-product-of-three-numbers	Maximum Product of Three Numbers
+AverageOfLevelsInBinaryTree	637	average-of-levels-in-binary-tree	Average of Levels in Binary Tree
+PalindromicSubstrings	647	palindromic-substrings	Palindromic Substrings
+FindDuplicateSubtrees	652	find-duplicate-subtrees	Find Duplicate Subtrees
+ValidPalindromeII	680	valid-palindrome-ii	Valid Palindrome II
+CountBinarySubstrings	696	count-binary-substrings	Count Binary Substrings
+BinarySearch	704	binary-search	Binary Search
+DesignHashMap	706	design-hashmap	Design HashMap
+DailyTemperatures	739	daily-temperatures	Daily Temperatures
+MostCommonWord	819	most-common-word	Most Common Word
+MiddleOfLinkedList	876	middle-of-the-linked-list	Middle of the Linked List
+StoneGame	877	stone-game	Stone Game
+PossibleBipartition	886	possible-bipartition	Possible Bipartition
+SnakesAndLadders	909	snakes-and-ladders	Snakes and Ladders
+MaximumSumCircularSubarray	918	maximum-sum-circular-subarray	Maximum Sum Circular Subarray
+ReorderLogFiles	937	reorder-data-in-log-files	Reorder Data in Log Files
+RangeSumOfBST	938	range-sum-of-bst	Range Sum of BST
+RottingOranges	994	rotting-oranges	Rotting Oranges
+GreatestCommonDivisorOfStrings	1071	greatest-common-divisor-of-strings	Greatest Common Divisor of Strings
+SmallestSubsequenceOfDistinctCharacters	1081	smallest-subsequence-of-distinct-characters	Smallest Subsequence of Distinct Characters
+CorporateFlightBookings	1109	corporate-flight-bookings	Corporate Flight Bookings
+StoneGameII	1140	stone-game-ii	Stone Game II
+LongestCommonSubsequence	1143	longest-common-subsequence	Longest Common Subsequence
+SnapshotArray	1146	snapshot-array	Snapshot Array
+MaximumNumberOfBalloons	1189	maximum-number-of-balloons	Maximum Number of Balloons
+MinRemoveToMakeValidParentheses	1249	minimum-remove-to-make-valid-parentheses	Minimum Remove to Make Valid Parentheses
+Shift2DGrid	1260	shift-2d-grid	Shift 2D Grid
+RemoveCoveredIntervals	1288	remove-covered-intervals	Remove Covered Intervals
+SequentialDigits	1291	sequential-digits	Sequential Digits
+MaxOccurrencesOfASubstring	1297	maximum-number-of-occurrences-of-a-substring	Maximum Number of Occurrences of a Substring
+NumberOfPathsWithMaxScore	1301	number-of-paths-with-max-score	Number of Paths with Max Score
+RankTransformationOfAnArray	1331	rank-transform-of-an-array	Rank Transform of an Array
+AngleBetweenHandsOfAClock	1344	angle-between-hands-of-a-clock	Angle Between Hands of a Clock
+MinStepsToMakeTwoStringsAnagram	1347	minimum-number-of-steps-to-make-two-strings-anagram	Minimum Number of Steps to Make Two Strings Anagram
+NumberOfSubstringsContainingAllThreeCharacters	1358	number-of-substrings-containing-all-three-characters	Number of Substrings Containing All Three Characters
+CinemaSeatAllocation	1386	cinema-seat-allocation	Cinema Seat Allocation
+CheckIfThereIsValidPath	1391	check-if-there-is-a-valid-path-in-a-grid	Check if There is a Valid Path in a Grid
+StoneGameIII	1406	stone-game-iii	Stone Game III
+DiagonalTraverseII	1424	diagonal-traverse-ii	Diagonal Traverse II
+MaximumProductOfTwoElementsInAnArray	1464	maximum-product-of-two-elements-in-an-array	Maximum Product of Two Elements in an Array
+LeastNumberOfUniqueIntegers	1481	least-number-of-unique-integers-after-k-removals	Least Number of Unique Integers after K Removals
+StoneGameIV	1510	stone-game-iv	Stone Game IV
+StoneGameV	1563	stone-game-v	Stone Game V
+SplitStringMaxNumberUniqueSubstrings	1593	split-a-string-into-the-max-number-of-unique-substrings	Split a String Into the Max Number of Unique Substrings
+MaximumUnitsOnATruck	1710	maximum-units-on-a-truck	Maximum Units on a Truck
+FindTheHighestAltitude	1732	find-the-highest-altitude	Find the Highest Altitude
+MergeStringsAlternately	1768	merge-strings-alternately	Merge Strings Alternately
+MaximumIceCreamBars	1833	maximum-ice-cream-bars	Maximum Ice Cream Bars
+MaximumBuildingHeight	1840	maximum-building-height	Maximum Building Height
+MaximumElementAfterDecreasingAndRearranging	1846	maximum-element-after-decreasing-and-rearranging	Maximum Element After Decreasing and Rearranging
+NumberOfStringsThatAppearAsSubstringsInWord	1967	number-of-strings-that-appear-as-substrings-in-word	Number of Strings That Appear as Substrings in Word
+FindGreatesCommonDivisorOfArray	1979	find-greatest-common-divisor-of-array	Find Greatest Common Divisor of Array
+StoneGameIX	2029	stone-game-ix	Stone Game IX
+DeleteTheMiddleNodeOfALinkedList	2095	delete-the-middle-node-of-a-linked-list	Delete the Middle Node of a Linked List
+MaximumTwinSumOfALinkedList	2130	maximum-twin-sum-of-a-linked-list	Maximum Twin Sum of a Linked List
+PartitionArrayAccordingToGivenPivot	2161	partition-array-according-to-given-pivot	Partition Array According to Given Pivot
+CreateBinaryTreeFromDescriptions	2196	create-binary-tree-from-descriptions	Create Binary Tree From Descriptions
+LongestSubstringOfOneRepeatingCharacter	2213	longest-substring-of-one-repeating-character	Longest Substring of One Repeating Character
+TwoEventsHaveConflict	2446	determine-if-two-events-have-conflict	Determine if Two Events Have Conflict
+MinimumScoreOfAPathBetweenTwoCities	2492	minimum-score-of-a-path-between-two-cities	Minimum Score of a Path Between Two Cities
+LeftAndRightSumDifferences	2574	left-and-right-sum-differences	Left and Right Sum Differences
+CountTheNumberOfCompleteComponents	2685	count-the-number-of-complete-components	Count the Number of Complete Components
+FindTheSafestPathInAGrid	2812	find-the-safest-path-in-a-grid	Find the Safest Path in a Grid
+LengthOfLongestSubarrayWithAtMostKFrequency	2958	length-of-longest-subarray-with-at-most-k-frequency	Length of Longest Subarray With at Most K Frequency
+SmallestMissingIntegerGreaterThanSequentialPrefixSum	2996	smallest-missing-integer-greater-than-sequential-prefix-sum	Smallest Missing Integer Greater Than Sequential Prefix Sum
+MinimumNumberOfPushesToTypeWordI	3014	minimum-number-of-pushes-to-type-word-i	Minimum Number of Pushes to Type Word I
+MinimumNumberOfPushesToTypeWordII	3016	minimum-number-of-pushes-to-type-word-ii	Minimum Number of Pushes to Type Word II
+FindTheMaximumNumberOfElementsInSubset	3020	find-the-maximum-number-of-elements-in-subset	Find the Maximum Number of Elements in Subset
+DistributeElementsIntoTwoArraysI	3069	distribute-elements-into-two-arrays-i	Distribute Elements Into Two Arrays I
+MaximumLengthSubstringWithTwoOccurrences	3090	maximum-length-substring-with-two-occurrences	Maximum Length Substring With Two Occurrences
+CountDaysWithoutMeetings	3169	count-days-without-meetings	Count Days Without Meetings
+CountCompletePairPairs2	3185	count-pairs-that-form-a-complete-day-ii	Count Pairs That Form a Complete Day II
+FindASafeWalkThroughAGrid	3286	find-a-safe-walk-through-a-grid	Find a Safe Walk Through a Grid
+FindTheLexicographicallySmallestValidSequence	3302	find-the-lexicographically-smallest-valid-sequence	Find the Lexicographically Smallest Valid Sequence
+RemoveMethodsFromProject	3310	remove-methods-from-project	Remove Methods From Project
+SortedGCDPairQueries	3312	sorted-gcd-pair-queries	Sorted GCD Pair Queries
+FindTheNumberOfSubsequencesWithEqualGCD	3336	find-the-number-of-subsequences-with-equal-gcd	Find the Number of Subsequences With Equal GCD
+SmallestDivisibleDigitProductI	3345	smallest-divisible-digit-product-i	Smallest Divisible Digit Product I
+SmallestDivisibleDigitProductII	3348	smallest-divisible-digit-product-ii	Smallest Divisible Digit Product II
+FindTheLargestAlmostMissingInteger	3471	find-the-largest-almost-missing-integer	Find the Largest Almost Missing Integer
+MaximizeActiveSectionWithTradeI	3499	maximize-active-section-with-trade-i	Maximize Active Section with Trade I
+NumberOfUniqueXORTripletsI	3513	number-of-unique-xor-triplets-i	Number of Unique XOR Triplets I
+NumberOfUniqueXORTripletsII	3514	number-of-unique-xor-triplets-ii	Number of Unique XOR Triplets II
+SmallestPalindromicRearrangementI	3517	smallest-palindromic-rearrangement-i	Smallest Palindromic Rearrangement I
+SmallestPalindromicRearrangementII	3518	smallest-palindromic-rearrangement-ii	Smallest Palindromic Rearrangement II
+PathExistenceQueriesInAGraphI	3532	path-existence-queries-in-a-graph-i	Path Existence Queries in a Graph I
+MaximumProductOfTwoDigits	3536	maximum-product-of-two-digits	Maximum Product of Two Digits
+NumberOfWaysToAssignEdgeWeightsI	3558	number-of-ways-to-assign-edge-weights-i	Number of Ways to Assign Edge Weights I
+ProcessStringWithSpecialOperationsI	3612	process-string-with-special-operations-i	Process String with Special Operations I
+ProcessStringWithSpecialOperationsII	3614	process-string-with-special-operations-ii	Process String with Special Operations II
+NetworkRecoveryPathways	3620	network-recovery-pathways	Network Recovery Pathways
+GCDOfOddAndEvenSums	3658	gcd-of-odd-and-even-sums	GCD of Odd and Even Sums
+MaximumTotalSubarrayValueI	3689	maximum-total-subarray-value-i	Maximum Total Subarray Value I
+MaximumTotalSubarrayValueII	3691	maximum-total-subarray-value-ii	Maximum Total Subarray Value II
+NumberOfZigZagArraysI	3699	number-of-zigzag-arrays-i	Number of ZigZag Arrays I
+NumberOfZigZagArraysII	3700	number-of-zigzag-arrays-ii	Number of ZigZag Arrays II
+LongestSubsequenceWithNonZeroBitwiseXOR	3702	longest-subsequence-with-non-zero-bitwise-xor	Longest Subsequence With Non-Zero Bitwise XOR
+FindMissingElements	3731	find-missing-elements	Find Missing Elements
+CountSubarraysWithMajorityElementI	3737	count-subarrays-with-majority-element-i	Count Subarrays With Majority Element I
+CountSubarraysWithMajorityElementII	3739	count-subarrays-with-majority-element-ii	Count Subarrays With Majority Element II
+TotalWavinessOfNumbersInRangeII	3753	total-waviness-of-numbers-in-range-ii	Total Waviness of Numbers in Range II
+ConcatenateNonZeroDigitsAndMultiplyBySumI	3754	concatenate-non-zero-digits-and-multiply-by-sum-i	Concatenate Non-Zero Digits and Multiply by Sum I
+ConcatenateNonZeroDigitsAndMultiplyBySumII	3756	concatenate-non-zero-digits-and-multiply-by-sum-ii	Concatenate Non-Zero Digits and Multiply by Sum II
+WeightedWordMapping	3838	weighted-word-mapping	Weighted Word Mapping
+SumOfGcdOfFormedPairs	3867	sum-of-gcd-of-formed-pairs	Sum of GCD of Formed Pairs
