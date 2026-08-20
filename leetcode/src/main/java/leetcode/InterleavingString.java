@@ -30,9 +30,6 @@ public class InterleavingString {
     if (i == n && j == m) {
       return true;
     }
-    if (i > n || j > m) {
-      return false;
-    }
     if (dp[i][j] != -1) {
       return dp[i][j] == 1;
     }
