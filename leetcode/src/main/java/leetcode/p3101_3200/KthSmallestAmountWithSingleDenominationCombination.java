@@ -9,13 +9,18 @@ public class KthSmallestAmountWithSingleDenominationCombination {
   /**
    * @implNote Time {@code O(2^n * n * log C)} since the binary search over the amounts calls
    *     {@code count} once per step. Auxiliary space {@code O(1)}, where {@code n = coins.length}
-   *     and {@code C = 5 * 10^10} is the largest amount the constraints allow — the largest coin
-   *     times the largest {@code k} — which fixes the search at 36 steps.
+   *     and {@code C = min(coins) * k} is the search range — the multiples of the smallest coin
+   *     alone supply {@code k} amounts at or below it, so the answer cannot exceed it. No coin
+   *     passes 25, capping {@code C} at {@code 5 * 10^10} and the search at 36 steps.
    */
   public long findKthSmallest(int[] coins, int k) {
+    int min = coins[0];
+    for (int coin : coins) {
+      min = Math.min(min, coin);
+    }
     long ans = -1;
     long lo = 1L;
-    long hi = 50_000_000_000L;
+    long hi = (long) min * k + 1L;
     while (lo <= hi) {
       long mid = lo + (hi - lo) / 2;
       if (count(coins, mid) >= k) {
