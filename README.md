@@ -291,6 +291,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii)
 - [3620. Network Recovery Pathways](https://leetcode.com/problems/network-recovery-pathways)
+- [3622. Check Divisibility by Digit Sum and Product](https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product)
 - [3658. GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
