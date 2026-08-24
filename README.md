@@ -531,6 +531,7 @@ One package per task, named after the task ID with the underscore turned into a 
     - [A. A](https://atcoder.jp/contests/abc472/tasks/abc472_a)
     - [B. Break a Stick](https://atcoder.jp/contests/abc472/tasks/abc472_b)
     - [C. On a Diet](https://atcoder.jp/contests/abc472/tasks/abc472_c)
+    - [D. Bomber Mad](https://atcoder.jp/contests/abc472/tasks/abc472_d)
 
 ## [USACO](https://usaco.org/index.php)
 
