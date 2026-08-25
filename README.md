@@ -297,6 +297,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
 - [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor)
+- [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k)
 - [3731. Find Missing Elements](https://leetcode.com/problems/find-missing-elements)
 - [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
 - [3739. Count Subarrays with Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii)
