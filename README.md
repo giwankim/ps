@@ -539,6 +539,8 @@ One package per task, named after the task ID with the underscore turned into a 
     - [D. Bomber Mad](https://atcoder.jp/contests/abc472/tasks/abc472_d)
 - [ABC 473](https://atcoder.jp/contests/abc473)
     - [A. Second Half Sum](https://atcoder.jp/contests/abc473/tasks/abc473_a)
+    - [B. Old Maid](https://atcoder.jp/contests/abc473/tasks/abc473_b)
+    - [C. Change Schools](https://atcoder.jp/contests/abc473/tasks/abc473_c)
 
 ## [USACO](https://usaco.org/index.php)
 
