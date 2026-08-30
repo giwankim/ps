@@ -256,6 +256,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1967. Number of Strings that Appear as Substrings in a Word](https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-a-word)
 - [1979. Find Greatest Common Divisor of Array](https://leetcode.com/problems/find-greatest-common-divisor-of-array)
 - [2029. Stone Game IX](https://leetcode.com/problems/stone-game-ix)
+- [2091. Removing Minimum and Maximum From Array](https://leetcode.com/problems/removing-minimum-and-maximum-from-array)
 - [2095. Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list)
 - [2130. Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list)
 - [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot)
