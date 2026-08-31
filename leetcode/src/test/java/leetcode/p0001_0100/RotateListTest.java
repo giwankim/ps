@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.stream.Stream;
@@ -19,19 +20,19 @@ class RotateListTest {
 
   @Test
   void singleton() {
-    assertThat(sut.rotateRight(ListNode.of(1), 1)).isEqualTo(ListNode.of(1));
-    assertThat(sut.rotateRight(ListNode.of(1), 2)).isEqualTo(ListNode.of(1));
+    assertListEquals(sut.rotateRight(ListNode.of(1), 1), ListNode.of(1));
+    assertListEquals(sut.rotateRight(ListNode.of(1), 2), ListNode.of(1));
   }
 
   @Test
   void noRotation() {
-    assertThat(sut.rotateRight(ListNode.of(1, 2, 3), 0)).isEqualTo(ListNode.of(1, 2, 3));
+    assertListEquals(sut.rotateRight(ListNode.of(1, 2, 3), 0), ListNode.of(1, 2, 3));
   }
 
   @ParameterizedTest
   @MethodSource
   void rotateRight(ListNode head, int k, ListNode expected) {
-    assertThat(sut.rotateRight(head, k)).isEqualTo(expected);
+    assertListEquals(sut.rotateRight(head, k), expected);
   }
 
   static Stream<Arguments> rotateRight() {
@@ -51,6 +52,6 @@ class RotateListTest {
   @Test
   void rotateMoreThenLength() {
     ListNode head = ListNode.of(0, 1, 2);
-    assertThat(sut.rotateRight(head, 4)).isEqualTo(ListNode.of(2, 0, 1));
+    assertListEquals(sut.rotateRight(head, 4), ListNode.of(2, 0, 1));
   }
 }

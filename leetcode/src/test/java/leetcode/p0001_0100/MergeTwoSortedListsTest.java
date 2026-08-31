@@ -1,6 +1,6 @@
 package leetcode.p0001_0100;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 
 import java.util.stream.Stream;
 import leetcode.support.ListNode;
@@ -15,7 +15,7 @@ class MergeTwoSortedListsTest {
   @MethodSource
   void mergeTwoLists(ListNode list1, ListNode list2, ListNode expected) {
     ListNode actual = sut.mergeTwoLists(list1, list2);
-    assertThat(actual).isEqualTo(expected);
+    assertListEquals(actual, expected);
   }
 
   private static Stream<Arguments> mergeTwoLists() {

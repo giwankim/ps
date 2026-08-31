@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.stream.Stream;
@@ -20,7 +21,7 @@ class PartitionListTest {
   @ParameterizedTest
   @MethodSource
   void partition(ListNode head, int x, ListNode expected) {
-    assertThat(sut.partition(head, x)).isEqualTo(expected);
+    assertListEquals(sut.partition(head, x), expected);
   }
 
   static Stream<Arguments> partition() {

@@ -1,6 +1,6 @@
 package leetcode.p0001_0100;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 
 import java.util.stream.Stream;
 import leetcode.support.ListNode;
@@ -15,7 +15,7 @@ class AddTwoNumbersTest {
   @MethodSource
   void addTwoNumbers(int[] l1, int[] l2, int[] expected) {
     ListNode actual = sut.addTwoNumbers(ListNode.of(l1), ListNode.of(l2));
-    assertThat(actual).isEqualTo(ListNode.of(expected));
+    assertListEquals(actual, ListNode.of(expected));
   }
 
   static Stream<Arguments> addTwoNumbers() {

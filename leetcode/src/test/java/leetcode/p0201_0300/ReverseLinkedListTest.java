@@ -1,6 +1,6 @@
 package leetcode.p0201_0300;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 
 import java.util.stream.Stream;
 import leetcode.support.ListNode;
@@ -13,7 +13,7 @@ class ReverseLinkedListTest {
   @MethodSource
   void reverseList(ListNode head, ListNode expected) {
     ListNode actual = new ReverseLinkedList().reverseList(head);
-    assertThat(actual).isEqualTo(expected);
+    assertListEquals(actual, expected);
   }
 
   private static Stream<Arguments> reverseList() {

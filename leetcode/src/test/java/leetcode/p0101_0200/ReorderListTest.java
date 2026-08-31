@@ -1,6 +1,6 @@
 package leetcode.p0101_0200;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 
 import java.util.stream.Stream;
 import leetcode.support.ListNode;
@@ -14,7 +14,7 @@ class ReorderListTest {
   @MethodSource
   void reorderList(ListNode head, ListNode expected) {
     new ReorderList().reorderList(head);
-    assertThat(head).isEqualTo(expected);
+    assertListEquals(head, expected);
   }
 
   private static Stream<Arguments> reorderList() {
@@ -27,7 +27,7 @@ class ReorderListTest {
   @MethodSource
   void reverse(ListNode head, ListNode expected) {
     ListNode actual = new ReorderList().reverse(head);
-    assertThat(actual).isEqualTo(expected);
+    assertListEquals(actual, expected);
   }
 
   private static Stream<Arguments> reverse() {

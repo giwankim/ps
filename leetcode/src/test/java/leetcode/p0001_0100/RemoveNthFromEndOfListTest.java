@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.stream.Stream;
@@ -19,28 +20,28 @@ class RemoveNthFromEndOfListTest {
 
   @Test
   void removeTailOfTwoNodeList() {
-    assertThat(sut.removeNthFromEnd(ListNode.of(1, 2), 1)).isEqualTo(ListNode.of(1));
+    assertListEquals(sut.removeNthFromEnd(ListNode.of(1, 2), 1), ListNode.of(1));
   }
 
   @Test
   void removeHeadOfTwoNodeList() {
-    assertThat(sut.removeNthFromEnd(ListNode.of(1, 2), 2)).isEqualTo(ListNode.of(2));
+    assertListEquals(sut.removeNthFromEnd(ListNode.of(1, 2), 2), ListNode.of(2));
   }
 
   @Test
   void removeTail() {
-    assertThat(sut.removeNthFromEnd(ListNode.of(1, 2, 3), 1)).isEqualTo(ListNode.of(1, 2));
+    assertListEquals(sut.removeNthFromEnd(ListNode.of(1, 2, 3), 1), ListNode.of(1, 2));
   }
 
   @Test
   void removeHead() {
-    assertThat(sut.removeNthFromEnd(ListNode.of(1, 2, 3), 3)).isEqualTo(ListNode.of(2, 3));
+    assertListEquals(sut.removeNthFromEnd(ListNode.of(1, 2, 3), 3), ListNode.of(2, 3));
   }
 
   @ParameterizedTest
   @MethodSource
   void removeMiddleNode(ListNode head, int n, ListNode expected) {
-    assertThat(sut.removeNthFromEnd(head, n)).isEqualTo(expected);
+    assertListEquals(sut.removeNthFromEnd(head, n), expected);
   }
 
   static Stream<Arguments> removeMiddleNode() {

@@ -1,11 +1,9 @@
 package leetcode.support;
 
 import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @AllArgsConstructor
-@EqualsAndHashCode
 @NoArgsConstructor
 public class ListNode {
   public int val;

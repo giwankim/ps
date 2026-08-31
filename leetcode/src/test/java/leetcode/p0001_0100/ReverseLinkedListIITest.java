@@ -1,6 +1,6 @@
 package leetcode.p0001_0100;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 
 import java.util.stream.Stream;
 import leetcode.support.ListNode;
@@ -15,26 +15,26 @@ class ReverseLinkedListIITest {
   // Step 1: Trivial — single node, left == right == 1
   @Test
   void singleton() {
-    assertThat(sut.reverseBetween(ListNode.of(1), 1, 1)).isEqualTo(ListNode.of(1));
+    assertListEquals(sut.reverseBetween(ListNode.of(1), 1, 1), ListNode.of(1));
   }
 
   // Step 2: No-op — left == right on a longer list (no reversal needed)
   @Test
   void leftEqualsRight() {
-    assertThat(sut.reverseBetween(ListNode.of(1, 2, 3), 2, 2)).isEqualTo(ListNode.of(1, 2, 3));
+    assertListEquals(sut.reverseBetween(ListNode.of(1, 2, 3), 2, 2), ListNode.of(1, 2, 3));
   }
 
   // Step 3: Simplest actual reversal — swap two elements
   @Test
   void twoElementSwap() {
-    assertThat(sut.reverseBetween(ListNode.of(1, 2), 1, 2)).isEqualTo(ListNode.of(2, 1));
+    assertListEquals(sut.reverseBetween(ListNode.of(1, 2), 1, 2), ListNode.of(2, 1));
   }
 
   // Step 4: Reverse a prefix (left=1, right < n) — head changes, tail reconnects
   @ParameterizedTest
   @MethodSource
   void reversePrefix(ListNode head, int right, ListNode expected) {
-    assertThat(sut.reverseBetween(head, 1, right)).isEqualTo(expected);
+    assertListEquals(sut.reverseBetween(head, 1, right), expected);
   }
 
   static Stream<Arguments> reversePrefix() {
@@ -48,7 +48,7 @@ class ReverseLinkedListIITest {
   @ParameterizedTest
   @MethodSource
   void reverseSuffix(ListNode head, int left, int right, ListNode expected) {
-    assertThat(sut.reverseBetween(head, left, right)).isEqualTo(expected);
+    assertListEquals(sut.reverseBetween(head, left, right), expected);
   }
 
   static Stream<Arguments> reverseSuffix() {
@@ -62,7 +62,7 @@ class ReverseLinkedListIITest {
   @ParameterizedTest
   @MethodSource
   void reverseMiddle(ListNode head, int left, int right, ListNode expected) {
-    assertThat(sut.reverseBetween(head, left, right)).isEqualTo(expected);
+    assertListEquals(sut.reverseBetween(head, left, right), expected);
   }
 
   static Stream<Arguments> reverseMiddle() {
@@ -83,7 +83,7 @@ class ReverseLinkedListIITest {
   @ParameterizedTest
   @MethodSource
   void entireList(ListNode head, int right, ListNode expected) {
-    assertThat(sut.reverseBetween(head, 1, right)).isEqualTo(expected);
+    assertListEquals(sut.reverseBetween(head, 1, right), expected);
   }
 
   static Stream<Arguments> entireList() {

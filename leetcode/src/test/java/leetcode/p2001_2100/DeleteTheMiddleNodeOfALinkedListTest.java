@@ -1,5 +1,6 @@
 package leetcode.p2001_2100;
 
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import leetcode.support.ListNode;
@@ -16,73 +17,70 @@ class DeleteTheMiddleNodeOfALinkedListTest {
   }
 
   // Step 2: n = 2 deletes index 1, keeping only the head. Comparing against a one-node list also
-  // verifies the survivor's next is nulled — a dangling pointer to the deleted node would fail
-  // equality because @EqualsAndHashCode compares the whole chain.
+  // verifies the survivor's next is nulled — a dangling pointer to the deleted node would surface
+  // as an extra value in the comparison.
   @Test
   void twoNodeListKeepsOnlyTheFirstAndNullsItsNext() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 2))).isEqualTo(ListNode.of(1));
+    assertListEquals(sut.deleteMiddle(ListNode.of(1, 2)), ListNode.of(1));
   }
 
   // Step 3: LeetCode Example 3 — [2,1] with n = 2 removes node 1 (value 1), leaving [2].
   @Test
   void leetCodeExample3() {
-    assertThat(sut.deleteMiddle(ListNode.of(2, 1))).isEqualTo(ListNode.of(2));
+    assertListEquals(sut.deleteMiddle(ListNode.of(2, 1)), ListNode.of(2));
   }
 
   // Step 4: n = 3 has a single, unambiguous middle at index 1; the head relinks past it to the
   // tail.
   @Test
   void threeNodeListRemovesTheSingleMiddle() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 2, 3))).isEqualTo(ListNode.of(1, 3));
+    assertListEquals(sut.deleteMiddle(ListNode.of(1, 2, 3)), ListNode.of(1, 3));
   }
 
   // Step 5: LeetCode Example 2 — n = 4, middle index 2 (value 3), giving [1,2,4].
   @Test
   void leetCodeExample2() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 2, 3, 4))).isEqualTo(ListNode.of(1, 2, 4));
+    assertListEquals(sut.deleteMiddle(ListNode.of(1, 2, 3, 4)), ListNode.of(1, 2, 4));
   }
 
   // Step 6: odd length n = 5 has two central candidates (indices 2 and 3); floor(5/2) = 2 picks the
   // lower one (value 3), so the result is [1,2,4,5].
   @Test
   void oddLengthRemovesTheLowerCenter() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 2, 3, 4, 5))).isEqualTo(ListNode.of(1, 2, 4, 5));
+    assertListEquals(sut.deleteMiddle(ListNode.of(1, 2, 3, 4, 5)), ListNode.of(1, 2, 4, 5));
   }
 
   // Step 7: even length n = 6 — floor(6/2) = 3 removes index 3 (value 4), the upper of the two
   // centers, giving [1,2,3,5,6]. Contrast with Step 6 to pin the floor-division convention.
   @Test
   void evenLengthRemovesTheUpperCenter() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 2, 3, 4, 5, 6)))
-        .isEqualTo(ListNode.of(1, 2, 3, 5, 6));
+    assertListEquals(sut.deleteMiddle(ListNode.of(1, 2, 3, 4, 5, 6)), ListNode.of(1, 2, 3, 5, 6));
   }
 
   // Step 8: LeetCode Example 1 — n = 7, middle index 3 (value 7). Removing it relinks an interior
   // node (value 4) to the node after the middle (value 1): [1,3,4,1,2,6].
   @Test
   void leetCodeExample1() {
-    assertThat(sut.deleteMiddle(ListNode.of(1, 3, 4, 7, 1, 2, 6)))
-        .isEqualTo(ListNode.of(1, 3, 4, 1, 2, 6));
+    assertListEquals(
+        sut.deleteMiddle(ListNode.of(1, 3, 4, 7, 1, 2, 6)), ListNode.of(1, 3, 4, 1, 2, 6));
   }
 
   // Step 9: deletion is positional, not value-based. With duplicates surrounding a distinct middle
   // (n = 5, index 2 holds value 1), only that one node is removed and all four 7s survive.
   @Test
   void deletionIsByPositionNotByValue() {
-    assertThat(sut.deleteMiddle(ListNode.of(7, 7, 1, 7, 7))).isEqualTo(ListNode.of(7, 7, 7, 7));
+    assertListEquals(sut.deleteMiddle(ListNode.of(7, 7, 1, 7, 7)), ListNode.of(7, 7, 7, 7));
   }
 
   // Step 10: values at the constraint upper bound (Node.val <= 10^5) are handled like any other —
   // here the middle (value 1) is removed, leaving the two boundary-valued nodes.
   @Test
   void valuesAtTheConstraintUpperBoundAreHandled() {
-    assertThat(sut.deleteMiddle(ListNode.of(100000, 1, 100000)))
-        .isEqualTo(ListNode.of(100000, 100000));
+    assertListEquals(sut.deleteMiddle(ListNode.of(100000, 1, 100000)), ListNode.of(100000, 100000));
   }
 
   // Step 11: maximum length (n = 10^5). Values 1..n let us predict every surviving value by index,
-  // and we walk the result iteratively — comparing two 10^5-deep lists via the recursive
-  // @EqualsAndHashCode/toString would itself overflow the stack.
+  // and we walk the result iteratively instead of materializing a second 10^5-node expected list.
   @Test
   void maximumLengthListDeletesTheMiddleByIndex() {
     int n = 100000;

@@ -1,5 +1,6 @@
 package leetcode.p0001_0100;
 
+import static leetcode.support.ListNodeAssertions.assertListEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import leetcode.support.ListNode;
@@ -29,78 +30,81 @@ class MergeKSortedListTest {
   // Step 4: single one-element list — returned unchanged
   @Test
   void singleOneElementListReturnedUnchanged() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1)})).isEqualTo(ListNode.of(1));
+    assertListEquals(sut.mergeKLists(new ListNode[] {ListNode.of(1)}), ListNode.of(1));
   }
 
   // Step 5: single already-sorted list — returned unchanged
   @Test
   void singleSortedListReturnedUnchanged() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1, 2, 3)}))
-        .isEqualTo(ListNode.of(1, 2, 3));
+    assertListEquals(sut.mergeKLists(new ListNode[] {ListNode.of(1, 2, 3)}), ListNode.of(1, 2, 3));
   }
 
   // Step 6: a null entry alongside a real list — null is skipped, list returned
   @Test
   void nullEntryAlongsideListIsSkipped() {
-    assertThat(sut.mergeKLists(new ListNode[] {null, ListNode.of(1, 2)}))
-        .isEqualTo(ListNode.of(1, 2));
+    assertListEquals(sut.mergeKLists(new ListNode[] {null, ListNode.of(1, 2)}), ListNode.of(1, 2));
   }
 
   // Step 7: two single-element lists in ascending order
   @Test
   void twoSingleElementListsInOrder() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1), ListNode.of(2)}))
-        .isEqualTo(ListNode.of(1, 2));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(1), ListNode.of(2)}), ListNode.of(1, 2));
   }
 
   // Step 8: two single-element lists supplied in reverse order — locks min-first comparison
   @Test
   void twoSingleElementListsInReverseOrder() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(2), ListNode.of(1)}))
-        .isEqualTo(ListNode.of(1, 2));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(2), ListNode.of(1)}), ListNode.of(1, 2));
   }
 
   // Step 9: two equal-length sorted lists interleaved
   @Test
   void twoEqualLengthListsInterleaved() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1, 3, 5), ListNode.of(2, 4, 6)}))
-        .isEqualTo(ListNode.of(1, 2, 3, 4, 5, 6));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(1, 3, 5), ListNode.of(2, 4, 6)}),
+        ListNode.of(1, 2, 3, 4, 5, 6));
   }
 
   // Step 10: two lists of different lengths — shorter exhausts first, remainder appended
   @Test
   void twoListsOfDifferentLengthsMerged() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1, 5), ListNode.of(2, 3, 4)}))
-        .isEqualTo(ListNode.of(1, 2, 3, 4, 5));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(1, 5), ListNode.of(2, 3, 4)}),
+        ListNode.of(1, 2, 3, 4, 5));
   }
 
   // Step 11: duplicate values across lists are all preserved
   @Test
   void duplicateValuesAcrossListsArePreserved() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(1, 1), ListNode.of(1)}))
-        .isEqualTo(ListNode.of(1, 1, 1));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(1, 1), ListNode.of(1)}), ListNode.of(1, 1, 1));
   }
 
   // Step 12: LeetCode Example 1 — three lists with overlapping values
   @Test
   void leetCodeExampleOneThreeListsWithOverlaps() {
-    assertThat(sut.mergeKLists(
-            new ListNode[] {ListNode.of(1, 4, 5), ListNode.of(1, 3, 4), ListNode.of(2, 6)}))
-        .isEqualTo(ListNode.of(1, 1, 2, 3, 4, 4, 5, 6));
+    assertListEquals(
+        sut.mergeKLists(
+            new ListNode[] {ListNode.of(1, 4, 5), ListNode.of(1, 3, 4), ListNode.of(2, 6)}),
+        ListNode.of(1, 1, 2, 3, 4, 4, 5, 6));
   }
 
   // Step 13: negative values are ordered correctly
   @Test
   void negativeValuesAreOrderedCorrectly() {
-    assertThat(sut.mergeKLists(new ListNode[] {ListNode.of(-3, -1), ListNode.of(-2, 0)}))
-        .isEqualTo(ListNode.of(-3, -2, -1, 0));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {ListNode.of(-3, -1), ListNode.of(-2, 0)}),
+        ListNode.of(-3, -2, -1, 0));
   }
 
   // Step 14: mix of null entries and lists — nulls skipped, lists merged
   @Test
   void mixOfNullEntriesAndListsAreMerged() {
-    assertThat(sut.mergeKLists(new ListNode[] {null, ListNode.of(1, 4), null, ListNode.of(2, 3)}))
-        .isEqualTo(ListNode.of(1, 2, 3, 4));
+    assertListEquals(
+        sut.mergeKLists(new ListNode[] {null, ListNode.of(1, 4), null, ListNode.of(2, 3)}),
+        ListNode.of(1, 2, 3, 4));
   }
 
   // Step 15: property — output is non-decreasing
