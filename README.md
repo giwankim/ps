@@ -363,6 +363,7 @@ nodes live in `grind75.support`.
 - [81301. 숫자 문자열과 영단어](https://school.programmers.co.kr/learn/courses/30/lessons/81301)
 - [81302. 거리두기 확인하기](https://school.programmers.co.kr/learn/courses/30/lessons/81302)
 - [87377. 교점에 별 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/87377)
+- [92334. 신고 결과 받기](https://school.programmers.co.kr/learn/courses/30/lessons/92334)
 - [92341. 주차 요금 계산](https://school.programmers.co.kr/learn/courses/30/lessons/92341)
 - [120807. 숫자 비교하기](https://school.programmers.co.kr/learn/courses/30/lessons/120807)
 - [150370. 개인정보 수집 유효기간](https://school.programmers.co.kr/learn/courses/30/lessons/150370)
