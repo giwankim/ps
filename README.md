@@ -311,6 +311,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3756. Concatenate Non-Zero Digits and Multiply by Sum II](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 - [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs)
+- [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i)
 
 ## [Grind 75](https://www.techinterviewhandbook.org/grind75/)
 
