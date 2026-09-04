@@ -200,6 +200,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces)
 - [561. Array Partition](https://leetcode.com/problems/array-partition)
 - [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree)
+- [605. Can Place Flowers](https://leetcode.com/problems/can-place-flowers)
 - [616. Add Bold Tag in String](https://leetcode.com/problems/add-bold-tag-in-string)
 - [628. Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers)
 - [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree)
