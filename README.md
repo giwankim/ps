@@ -315,6 +315,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i)
 - [3876. Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii)
 - [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i)
+- [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii)
 
 ## [Grind 75](https://www.techinterviewhandbook.org/grind75/)
 
