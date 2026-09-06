@@ -552,6 +552,7 @@ One package per task, named after the task ID with the underscore turned into a 
     - [C. Change Schools](https://atcoder.jp/contests/abc473/tasks/abc473_c)
 - [ABC 474](https://atcoder.jp/contests/abc474)
     - [A. Not X](https://atcoder.jp/contests/abc474/tasks/abc474_a)
+    - [B. Exit Order](https://atcoder.jp/contests/abc474/tasks/abc474_b)
 
 ## [USACO](https://usaco.org/index.php)
 
