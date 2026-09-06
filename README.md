@@ -99,6 +99,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree)
 - [112. Path Sum](https://leetcode.com/problems/path-sum)
 - [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list)
+- [115. Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences)
 - [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii)
 - [120. Triangle](https://leetcode.com/problems/triangle)
 - [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
