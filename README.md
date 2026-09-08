@@ -221,6 +221,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)
 - [937. Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files)
 - [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)
+- [940. Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii)
 - [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges)
 - [1071. Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings)
 - [1081. Smallest Subsequence of Distinct Characters](https://leetcode.com/problems/smallest-subsequence-of-distinct-characters)
