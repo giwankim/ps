@@ -315,6 +315,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
 - [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs)
 - [3870. Count Commas in Range](https://leetcode.com/problems/count-commas-in-range)
+- [3871. Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii)
 - [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i)
 - [3876. Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii)
 - [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i)
