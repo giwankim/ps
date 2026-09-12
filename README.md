@@ -290,6 +290,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3310. Remove Methods from Project](https://leetcode.com/problems/remove-methods-from-project)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
 - [3345. Smallest Divisible Digit Product](https://leetcode.com/problems/smallest-divisible-digit-product)
+- [3414. Maximum Score of Non-overlapping Intervals](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals)
 - [3471. Find the Largest Almost Missing Integer](https://leetcode.com/problems/find-the-largest-almost-missing-integer)
 - [3483. Unique 3-Digit Even Numbers](https://leetcode.com/problems/unique-3-digit-even-numbers)
 - [3499. Maximize Active Section with Trade I](https://leetcode.com/problems/maximize-active-section-with-trade-i)
