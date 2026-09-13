@@ -214,6 +214,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [733. Flood Fill](https://leetcode.com/problems/flood-fill)
 - [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures)
 - [819. Most Common Word](https://leetcode.com/problems/most-common-word)
+- [835. Image Overlap](https://leetcode.com/problems/image-overlap)
 - [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
 - [877. Stone Game](https://leetcode.com/problems/stone-game)
 - [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
