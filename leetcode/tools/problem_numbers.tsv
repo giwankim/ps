@@ -76,6 +76,7 @@ ConstructBinaryTreeFromInorderAndPostorderTraversal	106	construct-binary-tree-fr
 ConvertSortedArrayToBinarySearchTree	108	convert-sorted-array-to-binary-search-tree	Convert Sorted Array to Binary Search Tree
 PathSum	112	path-sum	Path Sum
 FlattenBinaryTreeToLinkedList	114	flatten-binary-tree-to-linked-list	Flatten Binary Tree to Linked List
+DistinctSubsequences	115	distinct-subsequences	Distinct Subsequences
 PopulatingNextRightPointersInEachNodeII	117	populating-next-right-pointers-in-each-node-ii	Populating Next Right Pointers in Each Node II
 Triangle	120	triangle	Triangle
 BestTimeToBuyAndSellStock	121	best-time-to-buy-and-sell-stock	Best Time to Buy and Sell Stock
@@ -152,7 +153,9 @@ CoinChange	322	coin-change	Coin Change
 LongestIncreasingPathInMatrix	329	longest-increasing-path-in-a-matrix	Longest Increasing Path in a Matrix
 CountingBits	338	counting-bits	Counting Bits
 ReverseString	344	reverse-string	Reverse String
+ReverseVowelsOfAString	345	reverse-vowels-of-a-string	Reverse Vowels of a String
 TopKFrequentElements	347	top-k-frequent-elements	Top K Frequent Elements
+AndroidUnlockPatterns	351	android-unlock-patterns	Android Unlock Patterns
 RearrangeStringKDistanceApart	358	rearrange-string-k-distance-apart	Rearrange String k Distance Apart
 HitCounter	362	design-hit-counter	Design Hit Counter
 FindKPairsWithSmallestSums	373	find-k-pairs-with-smallest-sums	Find K Pairs with Smallest Sums
@@ -174,6 +177,7 @@ MinimumAbsoluteDifferenceInBST	530	minimum-absolute-difference-in-bst	Minimum Ab
 NumberOfProvinces	547	number-of-provinces	Number of Provinces
 ArrayPartition	561	array-partition	Array Partition
 SubtreeOfAnotherTree	572	subtree-of-another-tree	Subtree of Another Tree
+CanPlaceFlowers	605	can-place-flowers	Can Place Flowers
 AddBoldTag	616	add-bold-tag-in-string	Add Bold Tag in String
 MaximumProductOfThreeNumbers	628	maximum-product-of-three-numbers	Maximum Product of Three Numbers
 AverageOfLevelsInBinaryTree	637	average-of-levels-in-binary-tree	Average of Levels in Binary Tree
@@ -185,6 +189,8 @@ BinarySearch	704	binary-search	Binary Search
 DesignHashMap	706	design-hashmap	Design HashMap
 DailyTemperatures	739	daily-temperatures	Daily Temperatures
 MostCommonWord	819	most-common-word	Most Common Word
+ImageOverlap	835	image-overlap	Image Overlap
+RectangleOverlap	836	rectangle-overlap	Rectangle Overlap
 MiddleOfLinkedList	876	middle-of-the-linked-list	Middle of the Linked List
 StoneGame	877	stone-game	Stone Game
 PossibleBipartition	886	possible-bipartition	Possible Bipartition
@@ -192,9 +198,11 @@ SnakesAndLadders	909	snakes-and-ladders	Snakes and Ladders
 MaximumSumCircularSubarray	918	maximum-sum-circular-subarray	Maximum Sum Circular Subarray
 ReorderLogFiles	937	reorder-data-in-log-files	Reorder Data in Log Files
 RangeSumOfBST	938	range-sum-of-bst	Range Sum of BST
+DistinctSubsequencesII	940	distinct-subsequences-ii	Distinct Subsequences II
 RottingOranges	994	rotting-oranges	Rotting Oranges
 GreatestCommonDivisorOfStrings	1071	greatest-common-divisor-of-strings	Greatest Common Divisor of Strings
 SmallestSubsequenceOfDistinctCharacters	1081	smallest-subsequence-of-distinct-characters	Smallest Subsequence of Distinct Characters
+HighFive	1086	high-five	High Five
 CorporateFlightBookings	1109	corporate-flight-bookings	Corporate Flight Bookings
 StoneGameII	1140	stone-game-ii	Stone Game II
 LongestCommonSubsequence	1143	longest-common-subsequence	Longest Common Subsequence
@@ -214,6 +222,7 @@ CinemaSeatAllocation	1386	cinema-seat-allocation	Cinema Seat Allocation
 CheckIfThereIsValidPath	1391	check-if-there-is-a-valid-path-in-a-grid	Check if There is a Valid Path in a Grid
 StoneGameIII	1406	stone-game-iii	Stone Game III
 DiagonalTraverseII	1424	diagonal-traverse-ii	Diagonal Traverse II
+KidsWithTheGreatestNumberOfCandies	1431	kids-with-the-greatest-number-of-candies	Kids With the Greatest Number of Candies
 MaximumProductOfTwoElementsInAnArray	1464	maximum-product-of-two-elements-in-an-array	Maximum Product of Two Elements in an Array
 LeastNumberOfUniqueIntegers	1481	least-number-of-unique-integers-after-k-removals	Least Number of Unique Integers after K Removals
 StoneGameIV	1510	stone-game-iv	Stone Game IV
@@ -225,19 +234,26 @@ MergeStringsAlternately	1768	merge-strings-alternately	Merge Strings Alternately
 MaximumIceCreamBars	1833	maximum-ice-cream-bars	Maximum Ice Cream Bars
 MaximumBuildingHeight	1840	maximum-building-height	Maximum Building Height
 MaximumElementAfterDecreasingAndRearranging	1846	maximum-element-after-decreasing-and-rearranging	Maximum Element After Decreasing and Rearranging
+StoneGameVIII	1872	stone-game-viii	Stone Game VIII
+SumGame	1927	sum-game	Sum Game
 NumberOfStringsThatAppearAsSubstringsInWord	1967	number-of-strings-that-appear-as-substrings-in-word	Number of Strings That Appear as Substrings in Word
 FindGreatesCommonDivisorOfArray	1979	find-greatest-common-divisor-of-array	Find Greatest Common Divisor of Array
 StoneGameIX	2029	stone-game-ix	Stone Game IX
+FindTheMinimumAndMaximumNumberOfNodesBetweenCriticalPoints	2058	find-the-minimum-and-maximum-number-of-nodes-between-critical-points	Find the Minimum and Maximum Number of Nodes Between Critical Points
+RemovingMinimumAndMaximumFromArray	2091	removing-minimum-and-maximum-from-array	Removing Minimum and Maximum From Array
 DeleteTheMiddleNodeOfALinkedList	2095	delete-the-middle-node-of-a-linked-list	Delete the Middle Node of a Linked List
 MaximumTwinSumOfALinkedList	2130	maximum-twin-sum-of-a-linked-list	Maximum Twin Sum of a Linked List
 PartitionArrayAccordingToGivenPivot	2161	partition-array-according-to-given-pivot	Partition Array According to Given Pivot
 CreateBinaryTreeFromDescriptions	2196	create-binary-tree-from-descriptions	Create Binary Tree From Descriptions
 LongestSubstringOfOneRepeatingCharacter	2213	longest-substring-of-one-repeating-character	Longest Substring of One Repeating Character
+CountNodesEqualToAverageOfSubtree	2265	count-nodes-equal-to-average-of-subtree	Count Nodes Equal to Average of Subtree
 TwoEventsHaveConflict	2446	determine-if-two-events-have-conflict	Determine if Two Events Have Conflict
 MinimumScoreOfAPathBetweenTwoCities	2492	minimum-score-of-a-path-between-two-cities	Minimum Score of a Path Between Two Cities
 LeftAndRightSumDifferences	2574	left-and-right-sum-differences	Left and Right Sum Differences
 CountTheNumberOfCompleteComponents	2685	count-the-number-of-complete-components	Count the Number of Complete Components
 FindTheSafestPathInAGrid	2812	find-the-safest-path-in-a-grid	Find the Safest Path in a Grid
+ShortestAndLexicographicallySmallestBeautifulString	2904	shortest-and-lexicographically-smallest-beautiful-string	Shortest and Lexicographically Smallest Beautiful String
+MakeLexicographicallySmallestArrayBySwappingElements	2948	make-lexicographically-smallest-array-by-swapping-elements	Make Lexicographically Smallest Array by Swapping Elements
 LengthOfLongestSubarrayWithAtMostKFrequency	2958	length-of-longest-subarray-with-at-most-k-frequency	Length of Longest Subarray With at Most K Frequency
 SmallestMissingIntegerGreaterThanSequentialPrefixSum	2996	smallest-missing-integer-greater-than-sequential-prefix-sum	Smallest Missing Integer Greater Than Sequential Prefix Sum
 MinimumNumberOfPushesToTypeWordI	3014	minimum-number-of-pushes-to-type-word-i	Minimum Number of Pushes to Type Word I
@@ -245,6 +261,7 @@ MinimumNumberOfPushesToTypeWordII	3016	minimum-number-of-pushes-to-type-word-ii	
 FindTheMaximumNumberOfElementsInSubset	3020	find-the-maximum-number-of-elements-in-subset	Find the Maximum Number of Elements in Subset
 DistributeElementsIntoTwoArraysI	3069	distribute-elements-into-two-arrays-i	Distribute Elements Into Two Arrays I
 MaximumLengthSubstringWithTwoOccurrences	3090	maximum-length-substring-with-two-occurrences	Maximum Length Substring With Two Occurrences
+KthSmallestAmountWithSingleDenominationCombination	3116	kth-smallest-amount-with-single-denomination-combination	Kth Smallest Amount With Single Denomination Combination
 CountDaysWithoutMeetings	3169	count-days-without-meetings	Count Days Without Meetings
 CountCompletePairPairs2	3185	count-pairs-that-form-a-complete-day-ii	Count Pairs That Form a Complete Day II
 FindASafeWalkThroughAGrid	3286	find-a-safe-walk-through-a-grid	Find a Safe Walk Through a Grid
@@ -254,7 +271,9 @@ SortedGCDPairQueries	3312	sorted-gcd-pair-queries	Sorted GCD Pair Queries
 FindTheNumberOfSubsequencesWithEqualGCD	3336	find-the-number-of-subsequences-with-equal-gcd	Find the Number of Subsequences With Equal GCD
 SmallestDivisibleDigitProductI	3345	smallest-divisible-digit-product-i	Smallest Divisible Digit Product I
 SmallestDivisibleDigitProductII	3348	smallest-divisible-digit-product-ii	Smallest Divisible Digit Product II
+MaximumScoreOfNonOverlappingIntervals	3414	maximum-score-of-non-overlapping-intervals	Maximum Score of Non-overlapping Intervals
 FindTheLargestAlmostMissingInteger	3471	find-the-largest-almost-missing-integer	Find the Largest Almost Missing Integer
+Unique3DigitEvenNumbers	3483	unique-3-digit-even-numbers	Unique 3-Digit Even Numbers
 MaximizeActiveSectionWithTradeI	3499	maximize-active-section-with-trade-i	Maximize Active Section with Trade I
 NumberOfUniqueXORTripletsI	3513	number-of-unique-xor-triplets-i	Number of Unique XOR Triplets I
 NumberOfUniqueXORTripletsII	3514	number-of-unique-xor-triplets-ii	Number of Unique XOR Triplets II
@@ -263,15 +282,19 @@ SmallestPalindromicRearrangementII	3518	smallest-palindromic-rearrangement-ii	Sm
 PathExistenceQueriesInAGraphI	3532	path-existence-queries-in-a-graph-i	Path Existence Queries in a Graph I
 MaximumProductOfTwoDigits	3536	maximum-product-of-two-digits	Maximum Product of Two Digits
 NumberOfWaysToAssignEdgeWeightsI	3558	number-of-ways-to-assign-edge-weights-i	Number of Ways to Assign Edge Weights I
+MinimumMovesToCleanTheClassroom	3568	minimum-moves-to-clean-the-classroom	Minimum Moves to Clean the Classroom
 ProcessStringWithSpecialOperationsI	3612	process-string-with-special-operations-i	Process String with Special Operations I
 ProcessStringWithSpecialOperationsII	3614	process-string-with-special-operations-ii	Process String with Special Operations II
 NetworkRecoveryPathways	3620	network-recovery-pathways	Network Recovery Pathways
+CheckDivisibilityByDigitSumAndProduct	3622	check-divisibility-by-digit-sum-and-product	Check Divisibility by Digit Sum and Product
 GCDOfOddAndEvenSums	3658	gcd-of-odd-and-even-sums	GCD of Odd and Even Sums
 MaximumTotalSubarrayValueI	3689	maximum-total-subarray-value-i	Maximum Total Subarray Value I
 MaximumTotalSubarrayValueII	3691	maximum-total-subarray-value-ii	Maximum Total Subarray Value II
 NumberOfZigZagArraysI	3699	number-of-zigzag-arrays-i	Number of ZigZag Arrays I
 NumberOfZigZagArraysII	3700	number-of-zigzag-arrays-ii	Number of ZigZag Arrays II
 LongestSubsequenceWithNonZeroBitwiseXOR	3702	longest-subsequence-with-non-zero-bitwise-xor	Longest Subsequence With Non-Zero Bitwise XOR
+SmallestMissingMultipleOfK	3718	smallest-missing-multiple-of-k	Smallest Missing Multiple of K
+LexicographicallySmallestPermutationGreaterThanTarget	3720	lexicographically-smallest-permutation-greater-than-target	Lexicographically Smallest Permutation Greater Than Target
 FindMissingElements	3731	find-missing-elements	Find Missing Elements
 CountSubarraysWithMajorityElementI	3737	count-subarrays-with-majority-element-i	Count Subarrays With Majority Element I
 CountSubarraysWithMajorityElementII	3739	count-subarrays-with-majority-element-ii	Count Subarrays With Majority Element II
@@ -280,3 +303,9 @@ ConcatenateNonZeroDigitsAndMultiplyBySumI	3754	concatenate-non-zero-digits-and-m
 ConcatenateNonZeroDigitsAndMultiplyBySumII	3756	concatenate-non-zero-digits-and-multiply-by-sum-ii	Concatenate Non-Zero Digits and Multiply by Sum II
 WeightedWordMapping	3838	weighted-word-mapping	Weighted Word Mapping
 SumOfGcdOfFormedPairs	3867	sum-of-gcd-of-formed-pairs	Sum of GCD of Formed Pairs
+CountCommasInRange	3870	count-commas-in-range	Count Commas in Range
+CountCommasInRangeII	3871	count-commas-in-range-ii	Count Commas in Range II
+ConstructUniformParityArrayI	3875	construct-uniform-parity-array-i	Construct Uniform Parity Array I
+ConstructUniformParityArrayII	3876	construct-uniform-parity-array-ii	Construct Uniform Parity Array II
+SmallestStableIndexI	3903	smallest-stable-index-i	Smallest Stable Index I
+SmallestStableIndexII	3904	smallest-stable-index-ii	Smallest Stable Index II
