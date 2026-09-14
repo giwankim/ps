@@ -22,8 +22,10 @@ it says.
 
 ## Step 1 — Resolve the problem
 
+Run commands from the repository root:
+
 ```bash
-python3 .claude/skills/leetcode-red-specs/scripts/problem_meta.py 1431
+python3 .agents/skills/leetcode-red-specs/scripts/problem_meta.py 1431
 ```
 
 Prints the title, slug, difficulty, whether it is premium, the target package
@@ -41,18 +43,30 @@ If the paths print `(EXISTS)`, stop and look before writing — see *Variations*
 
 ## Step 2 — Read the statement in Chrome
 
-LeetCode problem pages return 403 to `WebFetch`, and premium problems return a
-null statement to the API. The user's Chrome is signed in, so read the page
-there. The browser tools may be deferred; load them in **one** batched call:
+LeetCode problem pages can reject direct HTTP requests, and premium problems
+return a null statement to the public API. Read the statement using the user's
+authenticated Chrome session. Choose the browser tools for the current agent:
+
+**Claude Code:** The Claude-in-Chrome tools may be deferred; discover them in
+one batched call:
 
 ```
 ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__tabs_close_mcp
 ```
 
-Call `tabs_context_mcp` first (never reuse a tab id from an earlier session),
-open a new tab, `navigate` to
-`https://leetcode.com/problems/<slug>/description/`, then `get_page_text`. Close
-the tab when you are done. Read out and keep:
+Call `tabs_context_mcp` first, then use `tabs_create_mcp`, `navigate`, and
+`get_page_text` to read the page. Use `tabs_close_mcp` for cleanup.
+
+**Codex:** Read the available `chrome:control-chrome` skill and follow its setup
+and browser-selection instructions. Use the Chrome tools documented by that
+skill to open the page and read its text. The Claude Code tool names above do
+not apply to Codex. If the Chrome skill or connection is unavailable, use the
+fallbacks below.
+
+For either agent, obtain fresh tab handles, open a new tab, and navigate to
+`https://leetcode.com/problems/<slug>/description/`. Confirm the page contains
+the actual statement. Close only the tab you created when you are done. Read
+out and keep:
 
 - every rule, including the Note sentences — those exist to head off a specific
   wrong reading, and each one deserves its own spec

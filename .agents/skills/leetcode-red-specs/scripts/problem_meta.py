@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Resolve a LeetCode problem number to everything a stub needs.
 
-    python3 .claude/skills/leetcode-red-specs/scripts/problem_meta.py 1431
+    python3 .agents/skills/leetcode-red-specs/scripts/problem_meta.py 1431
     python3 .../problem_meta.py 1431 --statement   # also dump the statement as text
     python3 .../problem_meta.py --slug two-sum
 

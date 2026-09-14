@@ -4,6 +4,12 @@ Repo-level instructions for coding agents. See
 [docs/dependency-updates.md](docs/dependency-updates.md) for the
 dependency-update workflow.
 
+Shared project skills live in `.agents/skills/<skill-name>/`. Keep one canonical
+copy there and expose each skill to Claude Code with a relative symlink at
+`.claude/skills/<skill-name>` pointing to `../../.agents/skills/<skill-name>`.
+Keep shared workflows portable; isolate agent-specific tool instructions in
+clearly labeled sections.
+
 acmicpc.net is down. Recover BOJ problem statements, constraints, and samples
 from the local archive rather than by triangulating mirrors — see
 [docs/boj-problem-archive.md](docs/boj-problem-archive.md).
