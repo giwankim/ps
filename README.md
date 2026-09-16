@@ -253,6 +253,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1510. Stone Game IV](https://leetcode.com/problems/stone-game-iv)
 - [1563. Stone Game V](https://leetcode.com/problems/stone-game-v)
 - [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings)
+- [1621. Number of Sets of K Non-Overlapping Line Segments](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments)
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
 - [1732. Find the Highest Altitude](https://leetcode.com/problems/find-the-highest-altitude)
 - [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately)
