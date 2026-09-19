@@ -245,6 +245,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1358. Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters)
 - [1386. Cinema Seat Allocation](https://leetcode.com/problems/cinema-seat-allocation)
 - [1391. Check If There is a Valid Path in a Grid](https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid)
+- [1401. Circle and Rectangle Overlapping](https://leetcode.com/problems/circle-and-rectangle-overlapping)
 - [1406. Stone Game III](https://leetcode.com/problems/stone-game-iii)
 - [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii)
 - [1431. Kids with the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies)
