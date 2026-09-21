@@ -304,6 +304,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3514. Number of Unique XOR Triplets II](https://leetcode.com/problems/number-of-unique-xor-triplets-ii)
 - [3517. Smallest Palindromic Rearrangement I](https://leetcode.com/problems/smallest-palindromic-rearrangement-i)
 - [3518. Smallest Palindromic Rearrangement II](https://leetcode.com/problems/smallest-palindromic-rearrangement-ii)
+- [3524. Find X Value of Array I](https://leetcode.com/problems/find-x-value-of-array-i)
 - [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i)
 - [3536. Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits)
 - [3568. Minimum Moves to Clean the Classroom](https://leetcode.com/problems/minimum-moves-to-clean-the-classroom)
