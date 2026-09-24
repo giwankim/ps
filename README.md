@@ -308,6 +308,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3524. Find X Value of Array I](https://leetcode.com/problems/find-x-value-of-array-i)
 - [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i)
 - [3536. Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits)
+- [3550. Smallest Index With Digit Sum Equal to Index](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index)
 - [3568. Minimum Moves to Clean the Classroom](https://leetcode.com/problems/minimum-moves-to-clean-the-classroom)
 - [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii)
