@@ -28,10 +28,7 @@ public class EvaluateTheBracketPairsOfAString {
     int i = 0;
     while (i < n) {
       if (s.charAt(i) == '(') {
-        int j = i + 1;
-        while (j < n && s.charAt(j) != ')') {
-          j++;
-        }
+        int j = s.indexOf(')', i + 1);
         String key = s.substring(i + 1, j);
         result.append(map.getOrDefault(key, "?"));
         i = j + 1;
