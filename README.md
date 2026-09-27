@@ -233,6 +233,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)
 - [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array)
 - [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons)
+- [1190. Reverse Substrings Between Each Pair of Parentheses](https://leetcode.com/problems/reverse-substrings-between-each-pair-of-parentheses)
 - [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 - [1260. Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid)
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals)
