@@ -255,6 +255,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1510. Stone Game IV](https://leetcode.com/problems/stone-game-iv)
 - [1563. Stone Game V](https://leetcode.com/problems/stone-game-v)
 - [1593. Split a String Into the Max Number of Unique Substrings](https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings)
+- [1614. Maximum Nesting Depth of the Parentheses](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses)
 - [1621. Number of Sets of K Non-Overlapping Line Segments](https://leetcode.com/problems/number-of-sets-of-k-non-overlapping-line-segments)
 - [1658. Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero)
 - [1710. Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck)
