@@ -54,8 +54,19 @@ one batched call:
 ToolSearch: select:mcp__claude-in-chrome__tabs_context_mcp,mcp__claude-in-chrome__tabs_create_mcp,mcp__claude-in-chrome__navigate,mcp__claude-in-chrome__get_page_text,mcp__claude-in-chrome__tabs_close_mcp
 ```
 
-Call `tabs_context_mcp` first, then use `tabs_create_mcp`, `navigate`, and
-`get_page_text` to read the page. Use `tabs_close_mcp` for cleanup.
+Call `tabs_context_mcp` with `createIfEmpty: true` first. When no MCP tab group
+exists yet, that call opens a new window whose group holds a single blank tab
+(`chrome://newtab/`; its title varies with the user's new-tab page) — that tab
+was made for this session, so `navigate` it instead of calling
+`tabs_create_mcp`. Only when the group already holds other tabs, which belong to
+the user or an earlier session, open your own with `tabs_create_mcp`. Either way
+you end up owning exactly one tab: read it with `get_page_text`, then close it
+with `tabs_close_mcp`.
+
+The easy mistake is opening a second tab beside the auto-created blank one and
+closing only the second. The blank tab and its window are then left behind on
+the user's screen after every run. Closing the group's last tab removes the
+group and its window as well, which is the clean end state.
 
 **Codex:** Read the available `chrome:control-chrome` skill and follow its setup
 and browser-selection instructions. Use the Chrome tools documented by that
@@ -63,10 +74,11 @@ skill to open the page and read its text. The Claude Code tool names above do
 not apply to Codex. If the Chrome skill or connection is unavailable, use the
 fallbacks below.
 
-For either agent, obtain fresh tab handles, open a new tab, and navigate to
+For either agent, obtain fresh tab handles and navigate a tab you own to
 `https://leetcode.com/problems/<slug>/description/`. Confirm the page contains
-the actual statement. Close only the tab you created when you are done. Read
-out and keep:
+the actual statement. When you are done, close every tab this run opened,
+including any tab the browser tooling opened on your behalf, and never a tab
+that was already there. Read out and keep:
 
 - every rule, including the Note sentences — those exist to head off a specific
   wrong reading, and each one deserves its own spec
