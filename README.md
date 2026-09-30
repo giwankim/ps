@@ -229,6 +229,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1081. Smallest Subsequence of Distinct Characters](https://leetcode.com/problems/smallest-subsequence-of-distinct-characters)
 - [1086. High Five](https://leetcode.com/problems/high-five)
 - [1109. Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings)
+- [1111. Maximum Nesting Depth of Two Valid Parentheses Strings](https://leetcode.com/problems/maximum-nesting-depth-of-two-valid-parentheses-strings)
 - [1140. Stone Game II](https://leetcode.com/problems/stone-game-ii)
 - [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence)
 - [1146. Snapshot Array](https://leetcode.com/problems/snapshot-array)
