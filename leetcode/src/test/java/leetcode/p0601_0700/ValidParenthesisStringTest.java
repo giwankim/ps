@@ -228,10 +228,22 @@ class ValidParenthesisStringTest {
   }
 
   // ===========================================================================================
-  // State isolation (Step 28). Strings are immutable, so no input-mutation spec is needed.
+  // Wildcard exhaustion regression (Step 28).
   // ===========================================================================================
 
-  // Step 28: one instance handles different sizes and answers, with length 100 in the middle.
+  // Step 28: the star must open the pair closed by the literal close, leaving the final open
+  //          unmatched. A negative minimum balance incorrectly lets that final open cancel an
+  //          interpretation that already became invalid at the close
+  @Test
+  void starUsedByACloseCannotMatchALaterOpen() {
+    assertThat(sut.checkValidString("*)(")).isFalse();
+  }
+
+  // ===========================================================================================
+  // State isolation (Step 29). Strings are immutable, so no input-mutation spec is needed.
+  // ===========================================================================================
+
+  // Step 29: one instance handles different sizes and answers, with length 100 in the middle.
   //          Cached balances, stacks, or a memo keyed only by position leak between calls, and
   //          "*(" followed by "(*" also catches a cache that distinguishes only input length
   @Test
