@@ -207,6 +207,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree)
 - [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings)
 - [652. Find Duplicate Subtrees](https://leetcode.com/problems/find-duplicate-subtrees)
+- [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string)
 - [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii)
 - [696. Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings)
 - [704. Binary Search](https://leetcode.com/problems/binary-search)
