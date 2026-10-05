@@ -217,6 +217,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [819. Most Common Word](https://leetcode.com/problems/most-common-word)
 - [835. Image Overlap](https://leetcode.com/problems/image-overlap)
 - [836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap)
+- [856. Score of Parentheses](https://leetcode.com/problems/score-of-parentheses)
 - [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list)
 - [877. Stone Game](https://leetcode.com/problems/stone-game)
 - [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
