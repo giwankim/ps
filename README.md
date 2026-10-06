@@ -223,6 +223,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition)
 - [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders)
 - [918. Maximum Sum Circular Subarray](https://leetcode.com/problems/maximum-sum-circular-subarray)
+- [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid)
 - [937. Reorder Data in Log Files](https://leetcode.com/problems/reorder-data-in-log-files)
 - [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)
 - [940. Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii)
