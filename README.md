@@ -228,6 +228,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst)
 - [940. Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii)
 - [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges)
+- [1021. Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses)
 - [1071. Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings)
 - [1081. Smallest Subsequence of Distinct Characters](https://leetcode.com/problems/smallest-subsequence-of-distinct-characters)
 - [1086. High Five](https://leetcode.com/problems/high-five)
