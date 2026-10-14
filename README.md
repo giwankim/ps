@@ -330,6 +330,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
 - [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor)
 - [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k)
+- [3723. Maximize Sum of Squares of Digits](https://leetcode.com/problems/maximize-sum-of-squares-of-digits)
 - [3727. Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares)
 - [3731. Find Missing Elements](https://leetcode.com/problems/find-missing-elements)
 - [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
