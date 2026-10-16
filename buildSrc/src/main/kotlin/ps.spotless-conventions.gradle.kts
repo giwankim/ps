@@ -1,17 +1,13 @@
-import org.gradle.api.artifacts.VersionCatalogsExtension
-
 plugins {
-    id("com.diffplug.spotless")
+    alias(libs.plugins.spotless)
 }
-
-val libs = the<VersionCatalogsExtension>().named("libs")
 
 spotless {
     java {
         toggleOffOn()
         removeUnusedImports()
         importOrder("java", "javax", "", "\\#")
-        palantirJavaFormat(libs.findVersion("palantir-java-format").get().requiredVersion)
+        palantirJavaFormat(libs.versions.palantir.java.format.get())
             .style("GOOGLE")
             .formatJavadoc(true)
         formatAnnotations()

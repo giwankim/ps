@@ -2,14 +2,12 @@ plugins {
     java
 }
 
-val libs = the<VersionCatalogsExtension>().named("libs")
-
 dependencies {
-    testImplementation(platform(libs.findLibrary("junit-bom").get()))
-    testImplementation(libs.findLibrary("junit-jupiter").get())
-    testImplementation(libs.findLibrary("junit-pioneer").get())
-    testImplementation(libs.findLibrary("assertj-core").get())
-    testRuntimeOnly(libs.findLibrary("junit-platform-launcher").get())
+    testImplementation(platform(libs.junit.bom))
+    testImplementation(libs.junit.jupiter)
+    testImplementation(libs.junit.pioneer)
+    testImplementation(libs.assertj.core)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.withType<Test> {

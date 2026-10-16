@@ -29,10 +29,6 @@ junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
 junit-pioneer = { module = "org.junit-pioneer:junit-pioneer", version.ref = "junit-pioneer" }
 junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher" }
 kotest = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
-kotlin-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-ktlint-plugin = { module = "org.jlleitschuh.gradle:ktlint-gradle", version.ref = "ktlint-gradle" }
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
 # Consumed only by version-catalog-update; Spotless resolves the formatter from [versions].
 palantir-java-format = { module = "com.palantir.javaformat:palantir-java-format", version.ref = "palantir-java-format" }
-spotless-plugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
-version-catalog-update-plugin = { module = "nl.littlerobots.vcu:plugin", version.ref = "version-catalog-update" }

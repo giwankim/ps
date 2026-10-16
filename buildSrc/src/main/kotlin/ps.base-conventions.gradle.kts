@@ -6,10 +6,8 @@ plugins {
 group = "com.giwankim"
 version = "0.0.1-SNAPSHOT"
 
-val libs = the<VersionCatalogsExtension>().named("libs")
-
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(libs.findVersion("java").get().requiredVersion)
+        languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
     }
 }

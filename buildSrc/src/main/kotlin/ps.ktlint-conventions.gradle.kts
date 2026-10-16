@@ -1,3 +1,3 @@
 plugins {
-    id("org.jlleitschuh.gradle.ktlint")
+    alias(libs.plugins.ktlint)
 }
