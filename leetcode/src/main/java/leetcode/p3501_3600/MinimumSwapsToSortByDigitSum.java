@@ -1,7 +1,6 @@
 package leetcode.p3501_3600;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * <a href="https://leetcode.com/problems/minimum-swaps-to-sort-by-digit-sum/">3551. Minimum Swaps
@@ -19,13 +18,16 @@ public class MinimumSwapsToSortByDigitSum {
   public int minSwaps(int[] nums) {
     int n = nums.length;
 
-    List<Integer> idx = new ArrayList<>();
+    int[][] idx = new int[n][3];
     for (int i = 0; i < n; i++) {
-      idx.add(i);
+      idx[i][0] = digitSum(nums[i]);
+      idx[i][1] = nums[i];
+      idx[i][2] = i;
     }
-    idx.sort((i, j) -> {
-      int cmp = Integer.compare(digitSum(nums[i]), digitSum(nums[j]));
-      return cmp != 0 ? cmp : Integer.compare(nums[i], nums[j]);
+
+    Arrays.sort(idx, (a, b) -> {
+      int cmp = Integer.compare(a[0], b[0]);
+      return cmp != 0 ? cmp : Integer.compare(a[1], b[1]);
     });
 
     int ncycles = 0;
@@ -38,7 +40,7 @@ public class MinimumSwapsToSortByDigitSum {
       int j = i;
       while (!visited[j]) {
         visited[j] = true;
-        j = idx.get(j);
+        j = idx[j][2];
       }
     }
 
