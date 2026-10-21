@@ -36,14 +36,8 @@ public class MinimumOperationsToSortAString {
       return 1;
     }
 
-    for (int i = 0; i < n - 1; i++) {
-      if (s.charAt(i) == min) {
-        return 2;
-      }
-    }
-
-    for (int i = 1; i < n; i++) {
-      if (s.charAt(i) == max) {
+    for (int i = 1; i < n - 1; i++) {
+      if (s.charAt(i) == min || s.charAt(i) == max) {
         return 2;
       }
     }
