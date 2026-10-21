@@ -341,6 +341,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i)
 - [3756. Concatenate Non-Zero Digits and Multiply by Sum II](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping)
+- [3863. Minimum Operations to Sort a String](https://leetcode.com/problems/minimum-operations-to-sort-a-string)
 - [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs)
 - [3870. Count Commas in Range](https://leetcode.com/problems/count-commas-in-range)
 - [3871. Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii)
