@@ -5,30 +5,26 @@ package leetcode.p3601_3700;
  * Count Islands With Total Value Divisible by K</a>
  */
 public class CountIslandsWithTotalValueDivisibleByK {
-  public static final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-
   private int n, m;
   private int[][] grid;
-  private boolean[][] visited;
 
   /**
-   * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for {@code visited} and the
-   *     DFS call stack, where {@code n = grid.length} is the number of rows and {@code m =
-   *     grid[0].length} the number of columns. A land cell is marked on entry, so it is expanded
-   *     once and its four neighbors are probed once. A snake-shaped island drives the recursion
-   *     depth to {@code n * m}, up to 1e5 frames. The island total is a {@code long} because up to
-   *     1e5 cells of 1e6 reach 1e11, past {@code int}.
+   * @implNote Time {@code O(n * m)}, auxiliary space {@code O(n * m)} for the DFS call stack, where
+   *     {@code n = grid.length} is the number of rows and {@code m = grid[0].length} the number of
+   *     columns. Each land cell is sunk to {@code 0} on entry, so {@code grid} doubles as the
+   *     visited set: a cell is expanded once and its four neighbors are probed once. A snake-shaped
+   *     island drives the recursion depth to {@code n * m}, up to 1e5 frames. The island total is a
+   *     {@code long} because up to 1e5 cells of 1e6 reach 1e11, past {@code int}.
    */
   public int countIslands(int[][] grid, int k) {
     n = grid.length;
     m = grid[0].length;
     this.grid = grid;
-    visited = new boolean[n][m];
 
     int ans = 0;
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
-        if (visited[i][j] || grid[i][j] == 0) {
+        if (grid[i][j] == 0) {
           continue;
         }
         if (dfs(i, j) % k == 0) {
@@ -40,16 +36,15 @@ public class CountIslandsWithTotalValueDivisibleByK {
   }
 
   private long dfs(int i, int j) {
-    if (i < 0 || i >= n || j < 0 || j >= m || grid[i][j] == 0 || visited[i][j]) {
+    if (i < 0 || i >= n || j < 0 || j >= m || grid[i][j] == 0) {
       return 0L;
     }
-    visited[i][j] = true;
     long result = grid[i][j];
-    for (int[] dir : DIRS) {
-      int nx = i + dir[0];
-      int ny = j + dir[1];
-      result += dfs(nx, ny);
-    }
+    grid[i][j] = 0;
+    result += dfs(i - 1, j);
+    result += dfs(i + 1, j);
+    result += dfs(i, j - 1);
+    result += dfs(i, j + 1);
     return result;
   }
 }
