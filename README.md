@@ -353,6 +353,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3886. Sum of Sortable Integers](https://leetcode.com/problems/sum-of-sortable-integers)
 - [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i)
 - [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii)
+- [3963. Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path)
 
 ## [Grind 75](https://www.techinterviewhandbook.org/grind75/)
 
