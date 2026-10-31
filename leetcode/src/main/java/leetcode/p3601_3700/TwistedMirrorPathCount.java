@@ -8,8 +8,8 @@ import java.util.Arrays;
  */
 public class TwistedMirrorPathCount {
   private static final int MOD = 1_000_000_007;
-  private static int n, m;
-  private static int[][] dp;
+  private int n, m;
+  private int[][] dp;
 
   /**
    * @implNote Time {@code O(n * m)} and space {@code O(n * m)}, where {@code n = grid.length} and
@@ -30,7 +30,7 @@ public class TwistedMirrorPathCount {
     return (uniquePaths(grid, 1, 0, 0) + uniquePaths(grid, 0, 1, 1)) % MOD;
   }
 
-  private static int uniquePaths(int[][] grid, int i, int j, int dir) {
+  private int uniquePaths(int[][] grid, int i, int j, int dir) {
     if (i >= n || j >= m) {
       return 0;
     }
