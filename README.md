@@ -331,6 +331,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3620. Network Recovery Pathways](https://leetcode.com/problems/network-recovery-pathways)
 - [3622. Check Divisibility by Digit Sum and Product](https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product)
 - [3658. GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums)
+- [3665. Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
