@@ -650,6 +650,8 @@ One package per task, named after the task ID with the underscore turned into a 
 
 ## [CSES](https://cses.fi/)
 
+- [Counting Rooms](https://cses.fi/problemset/task/1192)
+
 ## [Algospot](https://algospot.com/)
 
 - [록 페스티벌](https://algospot.com/judge/problem/read/FESTIVAL)
