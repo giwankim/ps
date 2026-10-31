@@ -650,7 +650,13 @@ One package per task, named after the task ID with the underscore turned into a 
 
 ## [CSES](https://cses.fi/)
 
-- [Counting Rooms](https://cses.fi/problemset/task/1192)
+- Introductory Problems
+    - [Weird Algorithm](https://cses.fi/problemset/task/1068)
+    - [Missing Number](https://cses.fi/problemset/task/1083)
+- Sorting and Searching
+    - [Sum of Two Values](https://cses.fi/problemset/task/1640)
+- Graph Algorithms
+    - [Counting Rooms](https://cses.fi/problemset/task/1192)
 
 ## [Algospot](https://algospot.com/)
 
