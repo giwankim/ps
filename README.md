@@ -195,6 +195,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [443. String Compression](https://leetcode.com/problems/string-compression)
 - [452. Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons)
 - [453. Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements)
+- [462. Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii)
 - [486. Predict the Winner](https://leetcode.com/problems/predict-the-winner)
 - [502. IPO](https://leetcode.com/problems/ipo)
 - [530. Minimum Absolute Difference in BST](https://leetcode.com/problems/minimum-absolute-difference-in-bst)
