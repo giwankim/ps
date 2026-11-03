@@ -342,6 +342,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3723. Maximize Sum of Squares of Digits](https://leetcode.com/problems/maximize-sum-of-squares-of-digits)
 - [3727. Maximum Alternating Sum of Squares](https://leetcode.com/problems/maximum-alternating-sum-of-squares)
 - [3731. Find Missing Elements](https://leetcode.com/problems/find-missing-elements)
+- [3736. Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii)
 - [3737. Count Subarrays with Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i)
 - [3739. Count Subarrays with Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii)
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i)
