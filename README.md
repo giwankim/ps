@@ -244,6 +244,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 - [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands)
 - [1260. Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid)
+- [1267. Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate)
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals)
 - [1291. Sequential Digits](https://leetcode.com/problems/sequential-digits)
 - [1297. Maximum Number of Occurrences of a Substring](https://leetcode.com/problems/maximum-number-of-occurrences-of-a-substring)
