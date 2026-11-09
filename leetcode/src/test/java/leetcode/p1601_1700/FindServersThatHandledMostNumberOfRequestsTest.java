@@ -212,7 +212,7 @@ class FindServersThatHandledMostNumberOfRequestsTest {
   // ===========================================================================================
   // Constraint bounds (Steps 22-26). Up to 10^5 servers and requests: scanning every server at
   // each arrival needs 10^10 operations, and a linear probe around the ring needs 2.5 * 10^9.
-  // A free-server ordered set plus a min-heap of finish times is O(k + n log k) and takes
+  // A free-server ordered set plus a min-heap of finish times is O((n + k) log k) and takes
   // milliseconds. The modulo linear probe measured about 1.7 s on the adversary, so a 1 second
   // timeout is what separates it. The usual 5 seconds would let it through.
   // ===========================================================================================

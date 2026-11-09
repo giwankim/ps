@@ -2,31 +2,46 @@ package leetcode.p1601_1700;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
+import java.util.TreeSet;
 
 /**
  * <a href="https://leetcode.com/problems/find-servers-that-handled-most-number-of-requests/">1606.
  * Find Servers That Handled Most Number of Requests</a>
  */
 public class FindServersThatHandledMostNumberOfRequests {
+  /**
+   * @implNote Time {@code O((n + k) log k)}, space {@code O(k)}, where {@code n = arrival.length}:
+   *     seeding {@code free} takes {@code k} inserts, and each request does at most one
+   *     {@code ceiling}, one {@code remove}, and one {@code offer}. The drain loop is amortized,
+   *     since every {@code poll} matches an earlier {@code offer}. Each server is in exactly one of
+   *     {@code free} and {@code busy}, so both stay within {@code k} entries.
+   */
   public List<Integer> busiestServers(int k, int[] arrival, int[] load) {
-    int[] available = new int[k];
     int[] reqs = new int[k];
-    int n = arrival.length;
-    for (int i = 0; i < n; i++) {
-      // find the next available server
-      int next = i % k;
-      while (available[next] > arrival[i]) {
-        next = (next + 1) % k;
-        // infinite loop, all servers are busy?
-        if (next == i % k) {
-          next = -1;
-          break;
-        }
+
+    TreeSet<Integer> free = new TreeSet<>();
+    for (int i = 0; i < k; i++) {
+      free.add(i);
+    }
+    PriorityQueue<int[]> busy = new PriorityQueue<>((a, b) -> Integer.compare(a[0], b[0]));
+
+    for (int i = 0; i < arrival.length; i++) {
+      // drain the busy queue
+      while (!busy.isEmpty() && busy.peek()[0] <= arrival[i]) {
+        int server = busy.poll()[1];
+        free.add(server);
       }
-      if (next != -1) {
-        available[next] = arrival[i] + load[i];
-        reqs[next]++;
+      if (free.isEmpty()) {
+        continue;
       }
+      Integer next = free.ceiling(i % k);
+      if (next == null) {
+        next = free.first();
+      }
+      free.remove(next);
+      reqs[next]++;
+      busy.offer(new int[] {arrival[i] + load[i], next});
     }
 
     int max = 0;
