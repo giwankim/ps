@@ -339,6 +339,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3665. Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i)
 - [3691. Maximum Total Subarray Value II](https://leetcode.com/problems/maximum-total-subarray-value-ii)
+- [3693. Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii)
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i)
 - [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor)
 - [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k)
