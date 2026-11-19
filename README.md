@@ -294,6 +294,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [2446. Determine if Two Events Have Conflict](https://leetcode.com/problems/determine-if-two-events-have-conflict)
 - [2472. Maximum Number of Non-overlapping Palindrome Substrings](https://leetcode.com/problems/maximum-number-of-non-overlapping-palindrome-substrings)
 - [2492. Minimum Score of a Path Between Two Cities](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities)
+- [2567. Minimum Score by Changing Two Elements](https://leetcode.com/problems/minimum-score-by-changing-two-elements)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences)
 - [2685. Count the Number of Complete Components](https://leetcode.com/problems/count-the-number-of-complete-components)
 - [2778. Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements)
