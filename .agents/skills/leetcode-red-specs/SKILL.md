@@ -167,7 +167,7 @@ usually holds other work-in-progress leetcode files, and a module-wide
 Say what the suite pins down, not just that it ran: the count, the exception all
 of them fail with, and a short list of the traps the steps encode — the reading
 each official example rules out, the complexity the stress steps enforce, the
-state bug the hygiene steps catch. That list is what tells the user whether the
+state bug the hygiene step catches. That list is what tells the user whether the
 spec matches the problem they had in mind. Leave the files uncommitted.
 
 ## Variations

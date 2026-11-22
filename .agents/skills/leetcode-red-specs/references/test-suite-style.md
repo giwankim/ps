@@ -100,13 +100,11 @@ banner comments once the file passes roughly a dozen tests:
    to report. Put a banner above this group explaining which complexity classes
    the timeouts separate (e.g. "10^5 elements: O(n^2) needs ~10^10 operations and
    cannot finish; O(n log n) finishes in milliseconds").
-6. **Hygiene, last.** Two steps that catch defects no functional case will:
-   - the input array or list is not modified — clone it, call, assert
-     `containsExactly(original)`; sorting the caller's array in place is a
-     tempting shortcut;
-   - one `sut` answers several inputs of different sizes, deliberately out of
-     order, largest in the middle — this catches state cached on the instance
-     instead of reset per call.
+6. **Hygiene, last.** One step that catches a defect no functional case will:
+   one `sut` answers several inputs of different sizes, deliberately out of
+   order, largest in the middle. This catches state cached on the instance
+   instead of reset per call. Do not add an "input is not modified" step. The
+   judge allows mutating inputs, and sorting `nums` in place is idiomatic.
 
 For a design problem (a constructor plus methods), replace steps 1-3 with
 operation sequences: each method alone, then the interleavings that make the
