@@ -12,6 +12,7 @@ build/
 .idea/aws.xml
 .idea/awsToolkit.xml
 .idea/copilot.data.migration.*.xml
+.idea/j2kLlmSettings.xml
 *.iws
 *.iml
 *.ipr
