@@ -6,38 +6,28 @@ package leetcode.p3401_3500;
  */
 public class MaximumSubarrayWithEqualProducts {
   /**
-   * @implNote Time {@code O(n^3 log V)}: each of the {@code O(n^2)} subarrays recomputes its
-   *     product, gcd, and lcm from scratch in {@code O(n)} steps, and every gcd or lcm step runs
-   *     Euclid's algorithm in {@code O(log V)}. Space {@code O(1)}, where {@code n = nums.length}
-   *     and {@code V = 10} bounds the values.
+   * @implNote Time {@code O(n^2 log V)}: for each left end, the product, gcd, and lcm are extended
+   *     one element at a time as the right end advances, so each of the {@code O(n^2)} subarrays
+   *     costs a single gcd and lcm step, each running Euclid's algorithm in {@code O(log V)}. Space
+   *     {@code O(1)}, where {@code n = nums.length} and {@code V = 10} bounds the values.
    */
   public int maxLength(int[] nums) {
     int n = nums.length;
     int ans = 0;
     for (int i = 0; i < n - 1; i++) {
+      int prod = nums[i];
+      int lcm = nums[i];
+      int gcd = nums[i];
       for (int j = i + 1; j < n; j++) {
-        if (prod(nums, i, j) == lcm(nums, i, j) * gcd(nums, i, j)) {
+        prod *= nums[j];
+        lcm = lcm(lcm, nums[j]);
+        gcd = gcd(gcd, nums[j]);
+        if (prod == lcm * gcd) {
           ans = Math.max(ans, j - i + 1);
         }
       }
     }
     return ans;
-  }
-
-  private int prod(int[] nums, int start, int end) {
-    int res = 1;
-    for (int i = start; i <= end; i++) {
-      res *= nums[i];
-    }
-    return res;
-  }
-
-  private int gcd(int[] nums, int start, int end) {
-    int res = nums[start];
-    for (int i = start + 1; i <= end; i++) {
-      res = gcd(res, nums[i]);
-    }
-    return res;
   }
 
   private int gcd(int a, int b) {
@@ -47,14 +37,6 @@ public class MaximumSubarrayWithEqualProducts {
       a = temp;
     }
     return a;
-  }
-
-  private int lcm(int[] nums, int start, int end) {
-    int res = nums[start];
-    for (int i = start; i <= end; i++) {
-      res = lcm(res, nums[i]);
-    }
-    return res;
   }
 
   private int lcm(int a, int b) {
