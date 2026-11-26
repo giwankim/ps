@@ -320,6 +320,7 @@ Problems solved in C++ live in [cpp/](cpp/) with their own CMake build — see
 - [3310. Remove Methods from Project](https://leetcode.com/problems/remove-methods-from-project)
 - [3336. Find the Number of Subsequences with Equal GCD](https://leetcode.com/problems/find-the-number-of-subsequences-with-equal-gcd)
 - [3345. Smallest Divisible Digit Product](https://leetcode.com/problems/smallest-divisible-digit-product)
+- [3360. Stone Removal Game](https://leetcode.com/problems/stone-removal-game)
 - [3364. Minimum Positive Sum Subarray](https://leetcode.com/problems/minimum-positive-sum-subarray)
 - [3411. Maximum Subarray With Equal Products](https://leetcode.com/problems/maximum-subarray-with-equal-products)
 - [3414. Maximum Score of Non-overlapping Intervals](https://leetcode.com/problems/maximum-score-of-non-overlapping-intervals)
